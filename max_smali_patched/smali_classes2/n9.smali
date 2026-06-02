@@ -1,55 +1,200 @@
-.class public final Ln9;
-.super Lo84;
+.class public abstract Ln9;
+.super Lg84;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lo9;
-
-.field public Z:I
-
-.field public d:Ljava/lang/String;
-
-.field public o:J
-
-
 # direct methods
-.method public constructor <init>(Lo9;Lo84;)V
+.method public static J0(Lmp;)V
     .locals 0
 
-    iput-object p1, p0, Ln9;->Y:Lo9;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p0}, Landroid/app/Activity;->finishAffinity()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static K0(Landroid/app/Activity;)V
     .locals 3
 
-    iput-object p1, p0, Ln9;->X:Ljava/lang/Object;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    iget p1, p0, Ln9;->Z:I
+    const/16 v1, 0x1c
 
-    const/high16 v0, -0x80000000
+    if-lt v0, v1, :cond_0
 
-    or-int/2addr p1, v0
+    invoke-virtual {p0}, Landroid/app/Activity;->recreate()V
 
-    iput p1, p0, Ln9;->Z:I
+    return-void
 
-    const/4 p1, 0x0
+    :cond_0
+    new-instance v0, Landroid/os/Handler;
 
-    const-wide/16 v0, 0x0
+    invoke-virtual {p0}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
 
-    iget-object v2, p0, Ln9;->Y:Lo9;
+    move-result-object v1
 
-    invoke-virtual {v2, v0, v1, p0, p1}, Lo9;->A(JLo84;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    new-instance v1, Lo3;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v1, v2, p0}, Lo3;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public static L0(Landroidx/fragment/app/b;[Ljava/lang/String;I)V
+    .locals 6
+
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    array-length v3, p1
+
+    if-ge v2, v3, :cond_2
+
+    aget-object v3, p1, v2
+
+    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v4, 0x21
+
+    if-ge v3, v4, :cond_0
+
+    aget-object v3, p1, v2
+
+    const-string v4, "android.permission.POST_NOTIFICATIONS"
+
+    invoke-static {v3, v4}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string v0, "Permission request for permissions "
+
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    return-object p1
+    const-string v0, " must not contain null or empty values"
+
+    invoke-static {p2, p1, v0}, Lsb6;->q(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_2
+    invoke-virtual {v0}, Ljava/util/HashSet;->size()I
+
+    move-result v2
+
+    if-lez v2, :cond_3
+
+    array-length v3, p1
+
+    sub-int/2addr v3, v2
+
+    new-array v3, v3, [Ljava/lang/String;
+
+    goto :goto_1
+
+    :cond_3
+    move-object v3, p1
+
+    :goto_1
+    if-lez v2, :cond_6
+
+    array-length v4, p1
+
+    if-ne v2, v4, :cond_4
+
+    return-void
+
+    :cond_4
+    move v2, v1
+
+    :goto_2
+    array-length v4, p1
+
+    if-ge v1, v4, :cond_6
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_5
+
+    add-int/lit8 v4, v2, 0x1
+
+    aget-object v5, p1, v1
+
+    aput-object v5, v3, v2
+
+    move v2, v4
+
+    :cond_5
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_2
+
+    :cond_6
+    invoke-virtual {p0, p1, p2}, Landroid/app/Activity;->requestPermissions([Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public static M0(Landroidx/fragment/app/b;Landroid/content/Intent;ILandroid/os/Bundle;)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2, p3}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;ILandroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public static N0(Landroidx/fragment/app/b;Landroid/content/IntentSender;ILandroid/content/Intent;IIILandroid/os/Bundle;)V
+    .locals 0
+
+    invoke-virtual/range {p0 .. p7}, Landroid/app/Activity;->startIntentSenderForResult(Landroid/content/IntentSender;ILandroid/content/Intent;IIILandroid/os/Bundle;)V
+
+    return-void
 .end method

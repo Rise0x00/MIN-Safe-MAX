@@ -1,97 +1,49 @@
-.class public final enum Lcc4;
-.super Ljava/lang/Enum;
+.class public final Lcc4;
+.super Landroid/view/ViewOutlineProvider;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lcc4;
-
-.field public static final enum b:Lcc4;
-
-.field public static final enum c:Lcc4;
-
-.field public static final enum d:Lcc4;
-
-.field public static final synthetic o:[Lcc4;
+# instance fields
+.field public a:F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(F)V
+    .locals 0
 
-    new-instance v0, Lcc4;
+    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
 
-    const-string v1, "DEFAULT"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcc4;->a:Lcc4;
-
-    new-instance v1, Lcc4;
-
-    const-string v2, "LAZY"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lcc4;->b:Lcc4;
-
-    new-instance v2, Lcc4;
-
-    const-string v3, "ATOMIC"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lcc4;->c:Lcc4;
-
-    new-instance v3, Lcc4;
-
-    const-string v4, "UNDISPATCHED"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lcc4;->d:Lcc4;
-
-    filled-new-array {v0, v1, v2, v3}, [Lcc4;
-
-    move-result-object v0
-
-    sput-object v0, Lcc4;->o:[Lcc4;
+    iput p1, p0, Lcc4;->a:F
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcc4;
-    .locals 1
 
-    const-class v0, Lcc4;
+# virtual methods
+.method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
+    .locals 6
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
-    move-result-object p0
+    move-result v3
 
-    check-cast p0, Lcc4;
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
-    return-object p0
-.end method
+    move-result v4
 
-.method public static values()[Lcc4;
-    .locals 1
+    iget v5, p0, Lcc4;->a:F
 
-    sget-object v0, Lcc4;->o:[Lcc4;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    move-result-object v0
+    move-object v0, p2
 
-    check-cast v0, [Lcc4;
+    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
 
-    return-object v0
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setClipToOutline(Z)V
+
+    return-void
 .end method

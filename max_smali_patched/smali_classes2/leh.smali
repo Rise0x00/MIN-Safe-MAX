@@ -1,116 +1,319 @@
 .class public final Lleh;
-.super Lp6g;
+.super Lbo0;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic o:Lseh;
+.field public A0:Ljava/net/MulticastSocket;
+
+.field public B0:Ljava/net/InetAddress;
+
+.field public C0:Z
+
+.field public D0:I
+
+.field public final X:[B
+
+.field public final Y:Ljava/net/DatagramPacket;
+
+.field public Z:Landroid/net/Uri;
+
+.field public final o:I
+
+.field public z0:Ljava/net/DatagramSocket;
 
 
 # direct methods
-.method public constructor <init>(Lseh;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 4
 
-    iput-object p1, p0, Lleh;->o:Lseh;
+    const/4 v0, 0x1
 
-    const/4 p1, 0x2
+    invoke-direct {p0, v0}, Lbo0;-><init>(Z)V
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/16 v0, 0x1f40
+
+    iput v0, p0, Lleh;->o:I
+
+    const/16 v0, 0x7d0
+
+    new-array v1, v0, [B
+
+    iput-object v1, p0, Lleh;->X:[B
+
+    new-instance v2, Ljava/net/DatagramPacket;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v1, v3, v0}, Ljava/net/DatagramPacket;-><init>([BII)V
+
+    iput-object v2, p0, Lleh;->Y:Ljava/net/DatagramPacket;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final R(Lik4;)J
+    .locals 3
 
-    check-cast p1, Lb3h;
+    iget-object v0, p1, Lik4;->a:Landroid/net/Uri;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iput-object v0, p0, Lleh;->Z:Landroid/net/Uri;
 
-    invoke-virtual {p0, p1, p2}, Lleh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    check-cast p1, Lleh;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget-object v1, p0, Lleh;->Z:Landroid/net/Uri;
 
-    invoke-virtual {p1, p2}, Lleh;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Landroid/net/Uri;->getPort()I
 
-    return-object p2
-.end method
+    move-result v1
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-virtual {p0}, Lbo0;->d()V
 
-    new-instance p1, Lleh;
+    :try_start_0
+    invoke-static {v0}, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
 
-    iget-object v0, p0, Lleh;->o:Lseh;
+    move-result-object v0
 
-    invoke-direct {p1, v0, p2}, Lleh;-><init>(Lseh;Lkotlin/coroutines/Continuation;)V
+    iput-object v0, p0, Lleh;->B0:Ljava/net/InetAddress;
 
-    return-object p1
-.end method
+    new-instance v0, Ljava/net/InetSocketAddress;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    iget-object v2, p0, Lleh;->B0:Ljava/net/InetAddress;
 
-    sget-object v0, Lb3h;->a:Lb3h;
+    invoke-direct {v0, v2, v1}, Ljava/net/InetSocketAddress;-><init>(Ljava/net/InetAddress;I)V
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iget-object v1, p0, Lleh;->B0:Ljava/net/InetAddress;
 
-    iget-object p1, p0, Lleh;->o:Lseh;
+    invoke-virtual {v1}, Ljava/net/InetAddress;->isMulticastAddress()Z
 
-    iget-object v1, p1, Lseh;->f:Landroidx/recyclerview/widget/RecyclerView;
+    move-result v1
 
-    if-nez v1, :cond_0
+    if-eqz v1, :cond_0
 
-    goto :goto_1
+    new-instance v1, Ljava/net/MulticastSocket;
 
-    :cond_0
-    iget-object p1, p1, Lseh;->e:Ljava/lang/String;
+    invoke-direct {v1, v0}, Ljava/net/MulticastSocket;-><init>(Ljava/net/SocketAddress;)V
 
-    sget-object v2, Lc5j;->a:Ledb;
+    iput-object v1, p0, Lleh;->A0:Ljava/net/MulticastSocket;
 
-    if-nez v2, :cond_1
+    iget-object v0, p0, Lleh;->B0:Ljava/net/InetAddress;
+
+    invoke-virtual {v1, v0}, Ljava/net/MulticastSocket;->joinGroup(Ljava/net/InetAddress;)V
+
+    iget-object v0, p0, Lleh;->A0:Ljava/net/MulticastSocket;
+
+    iput-object v0, p0, Lleh;->z0:Ljava/net/DatagramSocket;
 
     goto :goto_0
 
+    :catch_0
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_0
+    new-instance v1, Ljava/net/DatagramSocket;
+
+    invoke-direct {v1, v0}, Ljava/net/DatagramSocket;-><init>(Ljava/net/SocketAddress;)V
+
+    iput-object v1, p0, Lleh;->z0:Ljava/net/DatagramSocket;
+
+    :goto_0
+    iget-object v0, p0, Lleh;->z0:Ljava/net/DatagramSocket;
+
+    iget v1, p0, Lleh;->o:I
+
+    invoke-virtual {v0, v1}, Ljava/net/DatagramSocket;->setSoTimeout(I)V
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lleh;->C0:Z
+
+    invoke-virtual {p0, p1}, Lbo0;->e(Lik4;)V
+
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+
+    :goto_1
+    new-instance v0, Lcom/google/android/exoplayer2/upstream/UdpDataSource$UdpDataSourceException;
+
+    const/16 v1, 0x7d1
+
+    invoke-direct {v0, p1, v1}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+
+    throw v0
+
+    :goto_2
+    new-instance v0, Lcom/google/android/exoplayer2/upstream/UdpDataSource$UdpDataSourceException;
+
+    const/16 v1, 0x7d6
+
+    invoke-direct {v0, p1, v1}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+
+    throw v0
+.end method
+
+.method public final close()V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lleh;->Z:Landroid/net/Uri;
+
+    iget-object v1, p0, Lleh;->A0:Ljava/net/MulticastSocket;
+
+    if-eqz v1, :cond_0
+
+    :try_start_0
+    iget-object v2, p0, Lleh;->B0:Ljava/net/InetAddress;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v1, v2}, Ljava/net/MulticastSocket;->leaveGroup(Ljava/net/InetAddress;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    iput-object v0, p0, Lleh;->A0:Ljava/net/MulticastSocket;
+
+    :cond_0
+    iget-object v1, p0, Lleh;->z0:Ljava/net/DatagramSocket;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Ljava/net/DatagramSocket;->close()V
+
+    iput-object v0, p0, Lleh;->z0:Ljava/net/DatagramSocket;
+
     :cond_1
-    sget-object v3, Lkk8;->d:Lkk8;
+    iput-object v0, p0, Lleh;->B0:Ljava/net/InetAddress;
 
-    invoke-virtual {v2, v3}, Ledb;->b(Lkk8;)Z
+    const/4 v0, 0x0
 
-    move-result v4
+    iput v0, p0, Lleh;->D0:I
 
-    if-eqz v4, :cond_2
+    iget-boolean v1, p0, Lleh;->C0:Z
 
-    const-string v4, "Player autoplay. Handle fetch event for video message, try start autoplay."
+    if-eqz v1, :cond_2
 
-    const/4 v5, 0x0
+    iput-boolean v0, p0, Lleh;->C0:Z
 
-    invoke-virtual {v2, v3, p1, v4, v5}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {p0}, Lbo0;->c()V
 
     :cond_2
-    :goto_0
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getScrollState()I
+    return-void
+.end method
 
-    move-result p1
+.method public final getUri()Landroid/net/Uri;
+    .locals 1
 
-    if-nez p1, :cond_3
+    iget-object v0, p0, Lleh;->Z:Landroid/net/Uri;
 
-    iget-object p1, p0, Lleh;->o:Lseh;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v1, v2}, Lseh;->f(Landroidx/recyclerview/widget/RecyclerView;Z)V
-
-    :cond_3
-    :goto_1
     return-object v0
+.end method
+
+.method public final read([BII)I
+    .locals 2
+
+    if-nez p3, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    iget v0, p0, Lleh;->D0:I
+
+    iget-object v1, p0, Lleh;->Y:Ljava/net/DatagramPacket;
+
+    if-nez v0, :cond_1
+
+    :try_start_0
+    iget-object v0, p0, Lleh;->z0:Ljava/net/DatagramSocket;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0, v1}, Ljava/net/DatagramSocket;->receive(Ljava/net/DatagramPacket;)V
+    :try_end_0
+    .catch Ljava/net/SocketTimeoutException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    invoke-virtual {v1}, Ljava/net/DatagramPacket;->getLength()I
+
+    move-result v0
+
+    iput v0, p0, Lleh;->D0:I
+
+    invoke-virtual {p0, v0}, Lbo0;->b(I)V
+
+    goto :goto_2
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    goto :goto_1
+
+    :goto_0
+    new-instance p2, Lcom/google/android/exoplayer2/upstream/UdpDataSource$UdpDataSourceException;
+
+    const/16 p3, 0x7d1
+
+    invoke-direct {p2, p1, p3}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+
+    throw p2
+
+    :goto_1
+    new-instance p2, Lcom/google/android/exoplayer2/upstream/UdpDataSource$UdpDataSourceException;
+
+    const/16 p3, 0x7d2
+
+    invoke-direct {p2, p1, p3}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+
+    throw p2
+
+    :cond_1
+    :goto_2
+    invoke-virtual {v1}, Ljava/net/DatagramPacket;->getLength()I
+
+    move-result v0
+
+    iget v1, p0, Lleh;->D0:I
+
+    sub-int/2addr v0, v1
+
+    invoke-static {v1, p3}, Ljava/lang/Math;->min(II)I
+
+    move-result p3
+
+    iget-object v1, p0, Lleh;->X:[B
+
+    invoke-static {v1, v0, p1, p2, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget p1, p0, Lleh;->D0:I
+
+    sub-int/2addr p1, p3
+
+    iput p1, p0, Lleh;->D0:I
+
+    return p3
 .end method

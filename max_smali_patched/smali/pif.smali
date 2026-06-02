@@ -1,76 +1,102 @@
 .class public final Lpif;
-.super Lqif;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lv45;
+
+
+# instance fields
+.field public final a:Lsif;
+
+.field public final b:J
+
+.field public final c:Ljava/lang/Object;
+
+.field public final d:Lpb2;
 
 
 # direct methods
-.method public static a(Ljava/lang/String;Landroid/content/Context;[Lrif;)Lpif;
-    .locals 3
+.method public constructor <init>(Lsif;JLjava/lang/Object;Lpb2;)V
+    .locals 0
 
-    const-string v0, "couldn\'t find DSO to load: "
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "\n\texisting SO sources: "
+    iput-object p1, p0, Lpif;->a:Lsif;
 
-    invoke-static {v0, p0, v1}, Lt02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-wide p2, p0, Lpif;->b:J
 
-    move-result-object v0
+    iput-object p4, p0, Lpif;->c:Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    iput-object p5, p0, Lpif;->d:Lpb2;
 
-    :goto_0
-    array-length v2, p2
+    return-void
+.end method
 
-    if-ge v1, v2, :cond_0
 
-    const-string v2, "\n\t\tSoSource "
+# virtual methods
+.method public final dispose()V
+    .locals 5
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lpif;->a:Lsif;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    monitor-enter v0
 
-    const-string v2, ": "
+    :try_start_0
+    iget-wide v1, p0, Lpif;->b:J
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lsif;->s()J
 
-    aget-object v2, p2, v1
+    move-result-wide v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v2}, Lrif;->toString()Ljava/lang/String;
+    cmp-long v1, v1, v3
 
-    move-result-object v2
+    if-gez v1, :cond_0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    monitor-exit v0
 
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    if-eqz p1, :cond_1
+    :try_start_1
+    iget-object v1, v0, Lsif;->Z:[Ljava/lang/Object;
 
-    const-string p2, "\n\tNative lib dir: "
+    iget-wide v2, p0, Lpif;->b:J
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v2, v3}, Ltif;->c([Ljava/lang/Object;J)Ljava/lang/Object;
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+    move-result-object v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    move-result-object p1
+    if-eq v2, p0, :cond_1
 
-    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
+    monitor-exit v0
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, "\n"
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
     :cond_1
-    new-instance p1, Lpif;
+    :try_start_2
+    iget-wide v2, p0, Lpif;->b:J
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sget-object v4, Ltif;->a:Lkotlinx/coroutines/internal/Symbol;
 
-    move-result-object p2
+    invoke-static {v1, v2, v3, v4}, Ltif;->d([Ljava/lang/Object;JLjava/lang/Object;)V
 
-    invoke-direct {p1, p0, p2}, Lqif;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0}, Lsif;->n()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    return-object p1
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+
+    throw v1
 .end method

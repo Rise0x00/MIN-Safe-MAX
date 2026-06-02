@@ -1,57 +1,25 @@
-.class public final Lc9b;
-.super Lo84;
+.class public abstract Lc9b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Z
+# static fields
+.field public static final a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lh9b;
-
-.field public d:Ljm9;
-
-.field public o:Lxz;
-
-.field public t0:I
+.field public static final b:I
 
 
 # direct methods
-.method public constructor <init>(Lh9b;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lc9b;->Z:Lh9b;
+    sget v0, Lcid;->call_permission_dialog_check_cancel:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    sput v0, Lc9b;->a:I
+
+    sget v0, Lcid;->call_permission_dialog_check_continue:I
+
+    sput v0, Lc9b;->b:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iput-object p1, p0, Lc9b;->Y:Ljava/lang/Object;
-
-    iget p1, p0, Lc9b;->t0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lc9b;->t0:I
-
-    const/4 p1, 0x0
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lc9b;->Z:Lh9b;
-
-    invoke-virtual {v1, p1, p1, v0, p0}, Lh9b;->d(Ljm9;Lxz;ZLo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

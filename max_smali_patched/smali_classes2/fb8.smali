@@ -1,69 +1,41 @@
 .class public final Lfb8;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lnd2;
-
-.field public Y:J
-
-.field public Z:J
-
-.field public d:Lfjc;
-
-.field public o:Landroid/net/Uri;
-
-.field public synthetic t0:Ljava/lang/Object;
-
-.field public final synthetic u0:Ltb8;
-
-.field public v0:I
+.field public final synthetic a:Lz5;
 
 
 # direct methods
-.method public constructor <init>(Ltb8;Lo84;)V
+.method public constructor <init>(Lz5;)V
     .locals 0
 
-    iput-object p1, p0, Lfb8;->u0:Ltb8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lfb8;->a:Lz5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final a(Ljava/lang/Throwable;)V
+    .locals 2
 
-    iput-object p1, p0, Lfb8;->t0:Ljava/lang/Object;
+    iget-object v0, p0, Lfb8;->a:Lz5;
 
-    iget p1, p0, Lfb8;->v0:I
+    const/16 v1, 0x8
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {v0, v1}, Lz5;->c(I)Ljava/lang/Object;
 
-    or-int/2addr p1, v0
+    move-result-object v0
 
-    iput p1, p0, Lfb8;->v0:I
+    check-cast v0, Lzp5;
 
-    const-wide/16 v4, 0x0
+    check-cast v0, Lzcb;
 
-    const/4 v6, 0x0
+    invoke-virtual {v0, p1}, Lzcb;->a(Ljava/lang/Throwable;)V
 
-    iget-object v0, p0, Lfb8;->u0:Ltb8;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move-object v7, p0
-
-    invoke-virtual/range {v0 .. v7}, Ltb8;->h(Lfjc;Landroid/net/Uri;Lnd2;JLmw4;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

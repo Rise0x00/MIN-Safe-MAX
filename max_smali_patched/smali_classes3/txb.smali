@@ -1,35 +1,45 @@
 .class public final Ltxb;
-.super Ljava/lang/Object;
+.super Li2e;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final a:I
 
-.field public final b:Ljava/lang/String;
+.field public final b:F
 
-.field public final c:J
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/util/Map;
+.field public final c:F
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;JLjava/lang/String;Llr8;)V
+.method public constructor <init>(I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Ltxb;->a:J
+    iput p1, p0, Ltxb;->a:I
 
-    iput-object p3, p0, Ltxb;->b:Ljava/lang/String;
+    const/high16 p1, 0x3f000000    # 0.5f
 
-    iput-wide p4, p0, Ltxb;->c:J
+    iput p1, p0, Ltxb;->b:F
 
-    iput-object p6, p0, Ltxb;->d:Ljava/lang/String;
-
-    iput-object p7, p0, Ltxb;->e:Ljava/util/Map;
+    iput p1, p0, Ltxb;->c:F
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(Landroidx/recyclerview/widget/RecyclerView;I)Landroid/widget/EdgeEffect;
+    .locals 2
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    new-instance v1, Lsxb;
+
+    invoke-direct {v1, p2, p0, p1, v0}, Lsxb;-><init>(ILtxb;Landroidx/recyclerview/widget/RecyclerView;Landroid/content/Context;)V
+
+    return-object v1
 .end method

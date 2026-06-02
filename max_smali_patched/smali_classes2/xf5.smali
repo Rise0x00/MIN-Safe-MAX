@@ -1,63 +1,31 @@
 .class public final Lxf5;
-.super Ljava/lang/Throwable;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/AutoCloseable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Landroid/media/metrics/EditingSession;
 
-
-# direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;)V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x1
-
-    iput v0, p0, Lxf5;->a:I
-
-    invoke-direct {p0, p1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;I)V
-    .locals 0
-
-    .line 2
-    iput p3, p0, Lxf5;->a:I
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-.end method
+.field public b:Z
 
 
 # virtual methods
-.method public declared-synchronized fillInStackTrace()Ljava/lang/Throwable;
+.method public final close()V
     .locals 1
 
-    iget v0, p0, Lxf5;->a:I
+    iget-object v0, p0, Lxf5;->a:Landroid/media/metrics/EditingSession;
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    invoke-super {p0}, Ljava/lang/Throwable;->fillInStackTrace()Ljava/lang/Throwable;
+    invoke-static {v0}, Lfe;->x(Landroid/media/metrics/EditingSession;)V
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    return-object v0
+    iput-object v0, p0, Lxf5;->a:Landroid/media/metrics/EditingSession;
 
-    :pswitch_0
-    monitor-enter p0
-
-    monitor-exit p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    return-void
 .end method

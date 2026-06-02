@@ -1,48 +1,32 @@
-.class public final Lh51;
-.super Lo84;
+.class public abstract Lh51;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lpx;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+# static fields
+.field public static final a:Z
 
 
 # direct methods
-.method public constructor <init>(Lpx;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lh51;->X:Lpx;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lh51;->d:Ljava/lang/Object;
+    :try_start_0
+    const-string v0, "java.lang.ClassValue"
 
-    iget p1, p0, Lh51;->o:I
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/high16 v0, -0x80000000
+    const/4 v0, 0x1
 
-    or-int/2addr p1, v0
+    goto :goto_0
 
-    iput p1, p0, Lh51;->o:I
-
-    iget-object p1, p0, Lh51;->X:Lpx;
-
+    :catchall_0
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lpx;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :goto_0
+    sput-boolean v0, Lh51;->a:Z
 
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

@@ -1,53 +1,112 @@
 .class public final Lzwg;
-.super Lo84;
+.super Ljwf;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lzwg;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:J
 
-.field public final synthetic Y:Llxg;
-
-.field public Z:I
-
-.field public d:Ljava/lang/String;
-
-.field public o:Ljava/lang/Object;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Llxg;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lzwg;->Y:Llxg;
+    new-instance v0, Lu8e;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/16 v1, 0x1b
+
+    invoke-direct {v0, v1}, Lu8e;-><init>(I)V
+
+    sput-object v0, Lzwg;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
+.method public constructor <init>(JJ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lzwg;->a:J
+
+    iput-wide p3, p0, Lzwg;->b:J
+
+    return-void
+.end method
+
+.method public static a(JLfoh;)J
+    .locals 6
+
+    invoke-virtual {p2}, Lfoh;->s()I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    const-wide/16 v2, 0x80
+
+    and-long/2addr v2, v0
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v2, v2, v4
+
+    if-eqz v2, :cond_0
+
+    const-wide/16 v2, 0x1
+
+    and-long/2addr v0, v2
+
+    const/16 v2, 0x20
+
+    shl-long/2addr v0, v2
+
+    invoke-virtual {p2}, Lfoh;->t()J
+
+    move-result-wide v2
+
+    or-long/2addr v0, v2
+
+    add-long/2addr v0, p0
+
+    const-wide p0, 0x1ffffffffL
+
+    and-long/2addr p0, v0
+
+    return-wide p0
+
+    :cond_0
+    const-wide p0, -0x7fffffffffffffffL    # -4.9E-324
+
+    return-wide p0
+.end method
+
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    iput-object p1, p0, Lzwg;->X:Ljava/lang/Object;
+    iget-wide v0, p0, Lzwg;->a:J
 
-    iget p1, p0, Lzwg;->Z:I
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    const/high16 v0, -0x80000000
+    iget-wide v0, p0, Lzwg;->b:J
 
-    or-int/2addr p1, v0
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    iput p1, p0, Lzwg;->Z:I
-
-    iget-object p1, p0, Lzwg;->Y:Llxg;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, v0, p0}, Llxg;->s(Llxg;Ljava/lang/CharSequence;Ljava/lang/String;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

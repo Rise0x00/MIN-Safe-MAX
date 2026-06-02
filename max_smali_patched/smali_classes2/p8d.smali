@@ -1,8 +1,8 @@
-.class public abstract Lp8d;
+.class public interface abstract Lp8d;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_file_download_warning_confirm:I = 0x7f0a065c
-
-.field public static oneme_file_download_warning_deny:I = 0x7f0a065d
+# virtual methods
+.method public abstract a()I
+.end method

@@ -3,50 +3,50 @@
 
 
 # static fields
-.field public static oneme_startconversation_channel_add_subscribers_error:I = 0x7f130a4c
+.field public static abc_fade_in:I = 0x7f010000
 
-.field public static oneme_startconversation_channel_create_error:I = 0x7f130a4d
+.field public static abc_fade_out:I = 0x7f010001
 
-.field public static oneme_startconversation_channel_limit_add_subscribers_error:I = 0x7f130a4e
+.field public static abc_grow_fade_in_from_bottom:I = 0x7f010002
 
-.field public static oneme_startconversation_channel_select_subscribers_skip_button:I = 0x7f130a4f
+.field public static abc_popup_enter:I = 0x7f010003
 
-.field public static oneme_startconversation_channel_select_subscribers_toolbar_title:I = 0x7f130a50
+.field public static abc_popup_exit:I = 0x7f010004
 
-.field public static oneme_startconversation_title:I = 0x7f130a51
+.field public static abc_shrink_fade_out_from_bottom:I = 0x7f010005
 
-.field public static oneme_startconversations_chat_members:I = 0x7f130a52
+.field public static abc_slide_in_bottom:I = 0x7f010006
 
-.field public static oneme_startconversations_chat_titleicon_avatar_bottomsheet_title:I = 0x7f130a53
+.field public static abc_slide_in_top:I = 0x7f010007
 
-.field public static oneme_startconversations_chat_titleicon_avatars_load_from_gallery_action:I = 0x7f130a54
+.field public static abc_slide_out_bottom:I = 0x7f010008
 
-.field public static oneme_startconversations_chat_titleicon_avatars_take_photo_action:I = 0x7f130a55
+.field public static abc_slide_out_top:I = 0x7f010009
 
-.field public static oneme_startconversations_chat_titleicon_confirm_button_title:I = 0x7f130a56
+.field public static abc_tooltip_enter:I = 0x7f01000a
 
-.field public static oneme_startconversations_chat_titleicon_confirm_button_title_channel:I = 0x7f130a57
+.field public static abc_tooltip_exit:I = 0x7f01000b
 
-.field public static oneme_startconversations_chat_titleicon_hint:I = 0x7f130a58
+.field public static btn_checkbox_to_checked_box_inner_merged_animation:I = 0x7f01000d
 
-.field public static oneme_startconversations_chat_titleicon_hint_channel:I = 0x7f130a59
+.field public static btn_checkbox_to_checked_box_outer_merged_animation:I = 0x7f01000e
 
-.field public static oneme_startconversations_chat_titleicon_input_description_hint:I = 0x7f130a5a
+.field public static btn_checkbox_to_checked_icon_null_animation:I = 0x7f01000f
 
-.field public static oneme_startconversations_chat_titleicon_input_hint:I = 0x7f130a5b
+.field public static btn_checkbox_to_unchecked_box_inner_merged_animation:I = 0x7f010010
 
-.field public static oneme_startconversations_chat_titleicon_input_hint_channel:I = 0x7f130a5c
+.field public static btn_checkbox_to_unchecked_check_path_merged_animation:I = 0x7f010011
 
-.field public static oneme_startconversations_chat_titleicon_toolbar_title:I = 0x7f130a5d
+.field public static btn_checkbox_to_unchecked_icon_null_animation:I = 0x7f010012
 
-.field public static oneme_startconversations_chat_titleicon_toolbar_title_channel:I = 0x7f130a5e
+.field public static btn_radio_to_off_mtrl_dot_group_animation:I = 0x7f010013
 
-.field public static oneme_startconversations_continue_create_chat:I = 0x7f130a5f
+.field public static btn_radio_to_off_mtrl_ring_outer_animation:I = 0x7f010014
 
-.field public static oneme_startconversations_create_empty_chat:I = 0x7f130a60
+.field public static btn_radio_to_off_mtrl_ring_outer_path_animation:I = 0x7f010015
 
-.field public static oneme_startconversations_member_search_hint:I = 0x7f130a61
+.field public static btn_radio_to_on_mtrl_dot_group_animation:I = 0x7f010016
 
-.field public static oneme_startconversations_phonebook_section_header:I = 0x7f130a62
+.field public static btn_radio_to_on_mtrl_ring_outer_animation:I = 0x7f010017
 
-.field public static oneme_startconversations_search_hint:I = 0x7f130a63
+.field public static btn_radio_to_on_mtrl_ring_outer_path_animation:I = 0x7f010018

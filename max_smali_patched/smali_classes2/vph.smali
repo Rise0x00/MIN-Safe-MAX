@@ -1,33 +1,27 @@
-.class public final Lvph;
+.class public abstract Lvph;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lorg/webrtc/VideoSink;
 
-
-# instance fields
-.field public volatile a:Lorg/webrtc/VideoSink;
-
-
-# virtual methods
-.method public final a(Lorg/webrtc/VideoFrame;)V
+# direct methods
+.method static constructor <clinit>()V
     .locals 1
 
-    iget-object v0, p0, Lvph;->a:Lorg/webrtc/VideoSink;
+    const-string v0, "[-_./;:]"
 
-    if-eqz v0, :cond_0
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    invoke-interface {v0, p1}, Lorg/webrtc/VideoSink;->onFrame(Lorg/webrtc/VideoFrame;)V
-
-    :cond_0
     return-void
 .end method
 
-.method public final onFrame(Lorg/webrtc/VideoFrame;)V
-    .locals 0
+.method public static final a()V
+    .locals 2
 
-    invoke-virtual {p0, p1}, Lvph;->a(Lorg/webrtc/VideoFrame;)V
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    return-void
+    const-string v1, "Internal error: this code path should never get executed"
+
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

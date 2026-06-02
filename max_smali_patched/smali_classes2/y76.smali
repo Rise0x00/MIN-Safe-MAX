@@ -1,110 +1,195 @@
 .class public final Ly76;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lek0;
 
 
-# instance fields
-.field public final synthetic X:Ld76;
-
-.field public o:I
+# static fields
+.field public static final a:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
-.method public constructor <init>(Ld76;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Ly76;->X:Ld76;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Ly76;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
+    return-void
+.end method
+
+.method public static b(Landroid/content/Context;)V
+    .locals 3
+
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    instance-of v0, v0, Landroid/app/Application;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/app/Application;
+
+    sget-object v0, Ly76;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-nez v1, :cond_3
+
+    new-instance v1, Ly76;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    :cond_1
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-static {p0}, Lfk0;->a(Landroid/app/Application;)V
+
+    sget-object v2, Lfk0;->o:Lfk0;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    monitor-enter v2
+
+    :try_start_0
+    iget-object p0, v2, Lfk0;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    monitor-exit v2
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+
+    :cond_2
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    :cond_3
+    :goto_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Z)V
+    .locals 5
 
-    check-cast p1, Lzb4;
+    sget-object v0, La86;->j:Ljava/lang/Object;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    monitor-enter v0
 
-    invoke-virtual {p0, p1, p2}, Ly76;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :try_start_0
+    new-instance v1, Ljava/util/ArrayList;
 
-    move-result-object p1
+    sget-object v2, La86;->k:Lwu;
 
-    check-cast p1, Ly76;
+    invoke-virtual {v2}, Lwu;->values()Ljava/util/Collection;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    move-result-object v2
 
-    invoke-virtual {p1, p2}, Ly76;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    move-result-object p1
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    return-object p1
-.end method
+    move-result-object v1
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    :cond_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    new-instance p1, Ly76;
+    move-result v2
 
-    iget-object v0, p0, Ly76;->X:Ld76;
+    if-eqz v2, :cond_1
 
-    invoke-direct {p1, v0, p2}, Ly76;-><init>(Ld76;Lkotlin/coroutines/Continuation;)V
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    return-object p1
-.end method
+    move-result-object v2
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    check-cast v2, La86;
 
-    iget v0, p0, Ly76;->o:I
+    iget-object v3, v2, La86;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    const/4 v1, 0x1
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    if-eqz v0, :cond_1
+    move-result v3
 
-    if-ne v0, v1, :cond_0
+    if-eqz v3, :cond_0
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    const-string v3, "FirebaseApp"
+
+    const-string v4, "Notifying background state change listeners."
+
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v2, v2, La86;->i:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lx76;
+
+    invoke-virtual {v3, p1}, Lx76;->a(Z)V
 
     goto :goto_0
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :catchall_0
+    move-exception p1
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    monitor-exit v0
 
-    iput v1, p0, Ly76;->o:I
+    return-void
 
-    iget-object p1, p0, Ly76;->X:Ld76;
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {p1, p0}, Lgu0;->g(Ld76;Lp6g;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    throw p1
 .end method

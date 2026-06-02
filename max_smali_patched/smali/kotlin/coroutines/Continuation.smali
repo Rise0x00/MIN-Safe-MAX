@@ -26,7 +26,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x2,
+        0x3,
         0x0
     }
     xi = 0x30
@@ -34,7 +34,7 @@
 
 
 # virtual methods
-.method public abstract getContext()Lqb4;
+.method public abstract getContext()Lfc4;
 .end method
 
 .method public abstract resumeWith(Ljava/lang/Object;)V

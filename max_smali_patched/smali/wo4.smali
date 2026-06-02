@@ -1,61 +1,56 @@
-.class public final Lwo4;
-.super Luk0;
+.class public final synthetic Lwo4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lij8;
 
 
 # instance fields
-.field public final o:Lvo4;
+.field public final synthetic a:Ldf;
+
+.field public final synthetic b:I
+
+.field public final synthetic c:J
+
+.field public final synthetic d:J
 
 
 # direct methods
-.method public constructor <init>(Lvo4;JJ)V
-    .locals 6
+.method public synthetic constructor <init>(Ldf;IJJ)V
+    .locals 0
 
-    const/4 v1, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object v0, p0
+    iput-object p1, p0, Lwo4;->a:Ldf;
 
-    move-wide v2, p2
+    iput p2, p0, Lwo4;->b:I
 
-    move-wide v4, p4
+    iput-wide p3, p0, Lwo4;->c:J
 
-    invoke-direct/range {v0 .. v5}, Luk0;-><init>(IJJ)V
-
-    iput-object p1, v0, Lwo4;->o:Lvo4;
+    iput-wide p5, p0, Lwo4;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 3
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 7
 
-    invoke-virtual {p0}, Luk0;->c()V
+    iget-wide v5, p0, Lwo4;->d:J
 
-    iget-object v0, p0, Lwo4;->o:Lvo4;
+    move-object v0, p1
 
-    iget-wide v1, p0, Luk0;->d:J
+    check-cast v0, Lef;
 
-    invoke-virtual {v0, v1, v2}, Lvo4;->i(J)J
+    iget-object v1, p0, Lwo4;->a:Ldf;
 
-    move-result-wide v0
+    iget v2, p0, Lwo4;->b:I
 
-    return-wide v0
-.end method
+    iget-wide v3, p0, Lwo4;->c:J
 
-.method public final b()J
-    .locals 3
+    invoke-interface/range {v0 .. v6}, Lef;->z0(Ldf;IJJ)V
 
-    invoke-virtual {p0}, Luk0;->c()V
-
-    iget-object v0, p0, Lwo4;->o:Lvo4;
-
-    iget-wide v1, p0, Luk0;->d:J
-
-    invoke-virtual {v0, v1, v2}, Lvo4;->g(J)J
-
-    move-result-wide v0
-
-    return-wide v0
+    return-void
 .end method

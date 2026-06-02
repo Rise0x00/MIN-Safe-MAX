@@ -1,65 +1,299 @@
 .class public final Llz8;
-.super Lkz8;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
+
+# interfaces
+.implements Lb3b;
+.implements Luz8;
+.implements Ls45;
+.implements Lirf;
 
 
 # instance fields
-.field public final synthetic g:Lcc9;
+.field public final synthetic a:I
+
+.field public final b:Lb3b;
+
+.field public final c:Lot6;
 
 
 # direct methods
-.method public constructor <init>(Lcc9;)V
+.method public synthetic constructor <init>(Lb3b;Lot6;I)V
     .locals 0
 
-    iput-object p1, p0, Llz8;->g:Lcc9;
+    iput p3, p0, Llz8;->a:I
 
-    invoke-direct {p0, p1}, Lkz8;-><init>(Lcc9;)V
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Llz8;->b:Lb3b;
+
+    iput-object p2, p0, Llz8;->c:Lot6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m()Ltb9;
-    .locals 2
+.method public final a(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Llz8;->g:Lcc9;
+    iget v0, p0, Llz8;->a:I
 
-    iget-object v1, v0, Lcc9;->X:Liz8;
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v1, :cond_1
+    :try_start_0
+    iget-object v0, p0, Llz8;->c:Lot6;
 
-    iget-object v0, v0, Lcc9;->c:Liz8;
+    invoke-interface {v0, p1}, Lot6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-ne v1, v0, :cond_0
+    move-result-object p1
 
-    new-instance v0, Ltb9;
+    const-string v0, "The mapper returned a null Publisher"
 
-    iget-object v1, p0, Lnk0;->b:Ljava/lang/Object;
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    check-cast v1, Ljz8;
+    check-cast p1, Lg0b;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p0}, Llz8;->f()Z
 
-    invoke-static {v1}, Lw4;->h(Ljz8;)Landroid/media/session/MediaSessionManager$RemoteUserInfo;
+    move-result v0
 
-    move-result-object v1
+    if-nez v0, :cond_0
 
-    invoke-direct {v0, v1}, Ltb9;-><init>(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)V
+    invoke-virtual {p1, p0}, Lg0b;->j(Lb3b;)V
 
-    return-object v0
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Lmzj;->c(Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Llz8;->b:Lb3b;
+
+    invoke-interface {v0, p1}, Lb3b;->onError(Ljava/lang/Throwable;)V
 
     :cond_0
-    iget-object v0, v1, Liz8;->d:Ltb9;
+    :goto_0
+    return-void
 
-    return-object v0
+    :pswitch_0
+    :try_start_1
+    iget-object v0, p0, Llz8;->c:Lot6;
+
+    invoke-interface {v0, p1}, Lot6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v0, "The mapper returned a null Publisher"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    check-cast p1, Lg0b;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    invoke-virtual {p0}, Llz8;->f()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p1, p0}, Lg0b;->j(Lb3b;)V
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p1
+
+    invoke-static {p1}, Lmzj;->c(Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Llz8;->b:Lb3b;
+
+    invoke-interface {v0, p1}, Lb3b;->onError(Ljava/lang/Throwable;)V
 
     :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
+    :goto_1
+    return-void
 
-    const-string v1, "This should be called inside of onGetRoot, onLoadChildren, onLoadItem, onSearch, or onCustomAction methods"
+    nop
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    throw v0
+.method public final b()V
+    .locals 1
+
+    iget v0, p0, Llz8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Llz8;->b:Lb3b;
+
+    invoke-interface {v0}, Lb3b;->b()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Llz8;->b:Lb3b;
+
+    invoke-interface {v0}, Lb3b;->b()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final c(Ls45;)V
+    .locals 1
+
+    iget v0, p0, Llz8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p0, p1}, Lw45;->d(Ljava/util/concurrent/atomic/AtomicReference;Ls45;)Z
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p0, p1}, Lw45;->d(Ljava/util/concurrent/atomic/AtomicReference;Ls45;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final dispose()V
+    .locals 1
+
+    iget v0, p0, Llz8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p0}, Lw45;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p0}, Lw45;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final e(Ljava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Llz8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Llz8;->b:Lb3b;
+
+    invoke-interface {v0, p1}, Lb3b;->e(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Llz8;->b:Lb3b;
+
+    invoke-interface {v0, p1}, Lb3b;->e(Ljava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    iget v0, p0, Llz8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ls45;
+
+    invoke-static {v0}, Lw45;->c(Ls45;)Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ls45;
+
+    invoke-static {v0}, Lw45;->c(Ls45;)Z
+
+    move-result v0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget v0, p0, Llz8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Llz8;->b:Lb3b;
+
+    invoke-interface {v0, p1}, Lb3b;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Llz8;->b:Lb3b;
+
+    invoke-interface {v0, p1}, Lb3b;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

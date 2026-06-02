@@ -1,55 +1,40 @@
 .class public final Loe0;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements La0b;
 
-# instance fields
-.field public X:Lkg3;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lue0;
-
-.field public d:Ljava/lang/String;
-
-.field public o:Li;
-
-.field public t0:I
+# static fields
+.field public static final a:Loe0;
 
 
 # direct methods
-.method public constructor <init>(Lue0;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Loe0;->Z:Lue0;
+    new-instance v0, Loe0;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Loe0;->a:Loe0;
+
+    const-string v0, "clientMetrics"
+
+    invoke-static {v0}, Lf26;->c(Ljava/lang/String;)Lf26;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iput-object p1, p0, Loe0;->Y:Ljava/lang/Object;
-
-    iget p1, p0, Loe0;->t0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Loe0;->t0:I
-
-    iget-object p1, p0, Loe0;->Z:Lue0;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, v0, v0, p0}, Lue0;->s(Lue0;Landroid/net/Uri;Ljava/lang/String;Li;Lo84;)Ljava/lang/Object;
+    invoke-static {p1}, Lo52;->i(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
     move-result-object p1
 
-    return-object p1
+    throw p1
 .end method

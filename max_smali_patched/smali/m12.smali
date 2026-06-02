@@ -1,14 +1,51 @@
-.class public interface abstract Lm12;
-.super Ljava/lang/Object;
+.class public final Lm12;
+.super Lz84;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic X:Ln12;
+
+.field public Y:I
+
+.field public d:Lwvc;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Ln12;Lz84;)V
+    .locals 0
+
+    iput-object p1, p0, Lm12;->X:Ln12;
+
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract a(Landroid/hardware/camera2/TotalCaptureResult;)Lie8;
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract b()Z
-.end method
+    iput-object p1, p0, Lm12;->o:Ljava/lang/Object;
 
-.method public abstract c()V
+    iget p1, p0, Lm12;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lm12;->Y:I
+
+    iget-object p1, p0, Lm12;->X:Ln12;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Ln12;->j(Lwvc;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

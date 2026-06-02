@@ -1,157 +1,101 @@
 .class public final Lnj6;
-.super Ljava/lang/Object;
+.super Lhk0;
 .source "SourceFile"
 
 
 # instance fields
-.field public A:[B
+.field public final f:Ljava/util/List;
 
-.field public B:I
-
-.field public C:Lzi3;
-
-.field public D:I
-
-.field public E:I
-
-.field public F:I
-
-.field public G:I
-
-.field public H:I
-
-.field public I:I
-
-.field public J:I
-
-.field public K:I
-
-.field public L:I
-
-.field public M:I
-
-.field public N:I
-
-.field public a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
-
-.field public c:Lhk7;
-
-.field public d:Ljava/lang/String;
-
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public h:I
-
-.field public i:I
-
-.field public j:Ljava/lang/String;
-
-.field public k:Lt4a;
-
-.field public l:Ljava/lang/String;
-
-.field public m:Ljava/lang/String;
-
-.field public n:I
-
-.field public o:I
-
-.field public p:Ljava/util/List;
-
-.field public q:Lz85;
-
-.field public r:J
-
-.field public s:Z
-
-.field public t:I
-
-.field public u:I
-
-.field public v:I
-
-.field public w:I
-
-.field public x:F
-
-.field public y:I
-
-.field public z:F
+.field public final g:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(Ljava/util/List;Ljava/util/List;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lhk7;->b:Lac6;
+    iput-object p1, p0, Lnj6;->f:Ljava/util/List;
 
-    sget-object v0, Lhud;->o:Lhud;
-
-    iput-object v0, p0, Lnj6;->c:Lhk7;
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lnj6;->h:I
-
-    iput v0, p0, Lnj6;->i:I
-
-    iput v0, p0, Lnj6;->n:I
-
-    iput v0, p0, Lnj6;->o:I
-
-    const-wide v1, 0x7fffffffffffffffL
-
-    iput-wide v1, p0, Lnj6;->r:J
-
-    iput v0, p0, Lnj6;->t:I
-
-    iput v0, p0, Lnj6;->u:I
-
-    iput v0, p0, Lnj6;->v:I
-
-    iput v0, p0, Lnj6;->w:I
-
-    const/high16 v1, -0x40800000    # -1.0f
-
-    iput v1, p0, Lnj6;->x:F
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    iput v1, p0, Lnj6;->z:F
-
-    iput v0, p0, Lnj6;->B:I
-
-    iput v0, p0, Lnj6;->D:I
-
-    iput v0, p0, Lnj6;->E:I
-
-    iput v0, p0, Lnj6;->F:I
-
-    iput v0, p0, Lnj6;->G:I
-
-    iput v0, p0, Lnj6;->J:I
-
-    const/4 v1, 0x1
-
-    iput v1, p0, Lnj6;->K:I
-
-    iput v0, p0, Lnj6;->L:I
-
-    iput v0, p0, Lnj6;->M:I
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lnj6;->N:I
-
-    iput v0, p0, Lnj6;->g:I
+    iput-object p2, p0, Lnj6;->g:Ljava/util/List;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final T()I
+    .locals 1
+
+    iget-object v0, p0, Lnj6;->g:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final U()I
+    .locals 1
+
+    iget-object v0, p0, Lnj6;->f:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final f(II)Z
+    .locals 1
+
+    iget-object v0, p0, Lnj6;->f:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lnj6;->g:Ljava/util/List;
+
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final g(II)Z
+    .locals 1
+
+    iget-object v0, p0, Lnj6;->f:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lph6;
+
+    iget-object p1, p1, Lph6;->a:Ljava/lang/String;
+
+    iget-object v0, p0, Lnj6;->g:Ljava/util/List;
+
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lph6;
+
+    iget-object p2, p2, Lph6;->a:Ljava/lang/String;
+
+    invoke-static {p1, p2}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method

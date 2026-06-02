@@ -1,304 +1,180 @@
 .class public final Lyv8;
-.super Ljava/lang/Object;
+.super Ljava/util/AbstractCollection;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Comparable;
+.implements Ljava/util/Collection;
+.implements Ls78;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final d:Ljava/lang/String;
-
-.field public final o:J
+.field public final a:Lwv8;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;JJLjava/lang/String;J)V
-    .locals 1
+.method public constructor <init>(Lwv8;)V
+    .locals 0
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lyv8;->a:Ljava/lang/String;
-
-    iput-wide p2, p0, Lyv8;->b:J
-
-    iput-wide p4, p0, Lyv8;->c:J
-
-    iput-object p6, p0, Lyv8;->d:Ljava/lang/String;
-
-    iput-wide p7, p0, Lyv8;->o:J
+    iput-object p1, p0, Lyv8;->a:Lwv8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 7
+.method public final add(Ljava/lang/Object;)Z
+    .locals 0
 
-    check-cast p1, Lyv8;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    iget-wide v1, p0, Lyv8;->c:J
+    throw p1
+.end method
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+.method public final addAll(Ljava/util/Collection;)Z
+    .locals 0
 
-    move-result-wide v1
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    iget-wide v3, p0, Lyv8;->b:J
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    invoke-virtual {v0, v3, v4}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+    throw p1
+.end method
 
-    move-result-wide v3
+.method public final clear()V
+    .locals 1
 
-    add-long/2addr v3, v1
+    iget-object v0, p0, Lyv8;->a:Lwv8;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Lwv8;->clear()V
 
-    iget-wide v1, p1, Lyv8;->c:J
+    return-void
+.end method
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
 
-    move-result-wide v1
+    iget-object v0, p0, Lyv8;->a:Lwv8;
 
-    iget-wide v5, p1, Lyv8;->b:J
-
-    invoke-virtual {v0, v5, v6}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide v5
-
-    add-long/2addr v5, v1
-
-    invoke-static {v3, v4, v5, v6}, Le1j;->c(JJ)I
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    return p1
-
-    :cond_1
-    iget-object v0, p0, Lyv8;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Lyv8;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+    invoke-virtual {v0, p1}, Lwv8;->containsValue(Ljava/lang/Object;)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final isEmpty()Z
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lyv8;->a:Lwv8;
 
-    goto :goto_1
+    invoke-virtual {v0}, Lwv8;->isEmpty()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 2
+
+    iget-object v0, p0, Lyv8;->a:Lwv8;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lvv8;
+
+    invoke-direct {v1, v0}, Luv8;-><init>(Lwv8;)V
+
+    return-object v1
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 3
+
+    iget-object v0, p0, Lyv8;->a:Lwv8;
+
+    invoke-virtual {v0}, Lwv8;->c()V
+
+    iget v1, v0, Lwv8;->X:I
 
     :cond_0
-    instance-of v0, p1, Lyv8;
+    const/4 v2, -0x1
 
-    if-nez v0, :cond_1
+    add-int/2addr v1, v2
 
-    goto :goto_0
+    if-ltz v1, :cond_1
+
+    iget-object v2, v0, Lwv8;->c:[I
+
+    aget v2, v2, v1
+
+    if-ltz v2, :cond_0
+
+    iget-object v2, v0, Lwv8;->b:[Ljava/lang/Object;
+
+    aget-object v2, v2, v1
+
+    invoke-static {v2, p1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    move v2, v1
 
     :cond_1
-    check-cast p1, Lyv8;
+    if-gez v2, :cond_2
 
-    iget-object v0, p0, Lyv8;->a:Ljava/lang/String;
-
-    iget-object v1, p1, Lyv8;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-wide v0, p0, Lyv8;->b:J
-
-    iget-wide v2, p1, Lyv8;->b:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-wide v0, p0, Lyv8;->c:J
-
-    iget-wide v2, p1, Lyv8;->c:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v0, p0, Lyv8;->d:Ljava/lang/String;
-
-    iget-object v1, p1, Lyv8;->d:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-wide v0, p0, Lyv8;->o:J
-
-    iget-wide v2, p1, Lyv8;->o:J
-
-    cmp-long p1, v0, v2
-
-    if-eqz p1, :cond_6
-
-    :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_6
-    :goto_1
+    :cond_2
+    invoke-virtual {v0, v2}, Lwv8;->i(I)V
+
     const/4 p1, 0x1
 
     return p1
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public final removeAll(Ljava/util/Collection;)Z
+    .locals 1
 
-    iget-object v0, p0, Lyv8;->a:Ljava/lang/String;
+    iget-object v0, p0, Lyv8;->a:Lwv8;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v0}, Lwv8;->c()V
 
-    move-result v0
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->removeAll(Ljava/util/Collection;)Z
 
-    const/16 v1, 0x1f
+    move-result p1
 
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lyv8;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
-
-    move-result v0
-
-    iget-wide v2, p0, Lyv8;->c:J
-
-    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
-
-    move-result v0
-
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Lyv8;->d:Ljava/lang/String;
-
-    invoke-static {v2, v1, v0}, Lxi4;->e(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-wide v1, p0, Lyv8;->o:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 6
+.method public final retainAll(Ljava/util/Collection;)Z
+    .locals 1
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    iget-object v0, p0, Lyv8;->a:Lwv8;
 
-    const-string v1, "Measurement(taskName="
+    invoke-virtual {v0}, Lwv8;->c()V
 
-    const-string v2, ", dependencyDuration="
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->retainAll(Ljava/util/Collection;)Z
 
-    iget-wide v3, p0, Lyv8;->b:J
+    move-result p1
 
-    iget-object v5, p0, Lyv8;->a:Ljava/lang/String;
+    return p1
+.end method
 
-    invoke-static {v1, v3, v4, v5, v2}, Lmrf;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final size()I
+    .locals 1
 
-    move-result-object v1
+    iget-object v0, p0, Lyv8;->a:Lwv8;
 
-    const-string v2, ", executionDuration="
+    iget v0, v0, Lwv8;->z0:I
 
-    const-string v3, ", unit="
-
-    iget-wide v4, p0, Lyv8;->c:J
-
-    invoke-static {v4, v5, v2, v3, v1}, Lt02;->p(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", threadName="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Lyv8;->d:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", startTime="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    iget-wide v2, p0, Lyv8;->o:J
-
-    invoke-static {v1, v2, v3, v0}, Lva9;->f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method

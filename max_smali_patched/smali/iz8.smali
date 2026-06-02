@@ -1,74 +1,56 @@
 .class public final Liz8;
-.super Ljava/lang/Object;
+.super Lez8;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/IBinder$DeathRecipient;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:Ltb9;
-
-.field public final e:Loz8;
-
-.field public final f:Ljava/util/HashMap;
-
-.field public final synthetic g:Lcc9;
+.field public final a:Lvz8;
 
 
 # direct methods
-.method public constructor <init>(Lcc9;Ljava/lang/String;IILpz8;)V
+.method public constructor <init>(Lvz8;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Liz8;->g:Lcc9;
-
-    new-instance p1, Ljava/util/HashMap;
-
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p1, p0, Liz8;->f:Ljava/util/HashMap;
-
-    iput-object p2, p0, Liz8;->a:Ljava/lang/String;
-
-    iput p3, p0, Liz8;->b:I
-
-    iput p4, p0, Liz8;->c:I
-
-    new-instance p1, Ltb9;
-
-    invoke-direct {p1, p2, p3, p4}, Ltb9;-><init>(Ljava/lang/String;II)V
-
-    iput-object p1, p0, Liz8;->d:Ltb9;
-
-    iput-object p5, p0, Liz8;->e:Loz8;
+    iput-object p1, p0, Liz8;->a:Lvz8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final binderDied()V
-    .locals 3
+.method public final f(Luz8;)V
+    .locals 1
 
-    iget-object v0, p0, Liz8;->g:Lcc9;
+    new-instance v0, Lhz8;
 
-    iget-object v0, v0, Lcc9;->Y:Lqy;
+    invoke-direct {v0, p1}, Lhz8;-><init>(Luz8;)V
 
-    new-instance v1, Lag8;
+    invoke-interface {p1, v0}, Luz8;->c(Ls45;)V
 
-    const/4 v2, 0x1
+    :try_start_0
+    iget-object p1, p0, Liz8;->a:Lvz8;
 
-    invoke-direct {v1, v2, p0}, Lag8;-><init>(ILjava/lang/Object;)V
+    invoke-interface {p1, v0}, Lvz8;->c(Lhz8;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    return-void
 
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Lmzj;->c(Ljava/lang/Throwable;)V
+
+    invoke-virtual {v0, p1}, Lhz8;->c(Ljava/lang/Throwable;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {p1}, Lq98;->J(Ljava/lang/Throwable;)V
+
+    :cond_0
     return-void
 .end method

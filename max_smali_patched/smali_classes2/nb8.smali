@@ -1,61 +1,110 @@
 .class public final Lnb8;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public X:Ljd8;
-
-.field public Y:Ljava/lang/Object;
-
-.field public Z:Ljava/lang/Throwable;
-
-.field public d:Lfjc;
-
-.field public o:Landroid/net/Uri;
-
-.field public t0:I
-
-.field public synthetic u0:Ljava/lang/Object;
-
-.field public final synthetic v0:Ltb8;
-
-.field public w0:I
+# interfaces
+.implements Lkle;
 
 
 # direct methods
-.method public constructor <init>(Ltb8;Lo84;)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lnb8;->v0:Ltb8;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Lole;)V
+    .locals 5
 
-    iput-object p1, p0, Lnb8;->u0:Ljava/lang/Object;
+    instance-of v0, p1, Le5i;
 
-    iget p1, p0, Lnb8;->w0:I
+    if-eqz v0, :cond_2
 
-    const/high16 v0, -0x80000000
+    move-object v0, p1
 
-    or-int/2addr p1, v0
+    check-cast v0, Le5i;
 
-    iput p1, p0, Lnb8;->w0:I
+    invoke-interface {v0}, Le5i;->g()Ld5i;
 
-    iget-object p1, p0, Lnb8;->v0:Ltb8;
+    move-result-object v0
 
-    const/4 v0, 0x0
+    invoke-interface {p1}, Lole;->k()Lmle;
 
-    invoke-static {p1, v0, v0, p0}, Ltb8;->a(Ltb8;Lfjc;Landroid/net/Uri;Lo84;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object p1
+    iget-object v0, v0, Ld5i;->a:Ljava/util/LinkedHashMap;
+
+    new-instance v2, Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lx4i;
+
+    invoke-interface {p1}, Lad8;->q()Lcd8;
+
+    move-result-object v4
+
+    invoke-static {v3, v1, v4}, Lhv7;->a(Lx4i;Lmle;Lcd8;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual {p1}, Ljava/util/HashSet;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    invoke-virtual {v1}, Lmle;->d()V
+
+    :cond_1
+    return-void
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Internal error: OnRecreation should be registered only on components that implement ViewModelStoreOwner"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

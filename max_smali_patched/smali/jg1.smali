@@ -1,240 +1,363 @@
 .class public final Ljg1;
-.super Lp6g;
+.super Lh43;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic e:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p2, p0, Ljg1;->X:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
+    iput p1, p0, Ljg1;->e:I
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final e(Lyie;Ljava/lang/Object;)V
+    .locals 4
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Ljg1;->e:I
 
-    invoke-virtual {p0, p1, p2}, Ljg1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    check-cast p2, Lx6c;
 
-    check-cast p1, Ljg1;
+    const/4 v0, 0x1
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    invoke-virtual {p2}, Lx6c;->e()J
 
-    invoke-virtual {p1, p2}, Ljg1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-wide v1
 
-    return-object p2
-.end method
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    const/4 v0, 0x2
 
-    new-instance v0, Ljg1;
+    invoke-virtual {p2}, Lx6c;->i()J
 
-    iget-object v1, p0, Ljg1;->X:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
+    move-result-wide v1
 
-    invoke-direct {v0, p2, v1}, Ljg1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;)V
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
 
-    iput-object p1, v0, Ljg1;->o:Ljava/lang/Object;
+    invoke-virtual {p2}, Lx6c;->b()I
 
-    return-object v0
-.end method
+    move-result v0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 17
+    int-to-long v0, v0
 
-    move-object/from16 v0, p0
+    const/4 v2, 0x3
 
-    iget-object v1, v0, Ljg1;->o:Ljava/lang/Object;
+    invoke-interface {p1, v2, v0, v1}, Lyie;->b(IJ)V
 
-    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
+    const/4 v0, 0x4
 
-    check-cast v1, Lxf1;
+    invoke-virtual {p2}, Lx6c;->g()Ljava/lang/String;
 
-    iget-object v2, v0, Ljg1;->X:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
+    move-result-object v1
 
-    iget-object v3, v2, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->v0:Ljld;
+    invoke-interface {p1, v0, v1}, Lyie;->I(ILjava/lang/String;)V
 
-    sget-object v4, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->B0:[Lz28;
+    const/4 v0, 0x5
 
-    const/4 v5, 0x6
+    invoke-virtual {p2}, Lx6c;->h()Ljava/lang/String;
 
-    aget-object v4, v4, v5
+    move-result-object v1
 
-    invoke-interface {v3, v2, v4}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-interface {p1, v0, v1}, Lyie;->I(ILjava/lang/String;)V
 
-    move-result-object v3
+    const/4 v0, 0x6
 
-    check-cast v3, Lfv1;
+    invoke-virtual {p2}, Lx6c;->j()J
 
-    iget-object v4, v1, Lxf1;->a:Lve0;
+    move-result-wide v1
 
-    invoke-virtual {v3, v4}, Lfv1;->setAvatar(Lve0;)V
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
 
-    iget-object v4, v1, Lxf1;->c:Lzv8;
+    invoke-virtual {p2}, Lx6c;->c()Ljava/lang/String;
 
-    sget-object v5, Lzv8;->b:Lzv8;
+    move-result-object v0
 
-    if-ne v4, v5, :cond_0
+    const/4 v1, 0x7
 
-    sget-object v6, Lhbh;->b:Lhbh;
+    if-nez v0, :cond_0
+
+    invoke-interface {p1, v1}, Lyie;->e(I)V
 
     goto :goto_0
 
     :cond_0
-    sget-object v6, Lhbh;->d:Lhbh;
+    invoke-interface {p1, v1, v0}, Lyie;->I(ILjava/lang/String;)V
 
     :goto_0
-    invoke-virtual {v3, v6}, Lfv1;->setButtonAction(Lhbh;)V
+    const/16 v0, 0x8
 
-    if-ne v4, v5, :cond_1
+    invoke-virtual {p2}, Lx6c;->d()Ljava/lang/String;
 
-    const/4 v4, 0x1
+    move-result-object v1
+
+    invoke-interface {p1, v0, v1}, Lyie;->I(ILjava/lang/String;)V
+
+    invoke-virtual {p2}, Lx6c;->f()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/16 v1, 0x9
+
+    if-nez v0, :cond_1
+
+    invoke-interface {p1, v1}, Lyie;->e(I)V
 
     goto :goto_1
 
     :cond_1
-    const/4 v4, 0x0
+    invoke-interface {p1, v1, v0}, Lyie;->I(ILjava/lang/String;)V
 
     :goto_1
-    iget-boolean v5, v1, Lxf1;->d:Z
+    invoke-virtual {p2}, Lx6c;->a()Ljava/lang/String;
 
-    invoke-virtual {v3, v4, v5}, Lfv1;->E(ZZ)V
+    move-result-object v0
 
-    const/4 v4, 0x0
+    const/16 v1, 0xa
 
-    invoke-virtual {v3, v4, v4}, Lfv1;->F(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    if-nez v0, :cond_2
 
-    invoke-virtual {v2}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->B0()Landroid/widget/TextView;
+    invoke-interface {p1, v1}, Lyie;->e(I)V
 
-    move-result-object v3
+    goto :goto_2
 
-    iget-object v4, v1, Lxf1;->e:Lqhg;
+    :cond_2
+    invoke-interface {p1, v1, v0}, Lyie;->I(ILjava/lang/String;)V
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    :goto_2
+    invoke-virtual {p2}, Lx6c;->k()I
 
-    move-result-object v5
+    move-result v0
 
-    invoke-virtual {v4, v5}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-static {v0}, Lo52;->F(I)I
 
-    move-result-object v4
+    move-result v0
 
-    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    const/16 v1, 0xb
 
-    invoke-virtual {v2}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->z0()Lg4e;
+    int-to-long v2, v0
 
-    move-result-object v5
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
 
-    iget-object v3, v2, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->w0:Ljava/lang/Object;
+    const/16 v0, 0xc
 
-    invoke-interface {v3}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-virtual {p2}, Lx6c;->e()J
 
-    move-result-object v3
+    move-result-wide v1
 
-    move-object v7, v3
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
 
-    check-cast v7, Landroid/graphics/drawable/Drawable;
+    return-void
 
-    iget-object v3, v2, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->x0:Ljava/lang/Object;
+    :pswitch_0
+    check-cast p2, Lqg1;
 
-    invoke-interface {v3}, Lo58;->getValue()Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    move-result-object v3
+    invoke-virtual {p2}, Lqg1;->i()J
 
-    move-object v6, v3
+    move-result-wide v1
 
-    check-cast v6, Landroid/graphics/drawable/Drawable;
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
 
-    iget-object v8, v1, Lxf1;->b:Lzv8;
+    const/4 v0, 0x2
 
-    sget v3, Ledd;->call_microphone_enabled_accessibility:I
+    invoke-virtual {p2}, Lqg1;->a()Ljava/lang/String;
 
-    new-instance v9, Llhg;
+    move-result-object v1
 
-    invoke-direct {v9, v3}, Llhg;-><init>(I)V
+    invoke-interface {p1, v0, v1}, Lyie;->I(ILjava/lang/String;)V
 
-    sget v3, Ledd;->call_microphone_disabled_accessibility:I
+    invoke-virtual {p2}, Lqg1;->b()Ljava/lang/String;
 
-    new-instance v10, Llhg;
+    move-result-object v0
 
-    invoke-direct {v10, v3}, Llhg;-><init>(I)V
+    const/4 v1, 0x3
 
-    invoke-static/range {v5 .. v10}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->E0(Lg4e;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Lzv8;Llhg;Llhg;)V
+    if-nez v0, :cond_3
 
-    invoke-virtual {v2}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->C0()Lg4e;
+    invoke-interface {p1, v1}, Lyie;->e(I)V
 
-    move-result-object v11
+    goto :goto_3
 
-    iget-object v3, v2, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->y0:Ljava/lang/Object;
+    :cond_3
+    invoke-interface {p1, v1, v0}, Lyie;->I(ILjava/lang/String;)V
 
-    invoke-interface {v3}, Lo58;->getValue()Ljava/lang/Object;
+    :goto_3
+    const/4 v0, 0x4
 
-    move-result-object v3
+    invoke-virtual {p2}, Lqg1;->d()J
 
-    move-object v13, v3
+    move-result-wide v1
 
-    check-cast v13, Landroid/graphics/drawable/Drawable;
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
 
-    iget-object v3, v2, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->z0:Ljava/lang/Object;
+    invoke-virtual {p2}, Lqg1;->k()Ljava/lang/Long;
 
-    invoke-interface {v3}, Lo58;->getValue()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v3
+    const/4 v1, 0x5
 
-    move-object v12, v3
+    if-nez v0, :cond_4
 
-    check-cast v12, Landroid/graphics/drawable/Drawable;
+    invoke-interface {p1, v1}, Lyie;->e(I)V
 
-    iget-object v14, v1, Lxf1;->c:Lzv8;
+    goto :goto_4
 
-    sget v3, Ledd;->call_video_enabled_accessibility:I
+    :cond_4
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    new-instance v15, Llhg;
+    move-result-wide v2
 
-    invoke-direct {v15, v3}, Llhg;-><init>(I)V
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
 
-    sget v3, Ledd;->call_video_disabled_accessibility:I
+    :goto_4
+    const/4 v0, 0x6
 
-    new-instance v4, Llhg;
+    invoke-virtual {p2}, Lqg1;->e()J
 
-    invoke-direct {v4, v3}, Llhg;-><init>(I)V
+    move-result-wide v1
 
-    move-object/from16 v16, v4
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
 
-    invoke-static/range {v11 .. v16}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->E0(Lg4e;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Lzv8;Llhg;Llhg;)V
+    const/4 v0, 0x7
 
-    invoke-virtual {v2}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->A0()Llkb;
+    invoke-virtual {p2}, Lqg1;->c()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    iget-object v3, v1, Lxf1;->f:Ljava/util/List;
+    invoke-interface {p1, v0, v1}, Lyie;->I(ILjava/lang/String;)V
 
-    invoke-virtual {v2, v3}, Llkb;->setAvatars(Ljava/util/List;)V
+    invoke-virtual {p2}, Lqg1;->h()Ljava/lang/String;
 
-    iget-object v1, v1, Lxf1;->g:Lqhg;
+    move-result-object v0
 
-    invoke-virtual {v2, v1}, Llkb;->setTitle(Lqhg;)V
+    const/16 v1, 0x8
 
-    sget-object v1, Lb3h;->a:Lb3h;
+    if-nez v0, :cond_5
 
-    return-object v1
+    invoke-interface {p1, v1}, Lyie;->e(I)V
+
+    goto :goto_5
+
+    :cond_5
+    invoke-interface {p1, v1, v0}, Lyie;->I(ILjava/lang/String;)V
+
+    :goto_5
+    invoke-virtual {p2}, Lqg1;->j()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/16 v1, 0x9
+
+    if-nez v0, :cond_6
+
+    invoke-interface {p1, v1}, Lyie;->e(I)V
+
+    goto :goto_6
+
+    :cond_6
+    invoke-interface {p1, v1, v0}, Lyie;->I(ILjava/lang/String;)V
+
+    :goto_6
+    const/16 v0, 0xa
+
+    invoke-virtual {p2}, Lqg1;->l()J
+
+    move-result-wide v1
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    invoke-virtual {p2}, Lqg1;->f()Ljava/lang/Long;
+
+    move-result-object v0
+
+    const/16 v1, 0xb
+
+    if-nez v0, :cond_7
+
+    invoke-interface {p1, v1}, Lyie;->e(I)V
+
+    goto :goto_7
+
+    :cond_7
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
+
+    :goto_7
+    invoke-virtual {p2}, Lqg1;->g()Ljava/lang/Integer;
+
+    move-result-object v0
+
+    const/16 v1, 0xc
+
+    if-nez v0, :cond_8
+
+    invoke-interface {p1, v1}, Lyie;->e(I)V
+
+    goto :goto_8
+
+    :cond_8
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
+
+    :goto_8
+    const/16 v0, 0xd
+
+    invoke-virtual {p2}, Lqg1;->i()J
+
+    move-result-wide v1
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final u()Ljava/lang/String;
+    .locals 1
+
+    iget v0, p0, Ljg1;->e:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const-string v0, "UPDATE OR ABORT `phones` SET `id` = ?,`phonebook_id` = ?,`contact_id` = ?,`phone` = ?,`phone_key` = ?,`server_phone` = ?,`email` = ?,`first_name` = ?,`last_name` = ?,`avatar_path` = ?,`type` = ? WHERE `id` = ?"
+
+    return-object v0
+
+    :pswitch_0
+    const-string v0, "UPDATE `call_history` SET `history_id` = ?,`call_id` = ?,`call_name` = ?,`caller_id` = ?,`message_id` = ?,`chat_id` = ?,`call_type` = ?,`hangup_type` = ?,`join_link` = ?,`time` = ?,`duration_ms` = ?,`group_call_type` = ? WHERE `history_id` = ?"
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

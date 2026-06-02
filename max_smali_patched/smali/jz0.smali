@@ -2,83 +2,29 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public a:Z
-
-.field public b:J
-
-.field public c:J
+# interfaces
+.implements Lwx4;
 
 
 # virtual methods
-.method public declared-synchronized a()J
-    .locals 2
+.method public final a(Ljavax/net/ssl/SSLSocket;)Z
+    .locals 0
 
-    monitor-enter p0
+    sget-boolean p1, Liz0;->d:Z
 
-    :try_start_0
-    iget-wide v0, p0, Ljz0;->b:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {}, Lhz0;->d()Z
 
-    monitor-exit p0
+    const/4 p1, 0x0
 
-    return-wide v0
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
+    return p1
 .end method
 
-.method public declared-synchronized b(JJ)V
-    .locals 2
+.method public final b(Ljavax/net/ssl/SSLSocket;)Lkuf;
+    .locals 0
 
-    monitor-enter p0
+    new-instance p1, Lkz0;
 
-    :try_start_0
-    iget-boolean v0, p0, Ljz0;->a:Z
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
-
-    iget-wide v0, p0, Ljz0;->b:J
-
-    add-long/2addr v0, p1
-
-    iput-wide v0, p0, Ljz0;->b:J
-
-    iget-wide p1, p0, Ljz0;->c:J
-
-    add-long/2addr p1, p3
-
-    iput-wide p1, p0, Ljz0;->c:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
+    return-object p1
 .end method

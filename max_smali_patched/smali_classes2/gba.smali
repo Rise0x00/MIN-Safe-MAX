@@ -1,157 +1,243 @@
 .class public final Lgba;
-.super Lvm;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ledg;
+.implements Lmwe;
 
 
 # instance fields
-.field public final X:Ljava/util/List;
+.field public final a:[J
 
-.field public final d:J
+.field public final b:[J
 
-.field public final o:J
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(JJJLjava/util/List;)V
-    .locals 0
+.method public constructor <init>(J[J[J)V
+    .locals 2
 
-    invoke-direct {p0, p1, p2}, Lvm;-><init>(J)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p3, p0, Lgba;->d:J
+    iput-object p3, p0, Lgba;->a:[J
 
-    iput-wide p5, p0, Lgba;->o:J
+    iput-object p4, p0, Lgba;->b:[J
 
-    iput-object p7, p0, Lgba;->X:Ljava/util/List;
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long p3, p1, v0
+
+    if-eqz p3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    array-length p1, p4
+
+    add-int/lit8 p1, p1, -0x1
+
+    aget-wide p1, p4, p1
+
+    invoke-static {p1, p2}, Lnnh;->B(J)J
+
+    move-result-wide p1
+
+    :goto_0
+    iput-wide p1, p0, Lgba;->c:J
 
     return-void
 .end method
 
+.method public static d(J[J[J)Landroid/util/Pair;
+    .locals 10
 
-# virtual methods
-.method public final g(Licg;)V
-    .locals 8
+    const/4 v0, 0x1
 
-    check-cast p1, Lhba;
+    invoke-static {p2, p0, p1, v0}, Lnnh;->e([JJZ)I
 
-    invoke-virtual {p0}, Lvm;->n()Lhm9;
+    move-result v1
 
-    move-result-object v0
+    aget-wide v2, p2, v1
 
-    iget-object v1, p1, Lhba;->c:Ljava/util/Map;
+    aget-wide v4, p3, v1
 
-    iget-object v0, v0, Lhm9;->a:Lii4;
+    add-int/2addr v1, v0
 
-    iget-object v0, v0, Lii4;->c:Lu2e;
+    array-length v0, p2
 
-    iget-object v2, v0, Lu2e;->a:Llgb;
+    if-ne v1, v0, :cond_0
 
-    invoke-virtual {v2}, Llgb;->l()Lb2e;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v2
+    move-result-object p0
 
-    check-cast v2, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
-
-    new-instance v3, Lbhc;
-
-    const/16 v4, 0x11
-
-    invoke-direct {v3, v1, v4, v0}, Lbhc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v2, v3}, Lb2e;->v(Ljava/lang/Runnable;)V
-
-    iget-object p1, p1, Lhba;->c:Ljava/util/Map;
-
-    invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-static {p0, p1}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    move-result-object p1
+    move-result-object p0
+
+    return-object p0
 
     :cond_0
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    aget-wide v6, p2, v1
 
-    move-result v0
+    aget-wide p2, p3, v1
 
-    if-eqz v0, :cond_1
+    cmp-long v0, v6, v2
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-nez v0, :cond_1
 
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    invoke-virtual {p0}, Lvm;->n()Lhm9;
-
-    move-result-object v1
-
-    iget-wide v2, p0, Lgba;->d:J
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v4
-
-    invoke-virtual {v1, v2, v3, v4, v5}, Lhm9;->h(JJ)Ljm9;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lvm;->j()Lcy0;
-
-    move-result-object v1
-
-    new-instance v2, Le6h;
-
-    iget-wide v5, v0, Lhk0;->a:J
-
-    const/4 v7, 0x0
-
-    iget-wide v3, p0, Lgba;->d:J
-
-    invoke-direct/range {v2 .. v7}, Le6h;-><init>(JJZ)V
-
-    invoke-virtual {v1, v2}, Lcy0;->c(Ljava/lang/Object;)V
+    const-wide/16 v0, 0x0
 
     goto :goto_0
 
     :cond_1
-    return-void
+    long-to-double v0, p0
+
+    long-to-double v8, v2
+
+    sub-double/2addr v0, v8
+
+    sub-long/2addr v6, v2
+
+    long-to-double v2, v6
+
+    div-double/2addr v0, v2
+
+    :goto_0
+    sub-long/2addr p2, v4
+
+    long-to-double p2, p2
+
+    mul-double/2addr v0, p2
+
+    double-to-long p2, v0
+
+    add-long/2addr p2, v4
+
+    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p0
+
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public final h()Lj2;
-    .locals 4
 
-    new-instance v0, Lk06;
+# virtual methods
+.method public final a()J
+    .locals 2
 
-    iget-wide v1, p0, Lgba;->o:J
+    const-wide/16 v0, -0x1
 
-    iget-object v3, p0, Lgba;->X:Ljava/util/List;
-
-    invoke-direct {v0, v1, v2, v3}, Lk06;-><init>(JLjava/util/List;)V
-
-    return-object v0
+    return-wide v0
 .end method
 
-.method public final k(Lnbg;)V
-    .locals 4
+.method public final b(J)J
+    .locals 2
 
-    invoke-virtual {p0}, Lvm;->j()Lcy0;
+    iget-object v0, p0, Lgba;->a:[J
 
-    move-result-object v0
+    iget-object v1, p0, Lgba;->b:[J
 
-    new-instance v1, Ljk0;
+    invoke-static {p1, p2, v0, v1}, Lgba;->d(J[J[J)Landroid/util/Pair;
 
-    iget-wide v2, p0, Lvm;->a:J
+    move-result-object p1
 
-    invoke-direct {v1, v2, v3, p1}, Ljk0;-><init>(JLnbg;)V
+    iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lcy0;->c(Ljava/lang/Object;)V
+    check-cast p1, Ljava/lang/Long;
 
-    return-void
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide p1
+
+    invoke-static {p1, p2}, Lnnh;->B(J)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final c()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final e(J)Lcwe;
+    .locals 6
+
+    const-wide/16 v2, 0x0
+
+    iget-wide v4, p0, Lgba;->c:J
+
+    move-wide v0, p1
+
+    invoke-static/range {v0 .. v5}, Lnnh;->j(JJJ)J
+
+    move-result-wide p1
+
+    invoke-static {p1, p2}, Lnnh;->K(J)J
+
+    move-result-wide p1
+
+    iget-object v0, p0, Lgba;->b:[J
+
+    iget-object v1, p0, Lgba;->a:[J
+
+    invoke-static {p1, p2, v0, v1}, Lgba;->d(J[J[J)Landroid/util/Pair;
+
+    move-result-object p1
+
+    iget-object p2, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    check-cast p2, Ljava/lang/Long;
+
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Lnnh;->B(J)J
+
+    move-result-wide v0
+
+    iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Long;
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide p1
+
+    new-instance v2, Lcwe;
+
+    new-instance v3, Liwe;
+
+    invoke-direct {v3, v0, v1, p1, p2}, Liwe;-><init>(JJ)V
+
+    invoke-direct {v2, v3, v3}, Lcwe;-><init>(Liwe;Liwe;)V
+
+    return-object v2
+.end method
+
+.method public final f()J
+    .locals 2
+
+    iget-wide v0, p0, Lgba;->c:J
+
+    return-wide v0
 .end method

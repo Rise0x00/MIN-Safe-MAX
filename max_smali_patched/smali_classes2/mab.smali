@@ -1,200 +1,259 @@
-.class public final Lmab;
+.class public abstract Lmab;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/app/Application$ActivityLifecycleCallbacks;
 
+# static fields
+.field public static final A:I
 
-# instance fields
-.field public final synthetic a:Lnq6;
+.field public static final B:I
 
-.field public final synthetic b:Lnab;
+.field public static final C:I
+
+.field public static final D:I
+
+.field public static final E:I
+
+.field public static final F:I
+
+.field public static final G:I
+
+.field public static final H:I
+
+.field public static final I:I
+
+.field public static final J:I
+
+.field public static final K:I
+
+.field public static final L:I
+
+.field public static final M:I
+
+.field public static final N:I
+
+.field public static final O:I
+
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
-.method public constructor <init>(Lnq6;Lnab;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Liid;->chat__background:I
 
-    iput-object p1, p0, Lmab;->a:Lnq6;
+    sput v0, Lmab;->a:I
 
-    iput-object p2, p0, Lmab;->b:Lnab;
+    sget v0, Liid;->chat__bottom_container:I
 
-    return-void
-.end method
+    sput v0, Lmab;->b:I
 
+    sget v0, Liid;->chat__bottom_container_chat_status_button:I
 
-# virtual methods
-.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 4
+    sput v0, Lmab;->c:I
 
-    iget-object p2, p0, Lmab;->a:Lnq6;
+    sget v0, Liid;->chat__bottom_container_search:I
 
-    invoke-interface {p2, p1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    sput v0, Lmab;->d:I
 
-    move-result-object p2
+    sget v0, Liid;->chat__bottom_container_search_down_button:I
 
-    check-cast p2, Ljava/lang/Boolean;
+    sput v0, Lmab;->e:I
 
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+    sget v0, Liid;->chat__bottom_container_search_separator:I
 
-    move-result p2
+    sput v0, Lmab;->f:I
 
-    if-nez p2, :cond_0
+    sget v0, Liid;->chat__bottom_container_search_up_button:I
 
-    goto :goto_3
+    sput v0, Lmab;->g:I
 
-    :cond_0
-    sget-object p2, Lq3e;->a:Lq3e;
+    sget v0, Liid;->chat__main_container:I
 
-    new-instance v0, Lza4;
+    sput v0, Lmab;->h:I
 
-    const/4 v1, 0x2
+    sget v0, Liid;->chat__media_bar_container:I
 
-    iget-object v2, p0, Lmab;->b:Lnab;
+    sput v0, Lmab;->i:I
 
-    invoke-direct {v0, v1, v2}, Lza4;-><init>(ILjava/lang/Object;)V
+    sget v0, Liid;->chat__media_keyboard:I
 
-    sget-object v1, Lq3e;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    sput v0, Lmab;->j:I
 
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+    sget v0, Liid;->chat__messages_container:I
 
-    invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    sput v0, Lmab;->k:I
 
-    move-result-object v0
+    sget v0, Liid;->chat__pinbars_container:I
 
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    sput v0, Lmab;->l:I
 
-    move-result-object v0
+    sget v0, Liid;->chat__search_view:I
 
-    instance-of v1, v0, Landroid/view/ViewGroup;
+    sput v0, Lmab;->m:I
 
-    const/4 v2, 0x0
+    sget v0, Liid;->chat__suggestion_container:I
 
-    if-eqz v1, :cond_1
+    sput v0, Lmab;->n:I
 
-    check-cast v0, Landroid/view/ViewGroup;
+    sget v0, Liid;->chat__toolbar:I
 
-    goto :goto_0
+    sput v0, Lmab;->o:I
 
-    :cond_1
-    move-object v0, v2
+    sget v0, Liid;->chat__video_msg_container:I
 
-    :goto_0
-    if-eqz v0, :cond_2
+    sput v0, Lmab;->p:I
 
-    invoke-virtual {v0, p2}, Landroid/view/ViewGroup;->setOnHierarchyChangeListener(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V
+    sget v0, Liid;->chat_screen__action_cancel:I
 
-    :cond_2
-    invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    sput v0, Lmab;->q:I
 
-    move-result-object p1
+    sget v0, Liid;->chat_screen__error_restricted_send_message_action:I
 
-    invoke-virtual {p1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    sput v0, Lmab;->r:I
 
-    move-result-object p1
+    sget v0, Liid;->chat_screen__error_restricted_send_message_cancel:I
 
-    invoke-virtual {p1}, Landroid/view/View;->getRootView()Landroid/view/View;
+    sput v0, Lmab;->s:I
 
-    move-result-object p1
+    sget v0, Liid;->chat_screen__leave_chat_confirm:I
 
-    new-instance v0, Let;
+    sput v0, Lmab;->t:I
 
-    const/4 v1, 0x7
+    sget v0, Liid;->chat_screen__remove_chat_confirm:I
 
-    invoke-direct {v0, v1, p1}, Let;-><init>(ILjava/lang/Object;)V
+    sput v0, Lmab;->u:I
 
-    new-instance p1, Ls1a;
+    sget v0, Liid;->chat_screen__video_msg_placeholder:I
 
-    const/16 v1, 0x15
+    sput v0, Lmab;->v:I
 
-    invoke-direct {p1, v1}, Ls1a;-><init>(I)V
+    sget v0, Liid;->chat_screen__video_msg_preview:I
 
-    new-instance v1, Ls1a;
+    sput v0, Lmab;->w:I
 
-    const/16 v3, 0x16
+    sget v0, Liid;->chat_screen__video_msg_progress:I
 
-    invoke-direct {v1, v3}, Ls1a;-><init>(I)V
+    sput v0, Lmab;->x:I
 
-    invoke-static {v0, p1, v1}, Li2j;->b(Lfpe;Lnq6;Lnq6;)Lh66;
+    sget v0, Liid;->chat_screen__video_msg_root_container:I
 
-    move-result-object p1
+    sput v0, Lmab;->y:I
 
-    new-instance v0, Lr36;
+    sget v0, Liid;->chat_screen__video_msg_switch_camera_btn:I
 
-    invoke-direct {v0, p1}, Lr36;-><init>(Lh66;)V
+    sput v0, Lmab;->z:I
 
-    :cond_3
-    :goto_1
-    invoke-virtual {v0}, Lr36;->hasNext()Z
+    sget v0, Liid;->chat_screen__video_msg_timer:I
 
-    move-result p1
+    sput v0, Lmab;->A:I
 
-    if-eqz p1, :cond_5
+    sget v0, Liid;->chat_screen__video_msg_torch_btn:I
 
-    invoke-virtual {v0}, Lr36;->next()Ljava/lang/Object;
+    sput v0, Lmab;->B:I
 
-    move-result-object p1
+    sget v0, Liid;->chat_screen__video_msg_trim_slider_view_container:I
 
-    check-cast p1, Landroid/view/View;
+    sput v0, Lmab;->C:I
 
-    instance-of v1, p1, Landroid/view/ViewGroup;
+    sget v0, Liid;->chat_screen__video_msg_video_view:I
 
-    if-eqz v1, :cond_4
+    sput v0, Lmab;->D:I
 
-    check-cast p1, Landroid/view/ViewGroup;
+    sget v0, Liid;->media_bar__emoji_keyboard_container:I
 
-    goto :goto_2
+    sput v0, Lmab;->E:I
 
-    :cond_4
-    move-object p1, v2
+    sget v0, Liid;->media_bar__media_type_buttons_recycler:I
 
-    :goto_2
-    if-eqz p1, :cond_3
+    sput v0, Lmab;->F:I
 
-    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->setOnHierarchyChangeListener(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V
+    sget v0, Liid;->media_bar__media_type_picker_button:I
 
-    goto :goto_1
+    sput v0, Lmab;->G:I
 
-    :cond_5
-    :goto_3
-    return-void
-.end method
+    sget v0, Liid;->media_bar__select_album_container:I
 
-.method public final onActivityDestroyed(Landroid/app/Activity;)V
-    .locals 0
+    sput v0, Lmab;->H:I
 
-    return-void
-.end method
+    sget v0, Liid;->media_bar__selected_media_container:I
 
-.method public final onActivityPaused(Landroid/app/Activity;)V
-    .locals 0
+    sput v0, Lmab;->I:I
 
-    return-void
-.end method
+    sget v0, Liid;->selected_media__content_container:I
 
-.method public final onActivityResumed(Landroid/app/Activity;)V
-    .locals 0
+    sput v0, Lmab;->J:I
 
-    return-void
-.end method
+    sget v0, Liid;->selected_media__main_container:I
 
-.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 0
+    sput v0, Lmab;->K:I
 
-    return-void
-.end method
+    sget v0, Liid;->selected_media__media_keyboard_container:I
 
-.method public final onActivityStarted(Landroid/app/Activity;)V
-    .locals 0
+    sput v0, Lmab;->L:I
 
-    return-void
-.end method
+    sget v0, Liid;->selected_media__message_input:I
 
-.method public final onActivityStopped(Landroid/app/Activity;)V
-    .locals 0
+    sput v0, Lmab;->M:I
+
+    sget v0, Liid;->selected_media__recycler:I
+
+    sput v0, Lmab;->N:I
+
+    sget v0, Liid;->selected_media__recycler_container:I
+
+    sput v0, Lmab;->O:I
 
     return-void
 .end method

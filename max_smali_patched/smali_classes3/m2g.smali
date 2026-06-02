@@ -1,47 +1,112 @@
-.class public final Lm2g;
-.super Lo84;
+.class public final synthetic Lm2g;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lxs6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Lp2g;
+.field public final synthetic b:Ln2g;
 
 
 # direct methods
-.method public constructor <init>(Lp2g;Lo84;)V
+.method public synthetic constructor <init>(Ln2g;I)V
     .locals 0
 
-    iput-object p1, p0, Lm2g;->o:Lp2g;
+    iput p2, p0, Lm2g;->a:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lm2g;->b:Ln2g;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    iput-object p1, p0, Lm2g;->d:Ljava/lang/Object;
+    iget v0, p0, Lm2g;->a:I
 
-    iget p1, p0, Lm2g;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    new-instance v0, Ldxf;
 
-    or-int/2addr p1, v0
+    sget-object v1, Lzc3;->A0:Lz66;
 
-    iput p1, p0, Lm2g;->X:I
+    iget-object v2, p0, Lm2g;->b:Ln2g;
 
-    iget-object p1, p0, Lm2g;->o:Lp2g;
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-virtual {p1, p0}, Lp2g;->a(Lo84;)Ljava/lang/Object;
+    move-result-object v2
 
-    move-result-object p1
+    invoke-virtual {v1, v2}, Lz66;->d(Landroid/content/Context;)Lzc3;
 
-    return-object p1
+    move-result-object v1
+
+    invoke-virtual {v1}, Lzc3;->m()Ldqb;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ldqb;->x()Lzpb;
+
+    move-result-object v1
+
+    iget v1, v1, Lzpb;->d:I
+
+    invoke-direct {v0, v1}, Ldxf;-><init>(I)V
+
+    return-object v0
+
+    :pswitch_0
+    sget v0, Lxhe;->w2:I
+
+    sget-object v1, Lzc3;->A0:Lz66;
+
+    iget-object v2, p0, Lm2g;->b:Ln2g;
+
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Lz66;->d(Landroid/content/Context;)Lzc3;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lzc3;->m()Ldqb;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ldqb;->getIcon()Lzpb;
+
+    move-result-object v1
+
+    iget v1, v1, Lzpb;->h:I
+
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Ltla;->P(ILandroid/graphics/drawable/Drawable;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

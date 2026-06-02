@@ -1,105 +1,125 @@
-.class public final enum Lf56;
-.super Ljava/lang/Enum;
+.class public final Lf56;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lf56;
+# instance fields
+.field public final a:Lov8;
 
-.field public static final enum b:Lf56;
+.field public final b:Lsif;
 
-.field public static final enum c:Lf56;
-
-.field public static final enum d:Lf56;
-
-.field public static final synthetic o:[Lf56;
+.field public final c:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lov8;Ldng;)V
+    .locals 2
 
-    new-instance v0, Lf56;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "FIRST_FRAME_DECODED"
+    iput-object p1, p0, Lf56;->a:Lov8;
 
-    const/4 v2, 0x0
+    const/4 v0, 0x0
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/4 v1, 0x7
 
-    new-instance v1, Lf56;
-
-    const-string v2, "FIRST_FRAME_RENDERED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lf56;->a:Lf56;
-
-    new-instance v2, Lf56;
-
-    const-string v3, "PLAYING"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lf56;->b:Lf56;
-
-    new-instance v3, Lf56;
-
-    const-string v4, "READY"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lf56;->c:Lf56;
-
-    new-instance v4, Lf56;
-
-    const-string v5, "PLAY"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lf56;->d:Lf56;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lf56;
+    invoke-static {v0, v0, v1}, Ltif;->b(III)Lsif;
 
     move-result-object v0
 
-    sput-object v0, Lf56;->o:[Lf56;
+    iput-object v0, p0, Lf56;->b:Lsif;
+
+    check-cast p2, Lsbb;
+
+    invoke-virtual {p2}, Lsbb;->c()Lnu8;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lsr6;->a(Lfc4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lf56;->c:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p1, p0}, Lov8;->e(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lf56;
-    .locals 1
 
-    const-class v0, Lf56;
+# virtual methods
+.method public final onEvent(Lk1f;)V
+    .locals 3
+    .annotation runtime Lacg;
+    .end annotation
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    .line 4
+    const-string v0, "file.local.max.size.reached"
 
-    move-result-object p0
+    iget-object p1, p1, Lpo0;->b:Ljava/lang/String;
 
-    check-cast p0, Lf56;
+    .line 5
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    return-object p0
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    return-void
+
+    .line 6
+    :cond_0
+    new-instance p1, Le56;
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, p0, v1, v0}, Le56;-><init>(Lf56;Lkotlin/coroutines/Continuation;I)V
+
+    const/4 v0, 0x3
+
+    iget-object v2, p0, Lf56;->c:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v1, v1, p1, v0}, Ly6j;->L(Loc4;Lfc4;Lrc4;Lnt6;I)Lhyf;
+
+    return-void
 .end method
 
-.method public static values()[Lf56;
-    .locals 1
+.method public final onEvent(Lq66;)V
+    .locals 3
+    .annotation runtime Lacg;
+    .end annotation
 
-    sget-object v0, Lf56;->o:[Lf56;
+    .line 1
+    sget-object v0, Line;->h:Lgf7;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object p1, p1, Lq66;->c:Lgf7;
 
-    move-result-object v0
+    .line 2
+    invoke-virtual {v0, p1}, Lgf7;->equals(Ljava/lang/Object;)Z
 
-    check-cast v0, [Lf56;
+    move-result p1
 
-    return-object v0
+    if-nez p1, :cond_0
+
+    return-void
+
+    .line 3
+    :cond_0
+    new-instance p1, Le56;
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, p0, v1, v0}, Le56;-><init>(Lf56;Lkotlin/coroutines/Continuation;I)V
+
+    const/4 v0, 0x3
+
+    iget-object v2, p0, Lf56;->c:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v1, v1, p1, v0}, Ly6j;->L(Loc4;Lfc4;Lrc4;Lnt6;I)Lhyf;
+
+    return-void
 .end method

@@ -1,208 +1,86 @@
-.class public final Llnd;
-.super Landroid/widget/FrameLayout;
-.source "SourceFile"
+.class public abstract Llnd;
+.super Ljava/lang/Object;
 
-# interfaces
-.implements Luig;
 
+# static fields
+.field public static abc_action_bar_home_description:I = 0x7f130002
 
-# instance fields
-.field public final a:Landroid/widget/TextView;
+.field public static abc_action_bar_up_description:I = 0x7f130003
 
-.field public final b:Landroid/widget/TextView;
+.field public static abc_action_menu_overflow_description:I = 0x7f130004
 
+.field public static abc_action_mode_done:I = 0x7f130005
 
-# direct methods
-.method public constructor <init>(Lh4b;Landroid/content/Context;)V
-    .locals 6
+.field public static abc_activity_chooser_view_see_all:I = 0x7f130006
 
-    invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+.field public static abc_activitychooserview_choose_application:I = 0x7f130007
 
-    new-instance v0, Landroid/widget/TextView;
+.field public static abc_capital_off:I = 0x7f130008
 
-    invoke-direct {v0, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+.field public static abc_capital_on:I = 0x7f130009
 
-    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
+.field public static abc_menu_alt_shortcut_label:I = 0x7f13000a
 
-    const/4 v2, -0x2
+.field public static abc_menu_ctrl_shortcut_label:I = 0x7f13000b
 
-    invoke-direct {v1, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+.field public static abc_menu_delete_shortcut_label:I = 0x7f13000c
 
-    const v3, 0x800013
+.field public static abc_menu_enter_shortcut_label:I = 0x7f13000d
 
-    iput v3, v1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+.field public static abc_menu_function_shortcut_label:I = 0x7f13000e
 
-    const/16 v3, 0xc
+.field public static abc_menu_meta_shortcut_label:I = 0x7f13000f
 
-    int-to-float v3, v3
+.field public static abc_menu_shift_shortcut_label:I = 0x7f130010
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+.field public static abc_menu_space_shortcut_label:I = 0x7f130011
 
-    move-result-object v4
+.field public static abc_menu_sym_shortcut_label:I = 0x7f130012
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static abc_prepend_shortcut_label:I = 0x7f130013
 
-    move-result-object v4
+.field public static abc_search_hint:I = 0x7f130014
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+.field public static abc_searchview_description_clear:I = 0x7f130015
 
-    mul-float/2addr v4, v3
+.field public static abc_searchview_description_query:I = 0x7f130016
 
-    invoke-static {v4}, Lq7j;->c(F)I
+.field public static abc_searchview_description_search:I = 0x7f130017
 
-    move-result v4
+.field public static abc_searchview_description_submit:I = 0x7f130018
 
-    invoke-virtual {v1, v4}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
+.field public static abc_searchview_description_voice:I = 0x7f130019
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+.field public static abc_shareactionprovider_share_with:I = 0x7f13001a
 
-    sget v1, Lhdd;->chats_list_search_recent_header:I
+.field public static abc_shareactionprovider_share_with_application:I = 0x7f13001b
 
-    invoke-virtual {p2, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+.field public static abc_toolbar_collapse_description:I = 0x7f13001c
 
-    move-result-object v1
+.field public static confirm_device_credential_password:I = 0x7f130423
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+.field public static default_error_msg:I = 0x7f13046e
 
-    sget-object v1, Lr1h;->n:Lrhg;
+.field public static fingerprint_dialog_touch_sensor:I = 0x7f13053e
 
-    invoke-static {v1, v0}, Lrhg;->d(Lrhg;Landroid/widget/TextView;)V
+.field public static fingerprint_error_hw_not_available:I = 0x7f13053f
 
-    sget-object v1, Lpc3;->t0:Lkme;
+.field public static fingerprint_error_hw_not_present:I = 0x7f130540
 
-    invoke-virtual {v1, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
+.field public static fingerprint_error_lockout:I = 0x7f130541
 
-    move-result-object v4
+.field public static fingerprint_error_no_fingerprints:I = 0x7f130542
 
-    invoke-interface {v4}, Lzlb;->getText()Lrfg;
+.field public static fingerprint_error_user_canceled:I = 0x7f130543
 
-    move-result-object v4
+.field public static fingerprint_not_recognized:I = 0x7f130544
 
-    iget v4, v4, Lrfg;->i:I
+.field public static generic_error_no_device_credential:I = 0x7f1305be
 
-    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setTextColor(I)V
+.field public static generic_error_no_keyguard:I = 0x7f1305bf
 
-    iput-object v0, p0, Llnd;->a:Landroid/widget/TextView;
+.field public static generic_error_user_canceled:I = 0x7f1305c0
 
-    new-instance v4, Landroid/widget/TextView;
+.field public static search_menu_title:I = 0x7f130de0
 
-    invoke-direct {v4, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
-
-    new-instance v5, Landroid/widget/FrameLayout$LayoutParams;
-
-    invoke-direct {v5, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    const v2, 0x800015
-
-    iput v2, v5, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v2
-
-    invoke-static {v3}, Lq7j;->c(F)I
-
-    move-result v2
-
-    invoke-virtual {v5, v2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
-
-    invoke-virtual {v4, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget v2, Lhdd;->chats_list_search_recent_header_clear:I
-
-    invoke-virtual {p2, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {v4, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    sget-object p2, Lr1h;->j:Lrhg;
-
-    invoke-static {p2, v4, v1, v4}, Lt02;->g(Lrhg;Landroid/widget/TextView;Lkme;Landroid/widget/TextView;)Lrfg;
-
-    move-result-object p2
-
-    iget p2, p2, Lrfg;->i:I
-
-    invoke-virtual {v4, p2}, Landroid/widget/TextView;->setTextColor(I)V
-
-    new-instance p2, Lblc;
-
-    const/4 v1, 0x5
-
-    invoke-direct {p2, v1, p1}, Lblc;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v4, p2}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    iput-object v4, p0, Llnd;->b:Landroid/widget/TextView;
-
-    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
-
-    const/16 p2, 0x28
-
-    int-to-float p2, p2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p2, v1
-
-    invoke-static {p2}, Lq7j;->c(F)I
-
-    move-result p2
-
-    const/4 v1, -0x1
-
-    invoke-direct {p1, v1, p2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    invoke-virtual {p0, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onThemeChanged(Lzlb;)V
-    .locals 2
-
-    invoke-interface {p1}, Lzlb;->getText()Lrfg;
-
-    move-result-object v0
-
-    iget v0, v0, Lrfg;->i:I
-
-    iget-object v1, p0, Llnd;->a:Landroid/widget/TextView;
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-interface {p1}, Lzlb;->getText()Lrfg;
-
-    move-result-object p1
-
-    iget p1, p1, Lrfg;->i:I
-
-    iget-object v0, p0, Llnd;->b:Landroid/widget/TextView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-void
-.end method
+.field public static status_bar_notification_info_overflow:I = 0x7f130e67

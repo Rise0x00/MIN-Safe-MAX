@@ -2,208 +2,145 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfjf;
+
+# static fields
+.field public static final b:Lrp3;
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:Ljava/lang/Integer;
+.field public final a:Landroid/content/Context;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/Integer;)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    const-class v0, Lcjf;
+
+    invoke-static {v0}, Lrp3;->b(Ljava/lang/Class;)Lqp3;
+
+    move-result-object v0
+
+    const-class v1, Lcba;
+
+    invoke-static {v1}, Lkz4;->a(Ljava/lang/Class;)Lkz4;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lqp3;->a(Lkz4;)V
+
+    const-class v1, Landroid/content/Context;
+
+    invoke-static {v1}, Lkz4;->a(Ljava/lang/Class;)Lkz4;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lqp3;->a(Lkz4;)V
+
+    new-instance v1, Lmfj;
+
+    const/16 v2, 0x15
+
+    invoke-direct {v1, v2}, Lmfj;-><init>(I)V
+
+    iput-object v1, v0, Lqp3;->f:Lgq3;
+
+    invoke-virtual {v0}, Lqp3;->b()Lrp3;
+
+    move-result-object v0
+
+    sput-object v0, Lcjf;->b:Lrp3;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lcjf;->a:I
-
-    iput-object p2, p0, Lcjf;->b:Ljava/lang/Integer;
+    iput-object p1, p0, Lcjf;->a:Landroid/content/Context;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/media/MediaPlayer;Landroid/content/Context;)Z
-    .locals 3
+.method public final declared-synchronized a()Ljava/lang/String;
+    .locals 4
 
-    iget-object v0, p0, Lcjf;->b:Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
+    monitor-enter p0
 
     :try_start_0
-    invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    iget-object v0, p0, Lcjf;->a:Landroid/content/Context;
 
-    move-result-object p2
+    const-string v1, "com.google.mlkit.internal"
 
-    invoke-virtual {p2, v0}, Landroid/content/res/Resources;->openRawResourceFd(I)Landroid/content/res/AssetFileDescriptor;
+    const/4 v2, 0x0
 
-    move-result-object p2
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :try_start_1
-    invoke-virtual {p1, p2}, Landroid/media/MediaPlayer;->setDataSource(Landroid/content/res/AssetFileDescriptor;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    const/4 p1, 0x0
-
-    :try_start_2
-    invoke-static {p2, p1}, Lyij;->b(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_3
-    throw p1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    :catchall_1
-    move-exception v0
-
-    :try_start_4
-    invoke-static {p2, p1}, Lyij;->b(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-
-    throw v0
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
-
-    :goto_0
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object p2
-
-    const/4 v0, 0x0
-
-    new-array v1, v0, [Ljava/lang/Object;
-
-    const-string v2, "SoundConfigTag"
-
-    invoke-static {v2, p1, p2, v1}, Lc5j;->h(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lcjf;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lcjf;
-
-    iget v0, p0, Lcjf;->a:I
-
-    iget v1, p1, Lcjf;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lcjf;->b:Ljava/lang/Integer;
-
-    iget-object p1, p1, Lcjf;->b:Ljava/lang/Integer;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Lcjf;->a:I
-
-    invoke-static {v0}, Lt02;->t(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lcjf;->b:Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Asset(type="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lcjf;->a:I
-
-    invoke-static {v1}, Liwd;->l(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", asset="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcjf;->b:Ljava/lang/Integer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
+    const-string v1, "ml_sdk_instance_id"
+
+    const/4 v3, 0x0
+
+    invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v0, :cond_0
+
+    monitor-exit p0
+
     return-object v0
+
+    :cond_0
+    :try_start_1
+    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcjf;->a:Landroid/content/Context;
+
+    const-string v3, "com.google.mlkit.internal"
+
+    invoke-virtual {v1, v3, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    const-string v2, "ml_sdk_instance_id"
+
+    invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit p0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v0
 .end method

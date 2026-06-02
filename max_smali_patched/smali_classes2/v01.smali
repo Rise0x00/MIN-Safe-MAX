@@ -1,333 +1,576 @@
-.class public final synthetic Lv01;
+.class public final Lv01;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lco9;
+.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Ljava/nio/ByteBuffer;
 
-.field public final synthetic b:Ls11;
+.field public final b:I
+
+.field public final c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ls11;I)V
-    .locals 0
-
-    .line 1
-    iput p2, p0, Lv01;->a:I
-
-    iput-object p1, p0, Lv01;->b:Ls11;
+.method public constructor <init>(I)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
-.method public synthetic constructor <init>(Ls11;Z)V
-    .locals 0
+    move-result-object v0
 
-    .line 2
-    const/4 p2, 0x0
+    iput-object v0, p0, Lv01;->a:Ljava/nio/ByteBuffer;
 
-    iput p2, p0, Lv01;->a:I
+    iput p1, p0, Lv01;->b:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
-    iput-object p1, p0, Lv01;->b:Ls11;
+    move-result p1
+
+    int-to-long v0, p1
+
+    iput-wide v0, p0, Lv01;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final G(Lco9;I)V
+    .locals 4
 
-    iget v0, p0, Lv01;->a:I
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {p1}, Lco9;->l()J
 
-    iget-object v0, p0, Lv01;->b:Ls11;
+    move-result-wide v0
 
-    iget-object v1, v0, Ls11;->u0:Lzea;
+    iget-wide v2, p0, Lv01;->c:J
 
-    iget-boolean v2, v0, Ls11;->u:Z
+    cmp-long v0, v0, v2
 
-    if-nez v2, :cond_4
+    if-nez v0, :cond_0
 
-    iget-object v2, v0, Ls11;->g0:Ln7f;
+    const-string v0, "BufferMemoryChunk"
 
-    invoke-virtual {v2}, Ln7f;->c()I
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result v2
+    const-string v2, "Copying from BufferMemoryChunk "
 
-    const/4 v3, 0x2
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v4, 0x1
+    iget-wide v2, p0, Lv01;->c:J
 
-    if-eq v2, v3, :cond_1
+    invoke-static {v2, v3}, Ljava/lang/Long;->toHexString(J)Ljava/lang/String;
 
-    if-ne v2, v4, :cond_0
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, " to BufferMemoryChunk "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {p1}, Lco9;->l()J
+
+    move-result-wide v2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->toHexString(J)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, " which are the same "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-static {v0}, Lsr6;->k(Ljava/lang/Boolean;)V
+
+    :cond_0
+    invoke-interface {p1}, Lco9;->l()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lv01;->c:J
+
+    cmp-long v0, v0, v2
+
+    if-gez v0, :cond_1
+
+    monitor-enter p1
+
+    :try_start_0
+    monitor-enter p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    invoke-virtual {p0, p1, p2}, Lv01;->d(Lco9;I)V
+
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    monitor-exit p1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception p2
+
+    :try_start_3
+    monitor-exit p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :try_start_4
+    throw p2
+
+    :goto_0
+    monitor-exit p1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    throw p2
+
+    :cond_1
+    monitor-enter p0
+
+    :try_start_5
+    monitor-enter p1
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+
+    :try_start_6
+    invoke-virtual {p0, p1, p2}, Lv01;->d(Lco9;I)V
+
+    monitor-exit p1
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_3
+
+    :try_start_7
+    monitor-exit p0
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_2
+
+    return-void
+
+    :catchall_2
+    move-exception p1
+
+    goto :goto_1
+
+    :catchall_3
+    move-exception p2
+
+    :try_start_8
+    monitor-exit p1
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_3
+
+    :try_start_9
+    throw p2
+
+    :goto_1
+    monitor-exit p0
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_2
+
+    throw p1
+.end method
+
+.method public final declared-synchronized J(I)B
+    .locals 3
+
+    monitor-enter p0
+
+    :try_start_0
+    invoke-virtual {p0}, Lv01;->isClosed()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    xor-int/2addr v0, v1
+
+    invoke-static {v0}, Lsr6;->p(Z)V
+
+    const/4 v0, 0x0
+
+    if-ltz p1, :cond_0
+
+    move v2, v1
 
     goto :goto_0
 
     :cond_0
-    const/4 v4, 0x0
+    move v2, v0
 
-    :cond_1
     :goto_0
-    iget-boolean v2, v1, Lzea;->f:Z
-
-    if-ne v4, v2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "onLocalMediaStreamChanged, media settings video enabled state ("
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-boolean v1, v1, Lzea;->f:Z
-
-    const-string v3, ") != camera video enabled state ("
-
-    const-string v5, "). Let us update media settings"
-
-    invoke-static {v3, v5, v2, v1, v4}, Lhc0;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v2, v0, Ls11;->P:Lahd;
-
-    const-string v3, "OKRTCCall"
-
-    invoke-interface {v2, v3, v1}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ls11;->k()Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    const-string v1, "rtc.video.switch"
-
-    invoke-virtual {v0, v1}, Ls11;->y(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v4}, Ls11;->o(Z)V
-
-    invoke-virtual {v0}, Ls11;->K()V
-
-    :cond_4
-    :goto_1
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lv01;->b:Ls11;
-
-    const-string v1, "OKRTCCall"
-
-    iget-object v2, v0, Ls11;->P:Lahd;
-
-    iget-object v0, v0, Ls11;->r:Lorg/webrtc/EglBase;
-
-    const-string v3, "Releasing "
-
-    :try_start_0
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v0}, Lw6a;->c(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-interface {v2, v1, v3}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v0}, Lorg/webrtc/EglBase;->release()V
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {v0}, Lw6a;->c(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, " was released"
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v2, v1, v0}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_2
-
-    :catch_0
-    move-exception v0
-
-    const-string v3, "release.egl"
-
-    invoke-interface {v2, v1, v3, v0}, Lahd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_2
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lv01;->b:Ls11;
-
-    sget-object v1, Lkpg;->b:Lkpg;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Ls11;->f(Lkpg;Z)V
-
-    iget-object v1, v0, Ls11;->o0:Lzt1;
-
-    invoke-virtual {v1}, Lzt1;->P()V
-
-    iget-object v1, v0, Ls11;->k0:Lcl1;
-
-    invoke-virtual {v1}, Lcl1;->i()Ljava/util/Collection;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_3
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
-    check-cast v2, Lxk1;
+    invoke-static {v2}, Lsr6;->k(Ljava/lang/Boolean;)V
 
-    iget-object v3, v0, Ls11;->o0:Lzt1;
+    iget v2, p0, Lv01;->b:I
 
-    const/4 v4, 0x1
+    if-ge p1, v2, :cond_1
 
-    invoke-virtual {v3, v2, v4}, Lzt1;->r(Lxk1;Z)V
+    goto :goto_1
 
-    goto :goto_3
+    :cond_1
+    move v1, v0
 
-    :cond_5
-    return-void
+    :goto_1
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    :pswitch_2
-    iget-object v0, p0, Lv01;->b:Ls11;
+    move-result-object v0
 
-    iget-object v1, v0, Ls11;->l:Landroid/os/Handler;
+    invoke-static {v0}, Lsr6;->k(Ljava/lang/Boolean;)V
 
-    new-instance v2, Lv01;
-
-    const/4 v3, 0x4
-
-    invoke-direct {v2, v0, v3}, Lv01;-><init>(Ls11;I)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Lv01;->b:Ls11;
+    iget-object v0, p0, Lv01;->a:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    iget-object v0, p0, Lv01;->a:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return p1
+
+    :catchall_0
+    move-exception p1
+
     :try_start_1
-    iget-object v1, v0, Ls11;->f0:Lq7f;
-
-    iget-object v1, v1, Lq7f;->d:Lorg/webrtc/PeerConnectionFactory;
-
-    if-nez v1, :cond_6
-
-    goto :goto_4
-
-    :cond_6
-    invoke-virtual {v1}, Lorg/webrtc/PeerConnectionFactory;->clearDumpRequests()V
+    monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    goto :goto_4
+    throw p1
+.end method
+
+.method public final declared-synchronized close()V
+    .locals 1
+
+    monitor-enter p0
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    iput-object v0, p0, Lv01;->a:Ljava/nio/ByteBuffer;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
 
     :catchall_0
-    move-exception v1
+    move-exception v0
 
-    iget-object v0, v0, Ls11;->P:Lahd;
-
-    const-string v2, "OKRTCCall"
-
-    const-string v3, "Error stopping local audio dump"
-
-    invoke-interface {v0, v2, v3, v1}, Lahd;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_4
-    return-void
-
-    :pswitch_4
-    iget-object v0, p0, Lv01;->b:Ls11;
-
-    iget-boolean v1, v0, Ls11;->u:Z
-
-    if-nez v1, :cond_8
-
-    iget-object v0, v0, Ls11;->l0:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-nez v1, :cond_7
-
-    goto :goto_5
-
-    :cond_7
-    invoke-static {v0}, Liwd;->h(Ljava/util/Iterator;)Ljava/lang/ClassCastException;
-
-    move-result-object v0
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw v0
+.end method
 
-    :cond_8
-    :goto_5
+.method public final d(Lco9;I)V
+    .locals 3
+
+    instance-of v0, p1, Lv01;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lv01;->isClosed()Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-static {v0}, Lsr6;->p(Z)V
+
+    check-cast p1, Lv01;
+
+    invoke-virtual {p1}, Lv01;->isClosed()Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-static {v0}, Lsr6;->p(Z)V
+
+    iget-object v0, p0, Lv01;->a:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget v0, p1, Lv01;->b:I
+
+    iget v1, p0, Lv01;->b:I
+
+    const/4 v2, 0x0
+
+    invoke-static {v2, v0, v2, p2, v1}, Lq98;->e(IIIII)V
+
+    iget-object v0, p0, Lv01;->a:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    invoke-virtual {p1}, Lv01;->o()Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    new-array v0, p2, [B
+
+    iget-object v1, p0, Lv01;->a:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v1, v0, v2, p2}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1, v0, v2, p2}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
+
     return-void
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Cannot copy two incompatible MemoryChunks"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final declared-synchronized g0(III[B)I
+    .locals 2
+
+    monitor-enter p0
+
+    :try_start_0
+    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p0}, Lv01;->isClosed()Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-static {v0}, Lsr6;->p(Z)V
+
+    iget-object v0, p0, Lv01;->a:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget v0, p0, Lv01;->b:I
+
+    invoke-static {p1, p3, v0}, Lq98;->a(III)I
+
+    move-result p3
+
+    array-length v0, p4
+
+    iget v1, p0, Lv01;->b:I
+
+    invoke-static {p1, v0, p2, p3, v1}, Lq98;->e(IIIII)V
+
+    iget-object v0, p0, Lv01;->a:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    iget-object p1, p0, Lv01;->a:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1, p4, p2, p3}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return p3
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final getSize()I
+    .locals 1
+
+    iget v0, p0, Lv01;->b:I
+
+    return v0
+.end method
+
+.method public final declared-synchronized h0(III[B)I
+    .locals 2
+
+    monitor-enter p0
+
+    :try_start_0
+    invoke-virtual {p0}, Lv01;->isClosed()Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-static {v0}, Lsr6;->p(Z)V
+
+    iget-object v0, p0, Lv01;->a:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget v0, p0, Lv01;->b:I
+
+    invoke-static {p1, p3, v0}, Lq98;->a(III)I
+
+    move-result p3
+
+    array-length v0, p4
+
+    iget v1, p0, Lv01;->b:I
+
+    invoke-static {p1, v0, p2, p3, v1}, Lq98;->e(IIIII)V
+
+    iget-object v0, p0, Lv01;->a:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    iget-object p1, p0, Lv01;->a:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1, p4, p2, p3}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return p3
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized isClosed()Z
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lv01;->a:Ljava/nio/ByteBuffer;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    monitor-exit p0
+
+    return v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final l()J
+    .locals 2
+
+    iget-wide v0, p0, Lv01;->c:J
+
+    return-wide v0
+.end method
+
+.method public final declared-synchronized o()Ljava/nio/ByteBuffer;
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lv01;->a:Ljava/nio/ByteBuffer;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final u0()J
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Cannot get the pointer of a BufferMemoryChunk"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

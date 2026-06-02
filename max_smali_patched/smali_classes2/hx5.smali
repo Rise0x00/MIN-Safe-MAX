@@ -1,51 +1,227 @@
 .class public final Lhx5;
-.super Lo84;
+.super Ldp0;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lnx5;
-
-.field public Y:I
-
-.field public d:Lqx5;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
 # direct methods
-.method public constructor <init>(Lnx5;Lo84;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lhx5;->X:Lnx5;
+    const/4 v0, 0x5
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, v0}, Ldp0;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final f0()Z
+    .locals 2
 
-    iput-object p1, p0, Lhx5;->o:Ljava/lang/Object;
+    iget-object v0, p0, Ldp0;->b:Ljava/lang/Object;
 
-    iget p1, p0, Lhx5;->Y:I
+    check-cast v0, Ljava/util/BitSet;
 
-    const/high16 v0, -0x80000000
+    const/4 v1, 0x5
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0, v1}, Ljava/util/BitSet;->get(I)Z
 
-    iput p1, p0, Lhx5;->Y:I
+    move-result v0
 
-    iget-object p1, p0, Lhx5;->X:Lnx5;
+    return v0
+.end method
 
-    const/4 v0, 0x0
+.method public final g0()Z
+    .locals 2
 
-    invoke-virtual {p1, v0, p0}, Lnx5;->N0(Lqx5;Lo84;)Ljava/lang/Object;
+    iget-object v0, p0, Ldp0;->b:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast v0, Ljava/util/BitSet;
 
-    return-object p1
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final h0()Z
+    .locals 2
+
+    iget-object v0, p0, Ldp0;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/BitSet;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final i0()Z
+    .locals 2
+
+    iget-object v0, p0, Ldp0;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/BitSet;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final j0()Z
+    .locals 2
+
+    iget-object v0, p0, Ldp0;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/BitSet;
+
+    const/4 v1, 0x3
+
+    invoke-virtual {v0, v1}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final k0()Z
+    .locals 2
+
+    iget-object v0, p0, Ldp0;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/BitSet;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final l0()Z
+    .locals 2
+
+    iget-object v0, p0, Ldp0;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/BitSet;
+
+    const/4 v1, 0x6
+
+    invoke-virtual {v0, v1}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final m0(Z)V
+    .locals 2
+
+    iget-object v0, p0, Ldp0;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/BitSet;
+
+    const/4 v1, 0x5
+
+    invoke-virtual {v0, v1, p1}, Ljava/util/BitSet;->set(IZ)V
+
+    return-void
+.end method
+
+.method public final n0(Z)V
+    .locals 2
+
+    iget-object v0, p0, Ldp0;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/BitSet;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, p1}, Ljava/util/BitSet;->set(IZ)V
+
+    return-void
+.end method
+
+.method public final o0(Z)V
+    .locals 2
+
+    iget-object v0, p0, Ldp0;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/BitSet;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1, p1}, Ljava/util/BitSet;->set(IZ)V
+
+    return-void
+.end method
+
+.method public final p0(Z)V
+    .locals 2
+
+    iget-object v0, p0, Ldp0;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/BitSet;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1, p1}, Ljava/util/BitSet;->set(IZ)V
+
+    return-void
+.end method
+
+.method public final q0(Z)V
+    .locals 2
+
+    iget-object v0, p0, Ldp0;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/BitSet;
+
+    const/4 v1, 0x3
+
+    invoke-virtual {v0, v1, p1}, Ljava/util/BitSet;->set(IZ)V
+
+    return-void
+.end method
+
+.method public final r0(Z)V
+    .locals 2
+
+    iget-object v0, p0, Ldp0;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/BitSet;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1, p1}, Ljava/util/BitSet;->set(IZ)V
+
+    return-void
+.end method
+
+.method public final s0(Z)V
+    .locals 2
+
+    iget-object v0, p0, Ldp0;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/BitSet;
+
+    const/4 v1, 0x6
+
+    invoke-virtual {v0, v1, p1}, Ljava/util/BitSet;->set(IZ)V
+
+    return-void
 .end method

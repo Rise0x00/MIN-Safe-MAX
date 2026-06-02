@@ -1,156 +1,99 @@
 .class public final Lkv7;
-.super Lp6g;
+.super Lbuc;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+.field public a:[I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public b:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
+.method public constructor <init>([I)V
     .locals 0
 
-    iput-object p2, p0, Lkv7;->X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lkv7;->a:[I
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    array-length p1, p1
+
+    iput p1, p0, Lkv7;->b:I
+
+    const/16 p1, 0xa
+
+    invoke-virtual {p0, p1}, Lkv7;->b(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lkv7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lkv7;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lkv7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a()Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Lkv7;
+    iget-object v0, p0, Lkv7;->a:[I
 
-    iget-object v1, p0, Lkv7;->X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+    iget v1, p0, Lkv7;->b:I
 
-    invoke-direct {v0, p2, v1}, Lkv7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([II)[I
 
-    iput-object p1, v0, Lkv7;->o:Ljava/lang/Object;
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final b(I)V
+    .locals 2
 
-    iget-object v0, p0, Lkv7;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lkv7;->a:[I
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    array-length v1, v0
 
-    check-cast v0, Lnc4;
+    if-ge v1, p1, :cond_1
 
-    iget-object p1, p0, Lkv7;->X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+    array-length v1, v0
 
-    iget-object v1, p1, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->x0:Lzt7;
+    mul-int/lit8 v1, v1, 0x2
 
-    if-nez v1, :cond_0
+    if-ge p1, v1, :cond_0
 
-    new-instance v1, Lzt7;
-
-    iget-object v2, p1, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->w0:Lo58;
-
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Li1c;
-
-    iget-object v3, v0, Lnc4;->a:Lr9b;
-
-    iget-object v4, v3, Lr9b;->a:Ljava/lang/String;
-
-    iget v3, v3, Lr9b;->b:I
-
-    iget v5, v0, Lnc4;->b:I
-
-    invoke-direct {v1, v2, v4, v3, v5}, Lzt7;-><init>(Li1c;Ljava/lang/String;II)V
-
-    iput-object v1, p1, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->x0:Lzt7;
-
-    invoke-virtual {p1}, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->B0()Lefb;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lefb;->w0:Landroid/widget/EditText;
-
-    invoke-virtual {v2, v1}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
-
-    goto :goto_0
+    move p1, v1
 
     :cond_0
-    iget-object v2, v0, Lnc4;->a:Lr9b;
-
-    iget-object v3, v2, Lr9b;->a:Ljava/lang/String;
-
-    iget v2, v2, Lr9b;->b:I
-
-    invoke-virtual {v1, v2, v3}, Lzt7;->b(ILjava/lang/String;)V
-
-    iget-object v1, p1, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->x0:Lzt7;
-
-    if-eqz v1, :cond_1
-
-    iget v2, v0, Lnc4;->b:I
-
-    iput v2, v1, Lzt7;->X:I
-
-    :cond_1
-    :goto_0
-    iget-object v1, v0, Lnc4;->c:Lqhg;
-
-    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    if-nez v1, :cond_2
-
-    const-string v1, ""
-
-    :cond_2
-    invoke-virtual {p1}, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->B0()Lefb;
+    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([II)[I
 
     move-result-object p1
 
-    invoke-virtual {p1, v1}, Lefb;->setHint(Ljava/lang/CharSequence;)V
+    iput-object p1, p0, Lkv7;->a:[I
 
-    iget-object v0, v0, Lnc4;->a:Lr9b;
+    :cond_1
+    return-void
+.end method
 
-    invoke-virtual {p1, v0}, Lefb;->setCountry(Lr9b;)V
+.method public final d()I
+    .locals 1
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    iget v0, p0, Lkv7;->b:I
 
-    return-object p1
+    return v0
+.end method
+
+.method public final e(I)V
+    .locals 3
+
+    invoke-static {p0}, Lbuc;->c(Lbuc;)V
+
+    iget-object v0, p0, Lkv7;->a:[I
+
+    iget v1, p0, Lkv7;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lkv7;->b:I
+
+    aput p1, v0, v1
+
+    return-void
 .end method

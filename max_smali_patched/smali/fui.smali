@@ -1,207 +1,130 @@
-.class public abstract Lfui;
-.super Ljava/lang/Object;
+.class public Lfui;
+.super Leui;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:[Ljava/lang/String;
+# instance fields
+.field public o:Lbv7;
 
-.field public static b:Landroid/os/Handler;
+.field public p:Lbv7;
+
+.field public q:Lbv7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lnui;Landroid/view/WindowInsets;)V
+    .locals 0
 
-    const-string v0, "/proc/self"
+    invoke-direct {p0, p1, p2}, Leui;-><init>(Lnui;Landroid/view/WindowInsets;)V
 
-    const-string v1, "/data/data/ru.oneme.app"
+    const/4 p1, 0x0
 
-    filled-new-array {v0, v1}, [Ljava/lang/String;
+    iput-object p1, p0, Lfui;->o:Lbv7;
+
+    iput-object p1, p0, Lfui;->p:Lbv7;
+
+    iput-object p1, p0, Lfui;->q:Lbv7;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public g()Lbv7;
+    .locals 1
+
+    iget-object v0, p0, Lfui;->p:Lbv7;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcui;->c:Landroid/view/WindowInsets;
+
+    invoke-static {v0}, Lu6i;->m(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
 
     move-result-object v0
 
-    sput-object v0, Lfui;->a:[Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static final a(Landroid/view/ViewGroup;)V
-    .locals 5
-
-    new-instance v0, Les7;
-
-    new-instance v1, Lzt0;
-
-    const/4 v2, 0x3
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x0
-
-    invoke-direct {v1, v2, v3, v4}, Lzt0;-><init>(IIZ)V
-
-    const/4 v2, 0x7
-
-    invoke-direct {v0, v4, v1, v2}, Les7;-><init>(ILzt0;I)V
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Lfui;->b(Landroid/view/View;Les7;Lnq6;)V
-
-    return-void
-.end method
-
-.method public static final b(Landroid/view/View;Les7;Lnq6;)V
-    .locals 3
-
-    iget-object v0, p1, Les7;->d:Lzt0;
-
-    if-eqz v0, :cond_0
-
-    iget v0, v0, Lzt0;->b:I
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    const/4 v1, -0x1
-
-    if-nez v0, :cond_1
-
-    move v0, v1
-
-    goto :goto_1
-
-    :cond_1
-    sget-object v2, Lgs7;->$EnumSwitchMapping$0:[I
-
-    invoke-static {v0}, Lt02;->t(I)I
-
-    move-result v0
-
-    aget v0, v2, v0
-
-    :goto_1
-    if-eq v0, v1, :cond_4
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_4
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_3
-
-    const/4 v1, 0x3
-
-    if-ne v0, v1, :cond_2
-
-    new-instance v0, Lnf;
-
-    const/16 v1, 0x28
-
-    invoke-direct {v0, p0, p1, p2, v1}, Llf;-><init>(Landroid/view/View;Les7;Lnq6;I)V
-
-    return-void
-
-    :cond_2
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_3
-    new-instance v0, Lmf;
-
-    invoke-direct {v0, p0, p1, p2}, Lmf;-><init>(Landroid/view/View;Les7;Lnq6;)V
-
-    return-void
-
-    :cond_4
-    new-instance v0, Llqf;
-
-    invoke-direct {v0, p0, p1, p2}, Llqf;-><init>(Landroid/view/View;Les7;Lnq6;)V
-
-    return-void
-.end method
-
-.method public static c(Landroid/view/View;)V
-    .locals 4
-
-    new-instance v0, Les7;
-
-    const/4 v1, 0x3
-
-    const/16 v2, 0xd
-
-    const/4 v3, 0x0
-
-    invoke-direct {v0, v1, v3, v2}, Les7;-><init>(ILzt0;I)V
-
-    invoke-static {p0, v0, v3}, Lfui;->b(Landroid/view/View;Les7;Lnq6;)V
-
-    return-void
-.end method
-
-.method public static d(ILandroid/content/Context;Ljava/lang/String;)V
-    .locals 3
-
-    if-eqz p1, :cond_2
-
-    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    invoke-static {v0}, Lbv7;->c(Landroid/graphics/Insets;)Lbv7;
 
     move-result-object v0
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1, p2, p0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/widget/Toast;->show()V
-
-    return-void
+    iput-object v0, p0, Lfui;->p:Lbv7;
 
     :cond_0
-    sget-object v0, Lfui;->b:Landroid/os/Handler;
+    iget-object v0, p0, Lfui;->p:Lbv7;
 
-    if-nez v0, :cond_1
+    return-object v0
+.end method
 
-    new-instance v0, Landroid/os/Handler;
+.method public i()Lbv7;
+    .locals 1
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    iget-object v0, p0, Lfui;->o:Lbv7;
 
-    move-result-object v1
+    if-nez v0, :cond_0
 
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    iget-object v0, p0, Lcui;->c:Landroid/view/WindowInsets;
 
-    sput-object v0, Lfui;->b:Landroid/os/Handler;
+    invoke-static {v0}, Lu6i;->p(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
 
-    :cond_1
-    sget-object v0, Lfui;->b:Landroid/os/Handler;
+    move-result-object v0
 
-    new-instance v1, Lip1;
+    invoke-static {v0}, Lbv7;->c(Landroid/graphics/Insets;)Lbv7;
 
-    const/16 v2, 0x11
+    move-result-object v0
 
-    invoke-direct {v1, p1, p2, p0, v2}, Lip1;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
+    iput-object v0, p0, Lfui;->o:Lbv7;
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    :cond_0
+    iget-object v0, p0, Lfui;->o:Lbv7;
 
-    :cond_2
+    return-object v0
+.end method
+
+.method public k()Lbv7;
+    .locals 1
+
+    iget-object v0, p0, Lfui;->q:Lbv7;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcui;->c:Landroid/view/WindowInsets;
+
+    invoke-static {v0}, Lu6i;->b(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lbv7;->c(Landroid/graphics/Insets;)Lbv7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lfui;->q:Lbv7;
+
+    :cond_0
+    iget-object v0, p0, Lfui;->q:Lbv7;
+
+    return-object v0
+.end method
+
+.method public l(IIII)Lnui;
+    .locals 1
+
+    iget-object v0, p0, Lcui;->c:Landroid/view/WindowInsets;
+
+    invoke-static {v0, p1, p2, p3, p4}, Lu6i;->f(Landroid/view/WindowInsets;IIII)Landroid/view/WindowInsets;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    invoke-static {p2, p1}, Lnui;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lnui;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public r(Lbv7;)V
+    .locals 0
+
     return-void
 .end method

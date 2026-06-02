@@ -1,110 +1,106 @@
 .class public final Lqu7;
-.super Lp6g;
+.super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lru7;
+.field public final synthetic a:Lru7;
 
-.field public o:I
+.field public final synthetic b:Lzu;
 
 
 # direct methods
-.method public constructor <init>(Lru7;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lru7;Lzu;)V
     .locals 0
 
-    iput-object p1, p0, Lqu7;->X:Lru7;
+    iput-object p1, p0, Lqu7;->a:Lru7;
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lqu7;->b:Lzu;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 4
 
-    check-cast p1, Lzb4;
+    iget-object p1, p0, Lqu7;->a:Lru7;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object p1, p1, Lru7;->E0:Ljava/lang/String;
 
-    invoke-virtual {p0, p1, p2}, Lqu7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    sget-object v0, Lnm4;->d:Lnfb;
 
-    move-result-object p1
-
-    check-cast p1, Lqu7;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lqu7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lqu7;
-
-    iget-object v0, p0, Lqu7;->X:Lru7;
-
-    invoke-direct {p1, v0, p2}, Lqu7;-><init>(Lru7;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lqu7;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    sget-object v1, Lgp8;->d:Lgp8;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-virtual {v0, v1}, Lnfb;->b(Lgp8;)Z
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result v2
 
-    throw p1
+    if-eqz v2, :cond_1
+
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "Received locale change action: "
+
+    invoke-static {v3, v2}, Lx82;->l(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, p1, v2, v3}, Lnfb;->c(Lgp8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iput v1, p0, Lqu7;->o:I
-
-    iget-object p1, p0, Lqu7;->X:Lru7;
-
-    invoke-virtual {p1, p0}, Lru7;->c(Lp6g;)Ljava/lang/Object;
+    :goto_0
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    sget-object v0, Lac4;->a:Lac4;
+    if-eqz p1, :cond_2
 
-    if-ne p1, v0, :cond_2
+    iget-object p2, p0, Lqu7;->b:Lzu;
 
-    return-object v0
+    invoke-virtual {p2, p1}, Lzu;->add(Ljava/lang/Object;)Z
 
     :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    iget-object p1, p0, Lqu7;->b:Lzu;
 
-    return-object p1
+    iget p1, p1, Lzu;->c:I
+
+    const/4 p2, 0x2
+
+    if-ne p1, p2, :cond_3
+
+    iget-object p1, p0, Lqu7;->a:Lru7;
+
+    iget-object p1, p1, Lru7;->E0:Ljava/lang/String;
+
+    const-string p2, "Received all locale change actions"
+
+    invoke-static {p1, p2}, Lnm4;->y(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lqu7;->b:Lzu;
+
+    invoke-virtual {p1}, Lzu;->clear()V
+
+    iget-object p1, p0, Lqu7;->a:Lru7;
+
+    iget-object p1, p1, Lru7;->z0:Lzo5;
+
+    sget-object p2, Leu7;->b:Leu7;
+
+    invoke-static {p1, p2}, Lw4i;->s(Lzo5;Ljava/lang/Object;)V
+
+    :cond_3
+    return-void
 .end method

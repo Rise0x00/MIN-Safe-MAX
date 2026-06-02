@@ -1,216 +1,83 @@
-.class public final Li5b;
-.super Ljava/lang/Object;
+.class public final synthetic Li5b;
+.super Lbu6;
 .source "SourceFile"
 
 # interfaces
-.implements Lnq6;
+.implements Lpt6;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Llyb;
-
-.field public final synthetic c:Lr5;
+# static fields
+.field public static final a:Li5b;
 
 
 # direct methods
-.method public synthetic constructor <init>(Llyb;Lr5;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput p3, p0, Li5b;->a:I
+    new-instance v0, Li5b;
 
-    iput-object p1, p0, Li5b;->b:Llyb;
+    const-string v4, "register(Lkotlinx/coroutines/selects/SelectInstance;Ljava/lang/Object;)V"
 
-    iput-object p2, p0, Li5b;->c:Lr5;
+    const/4 v5, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x3
+
+    const-class v2, Lj5b;
+
+    const-string v3, "register"
+
+    invoke-direct/range {v0 .. v5}, Lbu6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Li5b;->a:Li5b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    iget v0, p0, Li5b;->a:I
+    check-cast p1, Lj5b;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lnye;
 
-    check-cast p1, Lpxb;
+    iget-wide v0, p1, Lj5b;->a:J
 
-    iget-object v0, p0, Li5b;->b:Llyb;
+    const-wide/16 v2, 0x0
 
-    iput-object v0, p1, Lpxb;->c:Llyb;
+    cmp-long p3, v0, v2
 
-    const/16 v0, 0xc
+    sget-object v2, Lyeh;->a:Lyeh;
 
-    iget-object v1, p0, Li5b;->c:Lr5;
+    if-gtz p3, :cond_0
 
-    invoke-virtual {v1, v0}, Lr5;->c(I)Ljava/lang/Object;
+    check-cast p2, Lmye;
 
-    move-result-object v0
+    iput-object v2, p2, Lmye;->o:Ljava/lang/Object;
 
-    check-cast v0, Lmbg;
+    return-object v2
 
-    iput-object v0, p1, Lpxb;->f:Lmbg;
+    :cond_0
+    new-instance p3, Le90;
 
-    const/16 v0, 0xd
+    const/16 v3, 0x16
 
-    invoke-virtual {v1, v0}, Lr5;->c(I)Ljava/lang/Object;
+    invoke-direct {p3, p2, v3, p1}, Le90;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    move-result-object v0
+    check-cast p2, Lmye;
 
-    check-cast v0, Lym5;
+    iget-object p1, p2, Lmye;->a:Lfc4;
 
-    const/16 v2, 0xe
-
-    invoke-virtual {v1, v2}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ltb4;
-
-    iput-object v0, p1, Lpxb;->d:Lym5;
-
-    iput-object v1, p1, Lpxb;->e:Ltb4;
-
-    invoke-virtual {p1}, Lpxb;->b()V
-
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Lpxb;
-
-    iget-object v0, p0, Li5b;->b:Llyb;
-
-    iput-object v0, p1, Lpxb;->c:Llyb;
-
-    const/16 v0, 0xc
-
-    iget-object v1, p0, Li5b;->c:Lr5;
-
-    invoke-virtual {v1, v0}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lmbg;
-
-    iput-object v0, p1, Lpxb;->f:Lmbg;
-
-    const/16 v0, 0xd
-
-    invoke-virtual {v1, v0}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lym5;
-
-    const/16 v2, 0xe
-
-    invoke-virtual {v1, v2}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ltb4;
-
-    iput-object v0, p1, Lpxb;->d:Lym5;
-
-    iput-object v1, p1, Lpxb;->e:Ltb4;
-
-    invoke-virtual {p1}, Lpxb;->b()V
-
-    return-object p1
-
-    :pswitch_1
-    check-cast p1, Lpxb;
-
-    iget-object v0, p0, Li5b;->b:Llyb;
-
-    iput-object v0, p1, Lpxb;->c:Llyb;
-
-    const/16 v0, 0xc
-
-    iget-object v1, p0, Li5b;->c:Lr5;
-
-    invoke-virtual {v1, v0}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lmbg;
-
-    iput-object v0, p1, Lpxb;->f:Lmbg;
-
-    const/16 v0, 0xd
-
-    invoke-virtual {v1, v0}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lym5;
-
-    const/16 v2, 0xe
-
-    invoke-virtual {v1, v2}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ltb4;
-
-    iput-object v0, p1, Lpxb;->d:Lym5;
-
-    iput-object v2, p1, Lpxb;->e:Ltb4;
-
-    invoke-virtual {p1}, Lpxb;->b()V
-
-    new-instance v0, Lapf;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p1, Lpxb;->g:Lum5;
-
-    new-instance v0, Lzof;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Lr5;->d(I)Ln8g;
-
-    move-result-object v2
-
-    const/16 v3, 0xb
-
-    invoke-virtual {v1, v3}, Lr5;->c(I)Ljava/lang/Object;
+    invoke-static {p1}, Ltf3;->y(Lfc4;)Lby4;
 
     move-result-object v3
 
-    check-cast v3, Llyb;
+    invoke-interface {v3, v0, v1, p3, p1}, Lby4;->invokeOnTimeout(JLjava/lang/Runnable;Lfc4;)Lv45;
 
-    const/16 v4, 0x63
+    move-result-object p1
 
-    invoke-virtual {v1, v4}, Lr5;->d(I)Ln8g;
+    iput-object p1, p2, Lmye;->c:Ljava/lang/Object;
 
-    move-result-object v4
-
-    const/16 v5, 0x11
-
-    invoke-virtual {v1, v5}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/content/Context;
-
-    invoke-direct {v0, v2, v3, v4, v1}, Lzof;-><init>(Lo58;Llyb;Lo58;Landroid/content/Context;)V
-
-    invoke-virtual {p1, v0}, Lpxb;->c(Lcz4;)V
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v2
 .end method

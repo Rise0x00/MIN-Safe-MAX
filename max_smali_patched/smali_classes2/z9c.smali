@@ -1,912 +1,409 @@
 .class public final Lz9c;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ldr6;
 
 
 # instance fields
-.field public synthetic X:Landroid/widget/TextView;
+.field public final a:Ljava/lang/Double;
 
-.field public synthetic Y:Lzlb;
+.field public final b:Ljava/lang/Double;
 
-.field public final synthetic o:I
+.field public final c:Ljava/lang/Double;
+
+.field public final d:Ljava/lang/Double;
+
+.field public final e:Litg;
+
+.field public final f:Ljava/lang/String;
+
+.field public final g:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public constructor <init>(Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Litg;Ljava/lang/String;Z)V
     .locals 0
 
-    iput p3, p0, Lz9c;->o:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lz9c;->a:Ljava/lang/Double;
+
+    iput-object p2, p0, Lz9c;->b:Ljava/lang/Double;
+
+    iput-object p3, p0, Lz9c;->c:Ljava/lang/Double;
+
+    iput-object p4, p0, Lz9c;->d:Ljava/lang/Double;
+
+    iput-object p5, p0, Lz9c;->e:Litg;
+
+    iput-object p6, p0, Lz9c;->f:Ljava/lang/String;
+
+    iput-boolean p7, p0, Lz9c;->g:Z
 
     return-void
 .end method
 
+.method public static a(Lz9c;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Ldtg;Ljava/lang/String;ZI)Lz9c;
+    .locals 8
+
+    and-int/lit8 v0, p8, 0x1
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p0, Lz9c;->a:Ljava/lang/Double;
+
+    :cond_0
+    move-object v1, p1
+
+    and-int/lit8 p1, p8, 0x2
+
+    if-eqz p1, :cond_1
+
+    iget-object p2, p0, Lz9c;->b:Ljava/lang/Double;
+
+    :cond_1
+    move-object v2, p2
+
+    and-int/lit8 p1, p8, 0x4
+
+    if-eqz p1, :cond_2
+
+    iget-object p3, p0, Lz9c;->c:Ljava/lang/Double;
+
+    :cond_2
+    move-object v3, p3
+
+    and-int/lit8 p1, p8, 0x8
+
+    if-eqz p1, :cond_3
+
+    iget-object p4, p0, Lz9c;->d:Ljava/lang/Double;
+
+    :cond_3
+    move-object v4, p4
+
+    and-int/lit8 p1, p8, 0x10
+
+    if-eqz p1, :cond_4
+
+    iget-object p5, p0, Lz9c;->e:Litg;
+
+    :cond_4
+    move-object v5, p5
+
+    and-int/lit8 p1, p8, 0x20
+
+    if-eqz p1, :cond_5
+
+    iget-object p6, p0, Lz9c;->f:Ljava/lang/String;
+
+    :cond_5
+    move-object v6, p6
+
+    and-int/lit8 p1, p8, 0x40
+
+    if-eqz p1, :cond_6
+
+    iget-boolean p7, p0, Lz9c;->g:Z
+
+    :cond_6
+    move v7, p7
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lz9c;
+
+    invoke-direct/range {v0 .. v7}, Lz9c;-><init>(Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Litg;Ljava/lang/String;Z)V
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lz9c;->o:I
+    const/4 v0, 0x1
 
-    check-cast p1, Landroid/widget/TextView;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lzlb;
+    return v0
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
-
-    const/16 v2, 0x15
-
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
-
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
-
-    const/16 v2, 0x14
-
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
-
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_1
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
-
-    const/16 v2, 0x13
-
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
-
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_2
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
-
-    const/16 v2, 0x12
-
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
-
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_3
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
-
-    const/16 v2, 0x11
-
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
-
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_4
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
-
-    const/16 v2, 0x10
-
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
-
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_5
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
-
-    const/16 v2, 0xf
-
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
-
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_6
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
-
-    const/16 v2, 0xe
-
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
-
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_7
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
-
-    const/16 v2, 0xd
-
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
-
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_8
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
-
-    const/16 v2, 0xc
-
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
-
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_9
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
-
-    const/16 v2, 0xb
-
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
-
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_a
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
-
-    const/16 v2, 0xa
-
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
-
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_b
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
-
-    const/16 v2, 0x9
-
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
-
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_c
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
-
-    const/16 v2, 0x8
-
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
-
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_d
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x7
-
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
-
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_e
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x6
-
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
-
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_f
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x5
-
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
-
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_10
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x4
-
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
-
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_11
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
-
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_12
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
-
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_13
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
-
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_14
-    new-instance v0, Lz9c;
-
-    const/4 v1, 0x3
+    :cond_0
+    instance-of v1, p1, Lz9c;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, p3, v2}, Lz9c;-><init>(ILkotlin/coroutines/Continuation;I)V
+    if-nez v1, :cond_1
 
-    iput-object p1, v0, Lz9c;->X:Landroid/widget/TextView;
+    return v2
 
-    iput-object p2, v0, Lz9c;->Y:Lzlb;
+    :cond_1
+    check-cast p1, Lz9c;
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    iget-object v1, p0, Lz9c;->a:Ljava/lang/Double;
 
-    invoke-virtual {v0, p1}, Lz9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v3, p1, Lz9c;->a:Ljava/lang/Double;
 
-    return-object p1
+    invoke-static {v1, v3}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    nop
+    move-result v1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lz9c;->b:Ljava/lang/Double;
+
+    iget-object v3, p1, Lz9c;->b:Ljava/lang/Double;
+
+    invoke-static {v1, v3}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lz9c;->c:Ljava/lang/Double;
+
+    iget-object v3, p1, Lz9c;->c:Ljava/lang/Double;
+
+    invoke-static {v1, v3}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lz9c;->d:Ljava/lang/Double;
+
+    iget-object v3, p1, Lz9c;->d:Ljava/lang/Double;
+
+    invoke-static {v1, v3}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lz9c;->e:Litg;
+
+    iget-object v3, p1, Lz9c;->e:Litg;
+
+    invoke-static {v1, v3}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Lz9c;->f:Ljava/lang/String;
+
+    iget-object v3, p1, Lz9c;->f:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-boolean v1, p0, Lz9c;->g:Z
+
+    iget-boolean p1, p1, Lz9c;->g:Z
+
+    if-eq v1, p1, :cond_8
+
+    return v2
+
+    :cond_8
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final hashCode()I
     .locals 4
 
-    iget v0, p0, Lz9c;->o:I
+    const/4 v0, 0x0
 
-    const/4 v1, -0x1
+    iget-object v1, p0, Lz9c;->a:Ljava/lang/Double;
 
-    sget-object v2, Lb3h;->a:Lb3h;
+    if-nez v1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    move v1, v0
 
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
+    goto :goto_0
 
-    iget-object v1, p0, Lz9c;->Y:Lzlb;
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    move-result v1
 
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
+    :goto_0
+    const/16 v2, 0x1f
 
-    move-result-object p1
+    mul-int/2addr v1, v2
 
-    iget p1, p1, Lrfg;->g:I
+    iget-object v3, p0, Lz9c;->b:Ljava/lang/Double;
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    if-nez v3, :cond_1
 
-    return-object v2
+    move v3, v0
 
-    :pswitch_0
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
+    goto :goto_1
 
-    iget-object v1, p0, Lz9c;->Y:Lzlb;
+    :cond_1
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    move-result v3
 
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
+    :goto_1
+    add-int/2addr v1, v3
 
-    move-result-object p1
+    mul-int/2addr v1, v2
 
-    iget p1, p1, Lrfg;->e:I
+    iget-object v3, p0, Lz9c;->c:Ljava/lang/Double;
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    if-nez v3, :cond_2
 
-    return-object v2
+    move v3, v0
 
-    :pswitch_1
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
+    goto :goto_2
 
-    iget-object v1, p0, Lz9c;->Y:Lzlb;
+    :cond_2
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    move-result v3
 
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
+    :goto_2
+    add-int/2addr v1, v3
 
-    move-result-object p1
+    mul-int/2addr v1, v2
 
-    iget p1, p1, Lrfg;->g:I
+    iget-object v3, p0, Lz9c;->d:Ljava/lang/Double;
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    if-nez v3, :cond_3
 
-    return-object v2
+    move v3, v0
 
-    :pswitch_2
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
+    goto :goto_3
 
-    iget-object v1, p0, Lz9c;->Y:Lzlb;
+    :cond_3
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    move-result v3
 
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
+    :goto_3
+    add-int/2addr v1, v3
 
-    move-result-object p1
+    mul-int/2addr v1, v2
 
-    iget p1, p1, Lrfg;->e:I
+    iget-object v3, p0, Lz9c;->e:Litg;
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-static {v1, v2, v3}, Lwy0;->f(IILitg;)I
 
-    return-object v2
+    move-result v1
 
-    :pswitch_3
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
+    iget-object v3, p0, Lz9c;->f:Ljava/lang/String;
 
-    iget-object v1, p0, Lz9c;->Y:Lzlb;
+    if-nez v3, :cond_4
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    goto :goto_4
 
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
+    :cond_4
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
-    move-result-object p1
+    move-result v0
 
-    iget p1, p1, Lrfg;->g:I
+    :goto_4
+    add-int/2addr v1, v0
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    mul-int/2addr v1, v2
 
-    return-object v2
+    iget-boolean v0, p0, Lz9c;->g:Z
 
-    :pswitch_4
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    iget-object v1, p0, Lz9c;->Y:Lzlb;
+    move-result v0
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    add-int/2addr v0, v1
 
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget p1, p1, Lrfg;->g:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    const-string v1, "PickLocationState(myLocationLat="
 
-    return-object v2
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :pswitch_5
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
+    iget-object v1, p0, Lz9c;->a:Ljava/lang/Double;
 
-    iget-object v1, p0, Lz9c;->Y:Lzlb;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    const-string v1, ", myLocationLon="
 
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    iget-object v1, p0, Lz9c;->b:Ljava/lang/Double;
 
-    iget p1, p1, Lrfg;->g:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    const-string v1, ", locationLat="
 
-    return-object v2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_6
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
+    iget-object v1, p0, Lz9c;->c:Ljava/lang/Double;
 
-    iget-object v1, p0, Lz9c;->Y:Lzlb;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    const-string v1, ", locationLon="
 
-    invoke-interface {v1}, Lzlb;->b()Lxf0;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    iget-object v1, p0, Lz9c;->d:Ljava/lang/Double;
 
-    iget-object p1, p1, Lxf0;->a:Lwf0;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget p1, p1, Lwf0;->h:I
+    const-string v1, ", sendTitle="
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
+    iget-object v1, p0, Lz9c;->e:Litg;
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget p1, p1, Lrfg;->g:I
+    const-string v1, ", locationText="
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v1}, Lzlb;->getIcon()Lwe7;
+    iget-object v1, p0, Lz9c;->f:Ljava/lang/String;
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p1, p1, Lwe7;->j:I
+    const-string v1, ", geoCodingInProgress="
 
-    sget-object v1, Lzhg;->a:Ljava/util/ArrayList;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+    const-string v1, ")"
 
-    move-result-object p1
+    iget-boolean v2, p0, Lz9c;->g:Z
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setCompoundDrawableTintList(Landroid/content/res/ColorStateList;)V
+    invoke-static {v0, v2, v1}, Lo52;->u(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
-    return-object v2
+    move-result-object v0
 
-    :pswitch_7
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
-
-    iget-object v3, p0, Lz9c;->Y:Lzlb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-interface {v3}, Lzlb;->getText()Lrfg;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-object v2
-
-    :pswitch_8
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lz9c;->Y:Lzlb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
-
-    move-result-object p1
-
-    iget p1, p1, Lrfg;->g:I
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-object v2
-
-    :pswitch_9
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lz9c;->Y:Lzlb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
-
-    move-result-object p1
-
-    iget p1, p1, Lrfg;->e:I
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-object v2
-
-    :pswitch_a
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lz9c;->Y:Lzlb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
-
-    move-result-object p1
-
-    iget p1, p1, Lrfg;->g:I
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-object v2
-
-    :pswitch_b
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lz9c;->Y:Lzlb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
-
-    move-result-object p1
-
-    iget p1, p1, Lrfg;->g:I
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-object v2
-
-    :pswitch_c
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lz9c;->Y:Lzlb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
-
-    move-result-object p1
-
-    iget p1, p1, Lrfg;->b:I
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-object v2
-
-    :pswitch_d
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lz9c;->Y:Lzlb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
-
-    move-result-object p1
-
-    iget p1, p1, Lrfg;->g:I
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-object v2
-
-    :pswitch_e
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lz9c;->Y:Lzlb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
-
-    move-result-object p1
-
-    iget p1, p1, Lrfg;->g:I
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-object v2
-
-    :pswitch_f
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lz9c;->Y:Lzlb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
-
-    move-result-object p1
-
-    iget p1, p1, Lrfg;->e:I
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-object v2
-
-    :pswitch_10
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lz9c;->Y:Lzlb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
-
-    move-result-object p1
-
-    iget p1, p1, Lrfg;->g:I
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-object v2
-
-    :pswitch_11
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lz9c;->Y:Lzlb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
-
-    move-result-object p1
-
-    iget p1, p1, Lrfg;->e:I
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-object v2
-
-    :pswitch_12
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lz9c;->Y:Lzlb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
-
-    move-result-object p1
-
-    iget p1, p1, Lrfg;->e:I
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-object v2
-
-    :pswitch_13
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
-
-    iget-object v3, p0, Lz9c;->Y:Lzlb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-interface {v3}, Lzlb;->getText()Lrfg;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-object v2
-
-    :pswitch_14
-    iget-object v0, p0, Lz9c;->X:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lz9c;->Y:Lzlb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
-
-    move-result-object p1
-
-    iget p1, p1, Lrfg;->g:I
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-object v2
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

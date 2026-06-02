@@ -1,63 +1,55 @@
-.class public final Lgxb;
-.super Ljava/lang/Object;
+.class public Lgxb;
+.super Lexb;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Z
+# virtual methods
+.method public a()Ljava/lang/Object;
+    .locals 2
 
-.field public final b:Z
+    iget-object v0, p0, Lexb;->a:Ljava/lang/Object;
 
-.field public final c:Ljava/lang/String;
+    instance-of v1, v0, Lfxb;
 
-.field public final d:Ljava/lang/String;
+    invoke-static {v1}, Lvfa;->i(Z)V
 
-.field public final e:Ljava/lang/Integer;
+    check-cast v0, Lfxb;
 
-.field public final f:Z
+    iget-object v0, v0, Lfxb;->a:Landroid/hardware/camera2/params/OutputConfiguration;
 
-.field public final g:Z
+    return-object v0
+.end method
 
-.field public final h:Z
+.method public final b()Ljava/lang/String;
+    .locals 1
 
-.field public final i:Z
+    const/4 v0, 0x0
 
-.field public final j:Z
+    return-object v0
+.end method
 
-.field public final k:Z
+.method public d(J)V
+    .locals 1
 
-.field public final l:Ljava/lang/String;
+    iget-object v0, p0, Lexb;->a:Ljava/lang/Object;
 
+    check-cast v0, Lfxb;
 
-# direct methods
-.method public constructor <init>(ZZLjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ZZZZZZLjava/lang/String;)V
-    .locals 0
+    iput-wide p1, v0, Lfxb;->b:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
-    iput-boolean p1, p0, Lgxb;->a:Z
+.method public final f(Ljava/lang/String;)V
+    .locals 1
 
-    iput-boolean p2, p0, Lgxb;->b:Z
+    invoke-virtual {p0}, Lgxb;->a()Ljava/lang/Object;
 
-    iput-object p3, p0, Lgxb;->c:Ljava/lang/String;
+    move-result-object v0
 
-    iput-object p4, p0, Lgxb;->d:Ljava/lang/String;
+    check-cast v0, Landroid/hardware/camera2/params/OutputConfiguration;
 
-    iput-object p5, p0, Lgxb;->e:Ljava/lang/Integer;
-
-    iput-boolean p6, p0, Lgxb;->f:Z
-
-    iput-boolean p7, p0, Lgxb;->g:Z
-
-    iput-boolean p8, p0, Lgxb;->h:Z
-
-    iput-boolean p9, p0, Lgxb;->i:Z
-
-    iput-boolean p10, p0, Lgxb;->j:Z
-
-    iput-boolean p11, p0, Lgxb;->k:Z
-
-    iput-object p12, p0, Lgxb;->l:Ljava/lang/String;
+    invoke-virtual {v0, p1}, Landroid/hardware/camera2/params/OutputConfiguration;->setPhysicalCameraId(Ljava/lang/String;)V
 
     return-void
 .end method

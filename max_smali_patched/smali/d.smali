@@ -1,21 +1,23 @@
 .class public final Ld;
-.super Laq;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ld;
+# instance fields
+.field public final a:Lia8;
+
+.field public final b:Lia8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lia8;Lia8;)V
+    .locals 0
 
-    new-instance v0, Ld;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Laq;-><init>()V
+    iput-object p1, p0, Ld;->a:Lia8;
 
-    sput-object v0, Ld;->a:Ld;
+    iput-object p2, p0, Ld;->b:Lia8;
 
     return-void
 .end method

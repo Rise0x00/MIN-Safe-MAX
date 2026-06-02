@@ -1,49 +1,85 @@
 .class public final Lne6;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lb3b;
+.implements Lhcg;
 
 
 # instance fields
-.field public X:I
+.field public final a:Lfcg;
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Loe6;
+.field public b:Ls45;
 
 
 # direct methods
-.method public constructor <init>(Loe6;Lo84;)V
+.method public constructor <init>(Lfcg;)V
     .locals 0
 
-    iput-object p1, p0, Lne6;->o:Loe6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lne6;->a:Lfcg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b()V
     .locals 1
 
-    iput-object p1, p0, Lne6;->d:Ljava/lang/Object;
+    iget-object v0, p0, Lne6;->a:Lfcg;
 
-    iget p1, p0, Lne6;->X:I
+    invoke-interface {v0}, Lfcg;->b()V
 
-    const/high16 v0, -0x80000000
+    return-void
+.end method
 
-    or-int/2addr p1, v0
+.method public final c(Ls45;)V
+    .locals 0
 
-    iput p1, p0, Lne6;->X:I
+    iput-object p1, p0, Lne6;->b:Ls45;
 
-    iget-object p1, p0, Lne6;->o:Loe6;
+    iget-object p1, p0, Lne6;->a:Lfcg;
 
-    const/4 v0, 0x0
+    invoke-interface {p1, p0}, Lfcg;->d(Lhcg;)V
 
-    invoke-virtual {p1, v0, p0}, Loe6;->a(ZLo84;)Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object p1
+.method public final cancel()V
+    .locals 1
 
-    return-object p1
+    iget-object v0, p0, Lne6;->b:Ls45;
+
+    invoke-interface {v0}, Ls45;->dispose()V
+
+    return-void
+.end method
+
+.method public final e(Ljava/lang/Object;)V
+    .locals 1
+
+    iget-object v0, p0, Lne6;->a:Lfcg;
+
+    invoke-interface {v0, p1}, Lfcg;->e(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final g(J)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-object v0, p0, Lne6;->a:Lfcg;
+
+    invoke-interface {v0, p1}, Lfcg;->onError(Ljava/lang/Throwable;)V
+
+    return-void
 .end method

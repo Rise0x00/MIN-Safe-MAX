@@ -1,40 +1,131 @@
-.class public abstract Ld06;
+.class public final Ld06;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Lide;
+
+.field public final b:Lbo3;
+
+
 # direct methods
-.method public static synthetic a(Ljava/lang/Throwable;)Z
-    .locals 0
-
-    invoke-static {p0}, Ld06;->b(Ljava/lang/Throwable;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method private static b(Ljava/lang/Throwable;)Z
+.method public constructor <init>(Lide;)V
     .locals 1
 
-    instance-of v0, p0, Landroid/system/ErrnoException;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
+    iput-object p1, p0, Ld06;->a:Lide;
 
-    check-cast p0, Landroid/system/ErrnoException;
+    new-instance p1, Lbo3;
 
-    iget p0, p0, Landroid/system/ErrnoException;->errno:I
+    const/4 v0, 0x1
 
-    sget v0, Landroid/system/OsConstants;->EACCES:I
+    invoke-direct {p1, v0}, Lbo3;-><init>(I)V
 
-    if-ne p0, v0, :cond_0
+    iput-object p1, p0, Ld06;->b:Lbo3;
 
-    const/4 p0, 0x1
+    return-void
+.end method
 
-    return p0
+
+# virtual methods
+.method public final a(Ljava/util/List;Lxya;)Ljava/lang/Object;
+    .locals 6
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    const/16 v1, 0xa
+
+    invoke-static {p1, v1}, Lkj3;->S0(Ljava/lang/Iterable;I)I
+
+    move-result v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lfza;
+
+    iget-wide v2, v1, Lfza;->a:J
+
+    iget-wide v4, v1, Lfza;->b:J
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v2, "_"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const-string p1, "SELECT * FROM fcm_notifications_analytics WHERE chat_id||\'_\'||msg_id IN ("
 
-    return p0
+    invoke-static {p1}, Lwph;->g(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    invoke-static {p1, v1}, Lq98;->b(Ljava/lang/StringBuilder;I)V
+
+    const-string v2, ") AND analytics_status = ("
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "?"
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, ")"
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v2, Lc06;
+
+    invoke-direct {v2, v0, v1, p1}, Lc06;-><init>(Ljava/util/ArrayList;ILjava/lang/String;)V
+
+    iget-object p1, p0, Ld06;->a:Lide;
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    invoke-static {p1, v0, v1, v2, p2}, Lyn8;->E(Lide;ZZLzs6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

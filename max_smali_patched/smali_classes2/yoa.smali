@@ -1,80 +1,104 @@
-.class public final Lyoa;
+.class public final synthetic Lyoa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnoa;
+.implements Lyt6;
+
 
 # instance fields
-.field public final a:Lj35;
-
-.field public final b:Lj35;
-
-.field public final c:Lj35;
-
-.field public final d:Lj35;
-
-.field public final e:Lj35;
+.field public final synthetic a:Lkpa;
 
 
 # direct methods
-.method public constructor <init>(Lj35;Lj35;Lj35;Lj35;Lj35;)V
+.method public constructor <init>(Lkpa;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyoa;->a:Lj35;
-
-    iput-object p2, p0, Lyoa;->b:Lj35;
-
-    iput-object p3, p0, Lyoa;->c:Lj35;
-
-    iput-object p4, p0, Lyoa;->d:Lj35;
-
-    iput-object p5, p0, Lyoa;->e:Lj35;
+    iput-object p1, p0, Lyoa;->a:Lkpa;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lzoa;)V
-    .locals 4
+.method public final a(Lgoa;)V
+    .locals 1
 
-    iget-wide v0, p1, Lzoa;->Z:J
+    iget-object v0, p0, Lyoa;->a:Lkpa;
 
-    const-wide/16 v2, 0x0
+    invoke-virtual {v0, p1}, Lkpa;->A(Lgoa;)V
 
-    cmp-long v2, v0, v2
+    return-void
+.end method
 
-    if-eqz v2, :cond_0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    instance-of v0, p1, Lnoa;
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    filled-new-array {v0}, [Ljava/lang/Object;
+    instance-of v0, p1, Lyt6;
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    const-string v1, "yoa"
-
-    const-string v2, "setFavoritesSync: %d"
-
-    invoke-static {v1, v2, v0}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lyoa;->c:Lj35;
-
-    invoke-virtual {v0}, Lj35;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Lyoa;->getFunctionDelegate()Lqt6;
 
     move-result-object v0
 
-    check-cast v0, Lef3;
+    check-cast p1, Lyt6;
 
-    iget-wide v1, p1, Lzoa;->Z:J
+    invoke-interface {p1}, Lyt6;->getFunctionDelegate()Lqt6;
 
-    check-cast v0, Lyfe;
+    move-result-object p1
 
-    invoke-virtual {v0, v1, v2}, Lyfe;->A(J)V
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 
     :cond_0
-    return-void
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final getFunctionDelegate()Lqt6;
+    .locals 7
+
+    new-instance v0, Lbu6;
+
+    const-string v6, "selectAvatar(Lone/me/login/common/avatars/NeuroAvatarModel;)V"
+
+    const/4 v2, 0x0
+
+    const/4 v1, 0x1
+
+    const-class v3, Lkpa;
+
+    iget-object v4, p0, Lyoa;->a:Lkpa;
+
+    const-string v5, "selectAvatar"
+
+    invoke-direct/range {v0 .. v6}, Lau6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    invoke-virtual {p0}, Lyoa;->getFunctionDelegate()Lqt6;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

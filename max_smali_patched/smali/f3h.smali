@@ -1,145 +1,239 @@
 .class public final Lf3h;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
+
+# static fields
+.field public static final d:Lf3h;
+
+.field public static final e:Ljava/lang/String;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;
+.field public final a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Lv4e;
+
+.field public c:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p2, p0, Lf3h;->X:Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;
+    new-instance v0, Lf3h;
 
-    const/4 p2, 0x2
+    const/4 v1, 0x0
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-array v2, v1, [Ld3h;
 
+    invoke-direct {v0, v2}, Lf3h;-><init>([Ld3h;)V
+
+    sput-object v0, Lf3h;->d:Lf3h;
+
+    sget-object v0, Lpnh;->a:Ljava/lang/String;
+
+    const/16 v0, 0x24
+
+    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lf3h;->e:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public varargs constructor <init>([Ld3h;)V
+    .locals 6
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {p1}, Len7;->k([Ljava/lang/Object;)Lv4e;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lf3h;->b:Lv4e;
+
+    array-length p1, p1
+
+    iput p1, p0, Lf3h;->a:I
+
+    const/4 p1, 0x0
+
+    :goto_0
+    iget v1, v0, Lv4e;->d:I
+
+    if-ge p1, v1, :cond_2
+
+    add-int/lit8 v1, p1, 0x1
+
+    move v2, v1
+
+    :goto_1
+    iget v3, v0, Lv4e;->d:I
+
+    if-ge v2, v3, :cond_1
+
+    invoke-virtual {v0, p1}, Lv4e;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ld3h;
+
+    invoke-virtual {v0, v2}, Lv4e;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ld3h;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    new-instance v3, Ljava/lang/IllegalArgumentException;
+
+    const-string v4, "Multiple identical TrackGroups added to one TrackGroupArray."
+
+    invoke-direct {v3, v4}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    const-string v4, "TrackGroupArray"
+
+    const-string v5, ""
+
+    invoke-static {v4, v5, v3}, Lq98;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    move p1, v1
+
+    goto :goto_0
+
+    :cond_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(I)Ld3h;
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lf3h;->b:Lv4e;
 
-    invoke-virtual {p0, p1, p2}, Lf3h;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0, p1}, Lv4e;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lf3h;
+    check-cast p1, Ld3h;
 
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lf3h;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-object p1
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final b(Ld3h;)I
+    .locals 1
+
+    iget-object v0, p0, Lf3h;->b:Lv4e;
+
+    invoke-virtual {v0, p1}, Len7;->indexOf(Ljava/lang/Object;)I
+
+    move-result p1
+
+    if-ltz p1, :cond_0
+
+    return p1
+
+    :cond_0
+    const/4 p1, -0x1
+
+    return p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    new-instance v0, Lf3h;
-
-    iget-object v1, p0, Lf3h;->X:Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;
-
-    invoke-direct {v0, p2, v1}, Lf3h;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;)V
-
-    iput-object p1, v0, Lf3h;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 14
-
-    iget-object v0, p0, Lf3h;->o:Ljava/lang/Object;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    check-cast v0, Ls3h;
-
-    instance-of p1, v0, Lq3h;
-
-    const/4 v1, 0x1
-
-    iget-object v2, p0, Lf3h;->X:Lone/me/calls/ui/bottomsheet/unkowncontact/UnknownContactBottomSheet;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {v2, v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
+    if-ne p0, p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    instance-of p1, v0, Lr3h;
+    if-eqz p1, :cond_2
 
-    if-eqz p1, :cond_1
+    const-class v0, Lf3h;
 
-    new-instance p1, Ldjb;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {p1, v2}, Ldjb;-><init>(Lone/me/sdk/arch/Widget;)V
+    move-result-object v1
 
-    check-cast v0, Lr3h;
+    if-eq v0, v1, :cond_1
 
-    iget-object v3, v0, Lr3h;->a:Lqhg;
+    goto :goto_1
 
-    invoke-virtual {p1, v3}, Ldjb;->g(Lqhg;)V
+    :cond_1
+    check-cast p1, Lf3h;
 
-    new-instance v3, Lrjb;
+    iget v0, p0, Lf3h;->a:I
 
-    iget v4, v0, Lr3h;->b:I
+    iget v1, p1, Lf3h;->a:I
 
-    invoke-direct {v3, v4}, Lrjb;-><init>(I)V
+    if-ne v0, v1, :cond_2
 
-    invoke-virtual {p1, v3}, Ldjb;->e(Lvjb;)V
+    iget-object p1, p1, Lf3h;->b:Lv4e;
 
-    iget-object v12, v0, Lr3h;->c:Lckb;
+    iget-object v0, p0, Lf3h;->b:Lv4e;
 
-    iget-object v5, p1, Ldjb;->b:Ldkb;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v11, 0x0
+    invoke-static {v0, p1}, Leub;->c(Ljava/util/List;Ljava/lang/Object;)Z
 
-    const/16 v13, 0x3f
+    move-result p1
 
-    const/4 v6, 0x0
+    if-eqz p1, :cond_2
 
-    const/4 v7, 0x0
+    :goto_0
+    const/4 p1, 0x1
 
-    const/4 v8, 0x0
+    return p1
 
-    const/4 v9, 0x0
+    :cond_2
+    :goto_1
+    const/4 p1, 0x0
 
-    const/4 v10, 0x0
+    return p1
+.end method
 
-    invoke-static/range {v5 .. v13}, Ldkb;->a(Ldkb;Lvjb;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lbkb;Lljb;Lpjb;Lckb;I)Ldkb;
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Lf3h;->c:I
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lf3h;->b:Lv4e;
+
+    invoke-virtual {v0}, Len7;->hashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lf3h;->c:I
+
+    :cond_0
+    iget v0, p0, Lf3h;->c:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lf3h;->b:Lv4e;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p1, Ldjb;->b:Ldkb;
-
-    invoke-virtual {p1}, Ldjb;->i()Lcjb;
-
-    invoke-virtual {v2, v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
-
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-
-    :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
+    return-object v0
 .end method

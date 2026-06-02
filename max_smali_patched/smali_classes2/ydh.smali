@@ -2,50 +2,83 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lc88;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+
+# static fields
+.field public static final a:Lydh;
+
+.field public static final b:Lrs7;
+
+
+# direct methods
+.method static constructor <clinit>()V
     .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Lydh;
 
-    if-ne p0, p1, :cond_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return v0
+    sput-object v0, Lydh;->a:Lydh;
 
-    :cond_0
-    instance-of v1, p1, Lydh;
+    const-string v0, "kotlin.UInt"
 
-    if-nez v1, :cond_1
+    sget-object v1, Luv7;->a:Luv7;
 
-    const/4 p1, 0x0
+    invoke-static {v1, v0}, Ly6j;->c(Lc88;Ljava/lang/String;)Lrs7;
 
-    return p1
+    move-result-object v0
 
-    :cond_1
-    check-cast p1, Lydh;
+    sput-object v0, Lydh;->b:Lrs7;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
+
+# virtual methods
+.method public final a(Lvk5;Ljava/lang/Object;)V
     .locals 1
 
-    const/high16 v0, 0x29000000
+    check-cast p2, Ludh;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    iget p2, p2, Ludh;->a:I
 
-    move-result v0
+    sget-object v0, Lydh;->b:Lrs7;
 
-    return v0
+    invoke-interface {p1, v0}, Lvk5;->k(Lt2f;)Lvk5;
+
+    move-result-object p1
+
+    invoke-interface {p1, p2}, Lvk5;->w(I)V
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final b(Lbn4;)Ljava/lang/Object;
     .locals 1
 
-    const-string v0, "VfxButtonIconOverlayPlainElevation2Colors(color=687865856)"
+    sget-object v0, Lydh;->b:Lrs7;
+
+    invoke-interface {p1, v0}, Lbn4;->p(Lt2f;)Lbn4;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lbn4;->m()I
+
+    move-result p1
+
+    new-instance v0, Ludh;
+
+    invoke-direct {v0, p1}, Ludh;-><init>(I)V
+
+    return-object v0
+.end method
+
+.method public final d()Lt2f;
+    .locals 1
+
+    sget-object v0, Lydh;->b:Lrs7;
 
     return-object v0
 .end method

@@ -1,175 +1,472 @@
-.class public abstract Lz6b;
+.class public final Lz6b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:J
+.field public static final h:Lakg;
 
-.field public static final b:J
 
-.field public static final c:J
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.field public static final d:J
+.field public final b:Ljava/lang/CharSequence;
 
-.field public static final e:J
+.field public final c:I
 
-.field public static final f:J
+.field public final d:Lh43;
 
-.field public static final g:J
+.field public final e:Landroid/graphics/drawable/Drawable;
 
-.field public static final h:J
+.field public final f:Landroid/graphics/drawable/Drawable;
 
-.field public static final i:J
-
-.field public static final j:J
-
-.field public static final k:J
-
-.field public static final l:J
-
-.field public static final m:J
-
-.field public static final n:J
-
-.field public static final o:J
-
-.field public static final p:J
-
-.field public static final q:J
-
-.field public static final r:J
-
-.field public static final s:J
-
-.field public static final t:J
-
-.field public static final synthetic u:I
+.field public final g:Litg;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    sget v0, Ld8d;->call_admin_settings_media_bottom_header:I
+    new-instance v0, Ls1a;
 
-    int-to-long v0, v0
+    const/4 v1, 0x4
 
-    sput-wide v0, Lz6b;->a:J
+    invoke-direct {v0, v1}, Ls1a;-><init>(I)V
 
-    sget v0, Ld8d;->call_admin_settings_media_header:I
+    new-instance v1, Lakg;
 
-    int-to-long v0, v0
+    invoke-direct {v1, v0}, Lakg;-><init>(Lxs6;)V
 
-    sput-wide v0, Lz6b;->b:J
-
-    sget v0, Ld8d;->call_context_action_chat:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lz6b;->c:J
-
-    sget v0, Ld8d;->call_context_action_debug_menu:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lz6b;->d:J
-
-    sget v0, Ld8d;->call_context_action_open_profile:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lz6b;->e:J
-
-    sget v0, Ld8d;->call_context_action_record_screen:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lz6b;->f:J
-
-    sget v0, Ld8d;->call_context_action_record_screen_disable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lz6b;->g:J
-
-    sget v0, Ld8d;->call_context_action_record_screen_unavailable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lz6b;->h:J
-
-    sget v0, Ld8d;->call_context_action_record_screenin_progress:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lz6b;->i:J
-
-    sget v0, Ld8d;->call_context_action_settings:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lz6b;->j:J
-
-    sget v0, Ld8d;->call_context_action_share_screen:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lz6b;->k:J
-
-    sget v0, Ld8d;->call_context_action_share_screen_disable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lz6b;->l:J
-
-    sget v0, Ld8d;->call_context_action_share_screen_unavailable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lz6b;->m:J
-
-    sget v0, Ld8d;->call_context_action_write_chat:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lz6b;->n:J
-
-    sget v0, Ld8d;->call_context_dialog_invite_user_to_p2p:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lz6b;->o:J
-
-    sget v0, Ld8d;->call_debug_menu_settings_actions_header:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lz6b;->p:J
-
-    sget v0, Ld8d;->call_debug_menu_settings_crash:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lz6b;->q:J
-
-    sget v0, Ld8d;->call_debug_menu_settings_nonfatal:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lz6b;->r:J
-
-    sget v0, Ld8d;->call_screen_menu_grid_mode:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lz6b;->s:J
-
-    sget v0, Ld8d;->call_screen_menu_speaker_mode:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lz6b;->t:J
+    sput-object v1, Lz6b;->h:Lakg;
 
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/CharSequence;ILh43;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Litg;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lz6b;->a:Ljava/lang/String;
+
+    .line 3
+    iput-object p2, p0, Lz6b;->b:Ljava/lang/CharSequence;
+
+    .line 4
+    iput p3, p0, Lz6b;->c:I
+
+    .line 5
+    iput-object p4, p0, Lz6b;->d:Lh43;
+
+    .line 6
+    iput-object p5, p0, Lz6b;->e:Landroid/graphics/drawable/Drawable;
+
+    .line 7
+    iput-object p6, p0, Lz6b;->f:Landroid/graphics/drawable/Drawable;
+
+    .line 8
+    iput-object p7, p0, Lz6b;->g:Litg;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;ILh43;I)V
+    .locals 8
+
+    and-int/lit8 p5, p5, 0x8
+
+    if-eqz p5, :cond_0
+
+    .line 9
+    sget-object p4, Ly6b;->e:Ly6b;
+
+    :cond_0
+    move-object v4, p4
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move v3, p3
+
+    .line 10
+    invoke-direct/range {v0 .. v7}, Lz6b;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;ILh43;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Litg;)V
+
+    return-void
+.end method
+
+.method public static a(Lz6b;Ljava/lang/CharSequence;ILh43;Landroid/graphics/drawable/Drawable;Litg;I)Lz6b;
+    .locals 8
+
+    iget-object v1, p0, Lz6b;->a:Ljava/lang/String;
+
+    and-int/lit8 v0, p6, 0x2
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p0, Lz6b;->b:Ljava/lang/CharSequence;
+
+    :cond_0
+    move-object v2, p1
+
+    and-int/lit8 p1, p6, 0x8
+
+    if-eqz p1, :cond_1
+
+    iget-object p3, p0, Lz6b;->d:Lh43;
+
+    :cond_1
+    move-object v4, p3
+
+    iget-object v5, p0, Lz6b;->e:Landroid/graphics/drawable/Drawable;
+
+    and-int/lit8 p1, p6, 0x20
+
+    if-eqz p1, :cond_2
+
+    iget-object p4, p0, Lz6b;->f:Landroid/graphics/drawable/Drawable;
+
+    :cond_2
+    move-object v6, p4
+
+    and-int/lit8 p1, p6, 0x40
+
+    if-eqz p1, :cond_3
+
+    iget-object p5, p0, Lz6b;->g:Litg;
+
+    :cond_3
+    move-object v7, p5
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lz6b;
+
+    move v3, p2
+
+    invoke-direct/range {v0 .. v7}, Lz6b;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;ILh43;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Litg;)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lz6b;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lz6b;
+
+    iget-object v0, p0, Lz6b;->a:Ljava/lang/String;
+
+    iget-object v1, p1, Lz6b;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lz6b;->b:Ljava/lang/CharSequence;
+
+    iget-object v1, p1, Lz6b;->b:Ljava/lang/CharSequence;
+
+    invoke-static {v0, v1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget v0, p0, Lz6b;->c:I
+
+    iget v1, p1, Lz6b;->c:I
+
+    if-eq v0, v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Lz6b;->d:Lh43;
+
+    iget-object v1, p1, Lz6b;->d:Lh43;
+
+    invoke-static {v0, v1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-object v0, p0, Lz6b;->e:Landroid/graphics/drawable/Drawable;
+
+    iget-object v1, p1, Lz6b;->e:Landroid/graphics/drawable/Drawable;
+
+    invoke-static {v0, v1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget-object v0, p0, Lz6b;->f:Landroid/graphics/drawable/Drawable;
+
+    iget-object v1, p1, Lz6b;->f:Landroid/graphics/drawable/Drawable;
+
+    invoke-static {v0, v1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget-object v0, p0, Lz6b;->g:Litg;
+
+    iget-object p1, p1, Lz6b;->g:Litg;
+
+    invoke-static {v0, p1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_8
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_8
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lz6b;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lz6b;->b:Ljava/lang/CharSequence;
+
+    invoke-static {v0, v1, v2}, Ls54;->c(IILjava/lang/CharSequence;)I
+
+    move-result v0
+
+    iget v2, p0, Lz6b;->c:I
+
+    invoke-static {v2, v0, v1}, Lsb6;->b(III)I
+
+    move-result v0
+
+    iget-object v2, p0, Lz6b;->d:Lh43;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    const/4 v0, 0x0
+
+    iget-object v3, p0, Lz6b;->e:Landroid/graphics/drawable/Drawable;
+
+    if-nez v3, :cond_0
+
+    move v3, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    :goto_0
+    add-int/2addr v2, v3
+
+    mul-int/2addr v2, v1
+
+    iget-object v3, p0, Lz6b;->f:Landroid/graphics/drawable/Drawable;
+
+    if-nez v3, :cond_1
+
+    move v3, v0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    :goto_1
+    add-int/2addr v2, v3
+
+    mul-int/2addr v2, v1
+
+    iget-object v1, p0, Lz6b;->g:Litg;
+
+    if-nez v1, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_2
+    add-int/2addr v2, v0
+
+    return v2
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 11
+
+    invoke-static {}, Lnm4;->c()Z
+
+    move-result v0
+
+    const-string v1, ")"
+
+    const-string v2, ", endIcon="
+
+    const-string v3, ", startIcon="
+
+    const-string v4, ", indicator="
+
+    const-string v5, "OneMeBaseTabItemModel(id=\'"
+
+    iget-object v6, p0, Lz6b;->f:Landroid/graphics/drawable/Drawable;
+
+    iget-object v7, p0, Lz6b;->e:Landroid/graphics/drawable/Drawable;
+
+    iget-object v8, p0, Lz6b;->d:Lh43;
+
+    iget v9, p0, Lz6b;->c:I
+
+    iget-object v10, p0, Lz6b;->a:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, "\', title="
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v5, p0, Lz6b;->b:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v5, ", state="
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {v9}, Lsb6;->B(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    const-string v0, "\', title=*****, state="
+
+    invoke-static {v5, v10, v0}, Lo52;->y(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-static {v9}, Lsb6;->B(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

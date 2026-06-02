@@ -1,51 +1,60 @@
-.class public abstract Lys5;
+.class public final synthetic Lys5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lij8;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lt60;
+
 
 # direct methods
-.method public static a([B)Lzs5;
-    .locals 10
+.method public synthetic constructor <init>(Lt60;I)V
+    .locals 0
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
+    iput p2, p0, Lys5;->a:I
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;-><init>()V
+    iput-object p1, p0, Lys5;->b:Lt60;
 
-    :try_start_0
-    invoke-static {v0, p0}, Lbp9;->mergeFrom(Lbp9;[B)Lbp9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    return-void
+.end method
 
-    check-cast p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    new-instance v0, Lzs5;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-wide v1, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->requestId:J
+    iget v0, p0, Lys5;->a:I
 
-    iget-object v3, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->externalUrl:Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v4, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->attachLocalId:Ljava/lang/String;
+    iget-object v0, p0, Lys5;->b:Lt60;
 
-    iget-wide v5, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->messageId:J
+    check-cast p1, Lghc;
 
-    iget-wide v7, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->chatId:J
+    invoke-interface {p1, v0}, Lghc;->x(Lt60;)V
 
-    iget-object v9, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->stickerId:Ljava/lang/String;
+    return-void
 
-    invoke-direct/range {v0 .. v9}, Lzs5;-><init>(JLjava/lang/String;Ljava/lang/String;JJLjava/lang/String;)V
+    :pswitch_0
+    iget-object v0, p0, Lys5;->b:Lt60;
 
-    return-object v0
+    check-cast p1, Lghc;
 
-    :catch_0
-    move-exception v0
+    invoke-interface {p1, v0}, Lghc;->x(Lt60;)V
 
-    move-object p0, v0
+    return-void
 
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
+    nop
 
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

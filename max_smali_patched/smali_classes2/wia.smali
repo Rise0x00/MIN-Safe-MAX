@@ -1,14 +1,19 @@
-.class public interface abstract Lwia;
-.super Ljava/lang/Object;
+.class public final Lwia;
+.super Llmg;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract d(Ljava/lang/String;)V
-.end method
+# direct methods
+.method public static a()Lwia;
+    .locals 2
 
-.method public abstract e(Ljava/lang/String;Ljava/lang/Throwable;)V
-.end method
+    new-instance v0, Lwia;
 
-.method public abstract o(Ljava/lang/Throwable;)V
+    new-instance v1, Landroid/util/ArrayMap;
+
+    invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
+
+    invoke-direct {v0, v1}, Llmg;-><init>(Landroid/util/ArrayMap;)V
+
+    return-object v0
 .end method

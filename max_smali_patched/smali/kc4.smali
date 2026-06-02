@@ -1,59 +1,25 @@
-.class public final Lkc4;
-.super Ljava/io/FilterOutputStream;
+.class public final synthetic Lkc4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public a:J
+# interfaces
+.implements Ljava/util/function/BinaryOperator;
 
 
 # virtual methods
-.method public final close()V
+.method public final apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
+    check-cast p1, Lz08;
 
-    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
+    check-cast p2, Lz08;
 
-    return-void
-.end method
+    if-eqz p1, :cond_0
 
-.method public final write(I)V
-    .locals 4
+    const/4 v0, 0x0
 
-    .line 3
-    iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
+    invoke-interface {p1, v0}, Lz08;->cancel(Ljava/util/concurrent/CancellationException;)V
 
-    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write(I)V
-
-    .line 4
-    iget-wide v0, p0, Lkc4;->a:J
-
-    const-wide/16 v2, 0x1
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lkc4;->a:J
-
-    return-void
-.end method
-
-.method public final write([BII)V
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
-
-    .line 2
-    iget-wide p1, p0, Lkc4;->a:J
-
-    int-to-long v0, p3
-
-    add-long/2addr p1, v0
-
-    iput-wide p1, p0, Lkc4;->a:J
-
-    return-void
+    :cond_0
+    return-object p2
 .end method

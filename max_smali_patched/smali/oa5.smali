@@ -2,12 +2,15 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqi4;
-
 
 # static fields
-.field public static final a:Loa5;
+.field public static final b:Loa5;
+
+.field public static final c:Z
+
+
+# instance fields
+.field public final a:Ljava/util/concurrent/ArrayBlockingQueue;
 
 
 # direct methods
@@ -16,53 +19,77 @@
 
     new-instance v0, Loa5;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Loa5;-><init>()V
 
-    sput-object v0, Loa5;->a:Loa5;
+    sput-object v0, Loa5;->b:Loa5;
+
+    const/4 v0, 0x1
+
+    sput-boolean v0, Loa5;->c:Z
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/ArrayBlockingQueue;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/ArrayBlockingQueue;-><init>(I)V
+
+    iput-object v0, p0, Loa5;->a:Ljava/util/concurrent/ArrayBlockingQueue;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final R(Lzi4;)J
-    .locals 1
+.method public final a(Lna5;)V
+    .locals 3
 
-    new-instance p1, Ljava/io/IOException;
+    sget-boolean v0, Loa5;->c:Z
 
-    const-string v0, "DummyDataSource cannot be opened"
+    if-nez v0, :cond_0
 
-    invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    goto :goto_1
 
-    throw p1
-.end method
+    :cond_0
+    const/4 v0, 0x5
 
-.method public final S(Lxsg;)V
-    .locals 0
+    :goto_0
+    iget-object v1, p0, Loa5;->a:Ljava/util/concurrent/ArrayBlockingQueue;
 
+    invoke-virtual {v1, p1}, Ljava/util/concurrent/ArrayBlockingQueue;->offer(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    if-lez v0, :cond_1
+
+    invoke-virtual {v1}, Ljava/util/concurrent/ArrayBlockingQueue;->poll()Ljava/lang/Object;
+
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
     return-void
 .end method
 
-.method public final close()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final getUri()Landroid/net/Uri;
+.method public final toString()Ljava/lang/String;
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Loa5;->a:Ljava/util/concurrent/ArrayBlockingQueue;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-.end method
-
-.method public final read([BII)I
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
 .end method

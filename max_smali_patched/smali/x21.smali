@@ -1,74 +1,133 @@
 .class public final Lx21;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic o:Ld31;
+.field public final a:Ljava/lang/Integer;
+
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Ld31;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(ILjava/lang/Integer;)V
     .locals 0
 
-    iput-object p1, p0, Lx21;->o:Ld31;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lx21;->a:Ljava/lang/Integer;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lx21;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Ls04;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lx21;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Lx21;
 
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lx21;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget-object v1, p0, Lx21;->a:Ljava/lang/Integer;
 
-    invoke-virtual {p1, p2}, Lx21;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v3, p1, Lx21;->a:Ljava/lang/Integer;
 
-    return-object p2
+    invoke-static {v1, v3}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Lx21;->b:I
+
+    iget p1, p1, Lx21;->b:I
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    new-instance p1, Lx21;
+    iget-object v0, p0, Lx21;->a:Ljava/lang/Integer;
 
-    iget-object v0, p0, Lx21;->o:Ld31;
+    if-nez v0, :cond_0
 
-    invoke-direct {p1, v0, p2}, Lx21;-><init>(Ld31;Lkotlin/coroutines/Continuation;)V
+    const/4 v0, 0x0
 
-    return-object p1
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lx21;->b:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    sget-object p1, Ld31;->H0:[Lz28;
+    const-string v1, "BackgroundColors(color="
 
-    iget-object p1, p0, Lx21;->o:Ld31;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Ld31;->p()V
+    iget-object v1, p0, Lx21;->a:Ljava/lang/Integer;
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    const-string v1, ", rippleColor="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lx21;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

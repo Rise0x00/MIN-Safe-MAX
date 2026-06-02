@@ -1,68 +1,60 @@
-.class public final synthetic Lrv4;
+.class public final Lrv4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/concurrent/ThreadFactory;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lzii;
+.field public final a:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzii;I)V
-    .locals 0
-
-    iput p2, p0, Lrv4;->a:I
-
-    iput-object p1, p0, Lrv4;->b:Lzii;
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object v0, p0, Lrv4;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 2
 
-    iget v0, p0, Lrv4;->a:I
+    new-instance v0, Ljava/lang/Thread;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    iget-object v0, p0, Lrv4;->b:Lzii;
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Lzii;->b:Ljava/lang/Object;
+    const-string v1, "arch_disk_io_"
 
-    check-cast v0, Lsv4;
+    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, v0, Lsv4;->g:Leqh;
+    iget-object v1, p0, Lrv4;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-interface {v0}, Leqh;->b()V
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    return-void
+    move-result v1
 
-    :pswitch_0
-    iget-object v0, p0, Lrv4;->b:Lzii;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Lzii;->b:Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    check-cast v0, Lsv4;
+    move-result-object p1
 
-    iget-object v0, v0, Lsv4;->g:Leqh;
+    invoke-virtual {v0, p1}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
-    invoke-interface {v0}, Leqh;->onFirstFrameRendered()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

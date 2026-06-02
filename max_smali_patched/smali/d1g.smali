@@ -1,136 +1,70 @@
 .class public final Ld1g;
-.super Li7f;
+.super Lp4;
 .source "SourceFile"
 
-# interfaces
-.implements Llpf;
+
+# instance fields
+.field public final a:Ljava/util/concurrent/atomic/AtomicReference;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Ld1g;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final getValue()Ljava/lang/Object;
-    .locals 7
+.method public final a(Lo4;)Z
+    .locals 1
 
-    monitor-enter p0
+    check-cast p1, Lb1g;
 
-    :try_start_0
-    iget-object v0, p0, Li7f;->Z:[Ljava/lang/Object;
+    iget-object p1, p0, Ld1g;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-    iget-wide v1, p0, Li7f;->t0:J
-
-    invoke-virtual {p0}, Li7f;->s()J
-
-    move-result-wide v3
-
-    iget v5, p0, Li7f;->v0:I
-
-    int-to-long v5, v5
-
-    add-long/2addr v3, v5
-
-    iget-wide v5, p0, Li7f;->t0:J
-
-    sub-long/2addr v3, v5
-
-    long-to-int v3, v3
-
-    int-to-long v3, v3
-
-    add-long/2addr v1, v3
-
-    const-wide/16 v3, 0x1
-
-    sub-long/2addr v1, v3
-
-    invoke-static {v0, v1, v2}, Lj7f;->c([Ljava/lang/Object;J)Ljava/lang/Object;
+    invoke-static {p1}, Lkotlinx/coroutines/internal/Concurrent_commonKt;->getValue(Ljava/util/concurrent/atomic/AtomicReference;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Number;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+    const/4 p1, 0x0
 
-    move-result v0
+    return p1
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    :cond_0
+    sget-object v0, Lc1g;->a:Lkotlinx/coroutines/internal/Symbol;
 
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {p1, v0}, Lkotlinx/coroutines/internal/Concurrent_commonKt;->setValue(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/Object;)V
 
-    monitor-exit p0
+    const/4 p1, 0x1
 
-    return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
+    return p1
 .end method
 
-.method public final z(I)V
-    .locals 7
+.method public final b(Lo4;)[Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    monitor-enter p0
+    check-cast p1, Lb1g;
 
-    :try_start_0
-    iget-object v0, p0, Li7f;->Z:[Ljava/lang/Object;
+    iget-object p1, p0, Ld1g;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-    iget-wide v1, p0, Li7f;->t0:J
+    const/4 v0, 0x0
 
-    invoke-virtual {p0}, Li7f;->s()J
+    invoke-static {p1, v0}, Lkotlinx/coroutines/internal/Concurrent_commonKt;->setValue(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/Object;)V
 
-    move-result-wide v3
+    sget-object p1, Lhk0;->b:[Lkotlin/coroutines/Continuation;
 
-    iget v5, p0, Li7f;->v0:I
-
-    int-to-long v5, v5
-
-    add-long/2addr v3, v5
-
-    iget-wide v5, p0, Li7f;->t0:J
-
-    sub-long/2addr v3, v5
-
-    long-to-int v3, v3
-
-    int-to-long v3, v3
-
-    add-long/2addr v1, v3
-
-    const-wide/16 v3, 0x1
-
-    sub-long/2addr v1, v3
-
-    invoke-static {v0, v1, v2}, Lj7f;->c([Ljava/lang/Object;J)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
-
-    move-result v0
-
-    add-int/2addr v0, p1
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Li7f;->h(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
+    return-object p1
 .end method

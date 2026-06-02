@@ -1,60 +1,56 @@
-.class public final Lwyi;
+.class public final synthetic Lwyi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Lcom/my/tracker/core/utils/Consumer;
 
 
-# static fields
-.field public static final a:Lwyi;
+# instance fields
+.field public final synthetic a:Lcom/my/tracker/core/a;
+
+.field public final synthetic b:Lcom/my/tracker/core/UserInfoState;
+
+.field public final synthetic c:J
+
+.field public final synthetic d:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lcom/my/tracker/core/a;Lcom/my/tracker/core/UserInfoState;JJ)V
+    .locals 0
 
-    new-instance v0, Lwyi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lwyi;->a:Lcom/my/tracker/core/a;
 
-    sput-object v0, Lwyi;->a:Lwyi;
+    iput-object p2, p0, Lwyi;->b:Lcom/my/tracker/core/UserInfoState;
 
-    new-instance v0, Lbri;
+    iput-wide p3, p0, Lwyi;->c:J
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
-
-    const-class v1, Lpri;
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    iput-wide p5, p0, Lwyi;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final accept(Ljava/lang/Object;)V
+    .locals 7
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-wide v4, p0, Lwyi;->d:J
 
-    move-result-object p1
+    move-object v6, p1
 
-    throw p1
+    check-cast v6, Lcom/my/tracker/core/EngineCore;
+
+    iget-object v0, p0, Lwyi;->a:Lcom/my/tracker/core/a;
+
+    iget-object v1, p0, Lwyi;->b:Lcom/my/tracker/core/UserInfoState;
+
+    iget-wide v2, p0, Lwyi;->c:J
+
+    invoke-static/range {v0 .. v6}, Lcom/my/tracker/core/a;->f(Lcom/my/tracker/core/a;Lcom/my/tracker/core/UserInfoState;JJLcom/my/tracker/core/EngineCore;)V
+
+    return-void
 .end method

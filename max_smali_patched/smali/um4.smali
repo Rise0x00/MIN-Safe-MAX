@@ -1,112 +1,74 @@
-.class public final synthetic Lum4;
-.super Ljava/lang/Object;
+.class public final Lum4;
+.super Lym4;
 .source "SourceFile"
-
-# interfaces
-.implements Lqe8;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lid;
-
-.field public final synthetic c:Ljava/lang/String;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lid;Ljava/lang/String;I)V
-    .locals 0
-
-    .line 1
-    iput p3, p0, Lum4;->a:I
-
-    iput-object p1, p0, Lum4;->b:Lid;
-
-    iput-object p2, p0, Lum4;->c:Ljava/lang/String;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lid;Ljava/lang/String;JJI)V
-    .locals 0
-
-    .line 2
-    iput p7, p0, Lum4;->a:I
-
-    iput-object p1, p0, Lum4;->b:Lid;
-
-    iput-object p2, p0, Lum4;->c:Ljava/lang/String;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
+.method public final n(Lpk5;)I
+    .locals 0
+
+    invoke-virtual {p1}, Lpk5;->h0()I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final o()Lnn7;
     .locals 2
 
-    iget v0, p0, Lum4;->a:I
+    new-instance v0, Lnn7;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Lum4;->c:Ljava/lang/String;
+    const/4 v1, 0x0
 
-    check-cast p1, Ljd;
+    iput v1, v0, Lnn7;->a:I
 
-    iget-object v1, p0, Lum4;->b:Lid;
+    iput-boolean v1, v0, Lnn7;->b:Z
 
-    invoke-interface {p1, v1, v0}, Ljd;->z(Lid;Ljava/lang/String;)V
+    iput-boolean v1, v0, Lnn7;->c:Z
 
-    return-void
+    return-object v0
+.end method
 
-    :pswitch_0
-    check-cast p1, Ljd;
+.method public final declared-synchronized s(Lpk5;I)Z
+    .locals 1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    monitor-enter p0
 
-    iget-object v0, p0, Lum4;->b:Lid;
+    :try_start_0
+    invoke-static {p2}, Lxn0;->b(I)Z
 
-    iget-object v1, p0, Lum4;->c:Ljava/lang/String;
+    move-result v0
 
-    invoke-interface {p1, v0, v1}, Ljd;->K0(Lid;Ljava/lang/String;)V
+    if-eqz v0, :cond_0
 
-    return-void
+    const/4 p1, 0x0
 
-    :pswitch_1
-    iget-object v0, p0, Lum4;->c:Ljava/lang/String;
+    goto :goto_0
 
-    check-cast p1, Ljd;
+    :cond_0
+    iget-object v0, p0, Lym4;->g:Lp18;
 
-    iget-object v1, p0, Lum4;->b:Lid;
+    invoke-virtual {v0, p1, p2}, Lp18;->d(Lpk5;I)Z
 
-    invoke-interface {p1, v1, v0}, Ljd;->o0(Lid;Ljava/lang/String;)V
+    move-result p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-void
+    :goto_0
+    monitor-exit p0
 
-    :pswitch_2
-    check-cast p1, Ljd;
+    return p1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :catchall_0
+    move-exception p1
 
-    iget-object v0, p0, Lum4;->b:Lid;
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    iget-object v1, p0, Lum4;->c:Ljava/lang/String;
-
-    invoke-interface {p1, v0, v1}, Ljd;->E(Lid;Ljava/lang/String;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

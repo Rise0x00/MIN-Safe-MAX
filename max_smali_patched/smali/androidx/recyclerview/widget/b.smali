@@ -14,7 +14,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
-            "Lwrd;",
+            "Le2e;",
             ">;"
         }
     .end annotation
@@ -24,7 +24,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
-            "Ljsd;",
+            "Lr2e;",
             ">;"
         }
     .end annotation
@@ -74,12 +74,12 @@
     return-void
 .end method
 
-.method public attachForPoolingContainer(Lwrd;)V
+.method public attachForPoolingContainer(Le2e;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lwrd;",
+            "Le2e;",
             ")V"
         }
     .end annotation
@@ -111,9 +111,9 @@
 
     move-result-object v1
 
-    check-cast v1, Ljsd;
+    check-cast v1, Lr2e;
 
-    iget-object v2, v1, Ljsd;->a:Ljava/util/ArrayList;
+    iget-object v2, v1, Lr2e;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -130,16 +130,16 @@
 
     move-result-object v3
 
-    check-cast v3, Ltsd;
+    check-cast v3, Lb3e;
 
-    iget-object v3, v3, Ltsd;->a:Landroid/view/View;
+    iget-object v3, v3, Lb3e;->a:Landroid/view/View;
 
-    invoke-static {v3}, Ljec;->a(Landroid/view/View;)V
+    invoke-static {v3}, Lopc;->a(Landroid/view/View;)V
 
     goto :goto_1
 
     :cond_0
-    iget-object v1, v1, Ljsd;->a:Ljava/util/ArrayList;
+    iget-object v1, v1, Lr2e;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
@@ -163,12 +163,12 @@
     return-void
 .end method
 
-.method public detachForPoolingContainer(Lwrd;Z)V
+.method public detachForPoolingContainer(Le2e;Z)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lwrd;",
+            "Le2e;",
             "Z)V"
         }
     .end annotation
@@ -210,9 +210,9 @@
 
     move-result-object v0
 
-    check-cast v0, Ljsd;
+    check-cast v0, Lr2e;
 
-    iget-object v0, v0, Ljsd;->a:Ljava/util/ArrayList;
+    iget-object v0, v0, Lr2e;->a:Ljava/util/ArrayList;
 
     move v1, p1
 
@@ -227,11 +227,11 @@
 
     move-result-object v2
 
-    check-cast v2, Ltsd;
+    check-cast v2, Lb3e;
 
-    iget-object v2, v2, Ltsd;->a:Landroid/view/View;
+    iget-object v2, v2, Lb3e;->a:Landroid/view/View;
 
-    invoke-static {v2}, Ljec;->a(Landroid/view/View;)V
+    invoke-static {v2}, Lopc;->a(Landroid/view/View;)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -249,17 +249,17 @@
 .method public factorInBindTime(IJ)V
     .locals 2
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Ljsd;
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Lr2e;
 
     move-result-object p1
 
-    iget-wide v0, p1, Ljsd;->d:J
+    iget-wide v0, p1, Lr2e;->d:J
 
     invoke-virtual {p0, v0, v1, p2, p3}, Landroidx/recyclerview/widget/b;->runningAverage(JJ)J
 
     move-result-wide p2
 
-    iput-wide p2, p1, Ljsd;->d:J
+    iput-wide p2, p1, Lr2e;->d:J
 
     return-void
 .end method
@@ -267,22 +267,22 @@
 .method public factorInCreateTime(IJ)V
     .locals 2
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Ljsd;
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Lr2e;
 
     move-result-object p1
 
-    iget-wide v0, p1, Ljsd;->c:J
+    iget-wide v0, p1, Lr2e;->c:J
 
     invoke-virtual {p0, v0, v1, p2, p3}, Landroidx/recyclerview/widget/b;->runningAverage(JJ)J
 
     move-result-wide p2
 
-    iput-wide p2, p1, Ljsd;->c:J
+    iput-wide p2, p1, Lr2e;->c:J
 
     return-void
 .end method
 
-.method public getRecycledView(I)Ltsd;
+.method public getRecycledView(I)Lb3e;
     .locals 2
 
     iget-object v0, p0, Landroidx/recyclerview/widget/b;->mScrap:Landroid/util/SparseArray;
@@ -291,11 +291,11 @@
 
     move-result-object p1
 
-    check-cast p1, Ljsd;
+    check-cast p1, Lr2e;
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p1, Ljsd;->a:Ljava/util/ArrayList;
+    iget-object p1, p1, Lr2e;->a:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -316,9 +316,9 @@
 
     move-result-object v1
 
-    check-cast v1, Ltsd;
+    check-cast v1, Lb3e;
 
-    invoke-virtual {v1}, Ltsd;->l()Z
+    invoke-virtual {v1}, Lb3e;->q()Z
 
     move-result v1
 
@@ -328,7 +328,7 @@
 
     move-result-object p1
 
-    check-cast p1, Ltsd;
+    check-cast p1, Lb3e;
 
     return-object p1
 
@@ -343,7 +343,7 @@
     return-object p1
 .end method
 
-.method public final getScrapDataForType(I)Ljsd;
+.method public final getScrapDataForType(I)Lr2e;
     .locals 2
 
     iget-object v0, p0, Landroidx/recyclerview/widget/b;->mScrap:Landroid/util/SparseArray;
@@ -352,13 +352,13 @@
 
     move-result-object v0
 
-    check-cast v0, Ljsd;
+    check-cast v0, Lr2e;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Ljsd;
+    new-instance v0, Lr2e;
 
-    invoke-direct {v0}, Ljsd;-><init>()V
+    invoke-direct {v0}, Lr2e;-><init>()V
 
     iget-object v1, p0, Landroidx/recyclerview/widget/b;->mScrap:Landroid/util/SparseArray;
 
@@ -368,13 +368,13 @@
     return-object v0
 .end method
 
-.method public onAdapterChanged(Lwrd;Lwrd;Z)V
+.method public onAdapterChanged(Le2e;Le2e;Z)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lwrd;",
-            "Lwrd;",
+            "Le2e;",
+            "Le2e;",
             "Z)V"
         }
     .end annotation
@@ -401,16 +401,16 @@
     return-void
 .end method
 
-.method public putRecycledView(Ltsd;)V
+.method public putRecycledView(Lb3e;)V
     .locals 3
 
-    iget v0, p1, Ltsd;->X:I
+    iget v0, p1, Lb3e;->X:I
 
-    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Ljsd;
+    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Lr2e;
 
     move-result-object v1
 
-    iget-object v1, v1, Ljsd;->a:Ljava/util/ArrayList;
+    iget-object v1, v1, Lr2e;->a:Ljava/util/ArrayList;
 
     iget-object v2, p0, Landroidx/recyclerview/widget/b;->mScrap:Landroid/util/SparseArray;
 
@@ -418,9 +418,9 @@
 
     move-result-object v0
 
-    check-cast v0, Ljsd;
+    check-cast v0, Lr2e;
 
-    iget v0, v0, Ljsd;->b:I
+    iget v0, v0, Lr2e;->b:I
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -428,14 +428,14 @@
 
     if-gt v0, v2, :cond_0
 
-    iget-object p1, p1, Ltsd;->a:Landroid/view/View;
+    iget-object p1, p1, Lb3e;->a:Landroid/view/View;
 
-    invoke-static {p1}, Ljec;->a(Landroid/view/View;)V
+    invoke-static {p1}, Lopc;->a(Landroid/view/View;)V
 
     return-void
 
     :cond_0
-    sget-boolean v0, Landroidx/recyclerview/widget/RecyclerView;->L1:Z
+    sget-boolean v0, Landroidx/recyclerview/widget/RecyclerView;->R1:Z
 
     if-eqz v0, :cond_2
 
@@ -458,7 +458,7 @@
 
     :cond_2
     :goto_0
-    invoke-virtual {p1}, Ltsd;->u()V
+    invoke-virtual {p1}, Lb3e;->z()V
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -495,13 +495,13 @@
 .method public setMaxRecycledViews(II)V
     .locals 1
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Ljsd;
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Lr2e;
 
     move-result-object p1
 
-    iput p2, p1, Ljsd;->b:I
+    iput p2, p1, Lr2e;->b:I
 
-    iget-object p1, p1, Ljsd;->a:Ljava/util/ArrayList;
+    iget-object p1, p1, Lr2e;->a:Ljava/util/ArrayList;
 
     :goto_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
@@ -546,9 +546,9 @@
 
     move-result-object v2
 
-    check-cast v2, Ljsd;
+    check-cast v2, Lr2e;
 
-    iget-object v2, v2, Ljsd;->a:Ljava/util/ArrayList;
+    iget-object v2, v2, Lr2e;->a:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_0
 
@@ -572,11 +572,11 @@
 .method public willBindInTime(IJJ)Z
     .locals 4
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Ljsd;
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Lr2e;
 
     move-result-object p1
 
-    iget-wide v0, p1, Ljsd;->d:J
+    iget-wide v0, p1, Lr2e;->d:J
 
     const-wide/16 v2, 0x0
 
@@ -607,11 +607,11 @@
 .method public willCreateInTime(IJJ)Z
     .locals 4
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Ljsd;
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/b;->getScrapDataForType(I)Lr2e;
 
     move-result-object p1
 
-    iget-wide v0, p1, Ljsd;->c:J
+    iget-wide v0, p1, Lr2e;->c:J
 
     const-wide/16 v2, 0x0
 

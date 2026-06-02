@@ -1,59 +1,74 @@
 .class public final Lfj6;
-.super Ljava/lang/Object;
+.super Lp2;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
+.field public final d:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lptb;->x3:Lptb;
 
-    iput p2, p0, Lfj6;->a:I
+    invoke-direct {p0, v0}, Lp2;-><init>(Lptb;)V
 
-    iput p3, p0, Lfj6;->b:I
+    iput-wide p1, p0, Lfj6;->d:J
 
-    iput-object p1, p0, Lfj6;->c:Ljava/lang/String;
+    const-string v0, "folderSync"
 
-    iput-object p4, p0, Lfj6;->d:Ljava/lang/String;
+    invoke-virtual {p0, p1, p2, v0}, Lp2;->h(JLjava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Lfj6;
+    const/4 v0, 0x1
 
-    iget v0, p0, Lfj6;->a:I
+    if-ne p0, p1, :cond_0
 
-    iget v1, p1, Lfj6;->a:I
-
-    sub-int/2addr v0, v1
-
-    if-nez v0, :cond_0
-
-    iget v0, p0, Lfj6;->b:I
-
-    iget p1, p1, Lfj6;->b:I
-
-    sub-int/2addr v0, p1
+    return v0
 
     :cond_0
+    instance-of v1, p1, Lfj6;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lfj6;
+
+    iget-wide v3, p0, Lfj6;->d:J
+
+    iget-wide v5, p1, Lfj6;->d:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lfj6;->d:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
     return v0
 .end method

@@ -1,43 +1,63 @@
-.class public abstract synthetic Lh64;
+.class public final synthetic Lh64;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lo9;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
 
+# virtual methods
+.method public final a(Lmge;)V
+    .locals 9
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+    new-instance v0, Landroid/content/Intent;
 
-    const/4 v0, 0x2
+    const-string v1, "android.intent.action.INSERT"
 
-    invoke-static {v0}, Lt02;->w(I)[I
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    move-result-object v1
+    const-string v1, "vnd.android.cursor.dir/raw_contact"
 
-    array-length v1, v1
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    new-array v1, v1, [I
+    const-string v1, "finishActivityOnSaveCompleted"
 
     const/4 v2, 0x1
 
-    const/4 v3, 0x0
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     :try_start_0
-    aput v2, v1, v3
+    invoke-static {p1}, Lb9j;->b(Lmge;)Landroid/app/Activity;
+
+    move-result-object p1
+
+    const/16 v1, 0x66
+
+    invoke-virtual {p1, v0, v1}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
     :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
 
     :catch_0
-    :try_start_1
-    aput v0, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    sget-object v2, Lnm4;->d:Lnfb;
 
-    :catch_1
-    sput-object v1, Lh64;->$EnumSwitchMapping$0:[I
+    if-eqz v2, :cond_0
 
+    sget-object v3, Lgp8;->Y:Lgp8;
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x8
+
+    const-string v4, "ContactsDeepLinkFactory"
+
+    const-string v5, "createContact: failed, no activity found"
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v2 .. v8}, Lnfb;->f(Lnfb;Lgp8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
+
+    :cond_0
     return-void
 .end method

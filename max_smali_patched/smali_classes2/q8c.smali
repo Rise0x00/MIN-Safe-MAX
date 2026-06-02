@@ -1,156 +1,183 @@
-.class public final Lq8c;
-.super Lp6g;
+.class public final synthetic Lq8c;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lwz3;
 
 
 # instance fields
-.field public final synthetic X:I
-
-.field public final synthetic Y:Lnd2;
-
-.field public final synthetic Z:J
-
-.field public final synthetic o:Ls8c;
-
-.field public final synthetic t0:J
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Ls8c;ILnd2;JJLkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lq8c;->o:Ls8c;
+    iput p1, p0, Lq8c;->a:I
 
-    iput p2, p0, Lq8c;->X:I
-
-    iput-object p3, p0, Lq8c;->Y:Lnd2;
-
-    iput-wide p4, p0, Lq8c;->Z:J
-
-    iput-wide p6, p0, Lq8c;->t0:J
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p8}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lq8c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lq8c;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lq8c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 9
-
-    new-instance v0, Lq8c;
-
-    iget-wide v4, p0, Lq8c;->Z:J
-
-    iget-wide v6, p0, Lq8c;->t0:J
-
-    iget-object v1, p0, Lq8c;->o:Ls8c;
-
-    iget v2, p0, Lq8c;->X:I
-
-    iget-object v3, p0, Lq8c;->Y:Lnd2;
-
-    move-object v8, p2
-
-    invoke-direct/range {v0 .. v8}, Lq8c;-><init>(Ls8c;ILnd2;JJLkotlin/coroutines/Continuation;)V
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final accept(Ljava/lang/Object;)V
     .locals 10
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iget v0, p0, Lq8c;->a:I
 
-    iget-object p1, p0, Lq8c;->o:Ls8c;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p1, p1, Ls8c;->e:Lo58;
+    check-cast p1, Ljava/lang/Throwable;
 
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    const-string v0, "VideoMessageCameraEffect"
 
-    move-result-object p1
+    const-string v1, "Failed init camera effect"
 
-    check-cast p1, Ldjb;
+    invoke-static {v0, v1, p1}, Lnm4;->m0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    new-instance v0, Lljb;
+    return-void
 
-    iget v1, p0, Lq8c;->X:I
+    :pswitch_0
+    check-cast p1, Ljava/util/Set;
 
-    const/4 v2, 0x3
+    return-void
 
-    const/4 v3, 0x0
+    :pswitch_1
+    check-cast p1, Landroid/net/Uri;
 
-    invoke-direct {v0, v3, v3, v1, v2}, Lljb;-><init>(IIII)V
+    return-void
 
-    invoke-virtual {p1, v0}, Ldjb;->c(Lljb;)V
+    :pswitch_2
+    check-cast p1, Lzh0;
 
-    sget v0, Lhfb;->d:I
+    sget-object v0, Lj1e;->r0:Lai0;
 
-    new-instance v1, Llhg;
+    iget v0, v0, Lai0;->d:I
 
-    invoke-direct {v1, v0}, Llhg;-><init>(I)V
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {p1, v1}, Ldjb;->g(Lqhg;)V
+    move-result-object v0
 
-    sget-object v0, Lujb;->a:Lujb;
+    iput-object v0, p1, Lzh0;->d:Ljava/lang/Integer;
 
-    invoke-virtual {p1, v0}, Ldjb;->e(Lvjb;)V
+    return-void
 
-    new-instance v0, Lakb;
+    :pswitch_3
+    check-cast p1, Lb9c;
 
-    sget v1, Lj6e;->r:I
+    iget-object v0, p1, Lb9c;->b:Lcg5;
 
-    new-instance v2, Llhg;
+    invoke-virtual {v0}, Lcg5;->b()Lag5;
 
-    invoke-direct {v2, v1}, Llhg;-><init>(I)V
+    move-result-object v1
 
-    invoke-direct {v0, v2}, Lakb;-><init>(Lqhg;)V
+    iget-boolean v1, v1, Lag5;->d:Z
 
-    invoke-virtual {p1, v0}, Ldjb;->f(Lbkb;)V
+    xor-int/lit8 v7, v1, 0x1
 
-    new-instance v3, Lo8c;
+    iget-object v1, p1, Lb9c;->e:Lf9c;
 
-    iget-object v4, p0, Lq8c;->o:Ls8c;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v5, p0, Lq8c;->Y:Lnd2;
+    iget-boolean v3, v1, Lf9c;->a:Z
 
-    iget-wide v6, p0, Lq8c;->Z:J
+    iget-boolean v4, v1, Lf9c;->b:Z
 
-    iget-wide v8, p0, Lq8c;->t0:J
+    iget-boolean v5, v1, Lf9c;->c:Z
 
-    invoke-direct/range {v3 .. v9}, Lo8c;-><init>(Ls8c;Lnd2;JJ)V
+    iget-boolean v6, v1, Lf9c;->d:Z
 
-    invoke-virtual {p1, v3}, Ldjb;->d(Lejb;)V
+    iget-boolean v8, v1, Lf9c;->X:Z
 
-    invoke-virtual {p1}, Ldjb;->i()Lcjb;
+    iget-boolean v9, v1, Lf9c;->Y:Z
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    new-instance v2, Lf9c;
 
-    return-object p1
+    invoke-direct/range {v2 .. v9}, Lf9c;-><init>(ZZZZZZZ)V
+
+    iput-object v2, p1, Lb9c;->e:Lf9c;
+
+    iget-object v1, p1, Lb9c;->a:Ljava/lang/Object;
+
+    invoke-interface {v1, v2}, Lg9c;->O(Lf9c;)V
+
+    iget-object v1, v0, Lcg5;->a:Lgg5;
+
+    invoke-virtual {v1, v7}, Lgg5;->setDrawStickerEnabled(Z)V
+
+    iget-object p1, p1, Lb9c;->d:Ly8c;
+
+    invoke-virtual {v0}, Lcg5;->b()Lag5;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-interface {p1, v0, v1, v2}, Ly8c;->d(Lcg5;Lag5;Z)V
+
+    return-void
+
+    :pswitch_4
+    check-cast p1, Lb9c;
+
+    iget-object p1, p1, Lb9c;->c:La9c;
+
+    invoke-interface {p1}, La9c;->m()V
+
+    return-void
+
+    :pswitch_5
+    check-cast p1, Lb9c;
+
+    iget-object p1, p1, Lb9c;->c:La9c;
+
+    invoke-interface {p1}, La9c;->h()V
+
+    return-void
+
+    :pswitch_6
+    check-cast p1, Lb9c;
+
+    iget-object p1, p1, Lb9c;->c:La9c;
+
+    invoke-interface {p1}, La9c;->p()V
+
+    return-void
+
+    :pswitch_7
+    check-cast p1, Lb9c;
+
+    invoke-virtual {p1}, Lb9c;->c()V
+
+    return-void
+
+    :pswitch_8
+    check-cast p1, Lb9c;
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p1, Lb9c;->c:La9c;
+
+    invoke-interface {p1}, La9c;->p()V
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

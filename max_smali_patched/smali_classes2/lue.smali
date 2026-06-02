@@ -1,24 +1,21 @@
-.class public final Llue;
+.class public abstract Llue;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnue;
-
-
-# static fields
-.field public static final a:Llue;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Landroid/widget/AutoCompleteTextView;)V
+    .locals 0
 
-    new-instance v0, Llue;
+    invoke-virtual {p0}, Landroid/widget/AutoCompleteTextView;->refreshAutoCompleteResults()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
-    sput-object v0, Llue;->a:Llue;
+.method public static b(Landroidx/appcompat/widget/SearchView$SearchAutoComplete;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/widget/AutoCompleteTextView;->setInputMethodMode(I)V
 
     return-void
 .end method

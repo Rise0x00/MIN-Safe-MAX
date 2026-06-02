@@ -1,125 +1,89 @@
 .class public final Lde9;
-.super Lfe9;
+.super Landroid/view/animation/Animation;
 .source "SourceFile"
 
 
 # instance fields
-.field public final f:Lone/me/sdk/media/transformer/MediaTransformException;
+.field public final synthetic a:I
+
+.field public final synthetic b:I
+
+.field public final synthetic c:I
+
+.field public final synthetic d:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(JJLyd9;Lge9;Lone/me/sdk/media/transformer/MediaTransformException;)V
+.method public synthetic constructor <init>(Landroid/view/View;III)V
     .locals 0
 
-    invoke-direct/range {p0 .. p6}, Lfe9;-><init>(JJLyd9;Lge9;)V
+    iput p4, p0, Lde9;->a:I
 
-    move-object p1, p0
+    iput p2, p0, Lde9;->b:I
 
-    iput-object p7, p1, Lde9;->f:Lone/me/sdk/media/transformer/MediaTransformException;
+    iput p3, p0, Lde9;->c:I
+
+    iput-object p1, p0, Lde9;->d:Landroid/view/View;
+
+    invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 10
+.method public final applyTransformation(FLandroid/view/animation/Transformation;)V
+    .locals 3
 
-    iget-object v0, p0, Lfe9;->d:Lge9;
+    iget p2, p0, Lde9;->a:I
 
-    iget-object v1, v0, Lge9;->a:Lyd9;
+    iget-object v0, p0, Lde9;->d:Landroid/view/View;
 
-    iget-object v1, v1, Lyd9;->b:Ljava/util/ArrayList;
+    iget v1, p0, Lde9;->c:I
 
-    invoke-static {v1}, Ljs5;->g(Ljava/util/ArrayList;)Ljava/lang/String;
+    iget v2, p0, Lde9;->b:I
 
-    move-result-object v1
+    packed-switch p2, :pswitch_data_0
 
-    iget-object v0, v0, Lge9;->c:Ljava/util/ArrayList;
+    sub-int/2addr v2, v1
 
-    invoke-static {v0}, Ljs5;->d(Ljava/util/List;)Ljava/lang/String;
+    int-to-float p2, v2
 
-    move-result-object v0
+    mul-float/2addr p2, p1
 
-    iget-object v2, p0, Lfe9;->c:Lyd9;
+    float-to-int p1, p2
 
-    iget-object v3, v2, Lyd9;->c:Ljava/lang/String;
+    add-int/2addr v1, p1
 
-    invoke-static {v2}, Ljs5;->e(Lyd9;)Ljava/lang/String;
+    sget-boolean p1, Lye9;->k1:Z
 
-    move-result-object v4
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    const-string v5, "                  "
+    move-result-object p1
 
-    invoke-static {v2, v5}, Ljs5;->f(Lyd9;Ljava/lang/String;)Ljava/lang/String;
+    iput v1, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    move-result-object v2
+    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-wide v5, p0, Lfe9;->a:J
+    return-void
 
-    iget-wide v7, p0, Lfe9;->b:J
+    :pswitch_0
+    sub-int p2, v2, v1
 
-    invoke-static {v5, v6, v7, v8}, Ljs5;->c(JJ)Ljava/lang/String;
+    int-to-float p2, p2
 
-    move-result-object v9
+    mul-float/2addr p2, p1
 
-    sub-long/2addr v7, v5
+    float-to-int p1, p2
 
-    long-to-float v5, v7
+    sub-int/2addr v2, p1
 
-    const/high16 v6, 0x447a0000    # 1000.0f
+    invoke-static {v0, v2}, Landroidx/mediarouter/app/d;->p(Landroid/view/View;I)V
 
-    div-float/2addr v5, v6
+    return-void
 
-    const-string v6, "\n              }\n              inputMedias={"
-
-    const-string v7, "\n              }\n              out="
-
-    const-string v8, "\n            MediaTransformResult.Failure(\n              in={"
-
-    invoke-static {v8, v1, v6, v0, v7}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\n              request={"
-
-    const-string v6, "\n                  settings={"
-
-    invoke-static {v0, v3, v1, v4, v6}, Lmrf;->s(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\n                  }\n              }\n              took="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, " s\n              error="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lde9;->f:Lone/me/sdk/media/transformer/MediaTransformException;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\n            )\n        "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lszf;->f(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

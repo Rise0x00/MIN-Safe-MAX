@@ -1,55 +1,132 @@
-.class public final Ly92;
-.super Lo84;
+.class public final synthetic Ly92;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lc3b;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:Laa2;
 
-.field public final synthetic Y:Laa2;
-
-.field public Z:I
-
-.field public d:J
-
-.field public o:Ljava/lang/String;
+.field public final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Laa2;Lo84;)V
+.method public synthetic constructor <init>(Laa2;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Ly92;->Y:Laa2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ly92;->a:Laa2;
+
+    iput-object p2, p0, Ly92;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final a(Ljava/lang/Object;)V
+    .locals 6
 
-    iput-object p1, p0, Ly92;->X:Ljava/lang/Object;
+    check-cast p1, Lff0;
 
-    iget p1, p0, Ly92;->Z:I
+    iget-object v0, p0, Ly92;->a:Laa2;
 
-    const/high16 v0, -0x80000000
+    iget-object v1, v0, Laa2;->h:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    or-int/2addr p1, v0
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    iput p1, p0, Ly92;->Z:I
+    move-result v1
 
-    const-wide/16 v0, 0x0
+    const-string v2, "CameraPresencePrvdr"
 
-    const/4 p1, 0x0
+    if-nez v1, :cond_0
 
-    iget-object v2, p0, Ly92;->Y:Laa2;
+    const-string p1, "Ignore camera state change handling since already stop monitoring"
 
-    invoke-virtual {v2, v0, v1, p0, p1}, Laa2;->a(JLo84;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v2, p1}, Lw8g;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_1
+
+    iget-object v3, p1, Lff0;->b:Lgf0;
+
+    goto :goto_0
+
+    :cond_1
+    move-object v3, v1
+
+    :goto_0
+    if-nez v3, :cond_3
+
+    if-eqz p1, :cond_2
+
+    iget-object v3, p1, Lff0;->a:Lha2;
+
+    goto :goto_1
+
+    :cond_2
+    move-object v3, v1
+
+    :goto_1
+    sget-object v4, Lha2;->o:Lha2;
+
+    if-ne v3, v4, :cond_5
+
+    :cond_3
+    const-string v3, "Camera "
+
+    const-string v4, " state changed to "
+
+    iget-object v5, p0, Ly92;->b:Ljava/lang/String;
+
+    invoke-static {v3, v5, v4}, Lo52;->y(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    iget-object v4, p1, Lff0;->a:Lha2;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v4, " with error: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p1, p1, Lff0;->b:Lgf0;
+
+    if-eqz p1, :cond_4
+
+    iget p1, p1, Lgf0;->a:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    :cond_4
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, ". Triggering refresh."
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    return-object p1
+    invoke-static {v2, p1}, Lw8g;->l(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, v0, Laa2;->e:Lv62;
+
+    if-eqz p1, :cond_5
+
+    invoke-virtual {p1}, Lv62;->h()Lyi8;
+
+    :cond_5
+    return-void
 .end method

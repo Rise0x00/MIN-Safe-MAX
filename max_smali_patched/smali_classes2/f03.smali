@@ -1,48 +1,48 @@
 .class public final Lf03;
-.super Lo84;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lr03;
 
 
-# instance fields
-.field public final synthetic X:Lkf2;
+# static fields
+.field public static final a:Lf03;
 
-.field public synthetic d:Ljava/lang/Object;
+.field public static final b:Lf03;
 
-.field public o:I
+.field public static final c:Lf03;
+
+.field public static final d:Lf03;
 
 
 # direct methods
-.method public constructor <init>(Lkf2;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lf03;->X:Lkf2;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static synthetic constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lf03;->d:Ljava/lang/Object;
+    new-instance v0, Lf03;
 
-    iget p1, p0, Lf03;->o:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/high16 v0, -0x80000000
+    sput-object v0, Lf03;->a:Lf03;
 
-    or-int/2addr p1, v0
+    new-instance v0, Lf03;
 
-    iput p1, p0, Lf03;->o:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iget-object p1, p0, Lf03;->X:Lkf2;
+    sput-object v0, Lf03;->b:Lf03;
 
-    const/4 v0, 0x0
+    new-instance v0, Lf03;
 
-    invoke-virtual {p1, v0, p0}, Lkf2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    sput-object v0, Lf03;->c:Lf03;
 
-    return-object p1
+    new-instance v0, Lf03;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lf03;->d:Lf03;
+
+    return-void
 .end method

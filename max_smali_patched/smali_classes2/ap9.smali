@@ -1,84 +1,143 @@
 .class public final Lap9;
-.super Ljava/lang/Object;
+.super Lu8;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/ActionProvider$VisibilityListener;
 
 
 # instance fields
-.field public final a:J
+.field public c:Lh98;
+
+.field public final d:Landroid/view/ActionProvider;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Ldp9;Landroid/content/Context;Landroid/view/ActionProvider;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lu8;-><init>(Landroid/content/Context;)V
 
-    iput-wide p1, p0, Lap9;->a:J
+    iput-object p3, p0, Lap9;->d:Landroid/view/ActionProvider;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a()Z
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lap9;->d:Landroid/view/ActionProvider;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lap9;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lap9;
-
-    iget-wide v3, p0, Lap9;->a:J
-
-    iget-wide v5, p1, Lap9;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lap9;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0}, Landroid/view/ActionProvider;->hasSubMenu()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final b()Z
+    .locals 1
 
-    const-string v0, "ControlInfo(pinnedMessageId="
+    iget-object v0, p0, Lap9;->d:Landroid/view/ActionProvider;
 
-    const-string v1, ")"
+    invoke-virtual {v0}, Landroid/view/ActionProvider;->isVisible()Z
 
-    iget-wide v2, p0, Lap9;->a:J
+    move-result v0
 
-    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    return v0
+.end method
+
+.method public final c()Landroid/view/View;
+    .locals 1
+
+    iget-object v0, p0, Lap9;->d:Landroid/view/ActionProvider;
+
+    invoke-virtual {v0}, Landroid/view/ActionProvider;->onCreateActionView()Landroid/view/View;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final d(Lzo9;)Landroid/view/View;
+    .locals 1
+
+    iget-object v0, p0, Lap9;->d:Landroid/view/ActionProvider;
+
+    invoke-virtual {v0, p1}, Landroid/view/ActionProvider;->onCreateActionView(Landroid/view/MenuItem;)Landroid/view/View;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final e()Z
+    .locals 1
+
+    iget-object v0, p0, Lap9;->d:Landroid/view/ActionProvider;
+
+    invoke-virtual {v0}, Landroid/view/ActionProvider;->onPerformDefaultAction()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final f(Lubg;)V
+    .locals 1
+
+    iget-object v0, p0, Lap9;->d:Landroid/view/ActionProvider;
+
+    invoke-virtual {v0, p1}, Landroid/view/ActionProvider;->onPrepareSubMenu(Landroid/view/SubMenu;)V
+
+    return-void
+.end method
+
+.method public final g()Z
+    .locals 1
+
+    iget-object v0, p0, Lap9;->d:Landroid/view/ActionProvider;
+
+    invoke-virtual {v0}, Landroid/view/ActionProvider;->overridesItemVisibility()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final h(Lh98;)V
+    .locals 0
+
+    iput-object p1, p0, Lap9;->c:Lh98;
+
+    iget-object p1, p0, Lap9;->d:Landroid/view/ActionProvider;
+
+    invoke-virtual {p1, p0}, Landroid/view/ActionProvider;->setVisibilityListener(Landroid/view/ActionProvider$VisibilityListener;)V
+
+    return-void
+.end method
+
+.method public final onActionProviderVisibilityChanged(Z)V
+    .locals 1
+
+    iget-object p1, p0, Lap9;->c:Lh98;
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p1, Lh98;->b:Ljava/lang/Object;
+
+    check-cast p1, Lzo9;
+
+    iget-object p1, p1, Lzo9;->E0:Lvo9;
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p1, Lvo9;->Z:Z
+
+    invoke-virtual {p1, v0}, Lvo9;->q(Z)V
+
+    :cond_0
+    return-void
 .end method

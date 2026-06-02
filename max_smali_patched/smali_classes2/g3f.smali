@@ -2,280 +2,390 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final g:Lg3f;
+# interfaces
+.implements Lye6;
+.implements Lhcg;
 
 
 # instance fields
-.field public final a:J
+.field public final a:Lfcg;
 
-.field public final b:Ljava/lang/String;
+.field public b:Lhcg;
 
-.field public final c:Ljava/lang/String;
+.field public c:Z
 
-.field public final d:Ljava/lang/CharSequence;
+.field public d:Lfr6;
 
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
+.field public volatile o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
-
-    new-instance v0, Lg3f;
-
-    const-string v6, ""
-
-    const-string v7, ""
-
-    const-wide/16 v1, -0x1
-
-    const/4 v3, 0x0
-
-    const-string v4, ""
-
-    const-string v5, ""
-
-    invoke-direct/range {v0 .. v7}, Lg3f;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/String;Ljava/lang/String;)V
-
-    sput-object v0, Lg3f;->g:Lg3f;
-
-    return-void
-.end method
-
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Lfcg;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lg3f;->a:J
-
-    iput-object p3, p0, Lg3f;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lg3f;->c:Ljava/lang/String;
-
-    iput-object p5, p0, Lg3f;->d:Ljava/lang/CharSequence;
-
-    iput-object p6, p0, Lg3f;->e:Ljava/lang/String;
-
-    iput-object p7, p0, Lg3f;->f:Ljava/lang/String;
+    iput-object p1, p0, Lg3f;->a:Lfcg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final b()V
+    .locals 3
 
-    const/4 v0, 0x1
+    iget-boolean v0, p0, Lg3f;->o:Z
 
-    if-ne p0, p1, :cond_0
+    if-eqz v0, :cond_0
 
-    return v0
+    return-void
 
     :cond_0
-    instance-of v1, p1, Lg3f;
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Lg3f;->o:Z
+
+    if-eqz v0, :cond_1
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_0
+
+    :cond_1
+    iget-boolean v0, p0, Lg3f;->c:Z
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lg3f;->d:Lfr6;
+
+    if-nez v0, :cond_2
+
+    new-instance v0, Lfr6;
+
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-direct {v0, v1, v2}, Lfr6;-><init>(IB)V
 
-    return v2
-
-    :cond_1
-    check-cast p1, Lg3f;
-
-    iget-wide v3, p0, Lg3f;->a:J
-
-    iget-wide v5, p1, Lg3f;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
+    iput-object v0, p0, Lg3f;->d:Lfr6;
 
     :cond_2
-    iget-object v1, p0, Lg3f;->b:Ljava/lang/String;
+    sget-object v1, Lrwa;->a:Lrwa;
 
-    iget-object v3, p1, Lg3f;->b:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lfr6;->l(Ljava/lang/Object;)V
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    monitor-exit p0
 
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
+    return-void
 
     :cond_3
-    iget-object v1, p0, Lg3f;->c:Ljava/lang/String;
+    const/4 v0, 0x1
 
-    iget-object v3, p1, Lg3f;->c:Ljava/lang/String;
+    iput-boolean v0, p0, Lg3f;->o:Z
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iput-boolean v0, p0, Lg3f;->c:Z
 
-    move-result v1
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-nez v1, :cond_4
+    iget-object v0, p0, Lg3f;->a:Lfcg;
 
-    return v2
+    invoke-interface {v0}, Lfcg;->b()V
 
-    :cond_4
-    iget-object v1, p0, Lg3f;->d:Ljava/lang/CharSequence;
+    return-void
 
-    iget-object v3, p1, Lg3f;->d:Ljava/lang/CharSequence;
+    :goto_0
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lg3f;->e:Ljava/lang/String;
-
-    iget-object v3, p1, Lg3f;->e:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object v1, p0, Lg3f;->f:Ljava/lang/String;
-
-    iget-object p1, p1, Lg3f;->f:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_7
-
-    return v2
-
-    :cond_7
-    return v0
+    throw v0
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final cancel()V
+    .locals 1
 
-    iget-wide v0, p0, Lg3f;->a:J
+    iget-object v0, p0, Lg3f;->b:Lhcg;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-interface {v0}, Lhcg;->cancel()V
+
+    return-void
+.end method
+
+.method public final d(Lhcg;)V
+    .locals 1
+
+    iget-object v0, p0, Lg3f;->b:Lhcg;
+
+    invoke-static {v0, p1}, Lkcg;->i(Lhcg;Lhcg;)Z
 
     move-result v0
 
-    const/16 v1, 0x1f
+    if-eqz v0, :cond_0
 
-    mul-int/2addr v0, v1
+    iput-object p1, p0, Lg3f;->b:Lhcg;
 
-    iget-object v2, p0, Lg3f;->b:Ljava/lang/String;
+    iget-object p1, p0, Lg3f;->a:Lfcg;
 
-    if-nez v2, :cond_0
+    invoke-interface {p1, p0}, Lfcg;->d(Lhcg;)V
 
-    const/4 v2, 0x0
+    :cond_0
+    return-void
+.end method
+
+.method public final e(Ljava/lang/Object;)V
+    .locals 3
+
+    iget-boolean v0, p0, Lg3f;->o:Z
+
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    if-nez p1, :cond_1
 
-    move-result v2
+    iget-object p1, p0, Lg3f;->b:Lhcg;
+
+    invoke-interface {p1}, Lhcg;->cancel()V
+
+    const-string p1, "onNext called with a null value."
+
+    invoke-static {p1}, Lbq5;->a(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lg3f;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_1
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Lg3f;->o:Z
+
+    if-eqz v0, :cond_2
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_2
+    iget-boolean v0, p0, Lg3f;->c:Z
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lg3f;->d:Lfr6;
+
+    if-nez v0, :cond_3
+
+    new-instance v0, Lfr6;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lfr6;-><init>(IB)V
+
+    iput-object v0, p0, Lg3f;->d:Lfr6;
+
+    :cond_3
+    invoke-virtual {v0, p1}, Lfr6;->l(Ljava/lang/Object;)V
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_4
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lg3f;->c:Z
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v0, p0, Lg3f;->a:Lfcg;
+
+    invoke-interface {v0, p1}, Lfcg;->e(Ljava/lang/Object;)V
+
+    :cond_5
+    monitor-enter p0
+
+    :try_start_1
+    iget-object p1, p0, Lg3f;->d:Lfr6;
+
+    if-nez p1, :cond_6
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lg3f;->c:Z
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_6
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lg3f;->d:Lfr6;
+
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    iget-object v0, p0, Lg3f;->a:Lfcg;
+
+    invoke-virtual {p1, v0}, Lfr6;->i(Lfcg;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
 
     :goto_0
-    add-int/2addr v0, v2
+    return-void
 
-    mul-int/2addr v0, v1
+    :goto_1
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    iget-object v2, p0, Lg3f;->c:Ljava/lang/String;
+    throw p1
 
-    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
+    :goto_2
+    :try_start_3
+    monitor-exit p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    move-result v0
-
-    iget-object v2, p0, Lg3f;->d:Ljava/lang/CharSequence;
-
-    invoke-static {v2, v0, v1}, Lj27;->d(Ljava/lang/CharSequence;II)I
-
-    move-result v0
-
-    iget-object v2, p0, Lg3f;->e:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lg3f;->f:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    throw p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final g(J)V
+    .locals 1
 
-    const-string v0, "SettingsProfileDataModel(id="
+    iget-object v0, p0, Lg3f;->b:Lhcg;
 
-    const-string v1, ", avatarUrl="
+    invoke-interface {v0, p1, p2}, Lhcg;->g(J)V
 
-    iget-wide v2, p0, Lg3f;->a:J
+    return-void
+.end method
 
-    iget-object v4, p0, Lg3f;->b:Ljava/lang/String;
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 3
 
-    invoke-static {v0, v2, v3, v1, v4}, Lj27;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-boolean v0, p0, Lg3f;->o:Z
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    const-string v1, ", fullName="
+    invoke-static {p1}, Lq98;->J(Ljava/lang/Throwable;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
-    iget-object v1, p0, Lg3f;->c:Ljava/lang/String;
+    :cond_0
+    monitor-enter p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :try_start_0
+    iget-boolean v0, p0, Lg3f;->o:Z
 
-    const-string v1, ", abbreviation="
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lg3f;->d:Ljava/lang/CharSequence;
+    goto :goto_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_1
+    iget-boolean v0, p0, Lg3f;->c:Z
 
-    const-string v1, ", phone="
+    if-eqz v0, :cond_3
 
-    const-string v2, ", nickName="
+    iput-boolean v1, p0, Lg3f;->o:Z
 
-    iget-object v3, p0, Lg3f;->e:Ljava/lang/String;
+    iget-object v0, p0, Lg3f;->d:Lfr6;
 
-    iget-object v4, p0, Lg3f;->f:Ljava/lang/String;
+    if-nez v0, :cond_2
 
-    invoke-static {v0, v1, v3, v2, v4}, Lmrf;->s(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v0, Lfr6;
 
-    const-string v1, ")"
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v2, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v0, v1, v2}, Lfr6;-><init>(IB)V
 
-    move-result-object v0
+    iput-object v0, p0, Lg3f;->d:Lfr6;
 
-    return-object v0
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_2
+    :goto_0
+    new-instance v1, Lpwa;
+
+    invoke-direct {v1, p1}, Lpwa;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-virtual {v0, v1}, Lfr6;->U(Lpwa;)V
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_3
+    iput-boolean v1, p0, Lg3f;->o:Z
+
+    iput-boolean v1, p0, Lg3f;->c:Z
+
+    const/4 v1, 0x0
+
+    :goto_1
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v1, :cond_4
+
+    invoke-static {p1}, Lq98;->J(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_4
+    iget-object v0, p0, Lg3f;->a:Lfcg;
+
+    invoke-interface {v0, p1}, Lfcg;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :goto_2
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method

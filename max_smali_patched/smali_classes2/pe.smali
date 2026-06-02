@@ -1,142 +1,348 @@
-.class public final synthetic Lpe;
+.class public final Lpe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final A:I
 
-.field public final synthetic b:Lse;
+.field public final B:I
+
+.field public final C:I
+
+.field public final D:Z
+
+.field public final E:Lne;
+
+.field public final F:Lz7;
+
+.field public final a:Landroid/content/Context;
+
+.field public final b:Lre;
+
+.field public final c:Landroid/view/Window;
+
+.field public d:Ljava/lang/CharSequence;
+
+.field public e:Ljava/lang/CharSequence;
+
+.field public f:Landroidx/appcompat/app/AlertController$RecycleListView;
+
+.field public g:Landroid/view/View;
+
+.field public h:Z
+
+.field public i:Landroid/widget/Button;
+
+.field public j:Ljava/lang/CharSequence;
+
+.field public k:Landroid/os/Message;
+
+.field public l:Landroid/widget/Button;
+
+.field public m:Ljava/lang/CharSequence;
+
+.field public n:Landroid/os/Message;
+
+.field public o:Landroid/widget/Button;
+
+.field public p:Ljava/lang/CharSequence;
+
+.field public q:Landroid/os/Message;
+
+.field public r:Landroidx/core/widget/NestedScrollView;
+
+.field public s:Landroid/graphics/drawable/Drawable;
+
+.field public t:Landroid/widget/ImageView;
+
+.field public u:Landroid/widget/TextView;
+
+.field public v:Landroid/widget/TextView;
+
+.field public w:Landroid/view/View;
+
+.field public x:Landroid/widget/ListAdapter;
+
+.field public y:I
+
+.field public final z:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lse;I)V
-    .locals 0
-
-    iput p2, p0, Lpe;->a:I
-
-    iput-object p1, p0, Lpe;->b:Lse;
+.method public constructor <init>(Landroid/content/Context;Lre;Landroid/view/Window;)V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lpe;->h:Z
+
+    const/4 v1, -0x1
+
+    iput v1, p0, Lpe;->y:I
+
+    new-instance v1, Lz7;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2, p0}, Lz7;-><init>(ILjava/lang/Object;)V
+
+    iput-object v1, p0, Lpe;->F:Lz7;
+
+    iput-object p1, p0, Lpe;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Lpe;->b:Lre;
+
+    iput-object p3, p0, Lpe;->c:Landroid/view/Window;
+
+    new-instance p3, Lne;
+
+    invoke-direct {p3}, Lne;-><init>()V
+
+    new-instance v1, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v1, p3, Lne;->b:Ljava/lang/ref/WeakReference;
+
+    iput-object p3, p0, Lpe;->E:Lne;
+
+    sget-object p3, Lgrd;->AlertDialog:[I
+
+    sget v1, Lofd;->alertDialogStyle:I
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v2, p3, v1, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    sget p3, Lgrd;->AlertDialog_android_layout:I
+
+    invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result p3
+
+    iput p3, p0, Lpe;->z:I
+
+    sget p3, Lgrd;->AlertDialog_buttonPanelSideLayout:I
+
+    invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    sget p3, Lgrd;->AlertDialog_listLayout:I
+
+    invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result p3
+
+    iput p3, p0, Lpe;->A:I
+
+    sget p3, Lgrd;->AlertDialog_multiChoiceItemLayout:I
+
+    invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    sget p3, Lgrd;->AlertDialog_singleChoiceItemLayout:I
+
+    invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result p3
+
+    iput p3, p0, Lpe;->B:I
+
+    sget p3, Lgrd;->AlertDialog_listItemLayout:I
+
+    invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result p3
+
+    iput p3, p0, Lpe;->C:I
+
+    sget p3, Lgrd;->AlertDialog_showTitle:I
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, p3, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result p3
+
+    iput-boolean p3, p0, Lpe;->D:Z
+
+    sget p3, Lgrd;->AlertDialog_buttonIconDimen:I
+
+    invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    invoke-virtual {p2}, Liq;->d()Lup;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1}, Lup;->k(I)Z
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+.method public static a(Landroid/view/View;)Z
     .locals 4
 
-    iget v0, p0, Lpe;->a:I
+    invoke-virtual {p0}, Landroid/view/View;->onCheckIsTextEditor()Z
 
-    packed-switch v0, :pswitch_data_0
+    move-result v0
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    move-result-object p1
+    if-eqz v0, :cond_0
 
-    check-cast p1, Ljava/lang/Float;
+    return v1
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    :cond_0
+    instance-of v0, p0, Landroid/view/ViewGroup;
 
-    move-result p1
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Lpe;->b:Lse;
+    if-nez v0, :cond_1
 
-    iput p1, v0, Lse;->o:F
+    return v2
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    :cond_1
+    check-cast p0, Landroid/view/ViewGroup;
 
-    return-void
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    :pswitch_0
-    iget-object v0, p0, Lpe;->b:Lse;
+    move-result v0
 
-    iget-object v1, v0, Lse;->b:[I
+    :cond_2
+    if-lez v0, :cond_3
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    add-int/lit8 v0, v0, -0x1
 
-    move-result-object v2
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    check-cast v2, Ljava/lang/Integer;
+    move-result-object v3
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    invoke-static {v3}, Lpe;->a(Landroid/view/View;)Z
 
-    move-result v2
+    move-result v3
 
-    const/4 v3, 0x2
+    if-eqz v3, :cond_2
 
-    aput v2, v1, v3
+    return v1
 
-    iget-object v1, v0, Lse;->b:[I
+    :cond_3
+    return v2
+.end method
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+.method public static b(Landroid/view/View;Landroid/view/View;)Landroid/view/ViewGroup;
+    .locals 2
 
-    move-result-object p1
+    if-nez p0, :cond_1
 
-    check-cast p1, Ljava/lang/Integer;
+    instance-of p0, p1, Landroid/view/ViewStub;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    if-eqz p0, :cond_0
 
-    move-result p1
+    check-cast p1, Landroid/view/ViewStub;
 
-    const/4 v2, 0x3
-
-    aput p1, v1, v2
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_1
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Float;
+    :cond_0
+    check-cast p1, Landroid/view/ViewGroup;
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    return-object p1
 
-    move-result p1
+    :cond_1
+    if-eqz p1, :cond_2
 
-    iget-object v0, p0, Lpe;->b:Lse;
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    iput p1, v0, Lse;->o:F
+    move-result-object v0
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    instance-of v1, v0, Landroid/view/ViewGroup;
+
+    if-eqz v1, :cond_2
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+    :cond_2
+    instance-of p1, p0, Landroid/view/ViewStub;
+
+    if-eqz p1, :cond_3
+
+    check-cast p0, Landroid/view/ViewStub;
+
+    invoke-virtual {p0}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
+
+    move-result-object p0
+
+    :cond_3
+    check-cast p0, Landroid/view/ViewGroup;
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final c(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    .locals 1
+
+    if-eqz p3, :cond_0
+
+    iget-object v0, p0, Lpe;->E:Lne;
+
+    invoke-virtual {v0, p1, p3}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object p3
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p3, 0x0
+
+    :goto_0
+    const/4 v0, -0x3
+
+    if-eq p1, v0, :cond_3
+
+    const/4 v0, -0x2
+
+    if-eq p1, v0, :cond_2
+
+    const/4 v0, -0x1
+
+    if-ne p1, v0, :cond_1
+
+    iput-object p2, p0, Lpe;->j:Ljava/lang/CharSequence;
+
+    iput-object p3, p0, Lpe;->k:Landroid/os/Message;
 
     return-void
 
-    :pswitch_2
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    move-result-object p1
+    const-string p2, "Button does not exist"
 
-    check-cast p1, Ljava/lang/Float;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    throw p1
 
-    move-result p1
+    :cond_2
+    iput-object p2, p0, Lpe;->m:Ljava/lang/CharSequence;
 
-    const/high16 v0, 0x41ba0000    # 23.25f
-
-    mul-float/2addr p1, v0
-
-    iget-object v0, p0, Lpe;->b:Lse;
-
-    iput p1, v0, Lse;->u0:F
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    iput-object p3, p0, Lpe;->n:Landroid/os/Message;
 
     return-void
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_3
+    iput-object p2, p0, Lpe;->p:Ljava/lang/CharSequence;
+
+    iput-object p3, p0, Lpe;->q:Landroid/os/Message;
+
+    return-void
 .end method

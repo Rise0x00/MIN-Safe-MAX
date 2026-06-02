@@ -1,141 +1,96 @@
-.class public final Lhvg;
-.super Lp6g;
+.class public final enum Lhvg;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Ls84;
 
 
-# instance fields
-.field public final synthetic X:Lnvg;
+# static fields
+.field public static final enum a:Lhvg;
 
-.field public final synthetic Y:Llq6;
+.field public static final b:Ljava/lang/ThreadLocal;
 
-.field public o:I
+.field public static final synthetic c:[Lhvg;
 
 
 # direct methods
-.method public constructor <init>(Lnvg;Llq6;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lhvg;->X:Lnvg;
+    new-instance v0, Lhvg;
 
-    iput-object p2, p0, Lhvg;->Y:Llq6;
+    const-string v1, "INSTANCE"
 
-    const/4 p1, 0x2
+    const/4 v2, 0x0
 
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lhvg;->a:Lhvg;
+
+    filled-new-array {v0}, [Lhvg;
+
+    move-result-object v0
+
+    sput-object v0, Lhvg;->c:[Lhvg;
+
+    const-class v0, Lhvg;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
+
+    new-instance v0, Ljava/lang/ThreadLocal;
+
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+
+    sput-object v0, Lhvg;->b:Ljava/lang/ThreadLocal;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lhvg;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const-class v0, Lhvg;
 
-    check-cast p1, Lzb4;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object p0
 
-    invoke-virtual {p0, p1, p2}, Lhvg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p0, Lhvg;
 
-    move-result-object p1
-
-    check-cast p1, Lhvg;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lhvg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public static values()[Lhvg;
+    .locals 1
 
-    new-instance p1, Lhvg;
+    sget-object v0, Lhvg;->c:[Lhvg;
 
-    iget-object v0, p0, Lhvg;->X:Lnvg;
+    invoke-virtual {v0}, [Lhvg;->clone()Ljava/lang/Object;
 
-    iget-object v1, p0, Lhvg;->Y:Llq6;
+    move-result-object v0
 
-    invoke-direct {p1, v0, v1, p2}, Lhvg;-><init>(Lnvg;Llq6;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lhvg;->o:I
-
-    iget-object v1, p0, Lhvg;->Y:Llq6;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    :try_start_1
-    iget-object p1, p0, Lhvg;->X:Lnvg;
-
-    iput v2, p0, Lhvg;->o:I
-
-    invoke-static {p1, p0}, Lnvg;->b(Lnvg;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
+    check-cast v0, [Lhvg;
 
     return-object v0
+.end method
 
-    :cond_2
-    :goto_0
-    :try_start_2
-    check-cast p1, Ljava/util/Set;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    invoke-interface {v1}, Llq6;->invoke()Ljava/lang/Object;
+# virtual methods
+.method public final current()Le84;
+    .locals 1
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    sget-object v0, Lhvg;->b:Ljava/lang/ThreadLocal;
 
-    return-object p1
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-    :goto_1
-    invoke-interface {v1}, Llq6;->invoke()Ljava/lang/Object;
+    move-result-object v0
 
-    throw p1
+    check-cast v0, Le84;
+
+    return-object v0
 .end method

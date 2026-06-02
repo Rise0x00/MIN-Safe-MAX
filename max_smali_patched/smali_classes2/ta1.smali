@@ -1,3 +1,3 @@
-.class public final Lta1;
+.class public interface abstract Lta1;
 .super Ljava/lang/Object;
 .source "SourceFile"

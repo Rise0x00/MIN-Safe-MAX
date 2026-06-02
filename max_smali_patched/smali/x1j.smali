@@ -1,53 +1,23 @@
 .class public final Lx1j;
-.super Luqi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic g:Lcom/google/android/gms/common/internal/a;
+.field public final a:I
+
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/common/internal/a;I)V
-    .locals 1
+.method public constructor <init>(ILjava/lang/String;)V
+    .locals 0
 
-    iput-object p1, p0, Lx1j;->g:Lcom/google/android/gms/common/internal/a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput p1, p0, Lx1j;->a:I
 
-    invoke-direct {p0, p1, p2, v0}, Luqi;-><init>(Lcom/google/android/gms/common/internal/a;ILandroid/os/Bundle;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lyv3;)V
-    .locals 1
-
-    iget-object v0, p0, Lx1j;->g:Lcom/google/android/gms/common/internal/a;
-
-    iget-object v0, v0, Lcom/google/android/gms/common/internal/a;->t0:Lpk0;
-
-    invoke-interface {v0, p1}, Lpk0;->f(Lyv3;)V
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    iput-object p2, p0, Lx1j;->b:Ljava/lang/String;
 
     return-void
-.end method
-
-.method public final b()Z
-    .locals 2
-
-    iget-object v0, p0, Lx1j;->g:Lcom/google/android/gms/common/internal/a;
-
-    iget-object v0, v0, Lcom/google/android/gms/common/internal/a;->t0:Lpk0;
-
-    sget-object v1, Lyv3;->o:Lyv3;
-
-    invoke-interface {v0, v1}, Lpk0;->f(Lyv3;)V
-
-    const/4 v0, 0x1
-
-    return v0
 .end method

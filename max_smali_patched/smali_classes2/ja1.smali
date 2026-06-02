@@ -1,372 +1,289 @@
 .class public final Lja1;
-.super Ljava/lang/Object;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
-
-# interfaces
-.implements Lia1;
-.implements Lopg;
-
-
-# static fields
-.field public static final j:Ljava/util/List;
 
 
 # instance fields
-.field public final a:Lru/ok/android/externcalls/analytics/CallAnalyticsSender;
+.field public final a:Lwtc;
 
-.field public final b:Lxkg;
+.field public b:Z
 
-.field public final c:Lcrd;
+.field public c:Z
 
-.field public final d:Ls3e;
-
-.field public final e:Ltx4;
-
-.field public final f:Lahd;
-
-.field public final g:Z
-
-.field public h:Lru/ok/android/externcalls/analytics/events/EventItemsMap;
-
-.field public final i:Ljava/util/ArrayList;
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 4
 
-    const-string v0, "rtt"
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    const/4 v1, 0x0
+
+    invoke-direct {p0, p1, v0, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    new-instance v0, Lwtc;
+
+    invoke-direct {v0, p1}, Lwtc;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lja1;->a:Lwtc;
+
+    new-instance v2, Lia1;
+
+    invoke-direct {v2, p0, v1}, Lia1;-><init>(Lja1;I)V
+
+    const/4 v1, 0x3
+
+    invoke-static {v1, v2}, Ltf3;->M(ILxs6;)Lia8;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lja1;->d:Ljava/lang/Object;
+
+    const/4 v1, -0x1
+
+    invoke-virtual {p0, v0, v1, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;II)V
+
+    invoke-direct {p0}, Lja1;->getCameraPreviewController()Lha1;
 
     move-result-object v0
 
-    sput-object v0, Lja1;->j:Ljava/util/List;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v1, Lxuc;->b:Lxuc;
+
+    invoke-static {p1}, Lemj;->a(Landroid/content/Context;)Lxe2;
+
+    move-result-object v1
+
+    new-instance v2, Lpf;
+
+    const/16 v3, 0x10
+
+    invoke-direct {v2, v0, v3, v1}, Lpf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {p1}, Lg84;->f0(Landroid/content/Context;)Ljava/util/concurrent/Executor;
+
+    move-result-object p1
+
+    invoke-virtual {v1, v2, p1}, Llu6;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    invoke-direct {p0}, Lja1;->getCameraPreviewController()Lha1;
+
+    move-result-object p1
+
+    new-instance v0, Lia1;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, v1}, Lia1;-><init>(Lja1;I)V
+
+    iput-object v0, p1, Lha1;->c:Lxs6;
 
     return-void
 .end method
 
-.method public constructor <init>(Lru/ok/android/externcalls/analytics/CallAnalyticsSender;Lxkg;Lcrd;Ls3e;Ltx4;Lahd;Z)V
-    .locals 0
+.method private final getCameraPreviewController()Lha1;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lja1;->d:Ljava/lang/Object;
 
-    iput-object p1, p0, Lja1;->a:Lru/ok/android/externcalls/analytics/CallAnalyticsSender;
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
 
-    iput-object p2, p0, Lja1;->b:Lxkg;
+    move-result-object v0
 
-    iput-object p3, p0, Lja1;->c:Lcrd;
+    check-cast v0, Lha1;
 
-    iput-object p4, p0, Lja1;->d:Ls3e;
-
-    iput-object p5, p0, Lja1;->e:Ltx4;
-
-    iput-object p6, p0, Lja1;->f:Lahd;
-
-    iput-boolean p7, p0, Lja1;->g:Z
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lja1;->i:Ljava/util/ArrayList;
-
-    return-void
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final b(Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
-    .locals 7
+.method public final a(ZZ)V
+    .locals 6
 
-    iget-object v0, p0, Lja1;->i:Ljava/util/ArrayList;
+    if-nez p1, :cond_0
 
-    monitor-enter v0
+    invoke-direct {p0}, Lja1;->getCameraPreviewController()Lha1;
 
-    :try_start_0
-    iget-object v1, p0, Lja1;->i:Ljava/util/ArrayList;
+    move-result-object p1
 
-    invoke-static {v1}, Lpi3;->Z(Ljava/lang/Iterable;)Ljava/util/List;
+    iget-object p1, p1, Lha1;->b:Lxuc;
 
-    move-result-object v1
+    if-eqz p1, :cond_1
 
-    iget-object v2, p0, Lja1;->i:Ljava/util/ArrayList;
+    iget-object p1, p1, Lxuc;->a:Lxd5;
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {p1}, Lxd5;->z()V
 
-    monitor-exit v0
-
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lhoi;
-
-    iget-object v2, v1, Lhoi;->c:Lru/ok/android/externcalls/analytics/events/EventItemsMap;
-
-    invoke-virtual {v2, p1}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->addAll(Lru/ok/android/externcalls/analytics/events/EventItemsMap;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
-
-    iget-object v3, v1, Lhoi;->d:Ljava/lang/Long;
-
-    if-eqz v3, :cond_0
-
-    goto :goto_1
+    return-void
 
     :cond_0
-    iget-object v3, p0, Lja1;->b:Lxkg;
+    invoke-direct {p0}, Lja1;->getCameraPreviewController()Lha1;
 
-    invoke-interface {v3}, Lxkg;->getServerTimeMs()Ljava/lang/Long;
+    move-result-object p1
 
-    move-result-object v3
+    iget-object v0, p1, Lha1;->b:Lxuc;
 
-    if-eqz v3, :cond_1
-
-    :goto_1
-    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v3
-
-    goto :goto_2
+    if-nez v0, :cond_2
 
     :cond_1
-    iget-object v3, p0, Lja1;->b:Lxkg;
+    return-void
 
-    invoke-interface {v3}, Lxkg;->localTimeMs()J
+    :cond_2
+    if-eqz v0, :cond_3
 
-    move-result-wide v3
+    iget-object v1, v0, Lxuc;->a:Lxd5;
 
-    :goto_2
-    new-instance v5, Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent$Builder;
+    invoke-virtual {v1}, Lxd5;->z()V
 
-    iget-object v6, v1, Lhoi;->a:Ljava/lang/String;
+    :cond_3
+    const/4 v1, 0x1
 
-    iget-object v1, v1, Lhoi;->b:Lru/ok/android/externcalls/analytics/events/EventItemValue;
+    xor-int/2addr p2, v1
 
-    invoke-direct {v5, v6, v1}, Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent$Builder;-><init>(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V
+    new-instance v2, Ljava/util/LinkedHashSet;
 
-    invoke-virtual {v2}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->getItems()Ljava/util/Map;
+    invoke-direct {v2}, Ljava/util/LinkedHashSet;-><init>()V
 
-    move-result-object v1
+    const/4 v3, -0x1
 
-    invoke-virtual {v5, v1}, Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent$Builder;->addAll(Ljava/util/Map;)Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent$Builder;
+    const/4 v4, 0x0
 
-    move-result-object v1
+    if-eq p2, v3, :cond_4
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    const-string v3, "timestamp"
-
-    invoke-virtual {v1, v3, v2}, Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent$Builder;->set(Ljava/lang/String;Ljava/lang/Long;)Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent$Builder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent$Builder;->build()Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lja1;->a:Lru/ok/android/externcalls/analytics/CallAnalyticsSender;
-
-    invoke-virtual {v2, v1}, Lru/ok/android/externcalls/analytics/CallAnalyticsSender;->send(Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
+    move v3, v1
 
     goto :goto_0
 
-    :cond_2
+    :cond_4
+    move v3, v4
+
+    :goto_0
+    const-string v5, "The specified lens facing is invalid."
+
+    invoke-static {v5, v3}, Lvfa;->m(Ljava/lang/String;Z)V
+
+    new-instance v3, Lvb8;
+
+    invoke-direct {v3, p2}, Lvb8;-><init>(I)V
+
+    invoke-virtual {v2, v3}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    new-instance p2, Lea2;
+
+    invoke-direct {p2, v2}, Lea2;-><init>(Ljava/util/LinkedHashSet;)V
+
+    new-instance v2, Lyi7;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v3}, Lyi7;-><init>(I)V
+
+    invoke-virtual {v2}, Lyi7;->b()Lktc;
+
+    move-result-object v2
+
+    iget-object v5, p0, Lja1;->a:Lwtc;
+
+    invoke-virtual {v5}, Lwtc;->getSurfaceProvider()Ljtc;
+
+    move-result-object v5
+
+    invoke-virtual {v2, v5}, Lktc;->G(Ljtc;)V
+
+    iget-object p1, p1, Lha1;->a:Lad8;
+
+    new-array v5, v1, [Lemh;
+
+    aput-object v2, v5, v4
+
+    iget-object v0, v0, Lxuc;->a:Lxd5;
+
+    invoke-static {v5, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, [Lemh;
+
+    const-string v5, "CX:bindToLifecycle"
+
+    invoke-static {v5}, Lnm4;->h0(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v5}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+
+    :try_start_0
+    iget-object v5, v0, Lxd5;->Y:Ljava/lang/Object;
+
+    check-cast v5, Lqa2;
+
+    if-nez v5, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    iget-object v4, v5, Lqa2;->g:Ld52;
+
+    if-eqz v4, :cond_7
+
+    iget-object v4, v4, Ld52;->b:Lb52;
+
+    invoke-virtual {v4}, Lb52;->b()I
+
+    move-result v4
+
+    :goto_1
+    if-eq v4, v3, :cond_6
+
+    invoke-static {v0, v1}, Lxd5;->c(Lxd5;I)V
+
+    new-instance v1, Lv81;
+
+    invoke-static {v2}, Lav;->J0([Ljava/lang/Object;)Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Lv81;-><init>(Ljava/util/ArrayList;)V
+
+    invoke-static {v0, p1, p2, v1}, Lxd5;->d(Lxd5;Lad8;Lea2;Lv81;)Ljc8;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {}, Landroid/os/Trace;->endSection()V
+
     return-void
 
     :catchall_0
     move-exception p1
 
-    monitor-exit v0
+    goto :goto_2
+
+    :cond_6
+    :try_start_1
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "bindToLifecycle for single camera is not supported in concurrent camera mode, call unbindAll() first"
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw p1
-.end method
 
-.method public final c(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
-    .locals 3
+    :cond_7
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-object v0, p0, Lja1;->f:Lahd;
+    const-string p2, "CameraX not initialized yet."
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const-string v2, "Event saved "
+    throw p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :goto_2
+    invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", value "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", additional "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "CallEventualStatSenderImpl"
-
-    invoke-interface {v0, v2, v1}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v0, Lhoi;
-
-    iget-object v1, p0, Lja1;->b:Lxkg;
-
-    invoke-interface {v1}, Lxkg;->getServerTimeMs()Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-direct {v0, p1, p2, p3, v1}, Lhoi;-><init>(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;Ljava/lang/Long;)V
-
-    iget-object v2, p0, Lja1;->h:Lru/ok/android/externcalls/analytics/events/EventItemsMap;
-
-    if-nez v2, :cond_0
-
-    iget-object p1, p0, Lja1;->i:Ljava/util/ArrayList;
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object p2, p0, Lja1;->i:Ljava/util/ArrayList;
-
-    invoke-virtual {p2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p1
-
-    return-void
-
-    :catchall_0
-    move-exception p2
-
-    monitor-exit p1
-
-    throw p2
-
-    :cond_0
-    invoke-virtual {p3, v2}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->addAll(Lru/ok/android/externcalls/analytics/events/EventItemsMap;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lja1;->b:Lxkg;
-
-    invoke-interface {v0}, Lxkg;->getServerTimeMs()Ljava/lang/Long;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lja1;->b:Lxkg;
-
-    invoke-interface {v0}, Lxkg;->localTimeMs()J
-
-    move-result-wide v0
-
-    :goto_0
-    new-instance v2, Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent$Builder;
-
-    invoke-direct {v2, p1, p2}, Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent$Builder;-><init>(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V
-
-    invoke-virtual {p3}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->getItems()Ljava/util/Map;
-
-    move-result-object p1
-
-    invoke-virtual {v2, p1}, Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent$Builder;->addAll(Ljava/util/Map;)Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent$Builder;
-
-    move-result-object p1
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p2
-
-    const-string p3, "timestamp"
-
-    invoke-virtual {p1, p3, p2}, Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent$Builder;->set(Ljava/lang/String;Ljava/lang/Long;)Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent$Builder;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent$Builder;->build()Lru/ok/android/externcalls/analytics/events/SdkMetricStatEvent;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lja1;->a:Lru/ok/android/externcalls/analytics/CallAnalyticsSender;
-
-    invoke-virtual {p2, p1}, Lru/ok/android/externcalls/analytics/CallAnalyticsSender;->send(Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
-
-    return-void
-.end method
-
-.method public final onTopologyUpdated(Lkpg;Lkpg;)V
-    .locals 1
-
-    iget-object p1, p0, Lja1;->h:Lru/ok/android/externcalls/analytics/events/EventItemsMap;
-
-    if-nez p1, :cond_0
-
-    new-instance p1, Lru/ok/android/externcalls/analytics/events/EventItemsMap;
-
-    invoke-direct {p1}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;-><init>()V
-
-    iget-object p2, p0, Lja1;->c:Lcrd;
-
-    invoke-virtual {p2, p1}, Lcrd;->g(Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
-
-    iget-object p2, p0, Lja1;->d:Ls3e;
-
-    iget-object p2, p2, Ls3e;->b:Ljava/lang/Object;
-
-    check-cast p2, Lna4;
-
-    iget-object p2, p2, Lna4;->a:Ljava/lang/String;
-
-    const-string v0, "vcid"
-
-    invoke-virtual {p1, v0, p2}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Ljava/lang/String;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
-
-    iget-object p2, p0, Lja1;->e:Ltx4;
-
-    invoke-virtual {p2, p1}, Ltx4;->f(Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
-
-    invoke-virtual {p0, p1}, Lja1;->b(Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
-
-    iput-object p1, p0, Lja1;->h:Lru/ok/android/externcalls/analytics/events/EventItemsMap;
-
-    :cond_0
-    return-void
+    throw p1
 .end method

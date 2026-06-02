@@ -3,190 +3,128 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxpe;
-
-
-# static fields
-.field public static final b:Ln18;
-
-.field public static final c:Ljava/lang/String;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Luc8;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lp18;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lp18;I)V
+    .locals 0
 
-    new-instance v0, Ln18;
+    iput p2, p0, Ln18;->a:I
 
-    invoke-direct {v0}, Ln18;-><init>()V
-
-    sput-object v0, Ln18;->b:Ln18;
-
-    const-string v0, "kotlinx.serialization.json.JsonObject"
-
-    sput-object v0, Ln18;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 4
+    iput-object p1, p0, Ln18;->b:Lp18;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v0, Lnzf;->a:Lnzf;
-
-    sget-object v0, Lx08;->a:Lx08;
-
-    new-instance v1, Luc8;
-
-    sget-object v2, Lnzf;->b:Lxhc;
-
-    invoke-virtual {v0}, Lx08;->d()Lxpe;
-
-    move-result-object v0
-
-    const-string v3, "kotlin.collections.LinkedHashMap"
-
-    invoke-direct {v1, v3, v2, v0}, Luc8;-><init>(Ljava/lang/String;Lxpe;Lxpe;)V
-
-    iput-object v1, p0, Ln18;->a:Luc8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
+.method public final run()V
+    .locals 6
 
-    sget-object v0, Ln18;->c:Ljava/lang/String;
+    iget v0, p0, Ln18;->a:I
 
-    return-object v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final c()Z
-    .locals 1
+    iget-object v0, p0, Ln18;->b:Lp18;
 
-    iget-object v0, p0, Ln18;->a:Luc8;
+    iget-object v1, v0, Lp18;->a:Ljava/util/concurrent/Executor;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, v0, Lp18;->c:Ln18;
 
-    const/4 v0, 0x0
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    return v0
-.end method
+    return-void
 
-.method public final d(Ljava/lang/String;)I
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Ln18;->b:Lp18;
 
-    iget-object v0, p0, Ln18;->a:Luc8;
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    invoke-virtual {v0, p1}, Luc8;->d(Ljava/lang/String;)I
+    move-result-wide v1
 
-    move-result p1
+    monitor-enter v0
 
-    return p1
-.end method
+    :try_start_0
+    iget-object v3, v0, Lp18;->e:Lpk5;
 
-.method public final e()Lqoj;
-    .locals 1
+    iget v4, v0, Lp18;->f:I
 
-    iget-object v0, p0, Ln18;->a:Luc8;
+    const/4 v5, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object v5, v0, Lp18;->e:Lpk5;
 
-    sget-object v0, Lj0g;->d:Lj0g;
+    const/4 v5, 0x0
 
-    return-object v0
-.end method
+    iput v5, v0, Lp18;->f:I
 
-.method public final f()I
-    .locals 1
+    const/4 v5, 0x3
 
-    iget-object v0, p0, Ln18;->a:Luc8;
+    iput v5, v0, Lp18;->g:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-wide v1, v0, Lp18;->i:J
 
-    const/4 v0, 0x2
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    return v0
-.end method
+    :try_start_1
+    invoke-static {v3, v4}, Lp18;->c(Lpk5;I)Z
 
-.method public final g(I)Ljava/lang/String;
-    .locals 1
+    move-result v1
 
-    iget-object v0, p0, Ln18;->a:Luc8;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v1, v0, Lp18;->b:Lo18;
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-interface {v1, v3, v4}, Lo18;->c(Lpk5;I)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    move-result-object p1
+    goto :goto_0
 
-    return-object p1
-.end method
+    :catchall_0
+    move-exception v1
 
-.method public final getAnnotations()Ljava/util/List;
-    .locals 1
+    goto :goto_1
 
-    iget-object v0, p0, Ln18;->a:Luc8;
+    :cond_0
+    :goto_0
+    invoke-static {v3}, Lpk5;->l(Lpk5;)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Lp18;->a()V
 
-    sget-object v0, Ldh5;->a:Ldh5;
+    return-void
 
-    return-object v0
-.end method
+    :goto_1
+    invoke-static {v3}, Lpk5;->l(Lpk5;)V
 
-.method public final h(I)Ljava/util/List;
-    .locals 1
+    invoke-virtual {v0}, Lp18;->a()V
 
-    iget-object v0, p0, Ln18;->a:Luc8;
+    throw v1
 
-    invoke-virtual {v0, p1}, Luc8;->h(I)Ljava/util/List;
+    :catchall_1
+    move-exception v1
 
-    sget-object p1, Ldh5;->a:Ldh5;
+    :try_start_2
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    return-object p1
-.end method
+    throw v1
 
-.method public final i(I)Lxpe;
-    .locals 1
+    nop
 
-    iget-object v0, p0, Ln18;->a:Luc8;
-
-    invoke-virtual {v0, p1}, Luc8;->i(I)Lxpe;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final isInline()Z
-    .locals 1
-
-    iget-object v0, p0, Ln18;->a:Luc8;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final j(I)Z
-    .locals 1
-
-    iget-object v0, p0, Ln18;->a:Luc8;
-
-    invoke-virtual {v0, p1}, Luc8;->j(I)Z
-
-    const/4 p1, 0x0
-
-    return p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

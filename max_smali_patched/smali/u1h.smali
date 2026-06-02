@@ -1,65 +1,100 @@
 .class public final Lu1h;
-.super Lshc;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/app/Application$ActivityLifecycleCallbacks;
 
 
 # instance fields
-.field public a:[B
+.field public final a:Lj8f;
 
 .field public b:I
 
 
-# virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 2
+# direct methods
+.method public constructor <init>(Lj8f;)V
+    .locals 0
 
-    iget-object v0, p0, Lu1h;->a:[B
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v1, p0, Lu1h;->b:I
+    iput-object p1, p0, Lu1h;->a:Lj8f;
 
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
-
-    move-result-object v0
-
-    new-instance v1, Lt1h;
-
-    invoke-direct {v1, v0}, Lt1h;-><init>([B)V
-
-    return-object v1
-.end method
-
-.method public final b(I)V
-    .locals 2
-
-    iget-object v0, p0, Lu1h;->a:[B
-
-    array-length v1, v0
-
-    if-ge v1, p1, :cond_1
-
-    array-length v1, v0
-
-    mul-int/lit8 v1, v1, 0x2
-
-    if-ge p1, v1, :cond_0
-
-    move p1, v1
-
-    :cond_0
-    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([BI)[B
-
-    move-result-object p1
-
-    iput-object p1, p0, Lu1h;->a:[B
-
-    :cond_1
     return-void
 .end method
 
-.method public final d()I
+
+# virtual methods
+.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivityDestroyed(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivityPaused(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivityResumed(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivityStarted(Landroid/app/Activity;)V
     .locals 1
 
-    iget v0, p0, Lu1h;->b:I
+    iget p1, p0, Lu1h;->b:I
 
-    return v0
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lu1h;->a:Lj8f;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lj8f;->d(Z)V
+
+    :cond_0
+    iget p1, p0, Lu1h;->b:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Lu1h;->b:I
+
+    return-void
+.end method
+
+.method public final onActivityStopped(Landroid/app/Activity;)V
+    .locals 1
+
+    iget p1, p0, Lu1h;->b:I
+
+    const/4 v0, 0x1
+
+    sub-int/2addr p1, v0
+
+    iput p1, p0, Lu1h;->b:I
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lu1h;->a:Lj8f;
+
+    invoke-virtual {p1, v0}, Lj8f;->d(Z)V
+
+    :cond_0
+    return-void
 .end method

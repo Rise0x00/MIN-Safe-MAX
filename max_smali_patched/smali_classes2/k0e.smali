@@ -1,55 +1,81 @@
-.class public final Lk0e;
-.super Lo84;
+.class public final enum Lk0e;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ljava/lang/Throwable;
+# static fields
+.field public static final enum a:Lk0e;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public static final enum b:Lk0e;
 
-.field public final synthetic Z:Ln0e;
-
-.field public d:Lbr6;
-
-.field public o:Ljava/lang/Object;
-
-.field public t0:I
+.field public static final synthetic c:[Lk0e;
 
 
 # direct methods
-.method public constructor <init>(Ln0e;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lk0e;->Z:Ln0e;
+    new-instance v0, Lk0e;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "UNDEFINE"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v1, Lk0e;
+
+    const-string v2, "OWNER_EXIT"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lk0e;->a:Lk0e;
+
+    new-instance v2, Lk0e;
+
+    const-string v3, "RECORD_STOP"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lk0e;->b:Lk0e;
+
+    filled-new-array {v0, v1, v2}, [Lk0e;
+
+    move-result-object v0
+
+    sput-object v0, Lk0e;->c:[Lk0e;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Lk0e;
     .locals 1
 
-    iput-object p1, p0, Lk0e;->Y:Ljava/lang/Object;
+    const-class v0, Lk0e;
 
-    iget p1, p0, Lk0e;->t0:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/high16 v0, -0x80000000
+    move-result-object p0
 
-    or-int/2addr p1, v0
+    check-cast p0, Lk0e;
 
-    iput p1, p0, Lk0e;->t0:I
+    return-object p0
+.end method
 
-    iget-object p1, p0, Lk0e;->Z:Ln0e;
+.method public static values()[Lk0e;
+    .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Lk0e;->c:[Lk0e;
 
-    invoke-virtual {p1, v0, p0}, Ln0e;->c(Lbr6;Lo84;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    check-cast v0, [Lk0e;
+
+    return-object v0
 .end method

@@ -1,129 +1,233 @@
-.class public final Lpf7;
+.class public abstract Lpf7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lr4a;
 
+# static fields
+.field public static final a:[B
 
-# instance fields
-.field public final a:[B
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
+.field public static final b:[B
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[B)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p3, p0, Lpf7;->a:[B
-
-    iput-object p1, p0, Lpf7;->b:Ljava/lang/String;
-
-    iput-object p2, p0, Lpf7;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lk59;)V
-    .locals 1
-
-    iget-object v0, p0, Lpf7;->b:Ljava/lang/String;
-
-    if-eqz v0, :cond_0
-
-    iput-object v0, p1, Lk59;->a:Ljava/lang/CharSequence;
-
-    :cond_0
-    return-void
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
+.method static constructor <clinit>()V
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    sget-object v0, Lbj2;->a:Ljava/nio/charset/Charset;
 
-    const/4 p1, 0x1
+    const-string v1, "\r\n"
 
-    return p1
-
-    :cond_0
-    if-eqz p1, :cond_2
-
-    const-class v0, Lpf7;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
     move-result-object v1
 
-    if-eq v0, v1, :cond_1
+    sput-object v1, Lpf7;->a:[B
+
+    const-string v1, "--"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object v0
+
+    sput-object v0, Lpf7;->b:[B
+
+    return-void
+.end method
+
+.method public static final a(Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    .locals 6
+
+    const/16 v0, 0x22
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_4
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->charAt(I)C
+
+    move-result v3
+
+    const/16 v4, 0xd
+
+    const/16 v5, 0x5c
+
+    if-eq v3, v0, :cond_1
+
+    if-eq v3, v5, :cond_1
+
+    if-ne v3, v4, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Lpf7;
+    :goto_1
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    iget-object v0, p0, Lpf7;->a:[B
+    move-result v2
 
-    iget-object p1, p1, Lpf7;->a:[B
+    if-ge v1, v2, :cond_5
 
-    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([B[B)Z
+    invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
-    move-result p1
+    move-result v2
 
-    return p1
+    if-eq v2, v0, :cond_2
+
+    if-eq v2, v5, :cond_2
+
+    if-ne v2, v4, :cond_3
 
     :cond_2
-    :goto_0
-    const/4 p1, 0x0
+    invoke-virtual {p0, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    return p1
+    :cond_3
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :cond_4
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_5
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public static final b(Ljava/lang/String;)I
+    .locals 4
 
-    iget-object v0, p0, Lpf7;->a:[B
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([B)I
+    move v1, v0
+
+    :goto_0
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-ge v0, v2, :cond_2
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
+
+    move-result v2
+
+    const/16 v3, 0x7f
+
+    if-gt v2, v3, :cond_0
+
+    const/4 v2, 0x1
+
+    goto :goto_1
+
+    :cond_0
+    const/16 v3, 0x7ff
+
+    if-gt v2, v3, :cond_1
+
+    const/4 v2, 0x2
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v2, 0x3
+
+    :goto_1
+    add-int/2addr v1, v2
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return v1
+.end method
+
+.method public static final c(Ljava/io/OutputStream;Ljava/lang/String;)V
+    .locals 4
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    return v0
-.end method
+    const/4 v1, 0x0
 
-.method public final toString()Ljava/lang/String;
-    .locals 6
+    :goto_0
+    if-ge v1, v0, :cond_2
 
-    iget-object v0, p0, Lpf7;->a:[B
+    invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
-    array-length v0, v0
+    move-result v2
 
-    const-string v1, "\", url=\""
+    const/16 v3, 0x7f
 
-    const-string v2, "\", rawMetadata.length=\""
+    if-gt v2, v3, :cond_0
 
-    const-string v3, "ICY: title=\""
+    invoke-virtual {p0, v2}, Ljava/io/OutputStream;->write(I)V
 
-    iget-object v4, p0, Lpf7;->b:Ljava/lang/String;
+    goto :goto_1
 
-    iget-object v5, p0, Lpf7;->c:Ljava/lang/String;
+    :cond_0
+    const/16 v3, 0x7ff
 
-    invoke-static {v3, v4, v1, v5, v2}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-gt v2, v3, :cond_1
 
-    move-result-object v1
+    shr-int/lit8 v3, v2, 0x6
 
-    const-string v2, "\""
+    or-int/lit16 v3, v3, 0xc0
 
-    invoke-static {v1, v0, v2}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Ljava/io/OutputStream;->write(I)V
 
-    move-result-object v0
+    and-int/lit8 v2, v2, 0x3f
 
-    return-object v0
+    or-int/lit16 v2, v2, 0x80
+
+    invoke-virtual {p0, v2}, Ljava/io/OutputStream;->write(I)V
+
+    goto :goto_1
+
+    :cond_1
+    shr-int/lit8 v3, v2, 0xc
+
+    or-int/lit16 v3, v3, 0xe0
+
+    invoke-virtual {p0, v3}, Ljava/io/OutputStream;->write(I)V
+
+    shr-int/lit8 v3, v2, 0x6
+
+    and-int/lit8 v3, v3, 0x3f
+
+    or-int/lit16 v3, v3, 0x80
+
+    invoke-virtual {p0, v3}, Ljava/io/OutputStream;->write(I)V
+
+    and-int/lit8 v2, v2, 0x3f
+
+    or-int/lit16 v2, v2, 0x80
+
+    invoke-virtual {p0, v2}, Ljava/io/OutputStream;->write(I)V
+
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return-void
 .end method

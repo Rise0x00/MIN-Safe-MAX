@@ -1,77 +1,338 @@
-.class public abstract Lrec;
+.class public final Lrec;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljfc;
+
+
+# instance fields
+.field public X:F
+
+.field public Y:F
+
+.field public Z:Landroid/animation/ValueAnimator;
+
+.field public final a:Landroid/view/View;
+
+.field public final b:Lsxj;
+
+.field public final c:Lnj1;
+
+.field public d:I
+
+.field public o:I
+
+.field public z0:Lhfc;
+
+
+# direct methods
+.method public constructor <init>(Landroid/view/View;Lsxj;Lnj1;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lrec;->a:Landroid/view/View;
+
+    iput-object p2, p0, Lrec;->b:Lsxj;
+
+    iput-object p3, p0, Lrec;->c:Lnj1;
+
+    sget-object p1, Lhfc;->e:Lhfc;
+
+    iput-object p1, p0, Lrec;->z0:Lhfc;
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract a()I
-.end method
+.method public final B(FFIILvec;)V
+    .locals 7
 
-.method public abstract b()I
-.end method
+    iget-object v0, p0, Lrec;->a:Landroid/view/View;
 
-.method public c()Landroid/view/View;
-    .locals 1
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    const/4 v0, 0x0
+    move-result-object v1
 
-    return-object v0
-.end method
+    move v2, p1
 
-.method public abstract d()I
-.end method
+    move v3, p2
 
-.method public abstract e()Landroid/view/View;
-.end method
+    move v4, p3
 
-.method public f(Lvec;Lvec;)Lvec;
-    .locals 0
+    move v5, p4
 
-    return-object p2
-.end method
+    move-object v6, p5
 
-.method public g()V
-    .locals 0
+    invoke-static/range {v1 .. v6}, Lkjj;->a(Landroid/content/Context;FFIILvec;)Lhfc;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lrec;->z0:Lhfc;
 
     return-void
 .end method
 
-.method public h()V
-    .locals 0
+.method public final a()V
+    .locals 6
+
+    iget-object v0, p0, Lrec;->b:Lsxj;
+
+    invoke-virtual {v0}, Lsxj;->l()Landroid/graphics/PointF;
+
+    move-result-object v0
+
+    iget v1, v0, Landroid/graphics/PointF;->x:F
+
+    iget-object v2, p0, Lrec;->z0:Lhfc;
+
+    iget v3, v2, Lhfc;->a:F
+
+    cmpg-float v4, v1, v3
+
+    if-gez v4, :cond_0
+
+    :goto_0
+    move v1, v3
+
+    goto :goto_1
+
+    :cond_0
+    iget v3, v2, Lhfc;->b:F
+
+    cmpl-float v4, v1, v3
+
+    if-lez v4, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    iget v3, v0, Landroid/graphics/PointF;->y:F
+
+    iget v4, v2, Lhfc;->c:F
+
+    cmpg-float v5, v3, v4
+
+    if-gez v5, :cond_2
+
+    move v3, v4
+
+    goto :goto_2
+
+    :cond_2
+    iget v2, v2, Lhfc;->d:F
+
+    cmpl-float v4, v3, v2
+
+    if-lez v4, :cond_3
+
+    move v3, v2
+
+    :cond_3
+    :goto_2
+    iget-object v2, p0, Lrec;->Z:Landroid/animation/ValueAnimator;
+
+    if-eqz v2, :cond_4
+
+    invoke-virtual {v2}, Landroid/animation/ValueAnimator;->end()V
+
+    :cond_4
+    const/4 v2, 0x2
+
+    new-array v2, v2, [F
+
+    fill-array-data v2, :array_0
+
+    invoke-static {v2}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object v2
+
+    const-wide/16 v4, 0xc8
+
+    invoke-virtual {v2, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    new-instance v4, Lqec;
+
+    invoke-direct {v4, v0, v1, v3, p0}, Lqec;-><init>(Landroid/graphics/PointF;FFLrec;)V
+
+    invoke-virtual {v2, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    iput-object v2, p0, Lrec;->Z:Landroid/animation/ValueAnimator;
+
+    invoke-virtual {v2}, Landroid/animation/ValueAnimator;->start()V
 
     return-void
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
 .end method
 
-.method public i()Z
-    .locals 1
+.method public final k(Landroid/view/MotionEvent;)Z
+    .locals 5
 
-    const/4 v0, 0x1
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
-    return v0
-.end method
+    move-result v0
 
-.method public j()V
-    .locals 0
+    iget-object v1, p0, Lrec;->b:Lsxj;
 
-    return-void
-.end method
+    if-nez v0, :cond_0
 
-.method public k(Lvec;)V
-    .locals 0
+    invoke-virtual {v1}, Lsxj;->l()Landroid/graphics/PointF;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public l(I)V
-    .locals 0
+    iget v2, v0, Landroid/graphics/PointF;->x:F
 
-    return-void
-.end method
+    float-to-int v2, v2
 
-.method public m(Lvec;FF)Z
-    .locals 0
+    iput v2, p0, Lrec;->d:I
 
-    const/4 p1, 0x1
+    iget v0, v0, Landroid/graphics/PointF;->y:F
+
+    float-to-int v0, v0
+
+    iput v0, p0, Lrec;->o:I
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
+
+    move-result v0
+
+    iput v0, p0, Lrec;->X:F
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
+
+    move-result v0
+
+    iput v0, p0, Lrec;->Y:F
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
+    const/4 v2, 0x1
+
+    if-eq v0, v2, :cond_3
+
+    const/4 v3, 0x2
+
+    if-eq v0, v3, :cond_2
+
+    const/4 p1, 0x3
+
+    if-eq v0, p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0}, Lrec;->a()V
+
+    return v2
+
+    :cond_2
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
+
+    move-result v0
+
+    iget v3, p0, Lrec;->X:F
+
+    sub-float/2addr v0, v3
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
+
+    move-result p1
+
+    iget v3, p0, Lrec;->Y:F
+
+    sub-float/2addr p1, v3
+
+    iget v3, p0, Lrec;->d:I
+
+    int-to-float v3, v3
+
+    add-float/2addr v3, v0
+
+    iget v0, p0, Lrec;->o:I
+
+    int-to-float v0, v0
+
+    add-float/2addr v0, p1
+
+    invoke-virtual {v1, v3, v0}, Lsxj;->q(FF)V
+
+    iget-object p1, p0, Lrec;->c:Lnj1;
+
+    check-cast p1, Loj1;
+
+    iget-object p1, p1, Loj1;->b:Landroid/graphics/PointF;
+
+    iput v3, p1, Landroid/graphics/PointF;->x:F
+
+    iput v0, p1, Landroid/graphics/PointF;->y:F
+
+    return v2
+
+    :cond_3
+    invoke-virtual {p0}, Lrec;->a()V
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getDownTime()J
+
+    move-result-wide v3
+
+    sub-long/2addr v0, v3
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result p1
+
+    if-ne p1, v2, :cond_4
+
+    invoke-static {}, Landroid/view/ViewConfiguration;->getTapTimeout()I
+
+    move-result p1
+
+    int-to-long v3, p1
+
+    cmp-long p1, v0, v3
+
+    if-gez p1, :cond_4
+
+    :goto_0
+    return v2
+
+    :cond_4
+    const/4 p1, 0x0
 
     return p1
+.end method
+
+.method public final u(FF)V
+    .locals 1
+
+    iget-object v0, p0, Lrec;->b:Lsxj;
+
+    invoke-virtual {v0, p1, p2}, Lsxj;->q(FF)V
+
+    iget-object v0, p0, Lrec;->c:Lnj1;
+
+    check-cast v0, Loj1;
+
+    iget-object v0, v0, Loj1;->b:Landroid/graphics/PointF;
+
+    iput p1, v0, Landroid/graphics/PointF;->x:F
+
+    iput p2, v0, Landroid/graphics/PointF;->y:F
+
+    return-void
 .end method

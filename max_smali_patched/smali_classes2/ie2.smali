@@ -1,236 +1,220 @@
 .class public final Lie2;
-.super Lqn2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lmcg;
+.implements Llcg;
 
 
 # instance fields
-.field public final synthetic F0:I
+.field public final synthetic a:I
+
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;I)V
-    .locals 0
+.method public constructor <init>(Ljava/util/ArrayList;)V
+    .locals 1
 
-    iput p2, p0, Lie2;->F0:I
+    const/4 v0, 0x1
 
-    invoke-direct {p0, p1}, Ltsd;-><init>(Landroid/view/View;)V
+    iput v0, p0, Lie2;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lie2;->b:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lie2;->a:I
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    iput-object p1, p0, Lie2;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public C()V
-    .locals 3
+.method public final f(J)I
+    .locals 2
 
-    iget v0, p0, Lie2;->F0:I
+    iget v0, p0, Lie2;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    :pswitch_0
-    return-void
+    const-wide/16 v0, 0x0
 
-    :pswitch_1
-    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
+    cmp-long p1, p1, v0
 
-    check-cast v0, Lhp2;
+    if-gez p1, :cond_0
 
-    iget-object v1, v0, Lhp2;->J0:Lh50;
+    const/4 p1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    iget-object v1, v0, Lhp2;->K0:Lmmf;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1, v2}, Lvy7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    goto :goto_0
 
     :cond_0
-    iput-object v2, v0, Lhp2;->K0:Lmmf;
+    const/4 p1, -0x1
 
-    iput-object v2, v0, Lhp2;->L0:Ljava/lang/Long;
+    :goto_0
+    return p1
 
-    return-void
+    :pswitch_0
+    const-wide/16 v0, 0x0
 
-    :pswitch_2
-    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
+    cmp-long p1, p1, v0
 
-    check-cast v0, Lvl2;
+    if-gez p1, :cond_1
 
-    iget-object v1, v0, Lvl2;->J0:Lh50;
+    const/4 p1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    iget-object v1, v0, Lvl2;->K0:Lh50;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    iget-object v1, v0, Lvl2;->L0:Lmmf;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1, v2}, Lvy7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    goto :goto_1
 
     :cond_1
-    iput-object v2, v0, Lvl2;->L0:Lmmf;
+    const/4 p1, -0x1
 
-    iget-object v1, v0, Lvl2;->M0:Lmmf;
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1, v2}, Lvy7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_2
-    iput-object v2, v0, Lvl2;->M0:Lmmf;
-
-    iput-object v2, v0, Lvl2;->N0:Ljava/lang/Long;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public final D(Lof9;Lnq6;Lbr6;)V
-    .locals 3
-
-    iget v0, p0, Lie2;->F0:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Lnf9;
-
-    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
-
-    check-cast v0, Lhp2;
-
-    iget-wide v1, p1, Lnf9;->a:J
-
-    long-to-int v1, v1
-
-    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
-
-    invoke-virtual {v0, p1}, Lhp2;->setupVideo(Lnf9;)V
-
-    invoke-super {p0, p1, p2, p3}, Lqn2;->D(Lof9;Lnq6;Lbr6;)V
-
-    return-void
-
-    :pswitch_0
-    check-cast p1, Lmf9;
-
-    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
-
-    check-cast v0, Luo2;
-
-    iget-wide v1, p1, Lmf9;->a:J
-
-    long-to-int v1, v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    invoke-virtual {v0, p1}, Luo2;->setItem(Lmf9;)V
-
-    invoke-super {p0, p1, p2, p3}, Lqn2;->D(Lof9;Lnq6;Lbr6;)V
-
-    return-void
-
-    :pswitch_1
-    check-cast p1, Ljf9;
-
-    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
-
-    check-cast v0, Lvl2;
-
-    iget-wide v1, p1, Ljf9;->a:J
-
-    long-to-int v1, v1
-
-    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
-
-    invoke-virtual {v0, p1}, Lvl2;->setupAudio(Ljf9;)V
-
-    invoke-super {p0, p1, p2, p3}, Lqn2;->D(Lof9;Lnq6;Lbr6;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final y(Lud8;)V
-    .locals 3
-
-    iget v0, p0, Lie2;->F0:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Lnf9;
-
-    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
-
-    check-cast v0, Lhp2;
-
-    iget-wide v1, p1, Lnf9;->a:J
-
-    long-to-int v1, v1
-
-    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
-
-    invoke-virtual {v0, p1}, Lhp2;->setupVideo(Lnf9;)V
-
-    return-void
-
-    :pswitch_0
-    check-cast p1, Lmf9;
-
-    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
-
-    check-cast v0, Luo2;
-
-    iget-wide v1, p1, Lmf9;->a:J
-
-    long-to-int v1, v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    invoke-virtual {v0, p1}, Luo2;->setItem(Lmf9;)V
-
-    return-void
-
-    :pswitch_1
-    check-cast p1, Ljf9;
-
-    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
-
-    check-cast v0, Lvl2;
-
-    iget-wide v1, p1, Ljf9;->a:J
-
-    long-to-int v1, v1
-
-    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
-
-    invoke-virtual {v0, p1}, Lvl2;->setupAudio(Ljf9;)V
-
-    return-void
+    :goto_1
+    return p1
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final g(I)J
+    .locals 2
+
+    iget v0, p0, Lie2;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    invoke-static {p1}, Lmhj;->b(Z)V
+
+    :goto_1
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+
+    :pswitch_0
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_2
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_2
+    invoke-static {p1}, Lh43;->j(Z)V
+
+    goto :goto_1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final m(J)Ljava/util/List;
+    .locals 2
+
+    iget v0, p0, Lie2;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const-wide/16 v0, 0x0
+
+    cmp-long p1, p1, v0
+
+    if-ltz p1, :cond_0
+
+    iget-object p1, p0, Lie2;->b:Ljava/util/List;
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    :goto_0
+    return-object p1
+
+    :pswitch_0
+    const-wide/16 v0, 0x0
+
+    cmp-long p1, p1, v0
+
+    if-ltz p1, :cond_1
+
+    iget-object p1, p0, Lie2;->b:Ljava/util/List;
+
+    goto :goto_1
+
+    :cond_1
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    :goto_1
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final s()I
+    .locals 1
+
+    iget v0, p0, Lie2;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :pswitch_0
+    const/4 v0, 0x1
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
         :pswitch_0
     .end packed-switch
 .end method

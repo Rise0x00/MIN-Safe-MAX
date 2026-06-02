@@ -1,238 +1,88 @@
-.class public final Lneh;
-.super Ljava/lang/Object;
+.class public final enum Lneh;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Lpeh;
+.implements Ljava/util/concurrent/Executor;
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static final enum a:Lneh;
 
-.field public final b:Ljava/lang/String;
+.field public static final b:Landroid/os/Handler;
 
-.field public final c:Ly00;
-
-.field public final d:J
-
-.field public final e:J
-
-.field public final f:Z
+.field public static final synthetic c:[Lneh;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ly00;JJZ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lneh;
 
-    iput-wide p1, p0, Lneh;->a:J
+    const-string v1, "INSTANCE"
 
-    iput-object p3, p0, Lneh;->b:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    iput-object p4, p0, Lneh;->c:Ly00;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-wide p5, p0, Lneh;->d:J
+    sput-object v0, Lneh;->a:Lneh;
 
-    iput-wide p7, p0, Lneh;->e:J
+    filled-new-array {v0}, [Lneh;
 
-    iput-boolean p9, p0, Lneh;->f:Z
+    move-result-object v0
+
+    sput-object v0, Lneh;->c:[Lneh;
+
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    sput-object v0, Lneh;->b:Landroid/os/Handler;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lneh;
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    const-class v0, Lneh;
 
-    const/4 v0, 0x1
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    if-ne p0, p1, :cond_0
+    move-result-object p0
 
-    return v0
+    check-cast p0, Lneh;
 
-    :cond_0
-    instance-of v1, p1, Lneh;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lneh;
-
-    iget-wide v3, p0, Lneh;->a:J
-
-    iget-wide v5, p1, Lneh;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lneh;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lneh;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lneh;->c:Ly00;
-
-    iget-object v3, p1, Lneh;->c:Ly00;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-wide v3, p0, Lneh;->d:J
-
-    iget-wide v5, p1, Lneh;->d:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-wide v3, p0, Lneh;->e:J
-
-    iget-wide v5, p1, Lneh;->e:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-boolean v1, p0, Lneh;->f:Z
-
-    iget-boolean p1, p1, Lneh;->f:Z
-
-    if-eq v1, p1, :cond_7
-
-    return v2
-
-    :cond_7
-    return v0
+    return-object p0
 .end method
 
-.method public final hashCode()I
-    .locals 5
+.method public static values()[Lneh;
+    .locals 1
 
-    iget-wide v0, p0, Lneh;->a:J
+    sget-object v0, Lneh;->c:[Lneh;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lneh;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lneh;->c:Ly00;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-wide v3, p0, Lneh;->d:J
-
-    invoke-static {v2, v1, v3, v4}, Lcbh;->i(IIJ)I
-
-    move-result v0
-
-    iget-wide v2, p0, Lneh;->e:J
-
-    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lneh;->f:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "OpenVideo(msgId="
-
-    const-string v1, ", attachLocalId="
-
-    iget-wide v2, p0, Lneh;->a:J
-
-    iget-object v4, p0, Lneh;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v1, v4}, Lj27;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, [Lneh;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, ", attachModel="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lneh;->c:Ly00;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", playerPosition="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lneh;->d:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", videoDuration="
-
-    const-string v2, ", isVideoLive="
-
-    iget-wide v3, p0, Lneh;->e:J
-
-    invoke-static {v3, v4, v1, v2, v0}, Lt02;->p(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lneh;->f:Z
-
-    invoke-static {v0, v2, v1}, Lt02;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    check-cast v0, [Lneh;
 
     return-object v0
+.end method
+
+
+# virtual methods
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 1
+
+    sget-object v0, Lneh;->b:Landroid/os/Handler;
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
 .end method

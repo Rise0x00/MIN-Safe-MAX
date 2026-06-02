@@ -4,164 +4,273 @@
 
 
 # instance fields
-.field public final a:Landroid/app/Application;
+.field public final a:Lia8;
 
-.field public final b:Li7f;
-
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public final d:Lxzb;
-
-.field public final e:Lxzb;
-
-.field public final f:Ldi0;
+.field public final b:Laz8;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Application;Lcy0;Lmbg;)V
+.method public constructor <init>(Lia8;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmi0;->a:Landroid/app/Application;
+    iput-object p1, p0, Lmi0;->a:Lia8;
 
-    const/4 p1, 0x0
+    new-instance p1, Laz8;
 
-    const/4 v0, 0x7
+    const/16 v0, 0xa
 
-    invoke-static {p1, p1, v0}, Lj7f;->b(III)Li7f;
+    invoke-direct {p1, v0}, Laz8;-><init>(I)V
 
-    move-result-object p1
-
-    iput-object p1, p0, Lmi0;->b:Li7f;
-
-    check-cast p3, Lj9b;
-
-    invoke-virtual {p3}, Lj9b;->c()Lzp8;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lzp8;->getImmediate()Lzp8;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lmi0;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance p1, Lxzb;
-
-    sget-object p3, Lyzb;->f:[Ljava/lang/String;
-
-    invoke-direct {p1, p3}, Lxzb;-><init>([Ljava/lang/String;)V
-
-    iput-object p1, p0, Lmi0;->d:Lxzb;
-
-    new-instance p1, Lxzb;
-
-    sget-object p3, Lyzb;->l:[Ljava/lang/String;
-
-    invoke-direct {p1, p3}, Lxzb;-><init>([Ljava/lang/String;)V
-
-    iput-object p1, p0, Lmi0;->e:Lxzb;
-
-    new-instance p1, Ldi0;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p1, p3, p0}, Ldi0;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lmi0;->f:Ldi0;
-
-    invoke-virtual {p2, p0}, Lcy0;->d(Ljava/lang/Object;)V
+    iput-object p1, p0, Lmi0;->b:Laz8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lk2c;)V
-    .locals 3
-    .annotation runtime Lu0g;
-    .end annotation
+.method public final a(Lrw2;Lz84;)Ljava/lang/Object;
+    .locals 4
 
-    .line 2
-    new-instance p1, Lfi0;
+    instance-of v0, p2, Lki0;
 
-    const/4 v0, 0x0
+    if-eqz v0, :cond_0
 
-    invoke-direct {p1, p0, v0}, Lfi0;-><init>(Lmi0;Lkotlin/coroutines/Continuation;)V
+    move-object v0, p2
 
-    const/4 v1, 0x3
+    check-cast v0, Lki0;
 
-    iget-object v2, p0, Lmi0;->c:Lkotlinx/coroutines/internal/ContextScope;
+    iget v1, v0, Lki0;->Y:I
 
-    invoke-static {v2, v0, v0, p1, v1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+    const/high16 v2, -0x80000000
 
-    return-void
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_0
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Lki0;->Y:I
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lki0;
+
+    invoke-direct {v0, p0, p2}, Lki0;-><init>(Lmi0;Lz84;)V
+
+    :goto_0
+    iget-object p2, v0, Lki0;->o:Ljava/lang/Object;
+
+    iget v1, v0, Lki0;->Y:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_2
+
+    if-ne v1, v2, :cond_1
+
+    iget-object p1, v0, Lki0;->d:Lrw2;
+
+    invoke-static {p2}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    invoke-static {p2}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    iput-object p1, v0, Lki0;->d:Lrw2;
+
+    iput v2, v0, Lki0;->Y:I
+
+    invoke-virtual {p0, p1, v0}, Lmi0;->b(Lrw2;Lz84;)Ljava/io/Serializable;
+
+    move-result-object p2
+
+    sget-object v0, Lpc4;->a:Lpc4;
+
+    if-ne p2, v0, :cond_3
+
+    return-object v0
+
+    :cond_3
+    :goto_1
+    check-cast p2, Lgzb;
+
+    if-eqz p2, :cond_4
+
+    iget-wide v0, p1, Lrw2;->a:J
+
+    new-instance p1, Ljava/lang/Long;
+
+    invoke-direct {p1, v0, v1}, Ljava/lang/Long;-><init>(J)V
+
+    iget-object v0, p0, Lmi0;->b:Laz8;
+
+    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_4
+    sget-object p1, Lyeh;->a:Lyeh;
+
+    return-object p1
 .end method
 
-.method public final onEvent(Lm5h;)V
-    .locals 3
-    .annotation runtime Lu0g;
-    .end annotation
+.method public final b(Lrw2;Lz84;)Ljava/io/Serializable;
+    .locals 4
 
-    .line 4
-    new-instance p1, Lhi0;
+    instance-of v0, p2, Lli0;
 
-    const/4 v0, 0x0
+    if-eqz v0, :cond_0
 
-    invoke-direct {p1, p0, v0}, Lhi0;-><init>(Lmi0;Lkotlin/coroutines/Continuation;)V
+    move-object v0, p2
 
-    const/4 v1, 0x3
+    check-cast v0, Lli0;
 
-    iget-object v2, p0, Lmi0;->c:Lkotlinx/coroutines/internal/ContextScope;
+    iget v1, v0, Lli0;->Y:I
 
-    invoke-static {v2, v0, v0, p1, v1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+    const/high16 v2, -0x80000000
 
-    return-void
-.end method
+    and-int v3, v1, v2
 
-.method public final onEvent(Lrl8;)V
-    .locals 3
-    .annotation runtime Lu0g;
-    .end annotation
+    if-eqz v3, :cond_0
 
-    .line 1
-    new-instance p1, Lei0;
+    sub-int/2addr v1, v2
 
-    const/4 v0, 0x0
+    iput v1, v0, Lli0;->Y:I
 
-    invoke-direct {p1, p0, v0}, Lei0;-><init>(Lmi0;Lkotlin/coroutines/Continuation;)V
+    goto :goto_0
 
-    const/4 v1, 0x3
+    :cond_0
+    new-instance v0, Lli0;
 
-    iget-object v2, p0, Lmi0;->c:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-direct {v0, p0, p2}, Lli0;-><init>(Lmi0;Lz84;)V
 
-    invoke-static {v2, v0, v0, p1, v1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+    :goto_0
+    iget-object p2, v0, Lli0;->o:Ljava/lang/Object;
 
-    return-void
-.end method
+    iget v1, v0, Lli0;->Y:I
 
-.method public final onEvent(Lu64;)V
-    .locals 3
-    .annotation runtime Lu0g;
-    .end annotation
+    const/4 v2, 0x1
 
-    .line 3
-    new-instance p1, Lgi0;
+    const/4 v3, 0x0
 
-    const/4 v0, 0x0
+    if-eqz v1, :cond_2
 
-    invoke-direct {p1, p0, v0}, Lgi0;-><init>(Lmi0;Lkotlin/coroutines/Continuation;)V
+    if-ne v1, v2, :cond_1
 
-    const/4 v1, 0x3
+    iget-object p1, v0, Lli0;->d:Landroid/net/Uri;
 
-    iget-object v2, p0, Lmi0;->c:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-static {p2}, Lmtd;->g0(Ljava/lang/Object;)V
 
-    invoke-static {v2, v0, v0, p1, v1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+    goto :goto_1
 
-    return-void
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    invoke-static {p2}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    iget-object p1, p1, Lrw2;->b:Landroid/net/Uri;
+
+    if-nez p1, :cond_3
+
+    return-object v3
+
+    :cond_3
+    const/16 p2, 0x38
+
+    int-to-float p2, p2
+
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p2, v1
+
+    invoke-static {p2}, Lh43;->U(F)I
+
+    move-result p2
+
+    sget-object v1, Lj6b;->a:Lj6b;
+
+    invoke-static {p1, v1, p2, p2}, Lura;->n(Landroid/net/Uri;Lm6b;II)Lzl7;
+
+    move-result-object p2
+
+    iget-object v1, p0, Lmi0;->a:Lia8;
+
+    invoke-interface {v1}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lbw0;
+
+    iput-object p1, v0, Lli0;->d:Landroid/net/Uri;
+
+    iput v2, v0, Lli0;->Y:I
+
+    invoke-virtual {v1, p2, v0}, Lbw0;->b(Lzl7;Lz84;)Ljava/io/Serializable;
+
+    move-result-object p2
+
+    sget-object v0, Lpc4;->a:Lpc4;
+
+    if-ne p2, v0, :cond_4
+
+    return-object v0
+
+    :cond_4
+    :goto_1
+    check-cast p2, [B
+
+    if-eqz p2, :cond_6
+
+    array-length v0, p2
+
+    if-nez v0, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    new-instance v0, Lgzb;
+
+    invoke-direct {v0, p1, p2}, Lgzb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object v0
+
+    :cond_6
+    :goto_2
+    const-class p1, Lmi0;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "Early return in create cuz of bytes is null or empty"
+
+    invoke-static {p1, p2}, Lnm4;->p0(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v3
 .end method

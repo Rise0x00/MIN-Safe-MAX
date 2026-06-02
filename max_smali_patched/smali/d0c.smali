@@ -1,150 +1,561 @@
 .class public final Ld0c;
-.super Ly48;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lbq1;
+.implements Lry1;
 
 
 # static fields
-.field public static final X:Ld0c;
+.field public static final c:Laq1;
 
-.field public static final b:Ld0c;
+.field public static final d:Lbnh;
 
-.field public static final c:Ld0c;
-
-.field public static final d:Ld0c;
-
-.field public static final o:Ld0c;
+.field public static final e:Ld0c;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lbq1;
+
+.field public final b:Lry1;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 24
 
-    new-instance v0, Ld0c;
+    sget-object v1, Lzp1;->c:Lzp1;
 
-    const/4 v1, 0x2
+    invoke-static {v1}, Lk0c;->c(Lzp1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    const/4 v2, 0x0
+    move-result-object v0
 
-    invoke-direct {v0, v1, v2}, Ld0c;-><init>(II)V
+    new-instance v7, Lw1i;
 
-    sput-object v0, Ld0c;->b:Ld0c;
+    new-instance v2, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
 
-    new-instance v0, Ld0c;
+    invoke-direct {v2}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;-><init>()V
 
-    const/4 v2, 0x1
+    invoke-virtual {v2, v0}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->setParticipantId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
 
-    invoke-direct {v0, v1, v2}, Ld0c;-><init>(II)V
+    move-result-object v2
 
-    sput-object v0, Ld0c;->c:Ld0c;
+    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->build()Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
 
-    new-instance v0, Ld0c;
+    move-result-object v2
 
-    const/4 v2, 0x2
+    const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v2}, Ld0c;-><init>(II)V
+    invoke-direct {v7, v3, v2, v3}, Lw1i;-><init>(ZLru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;Z)V
 
-    sput-object v0, Ld0c;->d:Ld0c;
+    new-instance v8, Lw1i;
 
-    new-instance v0, Ld0c;
+    new-instance v2, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
 
-    const/4 v2, 0x3
+    invoke-direct {v2}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;-><init>()V
 
-    invoke-direct {v0, v1, v2}, Ld0c;-><init>(II)V
+    invoke-virtual {v2, v0}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->setParticipantId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
 
-    sput-object v0, Ld0c;->o:Ld0c;
+    move-result-object v0
 
-    new-instance v0, Ld0c;
+    sget-object v2, Ld2i;->b:Ld2i;
 
-    const/4 v2, 0x4
+    invoke-virtual {v0, v2}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->setType(Ld2i;)Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
 
-    invoke-direct {v0, v1, v2}, Ld0c;-><init>(II)V
+    move-result-object v0
 
-    sput-object v0, Ld0c;->X:Ld0c;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->build()Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
+
+    move-result-object v0
+
+    invoke-direct {v8, v3, v0, v3}, Lw1i;-><init>(ZLru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;Z)V
+
+    new-instance v0, Laq1;
+
+    const/16 v20, 0x0
+
+    const/16 v21, 0x0
+
+    sget-object v2, Lhb9;->a:Lhb9;
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    const-wide/16 v14, 0x0
+
+    const/16 v16, 0x1
+
+    const/16 v17, 0x0
+
+    const/16 v18, 0x0
+
+    const/16 v19, 0x0
+
+    sget-object v22, Lpj5;->a:Lpj5;
+
+    const/16 v23, 0x1
+
+    move-object v3, v2
+
+    move-object v4, v2
+
+    invoke-direct/range {v0 .. v23}, Laq1;-><init>(Lzp1;Lhb9;Lhb9;Lhb9;ZZLw1i;Lw1i;ZZZZZJZZZZZZLjava/util/List;I)V
+
+    sput-object v0, Ld0c;->c:Laq1;
+
+    new-instance v1, Lbnh;
+
+    const/4 v7, 0x1
+
+    const/4 v8, 0x0
+
+    const-wide/16 v2, 0x0
+
+    const-string v4, ""
+
+    const-string v5, ""
+
+    const/4 v6, 0x0
+
+    invoke-direct/range {v1 .. v8}, Lbnh;-><init>(JLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/String;ZZ)V
+
+    sput-object v1, Ld0c;->d:Lbnh;
+
+    new-instance v2, Ld0c;
+
+    invoke-direct {v2, v0, v1}, Ld0c;-><init>(Lbq1;Lry1;)V
+
+    sput-object v2, Ld0c;->e:Ld0c;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(II)V
+.method public constructor <init>(Lbq1;Lry1;)V
     .locals 0
 
-    iput p2, p0, Ld0c;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Ly48;-><init>(I)V
+    iput-object p1, p0, Ld0c;->a:Lbq1;
+
+    iput-object p2, p0, Ld0c;->b:Lry1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()Z
     .locals 1
 
-    iget v0, p0, Ld0c;->a:I
+    iget-object v0, p0, Ld0c;->b:Lry1;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0}, Lry1;->a()Z
 
-    check-cast p1, Lt91;
+    move-result v0
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    return v0
+.end method
 
-    return-object p1
+.method public final b()Z
+    .locals 1
 
-    :pswitch_0
-    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v0, p0, Ld0c;->a:Lbq1;
+
+    invoke-interface {v0}, Lbq1;->b()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final c()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Ld0c;->b:Lry1;
+
+    invoke-interface {v0}, Lry1;->c()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final d()Z
+    .locals 1
+
+    iget-object v0, p0, Ld0c;->a:Lbq1;
+
+    invoke-interface {v0}, Lbq1;->d()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final e()Z
+    .locals 1
+
+    iget-object v0, p0, Ld0c;->b:Lry1;
+
+    invoke-interface {v0}, Lry1;->e()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ld0c;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ld0c;
+
+    iget-object v1, p0, Ld0c;->a:Lbq1;
+
+    iget-object v3, p1, Ld0c;->a:Lbq1;
+
+    invoke-static {v1, v3}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Ld0c;->b:Lry1;
+
+    iget-object p1, p1, Ld0c;->b:Lry1;
+
+    invoke-static {v1, p1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    if-nez p1, :cond_3
 
-    move-result-object p1
+    return v2
 
-    return-object p1
+    :cond_3
+    return v0
+.end method
 
-    :pswitch_1
-    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+.method public final f()J
+    .locals 2
 
-    move-result p1
+    iget-object v0, p0, Ld0c;->b:Lry1;
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-interface {v0}, Lry1;->f()J
 
-    move-result-object p1
+    move-result-wide v0
 
-    return-object p1
+    return-wide v0
+.end method
 
-    :pswitch_2
-    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+.method public final g()Z
+    .locals 1
 
-    move-result p1
+    iget-object v0, p0, Ld0c;->a:Lbq1;
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-interface {v0}, Lbq1;->g()Z
 
-    move-result-object p1
+    move-result v0
 
-    return-object p1
+    return v0
+.end method
 
-    :pswitch_3
-    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+.method public final getId()Lzp1;
+    .locals 1
 
-    move-result p1
+    iget-object v0, p0, Ld0c;->a:Lbq1;
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-interface {v0}, Lbq1;->getId()Lzp1;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    return-object v0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public final getName()Ljava/lang/CharSequence;
+    .locals 1
+
+    iget-object v0, p0, Ld0c;->b:Lry1;
+
+    invoke-interface {v0}, Lry1;->getName()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    iget-object v0, p0, Ld0c;->a:Lbq1;
+
+    invoke-interface {v0}, Lbq1;->h()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Ld0c;->a:Lbq1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Ld0c;->b:Lry1;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final i()Z
+    .locals 1
+
+    iget-object v0, p0, Ld0c;->a:Lbq1;
+
+    invoke-interface {v0}, Lbq1;->i()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final isConnected()Z
+    .locals 1
+
+    iget-object v0, p0, Ld0c;->a:Lbq1;
+
+    invoke-interface {v0}, Lbq1;->isConnected()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final isScreenCaptureEnabled()Z
+    .locals 1
+
+    iget-object v0, p0, Ld0c;->a:Lbq1;
+
+    invoke-interface {v0}, Lbq1;->isScreenCaptureEnabled()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final j()Z
+    .locals 1
+
+    iget-object v0, p0, Ld0c;->a:Lbq1;
+
+    invoke-interface {v0}, Lbq1;->j()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final k()Z
+    .locals 1
+
+    iget-object v0, p0, Ld0c;->a:Lbq1;
+
+    invoke-interface {v0}, Lbq1;->k()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final l()Ljava/lang/CharSequence;
+    .locals 1
+
+    iget-object v0, p0, Ld0c;->b:Lry1;
+
+    invoke-interface {v0}, Lry1;->l()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final m()Z
+    .locals 1
+
+    iget-object v0, p0, Ld0c;->a:Lbq1;
+
+    invoke-interface {v0}, Lbq1;->m()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final n()Z
+    .locals 1
+
+    iget-object v0, p0, Ld0c;->a:Lbq1;
+
+    invoke-interface {v0}, Lbq1;->n()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final o()Z
+    .locals 1
+
+    iget-object v0, p0, Ld0c;->a:Lbq1;
+
+    invoke-interface {v0}, Lbq1;->o()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final p()Z
+    .locals 1
+
+    iget-object v0, p0, Ld0c;->a:Lbq1;
+
+    invoke-interface {v0}, Lbq1;->p()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final q()Z
+    .locals 1
+
+    iget-object v0, p0, Ld0c;->a:Lbq1;
+
+    invoke-interface {v0}, Lbq1;->q()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final r()Lw1i;
+    .locals 1
+
+    iget-object v0, p0, Ld0c;->a:Lbq1;
+
+    invoke-interface {v0}, Lbq1;->r()Lw1i;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final s()I
+    .locals 1
+
+    iget-object v0, p0, Ld0c;->a:Lbq1;
+
+    invoke-interface {v0}, Lbq1;->s()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final t()Lw1i;
+    .locals 1
+
+    iget-object v0, p0, Ld0c;->a:Lbq1;
+
+    invoke-interface {v0}, Lbq1;->t()Lw1i;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ParticipantPair(member="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ld0c;->a:Lbq1;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", user="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ld0c;->b:Lry1;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final u()Z
+    .locals 1
+
+    iget-object v0, p0, Ld0c;->a:Lbq1;
+
+    invoke-interface {v0}, Lbq1;->u()Z
+
+    move-result v0
+
+    return v0
 .end method

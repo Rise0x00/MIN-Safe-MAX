@@ -1,91 +1,85 @@
-.class public abstract Lu7b;
+.class public final Lu7b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lv7b;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
+# instance fields
+.field public final a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 0
 
-    sget v0, Lfdd;->oneme_chatmedia_viewer_close_reason_content_delete_text:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lu7b;->a:I
-
-    sget v0, Lfdd;->oneme_chatmedia_viewer_close_reason_photo_delete_text:I
-
-    sput v0, Lu7b;->b:I
-
-    sget v0, Lfdd;->oneme_chatmedia_viewer_close_reason_video_delete_text:I
-
-    sput v0, Lu7b;->c:I
-
-    sget v0, Lfdd;->oneme_chatmedia_viewer_content_level_subtitle:I
-
-    sput v0, Lu7b;->d:I
-
-    sget v0, Lfdd;->oneme_chatmedia_viewer_content_level_title:I
-
-    sput v0, Lu7b;->e:I
-
-    sget v0, Lfdd;->oneme_chatmedia_viewer_seek_seconds:I
-
-    sput v0, Lu7b;->f:I
-
-    sget v0, Lfdd;->oneme_chatmedia_viewer_toolbar_action_forward_photo:I
-
-    sput v0, Lu7b;->g:I
-
-    sget v0, Lfdd;->oneme_chatmedia_viewer_toolbar_action_forward_video:I
-
-    sput v0, Lu7b;->h:I
-
-    sget v0, Lfdd;->oneme_chatmedia_viewer_toolbar_action_goto_message:I
-
-    sput v0, Lu7b;->i:I
-
-    sget v0, Lfdd;->oneme_chatmedia_viewer_toolbar_action_share:I
-
-    sput v0, Lu7b;->j:I
-
-    sget v0, Lfdd;->oneme_chatmedia_viewer_toolbar_countable_title:I
-
-    sput v0, Lu7b;->k:I
-
-    sget v0, Lfdd;->oneme_chatmedia_viewer_toolbar_photo_title:I
-
-    sput v0, Lu7b;->l:I
-
-    sget v0, Lfdd;->oneme_chatmedia_viewer_toolbar_video_title:I
-
-    sput v0, Lu7b;->m:I
+    iput p1, p0, Lu7b;->a:I
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lu7b;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lu7b;
+
+    iget v1, p0, Lu7b;->a:I
+
+    iget p1, p1, Lu7b;->a:I
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Lu7b;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "Resource(iconRes="
+
+    const-string v1, ")"
+
+    iget v2, p0, Lu7b;->a:I
+
+    invoke-static {v2, v0, v1}, Lsb6;->h(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

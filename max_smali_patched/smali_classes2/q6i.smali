@@ -1,152 +1,123 @@
-.class public final synthetic Lq6i;
+.class public abstract Lq6i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Liv6;
-
 
 # static fields
-.field public static final a:Lq6i;
+.field public static final a:Lx6i;
 
-.field private static final descriptor:Lxpe;
+.field public static final b:Lkd8;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 4
 
-    new-instance v0, Lq6i;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1d
+
+    if-lt v0, v1, :cond_0
+
+    new-instance v0, Ly6i;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lq6i;->a:Lq6i;
-
-    new-instance v1, Lgdc;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.link.WebAppOpenMaxLinkRequest"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v0, v3}, Lgdc;-><init>(Ljava/lang/String;Liv6;I)V
-
-    const-string v0, "url"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lgdc;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lq6i;->descriptor:Lxpe;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
-    .locals 2
-
-    check-cast p2, Ls6i;
-
-    sget-object v0, Lq6i;->descriptor:Lxpe;
-
-    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->a(Lxpe;)Lkotlinx/serialization/json/internal/b;
-
-    move-result-object p1
-
-    iget-object p2, p2, Ls6i;->a:Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1, p2}, Lkotlinx/serialization/json/internal/b;->s(Lxpe;ILjava/lang/String;)V
-
-    invoke-virtual {p1}, Lkotlinx/serialization/json/internal/b;->t()V
-
-    return-void
-.end method
-
-.method public final b(Lkl4;)Ljava/lang/Object;
-    .locals 8
-
-    sget-object v0, Lq6i;->descriptor:Lxpe;
-
-    invoke-interface {p1, v0}, Lkl4;->r(Lxpe;)Lqp3;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move v4, v1
-
-    move v5, v2
-
-    :goto_0
-    if-eqz v4, :cond_2
-
-    invoke-interface {p1, v0}, Lqp3;->e(Lxpe;)I
-
-    move-result v6
-
-    const/4 v7, -0x1
-
-    if-eq v6, v7, :cond_1
-
-    if-nez v6, :cond_0
-
-    invoke-interface {p1, v0, v2}, Lqp3;->j(Lxpe;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    move v5, v1
+    sput-object v0, Lq6i;->a:Lx6i;
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+    new-instance v0, Lx6i;
 
-    invoke-direct {p1, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    throw p1
+    sput-object v0, Lq6i;->a:Lx6i;
 
-    :cond_1
-    move v4, v2
+    :goto_0
+    new-instance v0, Lkd8;
 
-    goto :goto_0
+    const-string v1, "translationAlpha"
 
-    :cond_2
-    invoke-interface {p1, v0}, Lqp3;->m(Lxpe;)V
+    const/4 v2, 0x3
 
-    new-instance p1, Ls6i;
+    const-class v3, Ljava/lang/Float;
 
-    invoke-direct {p1, v5, v3}, Ls6i;-><init>(ILjava/lang/String;)V
+    invoke-direct {v0, v2, v3, v1}, Lkd8;-><init>(ILjava/lang/Class;Ljava/lang/String;)V
 
-    return-object p1
+    sput-object v0, Lq6i;->b:Lkd8;
+
+    new-instance v0, Lkd8;
+
+    const-string v1, "clipBounds"
+
+    const/4 v2, 0x4
+
+    const-class v3, Landroid/graphics/Rect;
+
+    invoke-direct {v0, v2, v3, v1}, Lkd8;-><init>(ILjava/lang/Class;Ljava/lang/String;)V
+
+    return-void
 .end method
 
-.method public final c()[La38;
-    .locals 3
-
-    const/4 v0, 0x1
-
-    new-array v0, v0, [La38;
-
-    sget-object v1, Lnzf;->a:Lnzf;
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    return-object v0
-.end method
-
-.method public final d()Lxpe;
+.method public static a(Landroid/view/View;)F
     .locals 1
 
-    sget-object v0, Lq6i;->descriptor:Lxpe;
+    sget-object v0, Lq6i;->a:Lx6i;
 
-    return-object v0
+    invoke-virtual {v0, p0}, Lf2k;->a(Landroid/view/View;)F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static b()V
+    .locals 1
+
+    sget-object v0, Lq6i;->a:Lx6i;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+.end method
+
+.method public static c(Landroid/view/View;IIII)V
+    .locals 6
+
+    sget-object v0, Lq6i;->a:Lx6i;
+
+    move-object v1, p0
+
+    move v2, p1
+
+    move v3, p2
+
+    move v4, p3
+
+    move v5, p4
+
+    invoke-virtual/range {v0 .. v5}, Lx6i;->d(Landroid/view/View;IIII)V
+
+    return-void
+.end method
+
+.method public static d(Landroid/view/View;F)V
+    .locals 1
+
+    sget-object v0, Lq6i;->a:Lx6i;
+
+    invoke-virtual {v0, p0, p1}, Lf2k;->b(Landroid/view/View;F)V
+
+    return-void
+.end method
+
+.method public static e(Landroid/view/View;I)V
+    .locals 1
+
+    sget-object v0, Lq6i;->a:Lx6i;
+
+    invoke-virtual {v0, p0, p1}, Lx6i;->c(Landroid/view/View;I)V
+
+    return-void
 .end method

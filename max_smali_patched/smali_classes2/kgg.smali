@@ -1,109 +1,69 @@
-.class public final synthetic Lkgg;
+.class public abstract synthetic Lkgg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llq6;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lrgg;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lrgg;I)V
+.method public static bridge synthetic a(Landroid/content/res/Configuration;)I
     .locals 0
 
-    iput p2, p0, Lkgg;->a:I
+    iget p0, p0, Landroid/content/res/Configuration;->fontWeightAdjustment:I
 
-    iput-object p1, p0, Lkgg;->b:Lrgg;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+    return p0
 .end method
 
+.method public static bridge synthetic b(Landroid/util/SparseArray;)I
+    .locals 0
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
+    invoke-virtual {p0}, Landroid/util/SparseArray;->contentHashCode()I
 
-    iget v0, p0, Lkgg;->a:I
+    move-result p0
 
-    packed-switch v0, :pswitch_data_0
+    return p0
+.end method
 
-    iget-object v0, p0, Lkgg;->b:Lrgg;
+.method public static bridge synthetic c()Landroid/hardware/camera2/CameraCharacteristics$Key;
+    .locals 1
 
-    new-instance v1, Lqgg;
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SCALER_STREAM_CONFIGURATION_MAP_MAXIMUM_RESOLUTION:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
-    invoke-direct {v1, v0}, Lqgg;-><init>(Lrgg;)V
+    return-object v0
+.end method
 
-    return-object v1
+.method public static bridge synthetic d(Landroid/os/StrictMode$VmPolicy$Builder;)Landroid/os/StrictMode$VmPolicy$Builder;
+    .locals 0
 
-    :pswitch_0
-    iget-object v0, p0, Lkgg;->b:Lrgg;
+    invoke-virtual {p0}, Landroid/os/StrictMode$VmPolicy$Builder;->permitUnsafeIntentLaunch()Landroid/os/StrictMode$VmPolicy$Builder;
 
-    new-instance v1, Landroid/util/LruCache;
+    move-result-object p0
 
-    const/16 v2, 0x64
+    return-object p0
+.end method
 
-    invoke-direct {v1, v2}, Landroid/util/LruCache;-><init>(I)V
+.method public static bridge synthetic e(Landroid/os/VibratorManager;)Landroid/os/Vibrator;
+    .locals 0
 
-    iget-object v0, v0, Lrgg;->h:Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/os/VibratorManager;->getDefaultVibrator()Landroid/os/Vibrator;
 
-    sget-object v2, Lc5j;->a:Ledb;
+    move-result-object p0
 
-    if-nez v2, :cond_0
+    return-object p0
+.end method
 
-    goto :goto_0
+.method public static bridge synthetic f(Ljava/lang/Object;)Landroid/os/VibratorManager;
+    .locals 0
 
-    :cond_0
-    sget-object v3, Lkk8;->d:Lkk8;
+    check-cast p0, Landroid/os/VibratorManager;
 
-    invoke-virtual {v2, v3}, Ledb;->b(Lkk8;)Z
+    return-object p0
+.end method
 
-    move-result v4
+.method public static bridge synthetic g(Landroid/util/SparseArray;Landroid/util/SparseArray;)Z
+    .locals 0
 
-    if-eqz v4, :cond_1
+    invoke-virtual {p0, p1}, Landroid/util/SparseArray;->contentEquals(Landroid/util/SparseArray;)Z
 
-    const-string v4, "TextLayoutManager cache initialized with size=100"
+    move-result p0
 
-    const/4 v5, 0x0
-
-    invoke-virtual {v2, v3, v0, v4, v5}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    return-object v1
-
-    :pswitch_1
-    iget-object v0, p0, Lkgg;->b:Lrgg;
-
-    iget-object v0, v0, Lrgg;->a:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    new-instance v1, Landroid/util/Size;
-
-    iget v2, v0, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->heightPixels:I
-
-    invoke-direct {v1, v2, v0}, Landroid/util/Size;-><init>(II)V
-
-    return-object v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return p0
 .end method

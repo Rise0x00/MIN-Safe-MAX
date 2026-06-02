@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnp7;
+.implements Lqs7;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lnp7;"
+        "Lqs7;"
     }
 .end annotation
 
@@ -20,8 +20,8 @@
     }
     d2 = {
         "Landroidx/lifecycle/ProcessLifecycleInitializer;",
-        "Lnp7;",
-        "Lj88;",
+        "Lqs7;",
+        "Lad8;",
         "<init>",
         "()V",
         "lifecycle-process_release"
@@ -50,7 +50,7 @@
 .method public final a()Ljava/util/List;
     .locals 1
 
-    sget-object v0, Ldh5;->a:Ldh5;
+    sget-object v0, Lpj5;->a:Lpj5;
 
     return-object v0
 .end method
@@ -58,11 +58,11 @@
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
     .locals 3
 
-    invoke-static {p1}, Lbg8;->r(Landroid/content/Context;)Lbg8;
+    invoke-static {p1}, Lps0;->n(Landroid/content/Context;)Lps0;
 
     move-result-object v0
 
-    iget-object v0, v0, Lbg8;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lps0;->b:Ljava/lang/Object;
 
     check-cast v0, Ljava/util/HashSet;
 
@@ -74,7 +74,7 @@
 
     if-eqz v0, :cond_1
 
-    sget-object v0, Lb88;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    sget-object v0, Lsc8;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
 
@@ -93,14 +93,14 @@
 
     check-cast v0, Landroid/app/Application;
 
-    new-instance v1, La88;
+    new-instance v1, Lrc8;
 
-    invoke-direct {v1}, La88;-><init>()V
+    invoke-direct {v1}, Lrc8;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
     :goto_0
-    sget-object v0, Lpic;->t0:Lpic;
+    sget-object v0, Lcvc;->z0:Lcvc;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -108,13 +108,13 @@
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    iput-object v1, v0, Lpic;->o:Landroid/os/Handler;
+    iput-object v1, v0, Lcvc;->o:Landroid/os/Handler;
 
-    iget-object v1, v0, Lpic;->X:Ll88;
+    iget-object v1, v0, Lcvc;->X:Lcd8;
 
-    sget-object v2, Ln78;->ON_CREATE:Ln78;
+    sget-object v2, Lgc8;->ON_CREATE:Lgc8;
 
-    invoke-virtual {v1, v2}, Ll88;->d(Ln78;)V
+    invoke-virtual {v1, v2}, Lcd8;->d(Lgc8;)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -122,9 +122,9 @@
 
     check-cast p1, Landroid/app/Application;
 
-    new-instance v1, Loic;
+    new-instance v1, Lbvc;
 
-    invoke-direct {v1, v0}, Loic;-><init>(Lpic;)V
+    invoke-direct {v1, v0}, Lbvc;-><init>(Lcvc;)V
 
     invoke-virtual {p1, v1}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 

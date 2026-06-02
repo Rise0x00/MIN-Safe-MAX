@@ -1,109 +1,135 @@
-.class public final enum Lceh;
-.super Ljava/lang/Enum;
+.class public final Lceh;
+.super Lduc;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum a:Lceh;
-
-.field public static final enum b:Lceh;
-
-.field public static final enum c:Lceh;
-
-.field public static final synthetic d:[Lceh;
+.field public static final c:Lceh;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 8
+    .locals 2
 
     new-instance v0, Lceh;
 
-    const-string v1, "ACTION_PLAY"
+    sget-object v1, Ldeh;->a:Ldeh;
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1}, Lduc;-><init>(Lc88;)V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lceh;->a:Lceh;
-
-    new-instance v1, Lceh;
-
-    const-string v2, "FIRST_FRAME"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lceh;->b:Lceh;
-
-    new-instance v2, Lceh;
-
-    const-string v3, "FIRST_BYTES"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lceh;->c:Lceh;
-
-    new-instance v3, Lceh;
-
-    const-string v4, "CONTENT_ERROR"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v4, Lceh;
-
-    const-string v5, "EMPTY_BUFFER"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v5, Lceh;
-
-    const-string v6, "CLOSE_AT_EMPTY_BUFFER"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array/range {v0 .. v5}, [Lceh;
-
-    move-result-object v0
-
-    sput-object v0, Lceh;->d:[Lceh;
+    sput-object v0, Lceh;->c:Lceh;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lceh;
-    .locals 1
 
-    const-class v0, Lceh;
+# virtual methods
+.method public final h(Ljava/lang/Object;)I
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Laeh;
 
-    move-result-object p0
+    iget-object p1, p1, Laeh;->a:[J
 
-    check-cast p0, Lceh;
+    array-length p1, p1
 
-    return-object p0
+    return p1
 .end method
 
-.method public static values()[Lceh;
+.method public final j(Lqq3;ILjava/lang/Object;)V
+    .locals 3
+
+    check-cast p3, Lbeh;
+
+    iget-object v0, p0, Lduc;->b:Lcuc;
+
+    invoke-interface {p1, v0, p2}, Lqq3;->c(Lcuc;I)Lbn4;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lbn4;->u()J
+
+    move-result-wide p1
+
+    invoke-static {p3}, Lbuc;->c(Lbuc;)V
+
+    iget-object v0, p3, Lbeh;->a:[J
+
+    iget v1, p3, Lbeh;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p3, Lbeh;->b:I
+
+    aput-wide p1, v0, v1
+
+    return-void
+.end method
+
+.method public final k(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    sget-object v0, Lceh;->d:[Lceh;
+    check-cast p1, Laeh;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object p1, p1, Laeh;->a:[J
 
-    move-result-object v0
+    new-instance v0, Lbeh;
 
-    check-cast v0, [Lceh;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, v0, Lbeh;->a:[J
+
+    array-length p1, p1
+
+    iput p1, v0, Lbeh;->b:I
+
+    const/16 p1, 0xa
+
+    invoke-virtual {v0, p1}, Lbeh;->b(I)V
 
     return-object v0
+.end method
+
+.method public final n()Ljava/lang/Object;
+    .locals 2
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [J
+
+    new-instance v1, Laeh;
+
+    invoke-direct {v1, v0}, Laeh;-><init>([J)V
+
+    return-object v1
+.end method
+
+.method public final o(Lsq3;Ljava/lang/Object;I)V
+    .locals 4
+
+    check-cast p2, Laeh;
+
+    iget-object p2, p2, Laeh;->a:[J
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, p3, :cond_0
+
+    iget-object v1, p0, Lduc;->b:Lcuc;
+
+    invoke-interface {p1, v1, v0}, Lsq3;->A(Lcuc;I)Lvk5;
+
+    move-result-object v1
+
+    aget-wide v2, p2, v0
+
+    invoke-interface {v1, v2, v3}, Lvk5;->y(J)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method

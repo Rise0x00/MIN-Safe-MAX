@@ -1,33 +1,94 @@
-.class public abstract synthetic Ln3i;
+.class public final synthetic Ln3i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnrb;
+.implements Lyt6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:Lone/me/chatmedia/viewer/VideoWebViewScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lone/me/chatmedia/viewer/VideoWebViewScreen;)V
+    .locals 0
 
-    invoke-static {}, Ld3i;->values()[Ld3i;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ln3i;->a:Lone/me/chatmedia/viewer/VideoWebViewScreen;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    instance-of v0, p1, Lnrb;
+
+    if-eqz v0, :cond_0
+
+    instance-of v0, p1, Lyt6;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Ln3i;->getFunctionDelegate()Lqt6;
 
     move-result-object v0
 
-    array-length v0, v0
+    check-cast p1, Lyt6;
 
-    new-array v0, v0, [I
+    invoke-interface {p1}, Lyt6;->getFunctionDelegate()Lqt6;
 
-    const/4 v1, 0x1
+    move-result-object p1
 
-    :try_start_0
-    aput v1, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    :catch_0
-    sput-object v0, Ln3i;->$EnumSwitchMapping$0:[I
+    move-result p1
 
-    return-void
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final getFunctionDelegate()Lqt6;
+    .locals 7
+
+    new-instance v0, Lbu6;
+
+    const-string v6, "onUserInteraction()V"
+
+    const/4 v2, 0x0
+
+    const/4 v1, 0x0
+
+    const-class v3, Lone/me/chatmedia/viewer/VideoWebViewScreen;
+
+    iget-object v4, p0, Ln3i;->a:Lone/me/chatmedia/viewer/VideoWebViewScreen;
+
+    const-string v5, "onUserInteraction"
+
+    invoke-direct/range {v0 .. v6}, Lau6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    invoke-virtual {p0}, Ln3i;->getFunctionDelegate()Lqt6;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

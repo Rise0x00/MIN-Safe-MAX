@@ -1,118 +1,175 @@
 .class public final Lhuh;
-.super Ld0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/Choreographer$FrameCallback;
+.implements Landroid/os/Handler$Callback;
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lhuh;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final o:Lhuh;
 
 
 # instance fields
-.field public c:I
+.field public volatile a:J
 
-.field public final d:Landroid/os/Parcelable;
+.field public final b:Landroid/os/Handler;
+
+.field public c:Landroid/view/Choreographer;
+
+.field public d:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lc0;
+    new-instance v0, Lhuh;
 
-    const/16 v1, 0x9
+    invoke-direct {v0}, Lhuh;-><init>()V
 
-    invoke-direct {v0, v1}, Lc0;-><init>(I)V
-
-    sput-object v0, Lhuh;->CREATOR:Landroid/os/Parcelable$Creator;
+    sput-object v0, Lhuh;->o:Lhuh;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
-    invoke-direct {p0, p1, p2}, Ld0;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-nez p2, :cond_0
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
-    const-class p2, Lhuh;
+    iput-wide v0, p0, Lhuh;->a:J
 
-    invoke-virtual {p2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    new-instance v0, Landroid/os/HandlerThread;
 
-    move-result-object p2
+    const-string v1, "ExoPlayer:FrameReleaseChoreographer"
 
-    :cond_0
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    move-result v0
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    iput v0, p0, Lhuh;->c:I
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
+    move-result-object v0
 
-    move-result-object p1
+    sget-object v1, Lpnh;->a:Ljava/lang/String;
 
-    iput-object p1, p0, Lhuh;->d:Landroid/os/Parcelable;
+    new-instance v1, Landroid/os/Handler;
+
+    invoke-direct {v1, v0, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
+
+    iput-object v1, p0, Lhuh;->b:Landroid/os/Handler;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final doFrame(J)V
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-wide p1, p0, Lhuh;->a:J
 
-    const-string v1, "FragmentPager.SavedState{"
+    iget-object p1, p0, Lhuh;->c:Landroid/view/Choreographer;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+    const-wide/16 v0, 0x1f4
 
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " position="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lhuh;->c:I
-
-    const-string v2, "}"
-
-    invoke-static {v0, v1, v2}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
-
-    invoke-super {p0, p1, p2}, Ld0;->writeToParcel(Landroid/os/Parcel;I)V
-
-    iget v0, p0, Lhuh;->c:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-object v0, p0, Lhuh;->d:Landroid/os/Parcelable;
-
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+    invoke-virtual {p1, p0, v0, v1}, Landroid/view/Choreographer;->postFrameCallbackDelayed(Landroid/view/Choreographer$FrameCallback;J)V
 
     return-void
+.end method
+
+.method public final handleMessage(Landroid/os/Message;)Z
+    .locals 3
+
+    iget p1, p1, Landroid/os/Message;->what:I
+
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_4
+
+    const/4 v1, 0x2
+
+    if-eq p1, v1, :cond_2
+
+    const/4 v1, 0x3
+
+    if-eq p1, v1, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    iget-object p1, p0, Lhuh;->c:Landroid/view/Choreographer;
+
+    if-eqz p1, :cond_1
+
+    iget v1, p0, Lhuh;->d:I
+
+    sub-int/2addr v1, v0
+
+    iput v1, p0, Lhuh;->d:I
+
+    if-nez v1, :cond_1
+
+    invoke-virtual {p1, p0}, Landroid/view/Choreographer;->removeFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
+
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
+
+    iput-wide v1, p0, Lhuh;->a:J
+
+    :cond_1
+    return v0
+
+    :cond_2
+    iget-object p1, p0, Lhuh;->c:Landroid/view/Choreographer;
+
+    if-eqz p1, :cond_3
+
+    iget v1, p0, Lhuh;->d:I
+
+    add-int/2addr v1, v0
+
+    iput v1, p0, Lhuh;->d:I
+
+    if-ne v1, v0, :cond_3
+
+    invoke-virtual {p1, p0}, Landroid/view/Choreographer;->postFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
+
+    :cond_3
+    return v0
+
+    :cond_4
+    :try_start_0
+    invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lhuh;->c:Landroid/view/Choreographer;
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    const-string v1, "VideoFrameReleaseHelper"
+
+    const-string v2, "Vsync sampling disabled due to platform error"
+
+    invoke-static {v1, v2, p1}, Lq98;->Z(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_0
+    return v0
 .end method

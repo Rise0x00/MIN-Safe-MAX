@@ -233,11 +233,11 @@
 
     move-result-object v0
 
-    new-instance v1, Lhgh;
+    new-instance v1, Lp3e;
 
-    const/16 v2, 0xa
+    const/16 v2, 0x9
 
-    invoke-direct {v1, v2, p0}, Lhgh;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lp3e;-><init>(ILjava/lang/Object;)V
 
     invoke-interface {v0, v1}, Lcom/my/tracker/core/AsyncCore;->onUi(Ljava/lang/Runnable;)V
 
@@ -284,11 +284,11 @@
 
     move-result-object v0
 
-    new-instance v1, Lghh;
+    new-instance v1, Lrvi;
 
-    const/16 v2, 0x12
+    const/4 v2, 0x3
 
-    invoke-direct {v1, p0, v2, p1}, Lghh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v1, p0, v2, p1}, Lrvi;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-interface {v0, v1}, Lcom/my/tracker/core/AsyncCore;->onEngineWorker(Ljava/lang/Runnable;)V
 

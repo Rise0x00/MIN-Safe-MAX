@@ -1,80 +1,61 @@
-.class public final Ljab;
+.class public abstract Ljab;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:I
 
-.field public final synthetic b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/uikit/common/views/OneMeDraweeView;I)V
-    .locals 0
-
-    iput p2, p0, Ljab;->a:I
-
-    iput-object p1, p0, Ljab;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
+.method static constructor <clinit>()V
     .locals 1
 
-    iget v0, p0, Ljab;->a:I
+    sget v0, Llmd;->chat_list_multiselect_delete_count:I
 
-    packed-switch v0, :pswitch_data_0
+    sput v0, Ljab;->a:I
 
-    iget-object v0, p0, Ljab;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    sget v0, Llmd;->picker_chats_channel_limit_add_subscribers_error:I
 
-    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+    sput v0, Ljab;->b:I
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    sget v0, Llmd;->picker_chats_chat_limit_add_participant_error:I
 
-    return-void
+    sput v0, Ljab;->c:I
 
-    :pswitch_0
-    iget-object v0, p0, Ljab;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    sget v0, Llmd;->picker_chats_chat_participant_count_limit_error:I
 
-    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+    sput v0, Ljab;->d:I
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    sget v0, Llmd;->picker_chats_list_forward_messages:I
 
-    return-void
+    sput v0, Ljab;->e:I
 
-    :pswitch_1
-    iget-object v0, p0, Ljab;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    sget v0, Llmd;->picker_chats_list_share_files:I
 
-    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+    sput v0, Ljab;->f:I
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    sget v0, Llmd;->picker_chats_list_share_images:I
 
-    return-void
+    sput v0, Ljab;->g:I
 
-    :pswitch_2
-    iget-object v0, p0, Ljab;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    sget v0, Llmd;->picker_chats_list_share_videos:I
 
-    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    sput v0, Ljab;->h:I
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

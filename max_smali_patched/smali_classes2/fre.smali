@@ -1,11 +1,6 @@
-.class public interface abstract Lfre;
-.super Ljava/lang/Object;
+.class public abstract Lfre;
+.super Landroid/widget/HorizontalScrollView;
 .source "SourceFile"
 
-
-# virtual methods
-.method public abstract a(Ljava/lang/String;Ljava/lang/String;)V
-.end method
-
-.method public abstract b(Ljava/util/List;Ljava/util/List;)V
-.end method
+# interfaces
+.implements Landroid/widget/AdapterView$OnItemSelectedListener;

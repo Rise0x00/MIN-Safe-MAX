@@ -1,31 +1,92 @@
-.class public final Lchg;
+.class public final synthetic Lchg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Lav8;
+.field public final synthetic a:I
 
-.field public final b:Ldh5;
+.field public final synthetic b:Lwz3;
+
+.field public final synthetic c:Landroid/view/Surface;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public synthetic constructor <init>(Lwz3;Landroid/view/Surface;I)V
+    .locals 0
+
+    iput p3, p0, Lchg;->a:I
+
+    iput-object p1, p0, Lchg;->b:Lwz3;
+
+    iput-object p2, p0, Lchg;->c:Landroid/view/Surface;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lav8;
+    return-void
+.end method
 
-    const/16 v1, 0x3e8
 
-    invoke-direct {v0, v1}, Lav8;-><init>(I)V
+# virtual methods
+.method public final run()V
+    .locals 3
 
-    iput-object v0, p0, Lchg;->a:Lav8;
+    iget v0, p0, Lchg;->a:I
 
-    sget-object v0, Ldh5;->a:Ldh5;
+    packed-switch v0, :pswitch_data_0
 
-    iput-object v0, p0, Lchg;->b:Ldh5;
+    new-instance v0, Loh0;
+
+    const/4 v1, 0x4
+
+    iget-object v2, p0, Lchg;->c:Landroid/view/Surface;
+
+    invoke-direct {v0, v1, v2}, Loh0;-><init>(ILandroid/view/Surface;)V
+
+    iget-object v1, p0, Lchg;->b:Lwz3;
+
+    invoke-interface {v1, v0}, Lwz3;->accept(Ljava/lang/Object;)V
 
     return-void
+
+    :pswitch_0
+    new-instance v0, Loh0;
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Lchg;->c:Landroid/view/Surface;
+
+    invoke-direct {v0, v1, v2}, Loh0;-><init>(ILandroid/view/Surface;)V
+
+    iget-object v1, p0, Lchg;->b:Lwz3;
+
+    invoke-interface {v1, v0}, Lwz3;->accept(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_1
+    new-instance v0, Loh0;
+
+    const/4 v1, 0x2
+
+    iget-object v2, p0, Lchg;->c:Landroid/view/Surface;
+
+    invoke-direct {v0, v1, v2}, Loh0;-><init>(ILandroid/view/Surface;)V
+
+    iget-object v1, p0, Lchg;->b:Lwz3;
+
+    invoke-interface {v1, v0}, Lwz3;->accept(Ljava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,23 +1,13 @@
-.class public final Lcs;
-.super Ld3;
+.class public abstract Lcs;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lcs;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static a()I
+    .locals 1
 
-    new-instance v0, Lcs;
+    const/16 v0, 0x200
 
-    const/16 v1, 0xc
-
-    invoke-direct {v0, v1}, Ld3;-><init>(I)V
-
-    sput-object v0, Lcs;->c:Lcs;
-
-    return-void
+    return v0
 .end method

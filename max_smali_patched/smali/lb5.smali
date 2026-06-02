@@ -1,23 +1,20 @@
-.class public final Llb5;
+.class public interface abstract Llb5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# virtual methods
+.method public abstract A(ILki9;)V
+.end method
 
-.field public final b:I
+.method public abstract B(ILki9;)V
+.end method
 
+.method public abstract f(ILki9;Ljava/lang/Exception;)V
+.end method
 
-# direct methods
-.method public constructor <init>(II)V
-    .locals 0
+.method public abstract v(ILki9;I)V
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Llb5;->a:I
-
-    iput p2, p0, Llb5;->b:I
-
-    return-void
+.method public abstract w(ILki9;)V
 .end method

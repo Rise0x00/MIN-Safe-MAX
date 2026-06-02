@@ -1,403 +1,1756 @@
 .class public final Lyo8;
-.super Ljava/lang/Object;
+.super Liig;
 .source "SourceFile"
 
 # interfaces
-.implements Lmq0;
+.implements Lnt6;
 
 
 # instance fields
-.field public final a:Ldgc;
+.field public synthetic A0:Ljava/lang/Object;
 
-.field public final b:I
+.field public final synthetic B0:Lzo8;
 
-.field public final c:Lydc;
+.field public final synthetic C0:Z
 
-.field public d:I
+.field public X:Ln3e;
+
+.field public Y:I
+
+.field public Z:I
+
+.field public o:Ljava/util/List;
+
+.field public z0:I
 
 
 # direct methods
-.method public constructor <init>(ILyna;)V
-    .locals 2
+.method public constructor <init>(Lzo8;ZLkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lyo8;->B0:Lzo8;
 
-    new-instance v0, Ldgc;
+    iput-boolean p2, p0, Lyo8;->C0:Z
 
-    const/4 v1, 0x6
+    const/4 p1, 0x2
 
-    invoke-direct {v0, v1}, Ldgc;-><init>(I)V
-
-    iput-object v0, p0, Lyo8;->a:Ldgc;
-
-    iput p1, p0, Lyo8;->b:I
-
-    iput-object p2, p0, Lyo8;->c:Lydc;
+    invoke-direct {p0, p1, p3}, Liig;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lhj9;)V
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, Loc4;
 
-    int-to-double v0, v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+    invoke-virtual {p0, p1, p2}, Lyo8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-wide v4, p1, Lhj9;->a:D
+    move-result-object p1
 
-    sub-double/2addr v2, v4
+    check-cast p1, Lyo8;
 
-    mul-double/2addr v2, v0
+    sget-object p2, Lyeh;->a:Lyeh;
 
-    double-to-int p1, v2
+    invoke-virtual {p1, p2}, Lyo8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Lyo8;->e(I)V
+    move-result-object p1
 
-    return-void
+    return-object p1
 .end method
 
-.method public final d(Ljava/lang/Object;)V
-    .locals 6
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    check-cast p1, Landroid/graphics/Bitmap;
+    new-instance v0, Lyo8;
 
-    iget-object v0, p0, Lyo8;->a:Ldgc;
+    iget-object v1, p0, Lyo8;->B0:Lzo8;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-boolean v2, p0, Lyo8;->C0:Z
 
-    invoke-static {p1}, Lwq0;->d(Landroid/graphics/Bitmap;)I
+    invoke-direct {v0, v1, v2, p2}, Lyo8;-><init>(Lzo8;ZLkotlin/coroutines/Continuation;)V
 
-    move-result v0
+    iput-object p1, v0, Lyo8;->A0:Ljava/lang/Object;
 
-    iget v1, p0, Lyo8;->b:I
+    return-object v0
+.end method
 
-    if-gt v0, v1, :cond_4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 22
 
-    iget-object v1, p0, Lyo8;->c:Lydc;
+    move-object/from16 v1, p0
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object v0, Lgp8;->d:Lgp8;
 
-    iget-object v1, p0, Lyo8;->a:Ldgc;
+    iget-object v2, v1, Lyo8;->A0:Ljava/lang/Object;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v2, Loc4;
 
-    invoke-static {p1}, Ldgc;->y(Landroid/graphics/Bitmap;)Z
+    sget-object v3, Lpc4;->a:Lpc4;
 
-    move-result v2
+    iget v4, v1, Lyo8;->z0:I
 
-    if-eqz v2, :cond_3
+    const-string v6, "LOG_DISCONNECTION_BLOCKER"
 
-    monitor-enter v1
+    const-string v7, "Failed to send logs "
+
+    const/4 v9, 0x5
+
+    const/4 v10, 0x3
+
+    const/4 v11, 0x2
+
+    const-string v12, "LogController"
+
+    const/4 v13, 0x4
+
+    const/4 v15, 0x1
+
+    const/16 v16, 0x10
+
+    if-eqz v4, :cond_5
+
+    if-eq v4, v15, :cond_4
+
+    if-eq v4, v11, :cond_3
+
+    if-eq v4, v10, :cond_2
+
+    if-eq v4, v13, :cond_1
+
+    if-ne v4, v9, :cond_0
 
     :try_start_0
-    iget-object v2, v1, Ldgc;->b:Ljava/lang/Object;
-
-    check-cast v2, Ljava/util/HashSet;
-
-    invoke-virtual {v2, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    monitor-exit v1
+    invoke-static/range {p1 .. p1}, Lmtd;->g0(Ljava/lang/Object;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v2, :cond_3
+    :goto_0
+    move-object v4, v6
 
-    iget-object v1, v1, Ldgc;->c:Ljava/lang/Object;
-
-    check-cast v1, Lje9;
-
-    invoke-static {p1}, Lwq0;->d(Landroid/graphics/Bitmap;)I
-
-    move-result v2
-
-    monitor-enter v1
-
-    :try_start_1
-    iget-object v3, v1, Lje9;->b:Ljava/lang/Object;
-
-    check-cast v3, Landroid/util/SparseArray;
-
-    invoke-virtual {v3, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lnv0;
-
-    if-nez v3, :cond_0
-
-    new-instance v3, Lnv0;
-
-    new-instance v4, Ljava/util/LinkedList;
-
-    invoke-direct {v4}, Ljava/util/LinkedList;-><init>()V
-
-    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
-
-    const/4 v5, 0x0
-
-    iput-object v5, v3, Lnv0;->a:Lnv0;
-
-    iput v2, v3, Lnv0;->b:I
-
-    iput-object v4, v3, Lnv0;->c:Ljava/util/LinkedList;
-
-    iput-object v5, v3, Lnv0;->d:Lnv0;
-
-    iget-object v4, v1, Lje9;->b:Ljava/lang/Object;
-
-    check-cast v4, Landroid/util/SparseArray;
-
-    invoke-virtual {v4, v2, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    goto :goto_0
+    goto/16 :goto_31
 
     :catchall_0
-    move-exception p1
+    move-exception v0
 
-    goto :goto_2
+    move-object v4, v6
+
+    goto/16 :goto_35
 
     :cond_0
-    :goto_0
-    iget-object v2, v3, Lnv0;->c:Ljava/util/LinkedList;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v2, p1}, Ljava/util/LinkedList;->addLast(Ljava/lang/Object;)V
+    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget-object p1, v1, Lje9;->c:Ljava/lang/Object;
+    invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    check-cast p1, Lnv0;
-
-    if-ne p1, v3, :cond_1
-
-    goto :goto_1
+    throw v0
 
     :cond_1
-    invoke-virtual {v1, v3}, Lje9;->x(Lnv0;)V
+    :try_start_1
+    invoke-static/range {p1 .. p1}, Lmtd;->g0(Ljava/lang/Object;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    iget-object p1, v1, Lje9;->c:Ljava/lang/Object;
-
-    check-cast p1, Lnv0;
-
-    if-nez p1, :cond_2
-
-    iput-object v3, v1, Lje9;->c:Ljava/lang/Object;
-
-    iput-object v3, v1, Lje9;->d:Ljava/lang/Object;
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_2
-    iput-object p1, v3, Lnv0;->d:Lnv0;
+    iget v4, v1, Lyo8;->Z:I
 
-    iput-object v3, p1, Lnv0;->a:Lnv0;
+    iget v13, v1, Lyo8;->Y:I
 
-    iput-object v3, v1, Lje9;->c:Ljava/lang/Object;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iget-object v14, v1, Lyo8;->X:Ln3e;
 
-    :goto_1
-    monitor-exit v1
+    iget-object v10, v1, Lyo8;->o:Ljava/util/List;
 
-    goto :goto_3
-
-    :goto_2
     :try_start_2
-    monitor-exit v1
+    invoke-static/range {p1 .. p1}, Lmtd;->g0(Ljava/lang/Object;)V
     :try_end_2
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    throw p1
+    move v5, v4
 
-    :catchall_1
-    move-exception p1
+    move-object/from16 v19, v6
 
-    :try_start_3
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    move-object/from16 v20, v7
 
-    throw p1
+    move-object/from16 v17, v12
+
+    move v6, v13
+
+    const/4 v4, 0x3
+
+    const/16 v15, 0xa
+
+    move v13, v11
+
+    goto/16 :goto_1b
+
+    :catch_0
+    move-exception v0
+
+    move-object v4, v6
+
+    move-object/from16 v20, v7
+
+    move-object v9, v12
+
+    move v6, v13
+
+    goto/16 :goto_30
+
+    :catch_1
+    move-exception v0
+
+    move-object v4, v6
+
+    move-object v9, v12
+
+    move v6, v13
+
+    goto/16 :goto_32
 
     :cond_3
-    :goto_3
-    monitor-enter p0
+    iget v4, v1, Lyo8;->Z:I
 
-    :try_start_4
-    iget p1, p0, Lyo8;->d:I
+    iget v10, v1, Lyo8;->Y:I
 
-    add-int/2addr p1, v0
+    iget-object v14, v1, Lyo8;->X:Ln3e;
 
-    iput p1, p0, Lyo8;->d:I
+    iget-object v13, v1, Lyo8;->o:Ljava/util/List;
 
-    monitor-exit p0
+    :try_start_3
+    invoke-static/range {p1 .. p1}, Lmtd;->g0(Ljava/lang/Object;)V
+    :try_end_3
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_3 .. :try_end_3} :catch_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    return-void
+    move v5, v4
 
-    :catchall_2
-    move-exception p1
+    move-object/from16 v19, v6
 
-    monitor-exit p0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+    move-object/from16 v20, v7
 
-    throw p1
+    move v6, v10
+
+    move-object v10, v13
+
+    move v7, v15
+
+    move v13, v11
+
+    goto/16 :goto_17
+
+    :catch_2
+    move-exception v0
+
+    move-object v4, v6
+
+    move-object/from16 v20, v7
+
+    move v6, v10
+
+    move-object v9, v12
+
+    move-object v10, v13
+
+    goto/16 :goto_30
+
+    :catch_3
+    move-exception v0
+
+    move-object v4, v6
+
+    move v6, v10
+
+    move-object v9, v12
+
+    move-object v10, v13
+
+    goto/16 :goto_32
 
     :cond_4
-    return-void
-.end method
+    iget v4, v1, Lyo8;->Z:I
 
-.method public final declared-synchronized e(I)V
-    .locals 2
+    iget v10, v1, Lyo8;->Y:I
 
-    monitor-enter p0
+    iget-object v14, v1, Lyo8;->X:Ln3e;
 
-    :goto_0
-    :try_start_0
-    iget v0, p0, Lyo8;->d:I
+    iget-object v13, v1, Lyo8;->o:Ljava/util/List;
 
-    if-le v0, p1, :cond_1
+    :try_start_4
+    invoke-static/range {p1 .. p1}, Lmtd;->g0(Ljava/lang/Object;)V
+    :try_end_4
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_4 .. :try_end_4} :catch_3
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    iget-object v0, p0, Lyo8;->a:Ldgc;
+    move-object/from16 v19, v6
 
-    invoke-virtual {v0}, Ldgc;->C()Ljava/lang/Object;
+    move-object/from16 v20, v7
 
-    move-result-object v0
+    move v7, v15
 
-    check-cast v0, Landroid/graphics/Bitmap;
+    move-object/from16 v6, p1
 
-    if-nez v0, :cond_0
+    :goto_1
+    move v5, v4
 
-    goto :goto_1
+    goto/16 :goto_10
 
-    :cond_0
-    iget-object v1, p0, Lyo8;->a:Ldgc;
+    :cond_5
+    invoke-static/range {p1 .. p1}, Lmtd;->g0(Ljava/lang/Object;)V
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object v10, Lpj5;->a:Lpj5;
 
-    invoke-static {v0}, Lwq0;->d(Landroid/graphics/Bitmap;)I
+    new-instance v14, Ln3e;
 
-    move-result v0
+    invoke-direct {v14}, Ljava/lang/Object;-><init>()V
 
-    iget v1, p0, Lyo8;->d:I
+    iput-object v10, v14, Ln3e;->a:Ljava/lang/Object;
 
-    sub-int/2addr v1, v0
+    :try_start_5
+    sget-object v4, Lad5;->b:Lwra;
+    :try_end_5
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_5 .. :try_end_5} :catch_32
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_31
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    iput v1, p0, Lyo8;->d:I
+    move-object/from16 p1, v10
 
-    iget-object v0, p0, Lyo8;->c:Lydc;
+    :try_start_6
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-wide v9
 
-    goto :goto_0
+    sget-object v13, Lhd5;->d:Lhd5;
 
-    :catchall_0
-    move-exception p1
+    invoke-static {v9, v10, v13}, Ls5b;->O(JLhd5;)J
+
+    move-result-wide v9
+
+    iget-object v4, v1, Lyo8;->B0:Lzo8;
+
+    invoke-virtual {v4}, Lzo8;->c()Lmf3;
+
+    move-result-object v4
+    :try_end_6
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_6 .. :try_end_6} :catch_30
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_2f
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+
+    :try_start_7
+    check-cast v4, Lese;
+
+    iget-object v11, v4, Lese;->u:Lskg;
+
+    sget-object v18, Lese;->m0:[Lb88;
+
+    aget-object v8, v18, v16
+
+    invoke-virtual {v11, v4, v8}, Lskg;->y(Ljava/lang/Object;Lb88;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Number;
+    :try_end_7
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_7 .. :try_end_7} :catch_2e
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_2d
+    .catchall {:try_start_7 .. :try_end_7} :catchall_0
+
+    move-object v8, v6
+
+    :try_start_8
+    invoke-virtual {v4}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v5
+    :try_end_8
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_8 .. :try_end_8} :catch_2c
+    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_2b
+    .catchall {:try_start_8 .. :try_end_8} :catchall_3
+
+    :try_start_9
+    invoke-static {v5, v6, v13}, Ls5b;->O(JLhd5;)J
+
+    move-result-wide v4
+
+    invoke-static {v9, v10, v4, v5}, Lad5;->q(JJ)J
+
+    move-result-wide v4
+
+    sget-object v6, Lhd5;->Y:Lhd5;
+
+    const/4 v9, 0x6
+
+    invoke-static {v9, v6}, Ls5b;->N(ILhd5;)J
+
+    move-result-wide v9
+
+    invoke-static {v4, v5, v9, v10}, Lad5;->d(JJ)I
+
+    move-result v4
+    :try_end_9
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_9 .. :try_end_9} :catch_2a
+    .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_29
+    .catchall {:try_start_9 .. :try_end_9} :catchall_3
+
+    if-lez v4, :cond_6
+
+    move v4, v15
 
     goto :goto_2
 
-    :cond_1
-    :goto_1
-    monitor-exit p0
-
-    return-void
+    :cond_6
+    const/4 v4, 0x0
 
     :goto_2
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    move-object/from16 v5, p1
 
-    throw p1
-.end method
+    const/4 v10, 0x0
 
-.method public final get(I)Ljava/lang/Object;
-    .locals 2
+    :goto_3
+    :try_start_a
+    invoke-static {v2}, Lsr6;->J(Loc4;)Z
 
-    monitor-enter p0
+    move-result v6
+    :try_end_a
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_a .. :try_end_a} :catch_28
+    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_27
+    .catchall {:try_start_a .. :try_end_a} :catchall_3
 
-    :try_start_0
-    iget v0, p0, Lyo8;->d:I
+    if-eqz v6, :cond_14
 
-    if-lez v0, :cond_0
+    :try_start_b
+    iget-object v6, v1, Lyo8;->B0:Lzo8;
 
-    const/4 v0, 0x0
+    iget-boolean v9, v1, Lyo8;->C0:Z
 
-    invoke-virtual {p0, v0}, Lyo8;->e(I)V
+    sget-object v13, Lnm4;->d:Lnfb;
 
-    goto :goto_0
+    if-nez v13, :cond_8
 
-    :catchall_0
-    move-exception p1
+    :cond_7
+    move-object/from16 v20, v7
 
-    goto :goto_1
+    move-object/from16 v19, v8
 
-    :cond_0
-    :goto_0
-    iget-object v0, p0, Lyo8;->a:Ldgc;
+    goto/16 :goto_e
 
-    invoke-virtual {v0, p1}, Ldgc;->r(I)Landroid/graphics/Bitmap;
+    :cond_8
+    invoke-virtual {v13, v0}, Lnfb;->b(Lgp8;)Z
+
+    move-result v18
+    :try_end_b
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_b .. :try_end_b} :catch_22
+    .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_21
+    .catchall {:try_start_b .. :try_end_b} :catchall_2
+
+    if-eqz v18, :cond_7
+
+    :try_start_c
+    invoke-virtual {v6}, Lzo8;->e()Z
+
+    move-result v11
+
+    iget-object v6, v6, Lzo8;->a:Lkfe;
+
+    invoke-virtual {v6}, Lkfe;->f()Z
+
+    move-result v6
+    :try_end_c
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_c .. :try_end_c} :catch_9
+    .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_8
+    .catchall {:try_start_c .. :try_end_c} :catchall_2
+
+    if-eqz v4, :cond_9
+
+    :goto_4
+    move-object/from16 v19, v8
+
+    goto :goto_5
+
+    :cond_9
+    const/4 v15, 0x0
+
+    goto :goto_4
+
+    :goto_5
+    :try_start_d
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    :try_end_d
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_d .. :try_end_d} :catch_7
+    .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_6
+    .catchall {:try_start_d .. :try_end_d} :catchall_1
+
+    move-object/from16 v20, v7
+
+    :try_start_e
+    const-string v7, "Try sending another batch of logs. isDisabled: "
+
+    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v11}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v7, ", visible: "
+
+    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v6, ", force="
+
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v6, ", isPassedCriticalTimeSinceLastLog="
+
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v15}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    const/4 v11, 0x0
+
+    invoke-virtual {v13, v0, v12, v6, v11}, Lnfb;->c(Lgp8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_e
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_e .. :try_end_e} :catch_5
+    .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_4
+    .catchall {:try_start_e .. :try_end_e} :catchall_1
+
+    goto :goto_e
+
+    :catchall_1
+    move-exception v0
+
+    :goto_6
+    move-object/from16 v4, v19
+
+    goto/16 :goto_35
+
+    :catch_4
+    move-exception v0
+
+    :goto_7
+    move v6, v10
+
+    move-object v9, v12
+
+    :goto_8
+    move-object/from16 v4, v19
+
+    :goto_9
+    move-object v10, v5
+
+    goto/16 :goto_30
+
+    :catch_5
+    move-exception v0
+
+    move v6, v10
+
+    move-object v9, v12
+
+    :goto_a
+    move-object/from16 v4, v19
+
+    move-object/from16 v7, v20
+
+    :goto_b
+    move-object v10, v5
+
+    goto/16 :goto_32
+
+    :catch_6
+    move-exception v0
+
+    move-object/from16 v20, v7
+
+    goto :goto_7
+
+    :catch_7
+    move-exception v0
+
+    move-object/from16 v20, v7
+
+    :goto_c
+    move v6, v10
+
+    move-object v9, v12
+
+    :goto_d
+    move-object/from16 v4, v19
+
+    goto :goto_b
+
+    :catchall_2
+    move-exception v0
+
+    move-object/from16 v19, v8
+
+    goto :goto_6
+
+    :catch_8
+    move-exception v0
+
+    move-object/from16 v20, v7
+
+    move-object/from16 v19, v8
+
+    goto :goto_7
+
+    :catch_9
+    move-exception v0
+
+    move-object/from16 v20, v7
+
+    move-object/from16 v19, v8
+
+    goto :goto_c
+
+    :goto_e
+    :try_start_f
+    iget-boolean v6, v1, Lyo8;->C0:Z
+    :try_end_f
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_f .. :try_end_f} :catch_20
+    .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_1f
+    .catchall {:try_start_f .. :try_end_f} :catchall_1
+
+    if-nez v6, :cond_b
+
+    :try_start_10
+    iget-object v6, v1, Lyo8;->B0:Lzo8;
+
+    invoke-virtual {v6}, Lzo8;->e()Z
+
+    move-result v6
+
+    if-nez v6, :cond_a
+
+    iget-object v6, v1, Lyo8;->B0:Lzo8;
+
+    iget-object v6, v6, Lzo8;->a:Lkfe;
+
+    invoke-virtual {v6}, Lkfe;->f()Z
+
+    move-result v6
+    :try_end_10
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_10 .. :try_end_10} :catch_5
+    .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_4
+    .catchall {:try_start_10 .. :try_end_10} :catchall_1
+
+    if-eqz v6, :cond_b
+
+    if-nez v4, :cond_b
+
+    :cond_a
+    :goto_f
+    move-object v9, v12
+
+    goto/16 :goto_22
+
+    :cond_b
+    :try_start_11
+    iget-object v6, v1, Lyo8;->B0:Lzo8;
+    :try_end_11
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_11 .. :try_end_11} :catch_20
+    .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_11} :catch_1f
+    .catchall {:try_start_11 .. :try_end_11} :catchall_1
+
+    :try_start_12
+    iget-object v6, v6, Lzo8;->c:Lia8;
+
+    invoke-interface {v6}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, La2g;
+    :try_end_12
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_12 .. :try_end_12} :catch_20
+    .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_1e
+    .catchall {:try_start_12 .. :try_end_12} :catchall_1
+
+    :try_start_13
+    iput-object v2, v1, Lyo8;->A0:Ljava/lang/Object;
+
+    iput-object v5, v1, Lyo8;->o:Ljava/util/List;
+
+    iput-object v14, v1, Lyo8;->X:Ln3e;
+
+    iput v10, v1, Lyo8;->Y:I
+
+    iput v4, v1, Lyo8;->Z:I
+
+    const/4 v7, 0x1
+
+    iput v7, v1, Lyo8;->z0:I
+    :try_end_13
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_13 .. :try_end_13} :catch_20
+    .catch Ljava/lang/Exception; {:try_start_13 .. :try_end_13} :catch_1f
+    .catchall {:try_start_13 .. :try_end_13} :catchall_1
+
+    :try_start_14
+    check-cast v6, Lfee;
+
+    invoke-virtual {v6, v1}, Lfee;->b(Lyo8;)Ljava/lang/Object;
+
+    move-result-object v6
+    :try_end_14
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_14 .. :try_end_14} :catch_20
+    .catch Ljava/lang/Exception; {:try_start_14 .. :try_end_14} :catch_1e
+    .catchall {:try_start_14 .. :try_end_14} :catchall_1
+
+    if-ne v6, v3, :cond_c
+
+    goto/16 :goto_33
+
+    :cond_c
+    move-object v13, v5
+
+    goto/16 :goto_1
+
+    :goto_10
+    :try_start_15
+    check-cast v6, Ljava/util/List;
+    :try_end_15
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_15 .. :try_end_15} :catch_1d
+    .catch Ljava/lang/Exception; {:try_start_15 .. :try_end_15} :catch_1c
+    .catchall {:try_start_15 .. :try_end_15} :catchall_1
+
+    :try_start_16
+    invoke-interface {v6}, Ljava/util/List;->isEmpty()Z
+
+    move-result v4
+
+    if-nez v4, :cond_13
+
+    iget-object v4, v1, Lyo8;->B0:Lzo8;
+
+    new-instance v8, Ljava/util/ArrayList;
+
+    const/16 v9, 0xa
+
+    invoke-static {v6, v9}, Lkj3;->S0(Ljava/lang/Iterable;I)I
+
+    move-result v13
+
+    invoke-direct {v8, v13}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-interface {v6}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v9
+
+    :goto_11
+    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v13
+    :try_end_16
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_16 .. :try_end_16} :catch_1b
+    .catch Ljava/lang/Exception; {:try_start_16 .. :try_end_16} :catch_1a
+    .catchall {:try_start_16 .. :try_end_16} :catchall_1
+
+    if-eqz v13, :cond_d
+
+    :try_start_17
+    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v13
+
+    check-cast v13, Ll0g;
+
+    invoke-static {v4, v13}, Lzo8;->b(Lzo8;Ll0g;)Lvn;
+
+    move-result-object v13
+
+    invoke-virtual {v8, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_17
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_17 .. :try_end_17} :catch_b
+    .catch Ljava/lang/Exception; {:try_start_17 .. :try_end_17} :catch_a
+    .catchall {:try_start_17 .. :try_end_17} :catchall_1
+
+    goto :goto_11
+
+    :catch_a
+    move-exception v0
+
+    move v4, v10
+
+    move-object v10, v6
+
+    move v6, v4
+
+    :goto_12
+    move-object v9, v12
+
+    :goto_13
+    move-object/from16 v4, v19
+
+    goto/16 :goto_30
+
+    :catch_b
+    move-exception v0
+
+    move v4, v10
+
+    move-object v10, v6
+
+    move v6, v4
+
+    :goto_14
+    move-object v9, v12
+
+    :goto_15
+    move-object/from16 v4, v19
+
+    :goto_16
+    move-object/from16 v7, v20
+
+    goto/16 :goto_32
+
+    :cond_d
+    :try_start_18
+    iput-object v8, v14, Ln3e;->a:Ljava/lang/Object;
+
+    iget-object v4, v1, Lyo8;->B0:Lzo8;
+
+    iget-object v4, v4, Lzo8;->f:Lia8;
+
+    invoke-interface {v4}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    move-object v8, v4
+
+    check-cast v8, Lwog;
+
+    new-instance v9, Lgx;
+
+    iget-object v4, v14, Ln3e;->a:Ljava/lang/Object;
+
+    check-cast v4, Ljava/util/List;
+
+    const/4 v13, 0x5
+
+    invoke-direct {v9, v13, v4}, Lgx;-><init>(ILjava/util/List;)V
+
+    iput-object v2, v1, Lyo8;->A0:Ljava/lang/Object;
+
+    iput-object v6, v1, Lyo8;->o:Ljava/util/List;
+
+    iput-object v14, v1, Lyo8;->X:Ln3e;
+
+    iput v10, v1, Lyo8;->Y:I
+
+    iput v5, v1, Lyo8;->Z:I
+
+    const/4 v13, 0x2
+
+    iput v13, v1, Lyo8;->z0:I
+
+    invoke-virtual {v8, v9, v1}, Lwog;->e(Lp2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v8
+    :try_end_18
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_18 .. :try_end_18} :catch_1b
+    .catch Ljava/lang/Exception; {:try_start_18 .. :try_end_18} :catch_1a
+    .catchall {:try_start_18 .. :try_end_18} :catchall_1
+
+    if-ne v8, v3, :cond_e
+
+    goto/16 :goto_33
+
+    :cond_e
+    move/from16 v21, v10
+
+    move-object v10, v6
+
+    move/from16 v6, v21
+
+    :goto_17
+    :try_start_19
+    iget-object v8, v1, Lyo8;->B0:Lzo8;
+    :try_end_19
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_19 .. :try_end_19} :catch_17
+    .catch Ljava/lang/Exception; {:try_start_19 .. :try_end_19} :catch_16
+    .catchall {:try_start_19 .. :try_end_19} :catchall_1
+
+    :try_start_1a
+    iget-object v8, v8, Lzo8;->c:Lia8;
+
+    invoke-interface {v8}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, La2g;
+    :try_end_1a
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_1a .. :try_end_1a} :catch_19
+    .catch Ljava/lang/Exception; {:try_start_1a .. :try_end_1a} :catch_18
+    .catchall {:try_start_1a .. :try_end_1a} :catchall_1
+
+    :try_start_1b
+    new-instance v9, Ljava/util/ArrayList;
+
+    const/16 v15, 0xa
+
+    invoke-static {v10, v15}, Lkj3;->S0(Ljava/lang/Iterable;I)I
+
+    move-result v4
+
+    invoke-direct {v9, v4}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-interface {v10}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    :goto_18
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v17
+    :try_end_1b
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_1b .. :try_end_1b} :catch_17
+    .catch Ljava/lang/Exception; {:try_start_1b .. :try_end_1b} :catch_16
+    .catchall {:try_start_1b .. :try_end_1b} :catchall_1
+
+    if-eqz v17, :cond_f
+
+    :try_start_1c
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v17
+
+    move-object/from16 v7, v17
+
+    check-cast v7, Ll0g;
+    :try_end_1c
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_1c .. :try_end_1c} :catch_f
+    .catch Ljava/lang/Exception; {:try_start_1c .. :try_end_1c} :catch_e
+    .catchall {:try_start_1c .. :try_end_1c} :catchall_1
+
+    move-object/from16 v17, v12
+
+    :try_start_1d
+    iget-wide v11, v7, Ll0g;->a:J
+
+    new-instance v7, Ljava/lang/Long;
+
+    invoke-direct {v7, v11, v12}, Ljava/lang/Long;-><init>(J)V
+
+    invoke-virtual {v9, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    move-object/from16 v12, v17
+
+    const/4 v7, 0x1
+
+    goto :goto_18
+
+    :catch_c
+    move-exception v0
+
+    :goto_19
+    move-object/from16 v9, v17
+
+    goto :goto_13
+
+    :catch_d
+    move-exception v0
+
+    :goto_1a
+    move-object/from16 v9, v17
+
+    goto :goto_15
+
+    :catch_e
+    move-exception v0
+
+    move-object/from16 v17, v12
+
+    goto :goto_19
+
+    :catch_f
+    move-exception v0
+
+    move-object/from16 v17, v12
+
+    goto :goto_1a
+
+    :cond_f
+    move-object/from16 v17, v12
+
+    iput-object v2, v1, Lyo8;->A0:Ljava/lang/Object;
+
+    iput-object v10, v1, Lyo8;->o:Ljava/util/List;
+
+    iput-object v14, v1, Lyo8;->X:Ln3e;
+
+    iput v6, v1, Lyo8;->Y:I
+
+    iput v5, v1, Lyo8;->Z:I
+
+    const/4 v4, 0x3
+
+    iput v4, v1, Lyo8;->z0:I
+    :try_end_1d
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_1d .. :try_end_1d} :catch_d
+    .catch Ljava/lang/Exception; {:try_start_1d .. :try_end_1d} :catch_c
+    .catchall {:try_start_1d .. :try_end_1d} :catchall_1
+
+    :try_start_1e
+    check-cast v8, Lfee;
+
+    invoke-virtual {v8, v9, v1}, Lfee;->a(Ljava/util/ArrayList;Lz84;)Ljava/lang/Object;
+
+    move-result-object v7
+    :try_end_1e
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_1e .. :try_end_1e} :catch_15
+    .catch Ljava/lang/Exception; {:try_start_1e .. :try_end_1e} :catch_14
+    .catchall {:try_start_1e .. :try_end_1e} :catchall_1
+
+    if-ne v7, v3, :cond_10
+
+    goto/16 :goto_33
+
+    :cond_10
+    :goto_1b
+    :try_start_1f
+    iget-object v7, v1, Lyo8;->B0:Lzo8;
+
+    invoke-virtual {v7}, Lzo8;->c()Lmf3;
+
+    move-result-object v7
+    :try_end_1f
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_1f .. :try_end_1f} :catch_d
+    .catch Ljava/lang/Exception; {:try_start_1f .. :try_end_1f} :catch_c
+    .catchall {:try_start_1f .. :try_end_1f} :catchall_1
+
+    :try_start_20
+    check-cast v7, Lese;
+
+    const/4 v8, 0x0
+
+    invoke-virtual {v7, v8}, Lese;->D(I)V
+    :try_end_20
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_20 .. :try_end_20} :catch_15
+    .catch Ljava/lang/Exception; {:try_start_20 .. :try_end_20} :catch_14
+    .catchall {:try_start_20 .. :try_end_20} :catchall_1
+
+    :try_start_21
+    sget-object v6, Lnm4;->d:Lnfb;
+
+    if-nez v6, :cond_12
+
+    :cond_11
+    move-object/from16 v9, v17
+
+    goto :goto_1e
+
+    :cond_12
+    invoke-virtual {v6, v0}, Lnfb;->b(Lgp8;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_11
+
+    iget-object v7, v14, Ln3e;->a:Ljava/lang/Object;
+
+    check-cast v7, Ljava/util/List;
+
+    invoke-interface {v7}, Ljava/util/List;->size()I
+
+    move-result v7
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v11, "Sent "
+
+    invoke-virtual {v9, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v7, " logs"
+
+    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+    :try_end_21
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_21 .. :try_end_21} :catch_13
+    .catch Ljava/lang/Exception; {:try_start_21 .. :try_end_21} :catch_12
+    .catchall {:try_start_21 .. :try_end_21} :catchall_1
+
+    move-object/from16 v9, v17
+
+    const/4 v11, 0x0
+
+    :try_start_22
+    invoke-virtual {v6, v0, v9, v7, v11}, Lnfb;->c(Lgp8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_22
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_22 .. :try_end_22} :catch_11
+    .catch Ljava/lang/Exception; {:try_start_22 .. :try_end_22} :catch_10
+    .catchall {:try_start_22 .. :try_end_22} :catchall_1
+
+    goto :goto_1e
+
+    :catch_10
+    move-exception v0
+
+    :goto_1c
+    move-object/from16 v4, v19
+
+    const/4 v6, 0x1
+
+    goto/16 :goto_30
+
+    :catch_11
+    move-exception v0
+
+    :goto_1d
+    move-object/from16 v4, v19
+
+    move-object/from16 v7, v20
+
+    const/4 v6, 0x1
+
+    goto/16 :goto_32
+
+    :catch_12
+    move-exception v0
+
+    move-object/from16 v9, v17
+
+    goto :goto_1c
+
+    :catch_13
+    move-exception v0
+
+    move-object/from16 v9, v17
+
+    goto :goto_1d
+
+    :goto_1e
+    move v4, v5
+
+    move-object v12, v9
+
+    move-object v5, v10
+
+    move-object/from16 v8, v19
+
+    move-object/from16 v7, v20
+
+    const/4 v10, 0x1
+
+    const/4 v15, 0x1
+
+    goto/16 :goto_3
+
+    :catch_14
+    move-exception v0
+
+    goto/16 :goto_19
+
+    :catch_15
+    move-exception v0
+
+    goto/16 :goto_1a
+
+    :catch_16
+    move-exception v0
+
+    goto/16 :goto_12
+
+    :catch_17
+    move-exception v0
+
+    goto/16 :goto_14
+
+    :catch_18
+    move-exception v0
+
+    goto/16 :goto_12
+
+    :catch_19
+    move-exception v0
+
+    goto/16 :goto_14
+
+    :catch_1a
+    move-exception v0
+
+    move-object v9, v12
+
+    move v4, v10
+
+    move-object v10, v6
+
+    move v6, v4
+
+    goto/16 :goto_13
+
+    :catch_1b
+    move-exception v0
+
+    move-object v9, v12
+
+    move v4, v10
+
+    move-object v10, v6
+
+    move v6, v4
+
+    goto/16 :goto_15
+
+    :cond_13
+    move-object v9, v12
+
+    move-object v2, v14
+
+    move v14, v10
+
+    move-object v10, v6
+
+    goto :goto_23
+
+    :catch_1c
+    move-exception v0
+
+    move-object v9, v12
+
+    move v6, v10
+
+    move-object v10, v13
+
+    goto/16 :goto_13
+
+    :catch_1d
+    move-exception v0
+
+    move-object v9, v12
+
+    move v6, v10
+
+    move-object v10, v13
+
+    goto/16 :goto_15
+
+    :catch_1e
+    move-exception v0
+
+    goto :goto_21
+
+    :goto_1f
+    move v6, v10
+
+    goto/16 :goto_8
+
+    :goto_20
+    move v6, v10
+
+    goto/16 :goto_a
+
+    :catch_1f
+    move-exception v0
+
+    :goto_21
+    move-object v9, v12
+
+    goto :goto_1f
+
+    :catch_20
+    move-exception v0
+
+    move-object v9, v12
+
+    goto :goto_20
+
+    :catch_21
+    move-exception v0
+
+    move-object/from16 v20, v7
+
+    move-object/from16 v19, v8
+
+    goto :goto_21
+
+    :catch_22
+    move-exception v0
+
+    move-object/from16 v20, v7
+
+    move-object/from16 v19, v8
+
+    move-object v9, v12
+
+    move v6, v10
+
+    goto/16 :goto_d
+
+    :cond_14
+    move-object/from16 v20, v7
+
+    move-object/from16 v19, v8
+
+    goto/16 :goto_f
+
+    :goto_22
+    move-object v2, v14
+
+    move v14, v10
+
+    move-object v10, v5
+
+    :goto_23
+    if-eqz v14, :cond_15
+
+    :try_start_23
+    iget-object v0, v1, Lyo8;->B0:Lzo8;
+
+    invoke-virtual {v0}, Lzo8;->c()Lmf3;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    iget-object p1, p0, Lyo8;->a:Ldgc;
+    move-result-wide v4
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v0, Lese;
 
-    invoke-static {v0}, Lwq0;->d(Landroid/graphics/Bitmap;)I
+    iget-object v6, v0, Lese;->u:Lskg;
 
-    move-result p1
+    sget-object v7, Lese;->m0:[Lb88;
 
-    iget v1, p0, Lyo8;->d:I
+    aget-object v7, v7, v16
 
-    sub-int/2addr v1, p1
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iput v1, p0, Lyo8;->d:I
+    move-result-object v4
 
-    iget-object p1, p0, Lyo8;->c:Lydc;
+    invoke-virtual {v6, v0, v7, v4}, Lskg;->z(Ljava/lang/Object;Lb88;Ljava/lang/Object;)V
+    :try_end_23
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_23 .. :try_end_23} :catch_24
+    .catch Ljava/lang/Exception; {:try_start_23 .. :try_end_23} :catch_23
+    .catchall {:try_start_23 .. :try_end_23} :catchall_1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    goto :goto_28
 
-    monitor-exit p0
+    :goto_24
+    move v6, v14
+
+    move-object/from16 v4, v19
+
+    :goto_25
+    move-object v14, v2
+
+    goto/16 :goto_30
+
+    :goto_26
+    move v6, v14
+
+    move-object/from16 v4, v19
+
+    :goto_27
+    move-object/from16 v7, v20
+
+    move-object v14, v2
+
+    goto/16 :goto_32
+
+    :catch_23
+    move-exception v0
+
+    goto :goto_24
+
+    :catch_24
+    move-exception v0
+
+    goto :goto_26
+
+    :cond_15
+    :goto_28
+    :try_start_24
+    const-string v0, "Finished sending logs"
+
+    invoke-static {v9, v0}, Lnm4;->y(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_24
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_24 .. :try_end_24} :catch_26
+    .catch Ljava/lang/Exception; {:try_start_24 .. :try_end_24} :catch_25
+    .catchall {:try_start_24 .. :try_end_24} :catchall_1
+
+    iget-object v0, v1, Lyo8;->B0:Lzo8;
+
+    invoke-virtual {v0}, Lzo8;->d()Liog;
+
+    move-result-object v0
+
+    iget-object v2, v0, Liog;->z0:Ljava/util/Set;
+
+    move-object/from16 v4, v19
+
+    :goto_29
+    invoke-interface {v2, v4}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    invoke-virtual {v0}, Liog;->f()V
+
+    iget-object v0, v1, Lyo8;->B0:Lzo8;
+
+    iget-object v0, v0, Lzo8;->i:Lbja;
+
+    const/4 v11, 0x0
+
+    invoke-virtual {v0, v11}, Lbja;->l(Ljava/lang/Object;)V
+
+    goto/16 :goto_34
+
+    :catch_25
+    move-exception v0
+
+    move-object/from16 v4, v19
+
+    move v6, v14
+
+    goto :goto_25
+
+    :catch_26
+    move-exception v0
+
+    move-object/from16 v4, v19
+
+    move v6, v14
+
+    goto :goto_27
+
+    :catchall_3
+    move-exception v0
+
+    move-object v4, v8
+
+    goto/16 :goto_35
+
+    :catch_27
+    move-exception v0
+
+    move-object/from16 v20, v7
+
+    move-object v4, v8
+
+    move-object v9, v12
+
+    move v6, v10
+
+    goto/16 :goto_9
+
+    :catch_28
+    move-exception v0
+
+    move-object/from16 v20, v7
+
+    move-object v4, v8
+
+    move-object v9, v12
+
+    move v6, v10
+
+    goto/16 :goto_b
+
+    :catch_29
+    move-exception v0
+
+    move-object/from16 v20, v7
+
+    move-object v4, v8
+
+    :goto_2a
+    move-object v9, v12
+
+    const/4 v8, 0x0
+
+    move-object/from16 v10, p1
+
+    :goto_2b
+    move v6, v8
+
+    goto :goto_30
+
+    :catch_2a
+    move-exception v0
+
+    move-object/from16 v20, v7
+
+    move-object v4, v8
+
+    :goto_2c
+    move-object v9, v12
+
+    const/4 v8, 0x0
+
+    move-object/from16 v10, p1
+
+    :goto_2d
+    move v6, v8
+
+    goto/16 :goto_32
+
+    :catch_2b
+    move-exception v0
+
+    move-object v4, v8
+
+    goto :goto_2e
+
+    :catch_2c
+    move-exception v0
+
+    move-object v4, v8
+
+    goto :goto_2f
+
+    :catch_2d
+    move-exception v0
+
+    move-object v4, v6
+
+    :goto_2e
+    move-object/from16 v20, v7
+
+    goto :goto_2a
+
+    :catch_2e
+    move-exception v0
+
+    move-object v4, v6
+
+    :goto_2f
+    move-object/from16 v20, v7
+
+    move-object v9, v12
+
+    const/4 v8, 0x0
+
+    move-object/from16 v10, p1
+
+    move v6, v8
+
+    goto/16 :goto_16
+
+    :catch_2f
+    move-exception v0
+
+    move-object v4, v6
+
+    move-object/from16 v20, v7
+
+    goto :goto_2a
+
+    :catch_30
+    move-exception v0
+
+    move-object v4, v6
+
+    move-object/from16 v20, v7
+
+    goto :goto_2c
+
+    :catch_31
+    move-exception v0
+
+    move-object v4, v6
+
+    move-object/from16 v20, v7
+
+    move-object/from16 p1, v10
+
+    move-object v9, v12
+
+    const/4 v8, 0x0
+
+    goto :goto_2b
+
+    :goto_30
+    :try_start_25
+    iget-object v2, v14, Ln3e;->a:Ljava/lang/Object;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    move-object/from16 v7, v20
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " because of an unexpected error"
+
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v9, v2, v0}, Lnm4;->m0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v2, v1, Lyo8;->B0:Lzo8;
+
+    iget-object v5, v14, Ln3e;->a:Ljava/lang/Object;
+
+    check-cast v5, Ljava/util/List;
+
+    const/4 v11, 0x0
+
+    iput-object v11, v1, Lyo8;->A0:Ljava/lang/Object;
+
+    iput-object v11, v1, Lyo8;->o:Ljava/util/List;
+
+    iput-object v11, v1, Lyo8;->X:Ln3e;
+
+    iput v6, v1, Lyo8;->Y:I
+
+    const/4 v13, 0x5
+
+    iput v13, v1, Lyo8;->z0:I
+
+    invoke-static {v2, v5, v10, v0, v1}, Lzo8;->a(Lzo8;Ljava/util/List;Ljava/util/List;Ljava/lang/Exception;Lz84;)Ljava/lang/Object;
+
+    move-result-object v0
+    :try_end_25
+    .catchall {:try_start_25 .. :try_end_25} :catchall_4
+
+    if-ne v0, v3, :cond_16
+
+    goto :goto_33
+
+    :cond_16
+    :goto_31
+    iget-object v0, v1, Lyo8;->B0:Lzo8;
+
+    invoke-virtual {v0}, Lzo8;->d()Liog;
+
+    move-result-object v0
+
+    iget-object v2, v0, Liog;->z0:Ljava/util/Set;
+
+    goto/16 :goto_29
+
+    :catchall_4
+    move-exception v0
+
+    goto :goto_35
+
+    :catch_32
+    move-exception v0
+
+    move-object v4, v6
+
+    move-object/from16 p1, v10
+
+    move-object v9, v12
+
+    const/4 v8, 0x0
+
+    goto :goto_2d
+
+    :goto_32
+    :try_start_26
+    iget-object v2, v14, Ln3e;->a:Ljava/lang/Object;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " because of TamError"
+
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v9, v2, v0}, Lnm4;->m0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v2, v0, Lru/ok/tamtam/errors/TamErrorException;->a:Leng;
+
+    iget-object v2, v2, Leng;->b:Ljava/lang/String;
+
+    invoke-static {v2}, Lsr6;->L(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_16
+
+    iget-object v2, v1, Lyo8;->B0:Lzo8;
+
+    iget-object v5, v14, Ln3e;->a:Ljava/lang/Object;
+
+    check-cast v5, Ljava/util/List;
+
+    const/4 v11, 0x0
+
+    iput-object v11, v1, Lyo8;->A0:Ljava/lang/Object;
+
+    iput-object v11, v1, Lyo8;->o:Ljava/util/List;
+
+    iput-object v11, v1, Lyo8;->X:Ln3e;
+
+    iput v6, v1, Lyo8;->Y:I
+
+    const/4 v6, 0x4
+
+    iput v6, v1, Lyo8;->z0:I
+
+    invoke-static {v2, v5, v10, v0, v1}, Lzo8;->a(Lzo8;Ljava/util/List;Ljava/util/List;Ljava/lang/Exception;Lz84;)Ljava/lang/Object;
+
+    move-result-object v0
+    :try_end_26
+    .catchall {:try_start_26 .. :try_end_26} :catchall_4
+
+    if-ne v0, v3, :cond_16
+
+    :goto_33
+    return-object v3
+
+    :goto_34
+    sget-object v0, Lyeh;->a:Lyeh;
 
     return-object v0
 
-    :cond_1
-    :try_start_1
-    iget-object v0, p0, Lyo8;->c:Lydc;
+    :goto_35
+    iget-object v2, v1, Lyo8;->B0:Lzo8;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v2}, Lzo8;->d()Liog;
 
-    sget-object v0, Landroid/graphics/Bitmap$Config;->ALPHA_8:Landroid/graphics/Bitmap$Config;
+    move-result-object v2
 
-    const/4 v1, 0x1
+    iget-object v3, v2, Liog;->z0:Ljava/util/Set;
 
-    invoke-static {v1, p1, v0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+    invoke-interface {v3, v4}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-virtual {v2}, Liog;->f()V
 
-    monitor-exit p0
+    iget-object v2, v1, Lyo8;->B0:Lzo8;
 
-    return-object p1
+    iget-object v2, v2, Lzo8;->i:Lbja;
 
-    :goto_1
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    const/4 v11, 0x0
 
-    throw p1
+    invoke-virtual {v2, v11}, Lbja;->l(Ljava/lang/Object;)V
+
+    throw v0
 .end method

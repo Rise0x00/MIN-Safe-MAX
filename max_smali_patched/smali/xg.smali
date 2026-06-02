@@ -1,231 +1,61 @@
-.class public final Lxg;
-.super Landroid/animation/AnimatorListenerAdapter;
+.class public final synthetic Lxg;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lnk7;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
-
-.field public final synthetic c:Ljava/lang/Object;
-
-.field public final synthetic d:Llq6;
+.field public final synthetic a:Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Ljava/lang/String;Lkc1;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lxg;->a:I
-
-    sget v0, Ly6b;->a:I
-
-    iput-object p1, p0, Lxg;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Lxg;->c:Ljava/lang/Object;
-
-    iput-object p3, p0, Lxg;->d:Llq6;
-
-    .line 2
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Llq6;Landroid/widget/FrameLayout;Llq6;I)V
+.method public synthetic constructor <init>(Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;)V
     .locals 0
 
-    .line 1
-    iput p4, p0, Lxg;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxg;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Lxg;->c:Ljava/lang/Object;
-
-    iput-object p3, p0, Lxg;->d:Llq6;
-
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    iput-object p1, p0, Lxg;->a:Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 2
+.method public final a(Lpk5;ILtcd;Lmk7;)Lrg3;
+    .locals 3
 
-    iget p1, p0, Lxg;->a:I
+    iget-object p2, p0, Lxg;->a:Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;
 
-    packed-switch p1, :pswitch_data_0
+    iget-object p3, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->e:Leh;
 
-    iget-object p1, p0, Lxg;->c:Ljava/lang/Object;
+    if-nez p3, :cond_0
 
-    check-cast p1, Ls7g;
+    new-instance p3, Lr05;
 
-    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
+    const/4 v0, 0x2
 
-    iget-object p1, p0, Lxg;->d:Llq6;
+    invoke-direct {p3, v0, p2}, Lr05;-><init>(ILjava/lang/Object;)V
 
-    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
+    new-instance v0, Leh;
 
-    return-void
+    iget-object v1, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->a:Lfgc;
 
-    :pswitch_0
-    iget-object p1, p0, Lxg;->c:Ljava/lang/Object;
+    iget-boolean v2, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->k:Z
 
-    check-cast p1, Lxec;
+    invoke-direct {v0, p3, v1, v2}, Leh;-><init>(Lr05;Lfgc;Z)V
 
-    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
+    iput-object v0, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->e:Leh;
 
-    iget-object p1, p0, Lxg;->d:Llq6;
+    :cond_0
+    iget-object p2, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->e:Leh;
 
-    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
+    iget-object p3, p4, Lmk7;->b:Landroid/graphics/Bitmap$Config;
 
-    return-void
+    invoke-virtual {p2, p1, p4, p3}, Leh;->b(Lpk5;Lmk7;Landroid/graphics/Bitmap$Config;)Lqg3;
 
-    :pswitch_1
-    iget-object p1, p0, Lxg;->b:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast p1, Landroid/view/View;
-
-    sget v0, Ly6b;->m:I
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    iget-object p1, p0, Lxg;->d:Llq6;
-
-    check-cast p1, Lkc1;
-
-    invoke-virtual {p1}, Lkc1;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget p1, p0, Lxg;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lxg;->c:Ljava/lang/Object;
-
-    check-cast p1, Ls7g;
-
-    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
-
-    iget-object v0, p0, Lxg;->d:Llq6;
-
-    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p1, Ls7g;->c:Landroid/animation/ValueAnimator;
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lxg;->c:Ljava/lang/Object;
-
-    check-cast p1, Lxec;
-
-    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
-
-    iget-object v0, p0, Lxg;->d:Llq6;
-
-    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p1, Lxec;->o:Landroid/animation/ValueAnimator;
-
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lxg;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroid/view/View;
-
-    sget v0, Ly6b;->m:I
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    iget-object p1, p0, Lxg;->d:Llq6;
-
-    check-cast p1, Lkc1;
-
-    invoke-virtual {p1}, Lkc1;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget v0, p0, Lxg;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p1, p0, Lxg;->b:Ljava/lang/Object;
-
-    check-cast p1, Llq6;
-
-    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lxg;->b:Ljava/lang/Object;
-
-    check-cast p1, Llq6;
-
-    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_1
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
-
-    iget-object p1, p0, Lxg;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroid/view/View;
-
-    sget v0, Ly6b;->m:I
-
-    iget-object v1, p0, Lxg;->c:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-virtual {p1, v0, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

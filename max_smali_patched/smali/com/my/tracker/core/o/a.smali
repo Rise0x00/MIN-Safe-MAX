@@ -64,7 +64,7 @@
 .end method
 
 .method private a(Lcom/my/tracker/core/utils/BiConsumer;)V
-    .locals 4
+    .locals 3
 
     .line 9
     iget-object v0, p0, Lcom/my/tracker/core/o/a;->b:Ljava/lang/Object;
@@ -96,11 +96,9 @@
     :cond_0
     iget-object v1, p0, Lcom/my/tracker/core/o/a;->a:Lcom/my/tracker/core/EngineMiniCore;
 
-    new-instance v2, Luha;
+    new-instance v2, Lqyi;
 
-    const/4 v3, 0x1
-
-    invoke-direct {v2, p0, v3, p1}, Luha;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, p0, p1}, Lqyi;-><init>(Lcom/my/tracker/core/o/a;Lcom/my/tracker/core/utils/BiConsumer;)V
 
     invoke-interface {v1, v2}, Lcom/my/tracker/core/EngineMiniCore;->onEngineWorkerWithEngineCore(Lcom/my/tracker/core/utils/Consumer;)V
 
@@ -382,17 +380,15 @@
 .end method
 
 .method public onActivityStarted(Landroid/app/Activity;)V
-    .locals 3
+    .locals 2
 
     invoke-static {}, Lcom/my/tracker/core/utils/TimePoint;->now()Lcom/my/tracker/core/utils/TimePoint;
 
     move-result-object v0
 
-    new-instance v1, Lxli;
+    new-instance v1, Lsyi;
 
-    const/4 v2, 0x1
-
-    invoke-direct {v1, p1, v0, v2}, Lxli;-><init>(Landroid/app/Activity;Lcom/my/tracker/core/utils/TimePoint;I)V
+    invoke-direct {v1, p1, v0}, Lsyi;-><init>(Landroid/app/Activity;Lcom/my/tracker/core/utils/TimePoint;)V
 
     invoke-direct {p0, v1}, Lcom/my/tracker/core/o/a;->a(Lcom/my/tracker/core/utils/BiConsumer;)V
 
@@ -400,17 +396,15 @@
 .end method
 
 .method public onActivityStopped(Landroid/app/Activity;)V
-    .locals 3
+    .locals 2
 
     invoke-static {}, Lcom/my/tracker/core/utils/TimePoint;->now()Lcom/my/tracker/core/utils/TimePoint;
 
     move-result-object v0
 
-    new-instance v1, Lxli;
+    new-instance v1, Lryi;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v0, v2}, Lxli;-><init>(Landroid/app/Activity;Lcom/my/tracker/core/utils/TimePoint;I)V
+    invoke-direct {v1, p1, v0}, Lryi;-><init>(Landroid/app/Activity;Lcom/my/tracker/core/utils/TimePoint;)V
 
     invoke-direct {p0, v1}, Lcom/my/tracker/core/o/a;->a(Lcom/my/tracker/core/utils/BiConsumer;)V
 

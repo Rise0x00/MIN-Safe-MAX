@@ -1,23 +1,23 @@
 .class public final Laba;
-.super Ljk0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:J
+.field public final a:Ljava/util/HashMap;
 
-.field public final d:Ljava/util/List;
+.field public final b:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(JLnbg;JLjava/util/List;)V
+.method public constructor <init>(Ljava/util/HashMap;Ljava/util/HashMap;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Ljk0;-><init>(JLnbg;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p4, p0, Laba;->c:J
+    iput-object p1, p0, Laba;->a:Ljava/util/HashMap;
 
-    iput-object p6, p0, Laba;->d:Ljava/util/List;
+    iput-object p2, p0, Laba;->b:Ljava/util/HashMap;
 
     return-void
 .end method

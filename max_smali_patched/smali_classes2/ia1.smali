@@ -1,31 +1,68 @@
-.class public interface abstract Lia1;
+.class public final synthetic Lia1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxs6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lja1;
+
 
 # direct methods
-.method public static synthetic a(Lia1;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
-    .locals 1
+.method public synthetic constructor <init>(Lja1;I)V
+    .locals 0
 
-    and-int/lit8 v0, p4, 0x2
+    iput p2, p0, Lia1;->a:I
 
-    if-eqz v0, :cond_0
+    iput-object p1, p0, Lia1;->b:Lja1;
 
-    const/4 p2, 0x0
-
-    :cond_0
-    and-int/lit8 p4, p4, 0x4
-
-    if-eqz p4, :cond_1
-
-    new-instance p3, Lru/ok/android/externcalls/analytics/events/EventItemsMap;
-
-    invoke-direct {p3}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;-><init>()V
-
-    :cond_1
-    check-cast p0, Lja1;
-
-    invoke-virtual {p0, p1, p2, p3}, Lja1;->c(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lia1;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lia1;->b:Lja1;
+
+    iget-boolean v1, v0, Lja1;->b:Z
+
+    iget-boolean v2, v0, Lja1;->c:Z
+
+    invoke-virtual {v0, v1, v2}, Lja1;->a(ZZ)V
+
+    sget-object v0, Lyeh;->a:Lyeh;
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Lha1;
+
+    iget-object v1, p0, Lia1;->b:Lja1;
+
+    invoke-static {v1}, Ls4i;->a(Landroid/view/View;)Lad8;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lha1;-><init>(Lad8;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

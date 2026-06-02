@@ -1,90 +1,285 @@
-.class public final synthetic Law7;
-.super Ljava/lang/Object;
+.class public final Law7;
+.super Le2e;
 .source "SourceFile"
-
-# interfaces
-.implements Llq6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final d:Ljava/util/ArrayList;
 
-.field public final synthetic b:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+.field public final o:Ljava/util/regex/Pattern;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput p2, p0, Law7;->a:I
+    invoke-direct {p0}, Le2e;-><init>()V
 
-    iput-object p1, p0, Law7;->b:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Law7;->d:Ljava/util/ArrayList;
+
+    const-string v0, "\\b([\\w\\-\\.]+\\.(dex|so))\\b"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    iput-object v0, p0, Law7;->o:Ljava/util/regex/Pattern;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final m()I
+    .locals 1
+
+    iget-object v0, p0, Law7;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final v(Lb3e;I)V
     .locals 4
 
-    iget v0, p0, Law7;->a:I
+    check-cast p1, Lbw7;
 
-    iget-object v1, p0, Law7;->b:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+    iget-object v0, p0, Law7;->d:Ljava/util/ArrayList;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    sget-object v0, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->P0:[Lz28;
+    move-result-object p2
 
-    new-instance v0, Lfw7;
+    check-cast p2, Ljava/lang/CharSequence;
 
-    invoke-virtual {v1}, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->O0()Lb1d;
+    iget-object p1, p1, Lb3e;->a:Landroid/view/View;
 
-    move-result-object v1
+    move-object v0, p1
 
-    const/16 v2, 0x1e
+    check-cast v0, Landroid/widget/TextView;
 
-    const/4 v3, 0x0
+    invoke-virtual {v0, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-direct {v0, v1, v3, v2}, Lfw7;-><init>(Lb1d;II)V
+    const-string v0, "result: true"
 
-    return-object v0
+    const/4 v1, 0x0
 
-    :pswitch_0
-    sget-object v0, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->P0:[Lz28;
+    invoke-static {p2, v0, v1}, Lebg;->i0(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
 
-    new-instance v0, Ldjb;
+    move-result v0
 
-    invoke-direct {v0, v1}, Ldjb;-><init>(Lone/me/sdk/arch/Widget;)V
+    const v2, -0xff0100
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    const/high16 v3, 0x3f400000    # 0.75f
 
-    move-result-object v1
+    if-eqz v0, :cond_0
 
-    sget v2, Lx5e;->k:I
+    invoke-static {v2, v3}, Lf90;->r0(IF)I
 
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    move-result v1
 
-    move-result-object v1
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Ldjb;->h(Ljava/lang/CharSequence;)V
+    :cond_0
+    const-string v0, "Digests are equal"
 
-    new-instance v1, Lrjb;
+    invoke-static {p2, v0, v1}, Lebg;->i0(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
 
-    sget v2, Lv5e;->M:I
+    move-result v0
 
-    invoke-direct {v1, v2}, Lrjb;-><init>(I)V
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0, v1}, Ldjb;->e(Lvjb;)V
+    invoke-static {v2, v3}, Lf90;->r0(IF)I
 
-    return-object v0
+    move-result v1
 
-    nop
+    goto :goto_0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    const-string v0, "Validating digest"
+
+    invoke-static {p2, v0, v1}, Lebg;->i0(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const p2, -0xffff01
+
+    invoke-static {p2, v3}, Lf90;->r0(IF)I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_2
+    const-string v0, "E/"
+
+    invoke-static {p2, v0, v1}, Lebg;->i0(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    const-string v0, "fail"
+
+    const/4 v2, 0x1
+
+    invoke-static {p2, v0, v2}, Lebg;->i0(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    const-string v0, "exception"
+
+    invoke-static {p2, v0, v2}, Lebg;->i0(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    const-string v0, "error"
+
+    invoke-static {p2, v0, v2}, Lebg;->i0(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_4
+
+    :cond_3
+    const/high16 p2, -0x10000
+
+    invoke-static {p2, v3}, Lf90;->r0(IF)I
+
+    move-result v1
+
+    :cond_4
+    :goto_0
+    invoke-virtual {p1, v1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    return-void
+.end method
+
+.method public final x(Landroid/view/ViewGroup;I)Lb3e;
+    .locals 4
+
+    new-instance p2, Landroid/widget/TextView;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    sget-object p1, Lodh;->e:Lktg;
+
+    invoke-static {p1, p2}, Lktg;->d(Lktg;Landroid/widget/TextView;)V
+
+    const/4 p1, 0x4
+
+    int-to-float p1, p1
+
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, p1
+
+    invoke-static {v0}, Lh43;->U(F)I
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v1
+
+    invoke-static {v2}, Lh43;->U(F)I
+
+    move-result v2
+
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, v3
+
+    invoke-static {p1}, Lh43;->U(F)I
+
+    move-result p1
+
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v3
+
+    invoke-static {v1}, Lh43;->U(F)I
+
+    move-result v1
+
+    invoke-virtual {p2, v0, v2, p1, v1}, Landroid/widget/TextView;->setPadding(IIII)V
+
+    sget-object p1, Lzc3;->A0:Lz66;
+
+    invoke-static {p2, p1}, Lo52;->h(Landroid/widget/TextView;Lz66;)Lzpb;
+
+    move-result-object p1
+
+    iget p1, p1, Lzpb;->b:I
+
+    invoke-virtual {p2, p1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v0, -0x1
+
+    const/4 v1, -0x2
+
+    invoke-direct {p1, v0, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p2, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    new-instance p1, Lbw7;
+
+    invoke-direct {p1, p2}, Lb3e;-><init>(Landroid/view/View;)V
+
+    return-object p1
 .end method

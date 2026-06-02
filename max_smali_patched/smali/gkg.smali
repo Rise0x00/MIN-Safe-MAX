@@ -3,30 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lf76;
-
-
-# instance fields
-.field public final a:Ljava/lang/Throwable;
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/Throwable;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lgkg;->a:Ljava/lang/Throwable;
-
-    return-void
-.end method
+.implements Lhg3;
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Landroid/os/Looper;Landroid/os/Handler$Callback;)Lpkg;
+    .locals 2
 
-    iget-object p1, p0, Lgkg;->a:Ljava/lang/Throwable;
+    new-instance v0, Lpkg;
 
-    throw p1
+    new-instance v1, Landroid/os/Handler;
+
+    invoke-direct {v1, p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
+
+    invoke-direct {v0, v1}, Lpkg;-><init>(Landroid/os/Handler;)V
+
+    return-object v0
 .end method

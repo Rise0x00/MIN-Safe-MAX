@@ -1,57 +1,40 @@
-.class public final Lc36;
-.super Lo84;
+.class public abstract Lc36;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lqfa;
-
-.field public Y:I
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public d:Ldng;
-
-.field public o:Lr6h;
-
-.field public final synthetic t0:Ld36;
-
-.field public u0:I
-
-
 # direct methods
-.method public constructor <init>(Ld36;Lo84;)V
+.method public static synthetic a(Ljava/lang/Throwable;)Z
     .locals 0
 
-    iput-object p1, p0, Lc36;->t0:Ld36;
+    invoke-static {p0}, Lc36;->b(Ljava/lang/Throwable;)Z
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    move-result p0
 
-    return-void
+    return p0
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method private static b(Ljava/lang/Throwable;)Z
     .locals 1
 
-    iput-object p1, p0, Lc36;->Z:Ljava/lang/Object;
+    instance-of v0, p0, Landroid/system/ErrnoException;
 
-    iget p1, p0, Lc36;->u0:I
+    if-eqz v0, :cond_0
 
-    const/high16 v0, -0x80000000
+    check-cast p0, Landroid/system/ErrnoException;
 
-    or-int/2addr p1, v0
+    iget p0, p0, Landroid/system/ErrnoException;->errno:I
 
-    iput p1, p0, Lc36;->u0:I
+    sget v0, Landroid/system/OsConstants;->EACCES:I
 
-    iget-object p1, p0, Lc36;->t0:Ld36;
+    if-ne p0, v0, :cond_0
 
-    const/4 v0, 0x0
+    const/4 p0, 0x1
 
-    invoke-virtual {p1, v0, v0, p0}, Ld36;->g(Ldng;Lr6h;Lo84;)Ljava/lang/Object;
+    return p0
 
-    move-result-object p1
+    :cond_0
+    const/4 p0, 0x0
 
-    return-object p1
+    return p0
 .end method

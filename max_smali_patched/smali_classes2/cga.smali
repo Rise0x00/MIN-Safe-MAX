@@ -1,355 +1,202 @@
 .class public final Lcga;
-.super Ld3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Landroid/os/Handler;
+.field public final a:Ljava/lang/String;
 
-.field public final Y:Landroid/graphics/Rect;
+.field public final b:Lxx7;
 
-.field public Z:Lyga;
+.field public final c:Landroid/content/Context;
 
-.field public final c:Lv35;
+.field public final d:Loc4;
 
-.field public final d:Lv35;
+.field public final e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final o:Landroid/view/GestureDetector;
+.field public f:I
 
-.field public final t0:Ldd;
+.field public g:Lkh7;
 
-.field public u0:Ldha;
+.field public final h:Lsif;
+
+.field public final i:Laga;
+
+.field public final j:Lzfa;
+
+.field public final k:Lbga;
 
 
 # direct methods
-.method public constructor <init>(Lzga;Lyga;Landroid/content/Context;Ldd;)V
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lxx7;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0, p1}, Ld3;-><init>(ILjava/lang/Object;)V
+    iput-object p2, p0, Lcga;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lcga;->Z:Lyga;
+    iput-object p3, p0, Lcga;->b:Lxx7;
 
-    iput-object p4, p0, Lcga;->t0:Ldd;
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    new-instance p2, Lv35;
+    move-result-object p1
 
-    invoke-direct {p2, p3}, Lv35;-><init>(Landroid/content/Context;)V
+    iput-object p1, p0, Lcga;->c:Landroid/content/Context;
 
-    iput-object p2, p0, Lcga;->c:Lv35;
+    iget-object p1, p3, Lxx7;->a:Lide;
 
-    new-instance p4, Lv35;
+    iget-object p1, p1, Lide;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-direct {p4, p3}, Lv35;-><init>(Landroid/content/Context;)V
+    if-nez p1, :cond_0
 
-    iput-object p4, p0, Lcga;->d:Lv35;
-
-    new-instance v0, Landroid/view/GestureDetector;
-
-    new-instance v1, Lty0;
-
-    const/16 v2, 0xb
-
-    invoke-direct {v1, v2, p0}, Lty0;-><init>(ILjava/lang/Object;)V
-
-    invoke-direct {v0, p3, v1}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
-
-    iput-object v0, p0, Lcga;->o:Landroid/view/GestureDetector;
-
-    new-instance p3, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    invoke-direct {p3, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    iput-object p3, p0, Lcga;->X:Landroid/os/Handler;
-
-    new-instance p3, Landroid/graphics/Rect;
-
-    invoke-direct {p3}, Landroid/graphics/Rect;-><init>()V
-
-    iput-object p3, p0, Lcga;->Y:Landroid/graphics/Rect;
-
-    new-instance p3, Limf;
-
-    const/16 v0, 0x19
-
-    invoke-direct {p3, v0, p0}, Limf;-><init>(ILjava/lang/Object;)V
-
-    iput-object p3, p2, Lv35;->a:Lu35;
-
-    new-instance p2, Lski;
-
-    const/16 p3, 0x1b
-
-    invoke-direct {p2, p3, p0}, Lski;-><init>(ILjava/lang/Object;)V
-
-    iput-object p2, p4, Lv35;->a:Lu35;
-
-    iget-object p2, p0, Lcga;->Z:Lyga;
-
-    invoke-virtual {p1, p2}, Lzga;->A(Lyga;)V
-
-    invoke-virtual {p1, p0}, Le3;->q(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public static L0(Lcga;ZI)V
-    .locals 8
-
-    iget-object v0, p0, Lcga;->X:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcga;->u0:Ldha;
-
-    if-nez v1, :cond_0
-
-    return-void
+    const/4 p1, 0x0
 
     :cond_0
-    const/4 v1, 0x0
+    iput-object p1, p0, Lcga;->d:Loc4;
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    new-instance v1, Lxga;
+    const/4 p2, 0x1
 
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    iput p2, v1, Lxga;->a:I
+    iput-object p1, p0, Lcga;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iput-boolean p1, v1, Lxga;->b:Z
+    const/4 p1, 0x0
 
-    const/4 v2, 0x1
+    invoke-static {p1, p1, p2}, Ltif;->a(III)Lsif;
 
-    iput-boolean v2, v1, Lxga;->c:Z
+    move-result-object p1
 
-    new-instance v2, Lyga;
+    iput-object p1, p0, Lcga;->h:Lsif;
 
-    invoke-direct {v2, v1}, Lyga;-><init>(Lxga;)V
+    iget-object p1, p3, Lxx7;->b:[Ljava/lang/String;
 
-    iput-object v2, p0, Lcga;->Z:Lyga;
+    new-instance p2, Laga;
 
-    iget-object v1, p0, Ld3;->b:Ljava/lang/Object;
+    invoke-direct {p2, p0, p1}, Laga;-><init>(Lcga;[Ljava/lang/String;)V
 
-    check-cast v1, Ltga;
+    iput-object p2, p0, Lcga;->i:Laga;
 
-    check-cast v1, Lzga;
+    new-instance p1, Lzfa;
 
-    invoke-virtual {v1, v2}, Lzga;->A(Lyga;)V
+    invoke-direct {p1, p0}, Lzfa;-><init>(Lcga;)V
 
-    iget-object v1, p0, Lcga;->u0:Ldha;
+    iput-object p1, p0, Lcga;->j:Lzfa;
 
-    const-wide/16 v2, 0x0
+    new-instance p1, Lbga;
 
-    if-nez v1, :cond_1
+    const/4 p2, 0x0
 
-    :goto_0
-    move-wide v4, v2
+    invoke-direct {p1, p2, p0}, Lbga;-><init>(ILjava/lang/Object;)V
 
-    goto :goto_1
-
-    :cond_1
-    iget-object v4, v1, Ldha;->E0:Lyoh;
-
-    if-nez v4, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-wide v4, v4, Lyoh;->f:J
-
-    :goto_1
-    const-wide/16 v6, 0x2710
-
-    if-eqz p1, :cond_3
-
-    add-long/2addr v4, v6
-
-    goto :goto_2
-
-    :cond_3
-    sub-long/2addr v4, v6
-
-    :goto_2
-    if-nez v1, :cond_4
-
-    :goto_3
-    move-wide v6, v2
-
-    goto :goto_4
-
-    :cond_4
-    iget-object v1, v1, Ldha;->E0:Lyoh;
-
-    if-nez v1, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    iget-wide v6, v1, Lyoh;->e:J
-
-    :goto_4
-    cmp-long v1, v4, v6
-
-    if-lez v1, :cond_6
-
-    invoke-virtual {p0, p2, p1}, Lcga;->N0(IZ)V
-
-    invoke-virtual {p0}, Lcga;->M0()V
-
-    move-wide v4, v6
-
-    :cond_6
-    cmp-long v1, v4, v2
-
-    if-gez v1, :cond_7
-
-    invoke-virtual {p0, p2, p1}, Lcga;->N0(IZ)V
-
-    invoke-virtual {p0}, Lcga;->M0()V
-
-    goto :goto_5
-
-    :cond_7
-    move-wide v2, v4
-
-    :goto_5
-    iget-object v1, p0, Lcga;->u0:Ldha;
-
-    if-eqz v1, :cond_8
-
-    iget-object v1, v1, Le3;->a:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/Set;
-
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_6
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_8
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lnga;
-
-    iget-object v4, v4, Lnga;->c:Lyh8;
-
-    invoke-virtual {v4, v2, v3}, Lyh8;->h(J)V
-
-    goto :goto_6
-
-    :cond_8
-    new-instance v1, Leq5;
-
-    invoke-direct {v1, p0, p1, p2}, Leq5;-><init>(Lcga;ZI)V
-
-    const-wide/16 p1, 0x258
-
-    invoke-virtual {v0, v1, p1, p2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    new-instance v1, Ldh6;
-
-    const/16 v2, 0x17
-
-    invoke-direct {v1, v2, p0}, Ldh6;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1, p1, p2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    iput-object p1, p0, Lcga;->k:Lbga;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final M0()V
+.method public final a([Ljava/lang/String;)Lm05;
     .locals 3
 
-    iget-object v0, p0, Lcga;->Z:Lyga;
+    new-instance v0, Lm05;
 
-    new-instance v1, Lxga;
+    const/16 v1, 0xf
 
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    iget-object v2, p0, Lcga;->h:Lsif;
 
-    iget v2, v0, Lyga;->a:I
+    invoke-direct {v0, v2, v1, p1}, Lm05;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iput v2, v1, Lxga;->a:I
+    return-object v0
+.end method
 
-    iget-boolean v2, v0, Lyga;->b:Z
-
-    iput-boolean v2, v1, Lxga;->b:Z
-
-    iget-boolean v0, v0, Lyga;->c:Z
-
-    iput-boolean v0, v1, Lxga;->c:Z
+.method public final b(Landroid/content/Intent;)V
+    .locals 3
 
     const/4 v0, 0x0
 
-    iput v0, v1, Lxga;->a:I
+    iget-object v1, p0, Lcga;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iput-boolean v0, v1, Lxga;->c:Z
+    const/4 v2, 0x1
 
-    new-instance v2, Lyga;
+    invoke-virtual {v1, v2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
-    invoke-direct {v2, v1}, Lyga;-><init>(Lxga;)V
+    move-result v0
 
-    iput-object v2, p0, Lcga;->Z:Lyga;
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Ld3;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcga;->c:Landroid/content/Context;
 
-    check-cast v1, Ltga;
+    iget-object v1, p0, Lcga;->k:Lbga;
 
-    check-cast v1, Lzga;
+    invoke-virtual {v0, p1, v1, v2}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
-    invoke-virtual {v1, v2}, Lzga;->A(Lyga;)V
+    iget-object p1, p0, Lcga;->i:Laga;
 
-    iget-object v1, p0, Lcga;->c:Lv35;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput v0, v1, Lv35;->c:I
+    iget-object v0, p0, Lcga;->b:Lxx7;
 
-    iget-object v1, p0, Lcga;->d:Lv35;
+    invoke-virtual {v0, p1}, Lxx7;->a(Lvx7;)Z
 
-    iput v0, v1, Lv35;->c:I
-
+    :cond_0
     return-void
 .end method
 
-.method public final N0(IZ)V
-    .locals 2
+.method public final c()V
+    .locals 3
 
-    new-instance v0, Ljava/util/HashMap;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    const/4 v1, 0x1
 
-    const-string v1, "forward"
+    iget-object v2, p0, Lcga;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
-    move-result-object p2
+    move-result v0
 
-    invoke-virtual {v0, v1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_1
 
-    const-string p2, "seconds"
+    iget-object v0, p0, Lcga;->b:Lxx7;
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v1, p0, Lcga;->i:Laga;
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Lxx7;->b(Lvx7;)V
 
-    invoke-virtual {v0, p2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_start_0
+    iget-object v0, p0, Lcga;->g:Lkh7;
 
-    iget-object p1, p0, Lcga;->t0:Ldd;
+    if-eqz v0, :cond_0
 
-    const-string p2, "SEEK_BY_DOUBLE_TAP"
+    iget-object v1, p0, Lcga;->j:Lzfa;
 
-    invoke-virtual {p1, p2, v0}, Ldd;->g(Ljava/lang/String;Ljava/util/HashMap;)V
+    iget v2, p0, Lcga;->f:I
 
+    invoke-interface {v0, v1, v2}, Lkh7;->K(Lih7;I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "ROOM"
+
+    const-string v2, "Cannot unregister multi-instance invalidation callback"
+
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_0
+    :goto_0
+    iget-object v0, p0, Lcga;->c:Landroid/content/Context;
+
+    iget-object v1, p0, Lcga;->k:Lbga;
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
+
+    :cond_1
     return-void
 .end method

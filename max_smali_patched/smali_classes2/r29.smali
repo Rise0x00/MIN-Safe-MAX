@@ -1,44 +1,66 @@
-.class public abstract Lr29;
+.class public final Lr29;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lyj4;
 
-# static fields
-.field public static final a:Lgce;
+
+# instance fields
+.field public final synthetic a:Lz5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lz5;)V
+    .locals 0
 
-    new-instance v0, Lr4h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "media-gallery-scope"
-
-    invoke-direct {v0, v1}, Lr4h;-><init>(Ljava/lang/String;)V
-
-    sget-object v1, Loq;->a:Lgce;
-
-    if-eqz v1, :cond_0
-
-    iget-object v2, v0, Lr4h;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v0}, Lr4h;->a()Lgce;
-
-    move-result-object v0
-
-    sput-object v0, Lr29;->a:Lgce;
+    iput-object p1, p0, Lr29;->a:Lz5;
 
     return-void
+.end method
 
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "Trying to access DI graph before initialization!"
+# virtual methods
+.method public final a()Lbk4;
+    .locals 5
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    new-instance v0, Lm86;
 
-    throw v0
+    const/4 v1, 0x5
+
+    iget-object v2, p0, Lr29;->a:Lz5;
+
+    invoke-virtual {v2, v1}, Lz5;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/content/Context;
+
+    new-instance v3, Lqs4;
+
+    invoke-direct {v3}, Lqs4;-><init>()V
+
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    new-instance v4, Ltq4;
+
+    invoke-interface {v3}, Lyj4;->a()Lbk4;
+
+    move-result-object v3
+
+    invoke-direct {v4, v1, v3}, Ltq4;-><init>(Landroid/content/Context;Lbk4;)V
+
+    const/16 v1, 0x55
+
+    invoke-virtual {v2, v1}, Lz5;->d(I)Lakg;
+
+    move-result-object v1
+
+    invoke-direct {v0, v4, v1}, Lm86;-><init>(Ltq4;Lia8;)V
+
+    return-object v0
 .end method

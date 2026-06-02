@@ -1,226 +1,115 @@
 .class public final Lp88;
-.super Ljava/io/FilterInputStream;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public a:I
-
-.field public b:I
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/InputStream;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-ltz p2, :cond_0
+    .line 4
+    new-instance v0, Ljava/util/LinkedHashMap;
 
-    iput p2, p0, Lp88;->a:I
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    const/4 p1, -0x1
-
-    iput p1, p0, Lp88;->b:I
+    iput-object v0, p0, Lp88;->a:Ljava/lang/Object;
 
     return-void
+.end method
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+.method public constructor <init>(Lnr;)V
+    .locals 0
 
-    const-string p2, "limit must be >= 0"
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    .line 2
+    iget-object p1, p1, Lnr;->b:Ljava/lang/Object;
 
-    throw p1
+    check-cast p1, Ljava/util/ArrayList;
+
+    iput-object p1, p0, Lp88;->a:Ljava/lang/Object;
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final available()I
+.method public a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
+    iget-object v0, p0, Lp88;->a:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/io/InputStream;->available()I
+    check-cast v0, Ljava/util/LinkedHashMap;
 
-    move-result v0
+    invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget v1, p0, Lp88;->a:I
+    move-result-object v1
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
+    check-cast v1, Ljava/util/List;
 
-    move-result v0
+    if-nez v1, :cond_0
 
-    return v0
-.end method
+    new-instance v1, Ljava/util/ArrayList;
 
-.method public final mark(I)V
-    .locals 1
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->markSupported()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0, p1}, Ljava/io/InputStream;->mark(I)V
-
-    iget p1, p0, Lp88;->a:I
-
-    iput p1, p0, Lp88;->b:I
+    invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
+    invoke-interface {v1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
     return-void
 .end method
 
-.method public final read()I
-    .locals 2
+.method public b()I
+    .locals 3
 
-    .line 1
-    iget v0, p0, Lp88;->a:I
+    iget-object v0, p0, Lp88;->a:Ljava/lang/Object;
 
-    const/4 v1, -0x1
+    check-cast v0, Ljava/util/LinkedHashMap;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
 
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/List;
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    add-int/2addr v1, v2
+
+    goto :goto_0
+
+    :cond_0
     return v1
-
-    .line 2
-    :cond_0
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    move-result v0
-
-    if-eq v0, v1, :cond_1
-
-    .line 3
-    iget v1, p0, Lp88;->a:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    iput v1, p0, Lp88;->a:I
-
-    :cond_1
-    return v0
-.end method
-
-.method public final read([BII)I
-    .locals 1
-
-    .line 4
-    iget v0, p0, Lp88;->a:I
-
-    if-nez v0, :cond_0
-
-    const/4 p1, -0x1
-
-    return p1
-
-    .line 5
-    :cond_0
-    invoke-static {p3, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result p3
-
-    .line 6
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
-
-    move-result p1
-
-    if-lez p1, :cond_1
-
-    .line 7
-    iget p2, p0, Lp88;->a:I
-
-    sub-int/2addr p2, p1
-
-    iput p2, p0, Lp88;->a:I
-
-    :cond_1
-    return p1
-.end method
-
-.method public final reset()V
-    .locals 2
-
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->markSupported()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget v0, p0, Lp88;->b:I
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->reset()V
-
-    iget v0, p0, Lp88;->b:I
-
-    iput v0, p0, Lp88;->a:I
-
-    return-void
-
-    :cond_0
-    new-instance v0, Ljava/io/IOException;
-
-    const-string v1, "mark not set"
-
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    new-instance v0, Ljava/io/IOException;
-
-    const-string v1, "mark is not supported"
-
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final skip(J)J
-    .locals 2
-
-    iget v0, p0, Lp88;->a:I
-
-    int-to-long v0, v0
-
-    invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide p1
-
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0, p1, p2}, Ljava/io/InputStream;->skip(J)J
-
-    move-result-wide p1
-
-    iget v0, p0, Lp88;->a:I
-
-    int-to-long v0, v0
-
-    sub-long/2addr v0, p1
-
-    long-to-int v0, v0
-
-    iput v0, p0, Lp88;->a:I
-
-    return-wide p1
 .end method

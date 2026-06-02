@@ -1,52 +1,77 @@
-.class public final Lgwa;
-.super Ljava/net/ProxySelector;
+.class public abstract Lgwa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lgwa;
+# instance fields
+.field public a:Lrva;
+
+.field public b:Ljava/lang/CharSequence;
+
+.field public c:Ljava/lang/CharSequence;
+
+.field public d:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 1
 
-    new-instance v0, Lgwa;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/net/ProxySelector;-><init>()V
+    const/4 v0, 0x0
 
-    sput-object v0, Lgwa;->a:Lgwa;
+    iput-boolean v0, p0, Lgwa;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final connectFailed(Ljava/net/URI;Ljava/net/SocketAddress;Ljava/io/IOException;)V
-    .locals 0
+.method public a(Landroid/os/Bundle;)V
+    .locals 2
 
+    iget-boolean v0, p0, Lgwa;->d:Z
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "android.summaryText"
+
+    iget-object v1, p0, Lgwa;->c:Ljava/lang/CharSequence;
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    :cond_0
+    iget-object v0, p0, Lgwa;->b:Ljava/lang/CharSequence;
+
+    if-eqz v0, :cond_1
+
+    const-string v1, "android.title.big"
+
+    invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    :cond_1
+    invoke-virtual {p0}, Lgwa;->c()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    const-string v1, "androidx.core.app.extra.COMPAT_TEMPLATE"
+
+    invoke-virtual {p1, v1, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_2
     return-void
 .end method
 
-.method public final select(Ljava/net/URI;)Ljava/util/List;
+.method public abstract b(Lb4h;)V
+.end method
+
+.method public c()Ljava/lang/String;
     .locals 1
 
-    if-eqz p1, :cond_0
+    const/4 v0, 0x0
 
-    sget-object p1, Ljava/net/Proxy;->NO_PROXY:Ljava/net/Proxy;
-
-    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "uri must not be null"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object v0
 .end method

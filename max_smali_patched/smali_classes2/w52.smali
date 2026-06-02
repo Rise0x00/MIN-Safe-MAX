@@ -1,57 +1,194 @@
-.class public final Lw52;
-.super Lo84;
+.class public Lw52;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ljm9;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lx52;
-
-.field public d:J
-
-.field public o:Ljava/lang/String;
-
-.field public t0:I
+# static fields
+.field public static final a:Lw52;
 
 
 # direct methods
-.method public constructor <init>(Lx52;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lw52;->Z:Lx52;
+    new-instance v0, Lw52;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lw52;->a:Lw52;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public a(Limh;Lr80;)V
+    .locals 17
 
-    iput-object p1, p0, Lw52;->Y:Ljava/lang/Object;
+    move-object/from16 v0, p1
 
-    iget p1, p0, Lw52;->t0:I
+    move-object/from16 v1, p2
 
-    const/high16 v0, -0x80000000
+    const/4 v2, 0x0
 
-    or-int/2addr p1, v0
+    sget-object v3, Limh;->l0:Lkf0;
 
-    iput p1, p0, Lw52;->t0:I
+    invoke-interface {v0, v3, v2}, Lyvd;->a(Lkf0;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-wide/16 v0, 0x0
+    move-result-object v2
 
-    const/4 p1, 0x0
+    check-cast v2, Lmc2;
 
-    iget-object v2, p0, Lw52;->Z:Lx52;
+    sget-object v3, Lcvb;->c:Lcvb;
 
-    invoke-virtual {v2, v0, v1, p0, p1}, Lx52;->a(JLo84;Ljava/lang/String;)Ljava/lang/Object;
+    sget-object v4, Lmc2;->i:Lkf0;
 
-    move-result-object p1
+    new-instance v4, Ljava/util/HashSet;
 
-    return-object p1
+    invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
+
+    invoke-static {}, Lnia;->g()Lnia;
+
+    move-result-object v5
+
+    new-instance v6, Ljava/util/ArrayList;
+
+    invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {}, Lwia;->a()Lwia;
+
+    move-result-object v7
+
+    new-instance v8, Lmc2;
+
+    new-instance v9, Ljava/util/ArrayList;
+
+    invoke-direct {v9, v4}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-static {v5}, Lcvb;->b(Lps3;)Lcvb;
+
+    move-result-object v10
+
+    new-instance v13, Ljava/util/ArrayList;
+
+    invoke-direct {v13, v6}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    sget-object v4, Llmg;->b:Llmg;
+
+    new-instance v4, Landroid/util/ArrayMap;
+
+    invoke-direct {v4}, Landroid/util/ArrayMap;-><init>()V
+
+    iget-object v5, v7, Llmg;->a:Landroid/util/ArrayMap;
+
+    invoke-virtual {v5}, Landroid/util/ArrayMap;->keySet()Ljava/util/Set;
+
+    move-result-object v6
+
+    invoke-interface {v6}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v6
+
+    :goto_0
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_0
+
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/lang/String;
+
+    invoke-virtual {v5, v7}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v11
+
+    invoke-virtual {v4, v7, v11}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v15, Llmg;
+
+    invoke-direct {v15, v4}, Llmg;-><init>(Landroid/util/ArrayMap;)V
+
+    const/4 v11, -0x1
+
+    const/4 v12, 0x0
+
+    const/16 v16, 0x0
+
+    move v14, v12
+
+    invoke-direct/range {v8 .. v16}, Lmc2;-><init>(Ljava/util/ArrayList;Lcvb;IZLjava/util/ArrayList;ZLlmg;Li72;)V
+
+    if-eqz v2, :cond_1
+
+    iget v11, v2, Lmc2;->c:I
+
+    iget-object v3, v2, Lmc2;->e:Ljava/util/List;
+
+    invoke-virtual {v1, v3}, Lr80;->a(Ljava/util/Collection;)V
+
+    iget-object v3, v2, Lmc2;->b:Lcvb;
+
+    :cond_1
+    invoke-static {v3}, Lnia;->n(Lps3;)Lnia;
+
+    move-result-object v2
+
+    iput-object v2, v1, Lr80;->f:Ljava/lang/Object;
+
+    new-instance v2, Lt62;
+
+    sget-object v2, Lt62;->c:Lkf0;
+
+    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-interface {v0, v2, v3}, Lps3;->a(Lkf0;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    iput v2, v1, Lr80;->c:I
+
+    new-instance v2, Lv52;
+
+    invoke-direct {v2}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;-><init>()V
+
+    sget-object v3, Lt62;->Y:Lkf0;
+
+    invoke-interface {v0, v3, v2}, Lps3;->a(Lkf0;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+
+    new-instance v3, Llc2;
+
+    invoke-direct {v3, v2}, Llc2;-><init>(Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)V
+
+    invoke-virtual {v1, v3}, Lr80;->b(Lb72;)V
+
+    invoke-static {v0}, Lr05;->P(Lps3;)Lr05;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lr05;->O()Lq5;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Lr80;->c(Lps3;)V
+
+    return-void
 .end method

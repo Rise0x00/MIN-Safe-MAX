@@ -1,41 +1,69 @@
 .class public final Ldre;
-.super Lpfc;
+.super Lorb;
 .source "SourceFile"
+
+# interfaces
+.implements Lvma;
 
 
 # instance fields
-.field public a:I
+.field public d:Z
 
 
 # virtual methods
-.method public final a()[B
-    .locals 2
+.method public final onOverScrolled(IIZZ)V
+    .locals 1
 
-    const/4 v0, 0x6
+    if-gtz p2, :cond_0
 
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+    if-eqz p4, :cond_0
 
-    move-result-object v0
+    const/4 v0, 0x1
 
-    sget-object v1, Ljng;->X:Ljng;
+    goto :goto_0
 
-    iget-short v1, v1, Ljng;->a:S
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+    :goto_0
+    iput-boolean v0, p0, Ldre;->d:Z
 
-    const/4 v1, 0x2
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->onOverScrolled(IIZZ)V
 
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+    return-void
+.end method
 
-    iget v1, p0, Ldre;->a:I
+.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
+    .locals 3
 
-    int-to-short v1, v1
+    invoke-super {p0, p1}, Lorb;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+    move-result v0
 
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
-    move-result-object v0
+    move-result v1
 
-    return-object v0
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_1
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return v0
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Ldre;->d:Z
+
+    return v0
 .end method

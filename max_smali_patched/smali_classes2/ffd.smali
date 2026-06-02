@@ -3,554 +3,558 @@
 
 
 # static fields
-.field public static app_host:I = 0x7f130063
+.field public static actionBarDivider:I = 0x7f040002
 
-.field public static app_host_1:I = 0x7f130064
+.field public static actionBarItemBackground:I = 0x7f040003
 
-.field public static app_host_2:I = 0x7f130065
+.field public static actionBarPopupTheme:I = 0x7f040004
 
-.field public static app_host_3:I = 0x7f130066
+.field public static actionBarSize:I = 0x7f040005
 
-.field public static app_host_prod:I = 0x7f130067
+.field public static actionBarSplitStyle:I = 0x7f040006
 
-.field public static app_host_prod_port:I = 0x7f130068
+.field public static actionBarStyle:I = 0x7f040007
 
-.field public static app_host_redirects:I = 0x7f130069
+.field public static actionBarTabBarStyle:I = 0x7f040008
 
-.field public static app_scheme:I = 0x7f13006d
+.field public static actionBarTabStyle:I = 0x7f040009
 
-.field public static attach_description_union:I = 0x7f13007a
+.field public static actionBarTabTextStyle:I = 0x7f04000a
 
-.field public static auth_path:I = 0x7f1300a7
+.field public static actionBarTheme:I = 0x7f04000b
 
-.field public static feedback_subject:I = 0x7f1304f4
+.field public static actionBarWidgetTheme:I = 0x7f04000c
 
-.field public static feedback_subject_auth:I = 0x7f1304f5
+.field public static actionButtonStyle:I = 0x7f04000d
 
-.field public static feedback_user_info:I = 0x7f1304f7
+.field public static actionDropDownStyle:I = 0x7f04000e
 
-.field public static file_downloading_no_progress:I = 0x7f1304fb
+.field public static actionLayout:I = 0x7f04000f
 
-.field public static file_downloading_progress_media:I = 0x7f1304fc
+.field public static actionMenuTextAppearance:I = 0x7f040010
 
-.field public static file_downloading_progress_photo:I = 0x7f1304fd
+.field public static actionMenuTextColor:I = 0x7f040011
 
-.field public static file_downloading_progress_single_photo:I = 0x7f1304fe
+.field public static actionModeBackground:I = 0x7f040012
 
-.field public static file_downloading_progress_single_video:I = 0x7f1304ff
+.field public static actionModeCloseButtonStyle:I = 0x7f040013
 
-.field public static file_downloading_progress_video:I = 0x7f130500
+.field public static actionModeCloseDrawable:I = 0x7f040015
 
-.field public static folder_path:I = 0x7f13053c
+.field public static actionModeCopyDrawable:I = 0x7f040016
 
-.field public static link_call_join_path:I = 0x7f1305b5
+.field public static actionModeCutDrawable:I = 0x7f040017
 
-.field public static link_chat_join_path:I = 0x7f1305b6
+.field public static actionModeFindDrawable:I = 0x7f040018
 
-.field public static link_chat_path:I = 0x7f1305b7
+.field public static actionModePasteDrawable:I = 0x7f040019
 
-.field public static link_context_menu_action_copy_entity_link:I = 0x7f1305b8
+.field public static actionModePopupWindowStyle:I = 0x7f04001a
 
-.field public static link_context_menu_action_copy_link:I = 0x7f1305b9
+.field public static actionModeSelectAllDrawable:I = 0x7f04001b
 
-.field public static link_context_menu_action_copy_mail_link:I = 0x7f1305ba
+.field public static actionModeShareDrawable:I = 0x7f04001c
 
-.field public static link_context_menu_action_copy_phone_link:I = 0x7f1305bb
+.field public static actionModeSplitBackground:I = 0x7f04001d
 
-.field public static link_context_menu_action_open_chat_link:I = 0x7f1305bc
+.field public static actionModeStyle:I = 0x7f04001e
 
-.field public static link_context_menu_action_open_link:I = 0x7f1305bd
+.field public static actionModeWebSearchDrawable:I = 0x7f040020
 
-.field public static link_context_menu_action_open_mail_link:I = 0x7f1305be
+.field public static actionOverflowButtonStyle:I = 0x7f040021
 
-.field public static link_context_menu_action_open_phone_link:I = 0x7f1305bf
+.field public static actionOverflowMenuStyle:I = 0x7f040022
 
-.field public static link_context_menu_action_open_user_chat_link:I = 0x7f1305c0
+.field public static actionProviderClass:I = 0x7f040023
 
-.field public static link_copied:I = 0x7f1305c1
+.field public static actionViewClass:I = 0x7f040025
 
-.field public static link_host_api:I = 0x7f1305c2
+.field public static activityChooserViewStyle:I = 0x7f040028
 
-.field public static link_mention_copied:I = 0x7f1305c5
+.field public static alertDialogButtonGroupStyle:I = 0x7f040031
 
-.field public static link_private_channel_path:I = 0x7f1305ca
+.field public static alertDialogCenterButtons:I = 0x7f040032
 
-.field public static link_private_contact_path:I = 0x7f1305cb
+.field public static alertDialogStyle:I = 0x7f040033
 
-.field public static link_startwebapp_path:I = 0x7f1305ce
+.field public static alertDialogTheme:I = 0x7f040034
 
-.field public static link_stickerset_path:I = 0x7f1305cf
+.field public static allowStacking:I = 0x7f04003b
 
-.field public static mail_copied:I = 0x7f1305f5
+.field public static alpha:I = 0x7f04003c
 
-.field public static oneme_unsupported_attach_message:I = 0x7f130a9a
+.field public static alphabeticModifiers:I = 0x7f04003d
 
-.field public static oneme_video_message:I = 0x7f130a9c
+.field public static arrowHeadLength:I = 0x7f04004a
 
-.field public static phone_copied:I = 0x7f130af2
+.field public static arrowShaftLength:I = 0x7f04004c
 
-.field public static presence_was_long_ago:I = 0x7f130b4b
+.field public static autoCompleteTextViewStyle:I = 0x7f040051
 
-.field public static presence_was_recently:I = 0x7f130b4c
+.field public static autoSizeMaxTextSize:I = 0x7f040053
 
-.field public static reply_quote_content_level_body:I = 0x7f130c99
+.field public static autoSizeMinTextSize:I = 0x7f040054
 
-.field public static saved_messages:I = 0x7f130cab
+.field public static autoSizePresetSizes:I = 0x7f040055
 
-.field public static saved_messages_description:I = 0x7f130cac
+.field public static autoSizeStepGranularity:I = 0x7f040056
 
-.field public static scheduled_edit_fire_time:I = 0x7f130cb3
+.field public static autoSizeTextType:I = 0x7f040057
 
-.field public static scheduled_messages_send_later:I = 0x7f130cb9
+.field public static background:I = 0x7f040073
 
-.field public static scheduled_messages_title:I = 0x7f130cba
+.field public static backgroundSplit:I = 0x7f04007b
 
-.field public static scheduled_posts_send_later:I = 0x7f130cbb
+.field public static backgroundStacked:I = 0x7f04007c
 
-.field public static scheduled_posts_title:I = 0x7f130cbc
+.field public static backgroundTint:I = 0x7f04007d
 
-.field public static scheduled_reminders_send_later:I = 0x7f130cbf
+.field public static backgroundTintMode:I = 0x7f04007e
 
-.field public static scheduled_send_now:I = 0x7f130cc7
+.field public static barLength:I = 0x7f040099
 
-.field public static tt_active_live_location:I = 0x7f130d89
+.field public static borderlessButtonStyle:I = 0x7f0400af
 
-.field public static tt_active_live_location_in_chat:I = 0x7f130d8a
+.field public static buttonBarButtonStyle:I = 0x7f04015a
 
-.field public static tt_active_live_location_in_chat_dialog:I = 0x7f130d8b
+.field public static buttonBarNegativeButtonStyle:I = 0x7f04015b
 
-.field public static tt_active_live_location_many:I = 0x7f130d8c
+.field public static buttonBarNeutralButtonStyle:I = 0x7f04015c
 
-.field public static tt_admin_list_add:I = 0x7f130d8d
+.field public static buttonBarPositiveButtonStyle:I = 0x7f04015d
 
-.field public static tt_admin_list_add_f:I = 0x7f130d8e
+.field public static buttonBarStyle:I = 0x7f04015e
 
-.field public static tt_admin_list_add_m:I = 0x7f130d8f
+.field public static buttonCompat:I = 0x7f04015f
 
-.field public static tt_admin_list_you_added:I = 0x7f130d90
+.field public static buttonGravity:I = 0x7f040160
 
-.field public static tt_and:I = 0x7f130d91
+.field public static buttonIconDimen:I = 0x7f040162
 
-.field public static tt_at:I = 0x7f130d96
+.field public static buttonPanelSideLayout:I = 0x7f040165
 
-.field public static tt_attach_sent:I = 0x7f130d97
+.field public static buttonStyle:I = 0x7f040167
 
-.field public static tt_attach_sent_f:I = 0x7f130d98
+.field public static buttonStyleSmall:I = 0x7f040168
 
-.field public static tt_attach_sent_m:I = 0x7f130d99
+.field public static buttonTint:I = 0x7f040169
 
-.field public static tt_attach_sent_you:I = 0x7f130d9a
+.field public static buttonTintMode:I = 0x7f04016a
 
-.field public static tt_audio:I = 0x7f130d9b
+.field public static checkboxStyle:I = 0x7f0401d7
 
-.field public static tt_audio_message:I = 0x7f130d9c
+.field public static checkedTextViewStyle:I = 0x7f0401e2
 
-.field public static tt_audio_with_duration:I = 0x7f130d9d
+.field public static closeIcon:I = 0x7f04020e
 
-.field public static tt_blocked_user:I = 0x7f130d9e
+.field public static closeItemLayout:I = 0x7f040215
 
-.field public static tt_bot_control_welcome_message:I = 0x7f130d9f
+.field public static collapseContentDescription:I = 0x7f040216
 
-.field public static tt_bot_official_control_welcome_message:I = 0x7f130da0
+.field public static collapseIcon:I = 0x7f040217
 
-.field public static tt_call_incoming_audio:I = 0x7f130da1
+.field public static color:I = 0x7f040221
 
-.field public static tt_call_incoming_audio_cap:I = 0x7f130da2
+.field public static colorAccent:I = 0x7f040222
 
-.field public static tt_call_incoming_video:I = 0x7f130da3
+.field public static colorBackgroundFloating:I = 0x7f040223
 
-.field public static tt_call_incoming_video_cap:I = 0x7f130da4
+.field public static colorButtonNormal:I = 0x7f040224
 
-.field public static tt_call_missed_audio:I = 0x7f130da5
+.field public static colorControlActivated:I = 0x7f040226
 
-.field public static tt_call_missed_audio_cap:I = 0x7f130da6
+.field public static colorControlHighlight:I = 0x7f040227
 
-.field public static tt_call_missed_call:I = 0x7f130da7
+.field public static colorControlNormal:I = 0x7f040228
 
-.field public static tt_call_missed_video:I = 0x7f130da8
+.field public static colorError:I = 0x7f040229
 
-.field public static tt_call_missed_video_cap:I = 0x7f130da9
+.field public static colorPrimary:I = 0x7f040242
 
-.field public static tt_call_outgoing_audio:I = 0x7f130daa
+.field public static colorPrimaryDark:I = 0x7f040244
 
-.field public static tt_call_outgoing_audio_cap:I = 0x7f130dab
+.field public static colorSwitchThumbNormal:I = 0x7f04025a
 
-.field public static tt_call_outgoing_canceled_audio:I = 0x7f130dac
+.field public static commitIcon:I = 0x7f040262
 
-.field public static tt_call_outgoing_canceled_audio_cap:I = 0x7f130dad
+.field public static contentDescription:I = 0x7f04026d
 
-.field public static tt_call_outgoing_canceled_video:I = 0x7f130dae
+.field public static contentInsetEnd:I = 0x7f04026e
 
-.field public static tt_call_outgoing_canceled_video_cap:I = 0x7f130daf
+.field public static contentInsetEndWithActions:I = 0x7f04026f
 
-.field public static tt_call_outgoing_video:I = 0x7f130db0
+.field public static contentInsetLeft:I = 0x7f040270
 
-.field public static tt_call_outgoing_video_cap:I = 0x7f130db1
+.field public static contentInsetRight:I = 0x7f040271
 
-.field public static tt_chat_admin_group_name_subtitle:I = 0x7f130db2
+.field public static contentInsetStart:I = 0x7f040272
 
-.field public static tt_chat_group_name_subtitle:I = 0x7f130db3
+.field public static contentInsetStartWithNavigation:I = 0x7f040273
 
-.field public static tt_chat_group_subtitle:I = 0x7f130db4
+.field public static controlBackground:I = 0x7f04027d
 
-.field public static tt_chat_participants_empty__subtitle:I = 0x7f130db5
+.field public static customNavigationLayout:I = 0x7f0402a8
 
-.field public static tt_chat_participants_empty__title:I = 0x7f130db6
+.field public static defaultQueryHint:I = 0x7f0402b2
 
-.field public static tt_contact:I = 0x7f130db7
+.field public static dialogCornerRadius:I = 0x7f0402bb
 
-.field public static tt_contact_account_type:I = 0x7f130db8
+.field public static dialogPreferredPadding:I = 0x7f0402c0
 
-.field public static tt_contact_mimetype:I = 0x7f130db9
+.field public static dialogTheme:I = 0x7f0402c1
 
-.field public static tt_contact_name_unknown:I = 0x7f130dba
+.field public static displayOptions:I = 0x7f0402c4
 
-.field public static tt_contact_status_online:I = 0x7f130dbb
+.field public static divider:I = 0x7f0402c5
 
-.field public static tt_contact_with_name:I = 0x7f130dbc
+.field public static dividerHorizontal:I = 0x7f0402ca
 
-.field public static tt_control_change_icon:I = 0x7f130dbd
+.field public static dividerPadding:I = 0x7f0402cd
 
-.field public static tt_control_change_icon_admin:I = 0x7f130dbe
+.field public static dividerVertical:I = 0x7f0402cf
 
-.field public static tt_control_change_icon_f:I = 0x7f130dbf
+.field public static drawableBottomCompat:I = 0x7f0402d8
 
-.field public static tt_control_change_icon_m:I = 0x7f130dc0
+.field public static drawableEndCompat:I = 0x7f0402d9
 
-.field public static tt_control_change_icon_you:I = 0x7f130dc1
+.field public static drawableLeftCompat:I = 0x7f0402da
 
-.field public static tt_control_change_title:I = 0x7f130dc2
+.field public static drawableRightCompat:I = 0x7f0402db
 
-.field public static tt_control_change_title_admin:I = 0x7f130dc3
+.field public static drawableSize:I = 0x7f0402dc
 
-.field public static tt_control_change_title_f:I = 0x7f130dc4
+.field public static drawableStartCompat:I = 0x7f0402dd
 
-.field public static tt_control_change_title_m:I = 0x7f130dc5
+.field public static drawableTint:I = 0x7f0402de
 
-.field public static tt_control_change_title_you:I = 0x7f130dc6
+.field public static drawableTintMode:I = 0x7f0402df
 
-.field public static tt_control_create_chat:I = 0x7f130dc7
+.field public static drawableTopCompat:I = 0x7f0402e0
 
-.field public static tt_control_create_chat_admin:I = 0x7f130dc8
+.field public static drawerArrowStyle:I = 0x7f0402e1
 
-.field public static tt_control_create_chat_f:I = 0x7f130dc9
+.field public static dropDownListViewStyle:I = 0x7f0402e5
 
-.field public static tt_control_create_chat_m:I = 0x7f130dca
+.field public static dropdownListPreferredItemHeight:I = 0x7f0402e6
 
-.field public static tt_control_create_chat_you:I = 0x7f130dcb
+.field public static editTextBackground:I = 0x7f0402ea
 
-.field public static tt_control_join_by_link:I = 0x7f130dcc
+.field public static editTextColor:I = 0x7f0402eb
 
-.field public static tt_control_join_by_link_f:I = 0x7f130dcd
+.field public static editTextStyle:I = 0x7f0402ed
 
-.field public static tt_control_join_by_link_m:I = 0x7f130dce
+.field public static elevation:I = 0x7f0402ee
 
-.field public static tt_control_join_by_link_you:I = 0x7f130dcf
+.field public static expandActivityOverflowButtonDrawable:I = 0x7f040314
 
-.field public static tt_control_leave_chat:I = 0x7f130dd0
+.field public static firstBaselineToTopHeight:I = 0x7f040369
 
-.field public static tt_control_leave_chat_f:I = 0x7f130dd1
+.field public static font:I = 0x7f04039d
 
-.field public static tt_control_leave_chat_m:I = 0x7f130dd2
+.field public static fontFamily:I = 0x7f04039e
 
-.field public static tt_control_leave_chat_you:I = 0x7f130dd3
+.field public static fontProviderAuthority:I = 0x7f04039f
 
-.field public static tt_control_remove_icon:I = 0x7f130dd4
+.field public static fontProviderCerts:I = 0x7f0403a0
 
-.field public static tt_control_remove_icon_admin:I = 0x7f130dd5
+.field public static fontProviderFetchStrategy:I = 0x7f0403a2
 
-.field public static tt_control_remove_icon_f:I = 0x7f130dd6
+.field public static fontProviderFetchTimeout:I = 0x7f0403a3
 
-.field public static tt_control_remove_icon_m:I = 0x7f130dd7
+.field public static fontProviderPackage:I = 0x7f0403a4
 
-.field public static tt_control_remove_icon_you:I = 0x7f130dd8
+.field public static fontProviderQuery:I = 0x7f0403a5
 
-.field public static tt_control_remove_title:I = 0x7f130dd9
+.field public static fontStyle:I = 0x7f0403a7
 
-.field public static tt_control_remove_title_admin:I = 0x7f130dda
+.field public static fontVariationSettings:I = 0x7f0403a8
 
-.field public static tt_control_remove_title_f:I = 0x7f130ddb
+.field public static fontWeight:I = 0x7f0403a9
 
-.field public static tt_control_remove_title_m:I = 0x7f130ddc
+.field public static gapBetweenBars:I = 0x7f0403b0
 
-.field public static tt_control_remove_title_you:I = 0x7f130ddd
+.field public static goIcon:I = 0x7f0403b2
 
-.field public static tt_control_user_add:I = 0x7f130dde
+.field public static height:I = 0x7f0403d3
 
-.field public static tt_control_user_add_f:I = 0x7f130ddf
+.field public static hideOnContentScroll:I = 0x7f0403db
 
-.field public static tt_control_user_add_m:I = 0x7f130de0
+.field public static homeAsUpIndicator:I = 0x7f0403e4
 
-.field public static tt_control_user_add_you:I = 0x7f130de1
+.field public static homeLayout:I = 0x7f0403e5
 
-.field public static tt_control_user_add_you_f:I = 0x7f130de2
+.field public static icon:I = 0x7f0403e9
 
-.field public static tt_control_user_add_you_m:I = 0x7f130de3
+.field public static iconTint:I = 0x7f0403f0
 
-.field public static tt_control_user_remove:I = 0x7f130de4
+.field public static iconTintMode:I = 0x7f0403f1
 
-.field public static tt_control_user_remove_f:I = 0x7f130de5
+.field public static iconifiedByDefault:I = 0x7f0403ff
 
-.field public static tt_control_user_remove_m:I = 0x7f130de6
+.field public static imageButtonStyle:I = 0x7f040404
 
-.field public static tt_control_user_remove_you_f:I = 0x7f130de7
+.field public static indeterminateProgressStyle:I = 0x7f04040b
 
-.field public static tt_control_user_remove_you_m:I = 0x7f130de8
+.field public static initialActivityCount:I = 0x7f040412
 
-.field public static tt_control_you:I = 0x7f130de9
+.field public static isLightTheme:I = 0x7f040416
 
-.field public static tt_control_you_add_user:I = 0x7f130dea
+.field public static itemPadding:I = 0x7f040426
 
-.field public static tt_control_you_remove_user:I = 0x7f130deb
+.field public static lastBaselineToBottomHeight:I = 0x7f040445
 
-.field public static tt_dates_day_before_yesterday:I = 0x7f130dec
+.field public static layout:I = 0x7f04044b
 
-.field public static tt_dates_days_last_seen:I = 0x7f130ded
+.field public static lineHeight:I = 0x7f0404a9
 
-.field public static tt_dates_full_last_seen_f:I = 0x7f130dee
+.field public static listChoiceBackgroundIndicator:I = 0x7f0404ac
 
-.field public static tt_dates_full_last_seen_m:I = 0x7f130def
+.field public static listChoiceIndicatorMultipleAnimated:I = 0x7f0404ad
 
-.field public static tt_dates_full_last_seen_u:I = 0x7f130df0
+.field public static listChoiceIndicatorSingleAnimated:I = 0x7f0404ae
 
-.field public static tt_dates_full_last_update:I = 0x7f130df1
+.field public static listDividerAlertDialog:I = 0x7f0404af
 
-.field public static tt_dates_full_live_location_end:I = 0x7f130df2
+.field public static listItemLayout:I = 0x7f0404b0
 
-.field public static tt_dates_hours_last_seen:I = 0x7f130df3
+.field public static listLayout:I = 0x7f0404b1
 
-.field public static tt_dates_minutes_last_seen:I = 0x7f130df4
+.field public static listMenuViewStyle:I = 0x7f0404b2
 
-.field public static tt_dates_months_last_seen:I = 0x7f130df5
+.field public static listPopupWindowStyle:I = 0x7f0404b3
 
-.field public static tt_dates_right_now:I = 0x7f130df6
+.field public static listPreferredItemHeight:I = 0x7f0404b4
 
-.field public static tt_dates_right_now_last_seen_f:I = 0x7f130df7
+.field public static listPreferredItemHeightLarge:I = 0x7f0404b5
 
-.field public static tt_dates_right_now_last_seen_m:I = 0x7f130df8
+.field public static listPreferredItemHeightSmall:I = 0x7f0404b6
 
-.field public static tt_dates_right_now_last_seen_u:I = 0x7f130df9
+.field public static listPreferredItemPaddingEnd:I = 0x7f0404b7
 
-.field public static tt_dates_right_now_last_update:I = 0x7f130dfa
+.field public static listPreferredItemPaddingLeft:I = 0x7f0404b8
 
-.field public static tt_dates_right_now_live_location_end:I = 0x7f130dfb
+.field public static listPreferredItemPaddingRight:I = 0x7f0404b9
 
-.field public static tt_dates_today:I = 0x7f130dfc
+.field public static listPreferredItemPaddingStart:I = 0x7f0404ba
 
-.field public static tt_dates_today_at:I = 0x7f130dfd
+.field public static logo:I = 0x7f0404bc
 
-.field public static tt_dates_tomorrow:I = 0x7f130dfe
+.field public static logoDescription:I = 0x7f0404be
 
-.field public static tt_dates_tomorrow_at:I = 0x7f130dff
+.field public static maxButtonHeight:I = 0x7f0404fa
 
-.field public static tt_dates_weeks_last_seen:I = 0x7f130e00
+.field public static measureWithLargestChild:I = 0x7f040506
 
-.field public static tt_dates_yesterday:I = 0x7f130e01
+.field public static menu:I = 0x7f040517
 
-.field public static tt_dates_yesterday_at:I = 0x7f130e02
+.field public static multiChoiceItemLayout:I = 0x7f04055c
 
-.field public static tt_dates_yesterday_at_last_seen_f:I = 0x7f130e03
+.field public static navigationContentDescription:I = 0x7f04055d
 
-.field public static tt_dates_yesterday_at_last_seen_m:I = 0x7f130e04
+.field public static navigationIcon:I = 0x7f04055e
 
-.field public static tt_dates_yesterday_at_last_seen_no_time:I = 0x7f130e05
+.field public static navigationMode:I = 0x7f040560
 
-.field public static tt_dates_yesterday_at_last_seen_u:I = 0x7f130e06
+.field public static numericModifiers:I = 0x7f040569
 
-.field public static tt_dates_yesterday_format:I = 0x7f130e07
+.field public static overlapAnchor:I = 0x7f040575
 
-.field public static tt_dates_yesterday_last_update:I = 0x7f130e08
+.field public static paddingBottomNoButtons:I = 0x7f04057a
 
-.field public static tt_dates_yesterday_live_location_end:I = 0x7f130e09
+.field public static paddingEnd:I = 0x7f04057c
 
-.field public static tt_direct_reply_message_sent:I = 0x7f130e0a
+.field public static paddingStart:I = 0x7f04057f
 
-.field public static tt_email_invite_body:I = 0x7f130e0b
+.field public static paddingTopNoTitle:I = 0x7f040581
 
-.field public static tt_email_invite_subject:I = 0x7f130e0c
+.field public static panelBackground:I = 0x7f040583
 
-.field public static tt_file:I = 0x7f130e0d
+.field public static panelMenuListTheme:I = 0x7f040584
 
-.field public static tt_file_size_unit_b:I = 0x7f130e0e
+.field public static panelMenuListWidth:I = 0x7f040585
 
-.field public static tt_file_size_unit_gb:I = 0x7f130e0f
+.field public static popupMenuStyle:I = 0x7f0405a1
 
-.field public static tt_file_size_unit_kb:I = 0x7f130e10
+.field public static popupTheme:I = 0x7f0405a2
 
-.field public static tt_file_size_unit_mb:I = 0x7f130e11
+.field public static popupWindowStyle:I = 0x7f0405a3
 
-.field public static tt_file_size_unit_tb:I = 0x7f130e12
+.field public static preserveIconSpacing:I = 0x7f0405b3
 
-.field public static tt_forwarded_message:I = 0x7f130e13
+.field public static progressBarPadding:I = 0x7f0405ba
 
-.field public static tt_forwarded_message_patten:I = 0x7f130e14
+.field public static progressBarStyle:I = 0x7f0405bb
 
-.field public static tt_game:I = 0x7f130e15
+.field public static queryBackground:I = 0x7f0405d1
 
-.field public static tt_gif:I = 0x7f130e16
+.field public static queryHint:I = 0x7f0405d2
 
-.field public static tt_in_chat:I = 0x7f130e17
+.field public static radioButtonStyle:I = 0x7f0405d4
 
-.field public static tt_keyboard:I = 0x7f130e18
+.field public static ratingBarStyle:I = 0x7f0405d6
 
-.field public static tt_less_minute_left:I = 0x7f130e19
+.field public static ratingBarStyleIndicator:I = 0x7f0405d7
 
-.field public static tt_link:I = 0x7f130e1a
+.field public static ratingBarStyleSmall:I = 0x7f0405d8
 
-.field public static tt_link_acs:I = 0x7f130e1b
+.field public static searchHintIcon:I = 0x7f040609
 
-.field public static tt_live_location:I = 0x7f130e1c
+.field public static searchIcon:I = 0x7f04060a
 
-.field public static tt_live_location_another_device:I = 0x7f130e1d
+.field public static searchViewStyle:I = 0x7f04060c
 
-.field public static tt_live_location_restart:I = 0x7f130e1e
+.field public static seekBarStyle:I = 0x7f040612
 
-.field public static tt_live_location_sharing:I = 0x7f130e1f
+.field public static selectableItemBackground:I = 0x7f040614
 
-.field public static tt_live_location_sharing_dialog:I = 0x7f130e20
+.field public static selectableItemBackgroundBorderless:I = 0x7f040615
 
-.field public static tt_live_location_updating:I = 0x7f130e21
+.field public static showAsAction:I = 0x7f04066a
 
-.field public static tt_location:I = 0x7f130e22
+.field public static showDividers:I = 0x7f04066f
 
-.field public static tt_location_max_timeout:I = 0x7f130e23
+.field public static showText:I = 0x7f040674
 
-.field public static tt_location_no_permission_notification:I = 0x7f130e24
+.field public static showTitle:I = 0x7f040675
 
-.field public static tt_mark_as_read:I = 0x7f130e25
+.field public static singleChoiceItemLayout:I = 0x7f040687
 
-.field public static tt_mentioned_message_patten:I = 0x7f130e26
+.field public static spinBars:I = 0x7f0406b2
 
-.field public static tt_message_send_error:I = 0x7f130e27
+.field public static spinnerDropDownItemStyle:I = 0x7f0406b3
 
-.field public static tt_message_sent_chat:I = 0x7f130e28
+.field public static spinnerStyle:I = 0x7f0406b4
 
-.field public static tt_message_sent_chat_f:I = 0x7f130e29
+.field public static splitTrack:I = 0x7f0406ba
 
-.field public static tt_message_sent_chat_m:I = 0x7f130e2a
+.field public static srcCompat:I = 0x7f0406c0
 
-.field public static tt_message_sent_dialog:I = 0x7f130e2b
+.field public static state_above_anchor:I = 0x7f0406f7
 
-.field public static tt_message_sent_dialog_f:I = 0x7f130e2c
+.field public static subMenuArrow:I = 0x7f040774
 
-.field public static tt_message_sent_dialog_m:I = 0x7f130e2d
+.field public static submitBackground:I = 0x7f040779
 
-.field public static tt_music:I = 0x7f130e2e
+.field public static subtitle:I = 0x7f04077a
 
-.field public static tt_new_message:I = 0x7f130e2f
+.field public static subtitleTextAppearance:I = 0x7f04077c
 
-.field public static tt_no_subscribers:I = 0x7f130e30
+.field public static subtitleTextColor:I = 0x7f04077d
 
-.field public static tt_notif_category_active_calls:I = 0x7f130e31
+.field public static subtitleTextStyle:I = 0x7f04077e
 
-.field public static tt_notif_category_bg_data_restricted_notif:I = 0x7f130e32
+.field public static suggestionRowLayout:I = 0x7f040782
 
-.field public static tt_notif_category_chats:I = 0x7f130e33
+.field public static switchMinWidth:I = 0x7f04078b
 
-.field public static tt_notif_category_dialogs:I = 0x7f130e34
+.field public static switchPadding:I = 0x7f04078c
 
-.field public static tt_notif_category_drafts:I = 0x7f130e35
+.field public static switchStyle:I = 0x7f04078f
 
-.field public static tt_notif_category_events:I = 0x7f130e36
+.field public static switchTextAppearance:I = 0x7f040790
 
-.field public static tt_notif_category_file_loading:I = 0x7f130e37
+.field public static textAllCaps:I = 0x7f0407b9
 
-.field public static tt_notif_category_group_calls:I = 0x7f130e38
+.field public static textAppearanceLargePopupMenu:I = 0x7f0407d0
 
-.field public static tt_notif_category_group_chats:I = 0x7f130e39
+.field public static textAppearanceListItem:I = 0x7f0407d2
 
-.field public static tt_notif_category_group_other:I = 0x7f130e3a
+.field public static textAppearanceListItemSecondary:I = 0x7f0407d3
 
-.field public static tt_notif_category_inapp:I = 0x7f130e3b
+.field public static textAppearanceListItemSmall:I = 0x7f0407d4
 
-.field public static tt_notif_category_incoming_calls:I = 0x7f130e3c
+.field public static textAppearancePopupMenuHeader:I = 0x7f0407d6
 
-.field public static tt_notif_category_live_location:I = 0x7f130e3d
+.field public static textAppearanceSearchResultSubtitle:I = 0x7f0407d7
 
-.field public static tt_notif_category_media:I = 0x7f130e3e
+.field public static textAppearanceSearchResultTitle:I = 0x7f0407d8
 
-.field public static tt_notif_category_misc:I = 0x7f130e3f
+.field public static textAppearanceSmallPopupMenu:I = 0x7f0407d9
 
-.field public static tt_notif_category_silent:I = 0x7f130e40
+.field public static textColorAlertDialogListItem:I = 0x7f0407e4
 
-.field public static tt_notif_category_video:I = 0x7f130e41
+.field public static textColorSearchUrl:I = 0x7f0407e5
 
-.field public static tt_notification_file_downloading_title:I = 0x7f130e42
+.field public static textLocale:I = 0x7f0407f0
 
-.field public static tt_notification_file_uploading_title:I = 0x7f130e43
+.field public static theme:I = 0x7f040807
 
-.field public static tt_notification_text_when_bg_data_restricted:I = 0x7f130e44
+.field public static thickness:I = 0x7f040808
 
-.field public static tt_of:I = 0x7f130e45
+.field public static thumbTextPadding:I = 0x7f040813
 
-.field public static tt_off:I = 0x7f130e46
+.field public static thumbTint:I = 0x7f040814
 
-.field public static tt_ok_ru_group:I = 0x7f130e47
+.field public static thumbTintMode:I = 0x7f040815
 
-.field public static tt_photo:I = 0x7f130e48
+.field public static tickMark:I = 0x7f04081b
 
-.field public static tt_photo_and_video:I = 0x7f130e49
+.field public static tickMarkTint:I = 0x7f04081c
 
-.field public static tt_pin_lock_always:I = 0x7f130e4a
+.field public static tickMarkTintMode:I = 0x7f04081d
 
-.field public static tt_present:I = 0x7f130e4b
+.field public static tint:I = 0x7f040823
 
-.field public static tt_present_accepted:I = 0x7f130e4c
+.field public static tintMode:I = 0x7f040824
 
-.field public static tt_privacy_restricted_dialog:I = 0x7f130e4d
+.field public static title:I = 0x7f040826
 
-.field public static tt_replied_message_patten:I = 0x7f130e4e
+.field public static titleMargin:I = 0x7f04082a
 
-.field public static tt_reply:I = 0x7f130e4f
+.field public static titleMarginBottom:I = 0x7f04082b
 
-.field public static tt_scheduled_message_send_failure:I = 0x7f130e50
+.field public static titleMarginEnd:I = 0x7f04082c
 
-.field public static tt_scheduled_message_send_success:I = 0x7f130e51
+.field public static titleMarginStart:I = 0x7f04082d
 
-.field public static tt_smile:I = 0x7f130e52
+.field public static titleMarginTop:I = 0x7f04082e
 
-.field public static tt_smiles:I = 0x7f130e53
+.field public static titleMargins:I = 0x7f04082f
 
-.field public static tt_sms_invite_text:I = 0x7f130e54
+.field public static titleTextAppearance:I = 0x7f040831
 
-.field public static tt_sticker:I = 0x7f130e55
+.field public static titleTextColor:I = 0x7f040832
 
-.field public static tt_stop_live_location:I = 0x7f130e56
+.field public static titleTextStyle:I = 0x7f040834
 
-.field public static tt_typing:I = 0x7f130e57
+.field public static toolbarNavigationButtonStyle:I = 0x7f040839
 
-.field public static tt_typing_and:I = 0x7f130e58
+.field public static toolbarStyle:I = 0x7f04083a
 
-.field public static tt_typing_audio:I = 0x7f130e59
+.field public static tooltipForegroundColor:I = 0x7f04083c
 
-.field public static tt_typing_file:I = 0x7f130e5a
+.field public static tooltipFrameBackground:I = 0x7f04083d
 
-.field public static tt_typing_photo:I = 0x7f130e5b
+.field public static tooltipText:I = 0x7f04083f
 
-.field public static tt_typing_sticker:I = 0x7f130e5c
+.field public static track:I = 0x7f040846
 
-.field public static tt_typing_video:I = 0x7f130e5d
+.field public static trackTint:I = 0x7f040852
 
-.field public static tt_typing_video_message:I = 0x7f130e5e
+.field public static trackTintMode:I = 0x7f040853
 
-.field public static tt_unbind_ok_deleted_user:I = 0x7f130e5f
+.field public static ttcIndex:I = 0x7f04085d
 
-.field public static tt_video:I = 0x7f130e60
+.field public static viewInflaterClass:I = 0x7f04087c
 
-.field public static tt_warning_low_storage_space:I = 0x7f130e61
+.field public static voiceIcon:I = 0x7f040882
 
-.field public static tt_worker_attach_upload:I = 0x7f130e62
+.field public static windowActionBar:I = 0x7f04088b
 
-.field public static tt_worker_cancel:I = 0x7f130e63
+.field public static windowActionBarOverlay:I = 0x7f04088c
 
-.field public static tt_worker_draft_sync:I = 0x7f130e64
+.field public static windowActionModeOverlay:I = 0x7f04088d
 
-.field public static tt_worker_gif_upload:I = 0x7f130e65
+.field public static windowFixedHeightMajor:I = 0x7f04088e
 
-.field public static tt_you:I = 0x7f130e66
+.field public static windowFixedHeightMinor:I = 0x7f04088f
 
-.field public static tt_you_in_subtitle:I = 0x7f130e67
+.field public static windowFixedWidthMajor:I = 0x7f040890
 
-.field public static tt_you_send_message:I = 0x7f130e68
+.field public static windowFixedWidthMinor:I = 0x7f040891
 
-.field public static web_scheme:I = 0x7f130ec3
+.field public static windowMinWidthMajor:I = 0x7f040892
+
+.field public static windowMinWidthMinor:I = 0x7f040893
+
+.field public static windowNoTitle:I = 0x7f040894

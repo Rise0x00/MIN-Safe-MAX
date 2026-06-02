@@ -2,66 +2,60 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field public static final d:Lg1;
 
 
 # instance fields
-.field public final a:Lqve;
+.field public final a:Ljava/lang/Runnable;
 
-.field public final b:Lie8;
+.field public final b:Ljava/util/concurrent/Executor;
+
+.field public c:Lg1;
 
 
 # direct methods
-.method public constructor <init>(Lqve;Lie8;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lg1;
 
-    iput-object p1, p0, Lg1;->a:Lqve;
+    invoke-direct {v0}, Lg1;-><init>()V
 
-    iput-object p2, p0, Lg1;->b:Lie8;
+    sput-object v0, Lg1;->d:Lg1;
 
     return-void
 .end method
 
+.method public constructor <init>()V
+    .locals 1
 
-# virtual methods
-.method public final run()V
-    .locals 3
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Lg1;->a:Lqve;
+    const/4 v0, 0x0
 
-    iget-object v0, v0, Lt1;->a:Ljava/lang/Object;
+    .line 5
+    iput-object v0, p0, Lg1;->a:Ljava/lang/Runnable;
 
-    if-eq v0, p0, :cond_0
+    .line 6
+    iput-object v0, p0, Lg1;->b:Ljava/util/concurrent/Executor;
 
-    goto :goto_0
+    return-void
+.end method
 
-    :cond_0
-    iget-object v0, p0, Lg1;->b:Lie8;
+.method public constructor <init>(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    .locals 0
 
-    invoke-static {v0}, Lt1;->h(Lie8;)Ljava/lang/Object;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    .line 2
+    iput-object p1, p0, Lg1;->a:Ljava/lang/Runnable;
 
-    sget-object v1, Lt1;->X:Lw2j;
+    .line 3
+    iput-object p2, p0, Lg1;->b:Ljava/util/concurrent/Executor;
 
-    iget-object v2, p0, Lg1;->a:Lqve;
-
-    invoke-virtual {v1, v2, p0, v0}, Lw2j;->b(Lt1;Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lg1;->a:Lqve;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lt1;->e(Lt1;Z)V
-
-    :cond_1
-    :goto_0
     return-void
 .end method

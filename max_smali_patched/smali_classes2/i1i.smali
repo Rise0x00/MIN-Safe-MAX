@@ -1,154 +1,282 @@
 .class public final Li1i;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lb37;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lquh;
 
-.field public final synthetic Y:Lp1i;
+.field public final b:I
 
-.field public final synthetic Z:Ly0i;
+.field public final c:J
 
-.field public o:I
-
-.field public final synthetic t0:Ls1i;
+.field public final d:Ljava/util/concurrent/atomic/AtomicLong;
 
 
 # direct methods
-.method public constructor <init>(Ly0i;Lp1i;Ls1i;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lquh;IJ)V
     .locals 0
 
-    iput-object p2, p0, Li1i;->Y:Lp1i;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Li1i;->Z:Ly0i;
+    iput-object p1, p0, Li1i;->a:Lquh;
 
-    iput-object p3, p0, Li1i;->t0:Ls1i;
+    iput p2, p0, Li1i;->b:I
 
-    const/4 p1, 0x2
+    iput-wide p3, p0, Li1i;->c:J
 
-    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+
+    iput-object p1, p0, Li1i;->d:Ljava/util/concurrent/atomic/AtomicLong;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Luf5;JLgm6;Z)V
+    .locals 10
 
-    check-cast p1, Ljava/lang/Throwable;
+    iget-object p5, p1, Luf5;->a:Ln99;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Li1i;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Li1i;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Li1i;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
-
-    new-instance v0, Li1i;
-
-    iget-object v1, p0, Li1i;->Z:Ly0i;
-
-    iget-object v2, p0, Li1i;->t0:Ls1i;
-
-    iget-object v3, p0, Li1i;->Y:Lp1i;
-
-    invoke-direct {v0, v1, v3, v2, p2}, Li1i;-><init>(Ly0i;Lp1i;Ls1i;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Li1i;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget-object v0, p0, Li1i;->X:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    iget v1, p0, Li1i;->o:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v2, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-static {v0}, Lp1i;->f(Ljava/lang/Throwable;)Lb08;
-
-    move-result-object v3
-
-    iget-object p1, p0, Li1i;->Y:Lp1i;
-
-    invoke-virtual {p1}, Lp1i;->g()Lol3;
-
-    move-result-object v1
-
-    iget-object p1, p1, Lp1i;->g:Lyw0;
-
-    iget-object v0, p0, Li1i;->t0:Ls1i;
-
-    iget-object v5, v0, Ls1i;->b:Ljava/lang/String;
+    iget-object p5, p5, Ln99;->b:Lc99;
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Li1i;->X:Ljava/lang/Object;
+    if-nez p5, :cond_0
 
-    iput v2, p0, Li1i;->o:I
+    :goto_0
+    move p5, v0
 
-    iget-object v4, p0, Li1i;->Z:Ly0i;
+    goto :goto_1
 
-    move-object v6, p0
+    :cond_0
+    iget-object p5, p5, Lc99;->a:Landroid/net/Uri;
 
-    move-object v2, p1
+    invoke-virtual {p5}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
-    invoke-virtual/range {v1 .. v6}, Lol3;->a(Lmb2;Lb08;Lf6i;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object p5
 
-    move-result-object p1
+    if-nez p5, :cond_1
 
-    sget-object v0, Lac4;->a:Lac4;
+    goto :goto_0
 
-    if-ne p1, v0, :cond_2
+    :cond_1
+    const-string v1, "transformer_surface_asset"
 
-    return-object v0
+    invoke-virtual {p5, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p5
+
+    :goto_1
+    invoke-virtual {p1, p2, p3}, Luf5;->b(J)J
+
+    move-result-wide p2
+
+    iget-object v1, p0, Li1i;->d:Ljava/util/concurrent/atomic/AtomicLong;
+
+    if-eqz p4, :cond_7
+
+    iget v2, p4, Lgm6;->z:I
+
+    rem-int/lit16 v2, v2, 0xb4
+
+    if-nez v2, :cond_2
+
+    :goto_2
+    move-object v6, p4
+
+    goto :goto_3
 
     :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-virtual {p4}, Lgm6;->a()Lem6;
 
-    return-object p1
+    move-result-object v2
+
+    iget v3, p4, Lgm6;->v:I
+
+    iput v3, v2, Lem6;->t:I
+
+    iget p4, p4, Lgm6;->u:I
+
+    iput p4, v2, Lem6;->u:I
+
+    iput v0, v2, Lem6;->y:I
+
+    new-instance p4, Lgm6;
+
+    invoke-direct {p4, v2}, Lgm6;-><init>(Lem6;)V
+
+    goto :goto_2
+
+    :goto_3
+    if-eqz p5, :cond_3
+
+    const/4 p4, 0x4
+
+    :goto_4
+    move v5, p4
+
+    goto :goto_5
+
+    :cond_3
+    iget-object p4, v6, Lgm6;->n:Ljava/lang/String;
+
+    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p4}, Lv9a;->k(Ljava/lang/String;)Z
+
+    move-result p5
+
+    if-eqz p5, :cond_4
+
+    const/4 p4, 0x2
+
+    goto :goto_4
+
+    :cond_4
+    const-string p5, "video/raw"
+
+    invoke-virtual {p4, p5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p5
+
+    if-eqz p5, :cond_5
+
+    const/4 p4, 0x3
+
+    goto :goto_4
+
+    :cond_5
+    invoke-static {p4}, Lv9a;->m(Ljava/lang/String;)Z
+
+    move-result p5
+
+    if-eqz p5, :cond_6
+
+    const/4 p4, 0x1
+
+    goto :goto_4
+
+    :goto_5
+    iget-object p1, p1, Luf5;->f:Lig5;
+
+    iget-object v7, p1, Lig5;->b:Len7;
+
+    iget-wide p4, p0, Li1i;->c:J
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+
+    move-result-wide v2
+
+    add-long v8, v2, p4
+
+    iget-object v3, p0, Li1i;->a:Lquh;
+
+    iget v4, p0, Li1i;->b:I
+
+    invoke-interface/range {v3 .. v9}, Lquh;->m(IILgm6;Ljava/util/List;J)V
+
+    goto :goto_6
+
+    :cond_6
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "MIME type not supported "
+
+    invoke-virtual {p2, p4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_7
+    :goto_6
+    invoke-virtual {v1, p2, p3}, Ljava/util/concurrent/atomic/AtomicLong;->addAndGet(J)J
+
+    return-void
+.end method
+
+.method public final b()Landroid/view/Surface;
+    .locals 2
+
+    iget-object v0, p0, Li1i;->a:Lquh;
+
+    iget v1, p0, Li1i;->b:I
+
+    invoke-interface {v0, v1}, Lquh;->k(I)Landroid/view/Surface;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final c()I
+    .locals 2
+
+    iget-object v0, p0, Li1i;->a:Lquh;
+
+    iget v1, p0, Li1i;->b:I
+
+    invoke-interface {v0, v1}, Lquh;->g(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final d(Landroid/graphics/Bitmap;Loy3;)I
+    .locals 2
+
+    iget-object v0, p0, Li1i;->a:Lquh;
+
+    iget v1, p0, Li1i;->b:I
+
+    invoke-interface {v0, v1, p1, p2}, Lquh;->n(ILandroid/graphics/Bitmap;Loy3;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x2
+
+    return p1
+.end method
+
+.method public final f()V
+    .locals 2
+
+    iget-object v0, p0, Li1i;->a:Lquh;
+
+    iget v1, p0, Li1i;->b:I
+
+    invoke-interface {v0, v1}, Lquh;->q(I)V
+
+    return-void
+.end method
+
+.method public final h(J)Z
+    .locals 0
+
+    iget-object p1, p0, Li1i;->a:Lquh;
+
+    iget p2, p0, Li1i;->b:I
+
+    invoke-interface {p1, p2}, Lquh;->f(I)Z
+
+    move-result p1
+
+    return p1
 .end method

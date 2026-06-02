@@ -1,59 +1,128 @@
 .class public final Lds9;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field public X:Z
+.field public final synthetic a:I
 
-.field public Y:I
+.field public final b:Z
 
-.field public synthetic Z:Ljava/lang/Object;
+.field public final c:Lk01;
 
-.field public d:Ljm9;
+.field public final d:Ljava/lang/Object;
 
-.field public o:Lqhg;
-
-.field public final synthetic t0:Los9;
-
-.field public u0:I
+.field public final o:Ljava/io/Closeable;
 
 
 # direct methods
-.method public constructor <init>(Los9;Lo84;)V
-    .locals 0
+.method public constructor <init>(ZI)V
+    .locals 2
 
-    iput-object p1, p0, Lds9;->t0:Los9;
+    iput p2, p0, Lds9;->a:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    packed-switch p2, :pswitch_data_0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lds9;->b:Z
+
+    new-instance p1, Lk01;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lds9;->c:Lk01;
+
+    new-instance p2, Ljava/util/zip/Deflater;
+
+    const/4 v0, -0x1
+
+    const/4 v1, 0x1
+
+    invoke-direct {p2, v0, v1}, Ljava/util/zip/Deflater;-><init>(IZ)V
+
+    iput-object p2, p0, Lds9;->d:Ljava/lang/Object;
+
+    new-instance v0, Lay4;
+
+    invoke-direct {v0, p1, p2}, Lay4;-><init>(Lk01;Ljava/util/zip/Deflater;)V
+
+    iput-object v0, p0, Lds9;->o:Ljava/io/Closeable;
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lds9;->b:Z
+
+    new-instance p1, Lk01;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lds9;->c:Lk01;
+
+    new-instance p2, Ljava/util/zip/Inflater;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p2, v0}, Ljava/util/zip/Inflater;-><init>(Z)V
+
+    iput-object p2, p0, Lds9;->d:Ljava/lang/Object;
+
+    new-instance v0, Lqq7;
+
+    new-instance v1, Lewd;
+
+    invoke-direct {v1, p1}, Lewd;-><init>(Lcvf;)V
+
+    invoke-direct {v0, v1, p2}, Lqq7;-><init>(Lewd;Ljava/util/zip/Inflater;)V
+
+    iput-object v0, p0, Lds9;->o:Ljava/io/Closeable;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final close()V
+    .locals 1
 
-    iput-object p1, p0, Lds9;->Z:Ljava/lang/Object;
+    iget v0, p0, Lds9;->a:I
 
-    iget p1, p0, Lds9;->u0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lds9;->o:Ljava/io/Closeable;
 
-    or-int/2addr p1, v0
+    check-cast v0, Lqq7;
 
-    iput p1, p0, Lds9;->u0:I
+    invoke-virtual {v0}, Lqq7;->close()V
 
-    const/4 p1, 0x0
+    return-void
 
-    const/4 v0, 0x0
+    :pswitch_0
+    iget-object v0, p0, Lds9;->o:Ljava/io/Closeable;
 
-    iget-object v1, p0, Lds9;->t0:Los9;
+    check-cast v0, Lay4;
 
-    invoke-virtual {v1, p1, v0, p0}, Los9;->B(Ljava/lang/Long;ZLo84;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lay4;->close()V
 
-    move-result-object p1
+    return-void
 
-    return-object p1
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

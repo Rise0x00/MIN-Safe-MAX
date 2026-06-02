@@ -1,23 +1,53 @@
 .class public final Lal;
-.super Ljava/lang/Object;
+.super Lz84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic Y:Ljl;
+
+.field public Z:I
+
+.field public d:Ljava/util/Map;
+
+.field public o:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;)V
+.method public constructor <init>(Ljl;Lz84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lal;->Y:Ljl;
 
-    iput-wide p1, p0, Lal;->a:J
-
-    iput-object p3, p0, Lal;->b:Ljava/lang/String;
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lal;->X:Ljava/lang/Object;
+
+    iget p1, p0, Lal;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lal;->Z:I
+
+    iget-object p1, p0, Lal;->Y:Ljl;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, Ljl;->a(Ljl;Ljava/util/Map;Lz84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

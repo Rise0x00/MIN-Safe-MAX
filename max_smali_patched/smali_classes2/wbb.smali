@@ -1,25 +1,33 @@
-.class public abstract Lwbb;
-.super Ljava/lang/Object;
+.class public final Lwbb;
+.super Landroid/text/style/ReplacementSpan;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    sget v0, Lecd;->oneme_folders_picker_snackbar_add_channel_title:I
-
-    sput v0, Lwbb;->a:I
-
-    sget v0, Lecd;->oneme_folders_picker_snackbar_add_chat_title:I
-
-    sput v0, Lwbb;->b:I
+    invoke-direct {p0}, Landroid/text/style/ReplacementSpan;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
+    .locals 0
+
+    invoke-virtual {p1, p2, p3, p4}, Landroid/graphics/Paint;->measureText(Ljava/lang/CharSequence;II)F
+
+    move-result p1
+
+    float-to-int p1, p1
+
+    return p1
 .end method

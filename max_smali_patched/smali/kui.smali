@@ -1,110 +1,124 @@
-.class public final Lkui;
+.class public abstract Lkui;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvwa;
-
-
-# static fields
-.field public static final a:Lkui;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static a(I)I
+    .locals 4
 
-    new-instance v0, Lkui;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lkui;->a:Lkui;
-
-    new-instance v0, Lbri;
+    const/4 v0, 0x0
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+    move v2, v1
 
-    const-class v1, Lpri;
+    :goto_0
+    const/16 v3, 0x200
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+    if-gt v2, v3, :cond_9
 
-    move-result-object v0
+    and-int v3, p0, v2
 
-    const/4 v2, 0x2
+    if-eqz v3, :cond_8
 
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+    if-eq v2, v1, :cond_7
 
-    move-result-object v0
+    const/4 v3, 0x2
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+    if-eq v2, v3, :cond_6
 
-    move-result-object v0
+    const/4 v3, 0x4
 
-    const/4 v2, 0x3
+    if-eq v2, v3, :cond_5
 
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+    const/16 v3, 0x8
 
-    move-result-object v0
+    if-eq v2, v3, :cond_4
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+    const/16 v3, 0x10
 
-    move-result-object v0
+    if-eq v2, v3, :cond_3
 
-    const/4 v2, 0x4
+    const/16 v3, 0x20
 
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+    if-eq v2, v3, :cond_2
 
-    move-result-object v0
+    const/16 v3, 0x40
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+    if-eq v2, v3, :cond_1
 
-    move-result-object v0
+    const/16 v3, 0x80
 
-    const/4 v2, 0x5
+    if-eq v2, v3, :cond_0
 
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+    goto :goto_2
 
-    move-result-object v0
+    :cond_0
+    invoke-static {}, Ljui;->d()I
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+    move-result v3
 
-    move-result-object v0
+    :goto_1
+    or-int/2addr v0, v3
 
-    const/4 v2, 0x6
+    goto :goto_2
 
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+    :cond_1
+    invoke-static {}, Ljui;->a()I
 
-    move-result-object v0
+    move-result v3
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+    goto :goto_1
 
-    move-result-object v0
+    :cond_2
+    invoke-static {}, Li5;->D()I
 
-    const/4 v2, 0x7
+    move-result v3
 
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+    goto :goto_1
 
-    move-result-object v0
+    :cond_3
+    invoke-static {}, Li5;->C()I
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+    move-result v3
 
-    move-result-object v0
+    goto :goto_1
 
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    :cond_4
+    invoke-static {}, Li5;->a()I
 
-    return-void
-.end method
+    move-result v3
 
+    goto :goto_1
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    :cond_5
+    invoke-static {}, Li5;->B()I
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    move-result v3
 
-    move-result-object p1
+    goto :goto_1
 
-    throw p1
+    :cond_6
+    invoke-static {}, Li5;->A()I
+
+    move-result v3
+
+    goto :goto_1
+
+    :cond_7
+    invoke-static {}, Li5;->y()I
+
+    move-result v3
+
+    goto :goto_1
+
+    :cond_8
+    :goto_2
+    shl-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_9
+    return v0
 .end method

@@ -9,42 +9,22 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/util/List;
+.field public final synthetic b:Ljava/lang/Runnable;
 
-.field public final synthetic c:Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;
+.field public final synthetic c:Lq5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/List;Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;)V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/Runnable;Lq5;I)V
+    .locals 0
 
-    .line 1
-    const/4 v0, 0x1
+    iput p3, p0, Lry4;->a:I
 
-    iput v0, p0, Lry4;->a:I
+    iput-object p1, p0, Lry4;->b:Ljava/lang/Runnable;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lry4;->b:Ljava/util/List;
-
-    iput-object p2, p0, Lry4;->c:Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;Ljava/util/List;)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x0
-
-    iput v0, p0, Lry4;->a:I
+    iput-object p2, p0, Lry4;->c:Lq5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lry4;->c:Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;
-
-    iput-object p2, p0, Lry4;->b:Ljava/util/List;
 
     return-void
 .end method
@@ -52,62 +32,89 @@
 
 # virtual methods
 .method public final run()V
-    .locals 4
+    .locals 2
 
     iget v0, p0, Lry4;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lry4;->b:Ljava/util/List;
+    iget-object v0, p0, Lry4;->b:Ljava/lang/Runnable;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    iget-object v1, p0, Lry4;->c:Lq5;
 
-    move-result v0
+    iget-object v1, v1, Lq5;->b:Ljava/lang/Object;
 
-    const/4 v1, 0x1
+    check-cast v1, Lyy4;
 
-    iget-object v2, p0, Lry4;->c:Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;
+    :try_start_0
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    if-ne v0, v1, :cond_0
+    const/4 v0, 0x0
 
-    invoke-virtual {v2}, Lone/me/sdk/sections/SectionRecyclerWidget;->A0()Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {v1, v0}, Ll4;->o(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object v0
+    goto :goto_0
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
+    :catch_0
+    move-exception v0
 
-    :cond_0
-    invoke-virtual {v2}, Lone/me/sdk/sections/SectionRecyclerWidget;->A0()Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {v1, v0}, Ll4;->p(Ljava/lang/Throwable;)Z
 
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->x0(I)V
-
+    :goto_0
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lry4;->c:Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;
+    iget-object v0, p0, Lry4;->b:Ljava/lang/Runnable;
 
-    invoke-virtual {v0}, Lone/me/sdk/sections/SectionRecyclerWidget;->A0()Landroidx/recyclerview/widget/RecyclerView;
+    :try_start_1
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    move-result-object v1
+    goto :goto_1
 
-    new-instance v2, Lry4;
+    :catch_1
+    move-exception v0
 
-    iget-object v3, p0, Lry4;->b:Ljava/util/List;
+    iget-object v1, p0, Lry4;->c:Lq5;
 
-    invoke-direct {v2, v3, v0}, Lry4;-><init>(Ljava/util/List;Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;)V
+    iget-object v1, v1, Lq5;->b:Ljava/lang/Object;
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    check-cast v1, Lyy4;
+
+    invoke-virtual {v1, v0}, Ll4;->p(Ljava/lang/Throwable;)Z
+
+    :goto_1
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lry4;->b:Ljava/lang/Runnable;
+
+    :try_start_2
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
     return-void
 
-    nop
+    :catch_2
+    move-exception v0
+
+    iget-object v1, p0, Lry4;->c:Lq5;
+
+    iget-object v1, v1, Lq5;->b:Ljava/lang/Object;
+
+    check-cast v1, Lyy4;
+
+    invoke-virtual {v1, v0}, Ll4;->p(Ljava/lang/Throwable;)Z
+
+    throw v0
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

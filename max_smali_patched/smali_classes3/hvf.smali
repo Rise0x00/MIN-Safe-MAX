@@ -1,44 +1,21 @@
 .class public final Lhvf;
-.super Ljava/lang/Object;
+.super Lkvf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:Ljava/lang/String;
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 1
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x2
 
-    .line 2
-    iput-wide p1, p0, Lhvf;->a:J
+    invoke-direct {p0, p1, p2, v0}, Lkvf;-><init>(JI)V
 
-    .line 3
-    iput-object p3, p0, Lhvf;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/String;I)V
-    .locals 2
-
-    and-int/lit8 p2, p2, 0x2
-
-    if-eqz p2, :cond_0
-
-    const/4 p1, 0x0
-
-    :cond_0
-    const-wide/16 v0, 0x0
-
-    .line 4
-    invoke-direct {p0, v0, v1, p1}, Lhvf;-><init>(JLjava/lang/String;)V
+    iput-wide p1, p0, Lhvf;->c:J
 
     return-void
 .end method
@@ -66,83 +43,42 @@
     :cond_1
     check-cast p1, Lhvf;
 
-    iget-wide v3, p0, Lhvf;->a:J
+    iget-wide v3, p0, Lhvf;->c:J
 
-    iget-wide v5, p1, Lhvf;->a:J
+    iget-wide v5, p1, Lhvf;->c:J
 
-    cmp-long v1, v3, v5
+    cmp-long p1, v3, v5
 
-    if-eqz v1, :cond_2
+    if-eqz p1, :cond_2
 
     return v2
 
     :cond_2
-    iget-object v1, p0, Lhvf;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lhvf;->b:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
     .locals 2
 
-    iget-wide v0, p0, Lhvf;->a:J
+    iget-wide v0, p0, Lhvf;->c:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lhvf;->b:Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    add-int/2addr v0, v1
-
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 4
 
-    const-string v0, "QueryState(marker="
-
-    const-string v1, ", query="
-
-    iget-wide v2, p0, Lhvf;->a:J
-
-    iget-object v4, p0, Lhvf;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v1, v4}, Lj27;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
+    const-string v0, "DialogBotId(botId="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-wide v2, p0, Lhvf;->c:J
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, v3, v0, v1}, Lwph;->c(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

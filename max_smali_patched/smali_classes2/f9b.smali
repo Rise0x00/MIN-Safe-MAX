@@ -1,55 +1,37 @@
-.class public final Lf9b;
-.super Lo84;
+.class public abstract Lf9b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lbu0;
+# static fields
+.field public static final a:I
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public static final b:I
 
-.field public final synthetic Z:Lh9b;
+.field public static final c:I
 
-.field public d:Ljm9;
-
-.field public o:Lnd2;
-
-.field public t0:I
+.field public static final d:I
 
 
 # direct methods
-.method public constructor <init>(Lh9b;Lo84;)V
-    .locals 0
-
-    iput-object p1, p0, Lf9b;->Z:Lh9b;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lf9b;->Y:Ljava/lang/Object;
+    sget v0, Lmnd;->call_share_message_failed_create_p2p_invite_link:I
 
-    iget p1, p0, Lf9b;->t0:I
+    sput v0, Lf9b;->a:I
 
-    const/high16 v0, -0x80000000
+    sget v0, Lmnd;->call_share_picker_confirm_p2p_invite_cancel:I
 
-    or-int/2addr p1, v0
+    sput v0, Lf9b;->b:I
 
-    iput p1, p0, Lf9b;->t0:I
+    sget v0, Lmnd;->call_share_picker_confirm_p2p_invite_retry:I
 
-    iget-object p1, p0, Lf9b;->Z:Lh9b;
+    sput v0, Lf9b;->c:I
 
-    const/4 v0, 0x0
+    sget v0, Lmnd;->call_share_search_hint:I
 
-    invoke-virtual {p1, v0, v0, v0, p0}, Lh9b;->j(Ljm9;Lnd2;Lbu0;Lo84;)Ljava/lang/Object;
+    sput v0, Lf9b;->d:I
 
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

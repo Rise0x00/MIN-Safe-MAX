@@ -1,29 +1,27 @@
-.class public abstract Lq62;
+.class public final synthetic Lq62;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/Object;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static a(Landroid/content/Context;Ljava/lang/Object;Ljava/util/LinkedHashSet;)Ls62;
+    .locals 1
 
-    new-instance v0, Lfm1;
+    :try_start_0
+    new-instance v0, Ls62;
 
-    const/16 v1, 0x19
+    invoke-direct {v0, p0, p1, p2}, Ls62;-><init>(Landroid/content/Context;Ljava/lang/Object;Ljava/util/LinkedHashSet;)V
+    :try_end_0
+    .catch Landroidx/camera/core/CameraUnavailableException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-direct {v0, v1}, Lfm1;-><init>(I)V
+    return-object v0
 
-    const/4 v1, 0x3
+    :catch_0
+    move-exception p0
 
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
+    new-instance p1, Landroidx/camera/core/InitializationException;
 
-    move-result-object v0
+    invoke-direct {p1, p0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
 
-    sput-object v0, Lq62;->a:Ljava/lang/Object;
-
-    return-void
+    throw p1
 .end method

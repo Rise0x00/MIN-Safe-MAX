@@ -1,4 +1,4 @@
-.class public final Lc63;
+.class public final synthetic Lc63;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -8,7 +8,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chats/search/ChatsListSearchScreen;)V
+.method public synthetic constructor <init>(Lone/me/chats/search/ChatsListSearchScreen;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

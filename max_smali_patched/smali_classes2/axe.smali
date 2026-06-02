@@ -1,128 +1,93 @@
 .class public final Laxe;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Ldxe;
+.field public final a:J
 
-.field public final synthetic Y:I
-
-.field public o:I
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Ldxe;ILkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JJ)V
     .locals 0
 
-    iput-object p1, p0, Laxe;->X:Ldxe;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Laxe;->Y:I
+    iput-wide p1, p0, Laxe;->a:J
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p3, p0, Laxe;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    check-cast p1, Lzb4;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Laxe;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    const/4 v1, 0x0
 
-    check-cast p1, Laxe;
+    if-eqz p1, :cond_2
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    const-class v2, Laxe;
 
-    invoke-virtual {p1, p2}, Laxe;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p1
+    move-result-object v3
 
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Laxe;
-
-    iget-object v0, p0, Laxe;->X:Ldxe;
-
-    iget v1, p0, Laxe;->Y:I
-
-    invoke-direct {p1, v0, v1, p2}, Laxe;-><init>(Ldxe;ILkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Laxe;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    check-cast p1, Laxe;
 
-    sget-object p1, Ldxe;->B0:[Lz28;
+    iget-wide v2, p0, Laxe;->a:J
 
-    iget-object p1, p0, Laxe;->X:Ldxe;
+    iget-wide v4, p1, Laxe;->a:J
 
-    invoke-virtual {p1}, Ldxe;->t()Lfbh;
+    cmp-long v2, v2, v4
 
-    move-result-object v0
+    if-nez v2, :cond_2
 
-    iget v2, p0, Laxe;->Y:I
+    iget-wide v2, p0, Laxe;->b:J
 
-    const-string v3, "app.media.load.video_messages"
+    iget-wide v4, p1, Laxe;->b:J
 
-    invoke-virtual {v0, v2, v3}, Lx3;->g(ILjava/lang/String;)V
+    cmp-long p1, v2, v4
 
-    iput v1, p0, Laxe;->o:I
+    if-nez p1, :cond_2
 
-    invoke-static {p1, p0}, Ldxe;->s(Ldxe;Lp6g;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    return v0
 
     :cond_2
     :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    return v1
+.end method
 
-    return-object p1
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Laxe;->a:J
+
+    long-to-int v0, v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Laxe;->b:J
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method

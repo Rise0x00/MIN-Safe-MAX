@@ -1,110 +1,46 @@
-.class public final Lpuf;
+.class public final synthetic Lpuf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lem4;
+.implements Landroid/view/WindowInsetsController$OnControllableInsetsChangedListener;
 
 
-# static fields
-.field public static final a:Lpuf;
-
-.field public static final b:Lquf;
+# instance fields
+.field public final synthetic a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicBoolean;)V
+    .locals 0
 
-    new-instance v0, Lpuf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lpuf;->a:Lpuf;
-
-    sget-object v0, Lquf;->b:Lquf;
-
-    sput-object v0, Lpuf;->b:Lquf;
+    iput-object p1, p0, Lpuf;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Llm4;
-    .locals 1
+.method public final onControllableInsetsChanged(Landroid/view/WindowInsetsController;I)V
+    .locals 0
 
-    sget-object v0, Lpuf;->b:Lquf;
+    iget-object p1, p0, Lpuf;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    return-object v0
-.end method
+    and-int/lit8 p2, p2, 0x8
 
-.method public final b(Ljava/lang/String;Lhm4;Landroid/os/Bundle;)Lom4;
-    .locals 9
+    if-eqz p2, :cond_0
 
-    sget-object v0, Lpuf;->b:Lquf;
+    const/4 p2, 0x1
 
-    iget-object v0, v0, Llm4;->a:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
+    goto :goto_0
 
     :cond_0
-    sget-object v0, Lquf;->b:Lquf;
+    const/4 p2, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :goto_0
+    invoke-virtual {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    sget-object v0, Lquf;->c:Lhm4;
-
-    invoke-virtual {p2, v0}, Lhm4;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v1, Lom4;
-
-    new-instance v7, Ljr1;
-
-    const/16 v0, 0xd
-
-    invoke-direct {v7, p3, v0}, Ljr1;-><init>(Landroid/os/Bundle;I)V
-
-    const/16 v8, 0x10
-
-    const/4 v5, 0x1
-
-    const/4 v6, 0x0
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    invoke-direct/range {v1 .. v8}, Lom4;-><init>(Ljava/lang/String;Lhm4;Landroid/os/Bundle;ILmm4;Lnm4;I)V
-
-    return-object v1
-
-    :cond_1
-    move-object v3, p2
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "invalid route "
-
-    invoke-static {p2, v3}, Lt02;->i(Ljava/lang/String;Lhm4;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-void
 .end method

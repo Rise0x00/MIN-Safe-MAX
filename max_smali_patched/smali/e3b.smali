@@ -1,153 +1,100 @@
-.class public final Le3b;
-.super Lp6g;
+.class public Le3b;
+.super Landroid/widget/TextView;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/android/OneMeApplication;
-
-.field public final synthetic Y:Lh3b;
-
-.field public o:I
+.field public a:Li5i;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/android/OneMeApplication;Lh3b;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    iput-object p1, p0, Le3b;->X:Lone/me/android/OneMeApplication;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Le3b;->Y:Lh3b;
+    const/4 v1, 0x0
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final getObserverSpanListener()Li5i;
+    .locals 1
 
-    check-cast p1, Lzb4;
+    iget-object v0, p0, Le3b;->a:Li5i;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Le3b;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Le3b;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Le3b;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final onWindowVisibilityChanged(I)V
+    .locals 1
 
-    new-instance p1, Le3b;
+    invoke-super {p0, p1}, Landroid/view/View;->onWindowVisibilityChanged(I)V
 
-    iget-object v0, p0, Le3b;->X:Lone/me/android/OneMeApplication;
+    if-eqz p1, :cond_1
 
-    iget-object v1, p0, Le3b;->Y:Lh3b;
+    const/16 v0, 0x8
 
-    invoke-direct {p1, v0, v1, p2}, Le3b;-><init>(Lone/me/android/OneMeApplication;Lh3b;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
-
-    iget v0, p0, Le3b;->o:I
-
-    sget-object v1, Lb3h;->a:Lb3h;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    return-object v1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Lpc3;->t0:Lkme;
-
-    iget-object v0, p0, Le3b;->X:Lone/me/android/OneMeApplication;
-
-    invoke-virtual {p1, v0}, Lkme;->n(Landroid/content/Context;)Lpc3;
-
-    move-result-object p1
-
-    new-instance v3, Lmp8;
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x1
-
-    const-class v6, Lh3b;
-
-    iget-object v7, p0, Le3b;->Y:Lh3b;
-
-    const-string v8, "weakActivities"
-
-    const-string v9, "getWeakActivities()Ljava/util/concurrent/CopyOnWriteArrayList;"
-
-    invoke-direct/range {v3 .. v9}, Lmp8;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    iput v2, p0, Le3b;->o:I
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Loc3;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p1, v3, v2}, Loc3;-><init>(Lpc3;Lmp8;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, p0}, Lilj;->c(Lbr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
+    if-eq p1, v0, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    iget-object p1, p0, Le3b;->a:Li5i;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1, p0}, Li5i;->onViewDetachedFromWindow(Landroid/view/View;)V
+
+    return-void
+
+    :cond_1
+    iget-object p1, p0, Le3b;->a:Li5i;
+
+    if-eqz p1, :cond_2
+
+    invoke-static {p0}, Li5i;->a(Landroid/widget/TextView;)V
+
     :cond_2
-    move-object p1, v1
-
     :goto_0
-    if-ne p1, v0, :cond_3
+    return-void
+.end method
 
-    return-object v0
+.method public final setObserverSpanListener(Li5i;)V
+    .locals 0
 
-    :cond_3
-    return-object v1
+    iput-object p1, p0, Le3b;->a:Li5i;
+
+    return-void
+.end method
+
+.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    .locals 1
+
+    instance-of v0, p1, Landroid/graphics/drawable/Animatable;
+
+    if-nez v0, :cond_1
+
+    invoke-super {p0, p1}, Landroid/widget/TextView;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
 .end method

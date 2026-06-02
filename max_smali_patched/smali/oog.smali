@@ -1,109 +1,108 @@
 .class public final Loog;
-.super Ljui;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic b:I
+
+
 # instance fields
-.field public final b:Ljava/lang/CharSequence;
+.field public final a:Lia8;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;)V
+.method public constructor <init>(Lia8;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Loog;->b:Ljava/lang/CharSequence;
+    iput-object p1, p0, Loog;->a:Lia8;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final b()Ljava/lang/CharSequence;
+.method public static a(I)Z
     .locals 1
 
-    iget-object v0, p0, Loog;->b:Ljava/lang/CharSequence;
+    const/4 v0, 0x2
 
-    return-object v0
-.end method
+    if-eq p0, v0, :cond_1
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    const/4 v0, 0x3
 
-    const/4 v0, 0x1
+    if-ne p0, v0, :cond_0
 
-    if-ne p0, p1, :cond_0
-
-    return v0
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Loog;
+    const/4 p0, 0x0
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
+    return p0
 
     :cond_1
-    check-cast p1, Loog;
+    :goto_0
+    const/4 p0, 0x1
 
-    iget-object v1, p0, Loog;->b:Ljava/lang/CharSequence;
-
-    iget-object p1, p1, Loog;->b:Ljava/lang/CharSequence;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return p0
 .end method
 
-.method public final hashCode()I
+.method public static b(Ljava/lang/Throwable;)Z
     .locals 1
 
-    iget-object v0, p0, Loog;->b:Ljava/lang/CharSequence;
+    instance-of v0, p0, Lru/ok/tamtam/errors/TamErrorException;
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    const/4 v0, 0x0
+    check-cast p0, Lru/ok/tamtam/errors/TamErrorException;
 
-    return v0
+    iget-object p0, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Leng;
+
+    iget-object p0, p0, Leng;->b:Ljava/lang/String;
+
+    invoke-static {p0}, Lsr6;->L(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    const/4 p0, 0x0
 
-    move-result v0
-
-    return v0
+    return p0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public static c(Ljava/lang/Throwable;)Z
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    instance-of v0, p0, Lru/ok/tamtam/errors/TamErrorException;
 
-    const-string v1, "Connected(text="
+    if-eqz v0, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast p0, Lru/ok/tamtam/errors/TamErrorException;
 
-    iget-object v1, p0, Loog;->b:Ljava/lang/CharSequence;
+    iget-object p0, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Leng;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object p0, p0, Leng;->b:Ljava/lang/String;
 
-    const-string v1, ")"
+    const-string v0, "io.exception"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result p0
 
-    move-result-object v0
+    if-eqz p0, :cond_0
 
-    return-object v0
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
 .end method

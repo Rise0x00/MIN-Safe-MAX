@@ -1,142 +1,80 @@
-.class public final Lvg9;
+.class public final synthetic Lvg9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lch9;
+
 
 # instance fields
-.field public final a:Li7f;
+.field public final synthetic a:I
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+.field public final synthetic b:Ldh9;
 
-.field public final c:Lnc3;
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(Lcy0;Lmbg;)V
-    .locals 4
+.method public synthetic constructor <init>(Ldh9;II)V
+    .locals 0
+
+    iput p3, p0, Lvg9;->a:I
+
+    iput-object p1, p0, Lvg9;->b:Ldh9;
+
+    iput p2, p0, Lvg9;->c:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x7
-
-    invoke-static {v0, v0, v1}, Lj7f;->b(III)Li7f;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lvg9;->a:Li7f;
-
-    check-cast p2, Lj9b;
-
-    invoke-virtual {p2}, Lj9b;->c()Lzp8;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lvg9;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    sget p2, Lta5;->d:I
-
-    const/16 p2, 0x3e8
-
-    sget-object v1, Lza5;->c:Lza5;
-
-    invoke-static {p2, v1}, Laoj;->g(ILza5;)J
-
-    move-result-wide v1
-
-    new-instance p2, Luj0;
-
-    const/16 v3, 0x13
-
-    invoke-direct {p2, v3}, Luj0;-><init>(I)V
-
-    invoke-static {v0, v1, v2, p2}, Leg0;->b(Ld76;JLbr6;)Lnc3;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lvg9;->c:Lnc3;
-
-    invoke-virtual {p1, p0}, Lcy0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final b(Lvf9;)V
+    .locals 1
 
-    new-instance v0, Lqg9;
+    iget p1, p0, Lvg9;->a:I
 
-    const/4 v1, 0x0
+    packed-switch p1, :pswitch_data_0
 
-    invoke-direct {v0, p0, v1}, Lqg9;-><init>(Lvg9;Lkotlin/coroutines/Continuation;)V
+    iget-object p1, p0, Lvg9;->b:Ldh9;
 
-    const/4 v2, 0x3
+    iget-object p1, p1, Ldh9;->g:Lsg9;
 
-    iget-object v3, p0, Lvg9;->b:Lkotlinx/coroutines/internal/ContextScope;
+    iget-object p1, p1, Lsg9;->t:Lmic;
 
-    invoke-static {v3, v1, v1, v0, v2}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+    iget v0, p0, Lvg9;->c:I
 
-    return-void
-.end method
+    invoke-static {v0}, Lkb8;->s(I)Z
 
-.method public final onEvent(Lab3;)V
-    .locals 0
-    .annotation runtime Lu0g;
-    .end annotation
+    move-result v0
 
-    .line 5
-    invoke-virtual {p0}, Lvg9;->a()V
+    invoke-virtual {p1, v0}, Lmic;->k0(Z)V
 
     return-void
-.end method
 
-.method public final onEvent(Lk2c;)V
-    .locals 0
-    .annotation runtime Lu0g;
-    .end annotation
+    :pswitch_0
+    iget-object p1, p0, Lvg9;->b:Ldh9;
 
-    .line 2
-    invoke-virtual {p0}, Lvg9;->a()V
+    iget-object p1, p1, Ldh9;->g:Lsg9;
 
-    return-void
-.end method
+    iget-object p1, p1, Lsg9;->t:Lmic;
 
-.method public final onEvent(Lm5h;)V
-    .locals 0
-    .annotation runtime Lu0g;
-    .end annotation
+    iget v0, p0, Lvg9;->c:I
 
-    .line 4
-    invoke-virtual {p0}, Lvg9;->a()V
+    invoke-static {v0}, Lkb8;->q(I)I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Lmic;->j0(I)V
 
     return-void
-.end method
 
-.method public final onEvent(Lrl8;)V
-    .locals 0
-    .annotation runtime Lu0g;
-    .end annotation
+    nop
 
-    .line 1
-    invoke-virtual {p0}, Lvg9;->a()V
-
-    return-void
-.end method
-
-.method public final onEvent(Lu64;)V
-    .locals 0
-    .annotation runtime Lu0g;
-    .end annotation
-
-    .line 3
-    invoke-virtual {p0}, Lvg9;->a()V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,58 +1,114 @@
 .class public final Lmy3;
-.super Ljava/lang/Object;
+.super Lky3;
 .source "SourceFile"
 
 # interfaces
-.implements Ly00;
+.implements Lnwe;
 
 
 # instance fields
-.field public final a:J
+.field public final A0:I
 
-.field public final b:Ljava/lang/String;
+.field public final B0:Z
 
-.field public final c:Ljava/lang/String;
+.field public final C0:J
 
-.field public final d:Ljava/lang/String;
+.field public final Z:J
 
-.field public final e:Ljava/lang/CharSequence;
-
-.field public final f:I
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:Landroid/graphics/drawable/Drawable;
-
-.field public final i:Landroid/graphics/drawable/Drawable;
-
-.field public final j:J
+.field public final z0:I
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/CharSequence;ILjava/lang/String;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;J)V
-    .locals 0
+.method public constructor <init>(JJIIZ)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct/range {p0 .. p7}, Lky3;-><init>(JJIIZ)V
 
-    iput-wide p1, p0, Lmy3;->a:J
+    move v0, p7
 
-    iput-object p3, p0, Lmy3;->b:Ljava/lang/String;
+    move p7, p6
 
-    iput-object p4, p0, Lmy3;->c:Ljava/lang/String;
+    move p6, p5
 
-    iput-object p5, p0, Lmy3;->d:Ljava/lang/String;
+    move-wide p4, p3
 
-    iput-object p6, p0, Lmy3;->e:Ljava/lang/CharSequence;
+    move-wide p2, p1
 
-    iput p7, p0, Lmy3;->f:I
+    move-object p1, p0
 
-    iput-object p8, p0, Lmy3;->g:Ljava/lang/String;
+    iput-wide p4, p1, Lmy3;->Z:J
 
-    iput-object p9, p0, Lmy3;->h:Landroid/graphics/drawable/Drawable;
+    iput p6, p1, Lmy3;->z0:I
 
-    iput-object p10, p0, Lmy3;->i:Landroid/graphics/drawable/Drawable;
+    iput p7, p1, Lmy3;->A0:I
 
-    iput-wide p11, p0, Lmy3;->j:J
+    iput-boolean v0, p1, Lmy3;->B0:Z
+
+    const-wide/16 p4, -0x1
+
+    cmp-long p6, p2, p4
+
+    if-eqz p6, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move-wide p2, p4
+
+    :goto_0
+    iput-wide p2, p1, Lmy3;->C0:J
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()J
+    .locals 2
+
+    iget-wide v0, p0, Lmy3;->C0:J
+
+    return-wide v0
+.end method
+
+.method public final b(J)J
+    .locals 4
+
+    const-wide/16 v0, 0x0
+
+    iget-wide v2, p0, Lky3;->b:J
+
+    sub-long/2addr p1, v2
+
+    invoke-static {v0, v1, p1, p2}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide p1
+
+    const-wide/32 v0, 0x7a1200
+
+    mul-long/2addr p1, v0
+
+    iget v0, p0, Lky3;->o:I
+
+    int-to-long v0, v0
+
+    div-long/2addr p1, v0
+
+    return-wide p1
+.end method
+
+.method public final g()J
+    .locals 2
+
+    iget-wide v0, p0, Lmy3;->Z:J
+
+    return-wide v0
+.end method
+
+.method public final h()I
+    .locals 1
+
+    iget v0, p0, Lmy3;->z0:I
+
+    return v0
 .end method

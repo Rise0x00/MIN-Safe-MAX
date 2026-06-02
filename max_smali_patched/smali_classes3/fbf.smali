@@ -1,50 +1,43 @@
-.class public final synthetic Lfbf;
-.super Lt8;
+.class public final Lfbf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ldr6;
 
+# instance fields
+.field public final a:Lia8;
 
-# static fields
-.field public static final Z:Lfbf;
+.field public final b:Lia8;
+
+.field public final c:Lia8;
+
+.field public final d:Lia8;
+
+.field public final e:Lia8;
+
+.field public final f:Lia8;
+
+.field public final g:Lia8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Lfbf;
-
-    const-string v1, "<init>(Ljava/util/List;Ljava/util/List;)V"
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const-class v4, Ldbf;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lt8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lfbf;->Z:Lfbf;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;)V
     .locals 0
 
-    check-cast p1, Ljava/util/List;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p2, Ljava/util/List;
+    iput-object p1, p0, Lfbf;->a:Lia8;
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    iput-object p2, p0, Lfbf;->b:Lia8;
 
-    new-instance p3, Ldbf;
+    iput-object p3, p0, Lfbf;->c:Lia8;
 
-    invoke-direct {p3, p1, p2}, Ldbf;-><init>(Ljava/util/List;Ljava/util/List;)V
+    iput-object p4, p0, Lfbf;->d:Lia8;
 
-    return-object p3
+    iput-object p5, p0, Lfbf;->e:Lia8;
+
+    iput-object p6, p0, Lfbf;->f:Lia8;
+
+    iput-object p7, p0, Lfbf;->g:Lia8;
+
+    return-void
 .end method

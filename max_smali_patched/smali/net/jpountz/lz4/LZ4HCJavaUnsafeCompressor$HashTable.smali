@@ -105,12 +105,12 @@
 .method private addHash(Ljava/nio/ByteBuffer;I)V
     .locals 0
 
-    .line 1
-    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->getInt(I)I
+    .line 3
+    invoke-static {p2, p1}, Lm31;->g(ILjava/nio/ByteBuffer;)I
 
     move-result p1
 
-    .line 2
+    .line 4
     invoke-direct {p0, p1, p2}, Lnet/jpountz/lz4/LZ4HCJavaUnsafeCompressor$HashTable;->addHash(II)V
 
     return-void
@@ -119,12 +119,12 @@
 .method private addHash([BI)V
     .locals 0
 
-    .line 3
-    invoke-static {p2, p1}, Ls4h;->b(I[B)I
+    .line 1
+    invoke-static {p2, p1}, Lhgh;->c(I[B)I
 
     move-result p1
 
-    .line 4
+    .line 2
     invoke-direct {p0, p1, p2}, Lnet/jpountz/lz4/LZ4HCJavaUnsafeCompressor$HashTable;->addHash(II)V
 
     return-void
@@ -150,7 +150,7 @@
     .locals 0
 
     .line 3
-    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->getInt(I)I
+    invoke-static {p2, p1}, Lm31;->g(ILjava/nio/ByteBuffer;)I
 
     move-result p1
 
@@ -166,7 +166,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p2, p1}, Ls4h;->b(I[B)I
+    invoke-static {p2, p1}, Lhgh;->c(I[B)I
 
     move-result p1
 
@@ -434,12 +434,10 @@
     .line 42
     iget-object v1, p0, Lnet/jpountz/lz4/LZ4HCJavaUnsafeCompressor$HashTable;->hashTable:[I
 
-    .line 43
-    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->getInt(I)I
+    invoke-static {p2, p1}, Lm31;->g(ILjava/nio/ByteBuffer;)I
 
     move-result v4
 
-    .line 44
     invoke-static {v4}, Lnet/jpountz/lz4/LZ4Utils;->hashHC(I)I
 
     move-result v4
@@ -450,10 +448,10 @@
 
     if-lt p2, v3, :cond_5
 
-    .line 45
+    .line 43
     iput v3, p0, Lnet/jpountz/lz4/LZ4HCJavaUnsafeCompressor$HashTable;->nextToUpdate:I
 
-    .line 46
+    .line 44
     :cond_6
     iget p1, p4, Lnet/jpountz/lz4/LZ4Utils$Match;->len:I
 
@@ -651,7 +649,7 @@
     .line 20
     iget-object v1, p0, Lnet/jpountz/lz4/LZ4HCJavaUnsafeCompressor$HashTable;->hashTable:[I
 
-    invoke-static {p2, p1}, Ls4h;->b(I[B)I
+    invoke-static {p2, p1}, Lhgh;->c(I[B)I
 
     move-result v4
 

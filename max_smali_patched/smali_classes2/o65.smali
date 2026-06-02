@@ -1,175 +1,137 @@
-.class public final Lo65;
-.super Llk0;
+.class public final enum Lo65;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final enum X:Lo65;
 
-.field public final b:Ljava/util/List;
+.field public static final synthetic Y:[Lo65;
+
+.field public static final synthetic Z:Lmn5;
+
+.field public static final enum a:Lo65;
+
+.field public static final enum b:Lo65;
+
+.field public static final enum c:Lo65;
+
+.field public static final enum d:Lo65;
+
+.field public static final enum o:Lo65;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 9
 
-    iput p1, p0, Lo65;->a:I
+    new-instance v0, Lo65;
 
-    packed-switch p1, :pswitch_data_0
+    const-string v1, "SHARE_VIDEO"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
 
-    const-string p1, "connection_type"
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const-string v0, "size"
+    sput-object v0, Lo65;->a:Lo65;
 
-    const-string v1, "attach_type"
+    new-instance v1, Lo65;
 
-    filled-new-array {v1, p1, v0}, [Ljava/lang/String;
+    const-string v2, "DOWNLOAD_VIDEO"
 
-    move-result-object p1
+    const/4 v3, 0x1
 
-    invoke-static {p1}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result-object p1
+    sput-object v1, Lo65;->b:Lo65;
 
-    iput-object p1, p0, Lo65;->b:Ljava/util/List;
+    new-instance v2, Lo65;
+
+    const-string v3, "SHARE_PHOTO"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lo65;->c:Lo65;
+
+    new-instance v3, Lo65;
+
+    const-string v4, "DOWNLOAD_PHOTO"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v4, Lo65;
+
+    const-string v5, "SHARE_GIF"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lo65;->d:Lo65;
+
+    new-instance v5, Lo65;
+
+    const-string v6, "DOWNLOAD_GIF"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lo65;->o:Lo65;
+
+    new-instance v6, Lo65;
+
+    const-string v7, "SHARE_FILE"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, Lo65;->X:Lo65;
+
+    filled-new-array/range {v0 .. v6}, [Lo65;
+
+    move-result-object v0
+
+    sput-object v0, Lo65;->Y:[Lo65;
+
+    new-instance v1, Lmn5;
+
+    invoke-direct {v1, v0}, Lmn5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lo65;->Z:Lmn5;
 
     return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-string p1, "connection_type"
-
-    const-string v0, "class"
-
-    const-string v1, "size"
-
-    const-string v2, "attach_type"
-
-    filled-new-array {v1, v2, p1, v0}, [Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lo65;->b:Ljava/util/List;
-
-    return-void
-
-    :pswitch_1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-string p1, "flow"
-
-    const-string v0, "connection_type"
-
-    filled-new-array {p1, v0}, [Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lo65;->b:Ljava/util/List;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
-
-# virtual methods
-.method public final b()Ljava/util/List;
+.method public static valueOf(Ljava/lang/String;)Lo65;
     .locals 1
 
-    iget v0, p0, Lo65;->a:I
+    const-class v0, Lo65;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object v0, p0, Lo65;->b:Ljava/util/List;
+    move-result-object p0
 
-    return-object v0
+    check-cast p0, Lo65;
 
-    :pswitch_0
-    iget-object v0, p0, Lo65;->b:Ljava/util/List;
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lo65;->b:Ljava/util/List;
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
-.method public final c(Ljfa;Ljava/util/List;)Z
+.method public static values()[Lo65;
     .locals 1
 
-    iget v0, p0, Lo65;->a:I
+    sget-object v0, Lo65;->Y:[Lo65;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    const/4 p1, 0x1
+    move-result-object v0
 
-    return p1
+    check-cast v0, [Lo65;
 
-    :pswitch_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :pswitch_1
-    const-string v0, "already_downloaded"
-
-    invoke-virtual {p1, v0}, Ljfa;->b(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x3
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x4
-
-    :goto_0
-    invoke-interface {p2}, Ljava/util/List;->size()I
-
-    move-result p2
-
-    if-ne p1, p2, :cond_1
-
-    const/4 p1, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    :goto_1
-    return p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

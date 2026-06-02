@@ -1,24 +1,23 @@
-.class public abstract Lb38;
-.super Ljava/lang/Object;
+.class public final Lb38;
+.super Ljma;
 .source "SourceFile"
-
-# interfaces
-.implements Lzb4;
 
 
 # static fields
-.field public static final synthetic a:I
+.field public static final b:Lb38;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    new-instance v0, Lb38;
 
-    const/4 v1, 0x0
+    sget-object v1, Lyeh;->a:Lyeh;
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+    invoke-direct {v0, v1}, Ljma;-><init>(Ljava/lang/Object;)V
+
+    sput-object v0, Lb38;->b:Lb38;
 
     return-void
 .end method

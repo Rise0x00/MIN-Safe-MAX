@@ -1,5 +1,5 @@
 .class public final Ln4b;
-.super Lxdj;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
@@ -22,40 +22,46 @@
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(Lxs6;)Landroid/window/OnBackInvokedCallback;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lxs6;",
+            ")",
+            "Landroid/window/OnBackInvokedCallback;"
+        }
+    .end annotation
 
-    const/4 v0, 0x1
+    new-instance v0, Lyp;
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x1
 
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Ln4b;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x2654655d
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Dot"
+    invoke-direct {v0, v1, p1}, Lyp;-><init>(ILjava/lang/Object;)V
 
     return-object v0
+.end method
+
+.method public final b(Ljava/lang/Object;ILjava/lang/Object;)V
+    .locals 0
+
+    check-cast p1, Landroid/window/OnBackInvokedDispatcher;
+
+    check-cast p3, Landroid/window/OnBackInvokedCallback;
+
+    invoke-interface {p1, p2, p3}, Landroid/window/OnBackInvokedDispatcher;->registerOnBackInvokedCallback(ILandroid/window/OnBackInvokedCallback;)V
+
+    return-void
+.end method
+
+.method public final c(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p1, Landroid/window/OnBackInvokedDispatcher;
+
+    check-cast p2, Landroid/window/OnBackInvokedCallback;
+
+    invoke-interface {p1, p2}, Landroid/window/OnBackInvokedDispatcher;->unregisterOnBackInvokedCallback(Landroid/window/OnBackInvokedCallback;)V
+
+    return-void
 .end method

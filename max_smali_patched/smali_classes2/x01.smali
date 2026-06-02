@@ -1,97 +1,107 @@
-.class public final synthetic Lx01;
+.class public final Lx01;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnbf;
+
+# static fields
+.field public static final c:[I
+
+.field public static final d:[I
 
 
 # instance fields
-.field public final synthetic a:Ls11;
+.field public final a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
-.field public final synthetic b:Z
-
-.field public final synthetic c:Lsk1;
-
-.field public final synthetic d:Lnue;
+.field public final b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ls11;ZLsk1;Lnue;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
+
+    const/16 v0, 0x1f40
+
+    const/16 v1, 0x7d0
+
+    filled-new-array {v0, v0, v1, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lx01;->c:[I
+
+    const/16 v0, 0xfa0
+
+    const/16 v1, 0xc8
+
+    filled-new-array {v0, v0, v1, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lx01;->d:[I
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lx01;->a:Ls11;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
-    iput-boolean p2, p0, Lx01;->b:Z
+    const/4 v1, 0x4
 
-    iput-object p3, p0, Lx01;->c:Lsk1;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
 
-    iput-object p4, p0, Lx01;->d:Lnue;
+    iput-object v0, p0, Lx01;->a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
+
+    iput-object v0, p0, Lx01;->b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onResponse(Lorg/json/JSONObject;)V
-    .locals 5
+.method public final a(II)[C
+    .locals 2
 
-    iget-object v0, p0, Lx01;->a:Ls11;
+    sget-object v0, Lx01;->d:[I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    aget v0, v0, p1
 
-    const-string v1, "error"
+    if-ge p2, v0, :cond_0
 
-    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    move p2, v0
+
+    :cond_0
+    iget-object v0, p0, Lx01;->b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p1, v1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->getAndSet(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
-
-    move-result p1
+    check-cast p1, [C
 
     if-eqz p1, :cond_2
 
-    iget-boolean p1, p0, Lx01;->b:Z
+    array-length v0, p1
 
-    iget-object v1, p0, Lx01;->c:Lsk1;
-
-    if-eqz p1, :cond_0
-
-    move-object v2, v1
+    if-ge v0, p2, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    const/4 v2, 0x0
-
-    :goto_0
-    iget-object v3, p0, Lx01;->d:Lnue;
-
-    instance-of v4, v3, Lmue;
-
-    if-eqz v4, :cond_1
-
-    iget-object v4, v0, Ls11;->T0:Lgr1;
-
-    xor-int/lit8 p1, p1, 0x1
-
-    check-cast v3, Lmue;
-
-    invoke-virtual {v4, p1, v1, v3}, Lgr1;->b(ZLsk1;Lmue;)V
-
-    goto :goto_1
-
     :cond_1
-    iput-object v2, v0, Ls11;->D0:Lsk1;
-
-    :goto_1
-    sget-object p1, Lt91;->J0:Lt91;
-
-    invoke-virtual {v0, p1, v2}, Ls11;->m(Lt91;Ljava/lang/Object;)V
+    return-object p1
 
     :cond_2
-    return-void
+    :goto_0
+    new-array p1, p2, [C
+
+    return-object p1
 .end method

@@ -1,86 +1,49 @@
 .class public final Lqh;
-.super Lsh;
+.super Landroid/graphics/drawable/Drawable$ConstantState;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public a:Lxoh;
 
+.field public b:Landroid/animation/AnimatorSet;
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.field public c:Ljava/util/ArrayList;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lqh;->a:Ljava/lang/String;
-
-    return-void
-.end method
+.field public d:Lwu;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lqh;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lqh;
-
-    iget-object v1, p0, Lqh;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Lqh;->a:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final getChangingConfigurations()I
     .locals 1
 
-    iget-object v0, p0, Lqh;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final newDrawable()Landroid/graphics/drawable/Drawable;
+    .locals 2
 
-    const-string v0, "Path(value="
+    .line 1
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v1, ")"
+    const-string v1, "No constant state support for SDK < 24."
 
-    iget-object v2, p0, Lqh;->a:Ljava/lang/String;
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    throw v0
+.end method
 
-    move-result-object v0
+.method public final newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
+    .locals 1
 
-    return-object v0
+    .line 2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "No constant state support for SDK < 24."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

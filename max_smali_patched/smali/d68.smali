@@ -1,165 +1,166 @@
 .class public final Ld68;
-.super Ljava/lang/Object;
+.super Lt68;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Z
 
-.field public final b:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+.field public final b:Lt2f;
+
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/google/android/material/sidesheet/SideSheetBehavior;I)V
+.method public constructor <init>(Ljava/lang/Object;ZLt2f;)V
     .locals 0
-
-    iput p2, p0, Ld68;->a:I
-
-    iput-object p1, p0, Ld68;->b:Lcom/google/android/material/sidesheet/SideSheetBehavior;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-boolean p2, p0, Ld68;->a:Z
 
-.method public static final d(Lr4h;)V
-    .locals 2
+    iput-object p3, p0, Ld68;->b:Lt2f;
 
-    new-instance v0, Lmy4;
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    const/4 v1, 0x5
+    move-result-object p1
 
-    invoke-direct {v0, v1}, Lmy4;-><init>(I)V
+    iput-object p1, p0, Ld68;->c:Ljava/lang/String;
 
-    const/4 v1, 0x1
+    if-eqz p3, :cond_1
 
-    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+    invoke-interface {p3}, Lt2f;->isInline()Z
 
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Failed requirement."
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    :goto_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 3
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-    iget v0, p0, Ld68;->a:I
+    iget-object v0, p0, Ld68;->c:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    return-object v0
+.end method
 
-    iget-object v0, p0, Ld68;->b:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v1, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->m:I
+    if-ne p0, p1, :cond_0
 
-    iget v2, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->l:I
+    goto :goto_0
 
-    sub-int/2addr v1, v2
+    :cond_0
+    if-eqz p1, :cond_4
 
-    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
+    const-class v0, Ld68;
 
-    sub-int/2addr v1, v0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v0, 0x0
+    move-result-object v1
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+    if-eq v0, v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    check-cast p1, Ld68;
+
+    iget-boolean v0, p0, Ld68;->a:Z
+
+    iget-boolean v1, p1, Ld68;->a:Z
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    iget-object v0, p0, Ld68;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Ld68;->c:Ljava/lang/String;
+
+    invoke-static {v0, p1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-boolean v0, p0, Ld68;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
-    return v0
+    mul-int/lit8 v0, v0, 0x1f
 
-    :pswitch_0
-    iget-object v0, p0, Ld68;->b:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+    iget-object v1, p0, Ld68;->c:Ljava/lang/String;
 
-    iget v1, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->n:I
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
+    move-result v1
 
     add-int/2addr v1, v0
 
-    const/4 v0, 0x0
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    return v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v1
 .end method
 
-.method public final b()I
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget v0, p0, Ld68;->a:I
+    iget-boolean v0, p0, Ld68;->a:Z
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Ld68;->c:Ljava/lang/String;
 
-    iget-object v0, p0, Ld68;->b:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+    if-eqz v0, :cond_0
 
-    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->m:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return v0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    :pswitch_0
-    iget-object v0, p0, Ld68;->b:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+    invoke-static {v0, v1}, Lzag;->a(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
-    iget v1, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->l:I
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    neg-int v1, v1
+    move-result-object v0
 
-    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
+    return-object v0
 
-    sub-int/2addr v1, v0
-
-    return v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c(Landroid/view/View;)I
-    .locals 1
-
-    iget v0, p0, Ld68;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
-
-    move-result p1
-
-    iget-object v0, p0, Ld68;->b:Lcom/google/android/material/sidesheet/SideSheetBehavior;
-
-    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
-
-    sub-int/2addr p1, v0
-
-    return p1
-
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/view/View;->getRight()I
-
-    move-result p1
-
-    iget-object v0, p0, Ld68;->b:Lcom/google/android/material/sidesheet/SideSheetBehavior;
-
-    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
-
-    add-int/2addr p1, v0
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    return-object v1
 .end method

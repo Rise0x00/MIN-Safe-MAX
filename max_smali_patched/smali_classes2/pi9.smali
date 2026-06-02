@@ -1,57 +1,86 @@
-.class public final Lpi9;
-.super Lo84;
+.class public final synthetic Lpi9;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lsz3;
 
 
 # instance fields
-.field public X:Lqd8;
+.field public final synthetic a:I
 
-.field public Y:Lqd8;
+.field public final synthetic b:Lfr6;
 
-.field public synthetic Z:Ljava/lang/Object;
+.field public final synthetic c:Lqk8;
 
-.field public d:Ljm9;
-
-.field public o:Lqd8;
-
-.field public final synthetic t0:Lzi9;
-
-.field public u0:I
+.field public final synthetic d:Loa9;
 
 
 # direct methods
-.method public constructor <init>(Lzi9;Lo84;)V
+.method public synthetic constructor <init>(Lfr6;Lqk8;Loa9;I)V
     .locals 0
 
-    iput-object p1, p0, Lpi9;->t0:Lzi9;
+    iput p4, p0, Lpi9;->a:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lpi9;->b:Lfr6;
+
+    iput-object p2, p0, Lpi9;->c:Lqk8;
+
+    iput-object p3, p0, Lpi9;->d:Loa9;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 4
 
-    iput-object p1, p0, Lpi9;->Z:Ljava/lang/Object;
+    iget v0, p0, Lpi9;->a:I
 
-    iget p1, p0, Lpi9;->u0:I
+    check-cast p1, Lti9;
 
-    const/high16 v0, -0x80000000
+    packed-switch v0, :pswitch_data_0
 
-    or-int/2addr p1, v0
+    iget-object v0, p0, Lpi9;->b:Lfr6;
 
-    iput p1, p0, Lpi9;->u0:I
+    iget v1, v0, Lfr6;->b:I
 
-    iget-object p1, p0, Lpi9;->t0:Lzi9;
+    iget-object v0, v0, Lfr6;->c:Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    check-cast v0, Lki9;
 
-    invoke-virtual {p1, v0, v0, p0}, Lzi9;->x(Lnd2;Ljm9;Lo84;)Ljava/io/Serializable;
+    iget-object v2, p0, Lpi9;->c:Lqk8;
 
-    move-result-object p1
+    iget-object v3, p0, Lpi9;->d:Loa9;
 
-    return-object p1
+    invoke-interface {p1, v1, v0, v2, v3}, Lti9;->d(ILki9;Lqk8;Loa9;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpi9;->b:Lfr6;
+
+    iget v1, v0, Lfr6;->b:I
+
+    iget-object v0, v0, Lfr6;->c:Ljava/lang/Object;
+
+    check-cast v0, Lki9;
+
+    iget-object v2, p0, Lpi9;->c:Lqk8;
+
+    iget-object v3, p0, Lpi9;->d:Loa9;
+
+    invoke-interface {p1, v1, v0, v2, v3}, Lti9;->u(ILki9;Lqk8;Loa9;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,77 +1,115 @@
-.class public interface abstract Leob;
-.super Ljava/lang/Object;
+.class public final Leob;
+.super Liig;
 .source "SourceFile"
+
+# interfaces
+.implements Lnt6;
+
+
+# instance fields
+.field public final synthetic X:Lgob;
+
+.field public final synthetic Y:Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(Lgob;Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Leob;->X:Lgob;
+
+    iput-object p2, p0, Leob;->Y:Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Liig;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a(Lgob;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Loc4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Leob;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Leob;
+
+    sget-object p2, Lyeh;->a:Lyeh;
+
+    invoke-virtual {p1, p2}, Leob;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public abstract b(Lgob;)V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Leob;
+
+    iget-object v0, p0, Leob;->X:Lgob;
+
+    iget-object v1, p0, Leob;->Y:Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;
+
+    invoke-direct {p1, v0, v1, p2}, Leob;-><init>(Lgob;Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public abstract c(Lgob;)V
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-.method public abstract d(Lwnb;Lshg;Z)V
-.end method
+    iget v0, p0, Leob;->o:I
 
-.method public abstract e(Lone/video/exo/error/OneVideoExoPlaybackException;Lkqh;Lgob;)V
-.end method
+    const/4 v1, 0x1
 
-.method public abstract f(Lgob;)V
-.end method
+    if-eqz v0, :cond_1
 
-.method public abstract g(Lgob;F)V
-.end method
+    if-ne v0, v1, :cond_0
 
-.method public abstract h(Lwnb;Lqqh;)V
-.end method
+    invoke-static {p1}, Lmtd;->g0(Ljava/lang/Object;)V
 
-.method public abstract i(Lgob;)V
-.end method
+    return-object p1
 
-.method public abstract j(Lgob;)V
-.end method
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-.method public abstract k(Lwnb;Lqqh;)V
-.end method
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-.method public abstract l(Lgob;)V
-.end method
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-.method public abstract m(Lgob;I)V
-.end method
+    throw p1
 
-.method public abstract n(Lgob;Z)V
-.end method
+    :cond_1
+    invoke-static {p1}, Lmtd;->g0(Ljava/lang/Object;)V
 
-.method public abstract o(Lwnb;Lz60;)V
-.end method
+    iput v1, p0, Leob;->o:I
 
-.method public abstract p(Lgob;)V
-.end method
+    iget-object p1, p0, Leob;->X:Lgob;
 
-.method public abstract q(Lgob;Ldob;Lv42;Lv42;)V
-.end method
+    iget-object v0, p0, Leob;->Y:Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;
 
-.method public abstract r(Lgob;)V
-.end method
+    invoke-static {p1, v0, p0}, Lgob;->a(Lgob;Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Params;Lz84;)Ljava/lang/Object;
 
-.method public abstract s(Lpm0;II)V
-.end method
+    move-result-object p1
 
-.method public abstract t(Lgob;J)V
-.end method
+    sget-object v0, Lpc4;->a:Lpc4;
 
-.method public abstract u(Lgob;)V
-.end method
+    if-ne p1, v0, :cond_2
 
-.method public abstract v(Lgob;)V
-.end method
+    return-object v0
 
-.method public abstract w(Lgob;Z)V
-.end method
-
-.method public abstract x(Lgob;I)V
+    :cond_2
+    return-object p1
 .end method

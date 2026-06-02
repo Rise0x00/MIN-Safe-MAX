@@ -1,146 +1,202 @@
 .class public final Lm6h;
-.super Lnk0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final e:Lo58;
+# static fields
+.field public static final q:Lv4e;
 
-.field public final f:Ljava/lang/String;
+
+# instance fields
+.field public final a:Landroid/content/Context;
+
+.field public b:Ljava/lang/String;
+
+.field public c:Lk6h;
+
+.field public final d:Lv4e;
+
+.field public final e:Z
+
+.field public final f:J
+
+.field public g:I
+
+.field public final h:Lnj8;
+
+.field public final i:Ld77;
+
+.field public final j:Lfx4;
+
+.field public k:Lch3;
+
+.field public l:Ldja;
+
+.field public final m:Landroid/os/Looper;
+
+.field public final n:Lr41;
+
+.field public final o:Lgkg;
+
+.field public final p:Lq5;
 
 
 # direct methods
-.method public constructor <init>(Lo58;Lo58;Lym5;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0, p1, p2, p3}, Lnk0;-><init>(Lo58;Lo58;Lym5;)V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lm6h;->e:Lo58;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-class p1, Lm6h;
+    move-result-object v0
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    const/16 v1, 0x5a
 
-    move-result-object p1
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput-object p1, p0, Lm6h;->f:Ljava/lang/String;
+    move-result-object v1
+
+    const/16 v2, 0xb4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const/16 v3, 0x10e
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    sget-object v4, Len7;->b:Lcn7;
+
+    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const/4 v1, 0x4
+
+    invoke-static {v1, v0}, Ly6j;->g(I[Ljava/lang/Object;)V
+
+    invoke-static {v1, v0}, Len7;->h(I[Ljava/lang/Object;)Lv4e;
+
+    move-result-object v0
+
+    sput-object v0, Lm6h;->q:Lv4e;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final A(Ljava/lang/String;Ljava/lang/String;Lvea;Lvea;Lfe6;)Ljava/lang/Object;
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 6
 
-    sget-object v0, Lb3h;->a:Lb3h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v1, p0, Lm6h;->f:Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    sget-object v2, Lc5j;->a:Ledb;
+    move-result-object v0
 
-    if-nez v2, :cond_0
+    iput-object v0, p0, Lm6h;->a:Landroid/content/Context;
 
-    goto :goto_0
+    sget-wide v1, Lo6h;->z:J
+
+    iput-wide v1, p0, Lm6h;->f:J
+
+    const/4 v1, -0x1
+
+    iput v1, p0, Lm6h;->g:I
+
+    sget-object v1, Lv4e;->o:Lv4e;
+
+    new-instance v1, Ld77;
+
+    const/16 v2, 0x11
+
+    invoke-direct {v1, v2}, Ld77;-><init>(I)V
+
+    iput-object v1, p0, Lm6h;->i:Ld77;
+
+    new-instance v1, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, v1, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->f:Z
+
+    iput-boolean v2, v1, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->g:Z
+
+    iput-boolean v2, v1, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->h:Z
+
+    invoke-virtual {v1}, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->build()Lfx4;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lm6h;->j:Lfx4;
+
+    new-instance v1, Lrr4;
+
+    invoke-direct {v1, v0}, Lrr4;-><init>(Landroid/content/Context;)V
+
+    new-instance v0, Lrr4;
+
+    invoke-direct {v0, v1}, Lrr4;-><init>(Lrr4;)V
+
+    iput-object v0, p0, Lm6h;->k:Lch3;
+
+    new-instance v0, Lxt4;
+
+    invoke-direct {v0}, Lxt4;-><init>()V
+
+    iput-object v0, p0, Lm6h;->l:Ldja;
+
+    invoke-static {}, Lpnh;->z()Landroid/os/Looper;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lm6h;->m:Landroid/os/Looper;
+
+    sget-object v1, Lr41;->d:Lr41;
+
+    iput-object v1, p0, Lm6h;->n:Lr41;
+
+    sget-object v1, Lhg3;->a:Lgkg;
+
+    iput-object v1, p0, Lm6h;->o:Lgkg;
+
+    new-instance v3, Lnj8;
+
+    new-instance v4, Lssg;
+
+    const/16 v5, 0x11
+
+    invoke-direct {v4, v5}, Lssg;-><init>(I)V
+
+    invoke-direct {v3, v0, v1, v4}, Lnj8;-><init>(Landroid/os/Looper;Lhg3;Lkj8;)V
+
+    iput-object v3, p0, Lm6h;->h:Lnj8;
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x23
+
+    if-lt v0, v1, :cond_0
+
+    iput-boolean v2, p0, Lm6h;->e:Z
+
+    new-instance v0, Lq5;
+
+    const/16 v1, 0x11
+
+    invoke-direct {v0, v1, p1}, Lq5;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p0, Lm6h;->p:Lq5;
 
     :cond_0
-    sget-object v3, Lkk8;->d:Lkk8;
+    sget-object p1, Lm6h;->q:Lv4e;
 
-    invoke-virtual {v2, v3}, Ledb;->b(Lkk8;)Z
+    iput-object p1, p0, Lm6h;->d:Lv4e;
 
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    const-string v4, "Updating chats \'relative\' for folder("
-
-    const-string v5, ")"
-
-    invoke-static {v4, p1, v5}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v2, v3, v1, v4, v5}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    iget-object v1, p0, Lm6h;->e:Lo58;
-
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lhe4;
-
-    invoke-virtual {v1, p1}, Lhe4;->h(Ljava/lang/String;)Llpf;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Llpf;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lmc6;
-
-    if-nez v1, :cond_2
-
-    iget-object v2, p0, Lnk0;->a:Ljava/lang/Object;
-
-    check-cast v2, Lym5;
-
-    new-instance v3, Lru/ok/tamtam/folders/usecases/NotFoundFolderException;
-
-    invoke-direct {v3, p1}, Lru/ok/tamtam/folders/usecases/NotFoundFolderException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v2, v3}, Losi;->d(Lym5;Ljava/lang/Exception;)V
-
-    :cond_2
-    if-nez v1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    iget-object p1, v1, Lmc6;->o:Ljava/util/Set;
-
-    invoke-static {p1}, Lj6j;->i(Ljava/util/Collection;)Lvea;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p3}, Lvea;->b(Lvea;)V
-
-    invoke-virtual {p1, p4}, Lvea;->m(Lvea;)V
-
-    new-instance p3, Ljava/util/LinkedHashSet;
-
-    iget-object v2, v1, Lmc6;->u0:Ljava/util/LinkedHashSet;
-
-    invoke-static {p4}, Lj6j;->j(Lvea;)Ljava/util/Set;
-
-    move-result-object p4
-
-    invoke-static {v2, p4}, Lpve;->e(Ljava/util/Set;Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object p4
-
-    invoke-direct {p3, p4}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-static {v1, p2, p1, p3}, Lnk0;->v(Lmc6;Ljava/lang/String;Lvea;Ljava/util/LinkedHashSet;)Lxh6;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1, p5}, Lnk0;->x(Lxh6;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lac4;->a:Lac4;
-
-    if-ne p1, p2, :cond_4
-
-    return-object p1
-
-    :cond_4
-    :goto_1
-    return-object v0
+    return-void
 .end method

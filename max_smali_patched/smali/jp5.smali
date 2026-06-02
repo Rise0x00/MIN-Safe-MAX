@@ -1,110 +1,199 @@
-.class public final Ljp5;
-.super Ljava/lang/Object;
+.class public abstract Ljp5;
+.super Lhc4;
 .source "SourceFile"
 
-# interfaces
-.implements Lfwd;
+
+# static fields
+.field public static final synthetic d:I
 
 
 # instance fields
-.field public final a:Lp52;
+.field public a:J
 
-.field public final b:Z
+.field public b:Z
 
-.field public final c:Z
-
-.field public final d:Llji;
-
-.field public final e:I
-
-.field public final f:Ldu;
-
-.field public final g:Landroid/media/metrics/LogSessionId;
+.field public c:Lju;
 
 
-# direct methods
-.method public constructor <init>(ZZLlji;ILdu;Landroid/media/metrics/LogSessionId;)V
-    .locals 0
+# virtual methods
+.method public final D0()Z
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-wide v0, p0, Ljp5;->a:J
 
-    iput-boolean p1, p0, Ljp5;->b:Z
+    const-wide v2, 0x100000000L
 
-    iput-boolean p2, p0, Ljp5;->c:Z
+    cmp-long v0, v0, v2
 
-    iput-object p3, p0, Ljp5;->d:Llji;
+    if-ltz v0, :cond_0
 
-    iput p4, p0, Ljp5;->e:I
+    const/4 v0, 0x1
 
-    iput-object p5, p0, Ljp5;->f:Ldu;
+    return v0
 
-    iput-object p6, p0, Ljp5;->g:Landroid/media/metrics/LogSessionId;
+    :cond_0
+    const/4 v0, 0x0
 
-    new-instance p1, Lp52;
+    return v0
+.end method
 
-    const/16 p2, 0x12
+.method public abstract E0()J
+.end method
 
-    invoke-direct {p1, p2}, Lp52;-><init>(I)V
+.method public final F0()Z
+    .locals 2
 
-    iput-object p1, p0, Ljp5;->a:Lp52;
+    iget-object v0, p0, Ljp5;->c:Lju;
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {v0}, Lju;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0}, Lju;->removeFirst()Ljava/lang/Object;
+
+    move-result-object v0
+
+    :goto_0
+    check-cast v0, Lh45;
+
+    if-nez v0, :cond_2
+
+    :goto_1
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_2
+    invoke-virtual {v0}, Lh45;->run()V
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public G0(JLgp5;)V
+    .locals 1
+
+    sget-object v0, Lur4;->Z:Lur4;
+
+    invoke-virtual {v0, p1, p2, p3}, Lip5;->L0(JLgp5;)V
 
     return-void
 .end method
 
+.method public final J(Z)V
+    .locals 4
 
-# virtual methods
-.method public final b(Landroid/os/Handler;Lxp5;Lxp5;Lxp5;Lxp5;)[Lol0;
-    .locals 6
+    iget-wide v0, p0, Ljp5;->a:J
 
-    new-instance p1, Ljava/util/ArrayList;
+    if-eqz p1, :cond_0
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    const-wide v2, 0x100000000L
 
-    iget-boolean p2, p0, Ljp5;->b:Z
-
-    iget-object v4, p0, Ljp5;->f:Ldu;
-
-    iget-object v1, p0, Ljp5;->d:Llji;
-
-    if-nez p2, :cond_0
-
-    new-instance p2, Luo5;
-
-    iget-object p3, p0, Ljp5;->a:Lp52;
-
-    iget-object p4, p0, Ljp5;->g:Landroid/media/metrics/LogSessionId;
-
-    invoke-direct {p2, v1, p3, v4, p4}, Luo5;-><init>(Llji;Lp52;Ldu;Landroid/media/metrics/LogSessionId;)V
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    goto :goto_0
 
     :cond_0
-    iget-boolean p2, p0, Ljp5;->c:Z
+    const-wide/16 v2, 0x1
 
-    if-nez p2, :cond_1
+    :goto_0
+    sub-long/2addr v0, v2
 
-    new-instance v0, Lwo5;
+    iput-wide v0, p0, Ljp5;->a:J
 
-    iget-object v3, p0, Ljp5;->a:Lp52;
+    const-wide/16 v2, 0x0
 
-    iget-object v5, p0, Ljp5;->g:Landroid/media/metrics/LogSessionId;
+    cmp-long p1, v0, v2
 
-    iget v2, p0, Ljp5;->e:I
+    if-lez p1, :cond_1
 
-    invoke-direct/range {v0 .. v5}, Lwo5;-><init>(Llji;ILp52;Ldu;Landroid/media/metrics/LogSessionId;)V
-
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    goto :goto_1
 
     :cond_1
-    const/4 p2, 0x0
+    iget-boolean p1, p0, Ljp5;->b:Z
 
-    new-array p2, p2, [Lol0;
+    if-eqz p1, :cond_2
 
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-virtual {p0}, Ljp5;->shutdown()V
+
+    :cond_2
+    :goto_1
+    return-void
+.end method
+
+.method public final g0(Lh45;)V
+    .locals 1
+
+    iget-object v0, p0, Ljp5;->c:Lju;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lju;
+
+    invoke-direct {v0}, Lju;-><init>()V
+
+    iput-object v0, p0, Ljp5;->c:Lju;
+
+    :cond_0
+    invoke-virtual {v0, p1}, Lju;->addLast(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public abstract h0()Ljava/lang/Thread;
+.end method
+
+.method public final limitedParallelism(ILjava/lang/String;)Lhc4;
+    .locals 0
+
+    invoke-static {p1}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->checkParallelism(I)V
+
+    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->namedOrThis(Lhc4;Ljava/lang/String;)Lhc4;
 
     move-result-object p1
 
-    check-cast p1, [Lol0;
-
     return-object p1
+.end method
+
+.method public abstract shutdown()V
+.end method
+
+.method public final u0(Z)V
+    .locals 4
+
+    iget-wide v0, p0, Ljp5;->a:J
+
+    if-eqz p1, :cond_0
+
+    const-wide v2, 0x100000000L
+
+    goto :goto_0
+
+    :cond_0
+    const-wide/16 v2, 0x1
+
+    :goto_0
+    add-long/2addr v2, v0
+
+    iput-wide v2, p0, Ljp5;->a:J
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Ljp5;->b:Z
+
+    :cond_1
+    return-void
 .end method

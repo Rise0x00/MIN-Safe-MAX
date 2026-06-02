@@ -3,148 +3,109 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfoc;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Lqhg;
+.field public final synthetic a:I
+
+.field public b:Z
+
+.field public final c:Ljava/lang/Object;
+
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lqhg;)V
-    .locals 0
+.method public constructor <init>(Lcd8;Lgc8;)V
+    .locals 1
 
+    const/4 v0, 0x1
+
+    iput v0, p0, Lq52;->a:I
+
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lq52;->a:Lqhg;
+    .line 2
+    iput-object p1, p0, Lq52;->c:Ljava/lang/Object;
+
+    .line 3
+    iput-object p2, p0, Lq52;->d:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lr52;Ls2f;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lq52;->a:I
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lq52;->d:Ljava/lang/Object;
+
+    const/4 p1, 0x0
+
+    .line 5
+    iput-boolean p1, p0, Lq52;->b:Z
+
+    .line 6
+    iput-object p2, p0, Lq52;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final run()V
     .locals 3
+
+    iget v0, p0, Lq52;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-boolean v0, p0, Lq52;->b:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lq52;->c:Ljava/lang/Object;
+
+    check-cast v0, Lcd8;
+
+    iget-object v1, p0, Lq52;->d:Ljava/lang/Object;
+
+    check-cast v1, Lgc8;
+
+    invoke-virtual {v0, v1}, Lcd8;->d(Lgc8;)V
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
-
-    return v0
+    iput-boolean v0, p0, Lq52;->b:Z
 
     :cond_0
-    instance-of v1, p1, Lq52;
+    return-void
 
-    const/4 v2, 0x0
+    :pswitch_0
+    iget-object v0, p0, Lq52;->c:Ljava/lang/Object;
 
-    if-nez v1, :cond_1
+    check-cast v0, Ljava/util/concurrent/Executor;
 
-    return v2
+    new-instance v1, Lk52;
 
-    :cond_1
-    check-cast p1, Lq52;
+    const/4 v2, 0x1
 
-    iget-object v1, p0, Lq52;->a:Lqhg;
+    invoke-direct {v1, v2, p0}, Lk52;-><init>(ILjava/lang/Object;)V
 
-    iget-object p1, p1, Lq52;->a:Lqhg;
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-void
 
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    const/16 v0, 0x100
-
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public final h(Lud8;)Z
-    .locals 4
-
-    const/16 v0, 0x100
-
-    int-to-long v0, v0
-
-    invoke-interface {p1}, Lud8;->getItemId()J
-
-    move-result-wide v2
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lq52;->a:Lqhg;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    const/16 v0, 0x100
-
-    return v0
-.end method
-
-.method public final q(Lud8;)Z
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lq52;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CancelDeleteProfileItem(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lq52;->a:Lqhg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,27 +1,19 @@
-.class public final synthetic Lv12;
+.class public final Lv12;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/content/Context;Ljava/lang/Object;Ljava/util/LinkedHashSet;)Ltx4;
+# virtual methods
+.method public final serializer()Lc88;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lc88;"
+        }
+    .end annotation
 
-    :try_start_0
-    new-instance v0, Ltx4;
-
-    invoke-direct {v0, p0, p1, p2}, Ltx4;-><init>(Landroid/content/Context;Ljava/lang/Object;Ljava/util/LinkedHashSet;)V
-    :try_end_0
-    .catch Landroidx/camera/core/CameraUnavailableException; {:try_start_0 .. :try_end_0} :catch_0
+    sget-object v0, Lu12;->a:Lu12;
 
     return-object v0
-
-    :catch_0
-    move-exception p0
-
-    new-instance p1, Landroidx/camera/core/InitializationException;
-
-    invoke-direct {p1, p0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
-
-    throw p1
 .end method

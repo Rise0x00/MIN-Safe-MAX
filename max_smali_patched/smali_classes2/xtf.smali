@@ -3,128 +3,126 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lem4;
+.implements Ld8a;
 
 
-# static fields
-.field public static final a:Lxtf;
+# instance fields
+.field public final a:F
 
-.field public static final b:Lytf;
+.field public final b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(IF)V
+    .locals 0
 
-    new-instance v0, Lxtf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lxtf;->a:F
 
-    sput-object v0, Lxtf;->a:Lxtf;
-
-    sget-object v0, Lytf;->b:Lytf;
-
-    sput-object v0, Lxtf;->b:Lytf;
+    iput p1, p0, Lxtf;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Llm4;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    sget-object v0, Lxtf;->b:Lytf;
+    const/4 v0, 0x1
 
-    return-object v0
-.end method
+    if-ne p0, p1, :cond_0
 
-.method public final b(Ljava/lang/String;Lhm4;Landroid/os/Bundle;)Lom4;
-    .locals 8
-
-    sget-object v0, Lxtf;->b:Lytf;
-
-    iget-object v0, v0, Llm4;->a:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
+    return v0
 
     :cond_0
-    sget-object v0, Lytf;->b:Lytf;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz p1, :cond_2
 
-    sget-object v0, Lytf;->c:Lhm4;
+    const-class v2, Lxtf;
 
-    invoke-virtual {p2, v0}, Lhm4;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lxtf;
+
+    iget v2, p0, Lxtf;->a:F
+
+    iget v3, p1, Lxtf;->a:F
+
+    cmpl-float v2, v2, v3
+
+    if-nez v2, :cond_2
+
+    iget v2, p0, Lxtf;->b:I
+
+    iget p1, p1, Lxtf;->b:I
+
+    if-ne v2, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Lxtf;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Float;->hashCode()I
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    add-int/lit16 v0, v0, 0x20f
 
-    new-instance v6, Lmm4;
+    mul-int/lit8 v0, v0, 0x1f
 
-    new-instance v0, Lmnf;
+    iget v1, p0, Lxtf;->b:I
 
-    const/16 v1, 0x8
+    add-int/2addr v0, v1
 
-    invoke-direct {v0, v1}, Lmnf;-><init>(I)V
+    return v0
+.end method
 
-    new-instance v1, Lmnf;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    const/16 v2, 0x9
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2}, Lmnf;-><init>(I)V
+    const-string v1, "smta: captureFrameRate="
 
-    invoke-direct {v6, v0, v1}, Lmm4;-><init>(Llq6;Llq6;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v0, "sticker_id"
+    iget v1, p0, Lxtf;->a:F
 
-    invoke-static {v0, p3}, Lomj;->k(Ljava/lang/String;Landroid/os/Bundle;)J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    move-result-wide v0
+    const-string v1, ", svcTemporalLayerCount="
 
-    move-wide v2, v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v1, Lom4;
+    iget v1, p0, Lxtf;->b:I
 
-    new-instance v7, Lwlc;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x3
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-direct {v7, p3, v2, v3, v0}, Lwlc;-><init>(Ljava/lang/Object;JI)V
+    move-result-object v0
 
-    const/4 v5, 0x1
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    invoke-direct/range {v1 .. v7}, Lom4;-><init>(Ljava/lang/String;Lhm4;Landroid/os/Bundle;ILmm4;Lnm4;)V
-
-    return-object v1
-
-    :cond_1
-    move-object v3, p2
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "invalid route "
-
-    invoke-static {p2, v3}, Lt02;->i(Ljava/lang/String;Lhm4;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object v0
 .end method

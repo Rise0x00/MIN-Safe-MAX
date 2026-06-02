@@ -3,68 +3,52 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/io/Closeable;
+
+
+# static fields
+.field public static final b:Ljava/util/regex/Pattern;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lj4b;
+.field public final a:Lt9e;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lj4b;I)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    const-string v0, "attachment;\\s*filename\\s*=\\s*\"([^\"]*)\""
+
+    const/4 v1, 0x2
+
+    invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Ld4b;->b:Ljava/util/regex/Pattern;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lt9e;)V
     .locals 0
 
-    iput p2, p0, Ld4b;->a:I
-
-    iput-object p1, p0, Ld4b;->b:Lj4b;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ld4b;->a:Lt9e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final close()V
+    .locals 1
 
-    iget v0, p0, Ld4b;->a:I
+    iget-object v0, p0, Ld4b;->a:Lt9e;
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ld4b;->b:Lj4b;
-
-    iget-object v1, v0, Lj4b;->D0:Llq6;
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1}, Llq6;->invoke()Ljava/lang/Object;
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    invoke-virtual {v0}, Lt9e;->close()V
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ld4b;->b:Lj4b;
-
-    iget-object v1, v0, Lj4b;->D0:Llq6;
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v1}, Llq6;->invoke()Ljava/lang/Object;
-
-    :cond_1
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

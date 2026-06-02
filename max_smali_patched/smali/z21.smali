@@ -1,218 +1,163 @@
-.class public final Lz21;
+.class public abstract synthetic Lz21;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;
 
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-# instance fields
-.field public final synthetic a:Ld31;
+.field public static final synthetic $EnumSwitchMapping$1:[I
+
+.field public static final synthetic $EnumSwitchMapping$2:[I
+
+.field public static final synthetic $EnumSwitchMapping$3:[I
 
 
 # direct methods
-.method public constructor <init>(Ld31;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lz21;->a:Ld31;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onFeatureEnabledChanged(Lra1;Z)V
-    .locals 9
-
-    invoke-super {p0, p1, p2}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureEnabledChanged(Lra1;Z)V
-
-    sget-object v0, Lra1;->b:Lra1;
-
-    if-eq p1, v0, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    sget-object p1, Lc5j;->a:Ledb;
-
-    if-nez p1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    sget-object v0, Lkk8;->d:Lkk8;
-
-    invoke-virtual {p1, v0}, Ledb;->b(Lkk8;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    const-string v1, "Record in call was changed for me to "
-
-    invoke-static {v1, p2}, Lva9;->e(Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    const-string v3, "CallAdminSettingsController"
-
-    invoke-virtual {p1, v0, v3, v1, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_0
-    iget-object p1, p0, Lz21;->a:Ld31;
-
-    iget-object p1, p1, Ld31;->F0:Lspf;
-
-    :goto_1
-    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
+    invoke-static {}, Lg8b;->values()[Lg8b;
 
     move-result-object v0
 
-    move-object v1, v0
+    array-length v0, v0
 
-    check-cast v1, Lca;
+    new-array v0, v0, [I
 
-    const/4 v7, 0x0
-
-    const/16 v8, 0x6f
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/4 v4, 0x0
+    :catch_0
+    const/4 v3, 0x2
 
-    const/4 v5, 0x0
+    :try_start_1
+    aput v3, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    move v6, p2
+    :catch_1
+    const/4 v4, 0x3
 
-    invoke-static/range {v1 .. v8}, Lca;->a(Lca;ZZZZZZI)Lca;
+    :try_start_2
+    aput v4, v0, v3
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    move-result-object p2
+    :catch_2
+    sput-object v0, Lz21;->$EnumSwitchMapping$0:[I
 
-    invoke-virtual {p1, v0, p2}, Lspf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_3
-
-    :goto_2
-    return-void
-
-    :cond_3
-    move p2, v6
-
-    goto :goto_1
-.end method
-
-.method public final onFeatureRolesChanged(Lra1;Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;)V
-    .locals 12
-
-    invoke-super {p0, p1, p2}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureRolesChanged(Lra1;Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;)V
-
-    sget-object v0, Lra1;->b:Lra1;
-
-    if-eq p1, v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    sget-object p1, Lc5j;->a:Ledb;
-
-    if-nez p1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    sget-object v0, Lkk8;->d:Lkk8;
-
-    invoke-virtual {p1, v0}, Ledb;->b(Lkk8;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Record in call was changed for role="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    const-string v3, "CallAdminSettingsController"
-
-    invoke-virtual {p1, v0, v3, v1, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_0
-    instance-of v9, p2, Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles$EnabledForAll;
-
-    iget-object p1, p0, Lz21;->a:Ld31;
-
-    iget-object p1, p1, Ld31;->F0:Lspf;
-
-    :cond_3
-    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    move-object v4, p2
-
-    check-cast v4, Lca;
-
-    const/4 v10, 0x0
-
-    const/16 v11, 0x6f
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    invoke-static/range {v4 .. v11}, Lca;->a(Lca;ZZZZZZI)Lca;
+    invoke-static {}, Le8b;->values()[Le8b;
 
     move-result-object v0
 
-    invoke-virtual {p1, p2, v0}, Lspf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    array-length v0, v0
 
-    move-result p2
+    new-array v0, v0, [I
 
-    if-eqz p2, :cond_3
+    :try_start_3
+    aput v1, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    iget-object p1, p0, Lz21;->a:Ld31;
+    :catch_3
+    :try_start_4
+    aput v3, v0, v3
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    invoke-virtual {p1}, Ld31;->j()Z
+    :catch_4
+    :try_start_5
+    aput v4, v0, v2
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    move-result p1
+    :catch_5
+    sput-object v0, Lz21;->$EnumSwitchMapping$1:[I
 
-    if-eqz p1, :cond_4
+    invoke-static {}, Ld8b;->values()[Ld8b;
 
-    iget-object p1, p0, Lz21;->a:Ld31;
+    move-result-object v0
 
-    iget-object p1, p1, Ld31;->D0:Li7f;
+    array-length v0, v0
 
-    new-instance p2, Leb;
+    new-array v0, v0, [I
 
-    invoke-direct {p2, v9}, Leb;-><init>(Z)V
+    :try_start_6
+    aput v1, v0, v2
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    invoke-virtual {p1, p2}, Li7f;->h(Ljava/lang/Object;)Z
+    :catch_6
+    :try_start_7
+    aput v3, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
 
-    :cond_4
-    :goto_1
+    :catch_7
+    :try_start_8
+    aput v4, v0, v3
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+
+    :catch_8
+    const/4 v5, 0x4
+
+    :try_start_9
+    aput v5, v0, v4
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
+
+    :catch_9
+    const/4 v6, 0x5
+
+    :try_start_a
+    aput v6, v0, v5
+    :try_end_a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
+
+    :catch_a
+    sput-object v0, Lz21;->$EnumSwitchMapping$2:[I
+
+    invoke-static {}, Lf8b;->values()[Lf8b;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    :try_start_b
+    aput v1, v0, v2
+    :try_end_b
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
+
+    :catch_b
+    :try_start_c
+    aput v3, v0, v1
+    :try_end_c
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_c} :catch_c
+
+    :catch_c
+    :try_start_d
+    aput v4, v0, v3
+    :try_end_d
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_d .. :try_end_d} :catch_d
+
+    :catch_d
+    :try_start_e
+    aput v5, v0, v4
+    :try_end_e
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_e .. :try_end_e} :catch_e
+
+    :catch_e
+    sput-object v0, Lz21;->$EnumSwitchMapping$3:[I
+
     return-void
 .end method

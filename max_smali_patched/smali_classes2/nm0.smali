@@ -1,46 +1,56 @@
-.class public final synthetic Lnm0;
-.super Ljava/lang/Object;
+.class public final Lnm0;
+.super Liig;
 .source "SourceFile"
+
+# interfaces
+.implements Lpt6;
 
 
 # instance fields
-.field public final synthetic a:Lwnb;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lwnb;)V
-    .locals 0
-
-    iput-object p1, p0, Lnm0;->a:Lwnb;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public synthetic o:Z
 
 
 # virtual methods
-.method public a(J)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lnm0;->a:Lwnb;
+    check-cast p1, Lgm0;
 
-    invoke-virtual {v0}, Lwnb;->h()Lkqh;
+    check-cast p2, Ljava/lang/Boolean;
 
-    move-result-object v1
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    instance-of v2, v1, Lyg4;
+    move-result p1
 
-    if-eqz v2, :cond_0
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    check-cast v1, Lyg4;
+    new-instance p2, Lnm0;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v0, 0x3
 
-    :cond_0
-    iget-object v1, v0, Lpm0;->i:Lxl6;
+    invoke-direct {p2, v0, p3}, Liig;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v1, v0, p1, p2}, Lxl6;->t(Lgob;J)V
+    iput-boolean p1, p2, Lnm0;->o:Z
 
-    return-void
+    sget-object p1, Lyeh;->a:Lyeh;
+
+    invoke-virtual {p2, p1}, Lnm0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget-boolean v0, p0, Lnm0;->o:Z
+
+    invoke-static {p1}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
 .end method

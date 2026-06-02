@@ -1,109 +1,115 @@
 .class public final Lrgc;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lnmb;
 
 
 # instance fields
-.field public final synthetic o:Lugc;
+.field public final synthetic a:Lacb;
+
+.field public final synthetic b:Lone/me/chatmedia/viewer/video/playbackSpeed/PlaybackSettingsBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(Lugc;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lacb;Lone/me/chatmedia/viewer/video/playbackSpeed/PlaybackSettingsBottomSheet;)V
     .locals 0
 
-    iput-object p1, p0, Lrgc;->o:Lugc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lrgc;->a:Lacb;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lrgc;->b:Lone/me/chatmedia/viewer/video/playbackSpeed/PlaybackSettingsBottomSheet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Lpmb;FZ)V
+    .locals 4
 
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lrgc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lrgc;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lrgc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lrgc;
-
-    iget-object v0, p0, Lrgc;->o:Lugc;
-
-    invoke-direct {p1, v0, p2}, Lrgc;-><init>(Lugc;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lrgc;->o:Lugc;
-
-    invoke-virtual {p1}, Lugc;->b()J
-
-    move-result-wide v0
-
-    iget-object p1, p0, Lrgc;->o:Lugc;
-
-    iget-object p1, p1, Lugc;->w0:Ljava/lang/String;
-
-    sget-object v2, Lc5j;->a:Ledb;
-
-    if-nez v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v3, Lkk8;->c:Lkk8;
-
-    invoke-virtual {v2, v3}, Ledb;->b(Lkk8;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    invoke-static {v0, v1}, Lta5;->p(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "presenceMaxSeen = "
-
-    invoke-static {v1, v0}, Lkz1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v2, v3, p1, v0, v1}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const/4 v2, 0x6
 
-    :cond_1
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    iget-object v3, p0, Lrgc;->a:Lacb;
 
-    return-object p1
+    invoke-static {v3, v0, v1, v2}, Lvc4;->b(Lvc4;Ljava/lang/Number;ZI)V
+
+    if-eqz p3, :cond_0
+
+    invoke-virtual {p1}, Lpmb;->getThumbIsPressed()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lrgc;->b:Lone/me/chatmedia/viewer/video/playbackSpeed/PlaybackSettingsBottomSheet;
+
+    iget-object p3, p1, Lone/me/chatmedia/viewer/video/playbackSpeed/PlaybackSettingsBottomSheet;->G0:Lia8;
+
+    invoke-interface {p3}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Ldwf;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p3, v0, p2}, Ldwf;->a(IF)V
+
+    invoke-virtual {p1}, Lone/me/chatmedia/viewer/video/playbackSpeed/PlaybackSettingsBottomSheet;->q1()Ljv2;
+
+    move-result-object p3
+
+    iget-object v0, p3, Ljv2;->r1:Lb1g;
+
+    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2, v1}, Lb1g;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    iget-object p3, p3, Ljv2;->a1:Lzo5;
+
+    new-instance v0, Lno5;
+
+    invoke-direct {v0, p2}, Lno5;-><init>(F)V
+
+    invoke-static {p3, v0}, Lw4i;->s(Lzo5;Ljava/lang/Object;)V
+
+    invoke-virtual {p1}, Lone/me/chatmedia/viewer/video/playbackSpeed/PlaybackSettingsBottomSheet;->q1()Ljv2;
+
+    move-result-object p2
+
+    iget-object p3, p1, Lone/me/chatmedia/viewer/video/playbackSpeed/PlaybackSettingsBottomSheet;->I0:Luvd;
+
+    sget-object v0, Lone/me/chatmedia/viewer/video/playbackSpeed/PlaybackSettingsBottomSheet;->L0:[Lb88;
+
+    const/4 v1, 0x2
+
+    aget-object v0, v0, v1
+
+    invoke-interface {p3, p1, v0}, Luvd;->y(Ljava/lang/Object;Lb88;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lvob;
+
+    invoke-virtual {p1}, Landroid/widget/CompoundButton;->isChecked()Z
+
+    move-result p1
+
+    invoke-virtual {p2, p1}, Ljv2;->S(Z)V
+
+    :cond_0
+    return-void
 .end method

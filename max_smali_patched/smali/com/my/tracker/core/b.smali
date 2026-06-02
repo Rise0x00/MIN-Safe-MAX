@@ -846,11 +846,11 @@
     .line 3
     iget-object v0, p0, Lcom/my/tracker/core/b;->h:Lcom/my/tracker/core/handlers/MyTrackerActivityHandler;
 
-    new-instance v1, Lhgh;
+    new-instance v1, Lp3e;
 
-    const/16 v2, 0xd
+    const/16 v2, 0xc
 
-    invoke-direct {v1, v2, p0}, Lhgh;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lp3e;-><init>(ILjava/lang/Object;)V
 
     invoke-interface {v0, v1}, Lcom/my/tracker/core/handlers/MyTrackerActivityHandler;->setActionEngineCoreFlush(Ljava/lang/Runnable;)V
 
@@ -1039,13 +1039,11 @@
 .end method
 
 .method public insertEventInWorker(JIZZJLcom/my/tracker/core/EngineCore$EventPacker;)V
-    .locals 11
+    .locals 10
 
     iget-object v0, p0, Lcom/my/tracker/core/b;->b:Lcom/my/tracker/core/EngineMiniCore;
 
-    new-instance v1, Lyli;
-
-    const/4 v10, 0x1
+    new-instance v1, Llzi;
 
     move-wide v2, p1
 
@@ -1053,13 +1051,13 @@
 
     move v5, p4
 
-    move/from16 v6, p5
+    move v6, p5
 
     move-wide/from16 v7, p6
 
     move-object/from16 v9, p8
 
-    invoke-direct/range {v1 .. v10}, Lyli;-><init>(JIZZJLcom/my/tracker/core/EngineCore$EventPacker;I)V
+    invoke-direct/range {v1 .. v9}, Llzi;-><init>(JIZZJLcom/my/tracker/core/EngineCore$EventPacker;)V
 
     invoke-interface {v0, v1}, Lcom/my/tracker/core/EngineMiniCore;->onEngineWorkerWithEngineCore(Lcom/my/tracker/core/utils/Consumer;)V
 

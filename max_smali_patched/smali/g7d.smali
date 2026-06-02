@@ -1,42 +1,97 @@
-.class public abstract Lg7d;
+.class public final Lg7d;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lvg4;
 
 
-# static fields
-.field public static ic_call_answer:I = 0x7f080530
+# instance fields
+.field public final a:F
 
-.field public static ic_call_answer_low:I = 0x7f080531
 
-.field public static ic_call_answer_video:I = 0x7f080532
+# direct methods
+.method public constructor <init>(F)V
+    .locals 0
 
-.field public static ic_call_answer_video_low:I = 0x7f080533
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static ic_call_decline:I = 0x7f080535
+    iput p1, p0, Lg7d;->a:F
 
-.field public static ic_call_decline_low:I = 0x7f080536
+    return-void
+.end method
 
-.field public static notification_action_background:I = 0x7f0808c2
 
-.field public static notification_bg:I = 0x7f0808c3
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-.field public static notification_bg_low:I = 0x7f0808c4
+    const/4 v0, 0x1
 
-.field public static notification_bg_low_normal:I = 0x7f0808c5
+    if-ne p0, p1, :cond_0
 
-.field public static notification_bg_low_pressed:I = 0x7f0808c6
+    return v0
 
-.field public static notification_bg_normal:I = 0x7f0808c7
+    :cond_0
+    instance-of v1, p1, Lg7d;
 
-.field public static notification_bg_normal_pressed:I = 0x7f0808c8
+    const/4 v2, 0x0
 
-.field public static notification_icon_background:I = 0x7f0808c9
+    if-nez v1, :cond_1
 
-.field public static notification_oversize_large_icon_bg:I = 0x7f0808cc
+    return v2
 
-.field public static notification_template_icon_bg:I = 0x7f0808cd
+    :cond_1
+    check-cast p1, Lg7d;
 
-.field public static notification_template_icon_low_bg:I = 0x7f0808ce
+    iget v1, p0, Lg7d;->a:F
 
-.field public static notification_tile_bg:I = 0x7f0808cf
+    iget p1, p1, Lg7d;->a:F
 
-.field public static notify_panel_notification_icon_bg:I = 0x7f0808d0
+    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Lg7d;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ProgressDiffForNotify(value="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lg7d;->a:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

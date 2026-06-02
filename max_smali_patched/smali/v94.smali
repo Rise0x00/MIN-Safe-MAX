@@ -1,239 +1,451 @@
 .class public final Lv94;
-.super Ljava/lang/Object;
+.super Lj94;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic a:I
 
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:F
-
-.field public final e:F
-
-.field public final f:I
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(ZIIFFI)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
+
+    iput p1, p0, Lv94;->a:I
+
+    iput-object p2, p0, Lv94;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lv94;->a:Z
+    return-void
+.end method
 
-    iput p2, p0, Lv94;->b:I
-
-    iput p3, p0, Lv94;->c:I
-
-    iput p4, p0, Lv94;->d:F
-
-    iput p5, p0, Lv94;->e:F
-
-    iput p6, p0, Lv94;->f:I
+.method private final u(Ll94;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public d(Ll94;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    iget p1, p0, Lv94;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    return v0
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lv94;->b:Ljava/lang/Object;
+
+    check-cast p1, Ly94;
+
+    iget-object p1, p1, Ly94;->a:Lcd8;
+
+    sget-object v0, Lgc8;->ON_CREATE:Lgc8;
+
+    invoke-virtual {p1, v0}, Lcd8;->d(Lgc8;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public g(Ll94;)V
+    .locals 1
+
+    iget p1, p0, Lv94;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lv94;->b:Ljava/lang/Object;
+
+    check-cast p1, Ly94;
+
+    iget-object p1, p1, Ly94;->a:Lcd8;
+
+    sget-object v0, Lgc8;->ON_RESUME:Lgc8;
+
+    invoke-virtual {p1, v0}, Lcd8;->d(Lgc8;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lv94;->b:Ljava/lang/Object;
+
+    check-cast p1, Lr32;
+
+    iget-object p1, p1, Lr32;->b:Lcd8;
+
+    sget-object v0, Lgc8;->ON_RESUME:Lgc8;
+
+    invoke-virtual {p1, v0}, Lcd8;->d(Lgc8;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public h(Ll94;)V
+    .locals 1
+
+    iget p1, p0, Lv94;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lv94;->b:Ljava/lang/Object;
+
+    check-cast p1, Lr32;
+
+    iget-object p1, p1, Lr32;->b:Lcd8;
+
+    sget-object v0, Lgc8;->ON_CREATE:Lgc8;
+
+    invoke-virtual {p1, v0}, Lcd8;->d(Lgc8;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public j(Ll94;Landroid/view/View;)V
+    .locals 1
+
+    iget v0, p0, Lv94;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lv94;->b:Ljava/lang/Object;
+
+    check-cast v0, Ly94;
+
+    invoke-static {p2, v0}, Lf90;->n0(Landroid/view/View;Lad8;)V
+
+    invoke-static {p1}, Lu94;->a(Ll94;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    iget-object p1, v0, Ly94;->a:Lcd8;
+
+    sget-object p2, Lgc8;->ON_CREATE:Lgc8;
+
+    invoke-virtual {p1, p2}, Lcd8;->d(Lgc8;)V
 
     :cond_0
-    instance-of v1, p1, Lv94;
+    return-void
 
-    const/4 v2, 0x0
+    :pswitch_1
+    iget-object p1, p0, Lv94;->b:Ljava/lang/Object;
 
-    if-nez v1, :cond_1
+    check-cast p1, Lr32;
 
-    return v2
+    iget-object p1, p1, Lr32;->b:Lcd8;
 
-    :cond_1
-    check-cast p1, Lv94;
+    sget-object p2, Lgc8;->ON_START:Lgc8;
 
-    iget-boolean v1, p0, Lv94;->a:Z
+    invoke-virtual {p1, p2}, Lcd8;->d(Lgc8;)V
 
-    iget-boolean v3, p1, Lv94;->a:Z
+    return-void
 
-    if-eq v1, v3, :cond_2
+    nop
 
-    return v2
-
-    :cond_2
-    iget v1, p0, Lv94;->b:I
-
-    iget v3, p1, Lv94;->b:I
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Lv94;->c:I
-
-    iget v3, p1, Lv94;->c:I
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget v1, p0, Lv94;->d:F
-
-    iget v3, p1, Lv94;->d:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget v1, p0, Lv94;->e:F
-
-    iget v3, p1, Lv94;->e:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget v1, p0, Lv94;->f:I
-
-    iget p1, p1, Lv94;->f:I
-
-    if-eq v1, p1, :cond_7
-
-    return v2
-
-    :cond_7
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public k(Ll94;)V
+    .locals 1
 
-    iget-boolean v0, p0, Lv94;->a:Z
+    iget v0, p0, Lv94;->a:I
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    return-void
 
-    const/16 v1, 0x1f
+    :pswitch_0
+    iget-object v0, p0, Lv94;->b:Ljava/lang/Object;
 
-    mul-int/2addr v0, v1
+    check-cast v0, Lmge;
 
-    iget v2, p0, Lv94;->b:I
+    iget-object v0, v0, Lmge;->d:Ljava/util/ArrayList;
 
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    move-result v0
+    return-void
 
-    iget v2, p0, Lv94;->c:I
-
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
-
-    move-result v0
-
-    iget v2, p0, Lv94;->d:F
-
-    invoke-static {v0, v2, v1}, Lob3;->b(IFI)I
-
-    move-result v0
-
-    iget v2, p0, Lv94;->e:F
-
-    invoke-static {v0, v2, v1}, Lob3;->b(IFI)I
-
-    move-result v0
-
-    iget v1, p0, Lv94;->f:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public l(Ll94;)V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget p1, p0, Lv94;->a:I
 
-    const-string v1, "AnimationState(isVisible="
+    packed-switch p1, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-void
 
-    iget-boolean v1, p0, Lv94;->a:Z
+    :pswitch_0
+    iget-object p1, p0, Lv94;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    check-cast p1, Ly94;
 
-    const-string v1, ", totalHeight="
+    iget-object v0, p1, Ly94;->a:Lcd8;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lcd8;->d:Lhc8;
 
-    iget v1, p0, Lv94;->b:I
+    sget-object v1, Lhc8;->c:Lhc8;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Lhc8;->a(Lhc8;)Z
 
-    const-string v1, ", directionY="
+    move-result v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_0
 
-    iget v1, p0, Lv94;->c:I
+    iget-object p1, p1, Ly94;->a:Lcd8;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    sget-object v0, Lgc8;->ON_DESTROY:Lgc8;
 
-    const-string v1, ", offsetY="
+    invoke-virtual {p1, v0}, Lcd8;->d(Lgc8;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    return-void
 
-    iget v1, p0, Lv94;->d:F
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+.method public n(Ll94;Landroid/view/View;)V
+    .locals 0
 
-    const-string v1, ", startY="
+    iget p1, p0, Lv94;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    packed-switch p1, :pswitch_data_0
 
-    iget v1, p0, Lv94;->e:F
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    :pswitch_0
+    iget-object p1, p0, Lv94;->b:Ljava/lang/Object;
 
-    const-string v1, ", inset="
+    check-cast p1, Ly94;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p1, p1, Ly94;->a:Lcd8;
 
-    iget v1, p0, Lv94;->f:I
+    sget-object p2, Lgc8;->ON_START:Lgc8;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Lcd8;->d(Lgc8;)V
 
-    const-string v1, ")"
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.method public p(Ll94;)V
+    .locals 0
 
-    move-result-object v0
+    iget p1, p0, Lv94;->a:I
 
-    return-object v0
+    return-void
+.end method
+
+.method public q(Ll94;)V
+    .locals 3
+
+    iget v0, p0, Lv94;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lv94;->b:Ljava/lang/Object;
+
+    check-cast v0, Ly94;
+
+    iget-object v1, v0, Ly94;->a:Lcd8;
+
+    iget-object v1, v1, Lcd8;->d:Lhc8;
+
+    sget-object v2, Lhc8;->a:Lhc8;
+
+    if-ne v1, v2, :cond_0
+
+    invoke-static {p1}, Lsr6;->O(Ll94;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v1, "preCreateView: recreate lifecycleRegistry for viewLifecycleOwner"
+
+    invoke-static {p1, v1}, Lnm4;->y(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance p1, Lcd8;
+
+    invoke-direct {p1, v0}, Lcd8;-><init>(Lad8;)V
+
+    iput-object p1, v0, Ly94;->a:Lcd8;
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public r(Ll94;)V
+    .locals 2
+
+    iget p1, p0, Lv94;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lv94;->b:Ljava/lang/Object;
+
+    check-cast p1, Lr32;
+
+    iget-object p1, p1, Lr32;->b:Lcd8;
+
+    iget-object v0, p1, Lcd8;->d:Lhc8;
+
+    sget-object v1, Lhc8;->b:Lhc8;
+
+    if-eq v0, v1, :cond_0
+
+    sget-object v0, Lgc8;->ON_DESTROY:Lgc8;
+
+    invoke-virtual {p1, v0}, Lcd8;->d(Lgc8;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public s(Ll94;Landroid/view/View;)V
+    .locals 0
+
+    iget p1, p0, Lv94;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lv94;->b:Ljava/lang/Object;
+
+    check-cast p1, Ly94;
+
+    iget-object p1, p1, Ly94;->a:Lcd8;
+
+    sget-object p2, Lgc8;->ON_STOP:Lgc8;
+
+    invoke-virtual {p1, p2}, Lcd8;->d(Lgc8;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lv94;->b:Ljava/lang/Object;
+
+    check-cast p1, Lr32;
+
+    iget-object p1, p1, Lr32;->b:Lcd8;
+
+    sget-object p2, Lgc8;->ON_STOP:Lgc8;
+
+    invoke-virtual {p1, p2}, Lcd8;->d(Lgc8;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public t(Ll94;)V
+    .locals 1
+
+    iget p1, p0, Lv94;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lv94;->b:Ljava/lang/Object;
+
+    check-cast p1, Ly94;
+
+    iget-object p1, p1, Ly94;->a:Lcd8;
+
+    sget-object v0, Lgc8;->ON_PAUSE:Lgc8;
+
+    invoke-virtual {p1, v0}, Lcd8;->d(Lgc8;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lv94;->b:Ljava/lang/Object;
+
+    check-cast p1, Lr32;
+
+    iget-object p1, p1, Lr32;->b:Lcd8;
+
+    sget-object v0, Lgc8;->ON_PAUSE:Lgc8;
+
+    invoke-virtual {p1, v0}, Lcd8;->d(Lgc8;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

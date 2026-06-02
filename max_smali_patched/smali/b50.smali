@@ -3,107 +3,135 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final j:Lb50;
+
+
 # instance fields
-.field public final a:Lmbg;
+.field public final a:J
 
-.field public final b:Lr3e;
+.field public final b:Ljava/lang/String;
 
-.field public final c:Lo58;
+.field public final c:J
 
-.field public final d:Lo58;
+.field public final d:[B
 
 .field public final e:Ljava/lang/String;
 
-.field public f:Ld49;
+.field public final f:Ljava/lang/String;
 
-.field public final g:Ljava/util/LinkedHashMap;
+.field public final g:J
 
-.field public h:Z
+.field public final h:J
 
-.field public i:J
-
-.field public final j:Ljava/util/EnumSet;
+.field public final i:Lx50;
 
 
 # direct methods
-.method public constructor <init>(Lo58;Lo58;Lmbg;Lr3e;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, La50;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v1, Lb50;
+
+    invoke-direct {v1, v0}, Lb50;-><init>(La50;)V
+
+    sput-object v1, Lb50;->j:Lb50;
+
+    return-void
+.end method
+
+.method public constructor <init>(La50;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lb50;->a:Lmbg;
+    iget-wide v0, p1, La50;->a:J
 
-    iput-object p4, p0, Lb50;->b:Lr3e;
+    iput-wide v0, p0, Lb50;->a:J
 
-    iput-object p1, p0, Lb50;->c:Lo58;
+    iget-object v0, p1, La50;->b:Ljava/lang/String;
 
-    iput-object p2, p0, Lb50;->d:Lo58;
+    iput-object v0, p0, Lb50;->b:Ljava/lang/String;
 
-    const-class p1, Lb50;
+    iget-wide v0, p1, La50;->c:J
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    iput-wide v0, p0, Lb50;->c:J
 
-    move-result-object p1
+    iget-object v0, p1, La50;->d:[B
 
-    iput-object p1, p0, Lb50;->e:Ljava/lang/String;
+    iput-object v0, p0, Lb50;->d:[B
 
-    new-instance p1, Ljava/util/LinkedHashMap;
+    iget-object v0, p1, La50;->e:Ljava/lang/String;
 
-    invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
+    iput-object v0, p0, Lb50;->e:Ljava/lang/String;
 
-    iput-object p1, p0, Lb50;->g:Ljava/util/LinkedHashMap;
+    iget-object v0, p1, La50;->f:Ljava/lang/String;
 
-    const/4 p1, 0x1
+    iput-object v0, p0, Lb50;->f:Ljava/lang/String;
 
-    iput-boolean p1, p0, Lb50;->h:Z
+    iget-wide v0, p1, La50;->g:J
 
-    const-wide/16 p1, -0x1
+    iput-wide v0, p0, Lb50;->g:J
 
-    iput-wide p1, p0, Lb50;->i:J
+    iget-wide v0, p1, La50;->h:J
 
-    const-class p1, Lz40;
+    iput-wide v0, p0, Lb50;->h:J
 
-    invoke-static {p1}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
+    iget-object p1, p1, La50;->i:Lx50;
 
-    move-result-object p1
-
-    iput-object p1, p0, Lb50;->j:Ljava/util/EnumSet;
+    iput-object p1, p0, Lb50;->i:Lx50;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Llr8;)V
-    .locals 12
+.method public final a()La50;
+    .locals 3
 
-    iget-object v0, p0, Lb50;->c:Lo58;
+    new-instance v0, La50;
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iget-wide v1, p0, Lb50;->a:J
 
-    check-cast v0, Ldd;
+    iput-wide v1, v0, La50;->a:J
 
-    new-instance v1, Lgk8;
+    iget-object v1, p0, Lb50;->b:Ljava/lang/String;
 
-    const-wide/16 v9, 0x0
+    iput-object v1, v0, La50;->b:Ljava/lang/String;
 
-    const/16 v11, 0x2c
+    iget-wide v1, p0, Lb50;->c:J
 
-    const-string v2, "AUDIO_STATS"
+    iput-wide v1, v0, La50;->c:J
 
-    const-wide/16 v4, 0x0
+    iget-object v1, p0, Lb50;->d:[B
 
-    const-wide/16 v6, 0x0
+    iput-object v1, v0, La50;->d:[B
 
-    move-object v3, p1
+    iget-object v1, p0, Lb50;->f:Ljava/lang/String;
 
-    move-object v8, p2
+    iput-object v1, v0, La50;->f:Ljava/lang/String;
 
-    invoke-direct/range {v1 .. v11}, Lgk8;-><init>(Ljava/lang/String;Ljava/lang/String;JJLjava/util/Map;JI)V
+    iget-object v1, p0, Lb50;->e:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ldd;->h(Lgk8;)V
+    iput-object v1, v0, La50;->e:Ljava/lang/String;
 
-    return-void
+    iget-wide v1, p0, Lb50;->g:J
+
+    iput-wide v1, v0, La50;->g:J
+
+    iget-wide v1, p0, Lb50;->h:J
+
+    iput-wide v1, v0, La50;->h:J
+
+    iget-object v1, p0, Lb50;->i:Lx50;
+
+    iput-object v1, v0, La50;->i:Lx50;
+
+    return-object v0
 .end method

@@ -1,59 +1,118 @@
-.class public final Ltm5;
-.super Ljava/lang/Object;
+.class public abstract Ltm5;
+.super Lka5;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/graphics/drawable/Animatable;
 
 
 # instance fields
-.field public final a:[Lnm5;
+.field public final b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
-.field public final b:[J
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
+.field public c:Lsm5;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[J[Lnm5;)V
+.method public constructor <init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lka5;-><init>(Landroid/graphics/drawable/Drawable;)V
 
-    iput-object p1, p0, Ltm5;->c:Ljava/lang/String;
-
-    iput-object p2, p0, Ltm5;->d:Ljava/lang/String;
-
-    iput-object p3, p0, Ltm5;->b:[J
-
-    iput-object p4, p0, Ltm5;->a:[Lnm5;
+    iput-object p1, p0, Ltm5;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
+.method public a()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public b()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final invalidateSelf()V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Ltm5;->c:Lsm5;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    if-nez v0, :cond_0
 
-    iget-object v1, p0, Ltm5;->c:Ljava/lang/String;
+    new-instance v0, Lsm5;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v1, 0x0
 
-    const-string v1, "/"
+    invoke-direct {v0, p0, v1}, Lsm5;-><init>(Landroid/graphics/drawable/Drawable$Callback;I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object v0, p0, Ltm5;->c:Lsm5;
 
-    iget-object v1, p0, Ltm5;->d:Ljava/lang/String;
+    iget-object v1, p0, Ltm5;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->registerAnimationCallback(Ljg;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_0
+    invoke-super {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+.end method
+
+.method public final isRunning()Z
+    .locals 1
+
+    iget-object v0, p0, Ltm5;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    invoke-virtual {v0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->isRunning()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public start()V
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
 
     move-result-object v0
 
-    return-object v0
+    iget-object v1, p0, Ltm5;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Ltm5;->c:Lsm5;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v1, v0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->unregisterAnimationCallback(Ljg;)Z
+
+    :cond_0
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Ltm5;->c:Lsm5;
+
+    :cond_1
+    iget-object v0, p0, Ltm5;->c:Lsm5;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->start()V
+
+    :cond_2
+    return-void
+.end method
+
+.method public stop()V
+    .locals 1
+
+    iget-object v0, p0, Ltm5;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    invoke-virtual {v0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->stop()V
+
+    return-void
 .end method

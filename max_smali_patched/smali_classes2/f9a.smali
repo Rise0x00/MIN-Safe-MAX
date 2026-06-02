@@ -1,73 +1,116 @@
-.class public final enum Lf9a;
-.super Ljava/lang/Enum;
+.class public final synthetic Lf9a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxs6;
 
-# static fields
-.field public static final enum a:Lf9a;
 
-.field public static final enum b:Lf9a;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final synthetic c:[Lf9a;
+.field public final synthetic b:Lh9a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lh9a;I)V
+    .locals 0
 
-    new-instance v0, Lf9a;
+    iput p2, p0, Lf9a;->a:I
 
-    const-string v1, "MOVIE"
+    iput-object p1, p0, Lf9a;->b:Lh9a;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lf9a;->a:Lf9a;
-
-    new-instance v1, Lf9a;
-
-    const-string v2, "STREAM"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lf9a;->b:Lf9a;
-
-    filled-new-array {v0, v1}, [Lf9a;
-
-    move-result-object v0
-
-    sput-object v0, Lf9a;->c:[Lf9a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lf9a;
-    .locals 1
 
-    const-class v0, Lf9a;
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lf9a;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lf9a;
+    new-instance v0, Landroid/graphics/Paint;
 
-    return-object p0
-.end method
+    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-.method public static values()[Lf9a;
-    .locals 1
+    sget-object v1, Lzc3;->A0:Lz66;
 
-    sget-object v0, Lf9a;->c:[Lf9a;
+    iget-object v2, p0, Lf9a;->b:Lh9a;
 
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v2, v2, Lh9a;->a:Landroid/content/Context;
 
-    move-result-object v0
+    invoke-virtual {v1, v2}, Lz66;->i(Landroid/content/Context;)Lgqb;
 
-    check-cast v0, [Lf9a;
+    move-result-object v1
+
+    iget-object v1, v1, Lgqb;->b:Ldqb;
+
+    invoke-interface {v1}, Ldqb;->getIcon()Lzpb;
+
+    move-result-object v1
+
+    iget v1, v1, Lzpb;->i:I
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+
+    new-instance v1, Landroid/graphics/PorterDuffXfermode;
+
+    sget-object v2, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-direct {v1, v2}, Landroid/graphics/PorterDuffXfermode;-><init>(Landroid/graphics/PorterDuff$Mode;)V
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
+
+    sget-object v1, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    const/high16 v1, 0x40000000    # 2.0f
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lf9a;->b:Lh9a;
+
+    iget-object v0, v0, Lh9a;->a:Landroid/content/Context;
+
+    sget v1, Lxhe;->V1:I
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    new-instance v2, Landroid/graphics/PorterDuffColorFilter;
+
+    sget-object v3, Lzc3;->A0:Lz66;
+
+    invoke-virtual {v3, v0}, Lz66;->i(Landroid/content/Context;)Lgqb;
+
+    const/4 v0, -0x1
+
+    sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-direct {v2, v0, v3}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
+
+    invoke-virtual {v1, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

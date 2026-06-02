@@ -1,24 +1,24 @@
-.class public Lcp6;
+.class public final synthetic Lcp6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lz4g;
+.implements Lwz3;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final b:Ljava/io/Closeable;
+.field public final synthetic b:Landroidx/fragment/app/c;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/io/Closeable;I)V
+.method public synthetic constructor <init>(Landroidx/fragment/app/c;I)V
     .locals 0
 
     iput p2, p0, Lcp6;->a:I
 
-    iput-object p1, p0, Lcp6;->b:Ljava/io/Closeable;
+    iput-object p1, p0, Lcp6;->b:Landroidx/fragment/app/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,206 +27,102 @@
 
 
 # virtual methods
-.method public final a(ID)V
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 2
 
     iget v0, p0, Lcp6;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lcp6;->b:Ljava/io/Closeable;
+    check-cast p1, Lvcc;
 
-    check-cast v0, Lz2e;
+    iget-object v0, p0, Lcp6;->b:Landroidx/fragment/app/c;
 
-    invoke-virtual {v0, p1, p2, p3}, Lz2e;->a(ID)V
+    invoke-virtual {v0}, Landroidx/fragment/app/c;->L()Z
 
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Landroidx/fragment/app/c;->s(Z)V
+
+    :cond_0
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lcp6;->b:Ljava/io/Closeable;
+    check-cast p1, Lwga;
 
-    check-cast v0, Landroid/database/sqlite/SQLiteProgram;
+    iget-object v0, p0, Lcp6;->b:Landroidx/fragment/app/c;
 
-    invoke-virtual {v0, p1, p2, p3}, Landroid/database/sqlite/SQLiteProgram;->bindDouble(ID)V
+    invoke-virtual {v0}, Landroidx/fragment/app/c;->L()Z
 
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Landroidx/fragment/app/c;->n(Z)V
+
+    :cond_1
+    return-void
+
+    :pswitch_1
+    check-cast p1, Ljava/lang/Integer;
+
+    iget-object v0, p0, Lcp6;->b:Landroidx/fragment/app/c;
+
+    invoke-virtual {v0}, Landroidx/fragment/app/c;->L()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    const/16 v1, 0x50
+
+    if-ne p1, v1, :cond_2
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Landroidx/fragment/app/c;->m(Z)V
+
+    :cond_2
+    return-void
+
+    :pswitch_2
+    check-cast p1, Landroid/content/res/Configuration;
+
+    iget-object v0, p0, Lcp6;->b:Landroidx/fragment/app/c;
+
+    invoke-virtual {v0}, Landroidx/fragment/app/c;->L()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, p1}, Landroidx/fragment/app/c;->i(ZLandroid/content/res/Configuration;)V
+
+    :cond_3
     return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
-.end method
-
-.method public final b(IJ)V
-    .locals 1
-
-    iget v0, p0, Lcp6;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lcp6;->b:Ljava/io/Closeable;
-
-    check-cast v0, Lz2e;
-
-    invoke-virtual {v0, p1, p2, p3}, Lz2e;->b(IJ)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lcp6;->b:Ljava/io/Closeable;
-
-    check-cast v0, Landroid/database/sqlite/SQLiteProgram;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c(I[B)V
-    .locals 1
-
-    iget v0, p0, Lcp6;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lcp6;->b:Ljava/io/Closeable;
-
-    check-cast v0, Lz2e;
-
-    invoke-virtual {v0, p1, p2}, Lz2e;->c(I[B)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lcp6;->b:Ljava/io/Closeable;
-
-    check-cast v0, Landroid/database/sqlite/SQLiteProgram;
-
-    invoke-virtual {v0, p1, p2}, Landroid/database/sqlite/SQLiteProgram;->bindBlob(I[B)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final close()V
-    .locals 1
-
-    iget v0, p0, Lcp6;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lcp6;->b:Ljava/io/Closeable;
-
-    check-cast v0, Lz2e;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lcp6;->b:Ljava/io/Closeable;
-
-    check-cast v0, Landroid/database/sqlite/SQLiteProgram;
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteClosable;->close()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final e(I)V
-    .locals 1
-
-    iget v0, p0, Lcp6;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lcp6;->b:Ljava/io/Closeable;
-
-    check-cast v0, Lz2e;
-
-    invoke-virtual {v0, p1}, Lz2e;->e(I)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lcp6;->b:Ljava/io/Closeable;
-
-    check-cast v0, Landroid/database/sqlite/SQLiteProgram;
-
-    invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteProgram;->bindNull(I)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final i(ILjava/lang/String;)V
-    .locals 1
-
-    iget v0, p0, Lcp6;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lcp6;->b:Ljava/io/Closeable;
-
-    check-cast v0, Lz2e;
-
-    invoke-virtual {v0, p1, p2}, Lz2e;->i(ILjava/lang/String;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lcp6;->b:Ljava/io/Closeable;
-
-    check-cast v0, Landroid/database/sqlite/SQLiteProgram;
-
-    invoke-virtual {v0, p1, p2}, Landroid/database/sqlite/SQLiteProgram;->bindString(ILjava/lang/String;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public s()V
-    .locals 1
-
-    iget-object v0, p0, Lcp6;->b:Ljava/io/Closeable;
-
-    check-cast v0, Landroid/database/sqlite/SQLiteProgram;
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteProgram;->clearBindings()V
-
-    return-void
 .end method

@@ -1,41 +1,48 @@
-.class public abstract Ljq3;
+.class public final synthetic Ljq3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lk9d;
+
+
+# instance fields
+.field public final synthetic a:I
+
 
 # direct methods
-.method public static a(Landroid/widget/CompoundButton;)Landroid/content/res/ColorStateList;
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getButtonTintList()Landroid/content/res/ColorStateList;
+    iput p1, p0, Ljq3;->a:I
 
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static b(Landroid/widget/CompoundButton;)Landroid/graphics/PorterDuff$Mode;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getButtonTintMode()Landroid/graphics/PorterDuff$Mode;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c(Landroid/widget/CompoundButton;Landroid/content/res/ColorStateList;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setButtonTintList(Landroid/content/res/ColorStateList;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static d(Landroid/widget/CompoundButton;Landroid/graphics/PorterDuff$Mode;)V
-    .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setButtonTintMode(Landroid/graphics/PorterDuff$Mode;)V
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 1
 
-    return-void
+    iget v0, p0, Ljq3;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Lcom/google/firebase/messaging/FirebaseMessaging;->k:Ldtb;
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :pswitch_0
+    sget-object v0, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

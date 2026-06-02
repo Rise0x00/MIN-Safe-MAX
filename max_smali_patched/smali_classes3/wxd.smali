@@ -1,61 +1,231 @@
 .class public final Lwxd;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ljava/lang/String;
+.field public final a:Lmxd;
 
-.field public Y:Lym5;
-
-.field public Z:Lxue;
-
-.field public d:Lt2b;
-
-.field public o:Lj2;
-
-.field public t0:Licg;
-
-.field public u0:J
-
-.field public v0:I
-
-.field public w0:I
-
-.field public synthetic x0:Ljava/lang/Object;
-
-.field public y0:I
+.field public final b:Lmf3;
 
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+# direct methods
+.method public constructor <init>(Lmxd;Lmf3;)V
+    .locals 0
 
-    iput-object p1, p0, Lwxd;->x0:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget p1, p0, Lwxd;->y0:I
+    iput-object p1, p0, Lwxd;->a:Lmxd;
 
-    const/high16 v0, -0x80000000
+    iput-object p2, p0, Lwxd;->b:Lmf3;
 
-    or-int/2addr p1, v0
+    return-void
+.end method
 
-    iput p1, p0, Lwxd;->y0:I
+.method public static b(Lmxd;Lqxd;)Lnxd;
+    .locals 6
 
-    const-wide/16 v4, 0x0
+    iget-wide v0, p1, Lqxd;->b:J
 
-    const/4 v6, 0x0
+    iget-object v2, p1, Lqxd;->a:Layd;
 
-    const/4 v0, 0x0
+    const-wide/16 v3, 0x0
 
-    const/4 v1, 0x0
+    cmp-long v3, v0, v3
 
-    const/4 v2, 0x0
+    const/4 v4, 0x0
+
+    const/4 v5, 0x1
+
+    if-lez v3, :cond_0
+
+    iget-object p0, p0, Lmxd;->a:Lide;
+
+    new-instance p1, Llxd;
 
     const/4 v3, 0x0
 
-    move-object v7, p0
+    invoke-direct {p1, v2, v0, v1, v3}, Llxd;-><init>(Layd;JI)V
 
-    invoke-static/range {v0 .. v7}, Lmmj;->b(Lt2b;Lj2;Ljava/lang/String;Lym5;JILo84;)Ljava/lang/Object;
+    invoke-static {p0, v5, v4, p1}, Lyn8;->C(Lide;ZZLzs6;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lnxd;
+
+    return-object p0
+
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v0
+
+    if-eq v0, v5, :cond_3
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_2
+
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_1
+
+    check-cast p1, Lk07;
+
+    iget-object p1, p1, Lk07;->c:Lo50;
+
+    iget-wide v0, p1, Lo50;->z0:J
+
+    iget-object p0, p0, Lmxd;->a:Lide;
+
+    new-instance p1, Llxd;
+
+    const/4 v3, 0x1
+
+    invoke-direct {p1, v2, v0, v1, v3}, Llxd;-><init>(Layd;JI)V
+
+    invoke-static {p0, v5, v4, p1}, Lyn8;->C(Lide;ZZLzs6;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lnxd;
+
+    return-object p0
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    sget-object p1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "Unexpected value: "
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_2
+    check-cast p1, Lk3g;
+
+    iget-wide v0, p1, Lk3g;->c:J
+
+    iget-object p0, p0, Lmxd;->a:Lide;
+
+    new-instance p1, Llxd;
+
+    const/4 v3, 0x2
+
+    invoke-direct {p1, v2, v0, v1, v3}, Llxd;-><init>(Layd;JI)V
+
+    invoke-static {p0, v5, v4, p1}, Lyn8;->C(Lide;ZZLzs6;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lnxd;
+
+    return-object p0
+
+    :cond_3
+    check-cast p1, Lfi5;
+
+    iget-object p1, p1, Lfi5;->c:Ljava/lang/String;
+
+    iget-object p0, p0, Lmxd;->a:Lide;
+
+    new-instance v0, Ldlb;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v2, v1, p1}, Ldlb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {p0, v5, v4, v0}, Lyn8;->C(Lide;ZZLzs6;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lnxd;
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/util/List;)Lg0b;
+    .locals 5
+
+    iget-object v0, p0, Lwxd;->a:Lmxd;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "SELECT * FROM recent WHERE recent_type IN ("
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, ") ORDER BY `recent_time` DESC"
+
+    invoke-static {v2, v1, p1}, Lwph;->e(Ljava/lang/String;Ljava/lang/StringBuilder;Ljava/util/List;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v0, v0, Lmxd;->a:Lide;
+
+    const-string v2, "recent"
+
+    filled-new-array {v2}, [Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v3, Lhg1;
+
+    const/4 v4, 0x4
+
+    invoke-direct {v3, v4, v1, p1}, Lhg1;-><init>(ILjava/lang/String;Ljava/util/List;)V
+
+    invoke-static {v0, v2, v3}, Lhp7;->r(Lide;[Ljava/lang/String;Lzs6;)Lsd6;
+
+    move-result-object v1
+
+    new-instance v2, Ltx;
+
+    const/16 v3, 0xf
+
+    invoke-direct {v2, v1, v3}, Ltx;-><init>(Lxa6;I)V
+
+    invoke-virtual {v0}, Lide;->k()Lfc4;
+
+    move-result-object v0
+
+    new-instance v1, Lt11;
+
+    invoke-direct {v1, v0, v2}, Lt11;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    new-instance v0, Lo0b;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, v1}, Lo0b;-><init>(ILjava/lang/Object;)V
+
+    new-instance v1, Lgl2;
+
+    const/16 v2, 0xa
+
+    invoke-direct {v1, v2, p1}, Lgl2;-><init>(ILjava/util/List;)V
+
+    const p1, 0x7fffffff
+
+    invoke-virtual {v0, v1, p1}, Lg0b;->d(Lot6;I)Lg0b;
 
     move-result-object p1
 

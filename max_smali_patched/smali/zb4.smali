@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract getCoroutineContext()Lqb4;
+.method public abstract a()Ljava/lang/Throwable;
 .end method

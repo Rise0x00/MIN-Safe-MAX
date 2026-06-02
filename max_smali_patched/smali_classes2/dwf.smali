@@ -1,23 +1,98 @@
 .class public final Ldwf;
-.super Ld3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Ldwf;
+# instance fields
+.field public final a:Lia8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lia8;)V
+    .locals 0
 
-    new-instance v0, Ldwf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0xc
+    iput-object p1, p0, Ldwf;->a:Lia8;
 
-    invoke-direct {v0, v1}, Ld3;-><init>(I)V
+    return-void
+.end method
 
-    sput-object v0, Ldwf;->c:Ldwf;
+
+# virtual methods
+.method public final a(IF)V
+    .locals 3
+
+    new-instance v0, Lwv8;
+
+    invoke-direct {v0}, Lwv8;-><init>()V
+
+    const-string v1, "speed"
+
+    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p2
+
+    invoke-virtual {v0, v1, p2}, Lwv8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 p2, 0x1
+
+    if-eq p1, p2, :cond_1
+
+    const/4 p2, 0x2
+
+    if-ne p1, p2, :cond_0
+
+    const-string p1, "SWIPE"
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    throw p1
+
+    :cond_1
+    const-string p1, "MENU"
+
+    :goto_0
+    const-string p2, "sourceType"
+
+    invoke-virtual {v0, p2, p1}, Lwv8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v0}, Lwv8;->b()Lwv8;
+
+    move-result-object p1
+
+    iget-object p2, p0, Ldwf;->a:Lia8;
+
+    invoke-interface {p2}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lzo8;
+
+    new-instance v0, Lgzb;
+
+    const-string v1, "source_meta"
+
+    invoke-direct {v0, v1, p1}, Lgzb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v0}, [Lgzb;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ly6j;->d([Lgzb;)Lwu;
+
+    move-result-object p1
+
+    const/16 v0, 0x8
+
+    const-string v1, "CLICK"
+
+    const-string v2, "video_speed_change"
+
+    invoke-static {p2, v1, v2, p1, v0}, Lzo8;->h(Lzo8;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;I)V
 
     return-void
 .end method

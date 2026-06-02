@@ -2,117 +2,50 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lam;
-
 
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public final a:Lmm0;
 
-.field public final b:Lqm;
+.field public final b:Ldng;
 
-.field public final c:Ljm;
-
-.field public final d:Lq18;
+.field public final c:Lan0;
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;Lqm;Ljm;Lq18;)V
+.method public constructor <init>(Lmm0;Ldng;Lan0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ltm0;->a:Landroid/net/Uri;
+    iput-object p1, p0, Ltm0;->a:Lmm0;
 
-    iput-object p2, p0, Ltm0;->b:Lqm;
+    iput-object p2, p0, Ltm0;->b:Ldng;
 
-    iput-object p3, p0, Ltm0;->c:Ljm;
-
-    iput-object p4, p0, Ltm0;->d:Lq18;
+    iput-object p3, p0, Ltm0;->c:Lan0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getOkParser()Lq18;
-    .locals 1
+.method public final a(Lia8;ZLxs6;)Lsm0;
+    .locals 7
 
-    iget-object v0, p0, Ltm0;->d:Lq18;
+    new-instance v0, Lsm0;
 
-    return-object v0
-.end method
+    iget-object v5, p0, Ltm0;->b:Ldng;
 
-.method public final getPriority()I
-    .locals 1
+    iget-object v6, p0, Ltm0;->c:Lan0;
 
-    const/16 v0, 0x10
+    iget-object v4, p0, Ltm0;->a:Lmm0;
 
-    return v0
-.end method
+    move-object v1, p1
 
-.method public final getScope()Lqm;
-    .locals 1
+    move v2, p2
 
-    iget-object v0, p0, Ltm0;->b:Lqm;
+    move-object v3, p3
+
+    invoke-direct/range {v0 .. v6}, Lsm0;-><init>(Lia8;ZLxs6;Lmm0;Ldng;Lan0;)V
 
     return-object v0
-.end method
-
-.method public final getUri()Landroid/net/Uri;
-    .locals 1
-
-    iget-object v0, p0, Ltm0;->a:Landroid/net/Uri;
-
-    return-object v0
-.end method
-
-.method public final shouldPost()Z
-    .locals 1
-
-    iget-object v0, p0, Ltm0;->c:Ljm;
-
-    iget-boolean v0, v0, Ljm;->c:Z
-
-    return v0
-.end method
-
-.method public final willWriteParams()Z
-    .locals 1
-
-    iget-object v0, p0, Ltm0;->c:Ljm;
-
-    iget-boolean v0, v0, Ljm;->d:Z
-
-    return v0
-.end method
-
-.method public final willWriteSupplyParams()Z
-    .locals 1
-
-    iget-object v0, p0, Ltm0;->c:Ljm;
-
-    iget-boolean v0, v0, Ljm;->e:Z
-
-    return v0
-.end method
-
-.method public final writeParams(Li28;)V
-    .locals 1
-
-    iget-object v0, p0, Ltm0;->c:Ljm;
-
-    invoke-virtual {v0, p1}, Ljm;->c(Li28;)V
-
-    return-void
-.end method
-
-.method public final writeSupplyParams(Li28;)V
-    .locals 1
-
-    iget-object v0, p0, Ltm0;->c:Ljm;
-
-    invoke-virtual {v0, p1}, Ljm;->d(Li28;)V
-
-    return-void
 .end method

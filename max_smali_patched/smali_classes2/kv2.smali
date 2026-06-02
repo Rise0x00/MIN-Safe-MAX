@@ -1,102 +1,105 @@
-.class public final enum Lkv2;
-.super Ljava/lang/Enum;
+.class public final Lkv2;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Luxb;
-
-
-# static fields
-.field public static final enum b:Lkv2;
-
-.field public static final enum c:Lkv2;
-
-.field public static final synthetic d:[Lkv2;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Landroid/content/Context;
+
+.field public final b:Lia8;
+
+.field public final c:Lia8;
+
+.field public final d:Lia8;
+
+.field public final e:Lia8;
+
+.field public final f:Lia8;
+
+.field public final g:Lia8;
+
+.field public final h:Lia8;
+
+.field public final i:Lia8;
+
+.field public final j:Lia8;
+
+.field public final k:Ln6a;
+
+.field public final l:Ldng;
+
+.field public final m:Lw5b;
+
+.field public final n:Lia8;
+
+.field public final o:Lia8;
+
+.field public final p:Lia8;
+
+.field public final q:Lia8;
+
+.field public final r:Lia8;
+
+.field public final s:Lia8;
+
+.field public final t:Lia8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Lkv2;
-
-    const-string v1, "LEAVE_APP"
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    invoke-direct {v0, v1, v2, v3}, Lkv2;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lkv2;->b:Lkv2;
-
-    new-instance v1, Lkv2;
-
-    const-string v2, "LEAVE_SCREEN"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v1, v2, v3, v4}, Lkv2;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lkv2;->c:Lkv2;
-
-    filled-new-array {v0, v1}, [Lkv2;
-
-    move-result-object v0
-
-    sput-object v0, Lkv2;->d:[Lkv2;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Landroid/content/Context;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Ln6a;Ldng;Lw5b;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p3, p0, Lkv2;->a:I
+    iput-object p1, p0, Lkv2;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Lkv2;->b:Lia8;
+
+    iput-object p3, p0, Lkv2;->c:Lia8;
+
+    iput-object p4, p0, Lkv2;->d:Lia8;
+
+    iput-object p5, p0, Lkv2;->e:Lia8;
+
+    iput-object p6, p0, Lkv2;->f:Lia8;
+
+    iput-object p7, p0, Lkv2;->g:Lia8;
+
+    iput-object p8, p0, Lkv2;->h:Lia8;
+
+    iput-object p9, p0, Lkv2;->i:Lia8;
+
+    iput-object p10, p0, Lkv2;->j:Lia8;
+
+    iput-object p11, p0, Lkv2;->k:Ln6a;
+
+    iput-object p12, p0, Lkv2;->l:Ldng;
+
+    iput-object p13, p0, Lkv2;->m:Lw5b;
+
+    iput-object p14, p0, Lkv2;->n:Lia8;
+
+    iput-object p15, p0, Lkv2;->o:Lia8;
+
+    move-object/from16 p1, p16
+
+    iput-object p1, p0, Lkv2;->p:Lia8;
+
+    move-object/from16 p1, p17
+
+    iput-object p1, p0, Lkv2;->q:Lia8;
+
+    move-object/from16 p1, p18
+
+    iput-object p1, p0, Lkv2;->r:Lia8;
+
+    move-object/from16 p1, p19
+
+    iput-object p1, p0, Lkv2;->s:Lia8;
+
+    move-object/from16 p1, p20
+
+    iput-object p1, p0, Lkv2;->t:Lia8;
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lkv2;
-    .locals 1
-
-    const-class v0, Lkv2;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lkv2;
-
-    return-object p0
-.end method
-
-.method public static values()[Lkv2;
-    .locals 1
-
-    sget-object v0, Lkv2;->d:[Lkv2;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lkv2;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final a()I
-    .locals 1
-
-    iget v0, p0, Lkv2;->a:I
-
-    return v0
 .end method

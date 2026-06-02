@@ -1,65 +1,61 @@
 .class public final Lm55;
-.super Lo84;
+.super Lbuc;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:J
+.field public a:[D
 
-.field public Y:J
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public d:Lb20;
-
-.field public o:I
-
-.field public final synthetic t0:Lo55;
-
-.field public u0:I
-
-
-# direct methods
-.method public constructor <init>(Lo55;Lo84;)V
-    .locals 0
-
-    iput-object p1, p0, Lm55;->t0:Lo55;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public b:I
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final a()Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Lm55;->Z:Ljava/lang/Object;
+    iget-object v0, p0, Lm55;->a:[D
 
-    iget p1, p0, Lm55;->u0:I
+    iget v1, p0, Lm55;->b:I
 
-    const/high16 v0, -0x80000000
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([DI)[D
 
-    or-int/2addr p1, v0
+    move-result-object v0
 
-    iput p1, p0, Lm55;->u0:I
+    return-object v0
+.end method
 
-    const-wide/16 v3, 0x0
+.method public final b(I)V
+    .locals 2
 
-    const-wide/16 v5, 0x0
+    iget-object v0, p0, Lm55;->a:[D
 
-    iget-object v0, p0, Lm55;->t0:Lo55;
+    array-length v1, v0
 
-    const/4 v1, 0x0
+    if-ge v1, p1, :cond_1
 
-    const/4 v2, 0x0
+    array-length v1, v0
 
-    move-object v7, p0
+    mul-int/lit8 v1, v1, 0x2
 
-    invoke-virtual/range {v0 .. v7}, Lo55;->n(Lb20;IJJLo84;)Ljava/lang/Object;
+    if-ge p1, v1, :cond_0
+
+    move p1, v1
+
+    :cond_0
+    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([DI)[D
 
     move-result-object p1
 
-    return-object p1
+    iput-object p1, p0, Lm55;->a:[D
+
+    :cond_1
+    return-void
+.end method
+
+.method public final d()I
+    .locals 1
+
+    iget v0, p0, Lm55;->b:I
+
+    return v0
 .end method

@@ -1,47 +1,84 @@
-.class public final Lw9c;
-.super Lo84;
+.class public final synthetic Lw9c;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lxs6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Lru/ok/messages/services/PipWorker;
+.field public final synthetic b:Lone/me/location/map/pick/PickLocationScreen;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/messages/services/PipWorker;Lo84;)V
+.method public synthetic constructor <init>(Lone/me/location/map/pick/PickLocationScreen;I)V
     .locals 0
 
-    iput-object p1, p0, Lw9c;->o:Lru/ok/messages/services/PipWorker;
+    iput p2, p0, Lw9c;->a:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lw9c;->b:Lone/me/location/map/pick/PickLocationScreen;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 7
 
-    iput-object p1, p0, Lw9c;->d:Ljava/lang/Object;
+    iget v0, p0, Lw9c;->a:I
 
-    iget p1, p0, Lw9c;->X:I
+    iget-object v1, p0, Lw9c;->b:Lone/me/location/map/pick/PickLocationScreen;
 
-    const/high16 v0, -0x80000000
+    packed-switch v0, :pswitch_data_0
 
-    or-int/2addr p1, v0
+    iget-object v0, v1, Lone/me/location/map/pick/PickLocationScreen;->c:Lg;
 
-    iput p1, p0, Lw9c;->X:I
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lz5;
 
-    iget-object p1, p0, Lw9c;->o:Lru/ok/messages/services/PipWorker;
+    move-result-object v0
 
-    invoke-virtual {p1, p0}, Lru/ok/messages/services/PipWorker;->g(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const/16 v1, 0x242
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Lz5;->c(I)Ljava/lang/Object;
 
-    return-object p1
+    move-result-object v0
+
+    check-cast v0, Lgac;
+
+    new-instance v1, Lfac;
+
+    iget-object v2, v0, Lgac;->a:Lia8;
+
+    iget-object v3, v0, Lgac;->b:Lia8;
+
+    iget-object v4, v0, Lgac;->c:Lia8;
+
+    iget-object v5, v0, Lgac;->d:Lia8;
+
+    iget-object v6, v0, Lgac;->e:Lia8;
+
+    invoke-direct/range {v1 .. v6}, Lfac;-><init>(Lia8;Lia8;Lia8;Lia8;Lia8;)V
+
+    return-object v1
+
+    :pswitch_0
+    sget-object v0, Lone/me/location/map/pick/PickLocationScreen;->E0:[Lb88;
+
+    new-instance v0, Lvsi;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Lvsi;-><init>(Lone/me/sdk/arch/Widget;I)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,48 +1,106 @@
 .class public final Lmq7;
-.super Lo84;
+.super Landroid/animation/AnimatorListenerAdapter;
+.source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lnq7;
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final synthetic b:Landroid/widget/TextView;
 
-.field public o:I
+.field public final synthetic c:I
+
+.field public final synthetic d:Landroid/widget/TextView;
+
+.field public final synthetic e:Loq7;
 
 
 # direct methods
-.method public constructor <init>(Lnq7;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Loq7;ILandroid/widget/TextView;ILandroid/widget/TextView;)V
     .locals 0
 
-    iput-object p1, p0, Lmq7;->X:Lnq7;
+    iput-object p1, p0, Lmq7;->e:Loq7;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lmq7;->a:I
+
+    iput-object p3, p0, Lmq7;->b:Landroid/widget/TextView;
+
+    iput p4, p0, Lmq7;->c:I
+
+    iput-object p5, p0, Lmq7;->d:Landroid/widget/TextView;
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 3
 
-    iput-object p1, p0, Lmq7;->d:Ljava/lang/Object;
+    iget p1, p0, Lmq7;->a:I
 
-    iget p1, p0, Lmq7;->o:I
+    iget-object v0, p0, Lmq7;->e:Loq7;
 
-    const/high16 v0, -0x80000000
+    iput p1, v0, Loq7;->n:I
 
-    or-int/2addr p1, v0
+    const/4 p1, 0x0
 
-    iput p1, p0, Lmq7;->o:I
+    iput-object p1, v0, Loq7;->l:Landroid/animation/AnimatorSet;
 
-    iget-object p1, p0, Lmq7;->X:Lnq7;
+    iget-object v1, p0, Lmq7;->b:Landroid/widget/TextView;
+
+    if-eqz v1, :cond_0
+
+    const/4 v2, 0x4
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    iget v1, p0, Lmq7;->c:I
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_0
+
+    iget-object v0, v0, Loq7;->r:Landroidx/appcompat/widget/AppCompatTextView;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_0
+    iget-object p1, p0, Lmq7;->d:Landroid/widget/TextView;
+
+    if-eqz p1, :cond_1
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lnq7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
 
-    move-result-object p1
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    return-object p1
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 1
+
+    iget-object p1, p0, Lmq7;->d:Landroid/widget/TextView;
+
+    if-eqz p1, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+
+    :cond_0
+    return-void
 .end method

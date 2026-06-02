@@ -2,166 +2,163 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljhh;
-.implements Lr42;
-.implements Lqcc;
-
 
 # instance fields
-.field public a:Ljhh;
+.field public final a:Lakg;
 
-.field public b:Lr42;
+.field public final b:Lb1g;
 
-.field public c:Ljhh;
-
-.field public d:Lr42;
+.field public final c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 
-# virtual methods
-.method public final a(ILjava/lang/Object;)V
-    .locals 1
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Ltee;Lhc4;)V
+    .locals 5
 
-    const/4 v0, 0x7
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eq p1, v0, :cond_3
+    new-instance v0, Ldra;
 
-    const/16 v0, 0x8
+    const/4 v1, 0x4
 
-    if-eq p1, v0, :cond_2
+    invoke-direct {v0, p1, v1}, Ldra;-><init>(Landroid/content/Context;I)V
 
-    const/16 v0, 0x2710
+    new-instance p1, Lakg;
 
-    if-eq p1, v0, :cond_0
+    invoke-direct {p1, v0}, Lakg;-><init>(Lxs6;)V
 
-    return-void
-
-    :cond_0
-    check-cast p2, Lhkf;
-
-    if-nez p2, :cond_1
+    iput-object p1, p0, Lyp5;->a:Lakg;
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lyp5;->c:Ljhh;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput-object p1, p0, Lyp5;->d:Lr42;
+    move-result-object v0
 
-    return-void
+    invoke-static {v0}, Lc1g;->a(Ljava/lang/Object;)Lb1g;
 
-    :cond_1
-    invoke-virtual {p2}, Lhkf;->getVideoFrameMetadataListener()Ljhh;
+    move-result-object v0
+
+    iput-object v0, p0, Lyp5;->b:Lb1g;
+
+    new-instance v1, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-direct {v1, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object v1, p0, Lyp5;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    new-instance p1, Lb7;
+
+    const/16 v1, 0x8
+
+    const/4 v2, 0x0
+
+    invoke-direct {p1, p0, v2, v1}, Lb7;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+
+    new-instance v1, Lhc6;
+
+    invoke-direct {v1, v0, p1}, Lhc6;-><init>(Lxa6;Lnt6;)V
+
+    new-instance p1, Lvya;
+
+    const/16 v0, 0x14
+
+    invoke-direct {p1, p0, v2, v0}, Lvya;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+
+    new-instance v0, Lhc6;
+
+    invoke-direct {v0, p1, v1}, Lhc6;-><init>(Lnt6;Lxa6;)V
+
+    invoke-static {v0}, Lhk0;->C(Lxa6;)Lxa6;
 
     move-result-object p1
 
-    iput-object p1, p0, Lyp5;->c:Ljhh;
+    sget-object v0, Lad5;->b:Lwra;
 
-    invoke-virtual {p2}, Lhkf;->getCameraMotionListener()Lr42;
+    sget-object v0, Lhd5;->o:Lhd5;
+
+    const/4 v1, 0x1
+
+    invoke-static {v1, v0}, Ls5b;->N(ILhd5;)J
+
+    move-result-wide v3
+
+    invoke-static {p1, v3, v4}, Lhk0;->A(Lxa6;J)Lxa6;
 
     move-result-object p1
 
-    iput-object p1, p0, Lyp5;->d:Lr42;
+    new-instance v0, Ltx;
 
-    return-void
+    const/16 v3, 0xc
 
-    :cond_2
-    check-cast p2, Lr42;
+    invoke-direct {v0, p1, v3}, Ltx;-><init>(Lxa6;I)V
 
-    iput-object p2, p0, Lyp5;->b:Lr42;
+    new-instance p1, Ln06;
 
-    return-void
+    const/16 v3, 0x11
 
-    :cond_3
-    check-cast p2, Ljhh;
+    invoke-direct {p1, p0, v2, v3}, Ln06;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
 
-    iput-object p2, p0, Lyp5;->a:Ljhh;
+    new-instance v2, Lad6;
+
+    invoke-direct {v2, v0, p1, v1}, Lad6;-><init>(Lxa6;Lnt6;I)V
+
+    invoke-static {v2, p3}, Lhk0;->O(Lxa6;Lfc4;)Lxa6;
+
+    move-result-object p1
+
+    invoke-static {p1, p2}, Lhk0;->Z(Lxa6;Loc4;)Lhyf;
 
     return-void
 .end method
 
-.method public final b(J[F)V
+
+# virtual methods
+.method public final a()Landroid/content/SharedPreferences;
     .locals 1
 
-    iget-object v0, p0, Lyp5;->d:Lr42;
+    iget-object v0, p0, Lyp5;->a:Lakg;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Lakg;->getValue()Ljava/lang/Object;
 
-    invoke-interface {v0, p1, p2, p3}, Lr42;->b(J[F)V
+    move-result-object v0
 
-    :cond_0
-    iget-object v0, p0, Lyp5;->b:Lr42;
+    check-cast v0, Landroid/content/SharedPreferences;
 
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0, p1, p2, p3}, Lr42;->b(J[F)V
-
-    :cond_1
-    return-void
+    return-object v0
 .end method
 
-.method public final c()V
-    .locals 1
+.method public final b()V
+    .locals 2
 
-    iget-object v0, p0, Lyp5;->d:Lr42;
+    const-class v0, Lyp5;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    invoke-interface {v0}, Lr42;->c()V
+    move-result-object v0
 
-    :cond_0
-    iget-object v0, p0, Lyp5;->b:Lr42;
+    const-string v1, "safeClear"
 
-    if-eqz v0, :cond_1
+    invoke-static {v0, v1}, Lnm4;->p0(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-interface {v0}, Lr42;->c()V
+    :try_start_0
+    invoke-virtual {p0}, Lyp5;->a()Landroid/content/SharedPreferences;
 
-    :cond_1
-    return-void
-.end method
-
-.method public final d(JJLoj6;Landroid/media/MediaFormat;)V
-    .locals 8
-
-    iget-object v0, p0, Lyp5;->c:Ljhh;
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
-    move-wide v1, p1
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-wide v3, p3
+    move-result-object v0
 
-    move-object v5, p5
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
 
-    move-object v6, p6
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-interface/range {v0 .. v6}, Ljhh;->d(JJLoj6;Landroid/media/MediaFormat;)V
-
-    move-object v7, v6
-
-    move-object v6, v5
-
-    move-wide v4, v3
-
-    move-wide v2, v1
-
-    goto :goto_0
-
+    :catchall_0
     :cond_0
-    move-wide v2, p1
-
-    move-wide v4, p3
-
-    move-object v6, p5
-
-    move-object v7, p6
-
-    :goto_0
-    iget-object v1, p0, Lyp5;->a:Ljhh;
-
-    if-eqz v1, :cond_1
-
-    invoke-interface/range {v1 .. v7}, Ljhh;->d(JJLoj6;Landroid/media/MediaFormat;)V
-
-    :cond_1
     return-void
 .end method

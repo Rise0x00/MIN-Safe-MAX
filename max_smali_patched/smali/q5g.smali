@@ -4,163 +4,98 @@
 
 
 # instance fields
-.field public final a:Landroid/view/Surface;
+.field public final a:Lia8;
 
-.field public final b:I
+.field public final b:Lia8;
 
-.field public final c:I
+.field public final c:Lkotlinx/coroutines/internal/ContextScope;
 
-.field public final d:I
+.field public final d:Lb1g;
 
-.field public final e:Z
+.field public final e:Lbwd;
+
+.field public final f:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public g:Lhyf;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/Surface;IIIZ)V
+.method public constructor <init>(Lia8;Lia8;Lj4g;Ldng;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p4, :cond_1
+    iput-object p1, p0, Lq5g;->a:Lia8;
 
-    const/16 v0, 0x5a
+    iput-object p2, p0, Lq5g;->b:Lia8;
 
-    if-eq p4, v0, :cond_1
+    check-cast p4, Lsbb;
 
-    const/16 v0, 0xb4
+    invoke-virtual {p4}, Lsbb;->b()Lhc4;
 
-    if-eq p4, v0, :cond_1
+    move-result-object p1
 
-    const/16 v0, 0x10e
+    invoke-static {p1}, Lsr6;->a(Lfc4;)Lkotlinx/coroutines/internal/ContextScope;
 
-    if-ne p4, v0, :cond_0
+    move-result-object p1
 
-    goto :goto_0
+    iput-object p1, p0, Lq5g;->c:Lkotlinx/coroutines/internal/ContextScope;
 
-    :cond_0
-    const/4 v0, 0x0
+    sget-object p2, Lpj5;->a:Lpj5;
 
-    goto :goto_1
+    invoke-static {p2}, Lc1g;->a(Ljava/lang/Object;)Lb1g;
 
-    :cond_1
-    :goto_0
+    move-result-object p2
+
+    iput-object p2, p0, Lq5g;->d:Lb1g;
+
+    new-instance p4, Lbwd;
+
+    invoke-direct {p4, p2}, Lbwd;-><init>(Lvia;)V
+
+    iput-object p4, p0, Lq5g;->e:Lbwd;
+
+    new-instance p2, Ljava/util/concurrent/atomic/AtomicReference;
+
+    const-wide/16 v0, 0x0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p4
+
+    invoke-direct {p2, p4}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object p2, p0, Lq5g;->f:Ljava/util/concurrent/atomic/AtomicReference;
+
+    check-cast p3, Loig;
+
+    iget-object p2, p3, Loig;->l:Lft0;
+
+    invoke-static {p2}, Lhp7;->e(Lg0b;)Ln12;
+
+    move-result-object p2
+
+    new-instance p3, Lxrc;
+
+    const/4 p4, 0x6
+
+    invoke-direct {p3, p2, p0, p4}, Lxrc;-><init>(Lxa6;Ljava/lang/Object;I)V
+
+    new-instance p2, Lbq8;
+
+    const/4 p4, 0x0
+
+    const/16 v0, 0x16
+
+    invoke-direct {p2, p0, p4, v0}, Lbq8;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+
+    new-instance p4, Lad6;
+
     const/4 v0, 0x1
 
-    :goto_1
-    const-string v1, "orientationDegrees must be 0, 90, 180, or 270"
+    invoke-direct {p4, p3, p2, v0}, Lad6;-><init>(Lxa6;Lnt6;I)V
 
-    invoke-static {v1, v0}, Lh6j;->a(Ljava/lang/Object;Z)V
-
-    iput-object p1, p0, Lq5g;->a:Landroid/view/Surface;
-
-    iput p2, p0, Lq5g;->b:I
-
-    iput p3, p0, Lq5g;->c:I
-
-    iput p4, p0, Lq5g;->d:I
-
-    iput-boolean p5, p0, Lq5g;->e:Z
+    invoke-static {p4, p1}, Lhk0;->Z(Lxa6;Loc4;)Lhyf;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Lq5g;
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, Lq5g;
-
-    iget v0, p0, Lq5g;->b:I
-
-    iget v1, p1, Lq5g;->b:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Lq5g;->c:I
-
-    iget v1, p1, Lq5g;->c:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Lq5g;->d:I
-
-    iget v1, p1, Lq5g;->d:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-boolean v0, p0, Lq5g;->e:Z
-
-    iget-boolean v1, p1, Lq5g;->e:Z
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lq5g;->a:Landroid/view/Surface;
-
-    iget-object p1, p1, Lq5g;->a:Landroid/view/Surface;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lq5g;->a:Landroid/view/Surface;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lq5g;->b:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lq5g;->c:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lq5g;->d:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lq5g;->e:Z
-
-    add-int/2addr v0, v1
-
-    return v0
 .end method

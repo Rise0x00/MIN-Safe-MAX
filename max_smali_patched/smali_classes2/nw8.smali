@@ -1,64 +1,115 @@
-.class public final Lnw8;
-.super Ljava/lang/Object;
+.class public Lnw8;
+.super Lkl9;
 .source "SourceFile"
 
-# interfaces
-.implements Lxw8;
 
+# instance fields
+.field public final m:Ljava/lang/Object;
 
-# static fields
-.field public static final a:Lnw8;
+.field public final n:Lxt6;
+
+.field public o:Lvj8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Object;Lxt6;)V
+    .locals 0
 
-    new-instance v0, Lnw8;
+    invoke-direct {p0}, Lkl9;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lnw8;->m:Ljava/lang/Object;
 
-    sput-object v0, Lnw8;->a:Lnw8;
+    iput-object p2, p0, Lnw8;->n:Lxt6;
+
+    return-void
+.end method
+
+.method public static m(Lnw8;Lvj8;)V
+    .locals 3
+
+    new-instance v0, Lsg6;
+
+    const/16 v1, 0x16
+
+    invoke-direct {v0, v1, p0}, Lsg6;-><init>(ILjava/lang/Object;)V
+
+    new-instance v1, Lud6;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v1, v2, v0}, Lud6;-><init>(ILjava/lang/Object;)V
+
+    invoke-super {p0, p1, v1}, Lkl9;->l(Lvj8;Lc3b;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final d()Ljava/lang/Object;
+    .locals 2
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lnw8;->o:Lvj8;
 
-    if-ne p0, p1, :cond_0
+    if-nez v0, :cond_0
 
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lnw8;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x7501247
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "CloseKeyboard"
+    iget-object v0, p0, Lnw8;->m:Ljava/lang/Object;
 
     return-object v0
+
+    :cond_0
+    iget-object v1, p0, Lnw8;->n:Lxt6;
+
+    invoke-virtual {v0}, Lvj8;->d()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-interface {v1, v0}, Lxt6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final l(Lvj8;Lc3b;)V
+    .locals 0
+
+    const/4 p0, 0x0
+
+    throw p0
+.end method
+
+.method public final n(Lyha;)V
+    .locals 2
+
+    iget-object v0, p0, Lnw8;->o:Lvj8;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lkl9;->l:Lije;
+
+    invoke-virtual {v1, v0}, Lije;->b(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljl9;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, v0, Ljl9;->a:Lvj8;
+
+    invoke-virtual {v1, v0}, Lvj8;->j(Lc3b;)V
+
+    :cond_0
+    iput-object p1, p0, Lnw8;->o:Lvj8;
+
+    new-instance v0, Lmb7;
+
+    const/16 v1, 0x10
+
+    invoke-direct {v0, p0, v1, p1}, Lmb7;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v0}, Llyj;->c(Ljava/lang/Runnable;)V
+
+    return-void
 .end method

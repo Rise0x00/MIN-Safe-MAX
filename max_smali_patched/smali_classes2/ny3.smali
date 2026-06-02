@@ -2,185 +2,75 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lh0b;
+
+
+# static fields
+.field public static final b:Lny3;
+
 
 # instance fields
-.field public final a:Lo58;
+.field public final a:Lim7;
 
 
 # direct methods
-.method public constructor <init>(Lo58;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lny3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lny3;-><init>(Ljava/lang/Object;)V
+
+    sput-object v0, Lny3;->b:Lny3;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lny3;->a:Lo58;
+    invoke-static {p1}, Lszb;->f(Ljava/lang/Object;)Lim7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lny3;->a:Lim7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 13
+.method public final c(Ljava/util/concurrent/Executor;Lf0b;)V
+    .locals 2
 
-    new-instance v0, Llr8;
+    new-instance v0, Lj52;
 
-    invoke-direct {v0}, Llr8;-><init>()V
+    const/16 v1, 0xb
 
-    const/16 v1, 0x190
+    invoke-direct {v0, p0, v1, p2}, Lj52;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object p2, p0, Lny3;->a:Lim7;
 
-    move-result-object v1
-
-    const-string v2, "screen"
-
-    invoke-virtual {v0, v2, v1}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v1, 0x1
-
-    if-eq p1, v1, :cond_1
-
-    const/4 v1, 0x2
-
-    if-ne p1, v1, :cond_0
-
-    const-string p1, "block"
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    throw p1
-
-    :cond_1
-    const-string p1, "to_contacts"
-
-    :goto_0
-    const-string v1, "clickType"
-
-    invoke-virtual {v0, v1, p1}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v0}, Llr8;->b()Llr8;
-
-    move-result-object v9
-
-    new-instance v2, Lgk8;
-
-    const-string v3, "CONTACT_OR_BLOCK"
-
-    const-string v4, "clicked"
-
-    const-wide/16 v5, 0x0
-
-    const-wide/16 v7, 0x0
-
-    const-wide/16 v10, 0x0
-
-    const/16 v12, 0x2c
-
-    invoke-direct/range {v2 .. v12}, Lgk8;-><init>(Ljava/lang/String;Ljava/lang/String;JJLjava/util/Map;JI)V
-
-    iget-object p1, p0, Lny3;->a:Lo58;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ldd;
-
-    invoke-virtual {p1, v2}, Ldd;->h(Lgk8;)V
+    invoke-virtual {p2, v0, p1}, Lim7;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
     return-void
 .end method
 
-.method public final b(I)V
-    .locals 13
+.method public final h()Lyi8;
+    .locals 1
 
-    new-instance v0, Llr8;
+    iget-object v0, p0, Lny3;->a:Lim7;
 
-    invoke-direct {v0}, Llr8;-><init>()V
+    return-object v0
+.end method
 
-    const/16 v1, 0x15e
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-string v2, "screen"
-
-    invoke-virtual {v0, v2, v1}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "UIElementType"
-
-    const-string v2, "add_or_block_infobar"
-
-    invoke-virtual {v0, v1, v2}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v1, 0x1
-
-    if-eq p1, v1, :cond_2
-
-    const/4 v1, 0x2
-
-    if-eq p1, v1, :cond_1
-
-    const/4 v1, 0x3
-
-    if-ne p1, v1, :cond_0
-
-    const-string p1, "close"
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    throw p1
-
-    :cond_1
-    const-string p1, "block"
-
-    goto :goto_0
-
-    :cond_2
-    const-string p1, "to_contacts"
-
-    :goto_0
-    const-string v1, "clickType"
-
-    invoke-virtual {v0, v1, p1}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v0}, Llr8;->b()Llr8;
-
-    move-result-object v9
-
-    new-instance v2, Lgk8;
-
-    const-string v3, "CONTACT_OR_BLOCK"
-
-    const-string v4, "clicked"
-
-    const-wide/16 v5, 0x0
-
-    const-wide/16 v7, 0x0
-
-    const-wide/16 v10, 0x0
-
-    const/16 v12, 0x2c
-
-    invoke-direct/range {v2 .. v12}, Lgk8;-><init>(Ljava/lang/String;Ljava/lang/String;JJLjava/util/Map;JI)V
-
-    iget-object p1, p0, Lny3;->a:Lo58;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ldd;
-
-    invoke-virtual {p1, v2}, Ldd;->h(Lgk8;)V
+.method public final o(Lf0b;)V
+    .locals 0
 
     return-void
 .end method

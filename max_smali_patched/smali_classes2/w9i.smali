@@ -2,136 +2,192 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lfwe;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lu9i;
 
-.field public final b:Lgp0;
+.field public final b:I
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final o:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lgp0;)V
+.method public constructor <init>(Lu9i;IJJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lw9i;->a:Ljava/lang/String;
+    iput-object p1, p0, Lw9i;->a:Lu9i;
 
-    iput-object p2, p0, Lw9i;->b:Lgp0;
+    iput p2, p0, Lw9i;->b:I
+
+    iput-wide p3, p0, Lw9i;->c:J
+
+    sub-long/2addr p5, p3
+
+    iget p1, p1, Lu9i;->c:I
+
+    int-to-long p1, p1
+
+    div-long/2addr p5, p1
+
+    iput-wide p5, p0, Lw9i;->d:J
+
+    invoke-virtual {p0, p5, p6}, Lw9i;->d(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lw9i;->o:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final c()Z
+    .locals 1
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lw9i;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lw9i;
-
-    iget-object v1, p0, Lw9i;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lw9i;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lw9i;->b:Lgp0;
-
-    iget-object p1, p1, Lw9i;->b:Lgp0;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
     return v0
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final d(J)J
+    .locals 9
 
-    iget-object v0, p0, Lw9i;->a:Ljava/lang/String;
+    iget v0, p0, Lw9i;->b:I
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    int-to-long v0, v0
 
-    move-result v0
+    mul-long v2, p1, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object p1, p0, Lw9i;->a:Lu9i;
 
-    iget-object v1, p0, Lw9i;->b:Lgp0;
+    iget p1, p1, Lu9i;->b:I
+
+    int-to-long v6, p1
+
+    sget-object p1, Lpnh;->a:Ljava/lang/String;
+
+    sget-object v8, Ljava/math/RoundingMode;->DOWN:Ljava/math/RoundingMode;
+
+    const-wide/32 v4, 0xf4240
+
+    invoke-static/range {v2 .. v8}, Lpnh;->e0(JJJLjava/math/RoundingMode;)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final e(J)Ldwe;
+    .locals 14
+
+    iget-object v0, p0, Lw9i;->a:Lu9i;
+
+    iget v1, v0, Lu9i;->b:I
+
+    int-to-long v1, v1
+
+    mul-long/2addr v1, p1
+
+    iget v3, p0, Lw9i;->b:I
+
+    int-to-long v3, v3
+
+    const-wide/32 v5, 0xf4240
+
+    mul-long/2addr v3, v5
+
+    div-long v5, v1, v3
+
+    iget-wide v1, p0, Lw9i;->d:J
+
+    const-wide/16 v3, 0x1
+
+    sub-long v9, v1, v3
+
+    const-wide/16 v7, 0x0
+
+    invoke-static/range {v5 .. v10}, Lpnh;->j(JJJ)J
+
+    move-result-wide v5
+
+    iget v7, v0, Lu9i;->c:I
+
+    int-to-long v7, v7
+
+    mul-long/2addr v7, v5
+
+    iget-wide v9, p0, Lw9i;->c:J
+
+    add-long/2addr v7, v9
+
+    invoke-virtual {p0, v5, v6}, Lw9i;->d(J)J
+
+    move-result-wide v11
+
+    new-instance v13, Ljwe;
+
+    invoke-direct {v13, v11, v12, v7, v8}, Ljwe;-><init>(JJ)V
+
+    cmp-long v7, v11, p1
+
+    if-gez v7, :cond_1
+
+    sub-long/2addr v1, v3
+
+    cmp-long v1, v5, v1
 
     if-nez v1, :cond_0
-
-    const/4 v1, 0x0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    add-long/2addr v5, v3
 
-    move-result v1
+    iget v0, v0, Lu9i;->c:I
 
-    :goto_0
-    add-int/2addr v0, v1
+    int-to-long v0, v0
 
-    return v0
-.end method
+    mul-long/2addr v0, v5
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    add-long/2addr v0, v9
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v5, v6}, Lw9i;->d(J)J
 
-    const-string v1, "AuthBiometry(title="
+    move-result-wide v2
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    new-instance v4, Ljwe;
 
-    iget-object v1, p0, Lw9i;->a:Ljava/lang/String;
+    invoke-direct {v4, v2, v3, v0, v1}, Ljwe;-><init>(JJ)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v0, Ldwe;
 
-    const-string v1, ", cryptoObject="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lw9i;->b:Lgp0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, v13, v4}, Ldwe;-><init>(Ljwe;Ljwe;)V
 
     return-object v0
+
+    :cond_1
+    :goto_0
+    new-instance v0, Ldwe;
+
+    invoke-direct {v0, v13, v13}, Ldwe;-><init>(Ljwe;Ljwe;)V
+
+    return-object v0
+.end method
+
+.method public final f()J
+    .locals 2
+
+    iget-wide v0, p0, Lw9i;->o:J
+
+    return-wide v0
 .end method

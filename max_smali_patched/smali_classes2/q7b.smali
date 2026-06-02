@@ -1,114 +1,120 @@
-.class public final Lq7b;
+.class public final synthetic Lq7b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ld77;
+.implements Lpt6;
 
 
 # instance fields
-.field public final b:J
-
-.field public final c:Lo58;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lo58;J)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
+    iput p1, p0, Lq7b;->a:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p2, p0, Lq7b;->b:J
-
-    iput-object p1, p0, Lq7b;->c:Lo58;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g()J
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lp7b;
+    iget v0, p0, Lq7b;->a:I
 
-    const/4 v1, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, p0, v1}, Lp7b;-><init>(Lq7b;Lkotlin/coroutines/Continuation;)V
+    check-cast p1, Lx50;
 
-    sget-object v1, Lxg5;->a:Lxg5;
+    check-cast p2, Ljava/lang/String;
 
-    invoke-static {v1, v0}, Ls9j;->h(Lqb4;Lbr6;)Ljava/lang/Object;
+    check-cast p3, Lc50;
 
-    move-result-object v0
+    iget-object v0, p3, Lc50;->e:Lb50;
 
-    check-cast v0, Lnd2;
+    if-nez v0, :cond_0
 
-    iget-object v0, v0, Lnd2;->b:Luh2;
+    sget-object v0, Lb50;->j:Lb50;
 
-    iget-wide v0, v0, Luh2;->y:J
-
-    return-wide v0
-.end method
-
-.method public final h()J
-    .locals 2
-
-    new-instance v0, Lp7b;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lp7b;-><init>(Lq7b;Lkotlin/coroutines/Continuation;)V
-
-    sget-object v1, Lxg5;->a:Lxg5;
-
-    invoke-static {v1, v0}, Ls9j;->h(Lqb4;Lbr6;)Ljava/lang/Object;
+    :cond_0
+    invoke-virtual {v0}, Lb50;->a()La50;
 
     move-result-object v0
 
-    check-cast v0, Lnd2;
+    iput-object p2, v0, La50;->f:Ljava/lang/String;
 
-    iget-object v0, v0, Lnd2;->b:Luh2;
+    iput-object p1, v0, La50;->i:Lx50;
 
-    iget-wide v0, v0, Luh2;->j:J
+    new-instance p1, Lb50;
 
-    return-wide v0
-.end method
+    invoke-direct {p1, v0}, Lb50;-><init>(La50;)V
 
-.method public final i()J
-    .locals 2
+    iput-object p1, p3, Lc50;->e:Lb50;
 
-    const-wide/16 v0, 0x0
+    :goto_0
+    sget-object p1, Lyeh;->a:Lyeh;
 
-    return-wide v0
-.end method
+    return-object p1
 
-.method public final j()Ljava/util/List;
-    .locals 2
+    :pswitch_0
+    check-cast p1, Lx50;
 
-    new-instance v0, Lp7b;
+    check-cast p2, Ljava/lang/String;
 
-    const/4 v1, 0x0
+    check-cast p3, Lc50;
 
-    invoke-direct {v0, p0, v1}, Lp7b;-><init>(Lq7b;Lkotlin/coroutines/Continuation;)V
-
-    sget-object v1, Lxg5;->a:Lxg5;
-
-    invoke-static {v1, v0}, Ls9j;->h(Lqb4;Lbr6;)Ljava/lang/Object;
+    invoke-virtual {p3}, Lc50;->c()Ld60;
 
     move-result-object v0
 
-    check-cast v0, Lnd2;
-
-    iget-object v0, v0, Lnd2;->b:Luh2;
-
-    iget-object v0, v0, Luh2;->n:Lnh2;
-
-    sget-object v1, Lmw4;->o:Lmw4;
-
-    invoke-virtual {v0, v1}, Lnh2;->d(Lmw4;)Ljava/util/ArrayList;
+    invoke-virtual {v0}, Ld60;->a()Lz50;
 
     move-result-object v0
 
-    return-object v0
+    iput-object p2, v0, Lz50;->u:Ljava/lang/String;
+
+    iput-object p1, v0, Lz50;->v:Lx50;
+
+    new-instance p1, Ld60;
+
+    invoke-direct {p1, v0}, Ld60;-><init>(Lz50;)V
+
+    iput-object p1, p3, Lc50;->d:Ld60;
+
+    goto :goto_0
+
+    :pswitch_1
+    check-cast p1, Landroid/widget/ImageView;
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    check-cast p3, Ldqb;
+
+    invoke-interface {p3}, Ldqb;->getIcon()Lzpb;
+
+    move-result-object p2
+
+    iget p2, p2, Lzpb;->b:I
+
+    invoke-static {p2}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

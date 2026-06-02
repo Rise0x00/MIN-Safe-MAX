@@ -1,58 +1,129 @@
 .class public final Ldh;
-.super Lj2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lq41;
 
-# static fields
-.field public static final d:Ldh;
+
+# instance fields
+.field public final a:Ldi;
+
+.field public final b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ldi;I)V
+    .locals 0
 
-    new-instance v0, Ldh;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v1, Landroid/view/animation/AccelerateDecelerateInterpolator;
+    iput-object p1, p0, Ldh;->a:Ldi;
 
-    invoke-direct {v1}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
-
-    const/4 v2, 0x1
-
-    sget-object v3, Lbh;->b:Lbh;
-
-    invoke-direct {v0, v3, v2, v1}, Lj2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    sput-object v0, Ldh;->d:Ldh;
+    iput p2, p0, Ldh;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final G(Landroid/content/Context;Landroid/content/res/XmlResourceParser;I)Ljava/lang/Object;
+.method public final a()Z
     .locals 1
 
     const/4 v0, 0x0
 
-    invoke-interface {p2, p3, v0}, Landroid/util/AttributeSet;->getAttributeResourceValue(II)I
+    return v0
+.end method
 
-    move-result p2
+.method public final b()Ljava/lang/String;
+    .locals 1
 
-    if-eqz p2, :cond_0
+    const/4 v0, 0x0
 
-    invoke-static {p1, p2}, Landroid/view/animation/AnimationUtils;->loadInterpolator(Landroid/content/Context;I)Landroid/view/animation/Interpolator;
+    return-object v0
+.end method
 
-    move-result-object p1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    return-object p1
+    if-ne p1, p0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v0, p1, Ldh;
 
-    const-string p2, "Can\'t parse interpolator"
+    if-eqz v0, :cond_1
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    check-cast p1, Ldh;
 
-    throw p1
+    iget v0, p0, Ldh;->b:I
+
+    iget v1, p1, Ldh;->b:I
+
+    if-ne v0, v1, :cond_1
+
+    iget-object v0, p0, Ldh;->a:Ldi;
+
+    iget-object p1, p1, Ldh;->a:Ldi;
+
+    invoke-virtual {v0, p1}, Ldi;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Ldh;->a:Ldi;
+
+    invoke-virtual {v0}, Ldi;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit16 v0, v0, 0x3f5
+
+    iget v1, p0, Ldh;->b:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    invoke-static {p0}, Lohj;->c(Ljava/lang/Object;)Lal8;
+
+    move-result-object v0
+
+    const-string v1, "imageCacheKey"
+
+    iget-object v2, p0, Ldh;->a:Ldi;
+
+    invoke-virtual {v0, v2, v1}, Lal8;->i(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v1, "frameIndex"
+
+    iget v2, p0, Ldh;->b:I
+
+    invoke-virtual {v0, v2, v1}, Lal8;->d(ILjava/lang/String;)V
+
+    invoke-virtual {v0}, Lal8;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

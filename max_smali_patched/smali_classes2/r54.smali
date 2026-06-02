@@ -1,63 +1,157 @@
 .class public final Lr54;
-.super Ln3e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lr54;
+# instance fields
+.field public final a:Lia8;
 
-.field public static final c:Lhm4;
+.field public final b:Lia8;
 
-.field public static final d:Lhm4;
+.field public final c:Lia8;
 
-.field public static final e:Lhm4;
+.field public final d:Lia8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lia8;Lia8;Lia8;Lia8;)V
+    .locals 0
 
-    new-instance v0, Lr54;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Llm4;-><init>()V
+    iput-object p1, p0, Lr54;->a:Lia8;
 
-    sput-object v0, Lr54;->b:Lr54;
+    iput-object p2, p0, Lr54;->b:Lia8;
 
-    const/4 v1, 0x0
+    iput-object p3, p0, Lr54;->c:Lia8;
 
-    new-array v2, v1, [Ljava/lang/String;
+    iput-object p4, p0, Lr54;->d:Lia8;
 
-    const-string v3, ":contact-list/create-contact"
+    return-void
+.end method
 
-    const/4 v4, 0x0
 
-    const/16 v5, 0xe
+# virtual methods
+.method public final a()Lxa6;
+    .locals 8
 
-    invoke-static {v0, v3, v2, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    iget-object v0, p0, Lr54;->a:Lia8;
 
-    move-result-object v2
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
 
-    sput-object v2, Lr54;->c:Lhm4;
+    move-result-object v1
 
-    const-string v2, ":contact-list/share-invite"
+    check-cast v1, Lo22;
 
-    new-array v3, v1, [Ljava/lang/String;
+    check-cast v1, Lx22;
 
-    invoke-static {v0, v2, v3, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    invoke-virtual {v1}, Lx22;->n()Lmg4;
 
-    move-result-object v2
+    move-result-object v1
 
-    sput-object v2, Lr54;->d:Lhm4;
+    iget-boolean v1, v1, Lmg4;->o:Z
 
-    const-string v2, ":call-contact"
+    const/4 v6, 0x0
 
-    new-array v1, v1, [Ljava/lang/String;
+    if-nez v1, :cond_0
 
-    invoke-static {v0, v2, v1, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    new-instance v0, Ley;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1, v6}, Ley;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+
+    :cond_0
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    sput-object v0, Lr54;->e:Lhm4;
+    check-cast v0, Lo22;
 
-    return-void
+    check-cast v0, Lx22;
+
+    invoke-virtual {v0}, Lx22;->n()Lmg4;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lmg4;->a:Lkmj;
+
+    instance-of v1, v0, Lwx1;
+
+    if-eqz v1, :cond_1
+
+    check-cast v0, Lwx1;
+
+    goto :goto_0
+
+    :cond_1
+    move-object v0, v6
+
+    :goto_0
+    if-eqz v0, :cond_3
+
+    iget-wide v4, v0, Lwx1;->a:J
+
+    iget-object v0, p0, Lr54;->b:Lia8;
+
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ld74;
+
+    invoke-virtual {v0, v4, v5}, Ld74;->e(J)Lbwd;
+
+    move-result-object v0
+
+    new-instance v2, Ls00;
+
+    const/4 v7, 0x6
+
+    move-object v3, p0
+
+    invoke-direct/range {v2 .. v7}, Ls00;-><init>(Ljava/lang/Object;JLkotlin/coroutines/Continuation;I)V
+
+    new-instance v1, Lhc6;
+
+    invoke-direct {v1, v2, v0}, Lhc6;-><init>(Lnt6;Lxa6;)V
+
+    iget-object v0, v3, Lr54;->d:Lia8;
+
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ldng;
+
+    check-cast v0, Lsbb;
+
+    invoke-virtual {v0}, Lsbb;->a()Lhc4;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lhk0;->O(Lxa6;Lfc4;)Lxa6;
+
+    move-result-object v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    return-object v0
+
+    :cond_3
+    move-object v3, p0
+
+    :goto_1
+    new-instance v0, Ley;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1, v6}, Ley;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
 .end method

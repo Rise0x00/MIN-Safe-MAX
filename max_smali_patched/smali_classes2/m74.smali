@@ -1,64 +1,43 @@
-.class public final Lm74;
+.class public abstract Lm74;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lo74;
-
-
-# static fields
-.field public static final a:Lm74;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Landroid/os/Bundle;)V
+    .locals 2
 
-    new-instance v0, Lm74;
+    invoke-static {}, La70;->b()Landroid/media/ApplicationMediaCapabilities$Builder;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    sput-object v0, Lm74;->a:Lm74;
+    invoke-static {v0}, La70;->c(Landroid/media/ApplicationMediaCapabilities$Builder;)Landroid/media/ApplicationMediaCapabilities$Builder;
+
+    move-result-object v0
+
+    invoke-static {v0}, La70;->z(Landroid/media/ApplicationMediaCapabilities$Builder;)Landroid/media/ApplicationMediaCapabilities$Builder;
+
+    move-result-object v0
+
+    invoke-static {v0}, La70;->B(Landroid/media/ApplicationMediaCapabilities$Builder;)Landroid/media/ApplicationMediaCapabilities$Builder;
+
+    move-result-object v0
+
+    invoke-static {v0}, La70;->C(Landroid/media/ApplicationMediaCapabilities$Builder;)Landroid/media/ApplicationMediaCapabilities$Builder;
+
+    move-result-object v0
+
+    invoke-static {v0}, La70;->D(Landroid/media/ApplicationMediaCapabilities$Builder;)Landroid/media/ApplicationMediaCapabilities$Builder;
+
+    move-result-object v0
+
+    invoke-static {v0}, La70;->d(Landroid/media/ApplicationMediaCapabilities$Builder;)Landroid/media/ApplicationMediaCapabilities;
+
+    move-result-object v0
+
+    const-string v1, "android.provider.extra.MEDIA_CAPABILITIES"
+
+    invoke-virtual {p0, v1, v0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lm74;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0xd8b2a9e
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "PermissionsAccess"
-
-    return-object v0
 .end method

@@ -3,32 +3,15 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final N:Lkme;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lkme;
-
-    const/16 v1, 0x18
-
-    invoke-direct {v0, v1}, Lkme;-><init>(I)V
-
-    sput-object v0, Luz8;->N:Lkme;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public abstract a()J
+.method public abstract a(Ljava/lang/Object;)V
 .end method
 
-.method public abstract b()J
+.method public abstract b()V
 .end method
 
-.method public abstract next()Z
+.method public abstract c(Ls45;)V
+.end method
+
+.method public abstract onError(Ljava/lang/Throwable;)V
 .end method

@@ -1,257 +1,155 @@
-.class public final Ltj6;
+.class public final synthetic Ltj6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
 
 # instance fields
-.field public final a:Lo58;
+.field public final synthetic a:I
 
-.field public final b:Lo58;
-
-.field public final c:Lo58;
-
-.field public final d:Lo58;
+.field public final synthetic b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
 
 # direct methods
-.method public constructor <init>(Lo58;Lo58;Lo58;Lo58;)V
+.method public synthetic constructor <init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
     .locals 0
 
+    iput p2, p0, Ltj6;->a:I
+
+    iput-object p1, p0, Ltj6;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ltj6;->a:Lo58;
-
-    iput-object p2, p0, Ltj6;->b:Lo58;
-
-    iput-object p3, p0, Ltj6;->c:Lo58;
-
-    iput-object p4, p0, Ltj6;->d:Lo58;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lek6;Ljava/util/List;Loba;Lo84;)Ljava/lang/Object;
-    .locals 10
+.method public final onClick(Landroid/view/View;)V
+    .locals 5
 
-    instance-of v0, p4, Lsj6;
+    iget p1, p0, Ltj6;->a:I
 
-    if-eqz v0, :cond_0
+    const/4 v0, 0x0
 
-    move-object v0, p4
+    iget-object v1, p0, Ltj6;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
-    check-cast v0, Lsj6;
+    packed-switch p1, :pswitch_data_0
 
-    iget v1, v0, Lsj6;->t0:I
+    sget-object p1, Lone/me/folders/pickerfolders/FoldersPickerScreen;->C0:[Lb88;
 
-    const/high16 v2, -0x80000000
+    invoke-static {v1}, Lm2k;->b(Ll94;)V
 
-    and-int v3, v1, v2
+    sget-object p1, Lqh6;->c:Lqh6;
 
-    if-eqz v3, :cond_0
+    iget-object v2, v1, Lone/me/folders/pickerfolders/FoldersPickerScreen;->b:Lfu;
 
-    sub-int/2addr v1, v2
+    sget-object v3, Lone/me/folders/pickerfolders/FoldersPickerScreen;->C0:[Lb88;
 
-    iput v1, v0, Lsj6;->t0:I
+    const/4 v4, 0x0
+
+    aget-object v3, v3, v4
+
+    invoke-virtual {v2, v1}, Lfu;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [J
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/16 v2, 0x3e
+
+    invoke-static {v2, v1}, Lav;->Q0(I[J)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-lez v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lsj6;
-
-    invoke-direct {v0, p0, p4}, Lsj6;-><init>(Ltj6;Lo84;)V
+    move-object v1, v0
 
     :goto_0
-    iget-object p4, v0, Lsj6;->Y:Ljava/lang/Object;
+    if-eqz v1, :cond_1
 
-    iget v1, v0, Lsj6;->t0:I
+    const-string v2, "?ids="
 
-    const/4 v2, 0x1
+    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    if-eqz v1, :cond_2
-
-    if-ne v1, v2, :cond_1
-
-    iget-object p3, v0, Lsj6;->X:Loba;
-
-    iget-object p2, v0, Lsj6;->o:Ljava/util/List;
-
-    iget-object p1, v0, Lsj6;->d:Lek6;
-
-    invoke-static {p4}, Lpmj;->b(Ljava/lang/Object;)V
+    move-result-object v1
 
     goto :goto_1
 
     :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move-object v1, v0
 
-    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_1
+    if-nez v1, :cond_2
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    const-string v1, ""
 
     :cond_2
-    invoke-static {p4}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p4, p0, Ltj6;->b:Lo58;
-
-    invoke-interface {p4}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p4
-
-    check-cast p4, Lgx6;
-
-    iput-object p1, v0, Lsj6;->d:Lek6;
-
-    iput-object p2, v0, Lsj6;->o:Ljava/util/List;
-
-    iput-object p3, v0, Lsj6;->X:Loba;
-
-    iput v2, v0, Lsj6;->t0:I
-
-    invoke-virtual {p4, p1, p3, v0}, Lgx6;->b(Lek6;Loba;Lo84;)Ljava/lang/Object;
-
-    move-result-object p4
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p4, v0, :cond_3
-
-    return-object v0
-
-    :cond_3
-    :goto_1
-    check-cast p4, Ljava/util/List;
-
-    invoke-interface {p4}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    sget-object v1, Lb3h;->a:Lb3h;
-
-    if-eqz v0, :cond_4
-
-    iget-object p1, p0, Ltj6;->d:Lo58;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Ldp0;->O()Lao4;
 
     move-result-object p1
 
-    check-cast p1, Lpba;
+    const-string v2, ":settings/folder/create"
 
-    sget-object p2, Lnba;->o:Lnba;
+    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p1, p2, p3}, Lpba;->t(Lnba;Loba;)V
+    move-result-object v1
 
-    return-object v1
+    const/4 v2, 0x6
 
-    :cond_4
-    iget-object p1, p1, Lek6;->d:Ljava/lang/CharSequence;
+    invoke-static {p1, v1, v0, v0, v2}, Lao4;->b(Lao4;Ljava/lang/String;Landroid/os/Bundle;Ljl8;I)Z
 
-    if-eqz p1, :cond_6
+    return-void
 
-    invoke-static {p1}, Lrzf;->H(Ljava/lang/CharSequence;)Z
+    :pswitch_0
+    sget-object p1, Lone/me/folders/pickerfolders/FoldersPickerScreen;->C0:[Lb88;
 
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    iget-object v0, p0, Ltj6;->c:Lo58;
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lmx6;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v3, p1}, Lmx6;->a(Lnd2;Ljava/lang/CharSequence;)Ljava/util/List;
-
-    move-result-object v9
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    new-instance v4, Lrse;
-
-    const-wide/16 v5, 0x0
-
-    const/4 v8, 0x1
-
-    invoke-direct/range {v4 .. v9}, Lrse;-><init>(JLjava/lang/String;ZLjava/util/List;)V
-
-    iput-object p3, v4, Lnse;->g:Loba;
-
-    new-instance p1, Ltse;
-
-    invoke-direct {p1, v4}, Ltse;-><init>(Lrse;)V
-
-    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {v1}, Lone/me/folders/pickerfolders/FoldersPickerScreen;->d1()Lfk6;
 
     move-result-object p1
 
-    invoke-static {p1, p4}, Lpi3;->Q(Ljava/util/Collection;Ljava/lang/Iterable;)Ljava/util/ArrayList;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p4
+    sget-object v1, Lesa;->a:Lesa;
 
-    :cond_6
-    :goto_2
-    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    iget-object v2, p1, Lfk6;->c:Ldng;
 
-    move-result-object p1
+    check-cast v2, Lsbb;
 
-    :goto_3
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v2}, Lsbb;->b()Lhc4;
 
-    move-result p2
+    move-result-object v2
 
-    if-eqz p2, :cond_7
+    invoke-virtual {v1, v2}, Lp0;->plus(Lfc4;)Lfc4;
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p2
+    new-instance v2, Ldk6;
 
-    check-cast p2, Ljava/lang/Number;
+    invoke-direct {v2, p1, v0}, Ldk6;-><init>(Lfk6;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p2}, Ljava/lang/Number;->longValue()J
+    sget-object v0, Lrc4;->c:Lrc4;
 
-    move-result-wide p2
+    iget-object p1, p1, Lw4i;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    new-instance v0, Ljava/util/LinkedList;
+    invoke-static {p1, v1, v0, v2}, Ly6j;->K(Loc4;Lfc4;Lrc4;Lnt6;)Lhyf;
 
-    invoke-direct {v0, p4}, Ljava/util/LinkedList;-><init>(Ljava/util/Collection;)V
+    return-void
 
-    new-instance v3, Lise;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v3, p2, p3, v0, v4}, Lise;-><init>(JLjava/lang/Object;I)V
-
-    iput-boolean v2, v3, Lnse;->d:Z
-
-    new-instance p2, Lqse;
-
-    invoke-direct {p2, v3}, Lqse;-><init>(Lise;)V
-
-    iget-object p3, p0, Ltj6;->a:Lo58;
-
-    invoke-interface {p3}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Ltji;
-
-    invoke-virtual {p3, p2}, Ltji;->b(Lore;)V
-
-    goto :goto_3
-
-    :cond_7
-    return-object v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

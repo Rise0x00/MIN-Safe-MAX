@@ -1,43 +1,66 @@
 .class public final Luq;
-.super Ljava/lang/Object;
+.super Lio6;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:Luq;
+# instance fields
+.field public final synthetic A0:Lbr;
 
-.field public static final b:Ljava/lang/String;
+.field public final synthetic B0:Ler;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ler;Ler;Lbr;)V
+    .locals 0
 
-    new-instance v0, Luq;
+    iput-object p1, p0, Luq;->B0:Ler;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Luq;->A0:Lbr;
 
-    sput-object v0, Luq;->a:Luq;
-
-    sget-object v0, Lhdh;->a:Lhdh;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v0
-
-    const/16 v1, 0x49
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lt5b;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v0, "https://download.max.ru/#android?version=26.1.0"
-
-    sput-object v0, Luq;->b:Ljava/lang/String;
+    invoke-direct {p0, p2}, Lio6;-><init>(Landroid/view/View;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final b()Lymf;
+    .locals 1
+
+    iget-object v0, p0, Luq;->A0:Lbr;
+
+    return-object v0
+.end method
+
+.method public final c()Z
+    .locals 3
+
+    iget-object v0, p0, Luq;->B0:Ler;
+
+    invoke-virtual {v0}, Ler;->getInternalPopup()Ldr;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ldr;->a()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, v0, Ler;->z0:Ldr;
+
+    invoke-virtual {v0}, Landroid/view/View;->getTextDirection()I
+
+    move-result v2
+
+    invoke-virtual {v0}, Landroid/view/View;->getTextAlignment()I
+
+    move-result v0
+
+    invoke-interface {v1, v2, v0}, Ldr;->n(II)V
+
+    :cond_0
+    const/4 v0, 0x1
+
+    return v0
 .end method

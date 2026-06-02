@@ -1,164 +1,128 @@
-.class public final Ljx5;
-.super Lp6g;
+.class public final synthetic Ljx5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic X:Lnx5;
+.field public final synthetic a:I
 
-.field public o:I
+.field public final synthetic b:Lkx5;
+
+.field public final synthetic c:Lix5;
 
 
 # direct methods
-.method public constructor <init>(Lnx5;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lkx5;Lix5;I)V
     .locals 0
 
-    iput-object p1, p0, Ljx5;->X:Lnx5;
+    iput p3, p0, Ljx5;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ljx5;->b:Lkx5;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Ljx5;->c:Lix5;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
-    check-cast p1, Lzb4;
+    iget p1, p0, Ljx5;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Ljx5;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object p1, p0, Ljx5;->b:Lkx5;
 
-    move-result-object p1
+    iget-object p1, p1, Lkx5;->M0:Lh31;
 
-    check-cast p1, Ljx5;
+    if-eqz p1, :cond_0
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget-object v0, p0, Ljx5;->c:Lix5;
 
-    invoke-virtual {p1, p2}, Ljx5;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v0, v0, Lix5;->a:J
 
-    move-result-object p1
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    return-object p1
-.end method
+    move-result-object v0
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Ljx5;
-
-    iget-object v0, p0, Ljx5;->X:Lnx5;
-
-    invoke-direct {p1, v0, p2}, Ljx5;-><init>(Lnx5;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    iget v1, p0, Ljx5;->o:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v2, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-object p1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_2
+    invoke-virtual {p1, v0}, Lh31;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    return-void
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    :pswitch_0
+    iget-object p1, p0, Ljx5;->b:Lkx5;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object p1, p1, Lkx5;->L0:Lh31;
 
-    throw p1
+    if-eqz p1, :cond_1
+
+    iget-object v0, p0, Ljx5;->c:Lix5;
+
+    iget-wide v0, v0, Lix5;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lh31;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    return-void
 
-    iget-object p1, p0, Ljx5;->X:Lnx5;
+    :pswitch_1
+    iget-object p1, p0, Ljx5;->b:Lkx5;
 
-    :try_start_1
-    iget-object p1, p1, Lnx5;->X:Lo58;
+    iget-object p1, p1, Lkx5;->M0:Lh31;
 
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    if-eqz p1, :cond_2
 
-    move-result-object p1
+    iget-object v0, p0, Ljx5;->c:Lix5;
 
-    check-cast p1, Lpva;
+    iget-wide v0, v0, Lix5;->a:J
 
-    iput v2, p0, Ljx5;->o:I
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {p1, p0}, Lpva;->b(Lo84;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
-    :try_end_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    invoke-virtual {p1, v0}, Lh31;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2
-    return-object p1
+    return-void
 
-    :goto_0
-    sget-object v0, Lc5j;->a:Ledb;
+    :pswitch_2
+    iget-object p1, p0, Ljx5;->b:Lkx5;
 
-    if-nez v0, :cond_3
+    iget-object p1, p1, Lkx5;->L0:Lh31;
 
-    goto :goto_1
+    if-eqz p1, :cond_3
+
+    iget-object v0, p0, Ljx5;->c:Lix5;
+
+    iget-wide v0, v0, Lix5;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lh31;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_3
-    sget-object v1, Lkk8;->Y:Lkk8;
+    return-void
 
-    invoke-virtual {v0, v1}, Ledb;->b(Lkk8;)Z
+    nop
 
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    const-string v2, "failed to read fcm notifications"
-
-    const-string v3, "nx5"
-
-    invoke-virtual {v0, v1, v3, v2, p1}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_4
-    :goto_1
-    sget-object p1, Ldh5;->a:Ldh5;
-
-    return-object p1
-
-    :goto_2
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

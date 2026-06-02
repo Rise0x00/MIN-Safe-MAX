@@ -1,137 +1,219 @@
 .class public final Lyt0;
-.super Landroid/view/ViewOutlineProvider;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public b:F
+.field public final b:J
+
+.field public final c:J
+
+.field public d:J
+
+.field public e:J
+
+.field public f:J
+
+.field public g:J
+
+.field public h:J
 
 
 # direct methods
-.method public constructor <init>(F)V
-    .locals 1
+.method public constructor <init>(JJJJJJI)V
+    .locals 12
 
-    const/4 v0, 0x2
+    move-wide v0, p3
 
-    iput v0, p0, Lyt0;->a:I
+    move-wide/from16 v4, p5
 
-    iput p1, p0, Lyt0;->b:F
+    move-wide/from16 v6, p7
 
-    .line 2
-    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
+    move-wide/from16 v8, p9
 
-    return-void
-.end method
+    move-wide/from16 v10, p11
 
-.method public synthetic constructor <init>(IF)V
-    .locals 0
+    packed-switch p13, :pswitch_data_0
 
-    .line 1
-    iput p1, p0, Lyt0;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
+    iput-wide p1, p0, Lyt0;->a:J
 
-    iput p2, p0, Lyt0;->b:F
+    iput-wide v0, p0, Lyt0;->b:J
 
-    return-void
-.end method
+    const-wide/16 v2, 0x0
 
+    iput-wide v2, p0, Lyt0;->d:J
 
-# virtual methods
-.method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
-    .locals 13
+    iput-wide v4, p0, Lyt0;->e:J
 
-    iget v0, p0, Lyt0;->a:I
+    iput-wide v6, p0, Lyt0;->f:J
 
-    packed-switch v0, :pswitch_data_0
+    iput-wide v8, p0, Lyt0;->g:J
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    iput-wide v10, p0, Lyt0;->c:J
 
-    move-result v4
+    invoke-static/range {v0 .. v11}, Lyt0;->a(JJJJJJ)J
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+    move-result-wide p1
 
-    move-result v5
-
-    iget v6, p0, Lyt0;->b:F
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move-object v1, p2
-
-    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
+    iput-wide p1, p0, Lyt0;->h:J
 
     return-void
 
     :pswitch_0
-    move-object v7, p2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    iput-wide p1, p0, Lyt0;->a:J
 
-    move-result v10
+    iput-wide v0, p0, Lyt0;->b:J
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+    const-wide/16 v2, 0x0
 
-    move-result p2
+    iput-wide v2, p0, Lyt0;->d:J
 
-    iget v12, p0, Lyt0;->b:F
+    iput-wide v4, p0, Lyt0;->e:J
 
-    float-to-int v0, v12
+    iput-wide v6, p0, Lyt0;->f:J
 
-    add-int v11, p2, v0
+    iput-wide v8, p0, Lyt0;->g:J
 
-    const/4 v8, 0x0
+    iput-wide v10, p0, Lyt0;->c:J
 
-    const/4 v9, 0x0
+    invoke-static/range {v0 .. v11}, Lyt0;->b(JJJJJJ)J
 
-    invoke-virtual/range {v7 .. v12}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
+    move-result-wide p1
 
-    const/4 p2, 0x1
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setClipToOutline(Z)V
+    iput-wide p1, p0, Lyt0;->h:J
 
     return-void
-
-    :pswitch_1
-    move-object v7, p2
-
-    iget p2, p0, Lyt0;->b:F
-
-    invoke-static {p2}, Lq7j;->c(F)I
-
-    move-result p2
-
-    neg-int v9, p2
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result v10
-
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    move-result v11
-
-    iget v12, p0, Lyt0;->b:F
-
-    const/4 v8, 0x0
-
-    invoke-virtual/range {v7 .. v12}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setClipToOutline(Z)V
-
-    return-void
-
-    nop
 
     :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
+    .packed-switch 0x1
         :pswitch_0
     .end packed-switch
+.end method
+
+.method public static a(JJJJJJ)J
+    .locals 4
+
+    const-wide/16 v0, 0x1
+
+    add-long v2, p6, v0
+
+    cmp-long v2, v2, p8
+
+    if-gez v2, :cond_1
+
+    add-long v2, p2, v0
+
+    cmp-long v2, v2, p4
+
+    if-ltz v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sub-long/2addr p0, p2
+
+    sub-long v2, p8, p6
+
+    long-to-float v2, v2
+
+    sub-long/2addr p4, p2
+
+    long-to-float p2, p4
+
+    div-float/2addr v2, p2
+
+    long-to-float p0, p0
+
+    mul-float/2addr p0, v2
+
+    float-to-long p0, p0
+
+    const-wide/16 p2, 0x14
+
+    div-long p2, p0, p2
+
+    add-long/2addr p0, p6
+
+    sub-long/2addr p0, p10
+
+    sub-long p4, p0, p2
+
+    sub-long/2addr p8, v0
+
+    invoke-static/range {p4 .. p9}, Lnnh;->j(JJJ)J
+
+    move-result-wide p0
+
+    return-wide p0
+
+    :cond_1
+    :goto_0
+    return-wide p6
+.end method
+
+.method public static b(JJJJJJ)J
+    .locals 4
+
+    const-wide/16 v0, 0x1
+
+    add-long v2, p6, v0
+
+    cmp-long v2, v2, p8
+
+    if-gez v2, :cond_1
+
+    add-long v2, p2, v0
+
+    cmp-long v2, v2, p4
+
+    if-ltz v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sub-long/2addr p0, p2
+
+    sub-long v2, p8, p6
+
+    long-to-float v2, v2
+
+    sub-long/2addr p4, p2
+
+    long-to-float p2, p4
+
+    div-float/2addr v2, p2
+
+    long-to-float p0, p0
+
+    mul-float/2addr p0, v2
+
+    float-to-long p0, p0
+
+    const-wide/16 p2, 0x14
+
+    div-long p2, p0, p2
+
+    add-long/2addr p0, p6
+
+    sub-long/2addr p0, p10
+
+    sub-long p4, p0, p2
+
+    sub-long/2addr p8, v0
+
+    invoke-static/range {p4 .. p9}, Lpnh;->j(JJJ)J
+
+    move-result-wide p0
+
+    return-wide p0
+
+    :cond_1
+    :goto_0
+    return-wide p6
 .end method

@@ -1,73 +1,60 @@
 .class public final Lya2;
-.super Lg4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lya2;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Lab2;
 
 
 # instance fields
-.field public final a:Lqh8;
-
-.field public final b:Landroid/net/Uri;
+.field public final a:Ljava/util/concurrent/ScheduledFuture;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lz7;
-
-    const/16 v1, 0xc
-
-    invoke-direct {v0, v1}, Lz7;-><init>(I)V
-
-    sput-object v0, Lya2;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lqh8;Landroid/net/Uri;)V
+.method public constructor <init>(Ljava/util/concurrent/ScheduledFuture;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lya2;->a:Lqh8;
-
-    iput-object p2, p0, Lya2;->b:Landroid/net/Uri;
+    iput-object p1, p0, Lya2;->a:Ljava/util/concurrent/ScheduledFuture;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final b(Ljava/lang/Throwable;)V
     .locals 1
+
+    iget-object p1, p0, Lya2;->a:Ljava/util/concurrent/ScheduledFuture;
 
     const/4 v0, 0x0
 
-    return v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
-
-    iget-object v0, p0, Lya2;->a:Lqh8;
-
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
-
-    iget-object v0, p0, Lya2;->b:Landroid/net/Uri;
-
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
     return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CancelFutureOnCancel["
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lya2;->a:Ljava/util/concurrent/ScheduledFuture;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x5d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

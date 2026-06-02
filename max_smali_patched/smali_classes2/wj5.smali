@@ -1,58 +1,48 @@
 .class public final Lwj5;
-.super Lisd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lki8;
 
-# instance fields
-.field public final a:Ltj5;
 
-.field public b:I
+# static fields
+.field public static final a:Lwj5;
 
-.field public c:Lcw0;
-
-.field public final synthetic d:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+.field public static final b:I
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Ltj5;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lwj5;
 
-    iput-object p1, p0, Lwj5;->d:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lwj5;->a:Ltj5;
+    sput-object v0, Lwj5;->a:Lwj5;
 
-    const/4 p1, 0x1
+    sget v0, Liab;->w:I
 
-    iput p1, p0, Lwj5;->b:I
+    sput v0, Lwj5;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
+.method public final getItemId()J
     .locals 2
 
-    iget-object p1, p0, Lwj5;->c:Lcw0;
+    const-wide/16 v0, 0x0
 
-    iget-object v0, p0, Lwj5;->d:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    return-wide v0
+.end method
 
-    if-eqz p1, :cond_0
+.method public final i()I
+    .locals 1
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    sget v0, Lwj5;->b:I
 
-    :cond_0
-    new-instance p1, Lcw0;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, p0, p2, p3, v1}, Lcw0;-><init>(Ljava/lang/Object;III)V
-
-    iput-object p1, p0, Lwj5;->c:Lcw0;
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
+    return v0
 .end method

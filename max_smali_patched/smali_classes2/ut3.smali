@@ -1,189 +1,95 @@
 .class public final Lut3;
-.super Landroid/widget/EditText;
+.super Laj0;
 .source "SourceFile"
-
-# interfaces
-.implements Luig;
-
-
-# static fields
-.field public static final b:Lftd;
-
-.field public static final c:Ltt3;
 
 
 # instance fields
-.field public a:Z
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-    new-instance v0, Lftd;
+    const/4 v0, 0x7
 
-    const-string v1, "[0-9]*"
+    invoke-direct {p0, v0}, Laj0;-><init>(I)V
 
-    invoke-direct {v0, v1}, Lftd;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lut3;->b:Lftd;
-
-    new-instance v0, Ltt3;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Ltt3;-><init>(I)V
-
-    sput-object v0, Lut3;->c:Ltt3;
+    iput-object p1, p0, Lut3;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onFocusChanged(ZILandroid/graphics/Rect;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    invoke-super {p0, p1, p2, p3}, Landroid/view/View;->onFocusChanged(ZILandroid/graphics/Rect;)V
+    const/4 v0, 0x1
 
-    if-nez p1, :cond_0
+    if-ne p0, p1, :cond_0
 
-    iget-boolean p1, p0, Lut3;->a:Z
-
-    if-eqz p1, :cond_0
-
-    const-wide/16 p1, 0x5dc
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->postInvalidateDelayed(J)V
+    return v0
 
     :cond_0
-    return-void
-.end method
+    instance-of v1, p1, Lut3;
 
-.method public final onThemeChanged(Lzlb;)V
-    .locals 2
+    const/4 v2, 0x0
 
-    sget-object v0, Lpc3;->t0:Lkme;
+    if-nez v1, :cond_1
 
-    invoke-virtual {v0, p0}, Lkme;->p(Landroid/view/View;)Lzlb;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lzlb;->b()Lxf0;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lxf0;->a:Lwf0;
-
-    iget v0, v0, Lwf0;->i:I
-
-    new-instance v1, Landroid/graphics/drawable/ColorDrawable;
-
-    invoke-direct {v1, v0}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
-
-    invoke-virtual {p0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    invoke-static {p0}, Lcti;->c(Landroid/widget/TextView;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    instance-of v1, v0, Landroid/graphics/drawable/GradientDrawable;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Landroid/graphics/drawable/GradientDrawable;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    invoke-interface {p1}, Lzlb;->getText()Lrfg;
-
-    move-result-object v1
-
-    iget v1, v1, Lrfg;->j:I
-
-    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setColor(Landroid/content/res/ColorStateList;)V
+    return v2
 
     :cond_1
-    invoke-interface {p1}, Lzlb;->getText()Lrfg;
+    check-cast p1, Lut3;
 
-    move-result-object p1
+    iget-object v1, p0, Lut3;->b:Ljava/lang/String;
 
-    iget p1, p1, Lrfg;->e:I
+    iget-object p1, p1, Lut3;->b:Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-static {v1, p1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-void
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final setSecure(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lut3;->a:Z
-
-    if-eqz p1, :cond_0
-
-    invoke-static {}, Landroid/text/method/PasswordTransformationMethod;->getInstance()Landroid/text/method/PasswordTransformationMethod;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
-
-    const p1, 0x80012
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setInputType(I)V
-
-    invoke-static {}, Landroid/text/method/PasswordTransformationMethod;->getInstance()Landroid/text/method/PasswordTransformationMethod;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->removeTextChangedListener(Landroid/text/TextWatcher;)V
-
-    invoke-static {}, Landroid/text/method/PasswordTransformationMethod;->getInstance()Landroid/text/method/PasswordTransformationMethod;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
-
-    return-void
-
-    :cond_0
-    invoke-static {}, Landroid/text/method/PasswordTransformationMethod;->getInstance()Landroid/text/method/PasswordTransformationMethod;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->removeTextChangedListener(Landroid/text/TextWatcher;)V
-
-    invoke-static {}, Landroid/text/method/SingleLineTransformationMethod;->getInstance()Landroid/text/method/SingleLineTransformationMethod;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
-
-    const/4 p1, 0x2
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setInputType(I)V
-
-    return-void
-.end method
-
-.method public final setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
+.method public final hashCode()I
     .locals 1
 
-    iget-boolean v0, p0, Lut3;->a:Z
+    iget-object v0, p0, Lut3;->b:Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Lut3;->setSecure(Z)V
+    if-nez v0, :cond_0
 
-    invoke-super {p0, p1, p2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
+    const/4 v0, 0x0
 
-    return-void
+    return v0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "GoToStartScreen(phone="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lut3;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lsb6;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -4,229 +4,388 @@
 
 
 # static fields
-.field public static final a:Ljava/util/List;
+.field public static final a:Ljava/lang/ThreadLocal;
 
-.field public static final b:Ljava/util/List;
+.field public static final b:Ljava/util/WeakHashMap;
+
+.field public static final c:Ljava/lang/Object;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    const-class v0, Landroid/app/Application;
+    new-instance v0, Ljava/lang/ThreadLocal;
 
-    const-class v1, Li9e;
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    filled-new-array {v0, v1}, [Ljava/lang/Class;
+    sput-object v0, Lq9e;->a:Ljava/lang/ThreadLocal;
 
-    move-result-object v0
+    new-instance v0, Ljava/util/WeakHashMap;
 
-    invoke-static {v0}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/util/WeakHashMap;-><init>(I)V
 
-    sput-object v0, Lq9e;->a:Ljava/util/List;
+    sput-object v0, Lq9e;->b:Ljava/util/WeakHashMap;
 
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    new-instance v0, Ljava/lang/Object;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lq9e;->b:Ljava/util/List;
+    sput-object v0, Lq9e;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static final a(Ljava/lang/Class;Ljava/util/List;)Ljava/lang/reflect/Constructor;
-    .locals 6
+.method public static a(Landroid/content/Context;I)Landroid/graphics/Typeface;
+    .locals 7
 
-    invoke-virtual {p0}, Ljava/lang/Class;->getConstructors()[Ljava/lang/reflect/Constructor;
+    invoke-virtual {p0}, Landroid/content/Context;->isRestricted()Z
 
-    move-result-object v0
+    move-result v0
 
-    array-length v1, v0
+    if-eqz v0, :cond_0
 
-    const/4 v2, 0x0
+    const/4 p0, 0x0
 
-    :goto_0
-    if-ge v2, v1, :cond_3
-
-    aget-object v3, v0, v2
-
-    invoke-virtual {v3}, Ljava/lang/reflect/Constructor;->getParameterTypes()[Ljava/lang/Class;
-
-    move-result-object v4
-
-    invoke-static {v4}, Lct;->C([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-virtual {p1, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    return-object v3
+    return-object p0
 
     :cond_0
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    new-instance v2, Landroid/util/TypedValue;
 
-    move-result v3
+    invoke-direct {v2}, Landroid/util/TypedValue;-><init>()V
 
-    invoke-interface {v4}, Ljava/util/List;->size()I
+    const/4 v5, 0x0
 
-    move-result v5
+    const/4 v6, 0x0
 
-    if-ne v3, v5, :cond_2
+    const/4 v3, 0x0
 
-    invoke-interface {v4, p1}, Ljava/util/List;->containsAll(Ljava/util/Collection;)Z
+    const/4 v4, 0x0
 
-    move-result v3
+    move-object v0, p0
 
-    if-nez v3, :cond_1
+    move v1, p1
 
-    goto :goto_1
-
-    :cond_1
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Class "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-static/range {v0 .. v6}, Lq9e;->b(Landroid/content/Context;ILandroid/util/TypedValue;ILs5b;ZZ)Landroid/graphics/Typeface;
 
     move-result-object p0
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, " must have parameters in the proper order: "
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_2
-    :goto_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    const/4 p0, 0x0
 
     return-object p0
 .end method
 
-.method public static final varargs b(Ljava/lang/Class;Ljava/lang/reflect/Constructor;[Ljava/lang/Object;)Loth;
-    .locals 2
+.method public static b(Landroid/content/Context;ILandroid/util/TypedValue;ILs5b;ZZ)Landroid/graphics/Typeface;
+    .locals 12
 
-    :try_start_0
-    array-length v0, p2
+    move-object/from16 v7, p4
 
-    invoke-static {p2, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const/4 v0, 0x1
+
+    invoke-virtual {v2, p1, p2, v0}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
+
+    const-string v9, "ResourcesCompat"
+
+    iget-object v0, p2, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
+
+    if-eqz v0, :cond_c
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v0, "res/"
+
+    invoke-virtual {v4, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    const/4 v10, 0x0
+
+    const/4 v11, -0x3
+
+    if-nez v0, :cond_0
+
+    if-eqz v7, :cond_9
+
+    invoke-virtual {v7, v11}, Ls5b;->e(I)V
+
+    goto/16 :goto_4
+
+    :cond_0
+    iget v0, p2, Landroid/util/TypedValue;->assetCookie:I
+
+    sget-object v6, Lfdh;->b:Lwt8;
+
+    invoke-static {v2, p1, v4, v0, p3}, Lfdh;->c(Landroid/content/res/Resources;ILjava/lang/String;II)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v6, v0}, Lwt8;->c(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Typeface;
+
+    if-eqz v0, :cond_2
+
+    if-eqz v7, :cond_1
+
+    new-instance p0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    move-result-object p1
+    new-instance p2, Lv0e;
 
-    check-cast p1, Loth;
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 p3, 0x4
 
-    return-object p1
+    invoke-direct {p2, v7, p3, v0}, Lv0e;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {p0, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_1
+    move-object v10, v0
+
+    goto/16 :goto_4
+
+    :cond_2
+    if-eqz p6, :cond_3
+
+    goto/16 :goto_4
+
+    :cond_3
+    :try_start_0
+    invoke-virtual {v4}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, ".xml"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v2, p1}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
+
+    move-result-object v0
+
+    invoke-static {v0, v2}, Lu0k;->b(Landroid/content/res/XmlResourceParser;Landroid/content/res/Resources;)Lkl6;
+
+    move-result-object v1
+
+    if-nez v1, :cond_4
+
+    const-string p0, "Failed to find font-family tag"
+
+    invoke-static {v9, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz v7, :cond_9
+
+    invoke-virtual {v7, v11}, Ls5b;->e(I)V
+
+    goto/16 :goto_4
 
     :catch_0
-    move-exception p1
+    move-exception v0
 
-    goto :goto_0
-
-    :catch_1
-    move-exception p1
+    move-object p0, v0
 
     goto :goto_1
 
-    :catch_2
-    move-exception p1
+    :catch_1
+    move-exception v0
+
+    move-object p0, v0
 
     goto :goto_2
 
-    :goto_0
-    new-instance p2, Ljava/lang/RuntimeException;
+    :cond_4
+    iget v5, p2, Landroid/util/TypedValue;->assetCookie:I
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-object v0, p0
 
-    const-string v1, "An exception happened in constructor of "
+    move v3, p1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move v6, p3
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move/from16 v8, p5
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static/range {v0 .. v8}, Lfdh;->b(Landroid/content/Context;Lkl6;Landroid/content/res/Resources;ILjava/lang/String;IILs5b;Z)Landroid/graphics/Typeface;
+
+    move-result-object v10
+
+    goto :goto_4
+
+    :cond_5
+    iget p2, p2, Landroid/util/TypedValue;->assetCookie:I
+
+    sget-object v0, Lfdh;->a:Ldp0;
+
+    move-object v1, p0
+
+    move v3, p1
+
+    move v5, p3
+
+    invoke-virtual/range {v0 .. v5}, Ldp0;->H(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;I)Landroid/graphics/Typeface;
 
     move-result-object p0
 
-    invoke-virtual {p1}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
+    if-eqz p0, :cond_6
+
+    invoke-static {v2, p1, v4, p2, p3}, Lfdh;->c(Landroid/content/res/Resources;ILjava/lang/String;II)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v6, p2, p0}, Lwt8;->d(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_6
+    if-eqz v7, :cond_7
+
+    if-eqz p0, :cond_8
+
+    new-instance p2, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object p3
+
+    invoke-direct {p2, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    new-instance p3, Lv0e;
+
+    const/4 v0, 0x4
+
+    invoke-direct {p3, v7, v0, p0}, Lv0e;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {p2, p3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_7
+    :goto_0
+    move-object v10, p0
+
+    goto :goto_4
+
+    :cond_8
+    invoke-virtual {v7, v11}, Ls5b;->e(I)V
+    :try_end_0
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :goto_1
+    const-string p2, "Failed to read xml resource "
+
+    invoke-virtual {p2, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {v9, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_3
+
+    :goto_2
+    const-string p2, "Failed to parse xml resource "
+
+    invoke-virtual {p2, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {v9, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_3
+    if-eqz v7, :cond_9
+
+    invoke-virtual {v7, v11}, Ls5b;->e(I)V
+
+    :cond_9
+    :goto_4
+    if-nez v10, :cond_b
+
+    if-nez v7, :cond_b
+
+    if-eqz p6, :cond_a
+
+    goto :goto_5
+
+    :cond_a
+    new-instance p0, Landroid/content/res/Resources$NotFoundException;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string p3, "Font resource ID #0x"
+
+    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p2, p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    throw p2
+    const-string p1, " could not be retrieved."
 
-    :goto_1
-    new-instance p2, Ljava/lang/RuntimeException;
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-string v1, "A "
+    move-result-object p1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    throw p0
 
-    const-string p0, " cannot be instantiated."
+    :cond_b
+    :goto_5
+    return-object v10
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_c
+    new-instance p0, Landroid/content/res/Resources$NotFoundException;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    new-instance p3, Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    const-string v0, "Resource \""
 
-    invoke-direct {p2, p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    throw p2
+    invoke-virtual {v2, p1}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
 
-    :goto_2
-    new-instance p2, Ljava/lang/RuntimeException;
+    move-result-object v0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "Failed to access "
+    const-string v0, "\" ("
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object p0
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p2, p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    const-string p1, ") is not a Font: "
 
-    throw p2
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

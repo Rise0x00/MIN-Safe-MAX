@@ -1,343 +1,167 @@
 .class public final Ll17;
-.super Ljava/lang/Object;
+.super Llqf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Li17;
-
-.field public final b:Lk17;
-
-.field public final c:Lm17;
-
-.field public final d:Ln17;
-
-.field public final e:Lo17;
-
-.field public final f:Lw17;
-
-.field public final g:Lx17;
-
-.field public final h:Lz17;
+.field public final L0:Lelb;
 
 
 # direct methods
-.method public constructor <init>(Li17;Lk17;Lm17;Ln17;Lo17;Lw17;Lx17;Lz17;)V
-    .locals 0
+.method public constructor <init>(Lelb;Landroid/content/Context;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lw9b;
 
-    iput-object p1, p0, Ll17;->a:Li17;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Ll17;->b:Lk17;
+    invoke-direct {v0, p2, v1}, Lw9b;-><init>(Landroid/content/Context;Z)V
 
-    iput-object p3, p0, Ll17;->c:Lm17;
+    invoke-direct {p0, v0}, Lb3e;-><init>(Landroid/view/View;)V
 
-    iput-object p4, p0, Ll17;->d:Ln17;
-
-    iput-object p5, p0, Ll17;->e:Lo17;
-
-    iput-object p6, p0, Ll17;->f:Lw17;
-
-    iput-object p7, p0, Ll17;->g:Lx17;
-
-    iput-object p8, p0, Ll17;->h:Lz17;
+    iput-object p1, p0, Ll17;->L0:Lelb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final bridge synthetic D(Lki8;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lk17;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1}, Ll17;->I(Lk17;)V
 
-    return v0
+    return-void
+.end method
+
+.method public final I(Lk17;)V
+    .locals 9
+
+    iget-object v0, p1, Lk17;->Z:Ljava/util/List;
+
+    iget-object v1, p1, Lk17;->d:Ltqc;
+
+    iget-object v2, p0, Lb3e;->a:Landroid/view/View;
+
+    check-cast v2, Lw9b;
+
+    iget-wide v3, p1, Lk17;->A0:J
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Landroid/view/View;->setId(I)V
+
+    iget-object v3, p1, Lk17;->c:Ltqc;
+
+    iget-object v4, v3, Ltqc;->a:Ljava/lang/CharSequence;
+
+    iget-object v5, v3, Ltqc;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    iget-object v6, v2, Lw9b;->d:Landroid/widget/TextView;
+
+    iget-object v7, p0, Ll17;->L0:Lelb;
+
+    if-eqz v4, :cond_1
+
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
+
+    move-result v8
+
+    if-nez v8, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Ll17;
+    invoke-virtual {v6}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
 
-    const/4 v2, 0x0
+    move-result-object v8
 
-    if-nez v1, :cond_1
+    invoke-virtual {v8, v4}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
-    return v2
+    move-result v4
+
+    invoke-virtual {v6}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    cmpl-float v4, v4, v6
+
+    if-lez v4, :cond_1
+
+    iget-object v3, v3, Ltqc;->b:[Ljava/lang/String;
+
+    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v5, v0, v3}, Lelb;->g(Ljava/lang/CharSequence;Ljava/util/List;[Ljava/lang/String;)Ljava/lang/CharSequence;
+
+    move-result-object v5
 
     :cond_1
-    check-cast p1, Ll17;
+    :goto_0
+    invoke-virtual {v2, v5}, Lw9b;->setTitle(Ljava/lang/CharSequence;)V
 
-    iget-object v1, p0, Ll17;->a:Li17;
+    iget-object v3, v1, Ltqc;->a:Ljava/lang/CharSequence;
 
-    iget-object v3, p1, Ll17;->a:Li17;
+    iget-object v4, v1, Ltqc;->a:Ljava/lang/CharSequence;
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    move-result v1
+    move-result-object v3
 
-    if-nez v1, :cond_2
+    invoke-virtual {v2, v3}, Lw9b;->g(Ljava/lang/String;)Z
 
-    return v2
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    iget-object v1, v1, Ltqc;->b:[Ljava/lang/String;
+
+    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v4, v0, v1}, Lelb;->g(Ljava/lang/CharSequence;Ljava/util/List;[Ljava/lang/String;)Ljava/lang/CharSequence;
+
+    move-result-object v4
 
     :cond_2
-    iget-object v1, p0, Ll17;->b:Lk17;
+    invoke-virtual {v2, v4}, Lw9b;->setSubtitle(Ljava/lang/CharSequence;)V
 
-    iget-object v3, p1, Ll17;->b:Lk17;
+    iget-wide v0, p1, Lk17;->a:J
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v3, p1, Lk17;->b:Ljava/lang/String;
 
-    move-result v1
+    iget-object v4, p1, Lk17;->X:Landroid/net/Uri;
 
-    if-nez v1, :cond_3
+    if-eqz v4, :cond_3
 
-    return v2
+    invoke-virtual {v4}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    if-nez v4, :cond_4
 
     :cond_3
-    iget-object v1, p0, Ll17;->c:Lm17;
+    sget-object v4, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
-    iget-object v3, p1, Ll17;->c:Lm17;
+    invoke-virtual {v4}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
+    move-result-object v4
 
     :cond_4
-    iget-object v1, p0, Ll17;->d:Ln17;
+    invoke-virtual {v2, v0, v1, v3, v4}, Lw9b;->i(JLjava/lang/CharSequence;Ljava/lang/String;)V
 
-    iget-object v3, p1, Ll17;->d:Ln17;
+    iget-boolean p1, p1, Lk17;->o:Z
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v2, p1}, Lw9b;->setVerified(Z)V
 
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Ll17;->e:Lo17;
-
-    iget-object v3, p1, Ll17;->e:Lo17;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object v1, p0, Ll17;->f:Lw17;
-
-    iget-object v3, p1, Ll17;->f:Lw17;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-object v1, p0, Ll17;->g:Lx17;
-
-    iget-object v3, p1, Ll17;->g:Lx17;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_8
-
-    return v2
-
-    :cond_8
-    iget-object v1, p0, Ll17;->h:Lz17;
-
-    iget-object p1, p1, Ll17;->h:Lz17;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_9
-
-    return v2
-
-    :cond_9
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Ll17;->a:Li17;
-
-    invoke-virtual {v0}, Li17;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ll17;->b:Lk17;
-
-    invoke-virtual {v1}, Lk17;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Ll17;->c:Lm17;
-
-    iget-object v0, v0, Lm17;->a:[I
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ll17;->d:Ln17;
-
-    invoke-virtual {v1}, Ln17;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Ll17;->e:Lo17;
-
-    invoke-virtual {v0}, Lo17;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ll17;->f:Lw17;
-
-    iget-object v1, v1, Lw17;->a:[I
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Ll17;->g:Lx17;
-
-    invoke-virtual {v0}, Lx17;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ll17;->h:Lz17;
-
-    invoke-virtual {v1}, Lz17;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "GradientsColors(bannerDK="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ll17;->a:Li17;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", buttonTextPromo="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ll17;->b:Lk17;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", complex="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ll17;->c:Lm17;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", emptyBlockIconWrapper="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ll17;->d:Ln17;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", loadingIcon="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ll17;->e:Lo17;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", local="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ll17;->f:Lw17;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", overlay="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ll17;->g:Lx17;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", skeletonGradient="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ll17;->h:Lz17;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

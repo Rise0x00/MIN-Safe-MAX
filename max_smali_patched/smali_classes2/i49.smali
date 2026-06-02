@@ -1,19 +1,20 @@
-.class public final Li49;
-.super Lm49;
+.class public interface abstract Li49;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lh48;
+# virtual methods
+.method public abstract a(I)Landroid/media/MediaCodecInfo;
+.end method
 
+.method public abstract i(Ljava/lang/String;Ljava/lang/String;Landroid/media/MediaCodecInfo$CodecCapabilities;)Z
+.end method
 
-# direct methods
-.method public constructor <init>(Lh48;)V
-    .locals 0
+.method public abstract j(Ljava/lang/String;Landroid/media/MediaCodecInfo$CodecCapabilities;)Z
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract m()I
+.end method
 
-    iput-object p1, p0, Li49;->a:Lh48;
-
-    return-void
+.method public abstract n()Z
 .end method

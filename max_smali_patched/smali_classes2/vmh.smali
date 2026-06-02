@@ -1,131 +1,98 @@
-.class public abstract Lvmh;
+.class public final synthetic Lvmh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxs6;
 
-# static fields
-.field public static final a:Ljava/util/List;
 
-.field public static final b:Ljava/util/List;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lwmh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 13
+.method public synthetic constructor <init>(Lwmh;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p2, p0, Lvmh;->a:I
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    iput-object p1, p0, Lvmh;->b:Lwmh;
 
-    invoke-static {v0, v1}, Ls66;->a(FF)J
-
-    move-result-wide v2
-
-    new-instance v4, Ls66;
-
-    invoke-direct {v4, v2, v3}, Ls66;-><init>(J)V
-
-    const/high16 v2, 0x44610000    # 900.0f
-
-    invoke-static {v2, v1}, Ls66;->a(FF)J
-
-    move-result-wide v5
-
-    new-instance v3, Ls66;
-
-    invoke-direct {v3, v5, v6}, Ls66;-><init>(J)V
-
-    const v5, 0x44c1c000    # 1550.0f
-
-    invoke-static {v5, v0}, Ls66;->a(FF)J
-
-    move-result-wide v6
-
-    new-instance v8, Ls66;
-
-    invoke-direct {v8, v6, v7}, Ls66;-><init>(J)V
-
-    const v6, 0x44dac000    # 1750.0f
-
-    invoke-static {v6, v1}, Ls66;->a(FF)J
-
-    move-result-wide v9
-
-    new-instance v7, Ls66;
-
-    invoke-direct {v7, v9, v10}, Ls66;-><init>(J)V
-
-    const/high16 v9, 0x44fa0000    # 2000.0f
-
-    invoke-static {v9, v1}, Ls66;->a(FF)J
-
-    move-result-wide v10
-
-    new-instance v12, Ls66;
-
-    invoke-direct {v12, v10, v11}, Ls66;-><init>(J)V
-
-    filled-new-array {v4, v3, v8, v7, v12}, [Ls66;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v3
-
-    sput-object v3, Lvmh;->a:Ljava/util/List;
-
-    new-instance v3, Lhs;
-
-    const v4, 0x3ba3d70a    # 0.005f
-
-    invoke-direct {v3, v0, v0, v4, v0}, Lhs;-><init>(FFFF)V
-
-    new-instance v4, Lhs;
-
-    const v7, 0x3f03d70a    # 0.515f
-
-    const/high16 v8, 0x43370000    # 183.0f
-
-    invoke-direct {v4, v2, v0, v7, v8}, Lhs;-><init>(FFFF)V
-
-    new-instance v0, Lhs;
-
-    const v2, 0x3f5be76d    # 0.859f
-
-    const/high16 v7, 0x43890000    # 274.0f
-
-    const v8, 0x3f05e354    # 0.523f
-
-    invoke-direct {v0, v5, v8, v2, v7}, Lhs;-><init>(FFFF)V
-
-    new-instance v2, Lhs;
-
-    const v5, 0x3f7020c5    # 0.938f
-
-    const v7, 0x43988000    # 305.0f
-
-    const v8, 0x3f445a1d    # 0.767f
-
-    invoke-direct {v2, v6, v8, v5, v7}, Lhs;-><init>(FFFF)V
-
-    new-instance v5, Lhs;
-
-    const v6, 0x3f7eb852    # 0.995f
-
-    const/high16 v7, 0x43b40000    # 360.0f
-
-    invoke-direct {v5, v9, v6, v1, v7}, Lhs;-><init>(FFFF)V
-
-    filled-new-array {v3, v4, v0, v2, v5}, [Lhs;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Lvmh;->b:Ljava/util/List;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lvmh;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    sget v0, Lxhe;->v2:I
+
+    iget-object v1, p0, Lvmh;->b:Lwmh;
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    sget v0, Lxhe;->N2:I
+
+    iget-object v1, p0, Lvmh;->b:Lwmh;
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    sget v0, Lxhe;->O1:I
+
+    iget-object v1, p0, Lvmh;->b:Lwmh;
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

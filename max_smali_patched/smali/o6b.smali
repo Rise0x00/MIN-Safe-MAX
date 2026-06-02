@@ -1,61 +1,116 @@
-.class public abstract Lo6b;
-.super Ljava/lang/Object;
+.class public final Lo6b;
+.super Lao0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:J
-
-.field public static final b:J
-
-.field public static final c:J
-
-.field public static final d:J
-
-.field public static final e:J
-
-.field public static final f:J
+# instance fields
+.field public final synthetic b:Lt6b;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lt6b;)V
+    .locals 0
 
-    sget v0, La8d;->call_history_info_copy_link:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    int-to-long v0, v0
+    iput-object p1, p0, Lo6b;->b:Lt6b;
 
-    sput-wide v0, Lo6b;->a:J
+    return-void
+.end method
 
-    sget v0, La8d;->call_history_info_open_chat_call:I
 
-    int-to-long v0, v0
+# virtual methods
+.method public final b(Ljava/lang/String;Ljava/lang/Object;Landroid/graphics/drawable/Animatable;)V
+    .locals 1
 
-    sput-wide v0, Lo6b;->b:J
+    check-cast p2, Ltk7;
 
-    sget v0, La8d;->call_history_info_recreate:I
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    int-to-long v0, v0
+    move-result-object p1
 
-    sput-wide v0, Lo6b;->c:J
+    invoke-virtual {p1}, Landroid/os/Looper;->isCurrentThread()Z
 
-    sget v0, La8d;->call_history_info_send_to_chat:I
+    move-result p1
 
-    int-to-long v0, v0
+    iget-object p2, p0, Lo6b;->b:Lt6b;
 
-    sput-wide v0, Lo6b;->d:J
+    if-eqz p1, :cond_1
 
-    sget v0, La8d;->call_history_info_share_link:I
+    iget-object p1, p2, Lt6b;->R0:Lxs6;
 
-    int-to-long v0, v0
+    if-eqz p1, :cond_0
 
-    sput-wide v0, Lo6b;->e:J
+    invoke-interface {p1}, Lxs6;->invoke()Ljava/lang/Object;
 
-    sget v0, La8d;->call_history_info_start_call:I
+    :cond_0
+    invoke-virtual {p2}, Landroid/view/View;->invalidate()V
 
-    int-to-long v0, v0
+    return-void
 
-    sput-wide v0, Lo6b;->f:J
+    :cond_1
+    invoke-virtual {p2}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    new-instance p3, Ln6b;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p3, p2, v0}, Ln6b;-><init>(Lt6b;I)V
+
+    invoke-virtual {p1, p3}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :cond_2
+    new-instance p1, Ln6b;
+
+    const/4 p3, 0x1
+
+    invoke-direct {p1, p2, p3}, Ln6b;-><init>(Lt6b;I)V
+
+    invoke-virtual {p2, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final d(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 4
+
+    iget-object v0, p0, Lo6b;->b:Lt6b;
+
+    iget-object v1, v0, Lt6b;->a:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Failed to load image. ID: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v1, p1, p2}, Lnm4;->m0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {v0}, Landroid/view/View;->postInvalidate()V
+
+    return-void
+.end method
+
+.method public final onIntermediateImageSet(Ljava/lang/String;Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p2, Ltk7;
+
+    iget-object p1, p0, Lo6b;->b:Lt6b;
+
+    invoke-virtual {p1}, Landroid/view/View;->postInvalidate()V
 
     return-void
 .end method

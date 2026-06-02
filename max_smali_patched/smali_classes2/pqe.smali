@@ -2,56 +2,47 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqqe;
+
 
 # instance fields
-.field public final a:Lkv1;
-
-.field public final b:Loqe;
+.field public final a:Landroid/view/ScrollFeedbackProvider;
 
 
 # direct methods
-.method public constructor <init>(Lkv1;Loqe;)V
+.method public constructor <init>(Landroidx/core/widget/NestedScrollView;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpqe;->a:Lkv1;
+    invoke-static {p1}, Landroid/view/ScrollFeedbackProvider;->createProvider(Landroid/view/View;)Landroid/view/ScrollFeedbackProvider;
 
-    iput-object p2, p0, Lpqe;->b:Loqe;
+    move-result-object p1
+
+    iput-object p1, p0, Lpqe;->a:Landroid/view/ScrollFeedbackProvider;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final onScrollLimit(IIIZ)V
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lpqe;->a:Landroid/view/ScrollFeedbackProvider;
 
-    const-string v1, "DisplayLayoutItem{videoTrackParticipantKey="
+    invoke-interface {v0, p1, p2, p3, p4}, Landroid/view/ScrollFeedbackProvider;->onScrollLimit(IIIZ)V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-void
+.end method
 
-    iget-object v1, p0, Lpqe;->a:Lkv1;
+.method public final onScrollProgress(IIII)V
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lpqe;->a:Landroid/view/ScrollFeedbackProvider;
 
-    const-string v1, ", layout="
+    invoke-interface {v0, p1, p2, p3, p4}, Landroid/view/ScrollFeedbackProvider;->onScrollProgress(IIII)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lpqe;->b:Loqe;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

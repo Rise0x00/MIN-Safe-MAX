@@ -4,5 +4,8 @@
 
 
 # virtual methods
-.method public abstract x(Ldae;)V
+.method public abstract d()V
+.end method
+
+.method public abstract e(ILjava/lang/Object;)V
 .end method

@@ -1,180 +1,51 @@
 .class public final Lcyd;
-.super Lb3d;
+.super Lz84;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
+.field public final synthetic X:Ldyd;
 
-.field public b:J
+.field public Y:I
 
-.field public c:J
+.field public d:Ljava/util/List;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Ldyd;Lz84;)V
+    .locals 0
+
+    iput-object p1, p0, Lcyd;->X:Ldyd;
+
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Lz2d;Lc3d;Lyi;)V
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    :try_start_0
-    iget-object p2, p1, Lz2d;->P0:Lhyf;
+    iput-object p1, p0, Lcyd;->o:Ljava/lang/Object;
 
-    iget-object p3, p2, Lhyf;->a:Ljava/util/concurrent/ConcurrentHashMap;
+    iget p1, p0, Lcyd;->Y:I
 
-    iget v0, p0, Lcyd;->a:I
+    const/high16 v0, -0x80000000
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    or-int/2addr p1, v0
 
-    move-result-object v0
+    iput p1, p0, Lcyd;->Y:I
 
-    invoke-virtual {p3, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Ld3d;
-
-    if-eqz p3, :cond_0
-
-    iget-wide v0, p2, Lhyf;->y:J
-
-    iget-wide v2, p0, Lcyd;->c:J
-
-    iget-object p3, p3, Ld3d;->e:Layf;
-
-    invoke-virtual {p3, v2, v3}, Layf;->g0(J)J
-
-    move-result-wide v2
-
-    add-long/2addr v2, v0
-
-    iput-wide v2, p2, Lhyf;->y:J
-    :try_end_0
-    .catch Ltech/kwik/core/impl/TransportError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :cond_0
-    return-void
-
-    :catch_0
-    move-exception p2
-
-    iget p2, p2, Ltech/kwik/core/impl/TransportError;->a:I
-
-    invoke-static {p2}, Lpqb;->f(I)I
-
-    move-result p2
-
-    int-to-long p2, p2
+    iget-object p1, p0, Lcyd;->X:Ldyd;
 
     const/4 v0, 0x0
 
-    const/4 v1, 0x1
+    invoke-virtual {p1, v0, p0}, Ldyd;->e(Ljava/util/List;Lz84;)Ljava/lang/Object;
 
-    invoke-virtual {p1, p2, p3, v0, v1}, Lz2d;->g(JLjava/lang/String;I)V
+    move-result-object p1
 
-    return-void
-.end method
-
-.method public final b()I
-    .locals 4
-
-    iget v0, p0, Lcyd;->a:I
-
-    int-to-long v0, v0
-
-    invoke-static {v0, v1}, Lv4j;->a(J)I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    iget-wide v1, p0, Lcyd;->b:J
-
-    invoke-static {v1, v2}, Lv4j;->a(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    iget-wide v2, p0, Lcyd;->c:J
-
-    invoke-static {v2, v3}, Lv4j;->a(J)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final f(Ljava/nio/ByteBuffer;)V
-    .locals 2
-
-    const/4 v0, 0x4
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    iget v0, p0, Lcyd;->a:I
-
-    invoke-static {v0, p1}, Lv4j;->b(ILjava/nio/ByteBuffer;)I
-
-    iget-wide v0, p0, Lcyd;->b:J
-
-    invoke-static {v0, v1, p1}, Lv4j;->c(JLjava/nio/ByteBuffer;)I
-
-    iget-wide v0, p0, Lcyd;->c:J
-
-    invoke-static {v0, v1, p1}, Lv4j;->c(JLjava/nio/ByteBuffer;)I
-
-    return-void
-.end method
-
-.method public final g(Ljava/nio/ByteBuffer;)V
-    .locals 2
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
-
-    invoke-static {p1}, Lb3d;->e(Ljava/nio/ByteBuffer;)I
-
-    move-result v0
-
-    iput v0, p0, Lcyd;->a:I
-
-    invoke-static {p1}, Lv4j;->j(Ljava/nio/ByteBuffer;)J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcyd;->b:J
-
-    invoke-static {p1}, Lv4j;->j(Ljava/nio/ByteBuffer;)J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcyd;->c:J
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 7
-
-    iget v0, p0, Lcyd;->a:I
-
-    iget-wide v1, p0, Lcyd;->b:J
-
-    iget-wide v3, p0, Lcyd;->c:J
-
-    const-string v5, "ResetStreamFrame["
-
-    const-string v6, "|"
-
-    invoke-static {v0, v1, v2, v5, v6}, Lxi4;->l(IJLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "]"
-
-    invoke-static {v3, v4, v6, v1, v0}, Lxi4;->h(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

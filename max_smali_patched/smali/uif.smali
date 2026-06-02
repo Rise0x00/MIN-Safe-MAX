@@ -1,46 +1,69 @@
-.class public final synthetic Luif;
-.super Ljava/lang/Object;
+.class public final Luif;
+.super Lp4;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/WindowInsetsController$OnControllableInsetsChangedListener;
 
 
 # instance fields
-.field public final synthetic a:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public a:J
 
-
-# direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicBoolean;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Luif;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    return-void
-.end method
+.field public b:Lpb2;
 
 
 # virtual methods
-.method public final onControllableInsetsChanged(Landroid/view/WindowInsetsController;I)V
-    .locals 0
+.method public final a(Lo4;)Z
+    .locals 4
 
-    iget-object p1, p0, Luif;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    check-cast p1, Lsif;
 
-    and-int/lit8 p2, p2, 0x8
+    iget-wide v0, p0, Luif;->a:J
 
-    if-eqz p2, :cond_0
+    const-wide/16 v2, 0x0
 
-    const/4 p2, 0x1
+    cmp-long v0, v0, v2
 
-    goto :goto_0
+    if-ltz v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_0
-    const/4 p2, 0x0
+    iget-wide v0, p1, Lsif;->z0:J
 
-    :goto_0
-    invoke-virtual {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    iget-wide v2, p1, Lsif;->A0:J
 
-    return-void
+    cmp-long v2, v0, v2
+
+    if-gez v2, :cond_1
+
+    iput-wide v0, p1, Lsif;->A0:J
+
+    :cond_1
+    iput-wide v0, p0, Luif;->a:J
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final b(Lo4;)[Lkotlin/coroutines/Continuation;
+    .locals 4
+
+    check-cast p1, Lsif;
+
+    iget-wide v0, p0, Luif;->a:J
+
+    const-wide/16 v2, -0x1
+
+    iput-wide v2, p0, Luif;->a:J
+
+    const/4 v2, 0x0
+
+    iput-object v2, p0, Luif;->b:Lpb2;
+
+    invoke-virtual {p1, v0, v1}, Lsif;->y(J)[Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    return-object p1
 .end method

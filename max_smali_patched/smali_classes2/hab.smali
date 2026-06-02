@@ -1,37 +1,31 @@
-.class public final Lhab;
+.class public abstract Lhab;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
+# static fields
+.field public static final a:I
 
-.field public final b:Lo58;
+.field public static final b:I
 
-.field public final c:Lo58;
-
-.field public final d:Lo58;
+.field public static final c:I
 
 
 # direct methods
-.method public constructor <init>(Lo58;Lo58;Lo58;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lpnd;->forward_message_hint:I
 
-    const-class v0, Lhab;
+    sput v0, Lhab;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    sget v0, Lpnd;->forward_toolbar_action_cancel_selection:I
 
-    move-result-object v0
+    sput v0, Lhab;->b:I
 
-    iput-object v0, p0, Lhab;->a:Ljava/lang/String;
+    sget v0, Lpnd;->forward_toolbar_action_select:I
 
-    iput-object p1, p0, Lhab;->b:Lo58;
-
-    iput-object p2, p0, Lhab;->c:Lo58;
-
-    iput-object p3, p0, Lhab;->d:Lo58;
+    sput v0, Lhab;->c:I
 
     return-void
 .end method

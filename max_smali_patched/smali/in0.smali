@@ -1,413 +1,984 @@
 .class public final Lin0;
-.super Lpx3;
+.super Ll77;
 .source "SourceFile"
 
 
 # instance fields
-.field public final f:Lho;
+.field public s0:I
 
-.field public final synthetic g:I
+.field public t0:Z
 
+.field public u0:I
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;Lbg8;I)V
-    .locals 0
-
-    iput p3, p0, Lin0;->g:I
-
-    invoke-direct {p0, p1, p2}, Lpx3;-><init>(Landroid/content/Context;Lbg8;)V
-
-    new-instance p1, Lho;
-
-    const/4 p2, 0x3
-
-    invoke-direct {p1, p2, p0}, Lho;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lin0;->f:Lho;
-
-    return-void
-.end method
+.field public v0:Z
 
 
 # virtual methods
-.method public final i()Ljava/lang/Object;
-    .locals 5
+.method public final A()Z
+    .locals 1
 
-    iget v0, p0, Lin0;->g:I
+    iget-boolean v0, p0, Lin0;->v0:Z
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    iget-object v0, p0, Lpx3;->b:Ljava/lang/Object;
+.method public final B()Z
+    .locals 1
 
-    check-cast v0, Landroid/content/Context;
+    iget-boolean v0, p0, Lin0;->v0:Z
 
-    const/4 v1, 0x0
+    return v0
+.end method
 
-    invoke-virtual {p0}, Lin0;->u()Landroid/content/IntentFilter;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {v0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object v2
-
-    if-nez v2, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v3
-
-    const v4, -0x46671f94
-
-    if-eq v3, v4, :cond_2
-
-    const v4, -0x2b8fb65c
-
-    if-eq v3, v4, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const-string v3, "android.intent.action.DEVICE_STORAGE_OK"
-
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "android.intent.action.DEVICE_STORAGE_LOW"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    :cond_3
-    :goto_0
-    move v1, v2
-
-    :cond_4
-    :goto_1
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Landroid/content/IntentFilter;
-
-    const-string v1, "android.intent.action.BATTERY_CHANGED"
-
-    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lpx3;->b:Ljava/lang/Object;
-
-    check-cast v1, Landroid/content/Context;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    if-nez v0, :cond_5
-
-    invoke-static {}, Lkgi;->g()Lkgi;
-
-    move-result-object v0
-
-    sget-object v1, Lkn0;->a:Ljava/lang/String;
-
-    const-string v2, "getInitialState - null intent received"
-
-    invoke-virtual {v0, v1, v2}, Lkgi;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    goto :goto_3
-
-    :cond_5
-    const-string v1, "status"
-
-    const/4 v2, -0x1
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v1
-
-    const-string v3, "level"
-
-    invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v3
-
-    const-string v4, "scale"
-
-    invoke-virtual {v0, v4, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v0
-
-    int-to-float v2, v3
-
-    int-to-float v0, v0
-
-    div-float/2addr v2, v0
+.method public final T()Z
+    .locals 10
 
     const/4 v0, 0x1
 
-    if-eq v1, v0, :cond_7
+    const/4 v1, 0x0
 
-    const v1, 0x3e19999a    # 0.15f
+    move v3, v0
 
-    cmpl-float v1, v2, v1
+    move v2, v1
 
-    if-lez v1, :cond_6
+    :goto_0
+    iget v4, p0, Ll77;->r0:I
+
+    const/4 v5, 0x3
+
+    const/4 v6, 0x2
+
+    if-ge v2, v4, :cond_5
+
+    iget-object v4, p0, Ll77;->q0:[Llz3;
+
+    aget-object v4, v4, v2
+
+    iget-boolean v7, p0, Lin0;->t0:Z
+
+    if-nez v7, :cond_0
+
+    invoke-virtual {v4}, Llz3;->c()Z
+
+    move-result v7
+
+    if-nez v7, :cond_0
 
     goto :goto_2
 
-    :cond_6
-    const/4 v0, 0x0
+    :cond_0
+    iget v7, p0, Lin0;->s0:I
 
-    :cond_7
+    if-eqz v7, :cond_1
+
+    if-ne v7, v0, :cond_2
+
+    :cond_1
+    invoke-virtual {v4}, Llz3;->A()Z
+
+    move-result v7
+
+    if-nez v7, :cond_2
+
+    :goto_1
+    move v3, v1
+
+    goto :goto_2
+
+    :cond_2
+    iget v7, p0, Lin0;->s0:I
+
+    if-eq v7, v6, :cond_3
+
+    if-ne v7, v5, :cond_4
+
+    :cond_3
+    invoke-virtual {v4}, Llz3;->B()Z
+
+    move-result v4
+
+    if-nez v4, :cond_4
+
+    goto :goto_1
+
+    :cond_4
     :goto_2
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    add-int/lit8 v2, v2, 0x1
 
-    move-result-object v0
+    goto :goto_0
+
+    :cond_5
+    if-eqz v3, :cond_13
+
+    if-lez v4, :cond_13
+
+    move v2, v1
+
+    move v3, v2
 
     :goto_3
-    return-object v0
+    iget v4, p0, Ll77;->r0:I
 
-    :pswitch_1
-    new-instance v0, Landroid/content/IntentFilter;
+    if-ge v1, v4, :cond_10
 
-    const-string v1, "android.intent.action.BATTERY_CHANGED"
+    iget-object v4, p0, Ll77;->q0:[Llz3;
 
-    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+    aget-object v4, v4, v1
 
-    iget-object v1, p0, Lpx3;->b:Ljava/lang/Object;
+    iget-boolean v7, p0, Lin0;->t0:Z
 
-    check-cast v1, Landroid/content/Context;
+    if-nez v7, :cond_6
 
-    const/4 v2, 0x0
+    invoke-virtual {v4}, Llz3;->c()Z
 
-    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    move-result v7
 
-    move-result-object v0
+    if-nez v7, :cond_6
 
-    if-nez v0, :cond_8
+    goto/16 :goto_5
 
-    invoke-static {}, Lkgi;->g()Lkgi;
+    :cond_6
+    const/4 v7, 0x5
 
-    move-result-object v0
+    const/4 v8, 0x4
 
-    sget-object v1, Ljn0;->a:Ljava/lang/String;
+    if-nez v3, :cond_b
 
-    const-string v2, "getInitialState - null intent received"
+    iget v3, p0, Lin0;->s0:I
 
-    invoke-virtual {v0, v1, v2}, Lkgi;->e(Ljava/lang/String;Ljava/lang/String;)V
+    if-nez v3, :cond_7
 
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    invoke-virtual {v4, v6}, Llz3;->i(I)Lry3;
 
-    goto :goto_6
+    move-result-object v2
+
+    invoke-virtual {v2}, Lry3;->d()I
+
+    move-result v2
+
+    goto :goto_4
+
+    :cond_7
+    if-ne v3, v0, :cond_8
+
+    invoke-virtual {v4, v8}, Llz3;->i(I)Lry3;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lry3;->d()I
+
+    move-result v2
+
+    goto :goto_4
 
     :cond_8
-    const-string v1, "status"
+    if-ne v3, v6, :cond_9
 
-    const/4 v2, -0x1
+    invoke-virtual {v4, v5}, Llz3;->i(I)Lry3;
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    move-result-object v2
 
-    move-result v0
+    invoke-virtual {v2}, Lry3;->d()I
 
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_a
-
-    const/4 v1, 0x5
-
-    if-ne v0, v1, :cond_9
+    move-result v2
 
     goto :goto_4
 
     :cond_9
-    const/4 v0, 0x0
+    if-ne v3, v5, :cond_a
 
-    goto :goto_5
+    invoke-virtual {v4, v7}, Llz3;->i(I)Lry3;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lry3;->d()I
+
+    move-result v2
 
     :cond_a
     :goto_4
-    const/4 v0, 0x1
+    move v3, v0
+
+    :cond_b
+    iget v9, p0, Lin0;->s0:I
+
+    if-nez v9, :cond_c
+
+    invoke-virtual {v4, v6}, Llz3;->i(I)Lry3;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lry3;->d()I
+
+    move-result v4
+
+    invoke-static {v2, v4}, Ljava/lang/Math;->min(II)I
+
+    move-result v2
+
+    goto :goto_5
+
+    :cond_c
+    if-ne v9, v0, :cond_d
+
+    invoke-virtual {v4, v8}, Llz3;->i(I)Lry3;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lry3;->d()I
+
+    move-result v4
+
+    invoke-static {v2, v4}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    goto :goto_5
+
+    :cond_d
+    if-ne v9, v6, :cond_e
+
+    invoke-virtual {v4, v5}, Llz3;->i(I)Lry3;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lry3;->d()I
+
+    move-result v4
+
+    invoke-static {v2, v4}, Ljava/lang/Math;->min(II)I
+
+    move-result v2
+
+    goto :goto_5
+
+    :cond_e
+    if-ne v9, v5, :cond_f
+
+    invoke-virtual {v4, v7}, Llz3;->i(I)Lry3;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lry3;->d()I
+
+    move-result v4
+
+    invoke-static {v2, v4}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    :cond_f
+    :goto_5
+    add-int/lit8 v1, v1, 0x1
+
+    goto/16 :goto_3
+
+    :cond_10
+    iget v1, p0, Lin0;->u0:I
+
+    add-int/2addr v2, v1
+
+    iget v1, p0, Lin0;->s0:I
+
+    if-eqz v1, :cond_12
+
+    if-ne v1, v0, :cond_11
+
+    goto :goto_6
+
+    :cond_11
+    invoke-virtual {p0, v2, v2}, Llz3;->K(II)V
+
+    goto :goto_7
+
+    :cond_12
+    :goto_6
+    invoke-virtual {p0, v2, v2}, Llz3;->J(II)V
+
+    :goto_7
+    iput-boolean v0, p0, Lin0;->v0:Z
+
+    return v0
+
+    :cond_13
+    return v1
+.end method
+
+.method public final U()I
+    .locals 3
+
+    iget v0, p0, Lin0;->s0:I
+
+    if-eqz v0, :cond_1
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v2, 0x2
+
+    if-eq v0, v2, :cond_0
+
+    const/4 v2, 0x3
+
+    if-eq v0, v2, :cond_0
+
+    const/4 v0, -0x1
+
+    return v0
+
+    :cond_0
+    return v1
+
+    :cond_1
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final b(Lwd8;Z)V
+    .locals 16
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    iget-object v2, v0, Llz3;->Q:[Lry3;
+
+    const/4 v3, 0x0
+
+    iget-object v4, v0, Llz3;->I:Lry3;
+
+    aput-object v4, v2, v3
+
+    const/4 v5, 0x2
+
+    iget-object v6, v0, Llz3;->J:Lry3;
+
+    aput-object v6, v2, v5
+
+    const/4 v7, 0x1
+
+    iget-object v8, v0, Llz3;->K:Lry3;
+
+    aput-object v8, v2, v7
+
+    const/4 v9, 0x3
+
+    iget-object v10, v0, Llz3;->L:Lry3;
+
+    aput-object v10, v2, v9
+
+    move v11, v3
+
+    :goto_0
+    array-length v12, v2
+
+    if-ge v11, v12, :cond_0
+
+    aget-object v12, v2, v11
+
+    invoke-virtual {v1, v12}, Lwd8;->k(Ljava/lang/Object;)Lruf;
+
+    move-result-object v13
+
+    iput-object v13, v12, Lry3;->i:Lruf;
+
+    add-int/lit8 v11, v11, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    iget v11, v0, Lin0;->s0:I
+
+    if-ltz v11, :cond_1e
+
+    const/4 v12, 0x4
+
+    if-ge v11, v12, :cond_1e
+
+    aget-object v2, v2, v11
+
+    iget-boolean v11, v0, Lin0;->v0:Z
+
+    if-nez v11, :cond_1
+
+    invoke-virtual {v0}, Lin0;->T()Z
+
+    :cond_1
+    iget-boolean v11, v0, Lin0;->v0:Z
+
+    if-eqz v11, :cond_5
+
+    iput-boolean v3, v0, Lin0;->v0:Z
+
+    iget v2, v0, Lin0;->s0:I
+
+    if-eqz v2, :cond_4
+
+    if-ne v2, v7, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    if-eq v2, v5, :cond_3
+
+    if-ne v2, v9, :cond_1e
+
+    :cond_3
+    iget-object v2, v6, Lry3;->i:Lruf;
+
+    iget v3, v0, Llz3;->Z:I
+
+    invoke-virtual {v1, v2, v3}, Lwd8;->d(Lruf;I)V
+
+    iget-object v2, v10, Lry3;->i:Lruf;
+
+    iget v3, v0, Llz3;->Z:I
+
+    invoke-virtual {v1, v2, v3}, Lwd8;->d(Lruf;I)V
+
+    return-void
+
+    :cond_4
+    :goto_1
+    iget-object v2, v4, Lry3;->i:Lruf;
+
+    iget v3, v0, Llz3;->Y:I
+
+    invoke-virtual {v1, v2, v3}, Lwd8;->d(Lruf;I)V
+
+    iget-object v2, v8, Lry3;->i:Lruf;
+
+    iget v3, v0, Llz3;->Y:I
+
+    invoke-virtual {v1, v2, v3}, Lwd8;->d(Lruf;I)V
+
+    return-void
+
+    :cond_5
+    move v11, v3
+
+    :goto_2
+    iget v13, v0, Ll77;->r0:I
+
+    if-ge v11, v13, :cond_b
+
+    iget-object v13, v0, Ll77;->q0:[Llz3;
+
+    aget-object v13, v13, v11
+
+    iget-boolean v14, v0, Lin0;->t0:Z
+
+    if-nez v14, :cond_6
+
+    invoke-virtual {v13}, Llz3;->c()Z
+
+    move-result v14
+
+    if-nez v14, :cond_6
+
+    goto :goto_4
+
+    :cond_6
+    iget v14, v0, Lin0;->s0:I
+
+    if-eqz v14, :cond_7
+
+    if-ne v14, v7, :cond_8
+
+    :cond_7
+    iget-object v15, v13, Llz3;->p0:[I
+
+    aget v15, v15, v3
+
+    if-ne v15, v9, :cond_8
+
+    iget-object v15, v13, Llz3;->I:Lry3;
+
+    iget-object v15, v15, Lry3;->f:Lry3;
+
+    if-eqz v15, :cond_8
+
+    iget-object v15, v13, Llz3;->K:Lry3;
+
+    iget-object v15, v15, Lry3;->f:Lry3;
+
+    if-eqz v15, :cond_8
+
+    :goto_3
+    move v11, v7
+
+    goto :goto_5
+
+    :cond_8
+    if-eq v14, v5, :cond_9
+
+    if-ne v14, v9, :cond_a
+
+    :cond_9
+    iget-object v14, v13, Llz3;->p0:[I
+
+    aget v14, v14, v7
+
+    if-ne v14, v9, :cond_a
+
+    iget-object v14, v13, Llz3;->J:Lry3;
+
+    iget-object v14, v14, Lry3;->f:Lry3;
+
+    if-eqz v14, :cond_a
+
+    iget-object v13, v13, Llz3;->L:Lry3;
+
+    iget-object v13, v13, Lry3;->f:Lry3;
+
+    if-eqz v13, :cond_a
+
+    goto :goto_3
+
+    :cond_a
+    :goto_4
+    add-int/lit8 v11, v11, 0x1
+
+    goto :goto_2
+
+    :cond_b
+    move v11, v3
 
     :goto_5
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {v4}, Lry3;->g()Z
 
-    move-result-object v0
+    move-result v13
 
+    if-nez v13, :cond_d
+
+    invoke-virtual {v8}, Lry3;->g()Z
+
+    move-result v13
+
+    if-eqz v13, :cond_c
+
+    goto :goto_6
+
+    :cond_c
+    move v13, v3
+
+    goto :goto_7
+
+    :cond_d
     :goto_6
-    return-object v0
+    move v13, v7
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    :goto_7
+    invoke-virtual {v6}, Lry3;->g()Z
 
-.method public final r()V
-    .locals 4
+    move-result v14
 
-    invoke-static {}, Lkgi;->g()Lkgi;
+    if-nez v14, :cond_f
 
-    move-result-object v0
+    invoke-virtual {v10}, Lry3;->g()Z
 
-    sget-object v1, Luu0;->a:Ljava/lang/String;
+    move-result v14
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz v14, :cond_e
 
-    move-result-object v2
+    goto :goto_8
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    :cond_e
+    move v14, v3
 
-    move-result-object v2
+    goto :goto_9
 
-    const-string v3, ": registering receiver"
+    :cond_f
+    :goto_8
+    move v14, v7
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    :goto_9
+    if-nez v11, :cond_14
 
-    move-result-object v2
+    iget v11, v0, Lin0;->s0:I
 
-    invoke-virtual {v0, v1, v2}, Lkgi;->c(Ljava/lang/String;Ljava/lang/String;)V
+    if-nez v11, :cond_10
 
-    iget-object v0, p0, Lpx3;->b:Ljava/lang/Object;
+    if-nez v13, :cond_13
 
-    check-cast v0, Landroid/content/Context;
+    :cond_10
+    if-ne v11, v5, :cond_11
 
-    iget-object v1, p0, Lin0;->f:Lho;
+    if-nez v14, :cond_13
 
-    invoke-virtual {p0}, Lin0;->u()Landroid/content/IntentFilter;
+    :cond_11
+    if-ne v11, v7, :cond_12
 
-    move-result-object v2
+    if-nez v13, :cond_13
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    :cond_12
+    if-ne v11, v9, :cond_14
 
+    if-eqz v14, :cond_14
+
+    :cond_13
+    move v11, v7
+
+    goto :goto_a
+
+    :cond_14
+    move v11, v3
+
+    :goto_a
+    if-nez v11, :cond_15
+
+    move v11, v12
+
+    goto :goto_b
+
+    :cond_15
+    const/4 v11, 0x5
+
+    :goto_b
+    move v13, v3
+
+    :goto_c
+    iget v14, v0, Ll77;->r0:I
+
+    if-ge v13, v14, :cond_1a
+
+    iget-object v14, v0, Ll77;->q0:[Llz3;
+
+    aget-object v14, v14, v13
+
+    iget-boolean v15, v0, Lin0;->t0:Z
+
+    if-nez v15, :cond_16
+
+    invoke-virtual {v14}, Llz3;->c()Z
+
+    move-result v15
+
+    if-nez v15, :cond_16
+
+    goto :goto_10
+
+    :cond_16
+    iget-object v15, v14, Llz3;->Q:[Lry3;
+
+    iget v9, v0, Lin0;->s0:I
+
+    aget-object v9, v15, v9
+
+    invoke-virtual {v1, v9}, Lwd8;->k(Ljava/lang/Object;)Lruf;
+
+    move-result-object v9
+
+    iget-object v14, v14, Llz3;->Q:[Lry3;
+
+    iget v15, v0, Lin0;->s0:I
+
+    aget-object v14, v14, v15
+
+    iput-object v9, v14, Lry3;->i:Lruf;
+
+    iget-object v7, v14, Lry3;->f:Lry3;
+
+    if-eqz v7, :cond_17
+
+    iget-object v7, v7, Lry3;->d:Llz3;
+
+    if-ne v7, v0, :cond_17
+
+    iget v7, v14, Lry3;->g:I
+
+    goto :goto_d
+
+    :cond_17
+    move v7, v3
+
+    :goto_d
+    if-eqz v15, :cond_19
+
+    if-ne v15, v5, :cond_18
+
+    goto :goto_e
+
+    :cond_18
+    iget-object v14, v2, Lry3;->i:Lruf;
+
+    iget v15, v0, Lin0;->u0:I
+
+    add-int/2addr v15, v7
+
+    invoke-virtual {v1}, Lwd8;->l()Lyu;
+
+    move-result-object v5
+
+    invoke-virtual {v1}, Lwd8;->m()Lruf;
+
+    move-result-object v12
+
+    iput v3, v12, Lruf;->d:I
+
+    invoke-virtual {v5, v14, v9, v12, v15}, Lyu;->b(Lruf;Lruf;Lruf;I)V
+
+    invoke-virtual {v1, v5}, Lwd8;->c(Lyu;)V
+
+    goto :goto_f
+
+    :cond_19
+    :goto_e
+    iget-object v5, v2, Lry3;->i:Lruf;
+
+    iget v12, v0, Lin0;->u0:I
+
+    sub-int/2addr v12, v7
+
+    invoke-virtual {v1}, Lwd8;->l()Lyu;
+
+    move-result-object v14
+
+    invoke-virtual {v1}, Lwd8;->m()Lruf;
+
+    move-result-object v15
+
+    iput v3, v15, Lruf;->d:I
+
+    invoke-virtual {v14, v5, v9, v15, v12}, Lyu;->c(Lruf;Lruf;Lruf;I)V
+
+    invoke-virtual {v1, v14}, Lwd8;->c(Lyu;)V
+
+    :goto_f
+    iget-object v5, v2, Lry3;->i:Lruf;
+
+    iget v12, v0, Lin0;->u0:I
+
+    add-int/2addr v12, v7
+
+    invoke-virtual {v1, v5, v9, v12, v11}, Lwd8;->e(Lruf;Lruf;II)V
+
+    :goto_10
+    add-int/lit8 v13, v13, 0x1
+
+    const/4 v5, 0x2
+
+    const/4 v7, 0x1
+
+    const/4 v9, 0x3
+
+    const/4 v12, 0x4
+
+    goto :goto_c
+
+    :cond_1a
+    iget v2, v0, Lin0;->s0:I
+
+    const/16 v5, 0x8
+
+    if-nez v2, :cond_1b
+
+    iget-object v2, v8, Lry3;->i:Lruf;
+
+    iget-object v6, v4, Lry3;->i:Lruf;
+
+    invoke-virtual {v1, v2, v6, v3, v5}, Lwd8;->e(Lruf;Lruf;II)V
+
+    iget-object v2, v4, Lry3;->i:Lruf;
+
+    iget-object v5, v0, Llz3;->T:Llz3;
+
+    iget-object v5, v5, Llz3;->K:Lry3;
+
+    iget-object v5, v5, Lry3;->i:Lruf;
+
+    const/4 v6, 0x4
+
+    invoke-virtual {v1, v2, v5, v3, v6}, Lwd8;->e(Lruf;Lruf;II)V
+
+    iget-object v2, v4, Lry3;->i:Lruf;
+
+    iget-object v4, v0, Llz3;->T:Llz3;
+
+    iget-object v4, v4, Llz3;->I:Lry3;
+
+    iget-object v4, v4, Lry3;->i:Lruf;
+
+    invoke-virtual {v1, v2, v4, v3, v3}, Lwd8;->e(Lruf;Lruf;II)V
+
+    return-void
+
+    :cond_1b
+    const/4 v7, 0x1
+
+    if-ne v2, v7, :cond_1c
+
+    iget-object v2, v4, Lry3;->i:Lruf;
+
+    iget-object v6, v8, Lry3;->i:Lruf;
+
+    invoke-virtual {v1, v2, v6, v3, v5}, Lwd8;->e(Lruf;Lruf;II)V
+
+    iget-object v2, v4, Lry3;->i:Lruf;
+
+    iget-object v5, v0, Llz3;->T:Llz3;
+
+    iget-object v5, v5, Llz3;->I:Lry3;
+
+    iget-object v5, v5, Lry3;->i:Lruf;
+
+    const/4 v6, 0x4
+
+    invoke-virtual {v1, v2, v5, v3, v6}, Lwd8;->e(Lruf;Lruf;II)V
+
+    iget-object v2, v4, Lry3;->i:Lruf;
+
+    iget-object v4, v0, Llz3;->T:Llz3;
+
+    iget-object v4, v4, Llz3;->K:Lry3;
+
+    iget-object v4, v4, Lry3;->i:Lruf;
+
+    invoke-virtual {v1, v2, v4, v3, v3}, Lwd8;->e(Lruf;Lruf;II)V
+
+    return-void
+
+    :cond_1c
+    const/4 v4, 0x2
+
+    if-ne v2, v4, :cond_1d
+
+    iget-object v2, v10, Lry3;->i:Lruf;
+
+    iget-object v4, v6, Lry3;->i:Lruf;
+
+    invoke-virtual {v1, v2, v4, v3, v5}, Lwd8;->e(Lruf;Lruf;II)V
+
+    iget-object v2, v6, Lry3;->i:Lruf;
+
+    iget-object v4, v0, Llz3;->T:Llz3;
+
+    iget-object v4, v4, Llz3;->L:Lry3;
+
+    iget-object v4, v4, Lry3;->i:Lruf;
+
+    const/4 v5, 0x4
+
+    invoke-virtual {v1, v2, v4, v3, v5}, Lwd8;->e(Lruf;Lruf;II)V
+
+    iget-object v2, v6, Lry3;->i:Lruf;
+
+    iget-object v4, v0, Llz3;->T:Llz3;
+
+    iget-object v4, v4, Llz3;->J:Lry3;
+
+    iget-object v4, v4, Lry3;->i:Lruf;
+
+    invoke-virtual {v1, v2, v4, v3, v3}, Lwd8;->e(Lruf;Lruf;II)V
+
+    return-void
+
+    :cond_1d
+    const/4 v4, 0x3
+
+    if-ne v2, v4, :cond_1e
+
+    iget-object v2, v6, Lry3;->i:Lruf;
+
+    iget-object v4, v10, Lry3;->i:Lruf;
+
+    invoke-virtual {v1, v2, v4, v3, v5}, Lwd8;->e(Lruf;Lruf;II)V
+
+    iget-object v2, v6, Lry3;->i:Lruf;
+
+    iget-object v4, v0, Llz3;->T:Llz3;
+
+    iget-object v4, v4, Llz3;->J:Lry3;
+
+    iget-object v4, v4, Lry3;->i:Lruf;
+
+    const/4 v5, 0x4
+
+    invoke-virtual {v1, v2, v4, v3, v5}, Lwd8;->e(Lruf;Lruf;II)V
+
+    iget-object v2, v6, Lry3;->i:Lruf;
+
+    iget-object v4, v0, Llz3;->T:Llz3;
+
+    iget-object v4, v4, Llz3;->L:Lry3;
+
+    iget-object v4, v4, Lry3;->i:Lruf;
+
+    invoke-virtual {v1, v2, v4, v3, v3}, Lwd8;->e(Lruf;Lruf;II)V
+
+    :cond_1e
     return-void
 .end method
 
-.method public final s()V
+.method public final c()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 4
 
-    invoke-static {}, Lkgi;->g()Lkgi;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "[Barrier] "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Llz3;->h0:Ljava/lang/String;
+
+    const-string v2, " {"
+
+    invoke-static {v0, v1, v2}, Lsb6;->q(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    sget-object v1, Luu0;->a:Ljava/lang/String;
+    const/4 v1, 0x0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :goto_0
+    iget v2, p0, Ll77;->r0:I
 
-    move-result-object v2
+    if-ge v1, v2, :cond_1
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    iget-object v2, p0, Ll77;->q0:[Llz3;
 
-    move-result-object v2
+    aget-object v2, v2, v1
 
-    const-string v3, ": unregistering receiver"
+    if-lez v1, :cond_0
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    const-string v3, ", "
 
-    move-result-object v2
+    invoke-static {v0, v3}, Lo52;->n(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Lkgi;->c(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
-    iget-object v0, p0, Lpx3;->b:Ljava/lang/Object;
+    :cond_0
+    invoke-static {v0}, Lwph;->g(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Landroid/content/Context;
+    move-result-object v0
 
-    iget-object v1, p0, Lin0;->f:Lho;
+    iget-object v2, v2, Llz3;->h0:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.method public final u()Landroid/content/IntentFilter;
-    .locals 2
+    move-result-object v0
 
-    iget v0, p0, Lin0;->g:I
+    add-int/lit8 v1, v1, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    goto :goto_0
 
-    new-instance v0, Landroid/content/IntentFilter;
+    :cond_1
+    const-string v1, "}"
 
-    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+    invoke-static {v0, v1}, Lo52;->n(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    const-string v1, "android.intent.action.DEVICE_STORAGE_OK"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string v1, "android.intent.action.DEVICE_STORAGE_LOW"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    new-instance v0, Landroid/content/IntentFilter;
-
-    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
-
-    const-string v1, "android.intent.action.BATTERY_OKAY"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string v1, "android.intent.action.BATTERY_LOW"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Landroid/content/IntentFilter;
-
-    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
-
-    const-string v1, "android.os.action.CHARGING"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string v1, "android.os.action.DISCHARGING"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

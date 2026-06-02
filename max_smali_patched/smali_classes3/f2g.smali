@@ -1,330 +1,74 @@
-.class public final Lf2g;
+.class public abstract Lf2g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
-
-.field public final b:I
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/CharSequence;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Ljava/lang/String;
-
-
 # direct methods
-.method public constructor <init>(JILjava/lang/String;Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method public static a([B)Lbp8;
+    .locals 10
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :try_start_0
+    new-instance v0, Lru/ok/tamtam/nano/Protos$LogEvent;
 
-    iput-wide p1, p0, Lf2g;->a:J
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$LogEvent;-><init>()V
 
-    iput p3, p0, Lf2g;->b:I
+    invoke-static {v0, p0}, Lav9;->mergeFrom(Lav9;[B)Lav9;
 
-    iput-object p4, p0, Lf2g;->c:Ljava/lang/String;
+    move-result-object p0
 
-    iput-object p5, p0, Lf2g;->d:Ljava/lang/String;
+    check-cast p0, Lru/ok/tamtam/nano/Protos$LogEvent;
 
-    iput-object p6, p0, Lf2g;->e:Ljava/lang/CharSequence;
+    iget-wide v5, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->time:J
 
-    iput-object p7, p0, Lf2g;->f:Ljava/lang/String;
+    iget-object v7, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->type:Ljava/lang/String;
 
-    iput-object p8, p0, Lf2g;->g:Ljava/lang/String;
+    iget-object v8, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->event:Ljava/lang/String;
 
-    return-void
-.end method
+    iget-object v0, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->params:[B
 
+    if-eqz v0, :cond_0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    invoke-static {v0}, Ltf3;->u([B)Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map;
+
+    :goto_0
+    move-object v9, v0
 
     goto :goto_1
 
     :cond_0
-    instance-of v0, p1, Lf2g;
+    new-instance v0, Lwu;
 
-    if-nez v0, :cond_1
+    const/4 v1, 0x0
 
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lf2g;
-
-    iget-wide v0, p0, Lf2g;->a:J
-
-    iget-wide v2, p1, Lf2g;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_2
+    invoke-direct {v0, v1}, Lhpf;-><init>(I)V
 
     goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lf2g;->b:I
-
-    iget v1, p1, Lf2g;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lf2g;->c:Ljava/lang/String;
-
-    iget-object v1, p1, Lf2g;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v0, p0, Lf2g;->d:Ljava/lang/String;
-
-    iget-object v1, p1, Lf2g;->d:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-object v0, p0, Lf2g;->e:Ljava/lang/CharSequence;
-
-    iget-object v1, p1, Lf2g;->e:Ljava/lang/CharSequence;
-
-    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-object v0, p0, Lf2g;->f:Ljava/lang/String;
-
-    iget-object v1, p1, Lf2g;->f:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget-object v0, p0, Lf2g;->g:Ljava/lang/String;
-
-    iget-object p1, p1, Lf2g;->g:Ljava/lang/String;
-
-    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_8
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_8
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-wide v0, p0, Lf2g;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lf2g;->b:I
-
-    invoke-static {v2, v0, v1}, Lpqb;->i(III)I
-
-    move-result v0
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lf2g;->c:Ljava/lang/String;
-
-    if-nez v3, :cond_0
-
-    move v3, v2
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
-
-    move-result v3
-
-    :goto_0
-    add-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-object v3, p0, Lf2g;->d:Ljava/lang/String;
-
-    if-nez v3, :cond_1
-
-    move v3, v2
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
-
-    move-result v3
 
     :goto_1
-    add-int/2addr v0, v3
+    iget-wide v1, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->userId:J
 
-    mul-int/2addr v0, v1
+    iget-wide v3, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->sessionId:J
 
-    iget-object v3, p0, Lf2g;->e:Ljava/lang/CharSequence;
+    new-instance v0, Lbp8;
 
-    if-nez v3, :cond_2
-
-    move v3, v2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    :goto_2
-    add-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-object v3, p0, Lf2g;->f:Ljava/lang/String;
-
-    if-nez v3, :cond_3
-
-    move v3, v2
-
-    goto :goto_3
-
-    :cond_3
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
-
-    move-result v3
-
-    :goto_3
-    add-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Lf2g;->g:Ljava/lang/String;
-
-    if-nez v1, :cond_4
-
-    goto :goto_4
-
-    :cond_4
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    :goto_4
-    add-int/2addr v0, v2
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "Suggest(id="
-
-    const-string v1, ", type="
-
-    iget-wide v2, p0, Lf2g;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lf2g;->b:I
-
-    invoke-static {v1}, Lmrf;->w(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", title="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lf2g;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", description="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lf2g;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", inputResult="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lf2g;->e:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", avatarUrl="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", query="
-
-    const-string v2, ")"
-
-    iget-object v3, p0, Lf2g;->f:Ljava/lang/String;
-
-    iget-object v4, p0, Lf2g;->g:Ljava/lang/String;
-
-    invoke-static {v0, v3, v1, v4, v2}, Lpqb;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct/range {v0 .. v9}, Lbp8;-><init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object v0
+
+    :catch_0
+    move-exception v0
+
+    move-object p0, v0
+
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
 .end method

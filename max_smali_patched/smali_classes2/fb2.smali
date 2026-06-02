@@ -1,164 +1,67 @@
 .class public final Lfb2;
-.super Lhja;
+.super Lib2;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Llhg;
+.field public final synthetic b:Lpvi;
 
-.field public final c:Lnhg;
-
-.field public final d:J
+.field public final synthetic c:Ljava/util/UUID;
 
 
 # direct methods
-.method public constructor <init>(Llhg;Lnhg;J)V
-    .locals 1
+.method public constructor <init>(Lpvi;Ljava/util/UUID;)V
+    .locals 0
 
-    sget-object v0, Lb3h;->a:Lb3h;
+    iput-object p1, p0, Lfb2;->b:Lpvi;
 
-    invoke-direct {p0, v0}, Lhja;-><init>(Ljava/lang/Object;)V
+    iput-object p2, p0, Lfb2;->c:Ljava/util/UUID;
 
-    iput-object p1, p0, Lfb2;->b:Llhg;
-
-    iput-object p2, p0, Lfb2;->c:Lnhg;
-
-    iput-wide p3, p0, Lfb2;->d:J
+    invoke-direct {p0}, Lib2;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final b()V
+    .locals 3
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lfb2;->b:Lpvi;
 
-    goto :goto_1
+    iget-object v1, v0, Lpvi;->c:Landroidx/work/impl/WorkDatabase;
 
-    :cond_0
-    instance-of v0, p1, Lfb2;
+    invoke-virtual {v1}, Lide;->c()V
 
-    if-nez v0, :cond_1
+    :try_start_0
+    iget-object v2, p0, Lfb2;->c:Ljava/util/UUID;
 
-    goto :goto_0
+    invoke-virtual {v2}, Ljava/util/UUID;->toString()Ljava/lang/String;
 
-    :cond_1
-    check-cast p1, Lfb2;
+    move-result-object v2
 
-    iget-object v0, p0, Lfb2;->b:Llhg;
+    invoke-static {v0, v2}, Lib2;->a(Lpvi;Ljava/lang/String;)V
 
-    iget-object v1, p1, Lfb2;->b:Llhg;
+    invoke-virtual {v1}, Lide;->u()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v0, v1}, Llhg;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1}, Lide;->h()V
 
-    move-result v0
+    iget-object v1, v0, Lpvi;->b:Lft3;
 
-    if-nez v0, :cond_2
+    iget-object v2, v0, Lpvi;->c:Landroidx/work/impl/WorkDatabase;
 
-    goto :goto_0
+    iget-object v0, v0, Lpvi;->e:Ljava/util/List;
 
-    :cond_2
-    iget-object v0, p0, Lfb2;->c:Lnhg;
+    invoke-static {v1, v2, v0}, Lboe;->a(Lft3;Landroidx/work/impl/WorkDatabase;Ljava/util/List;)V
 
-    iget-object v1, p1, Lfb2;->c:Lnhg;
+    return-void
 
-    invoke-virtual {v0, v1}, Lnhg;->equals(Ljava/lang/Object;)Z
+    :catchall_0
+    move-exception v0
 
-    move-result v0
+    invoke-virtual {v1}, Lide;->h()V
 
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-wide v0, p0, Lfb2;->d:J
-
-    iget-wide v2, p1, Lfb2;->d:J
-
-    cmp-long p1, v0, v2
-
-    if-eqz p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-object v0, p0, Lfb2;->b:Llhg;
-
-    iget v0, v0, Llhg;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lfb2;->c:Lnhg;
-
-    invoke-virtual {v1}, Lnhg;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-wide v2, p0, Lfb2;->d:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowChangeOwnerBottomSheetEvent(title="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lfb2;->b:Llhg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", description="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lfb2;->c:Lnhg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", contactId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lfb2;->d:J
-
-    invoke-static {v0, v2, v3, v1}, Lva9;->f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    throw v0
 .end method

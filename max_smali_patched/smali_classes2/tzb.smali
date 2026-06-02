@@ -1,94 +1,120 @@
-.class public final Ltzb;
-.super Lp6g;
+.class public Ltzb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ltzb;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic X:Luzb;
+.field public final a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final o:I
 
 
 # direct methods
-.method public constructor <init>(Luzb;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Ltzb;->X:Luzb;
+    new-instance v0, Ljnb;
 
-    const/4 p1, 0x2
+    const/4 v1, 0x7
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Ljnb;-><init>(I)V
+
+    sput-object v0, Ltzb;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Ltzb;->a:I
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Ltzb;->c:I
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Ltzb;->d:I
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Ltzb;->o:I
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    iput p1, p0, Ltzb;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    check-cast p1, Lvzb;
+    iget p2, p0, Ltzb;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {p0, p1, p2}, Ltzb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget p2, p0, Ltzb;->c:I
 
-    move-result-object p1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    check-cast p1, Ltzb;
+    iget p2, p0, Ltzb;->d:I
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {p1, p2}, Ltzb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget p2, p0, Ltzb;->o:I
 
-    return-object p2
-.end method
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget p2, p0, Ltzb;->b:I
 
-    new-instance v0, Ltzb;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object v1, p0, Ltzb;->X:Luzb;
-
-    invoke-direct {v0, v1, p2}, Ltzb;-><init>(Luzb;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Ltzb;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget-object v0, p0, Ltzb;->o:Ljava/lang/Object;
-
-    check-cast v0, Lvzb;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Lvzb;->a:Lvzb;
-
-    if-ne v0, p1, :cond_0
-
-    const-string p1, "allowed"
-
-    goto :goto_0
-
-    :cond_0
-    const-string p1, "denied"
-
-    :goto_0
-    iget-object v0, p0, Ltzb;->X:Luzb;
-
-    const-string v1, "geo"
-
-    invoke-static {v0, v1, p1}, Luzb;->a(Luzb;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-void
 .end method

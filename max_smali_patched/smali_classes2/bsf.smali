@@ -1,82 +1,63 @@
 .class public final Lbsf;
-.super Ljava/lang/Object;
+.super Loqf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Z
+.field public final a:Loqf;
+
+.field public final b:J
+
+.field public final c:Lqne;
 
 
 # direct methods
-.method public constructor <init>(Z)V
-    .locals 0
+.method public constructor <init>(Loqf;JLqne;)V
+    .locals 1
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lbsf;->a:Z
+    iput-object p1, p0, Lbsf;->a:Loqf;
+
+    iput-wide p2, p0, Lbsf;->b:J
+
+    iput-object p4, p0, Lbsf;->c:Lqne;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final m(Lirf;)V
+    .locals 5
 
-    const/4 v0, 0x1
+    new-instance v0, Lp0b;
 
-    if-ne p0, p1, :cond_0
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    return v0
+    iget-wide v2, p0, Lbsf;->b:J
 
-    :cond_0
-    instance-of v1, p1, Lbsf;
+    invoke-direct {v0, p1, v2, v3}, Lp0b;-><init>(Lirf;J)V
 
-    const/4 v2, 0x0
+    invoke-interface {p1, v0}, Lirf;->c(Ls45;)V
 
-    if-nez v1, :cond_1
+    iget-object p1, v0, Lp0b;->d:Ljava/lang/Object;
 
-    return v2
+    check-cast p1, Ljava/util/concurrent/atomic/AtomicReference;
 
-    :cond_1
-    check-cast p1, Lbsf;
+    iget-object v4, p0, Lbsf;->c:Lqne;
 
-    iget-boolean v1, p0, Lbsf;->a:Z
+    invoke-virtual {v4, v0, v2, v3, v1}, Lqne;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ls45;
 
-    iget-boolean p1, p1, Lbsf;->a:Z
+    move-result-object v1
 
-    if-eq v1, p1, :cond_2
+    invoke-static {p1, v1}, Lw45;->d(Ljava/util/concurrent/atomic/AtomicReference;Ls45;)Z
 
-    return v2
+    iget-object p1, p0, Lbsf;->a:Loqf;
 
-    :cond_2
-    return v0
-.end method
+    invoke-virtual {p1, v0}, Loqf;->l(Lirf;)V
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-boolean v0, p0, Lbsf;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "SetSelection(selected="
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lbsf;->a:Z
-
-    invoke-static {v0, v1, v2}, Lmrf;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

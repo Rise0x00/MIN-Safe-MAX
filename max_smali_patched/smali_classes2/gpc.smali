@@ -1,162 +1,756 @@
 .class public final Lgpc;
-.super Ljpc;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lyie;
 
 
 # instance fields
-.field public final a:Llhg;
+.field public final a:Lyie;
 
-.field public final b:I
+.field public final b:J
 
-.field public final c:Ls82;
+.field public final synthetic c:Lnpc;
 
 
 # direct methods
-.method public constructor <init>(Llhg;ILs82;)V
+.method public constructor <init>(Lnpc;Lyie;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgpc;->a:Llhg;
+    iput-object p1, p0, Lgpc;->c:Lnpc;
 
-    iput p2, p0, Lgpc;->b:I
+    iput-object p2, p0, Lgpc;->a:Lyie;
 
-    iput-object p3, p0, Lgpc;->c:Ls82;
+    invoke-static {}, Lkyj;->a()J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lgpc;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final I(ILjava/lang/String;)V
+    .locals 7
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lgpc;->c:Lnpc;
 
-    goto :goto_1
+    iget-boolean v0, v0, Lnpc;->e:Z
 
-    :cond_0
-    instance-of v0, p1, Lgpc;
+    const/4 v1, 0x0
+
+    const/16 v2, 0x15
 
     if-nez v0, :cond_1
 
-    goto :goto_0
+    iget-wide v3, p0, Lgpc;->b:J
+
+    invoke-static {}, Lkyj;->a()J
+
+    move-result-wide v5
+
+    cmp-long v0, v3, v5
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lgpc;->a:Lyie;
+
+    invoke-interface {v0, p1, p2}, Lyie;->I(ILjava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    const-string p1, "Attempted to use statement on a different thread"
+
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
 
     :cond_1
-    check-cast p1, Lgpc;
+    const-string p1, "Statement is recycled"
 
-    iget-object v0, p0, Lgpc;->a:Llhg;
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
 
-    iget-object v1, p1, Lgpc;->a:Llhg;
+    throw v1
+.end method
 
-    invoke-virtual {v0, v1}, Llhg;->equals(Ljava/lang/Object;)Z
+.method public final a(ID)V
+    .locals 7
+
+    iget-object v0, p0, Lgpc;->c:Lnpc;
+
+    iget-boolean v0, v0, Lnpc;->e:Z
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x15
+
+    if-nez v0, :cond_1
+
+    iget-wide v3, p0, Lgpc;->b:J
+
+    invoke-static {}, Lkyj;->a()J
+
+    move-result-wide v5
+
+    cmp-long v0, v3, v5
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lgpc;->a:Lyie;
+
+    invoke-interface {v0, p1, p2, p3}, Lyie;->a(ID)V
+
+    return-void
+
+    :cond_0
+    const-string p1, "Attempted to use statement on a different thread"
+
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    const-string p1, "Statement is recycled"
+
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public final b(IJ)V
+    .locals 7
+
+    iget-object v0, p0, Lgpc;->c:Lnpc;
+
+    iget-boolean v0, v0, Lnpc;->e:Z
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x15
+
+    if-nez v0, :cond_1
+
+    iget-wide v3, p0, Lgpc;->b:J
+
+    invoke-static {}, Lkyj;->a()J
+
+    move-result-wide v5
+
+    cmp-long v0, v3, v5
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lgpc;->a:Lyie;
+
+    invoke-interface {v0, p1, p2, p3}, Lyie;->b(IJ)V
+
+    return-void
+
+    :cond_0
+    const-string p1, "Attempted to use statement on a different thread"
+
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    const-string p1, "Statement is recycled"
+
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public final c(I[B)V
+    .locals 7
+
+    iget-object v0, p0, Lgpc;->c:Lnpc;
+
+    iget-boolean v0, v0, Lnpc;->e:Z
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x15
+
+    if-nez v0, :cond_1
+
+    iget-wide v3, p0, Lgpc;->b:J
+
+    invoke-static {}, Lkyj;->a()J
+
+    move-result-wide v5
+
+    cmp-long v0, v3, v5
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lgpc;->a:Lyie;
+
+    invoke-interface {v0, p1, p2}, Lyie;->c(I[B)V
+
+    return-void
+
+    :cond_0
+    const-string p1, "Attempted to use statement on a different thread"
+
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    const-string p1, "Statement is recycled"
+
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public final close()V
+    .locals 7
+
+    iget-object v0, p0, Lgpc;->c:Lnpc;
+
+    iget-boolean v0, v0, Lnpc;->e:Z
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x15
+
+    if-nez v0, :cond_1
+
+    iget-wide v3, p0, Lgpc;->b:J
+
+    invoke-static {}, Lkyj;->a()J
+
+    move-result-wide v5
+
+    cmp-long v0, v3, v5
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lgpc;->a:Lyie;
+
+    invoke-interface {v0}, Ljava/lang/AutoCloseable;->close()V
+
+    return-void
+
+    :cond_0
+    const-string v0, "Attempted to use statement on a different thread"
+
+    invoke-static {v2, v0}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    const-string v0, "Statement is recycled"
+
+    invoke-static {v2, v0}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public final e(I)V
+    .locals 7
+
+    iget-object v0, p0, Lgpc;->c:Lnpc;
+
+    iget-boolean v0, v0, Lnpc;->e:Z
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x15
+
+    if-nez v0, :cond_1
+
+    iget-wide v3, p0, Lgpc;->b:J
+
+    invoke-static {}, Lkyj;->a()J
+
+    move-result-wide v5
+
+    cmp-long v0, v3, v5
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lgpc;->a:Lyie;
+
+    invoke-interface {v0, p1}, Lyie;->e(I)V
+
+    return-void
+
+    :cond_0
+    const-string p1, "Attempted to use statement on a different thread"
+
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    const-string p1, "Statement is recycled"
+
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public final f0(I)Ljava/lang/String;
+    .locals 7
+
+    iget-object v0, p0, Lgpc;->c:Lnpc;
+
+    iget-boolean v0, v0, Lnpc;->e:Z
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x15
+
+    if-nez v0, :cond_1
+
+    iget-wide v3, p0, Lgpc;->b:J
+
+    invoke-static {}, Lkyj;->a()J
+
+    move-result-wide v5
+
+    cmp-long v0, v3, v5
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lgpc;->a:Lyie;
+
+    invoke-interface {v0, p1}, Lyie;->f0(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    const-string p1, "Attempted to use statement on a different thread"
+
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    const-string p1, "Statement is recycled"
+
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public final getBlob(I)[B
+    .locals 7
+
+    iget-object v0, p0, Lgpc;->c:Lnpc;
+
+    iget-boolean v0, v0, Lnpc;->e:Z
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x15
+
+    if-nez v0, :cond_1
+
+    iget-wide v3, p0, Lgpc;->b:J
+
+    invoke-static {}, Lkyj;->a()J
+
+    move-result-wide v5
+
+    cmp-long v0, v3, v5
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lgpc;->a:Lyie;
+
+    invoke-interface {v0, p1}, Lyie;->getBlob(I)[B
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    const-string p1, "Attempted to use statement on a different thread"
+
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    const-string p1, "Statement is recycled"
+
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public final getColumnCount()I
+    .locals 7
+
+    iget-object v0, p0, Lgpc;->c:Lnpc;
+
+    iget-boolean v0, v0, Lnpc;->e:Z
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x15
+
+    if-nez v0, :cond_1
+
+    iget-wide v3, p0, Lgpc;->b:J
+
+    invoke-static {}, Lkyj;->a()J
+
+    move-result-wide v5
+
+    cmp-long v0, v3, v5
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lgpc;->a:Lyie;
+
+    invoke-interface {v0}, Lyie;->getColumnCount()I
 
     move-result v0
 
-    if-nez v0, :cond_2
+    return v0
 
-    goto :goto_0
+    :cond_0
+    const-string v0, "Attempted to use statement on a different thread"
 
-    :cond_2
-    iget v0, p0, Lgpc;->b:I
+    invoke-static {v2, v0}, Lvfa;->O(ILjava/lang/String;)V
 
-    iget v1, p1, Lgpc;->b:I
+    throw v1
 
-    if-eq v0, v1, :cond_3
+    :cond_1
+    const-string v0, "Statement is recycled"
 
-    goto :goto_0
+    invoke-static {v2, v0}, Lvfa;->O(ILjava/lang/String;)V
 
-    :cond_3
-    iget-object v0, p0, Lgpc;->c:Ls82;
+    throw v1
+.end method
 
-    iget-object p1, p1, Lgpc;->c:Ls82;
+.method public final getColumnName(I)Ljava/lang/String;
+    .locals 7
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-object v0, p0, Lgpc;->c:Lnpc;
+
+    iget-boolean v0, v0, Lnpc;->e:Z
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x15
+
+    if-nez v0, :cond_1
+
+    iget-wide v3, p0, Lgpc;->b:J
+
+    invoke-static {}, Lkyj;->a()J
+
+    move-result-wide v5
+
+    cmp-long v0, v3, v5
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lgpc;->a:Lyie;
+
+    invoke-interface {v0, p1}, Lyie;->getColumnName(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    const-string p1, "Attempted to use statement on a different thread"
+
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    const-string p1, "Statement is recycled"
+
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public final getDouble(I)D
+    .locals 7
+
+    iget-object v0, p0, Lgpc;->c:Lnpc;
+
+    iget-boolean v0, v0, Lnpc;->e:Z
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x15
+
+    if-nez v0, :cond_1
+
+    iget-wide v3, p0, Lgpc;->b:J
+
+    invoke-static {}, Lkyj;->a()J
+
+    move-result-wide v5
+
+    cmp-long v0, v3, v5
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lgpc;->a:Lyie;
+
+    invoke-interface {v0, p1}, Lyie;->getDouble(I)D
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :cond_0
+    const-string p1, "Attempted to use statement on a different thread"
+
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    const-string p1, "Statement is recycled"
+
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public final getLong(I)J
+    .locals 7
+
+    iget-object v0, p0, Lgpc;->c:Lnpc;
+
+    iget-boolean v0, v0, Lnpc;->e:Z
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x15
+
+    if-nez v0, :cond_1
+
+    iget-wide v3, p0, Lgpc;->b:J
+
+    invoke-static {}, Lkyj;->a()J
+
+    move-result-wide v5
+
+    cmp-long v0, v3, v5
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lgpc;->a:Lyie;
+
+    invoke-interface {v0, p1}, Lyie;->getLong(I)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :cond_0
+    const-string p1, "Attempted to use statement on a different thread"
+
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    const-string p1, "Statement is recycled"
+
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public final isNull(I)Z
+    .locals 7
+
+    iget-object v0, p0, Lgpc;->c:Lnpc;
+
+    iget-boolean v0, v0, Lnpc;->e:Z
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x15
+
+    if-nez v0, :cond_1
+
+    iget-wide v3, p0, Lgpc;->b:J
+
+    invoke-static {}, Lkyj;->a()J
+
+    move-result-wide v5
+
+    cmp-long v0, v3, v5
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lgpc;->a:Lyie;
+
+    invoke-interface {v0, p1}, Lyie;->isNull(I)Z
 
     move-result p1
 
-    if-nez p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
     return p1
 
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
+    :cond_0
+    const-string p1, "Attempted to use statement on a different thread"
 
-    return p1
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    const-string p1, "Statement is recycled"
+
+    invoke-static {v2, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final reset()V
+    .locals 7
 
-    iget-object v0, p0, Lgpc;->a:Llhg;
+    iget-object v0, p0, Lgpc;->c:Lnpc;
 
-    iget v0, v0, Llhg;->c:I
+    iget-boolean v0, v0, Lnpc;->e:Z
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    const/4 v1, 0x0
+
+    const/16 v2, 0x15
+
+    if-nez v0, :cond_1
+
+    iget-wide v3, p0, Lgpc;->b:J
+
+    invoke-static {}, Lkyj;->a()J
+
+    move-result-wide v5
+
+    cmp-long v0, v3, v5
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lgpc;->a:Lyie;
+
+    invoke-interface {v0}, Lyie;->reset()V
+
+    return-void
+
+    :cond_0
+    const-string v0, "Attempted to use statement on a different thread"
+
+    invoke-static {v2, v0}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    const-string v0, "Statement is recycled"
+
+    invoke-static {v2, v0}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public final s()V
+    .locals 7
+
+    iget-object v0, p0, Lgpc;->c:Lnpc;
+
+    iget-boolean v0, v0, Lnpc;->e:Z
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x15
+
+    if-nez v0, :cond_1
+
+    iget-wide v3, p0, Lgpc;->b:J
+
+    invoke-static {}, Lkyj;->a()J
+
+    move-result-wide v5
+
+    cmp-long v0, v3, v5
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lgpc;->a:Lyie;
+
+    invoke-interface {v0}, Lyie;->s()V
+
+    return-void
+
+    :cond_0
+    const-string v0, "Attempted to use statement on a different thread"
+
+    invoke-static {v2, v0}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    const-string v0, "Statement is recycled"
+
+    invoke-static {v2, v0}, Lvfa;->O(ILjava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public final y0()Z
+    .locals 7
+
+    iget-object v0, p0, Lgpc;->c:Lnpc;
+
+    iget-boolean v0, v0, Lnpc;->e:Z
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x15
+
+    if-nez v0, :cond_1
+
+    iget-wide v3, p0, Lgpc;->b:J
+
+    invoke-static {}, Lkyj;->a()J
+
+    move-result-wide v5
+
+    cmp-long v0, v3, v5
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lgpc;->a:Lyie;
+
+    invoke-interface {v0}, Lyie;->y0()Z
 
     move-result v0
 
-    const/16 v1, 0x1f
+    return v0
 
-    mul-int/2addr v0, v1
+    :cond_0
+    const-string v0, "Attempted to use statement on a different thread"
 
-    iget v2, p0, Lgpc;->b:I
+    invoke-static {v2, v0}, Lvfa;->O(ILjava/lang/String;)V
 
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+    throw v1
 
-    move-result v0
+    :cond_1
+    const-string v0, "Statement is recycled"
 
-    iget-object v1, p0, Lgpc;->c:Ls82;
+    invoke-static {v2, v0}, Lvfa;->O(ILjava/lang/String;)V
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowCancellableSnackbar(title="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lgpc;->a:Llhg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", bottomMargin="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lgpc;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", cancelAction="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lgpc;->c:Ls82;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    throw v1
 .end method

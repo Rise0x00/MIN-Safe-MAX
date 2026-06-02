@@ -1,98 +1,130 @@
 .class public final Lte6;
-.super Lp6g;
+.super Lb1;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic o:Lue6;
+.field public final synthetic c:I
+
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lue6;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lxd6;Ljava/lang/Object;I)V
     .locals 0
 
-    iput-object p1, p0, Lte6;->o:Lue6;
+    iput p3, p0, Lte6;->c:I
 
-    const/4 p1, 0x2
+    invoke-direct {p0, p1}, Lb1;-><init>(Lxd6;)V
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lte6;->d:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final f(Lye6;)V
+    .locals 5
 
-    check-cast p1, Lzb4;
+    iget v0, p0, Lte6;->c:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lte6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v0, Lg3f;
 
-    move-result-object p1
+    invoke-direct {v0, p1}, Lg3f;-><init>(Lfcg;)V
 
-    check-cast p1, Lte6;
+    const/16 v1, 0x8
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    const-string v2, "capacityHint"
 
-    invoke-virtual {p1, p2}, Lte6;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1, v2}, Lddh;->F(ILjava/lang/String;)V
 
-    move-result-object p1
+    new-instance v1, Lueh;
 
-    return-object p1
-.end method
+    invoke-direct {v1}, Lueh;-><init>()V
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    new-instance v2, Ld3f;
 
-    new-instance p1, Lte6;
+    invoke-direct {v2, v1}, Ld3f;-><init>(Lueh;)V
 
-    iget-object v0, p0, Lte6;->o:Lue6;
+    :try_start_0
+    iget-object v1, p0, Lte6;->d:Ljava/lang/Object;
 
-    invoke-direct {p1, v0, p2}, Lte6;-><init>(Lue6;Lkotlin/coroutines/Continuation;)V
+    check-cast v1, Llog;
 
-    return-object p1
-.end method
+    invoke-virtual {v1, v2}, Llog;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    move-result-object v1
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    check-cast v1, Luad;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object p1, p0, Lte6;->o:Lue6;
+    new-instance v3, Lre6;
 
-    iget-object p1, p1, Lue6;->c:Lo58;
+    iget-object v4, p0, Lb1;->b:Lxd6;
 
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-direct {v3, v4}, Lre6;-><init>(Luad;)V
 
-    move-result-object p1
+    new-instance v4, Lue6;
 
-    check-cast p1, Ldjb;
+    invoke-direct {v4, v0, v2, v3}, Lue6;-><init>(Lg3f;Ld3f;Lre6;)V
 
-    sget v0, Lj6e;->g2:I
+    iput-object v4, v3, Lre6;->d:Lue6;
 
-    new-instance v1, Llhg;
+    invoke-interface {p1, v4}, Lfcg;->d(Lhcg;)V
 
-    invoke-direct {v1, v0}, Llhg;-><init>(I)V
+    check-cast v1, Lxd6;
 
-    invoke-virtual {p1, v1}, Ldjb;->g(Lqhg;)V
+    invoke-virtual {v1, v3}, Lxd6;->c(Lfcg;)V
 
-    sget v0, Lj6e;->f2:I
+    const/4 p1, 0x0
 
-    new-instance v1, Llhg;
-
-    invoke-direct {v1, v0}, Llhg;-><init>(I)V
-
-    invoke-virtual {p1, v1}, Ldjb;->a(Lqhg;)V
-
-    invoke-virtual {p1}, Ldjb;->i()Lcjb;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    return-object p1
+    invoke-virtual {v3, p1}, Lre6;->e(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lmzj;->c(Ljava/lang/Throwable;)V
+
+    invoke-static {v0, p1}, Lkk5;->a(Ljava/lang/Throwable;Lfcg;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    new-instance v0, Licg;
+
+    invoke-direct {v0}, Licg;-><init>()V
+
+    invoke-interface {p1, v0}, Lfcg;->d(Lhcg;)V
+
+    new-instance v1, Lse6;
+
+    iget-object v2, p0, Lte6;->d:Ljava/lang/Object;
+
+    check-cast v2, Lit0;
+
+    iget-object v3, p0, Lb1;->b:Lxd6;
+
+    invoke-direct {v1, p1, v2, v0, v3}, Lse6;-><init>(Lfcg;Lit0;Licg;Luad;)V
+
+    invoke-virtual {v1}, Lse6;->a()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

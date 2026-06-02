@@ -4,5 +4,11 @@
 
 
 # virtual methods
-.method public abstract e(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+.method public abstract E(Lwk8;JJLjava/io/IOException;I)Lu81;
+.end method
+
+.method public abstract c(Lwk8;JJZ)V
+.end method
+
+.method public abstract u(Lwk8;JJ)V
 .end method

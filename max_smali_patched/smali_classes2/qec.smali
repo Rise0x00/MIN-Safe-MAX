@@ -3,34 +3,44 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Landroid/graphics/PointF;
 
-.field public final synthetic b:Lxec;
+.field public final synthetic b:F
+
+.field public final synthetic c:F
+
+.field public final synthetic d:Lrec;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxec;I)V
+.method public synthetic constructor <init>(Landroid/graphics/PointF;FFLrec;)V
     .locals 0
 
-    iput p2, p0, Lqec;->a:I
-
-    iput-object p1, p0, Lqec;->b:Lxec;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqec;->a:Landroid/graphics/PointF;
+
+    iput p2, p0, Lqec;->b:F
+
+    iput p3, p0, Lqec;->c:F
+
+    iput-object p4, p0, Lqec;->d:Lrec;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 3
 
-    iget v0, p0, Lqec;->a:I
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
 
     check-cast p1, Ljava/lang/Float;
 
@@ -38,46 +48,39 @@
 
     move-result p1
 
-    check-cast p2, Ljava/lang/Float;
+    iget-object v0, p0, Lqec;->a:Landroid/graphics/PointF;
 
-    packed-switch v0, :pswitch_data_0
+    iget v1, v0, Landroid/graphics/PointF;->x:F
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v2, p0, Lqec;->b:F
 
-    iget-object p2, p0, Lqec;->b:Lxec;
+    invoke-static {v2, v1, p1, v1}, Lrtc;->l(FFFF)F
 
-    invoke-static {p2, p1}, Lxec;->d(Lxec;F)V
+    move-result v1
 
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    iget v0, v0, Landroid/graphics/PointF;->y:F
 
-    return-object p1
+    iget v2, p0, Lqec;->c:F
 
-    :pswitch_0
-    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
+    invoke-static {v2, v0, p1, v0}, Lrtc;->l(FFFF)F
 
-    move-result p2
+    move-result p1
 
-    iget-object v0, p0, Lqec;->b:Lxec;
+    iget-object v0, p0, Lqec;->d:Lrec;
 
-    invoke-static {v0, p1, p2}, Lxec;->c(Lxec;FF)V
+    iget-object v2, v0, Lrec;->b:Lsxj;
 
-    goto :goto_0
+    invoke-virtual {v2, v1, p1}, Lsxj;->q(FF)V
 
-    :pswitch_1
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, v0, Lrec;->c:Lnj1;
 
-    iget-object p2, p0, Lqec;->b:Lxec;
+    check-cast v0, Loj1;
 
-    invoke-static {p2, p1}, Lxec;->a(Lxec;F)V
+    iget-object v0, v0, Loj1;->b:Landroid/graphics/PointF;
 
-    goto :goto_0
+    iput v1, v0, Landroid/graphics/PointF;->x:F
 
-    nop
+    iput p1, v0, Landroid/graphics/PointF;->y:F
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

@@ -1,61 +1,31 @@
-.class public final Lvn8;
-.super Lshc;
+.class public abstract Lvn8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:[J
-
-.field public b:I
+# static fields
+.field public static final synthetic a:I
 
 
-# virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 2
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
-    iget-object v0, p0, Lvn8;->a:[J
+    new-instance v0, Ljava/util/Locale;
 
-    iget v1, p0, Lvn8;->b:I
+    const-string v1, "en"
 
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([JI)[J
+    const-string v2, "XA"
 
-    move-result-object v0
+    invoke-direct {v0, v1, v2}, Ljava/util/Locale;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object v0
-.end method
+    new-instance v0, Ljava/util/Locale;
 
-.method public final b(I)V
-    .locals 2
+    const-string v1, "ar"
 
-    iget-object v0, p0, Lvn8;->a:[J
+    const-string v2, "XB"
 
-    array-length v1, v0
+    invoke-direct {v0, v1, v2}, Ljava/util/Locale;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-ge v1, p1, :cond_1
-
-    array-length v1, v0
-
-    mul-int/lit8 v1, v1, 0x2
-
-    if-ge p1, v1, :cond_0
-
-    move p1, v1
-
-    :cond_0
-    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([JI)[J
-
-    move-result-object p1
-
-    iput-object p1, p0, Lvn8;->a:[J
-
-    :cond_1
     return-void
-.end method
-
-.method public final d()I
-    .locals 1
-
-    iget v0, p0, Lvn8;->b:I
-
-    return v0
 .end method

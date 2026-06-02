@@ -1,48 +1,29 @@
-.class public final Lnva;
-.super Lo84;
-
-
-# instance fields
-.field public final synthetic X:Lg4a;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.class public abstract Lnva;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # direct methods
-.method public constructor <init>(Lg4a;Lkotlin/coroutines/Continuation;)V
+.method public static a(Landroid/app/Notification$BigPictureStyle;Landroid/graphics/drawable/Icon;)V
     .locals 0
 
-    iput-object p1, p0, Lnva;->X:Lg4a;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$BigPictureStyle;->bigPicture(Landroid/graphics/drawable/Icon;)Landroid/app/Notification$BigPictureStyle;
 
     return-void
 .end method
 
+.method public static b(Landroid/app/Notification$BigPictureStyle;Ljava/lang/CharSequence;)V
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    invoke-virtual {p0, p1}, Landroid/app/Notification$BigPictureStyle;->setContentDescription(Ljava/lang/CharSequence;)Landroid/app/Notification$BigPictureStyle;
 
-    iput-object p1, p0, Lnva;->d:Ljava/lang/Object;
+    return-void
+.end method
 
-    iget p1, p0, Lnva;->o:I
+.method public static c(Landroid/app/Notification$BigPictureStyle;Z)V
+    .locals 0
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {p0, p1}, Landroid/app/Notification$BigPictureStyle;->showBigPictureWhenCollapsed(Z)Landroid/app/Notification$BigPictureStyle;
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lnva;->o:I
-
-    iget-object p1, p0, Lnva;->X:Lg4a;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lg4a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

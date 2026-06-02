@@ -1,75 +1,93 @@
-.class public interface abstract Ljje;
-.super Ljava/lang/Object;
+.class public abstract Ljje;
+.super Lj18;
 .source "SourceFile"
-
-# interfaces
-.implements Lj0f;
 
 
 # virtual methods
-.method public abstract a()I
-.end method
-
-.method public b()Lqhg;
-    .locals 1
+.method public dequeueWork()Le18;
+    .locals 4
 
     const/4 v0, 0x0
 
+    :try_start_0
+    iget-object v1, p0, Lj18;->mJobImpl:Lc18;
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1}, Lc18;->b()Le18;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    iget-object v1, p0, Lj18;->mCompatQueue:Ljava/util/ArrayList;
+
+    monitor-enter v1
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :try_start_1
+    iget-object v2, p0, Lj18;->mCompatQueue:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-lez v2, :cond_1
+
+    iget-object v2, p0, Lj18;->mCompatQueue:Ljava/util/ArrayList;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Le18;
+
+    monitor-exit v1
+
+    return-object v2
+
+    :catchall_0
+    move-exception v2
+
+    goto :goto_0
+
+    :cond_1
+    monitor-exit v1
+
+    return-object v0
+
+    :goto_0
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    throw v2
+    :try_end_2
+    .catch Ljava/lang/SecurityException; {:try_start_2 .. :try_end_2} :catch_0
+
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
+
     return-object v0
 .end method
 
-.method public c()Lyze;
+.method public onCreate()V
     .locals 1
 
-    const/4 v0, 0x0
+    invoke-super {p0}, Lj18;->onCreate()V
 
-    return-object v0
-.end method
+    new-instance v0, Lg18;
 
-.method public d()Lqhg;
-    .locals 1
+    invoke-direct {v0, p0}, Lg18;-><init>(Ljje;)V
 
-    const/4 v0, 0x0
+    iput-object v0, p0, Lj18;->mJobImpl:Lc18;
 
-    return-object v0
-.end method
-
-.method public e()Lg0f;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public f()Ly58;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public g()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public getType()Li0f;
-    .locals 1
-
-    sget-object v0, Li0f;->b:Li0f;
-
-    return-object v0
-.end method
-
-.method public r()Lnq6;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
+    return-void
 .end method

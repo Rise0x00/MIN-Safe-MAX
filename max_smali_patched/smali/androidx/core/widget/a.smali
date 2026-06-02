@@ -4,8 +4,8 @@
 
 
 # direct methods
-.method public static a(Landroidx/appcompat/widget/AppCompatTextView;)Lufc;
-    .locals 8
+.method public static a(Landroidx/appcompat/widget/AppCompatTextView;)Lyqc;
+    .locals 5
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -13,51 +13,57 @@
 
     if-lt v0, v1, :cond_0
 
-    new-instance v0, Lufc;
+    new-instance v0, Lyqc;
 
-    invoke-static {p0}, Lxhg;->c(Landroid/widget/TextView;)Landroid/text/PrecomputedText$Params;
+    invoke-static {p0}, Ll45;->h(Landroidx/appcompat/widget/AppCompatTextView;)Landroid/text/PrecomputedText$Params;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Lufc;-><init>(Landroid/text/PrecomputedText$Params;)V
+    invoke-direct {v0, p0}, Lyqc;-><init>(Landroid/text/PrecomputedText$Params;)V
 
     return-object v0
 
     :cond_0
-    new-instance v2, Landroid/text/TextPaint;
+    new-instance v2, Lnz0;
+
+    new-instance v3, Landroid/text/TextPaint;
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-direct {v2, v3}, Landroid/text/TextPaint;-><init>(Landroid/graphics/Paint;)V
+    invoke-direct {v3, v4}, Landroid/text/TextPaint;-><init>(Landroid/graphics/Paint;)V
 
-    sget-object v3, Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_LTR:Landroid/text/TextDirectionHeuristic;
+    invoke-direct {v2, v3}, Lnz0;-><init>(Landroid/text/TextPaint;)V
 
-    invoke-static {p0}, Lvhg;->a(Landroid/widget/TextView;)I
+    invoke-static {p0}, Leyj;->a(Landroidx/appcompat/widget/AppCompatTextView;)I
 
-    move-result v4
+    move-result v3
 
-    invoke-static {p0}, Lvhg;->d(Landroid/widget/TextView;)I
+    invoke-virtual {v2, v3}, Lnz0;->j(I)V
 
-    move-result v5
+    invoke-static {p0}, Leyj;->b(Landroidx/appcompat/widget/AppCompatTextView;)I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Lnz0;->m(I)V
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getTransformationMethod()Landroid/text/method/TransformationMethod;
 
-    move-result-object v6
+    move-result-object v3
 
-    instance-of v6, v6, Landroid/text/method/PasswordTransformationMethod;
+    instance-of v3, v3, Landroid/text/method/PasswordTransformationMethod;
 
-    if-eqz v6, :cond_1
+    if-eqz v3, :cond_1
 
-    sget-object v3, Landroid/text/TextDirectionHeuristics;->LTR:Landroid/text/TextDirectionHeuristic;
+    sget-object p0, Landroid/text/TextDirectionHeuristics;->LTR:Landroid/text/TextDirectionHeuristic;
 
     goto :goto_2
 
     :cond_1
-    const/4 v6, 0x1
+    const/4 v3, 0x1
 
-    const/4 v7, 0x0
+    const/4 v4, 0x0
 
     if-lt v0, v1, :cond_4
 
@@ -75,17 +81,17 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lwhg;->a(Ljava/util/Locale;)Landroid/icu/text/DecimalFormatSymbols;
+    invoke-static {p0}, Lfyj;->a(Ljava/util/Locale;)Landroid/icu/text/DecimalFormatSymbols;
 
     move-result-object p0
 
-    invoke-static {p0}, Lxhg;->b(Landroid/icu/text/DecimalFormatSymbols;)[Ljava/lang/String;
+    invoke-static {p0}, Ll45;->a(Landroid/icu/text/DecimalFormatSymbols;)[Ljava/lang/String;
 
     move-result-object p0
 
-    aget-object p0, p0, v7
+    aget-object p0, p0, v4
 
-    invoke-virtual {p0, v7}, Ljava/lang/String;->codePointAt(I)I
+    invoke-virtual {p0, v4}, Ljava/lang/String;->codePointAt(I)I
 
     move-result p0
 
@@ -93,7 +99,7 @@
 
     move-result p0
 
-    if-eq p0, v6, :cond_3
+    if-eq p0, v3, :cond_3
 
     const/4 v0, 0x2
 
@@ -102,13 +108,13 @@
     goto :goto_0
 
     :cond_2
-    sget-object v3, Landroid/text/TextDirectionHeuristics;->LTR:Landroid/text/TextDirectionHeuristic;
+    sget-object p0, Landroid/text/TextDirectionHeuristics;->LTR:Landroid/text/TextDirectionHeuristic;
 
     goto :goto_2
 
     :cond_3
     :goto_0
-    sget-object v3, Landroid/text/TextDirectionHeuristics;->RTL:Landroid/text/TextDirectionHeuristic;
+    sget-object p0, Landroid/text/TextDirectionHeuristics;->RTL:Landroid/text/TextDirectionHeuristic;
 
     goto :goto_2
 
@@ -117,12 +123,12 @@
 
     move-result v0
 
-    if-ne v0, v6, :cond_5
+    if-ne v0, v3, :cond_5
 
     goto :goto_1
 
     :cond_5
-    move v6, v7
+    move v3, v4
 
     :goto_1
     invoke-virtual {p0}, Landroid/view/View;->getTextDirection()I
@@ -131,53 +137,61 @@
 
     packed-switch p0, :pswitch_data_0
 
-    if-eqz v6, :cond_6
+    if-eqz v3, :cond_6
 
-    sget-object v3, Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_RTL:Landroid/text/TextDirectionHeuristic;
+    sget-object p0, Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_RTL:Landroid/text/TextDirectionHeuristic;
+
+    goto :goto_2
+
+    :cond_6
+    sget-object p0, Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_LTR:Landroid/text/TextDirectionHeuristic;
 
     goto :goto_2
 
     :pswitch_0
-    sget-object v3, Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_RTL:Landroid/text/TextDirectionHeuristic;
+    sget-object p0, Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_RTL:Landroid/text/TextDirectionHeuristic;
 
     goto :goto_2
 
     :pswitch_1
-    sget-object v3, Landroid/text/TextDirectionHeuristics;->LOCALE:Landroid/text/TextDirectionHeuristic;
+    sget-object p0, Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_LTR:Landroid/text/TextDirectionHeuristic;
 
     goto :goto_2
 
     :pswitch_2
-    sget-object v3, Landroid/text/TextDirectionHeuristics;->RTL:Landroid/text/TextDirectionHeuristic;
+    sget-object p0, Landroid/text/TextDirectionHeuristics;->LOCALE:Landroid/text/TextDirectionHeuristic;
 
     goto :goto_2
 
     :pswitch_3
-    sget-object v3, Landroid/text/TextDirectionHeuristics;->LTR:Landroid/text/TextDirectionHeuristic;
+    sget-object p0, Landroid/text/TextDirectionHeuristics;->RTL:Landroid/text/TextDirectionHeuristic;
 
     goto :goto_2
 
     :pswitch_4
-    sget-object v3, Landroid/text/TextDirectionHeuristics;->ANYRTL_LTR:Landroid/text/TextDirectionHeuristic;
+    sget-object p0, Landroid/text/TextDirectionHeuristics;->LTR:Landroid/text/TextDirectionHeuristic;
 
-    :cond_6
-    :goto_2
+    goto :goto_2
+
     :pswitch_5
-    new-instance p0, Lufc;
+    sget-object p0, Landroid/text/TextDirectionHeuristics;->ANYRTL_LTR:Landroid/text/TextDirectionHeuristic;
 
-    invoke-direct {p0, v2, v3, v4, v5}, Lufc;-><init>(Landroid/text/TextPaint;Landroid/text/TextDirectionHeuristic;II)V
+    :goto_2
+    invoke-virtual {v2, p0}, Lnz0;->n(Landroid/text/TextDirectionHeuristic;)V
+
+    invoke-virtual {v2}, Lnz0;->c()Lyqc;
+
+    move-result-object p0
 
     return-object p0
 
-    nop
-
     :pswitch_data_0
     .packed-switch 0x2
+        :pswitch_5
         :pswitch_4
         :pswitch_3
         :pswitch_2
         :pswitch_1
-        :pswitch_5
         :pswitch_0
     .end packed-switch
 .end method
@@ -185,7 +199,7 @@
 .method public static b(Landroid/widget/TextView;I)V
     .locals 3
 
-    invoke-static {p1}, Ljkj;->d(I)V
+    invoke-static {p1}, Lvfa;->k(I)V
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -193,7 +207,7 @@
 
     if-lt v0, v1, :cond_0
 
-    invoke-static {p0, p1}, Lxhg;->d(Landroid/widget/TextView;I)V
+    invoke-static {p0, p1}, Ll45;->k(Landroid/widget/TextView;I)V
 
     return-void
 
@@ -249,7 +263,7 @@
 .method public static c(Landroid/widget/TextView;I)V
     .locals 3
 
-    invoke-static {p1}, Ljkj;->d(I)V
+    invoke-static {p1}, Lvfa;->k(I)V
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
 
@@ -302,7 +316,7 @@
 .method public static d(Landroid/widget/TextView;I)V
     .locals 2
 
-    invoke-static {p1}, Ljkj;->d(I)V
+    invoke-static {p1}, Lvfa;->k(I)V
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
 

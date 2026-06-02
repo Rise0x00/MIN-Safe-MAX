@@ -1,63 +1,50 @@
 .class public final Lxe6;
-.super Ljef;
+.super Loqf;
 .source "SourceFile"
+
+# interfaces
+.implements Lgu6;
+
+
+# instance fields
+.field public final a:Lb1;
+
+
+# direct methods
+.method public constructor <init>(Lb1;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lxe6;->a:Lb1;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final C()V
+.method public final d()Lxd6;
     .locals 2
 
-    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
+    new-instance v0, Lwe6;
 
-    check-cast v0, Lk7b;
+    iget-object v1, p0, Lxe6;->a:Lb1;
 
-    const/4 v1, 0x0
+    invoke-direct {v0, v1}, Lwe6;-><init>(Lb1;)V
 
-    invoke-virtual {v0, v1}, Lk7b;->setFirstTrailingIconClickListener(Llq6;)V
-
-    return-void
+    return-object v0
 .end method
 
-.method public final D(Lqe6;)V
-    .locals 5
+.method public final m(Lirf;)V
+    .locals 1
 
-    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
+    new-instance v0, Lae6;
 
-    check-cast v0, Lk7b;
+    invoke-direct {v0, p1}, Lae6;-><init>(Lirf;)V
 
-    iget-object v1, p1, Lqe6;->c:Ljava/lang/CharSequence;
+    iget-object p1, p0, Lxe6;->a:Lb1;
 
-    invoke-virtual {v0, v1}, Lk7b;->setTitle(Ljava/lang/CharSequence;)V
-
-    iget-wide v1, p1, Lqe6;->d:J
-
-    iget-object v3, p1, Lqe6;->o:Ljava/lang/CharSequence;
-
-    iget-object v4, p1, Lqe6;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Lk7b;->g(JLjava/lang/CharSequence;Ljava/lang/String;)V
-
-    sget v1, Lv5e;->A:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lk7b;->setFirstTrailingIcon(Ljava/lang/Integer;)V
-
-    iget-boolean p1, p1, Lqe6;->X:Z
-
-    invoke-virtual {v0, p1}, Lk7b;->setVerified(Z)V
-
-    return-void
-.end method
-
-.method public final bridge synthetic y(Lud8;)V
-    .locals 0
-
-    check-cast p1, Lqe6;
-
-    invoke-virtual {p0, p1}, Lxe6;->D(Lqe6;)V
+    invoke-virtual {p1, v0}, Lxd6;->a(Lye6;)V
 
     return-void
 .end method

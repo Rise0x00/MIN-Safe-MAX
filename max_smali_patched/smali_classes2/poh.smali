@@ -1,123 +1,96 @@
-.class public final enum Lpoh;
-.super Ljava/lang/Enum;
+.class public final Lpoh;
+.super Ltoh;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lpoh;
-
-.field public static final synthetic Y:[Lpoh;
-
-.field public static final enum b:Lpoh;
-
-.field public static final enum c:Lpoh;
-
-.field public static final enum d:Lpoh;
-
-.field public static final enum o:Lpoh;
-
-
-# instance fields
-.field public final a:I
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
-
-    new-instance v0, Lpoh;
-
-    const-string v1, "ATTACH_VIEWER"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, v2}, Lpoh;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lpoh;->b:Lpoh;
-
-    new-instance v1, Lpoh;
-
-    const-string v2, "BUBBLE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3, v3}, Lpoh;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lpoh;->c:Lpoh;
-
-    new-instance v2, Lpoh;
-
-    const-string v3, "VIDEO_MSG_VIEWER"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4, v4}, Lpoh;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lpoh;->d:Lpoh;
-
-    new-instance v3, Lpoh;
-
-    const-string v4, "MEDIA_PLAYLIST"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5, v5}, Lpoh;-><init>(Ljava/lang/String;II)V
-
-    sput-object v3, Lpoh;->o:Lpoh;
-
-    new-instance v4, Lpoh;
-
-    const-string v5, "CHAT_MEDIA"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6, v6}, Lpoh;-><init>(Ljava/lang/String;II)V
-
-    sput-object v4, Lpoh;->X:Lpoh;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lpoh;
-
-    move-result-object v0
-
-    sput-object v0, Lpoh;->Y:[Lpoh;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p3, p0, Lpoh;->a:I
+    .line 1
+    invoke-direct {p0}, Ltoh;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lpoh;
-    .locals 1
+.method public constructor <init>(Lpoh;)V
+    .locals 0
 
-    const-class v0, Lpoh;
+    .line 2
+    invoke-direct {p0, p1}, Ltoh;-><init>(Ltoh;)V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lpoh;
-
-    return-object p0
+    return-void
 .end method
 
-.method public static values()[Lpoh;
-    .locals 1
 
-    sget-object v0, Lpoh;->Y:[Lpoh;
+# virtual methods
+.method public final e(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
+    .locals 2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    const-string v0, "pathData"
+
+    const-string v1, "http://schemas.android.com/apk/res/android"
+
+    invoke-interface {p2, v1, v0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, [Lpoh;
+    if-eqz v0, :cond_3
 
-    return-object v0
+    sget-object v0, Lwg4;->d:[I
+
+    invoke-static {p1, p4, p3, v0}, Ld0k;->k(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    const/4 p3, 0x0
+
+    invoke-virtual {p1, p3}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+
+    move-result-object p4
+
+    if-eqz p4, :cond_0
+
+    iput-object p4, p0, Ltoh;->b:Ljava/lang/String;
+
+    :cond_0
+    const/4 p4, 0x1
+
+    invoke-virtual {p1, p4}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+
+    move-result-object p4
+
+    if-eqz p4, :cond_1
+
+    invoke-static {p4}, Lvfa;->p(Ljava/lang/String;)[Lz1c;
+
+    move-result-object p4
+
+    iput-object p4, p0, Ltoh;->a:[Lz1c;
+
+    :cond_1
+    const-string p4, "fillType"
+
+    invoke-static {p2, p4}, Ld0k;->g(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 p2, 0x2
+
+    invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result p3
+
+    :goto_0
+    iput p3, p0, Ltoh;->c:I
+
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    :cond_3
+    return-void
 .end method

@@ -1,454 +1,253 @@
-.class public final synthetic Lri5;
-.super Ljava/lang/Object;
+.class public final Lri5;
+.super Ly6j;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final e:Landroid/widget/TextView;
 
-.field public final synthetic b:Lcj5;
+.field public final f:Lxh5;
 
-.field public final synthetic c:J
+.field public g:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcj5;JI)V
-    .locals 0
-
-    iput p4, p0, Lri5;->a:I
-
-    iput-object p1, p0, Lri5;->b:Lcj5;
-
-    iput-wide p2, p0, Lri5;->c:J
+.method public constructor <init>(Landroid/widget/TextView;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lri5;->e:Landroid/widget/TextView;
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lri5;->g:Z
+
+    new-instance v0, Lxh5;
+
+    invoke-direct {v0, p1}, Lxh5;-><init>(Landroid/widget/TextView;)V
+
+    iput-object v0, p0, Lri5;->f:Lxh5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 11
+.method public final I()Z
+    .locals 1
 
-    iget v0, p0, Lri5;->a:I
+    iget-boolean v0, p0, Lri5;->g:Z
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    iget-object v0, p0, Lri5;->b:Lcj5;
+.method public final Z(Z)V
+    .locals 1
 
-    iget-wide v1, p0, Lri5;->c:J
+    if-eqz p1, :cond_0
 
-    iget v3, v0, Lcj5;->D:I
+    iget-object p1, p0, Lri5;->e:Landroid/widget/TextView;
 
-    invoke-static {v3}, Lt02;->t(I)I
-
-    move-result v3
-
-    const/4 v4, 0x2
-
-    const-wide v5, 0x7fffffffffffffffL
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x1
-
-    packed-switch v3, :pswitch_data_1
-
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    iget v0, v0, Lcj5;->D:I
-
-    invoke-static {v0}, Lxi4;->t(I)Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/widget/TextView;->getTransformationMethod()Landroid/text/method/TransformationMethod;
 
     move-result-object v0
 
-    const-string v2, "Unknown state: "
-
-    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lri5;->m0(Landroid/text/method/TransformationMethod;)Landroid/text/method/TransformationMethod;
 
     move-result-object v0
 
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
 
-    throw v1
+    :cond_0
+    return-void
+.end method
 
-    :pswitch_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+.method public final a0(Z)V
+    .locals 1
 
-    const-string v1, "Encoder is released"
+    iput-boolean p1, p0, Lri5;->g:Z
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object p1, p0, Lri5;->e:Landroid/widget/TextView;
 
-    throw v0
+    invoke-virtual {p1}, Landroid/widget/TextView;->getTransformationMethod()Landroid/text/method/TransformationMethod;
 
-    :pswitch_1
-    const/4 v1, 0x5
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcj5;->i(I)V
+    invoke-virtual {p0, v0}, Lri5;->m0(Landroid/text/method/TransformationMethod;)Landroid/text/method/TransformationMethod;
 
-    goto/16 :goto_4
+    move-result-object v0
 
-    :pswitch_2
-    iput-object v7, v0, Lcj5;->w:Ljava/lang/Long;
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
 
-    iget-object v3, v0, Lcj5;->o:Ljava/util/ArrayDeque;
+    invoke-virtual {p1}, Landroid/widget/TextView;->getFilters()[Landroid/text/InputFilter;
 
-    invoke-virtual {v3}, Ljava/util/ArrayDeque;->removeLast()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v3
+    invoke-virtual {p0, v0}, Lri5;->t([Landroid/text/InputFilter;)[Landroid/text/InputFilter;
 
-    check-cast v3, Landroid/util/Range;
+    move-result-object v0
 
-    const/4 v7, 0x0
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setFilters([Landroid/text/InputFilter;)V
 
-    if-eqz v3, :cond_0
+    return-void
+.end method
 
-    invoke-virtual {v3}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
+.method public final m0(Landroid/text/method/TransformationMethod;)Landroid/text/method/TransformationMethod;
+    .locals 1
 
-    move-result-object v9
+    iget-boolean v0, p0, Lri5;->g:Z
 
-    check-cast v9, Ljava/lang/Long;
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v9}, Ljava/lang/Long;->longValue()J
+    instance-of v0, p1, Lvi5;
 
-    move-result-wide v9
+    if-eqz v0, :cond_0
 
-    cmp-long v5, v9, v5
+    return-object p1
 
-    if-nez v5, :cond_0
+    :cond_0
+    instance-of v0, p1, Landroid/text/method/PasswordTransformationMethod;
 
-    move v5, v8
+    if-eqz v0, :cond_1
+
+    return-object p1
+
+    :cond_1
+    new-instance v0, Lvi5;
+
+    invoke-direct {v0, p1}, Lvi5;-><init>(Landroid/text/method/TransformationMethod;)V
+
+    return-object v0
+
+    :cond_2
+    instance-of v0, p1, Lvi5;
+
+    if-eqz v0, :cond_3
+
+    check-cast p1, Lvi5;
+
+    invoke-virtual {p1}, Lvi5;->a()Landroid/text/method/TransformationMethod;
+
+    move-result-object p1
+
+    :cond_3
+    return-object p1
+.end method
+
+.method public final t([Landroid/text/InputFilter;)[Landroid/text/InputFilter;
+    .locals 6
+
+    iget-boolean v0, p0, Lri5;->g:Z
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-nez v0, :cond_5
+
+    new-instance v0, Landroid/util/SparseArray;
+
+    invoke-direct {v0, v2}, Landroid/util/SparseArray;-><init>(I)V
+
+    move v2, v1
+
+    :goto_0
+    array-length v3, p1
+
+    if-ge v2, v3, :cond_1
+
+    aget-object v3, p1, v2
+
+    instance-of v4, v3, Lxh5;
+
+    if-eqz v4, :cond_0
+
+    invoke-virtual {v0, v2, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    :cond_0
-    move v5, v7
-
-    :goto_0
-    const-string v6, "There should be a \"pause\" before \"resume\""
-
-    invoke-static {v6, v5}, Ljkj;->f(Ljava/lang/String;Z)V
-
-    invoke-virtual {v3}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Long;
-
-    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v5
-
-    iget-object v9, v0, Lcj5;->o:Ljava/util/ArrayDeque;
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v10
-
-    invoke-static {v3, v10}, Landroid/util/Range;->create(Ljava/lang/Comparable;Ljava/lang/Comparable;)Landroid/util/Range;
-
-    move-result-object v3
-
-    invoke-virtual {v9, v3}, Ljava/util/ArrayDeque;->addLast(Ljava/lang/Object;)V
-
-    iget-object v3, v0, Lcj5;->a:Ljava/lang/String;
-
-    new-instance v9, Ljava/lang/StringBuilder;
-
-    const-string v10, "Resume on "
-
-    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v1, v2}, Lnmj;->a(J)Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v10, "\nPaused duration = "
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sub-long/2addr v1, v5
-
-    invoke-static {v1, v2}, Lnmj;->a(J)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v9, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v3, v1}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-boolean v1, v0, Lcj5;->c:Z
-
-    if-nez v1, :cond_1
-
-    const-class v1, Landroidx/camera/video/internal/compat/quirk/AudioEncoderIgnoresInputTimestampQuirk;
-
-    sget-object v2, Lmz4;->a:Lrz6;
-
-    invoke-virtual {v2, v1}, Lrz6;->M(Ljava/lang/Class;)Ld4d;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    goto :goto_1
-
     :cond_1
-    iget-boolean v1, v0, Lcj5;->c:Z
+    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
-    if-eqz v1, :cond_2
+    move-result v2
 
-    const-class v1, Landroidx/camera/video/internal/compat/quirk/VideoEncoderSuspendDoesNotIncludeSuspendTimeQuirk;
+    if-nez v2, :cond_2
 
-    sget-object v2, Lmz4;->a:Lrz6;
-
-    invoke-virtual {v2, v1}, Lrz6;->M(Ljava/lang/Class;)Ld4d;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_2
-
-    goto :goto_1
+    return-object p1
 
     :cond_2
-    const-string v1, "drop-input-frames"
+    array-length v2, p1
 
-    invoke-static {v7, v1}, Lj27;->f(ILjava/lang/String;)Landroid/os/Bundle;
+    array-length v3, p1
 
-    move-result-object v1
+    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
-    iget-object v2, v0, Lcj5;->e:Landroid/media/MediaCodec;
+    move-result v4
 
-    invoke-virtual {v2, v1}, Landroid/media/MediaCodec;->setParameters(Landroid/os/Bundle;)V
+    sub-int/2addr v3, v4
 
-    iget-object v1, v0, Lcj5;->f:Lii5;
+    new-array v3, v3, [Landroid/text/InputFilter;
 
-    instance-of v2, v1, Lxi5;
+    move v4, v1
 
-    if-eqz v2, :cond_3
+    :goto_1
+    if-ge v1, v2, :cond_4
 
-    check-cast v1, Lxi5;
+    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->indexOfKey(I)I
 
-    invoke-virtual {v1, v8}, Lxi5;->d(Z)V
+    move-result v5
+
+    if-gez v5, :cond_3
+
+    aget-object v5, p1, v1
+
+    aput-object v5, v3, v4
+
+    add-int/lit8 v4, v4, 0x1
 
     :cond_3
-    :goto_1
-    iget-boolean v1, v0, Lcj5;->c:Z
+    add-int/lit8 v1, v1, 0x1
 
-    if-eqz v1, :cond_4
-
-    invoke-virtual {v0}, Lcj5;->g()V
+    goto :goto_1
 
     :cond_4
-    invoke-virtual {v0, v4}, Lcj5;->i(I)V
+    return-object v3
 
-    goto :goto_4
+    :cond_5
+    array-length v0, p1
 
-    :pswitch_3
-    iput-object v7, v0, Lcj5;->w:Ljava/lang/Long;
+    move v3, v1
 
-    iget-object v3, v0, Lcj5;->a:Ljava/lang/String;
+    :goto_2
+    iget-object v4, p0, Lri5;->f:Lxh5;
 
-    invoke-static {v1, v2}, Lnmj;->a(J)Ljava/lang/String;
+    if-ge v3, v0, :cond_7
 
-    move-result-object v7
+    aget-object v5, p1, v3
 
-    const-string v9, "Start on "
+    if-ne v5, v4, :cond_6
 
-    invoke-virtual {v9, v7}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    return-object p1
 
-    move-result-object v7
-
-    invoke-static {v3, v7}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :try_start_0
-    iget-boolean v3, v0, Lcj5;->z:Z
-
-    if-eqz v3, :cond_5
-
-    invoke-virtual {v0}, Lcj5;->h()V
+    :cond_6
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_2
 
-    :catch_0
-    move-exception v1
+    :cond_7
+    array-length v3, p1
 
-    goto :goto_3
+    add-int/2addr v3, v2
 
-    :cond_5
-    :goto_2
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    new-array v2, v3, [Landroid/text/InputFilter;
 
-    move-result-object v1
+    invoke-static {p1, v1, v2, v1, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    aput-object v4, v2, v0
 
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Range;->create(Ljava/lang/Comparable;Ljava/lang/Comparable;)Landroid/util/Range;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lcj5;->t:Landroid/util/Range;
-
-    iget-object v1, v0, Lcj5;->e:Landroid/media/MediaCodec;
-
-    invoke-virtual {v1}, Landroid/media/MediaCodec;->start()V
-    :try_end_0
-    .catch Landroid/media/MediaCodec$CodecException; {:try_start_0 .. :try_end_0} :catch_0
-
-    iget-object v1, v0, Lcj5;->f:Lii5;
-
-    instance-of v2, v1, Lxi5;
-
-    if-eqz v2, :cond_6
-
-    check-cast v1, Lxi5;
-
-    invoke-virtual {v1, v8}, Lxi5;->d(Z)V
-
-    :cond_6
-    invoke-virtual {v0, v4}, Lcj5;->i(I)V
-
-    goto :goto_4
-
-    :goto_3
-    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v8, v2, v1}, Lcj5;->b(ILjava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_4
-    :pswitch_4
-    return-void
-
-    :pswitch_5
-    iget-object v0, p0, Lri5;->b:Lcj5;
-
-    iget-wide v1, p0, Lri5;->c:J
-
-    iget v3, v0, Lcj5;->D:I
-
-    invoke-static {v3}, Lt02;->t(I)I
-
-    move-result v3
-
-    packed-switch v3, :pswitch_data_2
-
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    iget v0, v0, Lcj5;->D:I
-
-    invoke-static {v0}, Lxi4;->t(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "Unknown state: "
-
-    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :pswitch_6
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Encoder is released"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_7
-    const/4 v1, 0x6
-
-    invoke-virtual {v0, v1}, Lcj5;->i(I)V
-
-    goto :goto_5
-
-    :pswitch_8
-    iget-object v3, v0, Lcj5;->a:Ljava/lang/String;
-
-    invoke-static {v1, v2}, Lnmj;->a(J)Ljava/lang/String;
-
-    move-result-object v4
-
-    const-string v5, "Pause on "
-
-    invoke-virtual {v5, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v3, v0, Lcj5;->o:Ljava/util/ArrayDeque;
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    const-wide v4, 0x7fffffffffffffffL
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Range;->create(Ljava/lang/Comparable;Ljava/lang/Comparable;)Landroid/util/Range;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v1}, Ljava/util/ArrayDeque;->addLast(Ljava/lang/Object;)V
-
-    const/4 v1, 0x3
-
-    invoke-virtual {v0, v1}, Lcj5;->i(I)V
-
-    :goto_5
-    :pswitch_9
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-    .end packed-switch
-
-    :pswitch_data_1
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_4
-        :pswitch_2
-        :pswitch_1
-        :pswitch_4
-        :pswitch_1
-        :pswitch_0
-        :pswitch_4
-        :pswitch_0
-    .end packed-switch
-
-    :pswitch_data_2
-    .packed-switch 0x0
-        :pswitch_9
-        :pswitch_8
-        :pswitch_9
-        :pswitch_9
-        :pswitch_7
-        :pswitch_9
-        :pswitch_6
-        :pswitch_9
-        :pswitch_6
-    .end packed-switch
+    return-object v2
 .end method

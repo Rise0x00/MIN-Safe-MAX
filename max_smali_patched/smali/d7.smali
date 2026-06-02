@@ -1,53 +1,126 @@
-.class public abstract Ld7;
-.super Ljava/lang/Object;
+.class public final Ld7;
+.super Lgj5;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Ljava/lang/Object;
+.field public final a:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-.field public b:Z
+.field public final synthetic b:Lone/me/android/OneMeApplication;
+
+
+# direct methods
+.method public constructor <init>(Lone/me/android/OneMeApplication;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ld7;->b:Lone/me/android/OneMeApplication;
+
+    new-instance p1, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object p1, p0, Ld7;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a()V
+.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
+
+    sget-object p2, Lone/me/android/initialization/AccountInitializer;->g:Lx6;
+
+    invoke-static {p2, p1}, Lx6;->a(Lx6;Landroid/app/Activity;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    new-instance p2, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ld7;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {p1, p2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    return-void
 .end method
 
-.method public abstract b()Landroid/view/View;
+.method public final onActivityDestroyed(Landroid/app/Activity;)V
+    .locals 2
+
+    new-instance v0, Ll;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1, p1}, Ll;-><init>(ILjava/lang/Object;)V
+
+    new-instance p1, Lc7;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v1, v0}, Lc7;-><init>(ILjava/lang/Object;)V
+
+    iget-object v0, p0, Ld7;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->removeIf(Ljava/util/function/Predicate;)Z
+
+    return-void
 .end method
 
-.method public abstract c()Lnj9;
-.end method
+.method public final onActivityResumed(Landroid/app/Activity;)V
+    .locals 2
 
-.method public abstract d()Landroid/view/MenuInflater;
-.end method
+    sget-object v0, Lone/me/android/initialization/AccountInitializer;->g:Lx6;
 
-.method public abstract e()Ljava/lang/CharSequence;
-.end method
+    invoke-static {v0, p1}, Lx6;->a(Lx6;Landroid/app/Activity;)Z
 
-.method public abstract f()Ljava/lang/CharSequence;
-.end method
+    move-result p1
 
-.method public abstract h()V
-.end method
+    if-eqz p1, :cond_1
 
-.method public abstract i()Z
-.end method
+    sget-object p1, Lzc3;->A0:Lz66;
 
-.method public abstract j(Landroid/view/View;)V
-.end method
+    iget-object v0, p0, Ld7;->b:Lone/me/android/OneMeApplication;
 
-.method public abstract k(I)V
-.end method
+    invoke-virtual {p1, v0}, Lz66;->d(Landroid/content/Context;)Lzc3;
 
-.method public abstract l(Ljava/lang/CharSequence;)V
-.end method
+    move-result-object p1
 
-.method public abstract m(I)V
-.end method
+    iget-object p1, p1, Lzc3;->Y:Ljava/lang/Object;
 
-.method public abstract n(Ljava/lang/CharSequence;)V
-.end method
+    check-cast p1, Lb1g;
 
-.method public abstract p(Z)V
+    :cond_0
+    invoke-virtual {p1}, Lb1g;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    check-cast v1, Ljava/lang/Number;
+
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v0, v1}, Lb1g;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    :cond_1
+    return-void
 .end method

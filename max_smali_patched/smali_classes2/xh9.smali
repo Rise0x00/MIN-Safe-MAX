@@ -1,50 +1,108 @@
-.class public final Lxh9;
-.super Lp6g;
+.class public final synthetic Lxh9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic X:Lei9;
+
+.field public final synthetic a:Lfi9;
+
+.field public final synthetic b:Lvf9;
+
+.field public final synthetic c:I
+
+.field public final synthetic d:Lsg9;
+
+.field public final synthetic o:I
+
+
+# direct methods
+.method public synthetic constructor <init>(Lfi9;Lvf9;ILsg9;ILei9;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lxh9;->a:Lfi9;
+
+    iput-object p2, p0, Lxh9;->b:Lvf9;
+
+    iput p3, p0, Lxh9;->c:I
+
+    iput-object p4, p0, Lxh9;->d:Lsg9;
+
+    iput p5, p0, Lxh9;->o:I
+
+    iput-object p6, p0, Lxh9;->X:Lei9;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 7
 
-    check-cast p1, Ljava/util/Set;
+    iget-object v0, p0, Lxh9;->a:Lfi9;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, v0, Lfi9;->d:Lskg;
 
-    invoke-virtual {p0, p1, p2}, Lxh9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lxh9;->b:Lvf9;
 
-    move-result-object p1
+    iget v2, p0, Lxh9;->c:I
 
-    check-cast p1, Lxh9;
+    invoke-virtual {v0, v1, v2}, Lskg;->v(Lvf9;I)Z
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    move-result v3
 
-    invoke-virtual {p1, p2}, Lxh9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v4, p0, Lxh9;->d:Lsg9;
 
-    return-object p2
-.end method
+    iget v5, p0, Lxh9;->o:I
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    if-nez v3, :cond_0
 
-    new-instance p1, Lxh9;
+    new-instance v0, Lo7f;
 
-    const/4 v0, 0x2
+    const/4 v2, -0x4
 
-    invoke-direct {p1, v0, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v2}, Lo7f;-><init>(I)V
 
-    return-object p1
-.end method
+    invoke-static {v4, v1, v5, v0}, Lfi9;->Y(Lsg9;Lvf9;ILo7f;)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    return-void
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    :cond_0
+    iget-object v3, v4, Lsg9;->e:Lwx3;
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-virtual {v4, v1}, Lsg9;->t(Lvf9;)Lvf9;
 
-    return-object p1
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/16 v3, 0x1b
+
+    iget-object v6, p0, Lxh9;->X:Lei9;
+
+    if-ne v2, v3, :cond_1
+
+    invoke-interface {v6, v4, v1, v5}, Lei9;->j(Lsg9;Lvf9;I)Ljava/lang/Object;
+
+    new-instance v3, Lzh9;
+
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v0, v1, v2, v3}, Lskg;->b(Lvf9;ILxv3;)V
+
+    return-void
+
+    :cond_1
+    new-instance v3, Lai9;
+
+    invoke-direct {v3, v6, v4, v1, v5}, Lai9;-><init>(Lei9;Lsg9;Lvf9;I)V
+
+    invoke-virtual {v0, v1, v2, v3}, Lskg;->b(Lvf9;ILxv3;)V
+
+    return-void
 .end method

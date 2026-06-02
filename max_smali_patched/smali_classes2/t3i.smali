@@ -1,158 +1,120 @@
 .class public final Lt3i;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Landroid/view/View$OnClickListener;
+.implements Ls45;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final synthetic Y:Lu3i;
+.field public final b:Landroid/view/View;
 
-.field public final synthetic Z:Lk3i;
-
-.field public o:I
-
-.field public final synthetic t0:Lx3i;
+.field public final c:Lb3b;
 
 
 # direct methods
-.method public constructor <init>(Lu3i;Lk3i;Lx3i;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;Lb3b;)V
+    .locals 1
 
-    iput-object p1, p0, Lt3i;->Y:Lu3i;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lt3i;->Z:Lk3i;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iput-object p3, p0, Lt3i;->t0:Lx3i;
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object v0, p0, Lt3i;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lt3i;->b:Landroid/view/View;
+
+    iput-object p2, p0, Lt3i;->c:Lb3b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final dispose()V
+    .locals 3
 
-    check-cast p1, Ljava/lang/Throwable;
+    const/4 v0, 0x0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lt3i;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v2, p0, Lt3i;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    move-result-object p1
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
-    check-cast p1, Lt3i;
+    move-result v0
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p1, p2}, Lt3i;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
-
-    new-instance v0, Lt3i;
-
-    iget-object v1, p0, Lt3i;->Z:Lk3i;
-
-    iget-object v2, p0, Lt3i;->t0:Lx3i;
-
-    iget-object v3, p0, Lt3i;->Y:Lu3i;
-
-    invoke-direct {v0, v3, v1, v2, p2}, Lt3i;-><init>(Lu3i;Lk3i;Lx3i;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lt3i;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
-
-    iget-object v0, p0, Lt3i;->X:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    iget v1, p0, Lt3i;->o:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v2, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lt3i;->Y:Lu3i;
-
-    invoke-static {p1, v0}, Lu3i;->e(Lu3i;Ljava/lang/Throwable;)Lb08;
-
-    move-result-object v5
-
-    iget-object v0, p1, Lu3i;->c:Lo58;
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    move-object v3, v0
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    check-cast v3, Lol3;
+    move-result-object v1
 
-    iget-object v4, p1, Lu3i;->e:Lyw0;
+    if-ne v0, v1, :cond_0
 
-    iget-object p1, p0, Lt3i;->t0:Lx3i;
+    iget-object v0, p0, Lt3i;->b:Landroid/view/View;
 
-    iget-object v7, p1, Lx3i;->a:Ljava/lang/String;
+    const/4 v1, 0x0
 
-    const/4 p1, 0x0
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iput-object p1, p0, Lt3i;->X:Ljava/lang/Object;
+    return-void
 
-    iput v2, p0, Lt3i;->o:I
+    :cond_0
+    invoke-static {}, Lag;->a()Lqne;
 
-    iget-object v6, p0, Lt3i;->Z:Lk3i;
+    move-result-object v0
 
-    move-object v8, p0
+    new-instance v1, Llc8;
 
-    invoke-virtual/range {v3 .. v8}, Lol3;->a(Lmb2;Lb08;Lf6i;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const/4 v2, 0x3
 
-    move-result-object p1
+    invoke-direct {v1, v2, p0}, Llc8;-><init>(ILjava/lang/Object;)V
 
-    sget-object v0, Lac4;->a:Lac4;
+    invoke-virtual {v0, v1}, Lqne;->b(Ljava/lang/Runnable;)Ls45;
 
-    if-ne p1, v0, :cond_2
+    :cond_1
+    return-void
+.end method
 
-    return-object v0
+.method public final f()Z
+    .locals 1
 
-    :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    iget-object v0, p0, Lt3i;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    return-object p1
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
+
+    iget-object p1, p0, Lt3i;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lt3i;->c:Lb3b;
+
+    sget-object v0, Lyeh;->a:Lyeh;
+
+    invoke-interface {p1, v0}, Lb3b;->e(Ljava/lang/Object;)V
+
+    :cond_0
+    return-void
 .end method

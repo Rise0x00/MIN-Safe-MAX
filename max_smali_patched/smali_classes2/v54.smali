@@ -1,94 +1,176 @@
 .class public final Lv54;
-.super Ljef;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final D(Lu54;)V
-    .locals 3
+# instance fields
+.field public final a:I
 
-    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
+.field public final b:Z
 
-    check-cast v0, Lpab;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+# direct methods
+.method public constructor <init>(I)V
+    .locals 1
 
-    sget v1, Lv5e;->L0:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0, v1}, Lpab;->setIcon(I)V
+    iput p1, p0, Lv54;->a:I
 
-    sget v1, Ll8b;->t:I
+    const/4 v0, 0x2
 
-    new-instance v2, Llhg;
+    if-eq p1, v0, :cond_1
 
-    invoke-direct {v2, v1}, Llhg;-><init>(I)V
+    const/4 v0, 0x3
 
-    invoke-virtual {v0, v2}, Lpab;->setTitle(Lqhg;)V
+    if-ne p1, v0, :cond_0
 
-    iget p1, p1, Lu54;->a:I
-
-    new-instance v1, Llhg;
-
-    invoke-direct {v1, p1}, Llhg;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Lpab;->setSubtitle(Lqhg;)V
-
-    return-void
-.end method
-
-.method public final F(Ljava/lang/Integer;Llq6;)V
-    .locals 2
-
-    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
-
-    if-eqz p1, :cond_0
-
-    check-cast v0, Lpab;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-virtual {v1, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance v1, Lc6;
-
-    invoke-direct {v1, p2}, Lc6;-><init>(Llq6;)V
-
-    invoke-virtual {v0, p1, v1}, Lpab;->f(Ljava/lang/String;Landroid/view/View$OnClickListener;)V
-
-    return-void
+    goto :goto_0
 
     :cond_0
-    check-cast v0, Lpab;
+    const/4 p1, 0x0
 
-    iget-object p1, v0, Lpab;->v0:Lone/me/sdk/uikit/common/button/OneMeButton;
+    goto :goto_1
 
-    const/4 p2, 0x0
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
 
-    invoke-virtual {p1, p2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const/16 p2, 0x8
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
+    :goto_1
+    iput-boolean p1, p0, Lv54;->b:Z
 
     return-void
 .end method
 
-.method public final bridge synthetic y(Lud8;)V
-    .locals 0
 
-    check-cast p1, Lu54;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    invoke-virtual {p0, p1}, Lv54;->D(Lu54;)V
+    const/4 v0, 0x1
 
-    return-void
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lv54;
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lv54;
+
+    iget v1, p0, Lv54;->a:I
+
+    iget p1, p1, Lv54;->a:I
+
+    if-eq v1, p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Lv54;->a:I
+
+    invoke-static {v0}, Lo52;->F(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ContactsBannerListItem(bannerType="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lv54;->a:I
+
+    packed-switch v1, :pswitch_data_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :pswitch_0
+    const-string v1, "PERMIT_MIC_COMPACT"
+
+    goto :goto_0
+
+    :pswitch_1
+    const-string v1, "PERMIT_MIC_MIDDLE"
+
+    goto :goto_0
+
+    :pswitch_2
+    const-string v1, "PERMIT_NOTIFICATIONS_CONTACTS_COMPACT"
+
+    goto :goto_0
+
+    :pswitch_3
+    const-string v1, "PERMIT_NOTIFICATIONS_CONTACTS_MIDDLE"
+
+    goto :goto_0
+
+    :pswitch_4
+    const-string v1, "PERMIT_PHONE_BOOK_CONTACTS_MIDDLE"
+
+    goto :goto_0
+
+    :pswitch_5
+    const-string v1, "PERMIT_PHONE_BOOK_CONTACTS_COMPACT"
+
+    goto :goto_0
+
+    :pswitch_6
+    const-string v1, "PERMIT_PHONE_BOOK_CONTACTS_BIG"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isCloseable=false)"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

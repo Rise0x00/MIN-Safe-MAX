@@ -1,107 +1,184 @@
 .class public final Ldmc;
-.super Ljava/lang/Object;
+.super Liig;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lnt6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+.field public final synthetic Y:Lone/me/finishbottomsheet/PollFinishBottomSheet;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;I)V
+.method public synthetic constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/finishbottomsheet/PollFinishBottomSheet;I)V
     .locals 0
 
-    iput p2, p0, Ldmc;->a:I
+    iput p3, p0, Ldmc;->o:I
 
-    iput-object p1, p0, Ldmc;->b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+    iput-object p2, p0, Ldmc;->Y:Lone/me/finishbottomsheet/PollFinishBottomSheet;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Liig;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget p1, p0, Ldmc;->a:I
+    iget v0, p0, Ldmc;->o:I
 
-    packed-switch p1, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p0, Ldmc;->b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p1}, La94;->getRouter()Lw4e;
+    invoke-virtual {p0, p1, p2}, Ldmc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lw4e;->C()Z
+    check-cast p1, Ldmc;
 
-    return-void
+    sget-object p2, Lyeh;->a:Lyeh;
+
+    invoke-virtual {p1, p2}, Ldmc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 
     :pswitch_0
-    iget-object p1, p0, Ldmc;->b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
-
-    sget-object v0, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->X:[Lz28;
-
-    iget-object p1, p1, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->c:Lo58;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Ldmc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    check-cast p1, Lmmc;
+    check-cast p1, Ldmc;
 
-    iget-object v0, p1, Lmmc;->u0:Lmmf;
+    sget-object p2, Lyeh;->a:Lyeh;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p1, p2}, Ldmc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ll0;->isActive()Z
+    return-object p2
 
-    move-result v0
+    nop
 
-    const/4 v1, 0x1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    if-ne v0, v1, :cond_0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    goto :goto_0
+    iget v0, p0, Ldmc;->o:I
 
-    :cond_0
-    iget-object v0, p1, Lmmc;->o:Lo58;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    new-instance v0, Ldmc;
 
-    move-result-object v0
+    iget-object v1, p0, Ldmc;->Y:Lone/me/finishbottomsheet/PollFinishBottomSheet;
 
-    check-cast v0, Lmbg;
+    const/4 v2, 0x1
 
-    check-cast v0, Lj9b;
+    invoke-direct {v0, p2, v1, v2}, Ldmc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/finishbottomsheet/PollFinishBottomSheet;I)V
 
-    invoke-virtual {v0}, Lj9b;->b()Lsb4;
+    iput-object p1, v0, Ldmc;->X:Ljava/lang/Object;
 
-    move-result-object v0
+    return-object v0
 
-    new-instance v1, Llmc;
+    :pswitch_0
+    new-instance v0, Ldmc;
+
+    iget-object v1, p0, Ldmc;->Y:Lone/me/finishbottomsheet/PollFinishBottomSheet;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p1, v2}, Llmc;-><init>(Lmmc;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, v1, v2}, Ldmc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/finishbottomsheet/PollFinishBottomSheet;I)V
 
-    const/4 v2, 0x2
+    iput-object p1, v0, Ldmc;->X:Ljava/lang/Object;
 
-    invoke-static {p1, v0, v1, v2}, Lnth;->n(Lnth;Lqb4;Lbr6;I)Lmmf;
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iget v0, p0, Ldmc;->o:I
+
+    sget-object v1, Lyeh;->a:Lyeh;
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Ldmc;->Y:Lone/me/finishbottomsheet/PollFinishBottomSheet;
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ldmc;->X:Ljava/lang/Object;
+
+    invoke-static {p1}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    check-cast v0, Ljma;
+
+    sget-object p1, Ljg3;->b:Ljg3;
+
+    invoke-static {v0, p1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    sget-object p1, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->z0:Lr0k;
+
+    invoke-virtual {v3, v2}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->j1(Z)V
+
+    :cond_0
+    return-object v1
+
+    :pswitch_0
+    iget-object v0, p0, Ldmc;->X:Ljava/lang/Object;
+
+    invoke-static {p1}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    iget-object v0, v3, Lone/me/finishbottomsheet/PollFinishBottomSheet;->Q0:Luvd;
+
+    sget-object v4, Lone/me/finishbottomsheet/PollFinishBottomSheet;->R0:[Lb88;
+
+    const/4 v5, 0x3
+
+    aget-object v4, v4, v5
+
+    invoke-interface {v0, v3, v4}, Luvd;->y(Ljava/lang/Object;Lb88;)Ljava/lang/Object;
 
     move-result-object v0
 
-    iput-object v0, p1, Lmmc;->u0:Lmmf;
+    check-cast v0, Li8b;
 
-    :goto_0
-    return-void
+    invoke-virtual {v0, p1}, Li8b;->setProgressEnabled(Z)V
+
+    xor-int/2addr p1, v2
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setClickable(Z)V
+
+    return-object v1
 
     nop
 

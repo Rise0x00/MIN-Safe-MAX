@@ -4,183 +4,286 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
 
-.field public final b:J
+.field public final b:I
 
-.field public final c:J
+.field public final c:[F
+
+.field public final d:Z
+
+.field public final e:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;JJ)V
-    .locals 0
+.method public constructor <init>(II[F)V
+    .locals 10
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lph2;->a:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    iput-wide p2, p0, Lph2;->b:J
+    const/4 v1, 0x1
 
-    iput-wide p4, p0, Lph2;->c:J
+    if-lez p1, :cond_0
+
+    move v2, v1
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v0
+
+    :goto_0
+    const-string v3, "Input channel count must be positive."
+
+    invoke-static {v3, v2}, Lh43;->i(Ljava/lang/Object;Z)V
+
+    if-lez p2, :cond_1
+
+    move v2, v1
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v0
+
+    :goto_1
+    const-string v3, "Output channel count must be positive."
+
+    invoke-static {v3, v2}, Lh43;->i(Ljava/lang/Object;Z)V
+
+    array-length v2, p3
+
+    mul-int v3, p1, p2
+
+    if-ne v2, v3, :cond_2
+
+    move v2, v1
+
+    goto :goto_2
+
+    :cond_2
+    move v2, v0
+
+    :goto_2
+    const-string v3, "Coefficient array length is invalid."
+
+    invoke-static {v3, v2}, Lh43;->i(Ljava/lang/Object;Z)V
+
+    iput p1, p0, Lph2;->a:I
+
+    iput p2, p0, Lph2;->b:I
+
+    move v2, v0
+
+    :goto_3
+    array-length v3, p3
+
+    const/4 v4, 0x0
+
+    if-ge v2, v3, :cond_4
+
+    aget v3, p3, v2
+
+    cmpg-float v3, v3, v4
+
+    if-ltz v3, :cond_3
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_3
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Coefficient at index "
+
+    const-string p3, " is negative."
+
+    invoke-static {v2, p2, p3}, Lsb6;->h(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_4
+    iput-object p3, p0, Lph2;->c:[F
+
+    move p3, v0
+
+    move v2, v1
+
+    move v3, v2
+
+    move v5, v3
+
+    :goto_4
+    if-ge p3, p1, :cond_9
+
+    move v6, v0
+
+    :goto_5
+    if-ge v6, p2, :cond_8
+
+    iget-object v7, p0, Lph2;->c:[F
+
+    iget v8, p0, Lph2;->b:I
+
+    mul-int/2addr v8, p3
+
+    add-int/2addr v8, v6
+
+    aget v7, v7, v8
+
+    if-ne p3, v6, :cond_5
+
+    move v8, v1
+
+    goto :goto_6
+
+    :cond_5
+    move v8, v0
+
+    :goto_6
+    const/high16 v9, 0x3f800000    # 1.0f
+
+    cmpl-float v9, v7, v9
+
+    if-eqz v9, :cond_6
+
+    if-eqz v8, :cond_6
+
+    move v5, v0
+
+    :cond_6
+    cmpl-float v7, v7, v4
+
+    if-eqz v7, :cond_7
+
+    move v2, v0
+
+    if-nez v8, :cond_7
+
+    move v3, v2
+
+    :cond_7
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_5
+
+    :cond_8
+    add-int/lit8 p3, p3, 0x1
+
+    goto :goto_4
+
+    :cond_9
+    iput-boolean v2, p0, Lph2;->d:Z
+
+    iget p1, p0, Lph2;->a:I
+
+    iget p2, p0, Lph2;->b:I
+
+    if-ne p1, p2, :cond_a
+
+    if-eqz v3, :cond_a
+
+    if-eqz v5, :cond_a
+
+    move v0, v1
+
+    :cond_a
+    iput-boolean v0, p0, Lph2;->e:Z
 
     return-void
 .end method
 
+.method public static a(II)Lph2;
+    .locals 5
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
+    new-instance v0, Lph2;
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    mul-int v1, p1, p1
 
-    :cond_0
-    const/4 v1, 0x0
+    new-array v1, v1, [F
 
-    if-eqz p1, :cond_5
+    const/4 v2, 0x0
 
-    const-class v2, Lph2;
+    :goto_0
+    if-ge v2, p1, :cond_2
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    mul-int v3, p1, v2
 
-    move-result-object v3
+    add-int/2addr v3, v2
 
-    if-eq v2, v3, :cond_1
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    aput v4, v1, v3
+
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x2
+
+    const/4 v2, 0x1
+
+    if-ne p0, v2, :cond_1
+
+    if-ne p1, v1, :cond_1
+
+    new-array v1, v1, [F
+
+    fill-array-data v1, :array_0
+
+    goto :goto_1
 
     :cond_1
-    check-cast p1, Lph2;
+    if-ne p0, v1, :cond_3
 
-    iget-object v2, p1, Lph2;->a:Ljava/lang/String;
+    if-ne p1, v2, :cond_3
 
-    iget-wide v3, p0, Lph2;->b:J
+    new-array v1, v1, [F
 
-    iget-wide v5, p1, Lph2;->b:J
-
-    cmp-long v3, v3, v5
-
-    if-eqz v3, :cond_2
-
-    return v1
+    fill-array-data v1, :array_1
 
     :cond_2
-    iget-wide v3, p0, Lph2;->c:J
-
-    iget-wide v5, p1, Lph2;->c:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_3
-
-    return v1
-
-    :cond_3
-    iget-object p1, p0, Lph2;->a:Ljava/lang/String;
-
-    if-eqz p1, :cond_4
-
-    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_4
-    if-nez v2, :cond_5
-
-    return v0
-
-    :cond_5
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 6
-
-    iget-object v0, p0, Lph2;->a:Ljava/lang/String;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lph2;->b:J
-
-    const/16 v3, 0x20
-
-    ushr-long v4, v1, v3
-
-    xor-long/2addr v1, v4
-
-    long-to-int v1, v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lph2;->c:J
-
-    ushr-long v3, v1, v3
-
-    xor-long/2addr v1, v3
-
-    long-to-int v1, v1
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "PushMessage{text=\'"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lph2;->a:Ljava/lang/String;
-
-    invoke-static {v1}, Lbti;->d(Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', time="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lph2;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", id="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lph2;->c:J
-
-    const/16 v3, 0x7d
-
-    invoke-static {v0, v1, v2, v3}, Lpqb;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
-
-    move-result-object v0
+    :goto_1
+    invoke-direct {v0, p0, p1, v1}, Lph2;-><init>(II[F)V
 
     return-object v0
+
+    :cond_3
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "->"
+
+    const-string v2, " are not yet implemented."
+
+    const-string v3, "Default channel mixing coefficients for "
+
+    invoke-static {v3, p0, v1, p1, v2}, Lx82;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :array_0
+    .array-data 4
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x3f000000    # 0.5f
+        0x3f000000    # 0.5f
+    .end array-data
 .end method

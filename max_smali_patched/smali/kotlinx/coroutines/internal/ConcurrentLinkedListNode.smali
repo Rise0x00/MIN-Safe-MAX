@@ -28,12 +28,12 @@
         "",
         "onClosedAction",
         "nextOrIfClosed",
-        "(Llq6;)Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;",
+        "(Lxs6;)Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;",
         "value",
         "",
         "trySetNext",
         "(Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;)Z",
-        "Lb3h;",
+        "Lyeh;",
         "cleanPrev",
         "()V",
         "markAsClosed",
@@ -267,44 +267,34 @@
     return-void
 .end method
 
-.method private final synthetic update$atomicfu$ATOMIC_FIELD_UPDATER$Any(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/lang/Object;Lnq6;)V
-    .locals 3
+.method private final synthetic update$atomicfu$ATOMIC_FIELD_UPDATER$Any(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/lang/Object;Lzs6;)V
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;",
             "Ljava/lang/Object;",
-            "Lnq6;",
+            "Lzs6;",
             ")V"
         }
     .end annotation
 
-    :goto_0
+    :cond_0
     invoke-virtual {p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-interface {p3, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v0}, Lzs6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    :cond_0
-    invoke-virtual {p1, p2, v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2, v0, v1}, Lgj2;->h(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v0
 
-    if-eqz v2, :cond_1
+    if-eqz v0, :cond_0
 
     return-void
-
-    :cond_1
-    invoke-virtual {p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-eq v2, v0, :cond_0
-
-    goto :goto_0
 .end method
 
 
@@ -430,12 +420,12 @@
     return v0
 .end method
 
-.method public final nextOrIfClosed(Llq6;)Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;
+.method public final nextOrIfClosed(Lxs6;)Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Llq6;",
+            "Lxs6;",
             ")TN;"
         }
     .end annotation
@@ -455,7 +445,7 @@
     return-object v0
 
     :cond_0
-    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lxs6;->invoke()Ljava/lang/Object;
 
     new-instance p1, Lkotlin/KotlinNothingValueException;
 
@@ -465,7 +455,7 @@
 .end method
 
 .method public final remove()V
-    .locals 6
+    .locals 5
 
     invoke-virtual {p0}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->isTail()Z
 
@@ -473,7 +463,7 @@
 
     if-eqz v0, :cond_0
 
-    goto :goto_2
+    goto :goto_1
 
     :cond_0
     invoke-direct {p0}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->getAliveSegmentLeft()Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;
@@ -488,7 +478,7 @@
 
     move-result-object v2
 
-    :goto_0
+    :cond_1
     invoke-virtual {v2, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -497,22 +487,21 @@
 
     check-cast v4, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;
 
-    if-nez v4, :cond_1
+    if-nez v4, :cond_2
 
     const/4 v4, 0x0
 
-    goto :goto_1
-
-    :cond_1
-    move-object v4, v0
+    goto :goto_0
 
     :cond_2
-    :goto_1
-    invoke-virtual {v2, v1, v3, v4}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-object v4, v0
 
-    move-result v5
+    :goto_0
+    invoke-static {v2, v1, v3, v4}, Lgj2;->j(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;Ljava/lang/Object;Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;)Z
 
-    if-eqz v5, :cond_6
+    move-result v3
+
+    if-eqz v3, :cond_1
 
     if-eqz v0, :cond_3
 
@@ -545,17 +534,8 @@
     if-nez v0, :cond_0
 
     :cond_5
-    :goto_2
+    :goto_1
     return-void
-
-    :cond_6
-    invoke-virtual {v2, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    if-eq v5, v3, :cond_2
-
-    goto :goto_0
 .end method
 
 .method public final trySetNext(Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;)Z

@@ -1,235 +1,555 @@
-.class public abstract Ls1j;
+.class public final Ls1j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:[I
+# instance fields
+.field public final a:Ljava/io/File;
+
+.field public final b:Ljava/lang/Object;
+
+.field public c:Ljava/io/DataOutputStream;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/io/File;)V
+    .locals 2
 
-    const v0, 0x1010448
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    filled-new-array {v0}, [I
+    new-instance v0, Ljava/io/File;
 
-    move-result-object v0
+    const-string v1, "5c75586e0a280603023712030b36012e073d06720c311b"
 
-    sput-object v0, Ls1j;->a:[I
+    invoke-static {v1}, Ljde;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, p1, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    iput-object v0, p0, Ls1j;->a:Ljava/io/File;
+
+    new-instance p1, Ljava/lang/Object;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ls1j;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static final a(Ljava/util/List;)Ljava/util/ArrayList;
-    .locals 5
+.method public static b([B)Lm1j;
+    .locals 15
 
-    new-instance v0, Ljava/util/ArrayList;
+    new-instance v1, Ljava/io/DataInputStream;
 
-    const/16 v1, 0xa
+    new-instance v0, Ljava/io/ByteArrayInputStream;
 
-    invoke-static {p0, v1}, Lri3;->n(Ljava/lang/Iterable;I)I
+    invoke-direct {v0, p0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    move-result v1
+    invoke-direct {v1, v0}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+    :try_start_0
+    invoke-virtual {v1}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
 
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    move-result-object v3
 
-    move-result-object p0
+    invoke-virtual {v1}, Ljava/io/DataInputStream;->readLong()J
+
+    move-result-wide v4
+
+    invoke-virtual {v1}, Ljava/io/DataInputStream;->readLong()J
+
+    move-result-wide v6
+
+    invoke-virtual {v1}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v1}, Ljava/io/DataInputStream;->readInt()I
+
+    move-result v9
+
+    invoke-virtual {v1}, Ljava/io/DataInputStream;->readUTF()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-virtual {v1}, Ljava/io/DataInputStream;->readBoolean()Z
+
+    move-result v11
+
+    invoke-virtual {v1}, Ljava/io/DataInputStream;->readInt()I
+
+    move-result p0
+
+    new-instance v12, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v12}, Ljava/util/LinkedHashMap;-><init>()V
+
+    const/4 v0, 0x0
 
     :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    if-ge v0, p0, :cond_0
 
-    move-result v1
+    invoke-virtual {v1}, Ljava/io/DataInputStream;->readInt()I
 
-    if-eqz v1, :cond_2
+    move-result v2
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/io/DataInputStream;->readByte()B
 
-    move-result-object v1
-
-    check-cast v1, Ltu7;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_0
-
-    new-instance v1, Luu7;
-
-    sget v2, Lmcb;->e:I
-
-    new-instance v3, Llhg;
-
-    invoke-direct {v3, v2}, Llhg;-><init>(I)V
-
-    sget v2, Lv5e;->i1:I
+    move-result v13
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    sget-object v4, Ltu7;->b:Ltu7;
+    new-instance v14, Lo2j;
 
-    invoke-direct {v1, v4, v3, v2}, Luu7;-><init>(Ltu7;Llhg;Ljava/lang/Integer;)V
+    invoke-direct {v14, v13}, Lo2j;-><init>(B)V
+
+    invoke-interface {v12, v2, v14}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    move-object p0, v0
 
     goto :goto_1
 
     :cond_0
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    new-instance v2, Lm1j;
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-direct/range {v2 .. v12}, Lm1j;-><init>(Ljava/lang/String;JJLjava/lang/String;ILjava/lang/String;ZLjava/util/Map;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    invoke-interface {v1}, Ljava/io/Closeable;->close()V
+
+    return-object v2
+
+    :goto_1
+    :try_start_1
     throw p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    :cond_1
-    new-instance v1, Luu7;
+    :catchall_1
+    move-exception v0
 
-    sget v2, Lmcb;->f:I
+    invoke-static {v1, p0}, Lddh;->i(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
-    new-instance v3, Llhg;
+    throw v0
+.end method
 
-    invoke-direct {v3, v2}, Llhg;-><init>(I)V
+.method public static c(Ljava/io/DataOutputStream;Lm1j;)V
+    .locals 6
 
-    sget v2, Lv5e;->j:I
+    new-instance v0, Ljava/io/ByteArrayOutputStream;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
+
+    new-instance v1, Ljava/io/DataOutputStream;
+
+    invoke-direct {v1, v0}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
+
+    :try_start_0
+    iget-object v2, p1, Lm1j;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lm1j;->h:Ljava/util/Map;
+
+    invoke-virtual {v1, v2}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
+
+    iget-wide v4, p1, Lm1j;->b:J
+
+    invoke-virtual {v1, v4, v5}, Ljava/io/DataOutputStream;->writeLong(J)V
+
+    iget-wide v4, p1, Lm1j;->c:J
+
+    invoke-virtual {v1, v4, v5}, Ljava/io/DataOutputStream;->writeLong(J)V
+
+    iget-object v2, p1, Lm1j;->d:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
+
+    iget v2, p1, Lm1j;->e:I
+
+    invoke-virtual {v1, v2}, Ljava/io/DataOutputStream;->writeInt(I)V
+
+    iget-object v2, p1, Lm1j;->f:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
+
+    iget-boolean p1, p1, Lm1j;->g:Z
+
+    invoke-virtual {v1, p1}, Ljava/io/DataOutputStream;->writeBoolean(Z)V
+
+    invoke-interface {v3}, Ljava/util/Map;->size()I
+
+    move-result p1
+
+    invoke-virtual {v1, p1}, Ljava/io/DataOutputStream;->writeInt(I)V
+
+    invoke-interface {v3}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
-    sget-object v4, Ltu7;->a:Ltu7;
+    check-cast v2, Ljava/util/Map$Entry;
 
-    invoke-direct {v1, v4, v3, v2}, Luu7;-><init>(Ltu7;Llhg;Ljava/lang/Integer;)V
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    :goto_1
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Number;
+
+    invoke-virtual {v3}, Ljava/lang/Number;->intValue()I
+
+    move-result v3
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lo2j;
+
+    iget-byte v2, v2, Lo2j;->a:B
+
+    invoke-virtual {v1, v3}, Ljava/io/DataOutputStream;->writeInt(I)V
+
+    invoke-virtual {v1, v2}, Ljava/io/DataOutputStream;->writeByte(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    :cond_2
-    return-object v0
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-interface {v1}, Ljava/io/Closeable;->close()V
+
+    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object p1
+
+    array-length v0, p1
+
+    invoke-virtual {p0, v0}, Ljava/io/DataOutputStream;->writeInt(I)V
+
+    invoke-virtual {p0, p1}, Ljava/io/OutputStream;->write([B)V
+
+    return-void
+
+    :goto_1
+    :try_start_1
+    throw p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :catchall_1
+    move-exception p1
+
+    invoke-static {v1, p0}, Lddh;->i(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw p1
 .end method
 
-.method public static b(Lln;F)V
-    .locals 11
 
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+# virtual methods
+.method public final a()Ljava/util/List;
+    .locals 2
 
-    move-result-object v0
+    iget-object v0, p0, Ls1j;->b:Ljava/lang/Object;
 
-    sget v1, Lbbd;->app_bar_elevation_anim_duration:I
+    monitor-enter v0
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+    :try_start_0
+    invoke-virtual {p0}, Ls1j;->e()Ljava/util/List;
 
-    move-result v0
+    move-result-object v1
 
-    new-instance v1, Landroid/animation/StateListAnimator;
+    invoke-static {v1}, Lij3;->I1(Ljava/lang/Iterable;)Ljava/util/List;
 
-    invoke-direct {v1}, Landroid/animation/StateListAnimator;-><init>()V
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sget v2, Lf5d;->state_liftable:I
+    monitor-exit v0
 
-    sget v3, Lf5d;->state_lifted:I
+    return-object v1
 
-    neg-int v3, v3
+    :catchall_0
+    move-exception v1
 
-    const v4, 0x101009e
+    monitor-exit v0
 
-    filled-new-array {v4, v2, v3}, [I
+    throw v1
+.end method
 
-    move-result-object v2
+.method public final d(Lm1j;)V
+    .locals 5
 
-    const/4 v3, 0x1
+    iget-object v0, p0, Ls1j;->b:Ljava/lang/Object;
 
-    new-array v5, v3, [F
+    monitor-enter v0
 
-    const/4 v6, 0x0
+    :try_start_0
+    iget-object v1, p0, Ls1j;->c:Ljava/io/DataOutputStream;
 
-    const/4 v7, 0x0
+    if-nez v1, :cond_0
 
-    aput v7, v5, v6
+    new-instance v1, Ljava/io/DataOutputStream;
 
-    const-string v8, "elevation"
+    new-instance v2, Ljava/io/FileOutputStream;
 
-    invoke-static {p0, v8, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+    iget-object v3, p0, Ls1j;->a:Ljava/io/File;
+
+    const/4 v4, 0x1
+
+    invoke-direct {v2, v3, v4}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;Z)V
+
+    invoke-direct {v1, v2}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
+
+    iput-object v1, p0, Ls1j;->c:Ljava/io/DataOutputStream;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    iget-object v1, p0, Ls1j;->c:Ljava/io/DataOutputStream;
+
+    if-eqz v1, :cond_2
+
+    invoke-static {v1, p1}, Ls1j;->c(Ljava/io/DataOutputStream;Lm1j;)V
+
+    iget-object p1, p0, Ls1j;->c:Ljava/io/DataOutputStream;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ljava/io/DataOutputStream;->flush()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-void
+
+    :cond_1
+    :try_start_1
+    const-string p1, "af7dbaa8ffc814dbcd9a0edbdadf1cc288d30e8fc6d5098fc1d414dbc1db11c6d2df19"
+
+    invoke-static {p1}, Ljde;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_2
+    const-string p1, "af7dbaa8ffc814dbcd9a0edbdadf1cc288d30e8fc6d5098fc1d414dbc1db11c6d2df19"
+
+    invoke-static {p1}, Ljde;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_1
+    monitor-exit v0
+
+    throw p1
+.end method
+
+.method public final e()Ljava/util/List;
+    .locals 7
+
+    iget-object v0, p0, Ls1j;->a:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    sget-object v0, Lpj5;->a:Lpj5;
+
+    return-object v0
+
+    :cond_0
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    const/4 v2, 0x1
+
+    :try_start_0
+    new-instance v3, Ljava/io/FileInputStream;
+
+    invoke-direct {v3, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+
+    :try_start_1
+    new-instance v4, Ljava/io/DataInputStream;
+
+    invoke-direct {v4, v3}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :goto_0
+    :try_start_2
+    invoke-virtual {v3}, Ljava/io/FileInputStream;->available()I
+
+    move-result v5
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    if-lez v5, :cond_1
+
+    :try_start_3
+    invoke-virtual {v4}, Ljava/io/DataInputStream;->readInt()I
+
+    move-result v5
+
+    new-array v5, v5, [B
+
+    invoke-virtual {v4, v5}, Ljava/io/DataInputStream;->readFully([B)V
+
+    invoke-static {v5}, Ls1j;->b([B)Lm1j;
 
     move-result-object v5
 
-    int-to-long v9, v0
+    invoke-virtual {v1, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    invoke-virtual {v5, v9, v10}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+    goto :goto_0
 
-    move-result-object v0
+    :catchall_0
+    move-exception v5
 
-    invoke-virtual {v1, v2, v0}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
+    goto :goto_2
 
-    filled-new-array {v4}, [I
+    :catch_0
+    move v5, v2
 
-    move-result-object v0
+    goto :goto_1
 
-    new-array v2, v3, [F
+    :cond_1
+    const/4 v5, 0x0
 
-    aput p1, v2, v6
+    :goto_1
+    :try_start_4
+    invoke-interface {v4}, Ljava/io/Closeable;->close()V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    invoke-static {p0, v8, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+    :try_start_5
+    invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_1
 
-    move-result-object p1
+    move v2, v5
 
-    invoke-virtual {p1, v9, v10}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+    goto :goto_4
 
-    move-result-object p1
+    :catchall_1
+    move-exception v4
 
-    invoke-virtual {v1, v0, p1}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
+    goto :goto_3
 
-    new-array p1, v6, [I
+    :goto_2
+    :try_start_6
+    throw v5
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    new-array v0, v3, [F
+    :catchall_2
+    move-exception v6
 
-    aput v7, v0, v6
+    :try_start_7
+    invoke-static {v4, v5}, Lddh;->i(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
-    invoke-static {p0, v8, v0}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+    throw v6
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    move-result-object v0
+    :goto_3
+    :try_start_8
+    throw v4
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_3
 
-    const-wide/16 v2, 0x0
+    :catchall_3
+    move-exception v5
 
-    invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+    :try_start_9
+    invoke-static {v3, v4}, Lddh;->i(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
-    move-result-object v0
+    throw v5
+    :try_end_9
+    .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_1
 
-    invoke-virtual {v1, p1, v0}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
+    :catch_1
+    :goto_4
+    if-eqz v2, :cond_3
 
-    invoke-virtual {p0, v1}, Landroid/view/View;->setStateListAnimator(Landroid/animation/StateListAnimator;)V
+    iget-object v2, p0, Ls1j;->c:Ljava/io/DataOutputStream;
 
-    return-void
-.end method
+    if-eqz v2, :cond_2
 
-.method public static c(Landroid/media/MediaFormat;Landroid/media/metrics/LogSessionId;)V
-    .locals 1
+    invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
 
-    invoke-static {}, Lq59;->f()Landroid/media/metrics/LogSessionId;
+    :cond_2
+    const/4 v2, 0x0
 
-    invoke-static {p1}, Lq59;->y(Landroid/media/metrics/LogSessionId;)Z
+    iput-object v2, p0, Ls1j;->c:Ljava/io/DataOutputStream;
 
-    move-result v0
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    if-nez v0, :cond_0
-
-    const-string v0, "log-session-id"
-
-    invoke-static {p1}, Lc74;->p(Landroid/media/metrics/LogSessionId;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, v0, p1}, Landroid/media/MediaFormat;->setString(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
+    :cond_3
+    return-object v1
 .end method

@@ -1,275 +1,159 @@
-.class public final Lfz;
-.super Ljava/io/OutputStream;
+.class public final synthetic Lfz;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lxs6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Ljava/util/List;
 
-.field public final b:Ljava/io/FileOutputStream;
+.field public final synthetic b:J
 
-.field public c:Z
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;I)V
+.method public synthetic constructor <init>(Ljava/util/List;JZ)V
     .locals 0
 
-    iput p2, p0, Lfz;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    packed-switch p2, :pswitch_data_0
+    iput-object p1, p0, Lfz;->a:Ljava/util/List;
 
-    invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
+    iput-wide p2, p0, Lfz;->b:J
 
-    const/4 p2, 0x0
-
-    iput-boolean p2, p0, Lfz;->c:Z
-
-    new-instance p2, Ljava/io/FileOutputStream;
-
-    invoke-direct {p2, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
-
-    iput-object p2, p0, Lfz;->b:Ljava/io/FileOutputStream;
+    iput-boolean p4, p0, Lfz;->c:Z
 
     return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
-
-    const/4 p2, 0x0
-
-    iput-boolean p2, p0, Lfz;->c:Z
-
-    new-instance p2, Ljava/io/FileOutputStream;
-
-    invoke-direct {p2, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
-
-    iput-object p2, p0, Lfz;->b:Ljava/io/FileOutputStream;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 4
+.method public final invoke()Ljava/lang/Object;
+    .locals 9
 
-    iget v0, p0, Lfz;->a:I
+    iget-object v0, p0, Lfz;->a:Ljava/util/List;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Lij3;->k1(Ljava/util/List;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lfz;->b:Ljava/io/FileOutputStream;
+    move-result-object v1
 
-    iget-boolean v1, p0, Lfz;->c:Z
+    check-cast v1, Ldd3;
+
+    invoke-static {v0}, Lij3;->u1(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ldd3;
+
+    const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
-    goto :goto_1
+    invoke-interface {v1}, Ldd3;->a()J
 
-    :cond_0
-    const/4 v1, 0x1
+    move-result-wide v3
 
-    iput-boolean v1, p0, Lfz;->c:Z
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {p0}, Lfz;->flush()V
-
-    :try_start_0
-    invoke-virtual {v0}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/io/FileDescriptor;->sync()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v3
 
     goto :goto_0
 
-    :catch_0
-    move-exception v1
-
-    const-string v2, "AtomicFile"
-
-    const-string v3, "Failed to sync file descriptor:"
-
-    invoke-static {v2, v3, v1}, Li1h;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :cond_0
+    move-object v3, v2
 
     :goto_0
-    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
-
-    :goto_1
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lfz;->b:Ljava/io/FileOutputStream;
-
-    iget-boolean v1, p0, Lfz;->c:Z
-
     if-eqz v1, :cond_1
 
-    goto :goto_3
+    invoke-interface {v1}, Ldd3;->c()J
 
-    :cond_1
-    const/4 v1, 0x1
+    move-result-wide v4
 
-    iput-boolean v1, p0, Lfz;->c:Z
-
-    invoke-virtual {p0}, Lfz;->flush()V
-
-    :try_start_1
-    invoke-virtual {v0}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/io/FileDescriptor;->sync()V
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    goto :goto_1
+
+    :cond_1
+    move-object v1, v2
+
+    :goto_1
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0}, Ldd3;->a()J
+
+    move-result-wide v4
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
 
     goto :goto_2
 
-    :catch_1
-    move-exception v1
-
-    const-string v2, "AtomicFile"
-
-    const-string v3, "Failed to sync file descriptor:"
-
-    invoke-static {v2, v3, v1}, La5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
+    :cond_2
+    move-object v4, v2
 
     :goto_2
-    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
+    if-eqz v0, :cond_3
 
-    :goto_3
-    return-void
+    invoke-interface {v0}, Ldd3;->c()J
 
-    nop
+    move-result-wide v5
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-.method public final flush()V
-    .locals 1
+    move-result-object v2
 
-    iget v0, p0, Lfz;->a:I
+    :cond_3
+    const-string v0, "insertDataSourceResult: \n                |loadTime: "
 
-    packed-switch v0, :pswitch_data_0
+    const-string v5, ", \n                |forward: "
 
-    iget-object v0, p0, Lfz;->b:Ljava/io/FileOutputStream;
+    iget-wide v6, p0, Lfz;->b:J
 
-    invoke-virtual {v0}, Ljava/io/OutputStream;->flush()V
+    iget-boolean v8, p0, Lfz;->c:Z
 
-    return-void
+    invoke-static {v6, v7, v0, v5, v8}, Lo52;->w(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
-    :pswitch_0
-    iget-object v0, p0, Lfz;->b:Ljava/io/FileOutputStream;
+    move-result-object v0
 
-    invoke-virtual {v0}, Ljava/io/OutputStream;->flush()V
+    const-string v5, ", \n                |firstChunk:"
 
-    return-void
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    nop
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    const-string v3, "-"
 
-.method public final write(I)V
-    .locals 1
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v0, p0, Lfz;->a:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "\n                |lastChunk:"
 
-    .line 1
-    iget-object v0, p0, Lfz;->b:Ljava/io/FileOutputStream;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/io/FileOutputStream;->write(I)V
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-void
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2
-    :pswitch_0
-    iget-object v0, p0, Lfz;->b:Ljava/io/FileOutputStream;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/io/FileOutputStream;->write(I)V
+    const-string v1, "\n                |"
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    nop
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    move-result-object v0
 
-.method public final write([B)V
-    .locals 1
+    invoke-static {v0}, Lfbg;->V(Ljava/lang/String;)Ljava/lang/String;
 
-    iget v0, p0, Lfz;->a:I
+    move-result-object v0
 
-    packed-switch v0, :pswitch_data_0
-
-    .line 3
-    iget-object v0, p0, Lfz;->b:Ljava/io/FileOutputStream;
-
-    invoke-virtual {v0, p1}, Ljava/io/FileOutputStream;->write([B)V
-
-    return-void
-
-    .line 4
-    :pswitch_0
-    iget-object v0, p0, Lfz;->b:Ljava/io/FileOutputStream;
-
-    invoke-virtual {v0, p1}, Ljava/io/FileOutputStream;->write([B)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final write([BII)V
-    .locals 1
-
-    iget v0, p0, Lfz;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 5
-    iget-object v0, p0, Lfz;->b:Ljava/io/FileOutputStream;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/io/FileOutputStream;->write([BII)V
-
-    return-void
-
-    .line 6
-    :pswitch_0
-    iget-object v0, p0, Lfz;->b:Ljava/io/FileOutputStream;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/io/FileOutputStream;->write([BII)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

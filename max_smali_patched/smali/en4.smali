@@ -1,68 +1,113 @@
-.class public final synthetic Len4;
+.class public final Len4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqe8;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:I
 
-.field public final synthetic b:Lid;
+.field public b:I
 
-.field public final synthetic c:Lpj6;
+.field public c:I
 
+.field public d:I
 
-# direct methods
-.method public synthetic constructor <init>(Lid;Lpj6;Lrl4;I)V
-    .locals 0
+.field public e:I
 
-    iput p4, p0, Len4;->a:I
+.field public f:I
 
-    iput-object p1, p0, Len4;->b:Lid;
+.field public g:I
 
-    iput-object p2, p0, Len4;->c:Lpj6;
+.field public h:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public i:I
 
-    return-void
-.end method
+.field public j:I
+
+.field public k:J
+
+.field public l:I
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 16
 
-    iget v0, p0, Len4;->a:I
+    move-object/from16 v0, p0
 
-    packed-switch v0, :pswitch_data_0
+    iget v1, v0, Len4;->a:I
 
-    iget-object v0, p0, Len4;->c:Lpj6;
+    iget v2, v0, Len4;->b:I
 
-    check-cast p1, Ljd;
+    iget v3, v0, Len4;->c:I
 
-    iget-object v1, p0, Len4;->b:Lid;
+    iget v4, v0, Len4;->d:I
 
-    invoke-interface {p1, v1, v0}, Ljd;->L(Lid;Lpj6;)V
+    iget v5, v0, Len4;->e:I
 
-    return-void
+    iget v6, v0, Len4;->f:I
 
-    :pswitch_0
-    iget-object v0, p0, Len4;->c:Lpj6;
+    iget v7, v0, Len4;->g:I
 
-    check-cast p1, Ljd;
+    iget v8, v0, Len4;->h:I
 
-    iget-object v1, p0, Len4;->b:Lid;
+    iget v9, v0, Len4;->i:I
 
-    invoke-interface {p1, v1, v0}, Ljd;->b0(Lid;Lpj6;)V
+    iget v10, v0, Len4;->j:I
 
-    return-void
+    iget-wide v11, v0, Len4;->k:J
 
-    nop
+    iget v13, v0, Len4;->l:I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    sget-object v14, Lpnh;->a:Ljava/lang/String;
+
+    sget-object v14, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string v14, ",\n decoderReleases="
+
+    const-string v15, "\n queuedInputBuffers="
+
+    const-string v0, "DecoderCounters {\n decoderInits="
+
+    invoke-static {v0, v1, v14, v2, v15}, Lo52;->x(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "\n skippedInputBuffers="
+
+    const-string v2, "\n renderedOutputBuffers="
+
+    invoke-static {v0, v3, v1, v4, v2}, Lo52;->D(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "\n skippedOutputBuffers="
+
+    const-string v2, "\n droppedBuffers="
+
+    invoke-static {v0, v5, v1, v6, v2}, Lo52;->D(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "\n droppedInputBuffers="
+
+    const-string v2, "\n maxConsecutiveDroppedBuffers="
+
+    invoke-static {v0, v7, v1, v8, v2}, Lo52;->D(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "\n droppedToKeyframeEvents="
+
+    const-string v2, "\n totalVideoFrameProcessingOffsetUs="
+
+    invoke-static {v0, v9, v1, v10, v2}, Lo52;->D(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "\n videoFrameProcessingOffsetCount="
+
+    invoke-static {v13, v11, v12, v1, v0}, Lsb6;->y(IJLjava/lang/String;Ljava/lang/StringBuilder;)V
+
+    const-string v1, "\n}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

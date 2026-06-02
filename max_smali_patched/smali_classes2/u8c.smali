@@ -1,103 +1,252 @@
 .class public final Lu8c;
-.super Ljava/lang/Object;
+.super Lw4i;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/hardware/SensorEventListener;
+
+
+# static fields
+.field public static final synthetic E0:[Lb88;
 
 
 # instance fields
-.field public final a:Li7f;
+.field public final A0:Lzo5;
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+.field public final B0:Lzo5;
+
+.field public final C0:Lafe;
+
+.field public final D0:Ltt2;
+
+.field public final X:Ljava/lang/String;
+
+.field public final Y:Lbwd;
+
+.field public final Z:Lb1g;
+
+.field public final b:Lia8;
+
+.field public final c:Lia8;
+
+.field public final d:Lia8;
+
+.field public final o:Lb1g;
+
+.field public final z0:Lbwd;
 
 
 # direct methods
-.method public constructor <init>(Lcy0;Lmbg;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lpia;
 
-    const/4 v0, 0x0
+    const-string v1, "saveJob"
 
-    const/4 v1, 0x7
+    const-string v2, "getSaveJob()Lkotlinx/coroutines/Job;"
 
-    invoke-static {v0, v0, v1}, Lj7f;->b(III)Li7f;
+    const-class v3, Lu8c;
 
-    move-result-object v0
+    invoke-direct {v0, v3, v1, v2}, Lpia;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lu8c;->a:Li7f;
+    sget-object v1, Lr3e;->a:Ls3e;
 
-    check-cast p2, Lj9b;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p2}, Lj9b;->c()Lzp8;
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lb88;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Lu8c;->E0:[Lb88;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lia8;Lia8;Lia8;)V
+    .locals 0
+
+    invoke-direct {p0}, Lw4i;-><init>()V
+
+    iput-object p1, p0, Lu8c;->b:Lia8;
+
+    iput-object p2, p0, Lu8c;->c:Lia8;
+
+    iput-object p3, p0, Lu8c;->d:Lia8;
+
+    const/4 p1, 0x0
+
+    invoke-static {p1}, Lc1g;->a(Ljava/lang/Object;)Lb1g;
 
     move-result-object p2
 
-    invoke-static {p2}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
+    iput-object p2, p0, Lu8c;->o:Lb1g;
+
+    const-class p3, Lu8c;
+
+    invoke-virtual {p3}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p3
+
+    iput-object p3, p0, Lu8c;->X:Ljava/lang/String;
+
+    new-instance p3, Lbwd;
+
+    invoke-direct {p3, p2}, Lbwd;-><init>(Lvia;)V
+
+    iput-object p3, p0, Lu8c;->Y:Lbwd;
+
+    sget-object p2, Lxa5;->a:Lxa5;
+
+    invoke-static {p2}, Lc1g;->a(Ljava/lang/Object;)Lb1g;
 
     move-result-object p2
 
-    iput-object p2, p0, Lu8c;->b:Lkotlinx/coroutines/internal/ContextScope;
+    iput-object p2, p0, Lu8c;->Z:Lb1g;
 
-    invoke-virtual {p1, p0}, Lcy0;->d(Ljava/lang/Object;)V
+    new-instance p3, Lbwd;
+
+    invoke-direct {p3, p2}, Lbwd;-><init>(Lvia;)V
+
+    iput-object p3, p0, Lu8c;->z0:Lbwd;
+
+    new-instance p2, Lzo5;
+
+    invoke-direct {p2, p1}, Lzo5;-><init>(Ljava/lang/String;)V
+
+    iput-object p2, p0, Lu8c;->A0:Lzo5;
+
+    new-instance p2, Lzo5;
+
+    invoke-direct {p2, p1}, Lzo5;-><init>(Ljava/lang/String;)V
+
+    iput-object p2, p0, Lu8c;->B0:Lzo5;
+
+    invoke-static {}, Lnm4;->Z()Lafe;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lu8c;->C0:Lafe;
+
+    new-instance p1, Ltt2;
+
+    const/16 p2, 0x9
+
+    invoke-direct {p1, p2, p0}, Ltt2;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, p0, Lu8c;->D0:Ltt2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lab3;)V
-    .locals 4
-    .annotation runtime Lu0g;
-    .end annotation
+.method public final onAccuracyChanged(Landroid/hardware/Sensor;I)V
+    .locals 0
 
-    new-instance v0, Lvea;
+    return-void
+.end method
 
-    const/4 v1, 0x0
+.method public final onSensorChanged(Landroid/hardware/SensorEvent;)V
+    .locals 5
 
-    invoke-direct {v0, v1}, Lvea;-><init>(Ljava/lang/Object;)V
+    iget-object p1, p1, Landroid/hardware/SensorEvent;->values:[F
 
-    iget-object p1, p1, Lab3;->b:Ljava/util/Collection;
+    array-length v0, p1
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    const/4 v1, 0x3
 
-    move-result-object p1
+    if-ge v0, v1, :cond_1
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v0, p0, Lu8c;->X:Ljava/lang/String;
 
-    move-result v2
+    sget-object v1, Lnm4;->d:Lnfb;
 
-    if-eqz v2, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Number;
-
-    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    invoke-virtual {v0, v2, v3}, Lvea;->a(J)Z
+    if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lfca;
+    sget-object v2, Lgp8;->X:Lgp8;
 
-    const/16 v0, 0x1b
+    invoke-virtual {v1, v2}, Lnfb;->b(Lgp8;)Z
 
-    invoke-direct {p1, v0}, Lfca;-><init>(I)V
+    move-result v3
 
-    new-instance v0, Lt8c;
+    if-eqz v3, :cond_2
 
-    invoke-direct {v0, p0, p1, v1}, Lt8c;-><init>(Lu8c;Lfca;Lkotlin/coroutines/Continuation;)V
+    array-length p1, p1
 
-    const/4 p1, 0x3
+    const-string v3, "Shake ignored: not enough sensor values. Expected 3 (x,y,z), got "
 
-    iget-object v2, p0, Lu8c;->b:Lkotlinx/coroutines/internal/ContextScope;
+    const-string v4, "."
 
-    invoke-static {v2, v1, v1, v0, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+    invoke-static {p1, v3, v4}, Lsb6;->h(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
+    move-result-object p1
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v0, p1, v3}, Lnfb;->c(Lgp8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_1
+    const/4 v0, 0x0
+
+    aget v0, p1, v0
+
+    const/4 v1, 0x1
+
+    aget v1, p1, v1
+
+    const/4 v2, 0x2
+
+    aget p1, p1, v2
+
+    const v2, 0x411ce80a
+
+    div-float/2addr v0, v2
+
+    div-float/2addr v1, v2
+
+    div-float/2addr p1, v2
+
+    mul-float/2addr v0, v0
+
+    mul-float/2addr v1, v1
+
+    add-float/2addr v1, v0
+
+    mul-float/2addr p1, p1
+
+    add-float/2addr p1, v1
+
+    float-to-double v0, p1
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v0
+
+    double-to-float p1, v0
+
+    const/high16 v0, 0x40400000    # 3.0f
+
+    cmpl-float p1, p1, v0
+
+    if-lez p1, :cond_2
+
+    iget-object p1, p0, Lu8c;->B0:Lzo5;
+
+    sget-object v0, Lr8c;->a:Lr8c;
+
+    invoke-static {p1, v0}, Lw4i;->s(Lzo5;Ljava/lang/Object;)V
+
+    :cond_2
+    :goto_0
     return-void
 .end method

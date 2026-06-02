@@ -1049,7 +1049,7 @@
 
     const-string v2, " (reason: invalid url), using default = 127.0.0.1,\norig error = "
 
-    invoke-static {v1, p1, v2}, Lt02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p1, v2}, Lo52;->y(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 

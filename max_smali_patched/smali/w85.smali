@@ -1,286 +1,82 @@
-.class public final Lw85;
+.class public final synthetic Lw85;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lw85;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public a:I
+.field public final synthetic X:Ljava/lang/String;
 
-.field public final b:Ljava/util/UUID;
+.field public final synthetic Y:Ljava/lang/String;
 
-.field public final c:Ljava/lang/String;
+.field public final synthetic Z:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public final d:Ljava/lang/String;
+.field public final synthetic a:Lc95;
 
-.field public final o:[B
+.field public final synthetic b:Lqzi;
+
+.field public final synthetic c:Lx1j;
+
+.field public final synthetic d:J
+
+.field public final synthetic o:J
+
+.field public final synthetic z0:Lwzi;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lxj4;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lxj4;-><init>(I)V
-
-    sput-object v0, Lw85;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 5
-
-    .line 8
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 9
-    new-instance v0, Ljava/util/UUID;
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v1
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v3
-
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
-
-    iput-object v0, p0, Lw85;->b:Ljava/util/UUID;
-
-    .line 10
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lw85;->c:Ljava/lang/String;
-
-    .line 11
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v0
-
-    sget v1, Lkbh;->a:I
-
-    iput-object v0, p0, Lw85;->d:Ljava/lang/String;
-
-    .line 12
-    invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
-
-    move-result-object p1
-
-    iput-object p1, p0, Lw85;->o:[B
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;[B)V
+.method public synthetic constructor <init>(Lc95;Lqzi;Lx1j;JJLjava/lang/String;Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicInteger;Lwzi;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p1, p0, Lw85;->a:Lc95;
 
-    .line 3
-    iput-object p1, p0, Lw85;->b:Ljava/util/UUID;
+    iput-object p2, p0, Lw85;->b:Lqzi;
 
-    .line 4
-    iput-object p2, p0, Lw85;->c:Ljava/lang/String;
+    iput-object p3, p0, Lw85;->c:Lx1j;
 
-    .line 5
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-wide p4, p0, Lw85;->d:J
 
-    .line 6
-    iput-object p3, p0, Lw85;->d:Ljava/lang/String;
+    iput-wide p6, p0, Lw85;->o:J
 
-    .line 7
-    iput-object p4, p0, Lw85;->o:[B
+    iput-object p8, p0, Lw85;->X:Ljava/lang/String;
+
+    iput-object p9, p0, Lw85;->Y:Ljava/lang/String;
+
+    iput-object p10, p0, Lw85;->Z:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    iput-object p11, p0, Lw85;->z0:Lwzi;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final run()V
+    .locals 11
 
-    const/4 v0, 0x0
+    iget-object v9, p0, Lw85;->Z:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    return v0
-.end method
+    iget-object v10, p0, Lw85;->z0:Lwzi;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    iget-object v0, p0, Lw85;->a:Lc95;
 
-    instance-of v0, p1, Lw85;
+    iget-object v1, p0, Lw85;->b:Lqzi;
 
-    const/4 v1, 0x0
+    iget-object v2, p0, Lw85;->c:Lx1j;
 
-    if-nez v0, :cond_0
+    iget-wide v3, p0, Lw85;->d:J
 
-    return v1
+    iget-wide v5, p0, Lw85;->o:J
 
-    :cond_0
-    const/4 v0, 0x1
+    iget-object v7, p0, Lw85;->X:Ljava/lang/String;
 
-    if-ne p1, p0, :cond_1
+    iget-object v8, p0, Lw85;->Y:Ljava/lang/String;
 
-    return v0
-
-    :cond_1
-    check-cast p1, Lw85;
-
-    iget-object v2, p0, Lw85;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Lw85;->c:Ljava/lang/String;
-
-    invoke-static {v2, v3}, Lkbh;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lw85;->d:Ljava/lang/String;
-
-    iget-object v3, p1, Lw85;->d:Ljava/lang/String;
-
-    invoke-static {v2, v3}, Lkbh;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lw85;->b:Ljava/util/UUID;
-
-    iget-object v3, p1, Lw85;->b:Ljava/util/UUID;
-
-    invoke-static {v2, v3}, Lkbh;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lw85;->o:[B
-
-    iget-object p1, p1, Lw85;->o:[B
-
-    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lw85;->a:I
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lw85;->b:Ljava/util/UUID;
-
-    invoke-virtual {v0}, Ljava/util/UUID;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lw85;->c:Ljava/lang/String;
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lw85;->d:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lw85;->o:[B
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    iput v1, p0, Lw85;->a:I
-
-    :cond_1
-    iget v0, p0, Lw85;->a:I
-
-    return v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
-
-    iget-object p2, p0, Lw85;->b:Ljava/util/UUID;
-
-    invoke-virtual {p2}, Ljava/util/UUID;->getMostSignificantBits()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
-
-    invoke-virtual {p2}, Ljava/util/UUID;->getLeastSignificantBits()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
-
-    iget-object p2, p0, Lw85;->c:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget-object p2, p0, Lw85;->d:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget-object p2, p0, Lw85;->o:[B
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByteArray([B)V
+    invoke-static/range {v0 .. v10}, Lc95;->J(Lc95;Lqzi;Lx1j;JJLjava/lang/String;Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicInteger;Lwzi;)V
 
     return-void
 .end method

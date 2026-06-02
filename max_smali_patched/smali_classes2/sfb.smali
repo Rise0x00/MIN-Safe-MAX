@@ -1,1141 +1,847 @@
-.class public abstract Lsfb;
-.super Ljava/lang/Object;
+.class public final Lsfb;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
 
+# interfaces
+.implements Lk27;
 
-# static fields
-.field public static final A:I
 
-.field public static final A0:I
+# instance fields
+.field public A0:Ll27;
 
-.field public static final A1:I
+.field public B0:Ljava/lang/String;
 
-.field public static final A2:I
+.field public C0:Lrfb;
 
-.field public static final B:I
+.field public final a:Lyxb;
 
-.field public static final B0:I
+.field public final b:I
 
-.field public static final B1:I
+.field public c:Llwg;
 
-.field public static final B2:I
+.field public d:Llwg;
 
-.field public static final C:I
+.field public o:Lp37;
 
-.field public static final C0:I
-
-.field public static final C1:I
-
-.field public static final C2:I
-
-.field public static final D:I
-
-.field public static final D0:I
-
-.field public static final D1:I
-
-.field public static final D2:I
-
-.field public static final E:I
-
-.field public static final E0:I
-
-.field public static final E1:I
-
-.field public static final E2:I
-
-.field public static final F:I
-
-.field public static final F0:I
-
-.field public static final F1:I
-
-.field public static final F2:I
-
-.field public static final G:I
-
-.field public static final G0:I
-
-.field public static final G1:I
-
-.field public static final H:I
-
-.field public static final H0:I
-
-.field public static final H1:I
-
-.field public static final I:I
-
-.field public static final I0:I
-
-.field public static final I1:I
-
-.field public static final J:I
-
-.field public static final J0:I
-
-.field public static final J1:I
-
-.field public static final K:I
-
-.field public static final K0:I
-
-.field public static final K1:I
-
-.field public static final L:I
-
-.field public static final L0:I
-
-.field public static final L1:I
-
-.field public static final M:I
-
-.field public static final M0:I
-
-.field public static final M1:I
-
-.field public static final N:I
-
-.field public static final N0:I
-
-.field public static final N1:I
-
-.field public static final O:I
-
-.field public static final O0:I
-
-.field public static final O1:I
-
-.field public static final P:I
-
-.field public static final P0:I
-
-.field public static final P1:I
-
-.field public static final Q:I
-
-.field public static final Q0:I
-
-.field public static final Q1:I
-
-.field public static final R:I
-
-.field public static final R0:I
-
-.field public static final R1:I
-
-.field public static final S:I
-
-.field public static final S0:I
-
-.field public static final S1:I
-
-.field public static final T:I
-
-.field public static final T0:I
-
-.field public static final T1:I
-
-.field public static final U:I
-
-.field public static final U0:I
-
-.field public static final U1:I
-
-.field public static final V:I
-
-.field public static final V0:I
-
-.field public static final V1:I
-
-.field public static final W:I
-
-.field public static final W0:I
-
-.field public static final W1:I
-
-.field public static final X:I
-
-.field public static final X0:I
-
-.field public static final X1:I
-
-.field public static final Y:I
-
-.field public static final Y0:I
-
-.field public static final Y1:I
-
-.field public static final Z:I
-
-.field public static final Z0:I
-
-.field public static final Z1:I
-
-.field public static final a:I
-
-.field public static final a0:I
-
-.field public static final a1:I
-
-.field public static final a2:I
-
-.field public static final b:I
-
-.field public static final b0:I
-
-.field public static final b1:I
-
-.field public static final b2:I
-
-.field public static final c:I
-
-.field public static final c0:I
-
-.field public static final c1:I
-
-.field public static final c2:I
-
-.field public static final d:I
-
-.field public static final d0:I
-
-.field public static final d1:I
-
-.field public static final d2:I
-
-.field public static final e:I
-
-.field public static final e0:I
-
-.field public static final e1:I
-
-.field public static final e2:I
-
-.field public static final f:I
-
-.field public static final f0:I
-
-.field public static final f1:I
-
-.field public static final f2:I
-
-.field public static final g:I
-
-.field public static final g0:I
-
-.field public static final g1:I
-
-.field public static final g2:I
-
-.field public static final h:I
-
-.field public static final h0:I
-
-.field public static final h1:I
-
-.field public static final h2:I
-
-.field public static final i:I
-
-.field public static final i0:I
-
-.field public static final i1:I
-
-.field public static final i2:I
-
-.field public static final j:I
-
-.field public static final j0:I
-
-.field public static final j1:I
-
-.field public static final j2:I
-
-.field public static final k:I
-
-.field public static final k0:I
-
-.field public static final k1:I
-
-.field public static final k2:I
-
-.field public static final l:I
-
-.field public static final l0:I
-
-.field public static final l1:I
-
-.field public static final l2:I
-
-.field public static final m:I
-
-.field public static final m0:I
-
-.field public static final m1:I
-
-.field public static final m2:I
-
-.field public static final n:I
-
-.field public static final n0:I
-
-.field public static final n1:I
-
-.field public static final n2:I
-
-.field public static final o:I
-
-.field public static final o0:I
-
-.field public static final o1:I
-
-.field public static final o2:I
-
-.field public static final p:I
-
-.field public static final p0:I
-
-.field public static final p1:I
-
-.field public static final p2:I
-
-.field public static final q:I
-
-.field public static final q0:I
-
-.field public static final q1:I
-
-.field public static final q2:I
-
-.field public static final r:I
-
-.field public static final r0:I
-
-.field public static final r1:I
-
-.field public static final r2:I
-
-.field public static final s:I
-
-.field public static final s0:I
-
-.field public static final s1:I
-
-.field public static final s2:I
-
-.field public static final t:I
-
-.field public static final t0:I
-
-.field public static final t1:I
-
-.field public static final t2:I
-
-.field public static final u:I
-
-.field public static final u0:I
-
-.field public static final u1:I
-
-.field public static final u2:I
-
-.field public static final v:I
-
-.field public static final v0:I
-
-.field public static final v1:I
-
-.field public static final v2:I
-
-.field public static final w:I
-
-.field public static final w0:I
-
-.field public static final w1:I
-
-.field public static final w2:I
-
-.field public static final x:I
-
-.field public static final x0:I
-
-.field public static final x1:I
-
-.field public static final x2:I
-
-.field public static final y:I
-
-.field public static final y0:I
-
-.field public static final y1:I
-
-.field public static final y2:I
-
-.field public static final z:I
-
-.field public static final z0:I
-
-.field public static final z1:I
-
-.field public static final z2:I
+.field public z0:Llwg;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
+
+    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+
+    new-instance v0, Lyxb;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v1, Ld9a;
+
+    invoke-direct {v1, v0}, Ld9a;-><init>(Ljava/lang/Object;)V
+
+    iput-object v1, v0, Lyxb;->d:Ljava/lang/Object;
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v1, v0, Lyxb;->Z:Ljava/lang/Object;
+
+    iput-object p0, v0, Lyxb;->o:Ljava/lang/Object;
+
+    iput-object p1, v0, Lyxb;->X:Ljava/lang/Object;
+
+    iput-object v0, p0, Lsfb;->a:Lyxb;
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setClickable(Z)V
+
+    sget-object v0, Liz4;->b:Ljba;
+
+    invoke-static {v0}, Ljba;->i(Ljba;)Liz4;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    if-eq v0, p1, :cond_2
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_2
+
+    const/4 p1, 0x3
+
+    if-eq v0, p1, :cond_0
+
+    const/4 v1, 0x4
+
+    if-eq v0, v1, :cond_2
+
+    const/4 p1, 0x5
+
+    if-ne v0, p1, :cond_1
+
+    :cond_0
+    move p1, v1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_2
+    :goto_0
+    iput p1, p0, Lsfb;->b:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lzs6;Lone/me/location/map/pick/PickLocationScreen;Ljava/lang/String;)V
     .locals 1
 
-    sget v0, Lced;->Oneme_profile_invite_qr_code:I
+    iput-object p3, p0, Lsfb;->B0:Ljava/lang/String;
 
-    sput v0, Lsfb;->a:I
+    new-instance v0, Lqfb;
 
-    sget v0, Lced;->Oneme_profile_invite_share_link:I
+    invoke-direct {v0, p0, p3, p1, p2}, Lqfb;-><init>(Lsfb;Ljava/lang/String;Lzs6;Li27;)V
 
-    sput v0, Lsfb;->b:I
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    sget v0, Lced;->oneme_profile_add_members_action_title:I
+    move-result-object p1
 
-    sput v0, Lsfb;->c:I
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
-    sget v0, Lced;->oneme_profile_add_members_action_title_channel:I
+    move-result-object p2
 
-    sput v0, Lsfb;->d:I
+    if-ne p1, p2, :cond_1
 
-    sget v0, Lced;->oneme_profile_add_members_search_hint:I
+    iget-object p1, p0, Lsfb;->a:Lyxb;
 
-    sput v0, Lsfb;->e:I
+    iget-object p2, p1, Lyxb;->a:Ljava/lang/Object;
 
-    sget v0, Lced;->oneme_profile_add_members_toolbar_title:I
+    check-cast p2, Lh7c;
 
-    sput v0, Lsfb;->f:I
+    if-eqz p2, :cond_0
 
-    sget v0, Lced;->oneme_profile_add_members_toolbar_title_channel:I
+    invoke-virtual {p2, v0}, Lh7c;->u(La5b;)V
 
-    sput v0, Lsfb;->g:I
+    return-void
 
-    sget v0, Lced;->oneme_profile_add_to_chat:I
+    :cond_0
+    iget-object p1, p1, Lyxb;->Z:Ljava/lang/Object;
 
-    sput v0, Lsfb;->h:I
+    check-cast p1, Ljava/util/ArrayList;
 
-    sget v0, Lced;->oneme_profile_add_to_contacts:I
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    sput v0, Lsfb;->i:I
+    return-void
 
-    sget v0, Lced;->oneme_profile_attachments:I
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    sput v0, Lsfb;->j:I
+    const-string p2, "getMapAsync() must be called on the main thread"
 
-    sget v0, Lced;->oneme_profile_attachments_descr:I
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    sput v0, Lsfb;->k:I
+    throw p1
+.end method
 
-    sget v0, Lced;->oneme_profile_audio:I
+.method public final b(Landroid/os/Bundle;)V
+    .locals 3
 
-    sput v0, Lsfb;->l:I
+    invoke-static {}, Landroid/os/StrictMode;->getThreadPolicy()Landroid/os/StrictMode$ThreadPolicy;
 
-    sget v0, Lced;->oneme_profile_description_expand_suffix:I
+    move-result-object v0
 
-    sput v0, Lsfb;->m:I
+    new-instance v1, Landroid/os/StrictMode$ThreadPolicy$Builder;
 
-    sget v0, Lced;->oneme_profile_edit_chat_type_private:I
+    invoke-direct {v1, v0}, Landroid/os/StrictMode$ThreadPolicy$Builder;-><init>(Landroid/os/StrictMode$ThreadPolicy;)V
 
-    sput v0, Lsfb;->n:I
+    invoke-virtual {v1}, Landroid/os/StrictMode$ThreadPolicy$Builder;->permitAll()Landroid/os/StrictMode$ThreadPolicy$Builder;
 
-    sget v0, Lced;->oneme_profile_edit_chat_type_public:I
+    move-result-object v1
 
-    sput v0, Lsfb;->o:I
+    invoke-virtual {v1}, Landroid/os/StrictMode$ThreadPolicy$Builder;->build()Landroid/os/StrictMode$ThreadPolicy;
 
-    sget v0, Lced;->oneme_profile_invite_toolbar_title:I
+    move-result-object v1
 
-    sput v0, Lsfb;->p:I
+    invoke-static {v1}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
-    sget v0, Lced;->oneme_profile_more_action_add_to_folder:I
+    :try_start_0
+    iget-object v1, p0, Lsfb;->a:Lyxb;
 
-    sput v0, Lsfb;->q:I
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget v0, Lced;->oneme_profile_more_action_block:I
+    new-instance v2, Le3j;
 
-    sput v0, Lsfb;->r:I
+    invoke-direct {v2, v1, p1}, Le3j;-><init>(Lyxb;Landroid/os/Bundle;)V
 
-    sget v0, Lced;->oneme_profile_more_action_clear_history:I
+    invoke-virtual {v1, p1, v2}, Lyxb;->z(Landroid/os/Bundle;Lz3j;)V
 
-    sput v0, Lsfb;->s:I
+    iget-object p1, v1, Lyxb;->a:Ljava/lang/Object;
 
-    sget v0, Lced;->oneme_profile_more_action_delete_channel:I
+    check-cast p1, Lh7c;
 
-    sput v0, Lsfb;->t:I
+    if-nez p1, :cond_0
 
-    sget v0, Lced;->oneme_profile_more_action_delete_chat:I
+    invoke-static {p0}, Lyxb;->q(Lsfb;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sput v0, Lsfb;->u:I
+    goto :goto_0
 
-    sget v0, Lced;->oneme_profile_more_action_delete_chat_and_suspend_bot:I
+    :catchall_0
+    move-exception p1
 
-    sput v0, Lsfb;->v:I
+    goto :goto_1
 
-    sget v0, Lced;->oneme_profile_more_action_leave_channel:I
+    :cond_0
+    :goto_0
+    invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
-    sput v0, Lsfb;->w:I
+    return-void
 
-    sget v0, Lced;->oneme_profile_more_action_leave_chat:I
+    :goto_1
+    invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
-    sput v0, Lsfb;->x:I
+    throw p1
+.end method
 
-    sget v0, Lced;->oneme_profile_more_action_report:I
+.method public final c()V
+    .locals 3
 
-    sput v0, Lsfb;->y:I
+    const/4 v0, 0x0
 
-    sget v0, Lced;->oneme_profile_more_action_suspend_bot:I
+    iput-object v0, p0, Lsfb;->c:Llwg;
 
-    sput v0, Lsfb;->z:I
+    iput-object v0, p0, Lsfb;->d:Llwg;
 
-    sget v0, Lced;->oneme_profile_more_action_unsubscribe_channel:I
+    iput-object v0, p0, Lsfb;->z0:Llwg;
 
-    sput v0, Lsfb;->A:I
+    iput-object v0, p0, Lsfb;->A0:Ll27;
 
-    sget v0, Lced;->oneme_profile_notifications:I
+    iput-object v0, p0, Lsfb;->C0:Lrfb;
 
-    sput v0, Lsfb;->B:I
+    iget-object v0, p0, Lsfb;->a:Lyxb;
 
-    sget v0, Lced;->oneme_profile_search:I
+    iget-object v1, v0, Lyxb;->a:Ljava/lang/Object;
 
-    sput v0, Lsfb;->C:I
+    check-cast v1, Lh7c;
 
-    sget v0, Lced;->oneme_profile_section_admins:I
+    if-eqz v1, :cond_0
 
-    sput v0, Lsfb;->D:I
+    :try_start_0
+    iget-object v0, v1, Lh7c;->c:Ljava/lang/Object;
 
-    sget v0, Lced;->oneme_profile_section_channel_stats:I
+    check-cast v0, Lkqj;
 
-    sput v0, Lsfb;->E:I
+    invoke-virtual {v0}, Ls2j;->U()Landroid/os/Parcel;
 
-    sget v0, Lced;->oneme_profile_section_chat_link:I
+    move-result-object v1
 
-    sput v0, Lsfb;->F:I
+    const/4 v2, 0x5
 
-    sget v0, Lced;->oneme_profile_section_common_chats:I
+    invoke-virtual {v0, v1, v2}, Ls2j;->W(Landroid/os/Parcel;I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    sput v0, Lsfb;->G:I
+    return-void
 
-    sget v0, Lced;->oneme_profile_section_description_bot:I
+    :catch_0
+    move-exception v0
 
-    sput v0, Lsfb;->H:I
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
 
-    sget v0, Lced;->oneme_profile_section_description_bot_official:I
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    sput v0, Lsfb;->I:I
+    throw v1
 
-    sget v0, Lced;->oneme_profile_section_description_contact:I
+    :cond_0
+    :goto_0
+    iget-object v1, v0, Lyxb;->c:Ljava/lang/Object;
 
-    sput v0, Lsfb;->J:I
+    check-cast v1, Ljava/util/LinkedList;
 
-    sget v0, Lced;->oneme_profile_section_members:I
+    invoke-virtual {v1}, Ljava/util/AbstractCollection;->isEmpty()Z
 
-    sput v0, Lsfb;->K:I
+    move-result v1
 
-    sget v0, Lced;->oneme_profile_section_official_org_subtitle:I
+    if-nez v1, :cond_1
 
-    sput v0, Lsfb;->L:I
+    iget-object v1, v0, Lyxb;->c:Ljava/lang/Object;
 
-    sget v0, Lced;->oneme_profile_section_official_org_title:I
+    check-cast v1, Ljava/util/LinkedList;
 
-    sput v0, Lsfb;->M:I
+    invoke-virtual {v1}, Ljava/util/LinkedList;->getLast()Ljava/lang/Object;
 
-    sget v0, Lced;->oneme_profile_section_phone:I
+    move-result-object v1
 
-    sput v0, Lsfb;->N:I
+    check-cast v1, Lz3j;
 
-    sget v0, Lced;->oneme_profile_section_phone_in_contact:I
+    invoke-interface {v1}, Lz3j;->a()I
 
-    sput v0, Lsfb;->O:I
+    move-result v1
 
-    sget v0, Lced;->oneme_profile_section_rkn:I
+    const/4 v2, 0x1
 
-    sput v0, Lsfb;->P:I
+    if-lt v1, v2, :cond_1
 
-    sget v0, Lced;->oneme_profile_section_subscribers:I
+    iget-object v1, v0, Lyxb;->c:Ljava/lang/Object;
 
-    sput v0, Lsfb;->Q:I
+    check-cast v1, Ljava/util/LinkedList;
 
-    sget v0, Lced;->oneme_profile_start_bot:I
+    invoke-virtual {v1}, Ljava/util/LinkedList;->removeLast()Ljava/lang/Object;
 
-    sput v0, Lsfb;->R:I
+    goto :goto_0
 
-    sget v0, Lced;->oneme_profile_start_chat:I
+    :cond_1
+    return-void
+.end method
 
-    sput v0, Lsfb;->S:I
+.method public final d(Landroid/os/Bundle;)V
+    .locals 4
 
-    sget v0, Lced;->oneme_profile_unblock:I
+    iget-object v0, p0, Lsfb;->a:Lyxb;
 
-    sput v0, Lsfb;->T:I
+    iget-object v1, v0, Lyxb;->a:Ljava/lang/Object;
 
-    sget v0, Lced;->oneme_profile_video:I
+    check-cast v1, Lh7c;
 
-    sput v0, Lsfb;->U:I
+    if-eqz v1, :cond_1
 
-    sget v0, Lced;->profile_add_admins_tab_chat_members:I
+    :try_start_0
+    new-instance v0, Landroid/os/Bundle;
 
-    sput v0, Lsfb;->V:I
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    sget v0, Lced;->profile_add_admins_toolbar:I
+    invoke-static {p1, v0}, Lb9j;->d(Landroid/os/Bundle;Landroid/os/Bundle;)V
 
-    sput v0, Lsfb;->W:I
+    iget-object v1, v1, Lh7c;->c:Ljava/lang/Object;
 
-    sget v0, Lced;->profile_admins_list_item_added_admin_by_other:I
+    check-cast v1, Lkqj;
 
-    sput v0, Lsfb;->X:I
+    invoke-virtual {v1}, Ls2j;->U()Landroid/os/Parcel;
 
-    sget v0, Lced;->profile_admins_list_item_added_admin_by_you:I
+    move-result-object v2
 
-    sput v0, Lsfb;->Y:I
+    invoke-static {v2, v0}, Lm8j;->c(Landroid/os/Parcel;Landroid/os/Parcelable;)V
 
-    sget v0, Lced;->profile_change_avatar_error:I
+    const/4 v3, 0x7
 
-    sput v0, Lsfb;->Z:I
+    invoke-virtual {v1, v2, v3}, Ls2j;->T(Landroid/os/Parcel;I)Landroid/os/Parcel;
 
-    sget v0, Lced;->profile_change_avatar_success:I
+    move-result-object v1
 
-    sput v0, Lsfb;->a0:I
+    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
 
-    sget v0, Lced;->profile_change_avatar_title:I
+    move-result v2
 
-    sput v0, Lsfb;->b0:I
+    if-eqz v2, :cond_0
 
-    sget v0, Lced;->profile_change_avatar_upload_from_camera:I
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->readFromParcel(Landroid/os/Parcel;)V
 
-    sput v0, Lsfb;->c0:I
+    :cond_0
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    sget v0, Lced;->profile_change_avatar_upload_from_gallery:I
+    invoke-static {v0, p1}, Lb9j;->d(Landroid/os/Bundle;Landroid/os/Bundle;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    sput v0, Lsfb;->d0:I
+    return-void
 
-    sget v0, Lced;->profile_change_owner_and_leave_snackbar_title:I
+    :catch_0
+    move-exception p1
 
-    sput v0, Lsfb;->e0:I
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
 
-    sget v0, Lced;->profile_change_owner_and_leave_title:I
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    sput v0, Lsfb;->f0:I
+    throw v0
 
-    sget v0, Lced;->profile_change_owner_change_action:I
+    :cond_1
+    iget-object v0, v0, Lyxb;->b:Ljava/lang/Object;
 
-    sput v0, Lsfb;->g0:I
+    check-cast v0, Landroid/os/Bundle;
 
-    sget v0, Lced;->profile_change_owner_channel_description:I
+    if-eqz v0, :cond_2
 
-    sput v0, Lsfb;->h0:I
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
 
-    sget v0, Lced;->profile_change_owner_chat_bottom_sheet_confirm:I
+    :cond_2
+    return-void
+.end method
 
-    sput v0, Lsfb;->i0:I
+.method public final dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+    .locals 7
 
-    sget v0, Lced;->profile_change_owner_description:I
+    if-eqz p1, :cond_0
 
-    sput v0, Lsfb;->j0:I
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
-    sget v0, Lced;->profile_change_owner_snackbar_title:I
+    move-result v0
 
-    sput v0, Lsfb;->k0:I
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    sget v0, Lced;->profile_change_owner_title:I
+    move-result-object v0
 
-    sput v0, Lsfb;->l0:I
+    goto :goto_0
 
-    sget v0, Lced;->profile_change_owner_toolbar:I
+    :cond_0
+    const/4 v0, 0x0
 
-    sput v0, Lsfb;->m0:I
+    :goto_0
+    const-wide/16 v1, 0xc8
 
-    sget v0, Lced;->profile_channel_deleted_snackbar_title:I
+    const/4 v3, 0x3
 
-    sput v0, Lsfb;->n0:I
+    if-nez v0, :cond_1
 
-    sget v0, Lced;->profile_channel_members_list_toolbar_title:I
+    goto :goto_1
 
-    sput v0, Lsfb;->o0:I
+    :cond_1
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    sget v0, Lced;->profile_chat_deleted_snackbar_title:I
+    move-result v4
 
-    sput v0, Lsfb;->p0:I
+    if-nez v4, :cond_2
 
-    sget v0, Lced;->profile_chat_media_empty_tab_title:I
+    iget-object v0, p0, Lsfb;->C0:Lrfb;
 
-    sput v0, Lsfb;->q0:I
+    if-eqz v0, :cond_4
 
-    sget v0, Lced;->profile_chat_media_tab_audio:I
+    check-cast v0, Lone/me/location/map/pick/PickLocationScreen;
 
-    sput v0, Lsfb;->r0:I
+    iget-object v4, v0, Lone/me/location/map/pick/PickLocationScreen;->d:Lia8;
 
-    sget v0, Lced;->profile_chat_media_tab_file:I
+    iget-object v5, v0, Lone/me/location/map/pick/PickLocationScreen;->Z:Luvd;
 
-    sput v0, Lsfb;->s0:I
+    sget-object v6, Lone/me/location/map/pick/PickLocationScreen;->E0:[Lb88;
 
-    sget v0, Lced;->profile_chat_media_tab_link:I
+    aget-object v3, v6, v3
 
-    sput v0, Lsfb;->t0:I
+    invoke-interface {v5, v0, v3}, Luvd;->y(Ljava/lang/Object;Lb88;)Ljava/lang/Object;
 
-    sget v0, Lced;->profile_chat_media_tab_photo_video:I
+    move-result-object v0
 
-    sput v0, Lsfb;->u0:I
+    check-cast v0, Landroid/widget/ImageView;
 
-    sget v0, Lced;->profile_chat_members_list_toolbar_title:I
+    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
-    sput v0, Lsfb;->v0:I
+    move-result-object v0
 
-    sget v0, Lced;->profile_clear_channel_history_bottom_sheet_desctiption:I
+    const/16 v3, 0x14
 
-    sput v0, Lsfb;->w0:I
+    int-to-float v3, v3
 
-    sget v0, Lced;->profile_clear_channel_history_bottom_sheet_title:I
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
-    sput v0, Lsfb;->x0:I
+    move-result-object v5
 
-    sget v0, Lced;->profile_clear_chat_history_bottom_sheet_confirm_for_all:I
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    sput v0, Lsfb;->y0:I
+    move-result-object v5
 
-    sget v0, Lced;->profile_clear_chat_history_bottom_sheet_confirm_for_yourself:I
+    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
 
-    sput v0, Lsfb;->z0:I
+    mul-float/2addr v3, v5
 
-    sget v0, Lced;->profile_clear_chat_history_bottom_sheet_title:I
+    invoke-static {v3}, Lh43;->U(F)I
 
-    sput v0, Lsfb;->A0:I
+    move-result v3
 
-    sget v0, Lced;->profile_clear_chat_history_snackbar_title:I
+    int-to-float v3, v3
 
-    sput v0, Lsfb;->B0:I
+    neg-float v3, v3
 
-    sget v0, Lced;->profile_clear_dialog_history_bottom_sheet_description:I
+    invoke-virtual {v0, v3}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
 
-    sput v0, Lsfb;->C0:I
+    move-result-object v0
 
-    sget v0, Lced;->profile_clear_multi_chat_history_bottom_sheet_title:I
+    invoke-interface {v4}, Lia8;->getValue()Ljava/lang/Object;
 
-    sput v0, Lsfb;->D0:I
+    move-result-object v3
 
-    sget v0, Lced;->profile_contact_added_snackbar_title:I
+    check-cast v3, Lti;
 
-    sput v0, Lsfb;->E0:I
+    iget-object v3, v3, Lti;->a:Lzp4;
 
-    sget v0, Lced;->profile_contact_blocked_snackbar_title:I
+    invoke-virtual {v3}, Lzp4;->a0()Landroid/view/animation/Interpolator;
 
-    sput v0, Lsfb;->F0:I
+    move-result-object v3
 
-    sget v0, Lced;->profile_contact_unblocked_snackbar_title:I
+    invoke-virtual {v0, v3}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
-    sput v0, Lsfb;->G0:I
+    move-result-object v0
 
-    sget v0, Lced;->profile_copy_phone_snackbar_title:I
+    invoke-interface {v4}, Lia8;->getValue()Ljava/lang/Object;
 
-    sput v0, Lsfb;->H0:I
+    move-result-object v3
 
-    sget v0, Lced;->profile_delete_channel_bottom_sheet_confirm:I
+    check-cast v3, Lti;
 
-    sput v0, Lsfb;->I0:I
+    iget-object v3, v3, Lti;->a:Lzp4;
 
-    sget v0, Lced;->profile_delete_channel_bottom_sheet_description:I
+    invoke-virtual {v0, v1, v2}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
-    sput v0, Lsfb;->J0:I
+    goto :goto_2
 
-    sget v0, Lced;->profile_delete_channel_bottom_sheet_title:I
+    :cond_2
+    :goto_1
+    if-nez v0, :cond_3
 
-    sput v0, Lsfb;->K0:I
+    goto :goto_2
 
-    sget v0, Lced;->profile_delete_chat_bottom_sheet_confirm:I
+    :cond_3
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    sput v0, Lsfb;->L0:I
+    move-result v0
 
-    sget v0, Lced;->profile_delete_chat_bottom_sheet_title:I
+    const/4 v4, 0x1
 
-    sput v0, Lsfb;->M0:I
+    if-ne v0, v4, :cond_4
 
-    sget v0, Lced;->profile_delete_dialog_bottom_sheet_description:I
+    iget-object v0, p0, Lsfb;->C0:Lrfb;
 
-    sput v0, Lsfb;->N0:I
+    if-eqz v0, :cond_4
 
-    sget v0, Lced;->profile_delete_multi_chat_bottom_sheet_title:I
+    check-cast v0, Lone/me/location/map/pick/PickLocationScreen;
 
-    sput v0, Lsfb;->O0:I
+    iget-object v4, v0, Lone/me/location/map/pick/PickLocationScreen;->d:Lia8;
 
-    sget v0, Lced;->profile_invite_channel_link:I
+    iget-object v5, v0, Lone/me/location/map/pick/PickLocationScreen;->Z:Luvd;
 
-    sput v0, Lsfb;->P0:I
+    sget-object v6, Lone/me/location/map/pick/PickLocationScreen;->E0:[Lb88;
 
-    sget v0, Lced;->profile_invite_chat_link:I
+    aget-object v3, v6, v3
 
-    sput v0, Lsfb;->Q0:I
+    invoke-interface {v5, v0, v3}, Luvd;->y(Ljava/lang/Object;Lb88;)Ljava/lang/Object;
 
-    sget v0, Lced;->profile_invite_chat_link_description:I
+    move-result-object v0
 
-    sput v0, Lsfb;->R0:I
+    check-cast v0, Landroid/widget/ImageView;
 
-    sget v0, Lced;->profile_invite_chat_link_refresh:I
+    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
-    sput v0, Lsfb;->S0:I
+    move-result-object v0
 
-    sget v0, Lced;->profile_invite_chat_link_update_action:I
+    const/4 v3, 0x0
 
-    sput v0, Lsfb;->T0:I
+    invoke-virtual {v0, v3}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
 
-    sget v0, Lced;->profile_invite_chat_link_update_action_success:I
+    move-result-object v0
 
-    sput v0, Lsfb;->U0:I
+    invoke-interface {v4}, Lia8;->getValue()Ljava/lang/Object;
 
-    sget v0, Lced;->profile_invite_chat_link_update_confirmation_description:I
+    move-result-object v3
 
-    sput v0, Lsfb;->V0:I
+    check-cast v3, Lti;
 
-    sget v0, Lced;->profile_invite_chat_link_update_confirmation_title:I
+    iget-object v3, v3, Lti;->a:Lzp4;
 
-    sput v0, Lsfb;->W0:I
+    invoke-virtual {v3}, Lzp4;->a0()Landroid/view/animation/Interpolator;
 
-    sget v0, Lced;->profile_invite_configure_type:I
+    move-result-object v3
 
-    sput v0, Lsfb;->X0:I
+    invoke-virtual {v0, v3}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
-    sget v0, Lced;->profile_invite_copy_private_link_success:I
+    move-result-object v0
 
-    sput v0, Lsfb;->Y0:I
+    invoke-interface {v4}, Lia8;->getValue()Ljava/lang/Object;
 
-    sget v0, Lced;->profile_invite_copy_public_link_success:I
+    move-result-object v3
 
-    sput v0, Lsfb;->Z0:I
+    check-cast v3, Lti;
 
-    sget v0, Lced;->profile_invite_create_link_error_confirm:I
+    iget-object v3, v3, Lti;->a:Lzp4;
 
-    sput v0, Lsfb;->a1:I
+    invoke-virtual {v0, v1, v2}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
-    sget v0, Lced;->profile_invite_create_link_error_no_connection:I
+    :cond_4
+    :goto_2
+    invoke-super {p0, p1}, Landroid/view/View;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
-    sput v0, Lsfb;->b1:I
+    move-result p1
 
-    sget v0, Lced;->profile_invite_create_link_error_service_unavailable:I
+    return p1
+.end method
 
-    sput v0, Lsfb;->c1:I
+.method public final e()V
+    .locals 3
 
-    sget v0, Lced;->profile_invite_create_link_error_title:I
+    iget-object v0, p0, Lsfb;->a:Lyxb;
 
-    sput v0, Lsfb;->d1:I
+    iget-object v1, v0, Lyxb;->a:Ljava/lang/Object;
 
-    sget v0, Lced;->profile_invite_private_link:I
+    check-cast v1, Lh7c;
 
-    sput v0, Lsfb;->e1:I
+    if-eqz v1, :cond_0
 
-    sget v0, Lced;->profile_leave_channel_admin_bottom_sheet_description:I
+    :try_start_0
+    iget-object v0, v1, Lh7c;->c:Ljava/lang/Object;
 
-    sput v0, Lsfb;->f1:I
+    check-cast v0, Lkqj;
 
-    sget v0, Lced;->profile_leave_channel_bottom_sheet_confirm:I
+    invoke-virtual {v0}, Ls2j;->U()Landroid/os/Parcel;
 
-    sput v0, Lsfb;->g1:I
+    move-result-object v1
 
-    sget v0, Lced;->profile_leave_channel_bottom_sheet_description:I
+    const/16 v2, 0xd
 
-    sput v0, Lsfb;->h1:I
+    invoke-virtual {v0, v1, v2}, Ls2j;->W(Landroid/os/Parcel;I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    sget v0, Lced;->profile_leave_channel_bottom_sheet_title:I
+    return-void
 
-    sput v0, Lsfb;->i1:I
+    :catch_0
+    move-exception v0
 
-    sget v0, Lced;->profile_leave_chat_and_move_rights_bottom_sheet_confirm:I
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
 
-    sput v0, Lsfb;->j1:I
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    sget v0, Lced;->profile_leave_chat_bottom_sheet_cancel:I
+    throw v1
 
-    sput v0, Lsfb;->k1:I
+    :cond_0
+    :goto_0
+    iget-object v1, v0, Lyxb;->c:Ljava/lang/Object;
 
-    sget v0, Lced;->profile_link_context_menu_action_copy_mention:I
+    check-cast v1, Ljava/util/LinkedList;
 
-    sput v0, Lsfb;->l1:I
+    invoke-virtual {v1}, Ljava/util/AbstractCollection;->isEmpty()Z
 
-    sget v0, Lced;->profile_link_context_menu_action_go_to_mention:I
+    move-result v1
 
-    sput v0, Lsfb;->m1:I
+    if-nez v1, :cond_1
 
-    sget v0, Lced;->profile_link_copy_snackbar_title:I
+    iget-object v1, v0, Lyxb;->c:Ljava/lang/Object;
 
-    sput v0, Lsfb;->n1:I
+    check-cast v1, Ljava/util/LinkedList;
 
-    sget v0, Lced;->profile_media_action_copy_link:I
+    invoke-virtual {v1}, Ljava/util/LinkedList;->getLast()Ljava/lang/Object;
 
-    sput v0, Lsfb;->o1:I
+    move-result-object v1
 
-    sget v0, Lced;->profile_media_action_delete:I
+    check-cast v1, Lz3j;
 
-    sput v0, Lsfb;->p1:I
+    invoke-interface {v1}, Lz3j;->a()I
 
-    sget v0, Lced;->profile_media_action_forward_audio:I
+    move-result v1
 
-    sput v0, Lsfb;->q1:I
+    const/4 v2, 0x4
 
-    sget v0, Lced;->profile_media_action_forward_file:I
+    if-lt v1, v2, :cond_1
 
-    sput v0, Lsfb;->r1:I
+    iget-object v1, v0, Lyxb;->c:Ljava/lang/Object;
 
-    sget v0, Lced;->profile_media_action_forward_gif:I
+    check-cast v1, Ljava/util/LinkedList;
 
-    sput v0, Lsfb;->s1:I
+    invoke-virtual {v1}, Ljava/util/LinkedList;->removeLast()Ljava/lang/Object;
 
-    sget v0, Lced;->profile_media_action_forward_link:I
+    goto :goto_0
 
-    sput v0, Lsfb;->t1:I
+    :cond_1
+    return-void
+.end method
 
-    sget v0, Lced;->profile_media_action_forward_photo:I
+.method public final f(Ldqb;)V
+    .locals 8
 
-    sput v0, Lsfb;->u1:I
+    iget-object v0, p0, Lsfb;->B0:Ljava/lang/String;
 
-    sget v0, Lced;->profile_media_action_forward_video:I
+    if-nez v0, :cond_0
 
-    sput v0, Lsfb;->v1:I
+    return-void
 
-    sget v0, Lced;->profile_media_action_goto_link:I
+    :cond_0
+    iget-object v1, p0, Lsfb;->c:Llwg;
 
-    sput v0, Lsfb;->w1:I
+    if-eqz v1, :cond_1
 
-    sget v0, Lced;->profile_media_action_goto_message:I
+    invoke-virtual {v1}, Llwg;->a()V
 
-    sput v0, Lsfb;->x1:I
+    :cond_1
+    sget-object v1, Lzc3;->A0:Lz66;
 
-    sget v0, Lced;->profile_media_action_save:I
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    sput v0, Lsfb;->y1:I
+    move-result-object v2
 
-    sget v0, Lced;->profile_media_action_share_link:I
+    invoke-virtual {v1, v2}, Lz66;->d(Landroid/content/Context;)Lzc3;
 
-    sput v0, Lsfb;->z1:I
+    move-result-object v1
 
-    sget v0, Lced;->profile_media_confirmation_delete_all_chat_button:I
+    invoke-virtual {v1}, Lzc3;->n()Z
 
-    sput v0, Lsfb;->A1:I
+    move-result v1
 
-    sget v0, Lced;->profile_media_confirmation_delete_all_dialog_button:I
+    if-eqz v1, :cond_2
 
-    sput v0, Lsfb;->B1:I
+    sget-object v1, Lux5;->a:Lux5;
 
-    sget v0, Lced;->profile_media_confirmation_delete_audio_description:I
+    goto :goto_0
 
-    sput v0, Lsfb;->C1:I
+    :cond_2
+    sget-object v1, Lvx5;->a:Lvx5;
 
-    sget v0, Lced;->profile_media_confirmation_delete_audio_title:I
+    :goto_0
+    iget-object v2, p0, Lsfb;->A0:Ll27;
 
-    sput v0, Lsfb;->D1:I
+    const/4 v3, 0x0
 
-    sget v0, Lced;->profile_media_confirmation_delete_file_description:I
+    const/4 v4, 0x0
 
-    sput v0, Lsfb;->E1:I
+    const/4 v5, 0x1
 
-    sget v0, Lced;->profile_media_confirmation_delete_file_title:I
+    if-eqz v2, :cond_3
 
-    sput v0, Lsfb;->F1:I
+    new-instance v6, Lmwg;
 
-    sget v0, Lced;->profile_media_confirmation_delete_link_description:I
+    invoke-direct {v6}, Lmwg;-><init>()V
 
-    sput v0, Lsfb;->G1:I
+    const/high16 v7, 0x3f800000    # 1.0f
 
-    sget v0, Lced;->profile_media_confirmation_delete_link_title:I
+    iput v7, v6, Lmwg;->c:F
 
-    sput v0, Lsfb;->H1:I
+    new-instance v7, Lo5j;
 
-    sget v0, Lced;->profile_media_confirmation_delete_media_description:I
+    invoke-direct {v7, v1}, Lo5j;-><init>(Lnwg;)V
 
-    sput v0, Lsfb;->I1:I
+    iput-object v7, v6, Lmwg;->a:Lv6j;
 
-    sget v0, Lced;->profile_media_confirmation_delete_media_title:I
+    iput-boolean v3, v6, Lmwg;->d:Z
 
-    sput v0, Lsfb;->J1:I
+    iput-boolean v5, v6, Lmwg;->b:Z
 
-    sget v0, Lced;->profile_media_confirmation_delete_self_button:I
+    invoke-virtual {v2, v6}, Ll27;->a(Lmwg;)Llwg;
 
-    sput v0, Lsfb;->K1:I
+    move-result-object v1
 
-    sget v0, Lced;->profile_media_content_level_link_subtitle:I
+    goto :goto_1
 
-    sput v0, Lsfb;->L1:I
+    :cond_3
+    move-object v1, v4
 
-    sget v0, Lced;->profile_media_content_level_link_title:I
+    :goto_1
+    iput-object v1, p0, Lsfb;->c:Llwg;
 
-    sput v0, Lsfb;->M1:I
+    invoke-interface {p1}, Ldqb;->w()Lxj3;
 
-    sget v0, Lced;->profile_media_content_level_snackbar_text:I
+    move-result-object p1
 
-    sput v0, Lsfb;->N1:I
+    sget-object v1, Lxj3;->b:Lxj3;
 
-    sget v0, Lced;->profile_media_save_gif_snackbar_success:I
+    const v2, 0x7f7fffff    # Float.MAX_VALUE
 
-    sput v0, Lsfb;->O1:I
+    iget v6, p0, Lsfb;->b:I
 
-    sget v0, Lced;->profile_media_save_image_snackbar_success:I
+    if-ne p1, v1, :cond_6
 
-    sput v0, Lsfb;->P1:I
+    iget-object p1, p0, Lsfb;->d:Llwg;
 
-    sget v0, Lced;->profile_media_save_snackbar_error:I
+    if-eqz p1, :cond_4
 
-    sput v0, Lsfb;->Q1:I
+    invoke-virtual {p1}, Llwg;->a()V
 
-    sget v0, Lced;->profile_media_save_video_snackbar_success:I
+    :cond_4
+    iput-object v4, p0, Lsfb;->d:Llwg;
 
-    sput v0, Lsfb;->R1:I
+    iget-object p1, p0, Lsfb;->A0:Ll27;
 
-    sget v0, Lced;->profile_members_list_action_delete_from_admin:I
+    if-eqz p1, :cond_5
 
-    sput v0, Lsfb;->S1:I
+    new-instance v1, Lmwg;
 
-    sget v0, Lced;->profile_members_list_action_delete_from_channel:I
+    invoke-direct {v1}, Lmwg;-><init>()V
 
-    sput v0, Lsfb;->T1:I
+    iput-boolean v5, v1, Lmwg;->b:Z
 
-    sget v0, Lced;->profile_members_list_action_delete_from_chat:I
+    new-instance v4, Lk47;
 
-    sput v0, Lsfb;->U1:I
+    invoke-direct {v4, v0, v6, v3}, Lk47;-><init>(Ljava/lang/String;IZ)V
 
-    sget v0, Lced;->profile_members_list_action_select:I
+    new-instance v0, Lo5j;
 
-    sput v0, Lsfb;->V1:I
+    invoke-direct {v0, v4}, Lo5j;-><init>(Lnwg;)V
 
-    sget v0, Lced;->profile_members_list_add_to_admin_action:I
+    iput-object v0, v1, Lmwg;->a:Lv6j;
 
-    sput v0, Lsfb;->W1:I
+    iput-boolean v5, v1, Lmwg;->d:Z
 
-    sget v0, Lced;->profile_members_list_add_to_channel_action:I
+    iput v2, v1, Lmwg;->c:F
 
-    sput v0, Lsfb;->X1:I
+    invoke-virtual {p1, v1}, Ll27;->a(Lmwg;)Llwg;
 
-    sget v0, Lced;->profile_members_list_add_to_chat_action:I
+    move-result-object v4
 
-    sput v0, Lsfb;->Y1:I
+    :cond_5
+    iput-object v4, p0, Lsfb;->z0:Llwg;
 
-    sget v0, Lced;->profile_members_list_admin_alias:I
+    return-void
 
-    sput v0, Lsfb;->Z1:I
+    :cond_6
+    iget-object p1, p0, Lsfb;->z0:Llwg;
 
-    sget v0, Lced;->profile_members_list_already_admin_snackbar_title:I
+    if-eqz p1, :cond_7
 
-    sput v0, Lsfb;->a2:I
+    invoke-virtual {p1}, Llwg;->a()V
 
-    sget v0, Lced;->profile_members_list_delete_from_admin_snackbar:I
+    :cond_7
+    iput-object v4, p0, Lsfb;->z0:Llwg;
 
-    sput v0, Lsfb;->b2:I
+    iget-object p1, p0, Lsfb;->A0:Ll27;
 
-    sget v0, Lced;->profile_members_list_delete_from_admin_title:I
+    if-eqz p1, :cond_8
 
-    sput v0, Lsfb;->c2:I
+    new-instance v1, Lmwg;
 
-    sget v0, Lced;->profile_members_list_delete_from_chat_btn:I
+    invoke-direct {v1}, Lmwg;-><init>()V
 
-    sput v0, Lsfb;->d2:I
+    iput-boolean v5, v1, Lmwg;->b:Z
 
-    sget v0, Lced;->profile_members_list_delete_from_chat_btn_with_clean:I
+    new-instance v3, Lk47;
 
-    sput v0, Lsfb;->e2:I
+    invoke-direct {v3, v0, v6, v5}, Lk47;-><init>(Ljava/lang/String;IZ)V
 
-    sget v0, Lced;->profile_members_list_delete_many_from_channel_title:I
+    new-instance v0, Lo5j;
 
-    sput v0, Lsfb;->f2:I
+    invoke-direct {v0, v3}, Lo5j;-><init>(Lnwg;)V
 
-    sget v0, Lced;->profile_members_list_delete_many_from_chat_title:I
+    iput-object v0, v1, Lmwg;->a:Lv6j;
 
-    sput v0, Lsfb;->g2:I
+    iput-boolean v5, v1, Lmwg;->d:Z
 
-    sget v0, Lced;->profile_members_list_delete_one_from_channel_title:I
+    iput v2, v1, Lmwg;->c:F
 
-    sput v0, Lsfb;->h2:I
+    invoke-virtual {p1, v1}, Ll27;->a(Lmwg;)Llwg;
 
-    sget v0, Lced;->profile_members_list_delete_one_from_chat_title:I
+    move-result-object v4
 
-    sput v0, Lsfb;->i2:I
+    :cond_8
+    iput-object v4, p0, Lsfb;->d:Llwg;
 
-    sget v0, Lced;->profile_members_list_invite_by_link_action:I
+    return-void
+.end method
 
-    sput v0, Lsfb;->j2:I
+.method public final setOnMapTouchListener(Lrfb;)V
+    .locals 0
 
-    sget v0, Lced;->profile_members_list_item_added_admin:I
-
-    sput v0, Lsfb;->k2:I
-
-    sget v0, Lced;->profile_members_list_item_is_self:I
-
-    sput v0, Lsfb;->l2:I
-
-    sget v0, Lced;->profile_members_list_owner_alias:I
-
-    sput v0, Lsfb;->m2:I
-
-    sget v0, Lced;->profile_members_list_owner_channel_alias:I
-
-    sput v0, Lsfb;->n2:I
-
-    sget v0, Lced;->profile_members_list_owner_chat_alias:I
-
-    sput v0, Lsfb;->o2:I
-
-    sget v0, Lced;->profile_members_list_restore_in_admin_snackbar:I
-
-    sput v0, Lsfb;->p2:I
-
-    sget v0, Lced;->profile_members_list_toolbar_admin_title:I
-
-    sput v0, Lsfb;->q2:I
-
-    sget v0, Lced;->profile_notifications_bottom_sheet_title:I
-
-    sput v0, Lsfb;->r2:I
-
-    sget v0, Lced;->profile_notifications_disable_1_day:I
-
-    sput v0, Lsfb;->s2:I
-
-    sget v0, Lced;->profile_notifications_disable_1_hour:I
-
-    sput v0, Lsfb;->t2:I
-
-    sget v0, Lced;->profile_notifications_disable_4_hour:I
-
-    sput v0, Lsfb;->u2:I
-
-    sget v0, Lced;->profile_notifications_disable_forever:I
-
-    sput v0, Lsfb;->v2:I
-
-    sget v0, Lced;->profile_phone_number_action_copy:I
-
-    sput v0, Lsfb;->w2:I
-
-    sget v0, Lced;->profile_phone_number_action_tt_video_call:I
-
-    sput v0, Lsfb;->x2:I
-
-    sget v0, Lced;->profile_phone_number_action_tt_voice_call:I
-
-    sput v0, Lsfb;->y2:I
-
-    sget v0, Lced;->profile_phone_number_action_voice_call:I
-
-    sput v0, Lsfb;->z2:I
-
-    sget v0, Lced;->profile_section_item_action_button_all_members:I
-
-    sput v0, Lsfb;->A2:I
-
-    sget v0, Lced;->profile_self_user_click_snackbar_title:I
-
-    sput v0, Lsfb;->B2:I
-
-    sget v0, Lced;->profile_unsubscribe_channel_action_unsubscribe:I
-
-    sput v0, Lsfb;->C2:I
-
-    sget v0, Lced;->profile_unsubscribe_channel_header:I
-
-    sput v0, Lsfb;->D2:I
-
-    sget v0, Lced;->rkn_bottom_sheet_subtitle:I
-
-    sput v0, Lsfb;->E2:I
-
-    sget v0, Lced;->rkn_bottom_sheet_title:I
-
-    sput v0, Lsfb;->F2:I
+    iput-object p1, p0, Lsfb;->C0:Lrfb;
 
     return-void
 .end method

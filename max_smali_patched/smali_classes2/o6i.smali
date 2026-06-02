@@ -2,18 +2,25 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnAttachStateChangeListener;
+
 
 # virtual methods
-.method public final serializer()La38;
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "La38;"
-        }
-    .end annotation
 
-    sget-object v0, Ln6i;->a:Ln6i;
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    return-object v0
+    sget-object v0, Lj4i;->a:Ljava/util/WeakHashMap;
+
+    invoke-static {p1}, Lx3i;->c(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 0
+
+    return-void
 .end method

@@ -3,120 +3,54 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lih7;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljh7;
-
-.field public final synthetic c:F
-
-
-# direct methods
-.method public synthetic constructor <init>(Ljh7;FI)V
-    .locals 0
-
-    iput p3, p0, Lhh7;->a:I
-
-    iput-object p1, p0, Lhh7;->b:Ljh7;
-
-    iput p2, p0, Lhh7;->c:F
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public c:Landroid/os/IBinder;
 
 
 # virtual methods
-.method public final run()V
+.method public final asBinder()Landroid/os/IBinder;
+    .locals 1
+
+    iget-object v0, p0, Lhh7;->c:Landroid/os/IBinder;
+
+    return-object v0
+.end method
+
+.method public final k([Ljava/lang/String;)V
     .locals 3
 
-    iget v0, p0, Lhh7;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lbh7;->a:Lbh7;
-
-    iget-object v1, p0, Lhh7;->b:Ljh7;
-
-    invoke-static {v1, v0}, Ljh7;->m(Ljh7;Ldh7;)V
-
-    iget-object v0, v1, Ljh7;->O0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lo58;->e()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    check-cast v0, Ld10;
+    :try_start_0
+    sget-object v1, Lih7;->a:Ljava/lang/String;
 
-    const/16 v1, 0x2710
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    int-to-float v1, v1
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    iget v2, p0, Lhh7;->c:F
+    iget-object p1, p0, Lhh7;->c:Landroid/os/IBinder;
 
-    mul-float/2addr v2, v1
+    const/4 v1, 0x0
 
-    invoke-static {v2}, Lq7j;->c(F)I
+    const/4 v2, 0x1
 
-    move-result v1
+    invoke-interface {p1, v2, v0, v1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    :cond_0
     return-void
 
-    :pswitch_0
-    sget-object v0, Lbh7;->a:Lbh7;
+    :catchall_0
+    move-exception p1
 
-    iget-object v1, p0, Lhh7;->b:Ljh7;
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    invoke-static {v1, v0}, Ljh7;->m(Ljh7;Ldh7;)V
-
-    iget-object v0, v1, Ljh7;->O0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lo58;->e()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ld10;
-
-    const/16 v1, 0x2710
-
-    int-to-float v1, v1
-
-    iget v2, p0, Lhh7;->c:F
-
-    mul-float/2addr v2, v1
-
-    invoke-static {v2}, Lq7j;->c(F)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

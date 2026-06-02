@@ -1,164 +1,320 @@
-.class public final La63;
-.super Lp6g;
+.class public final synthetic La63;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lxs6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chats/search/ChatsListSearchScreen;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lone/me/chats/search/ChatsListSearchScreen;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/search/ChatsListSearchScreen;)V
+.method public synthetic constructor <init>(Lone/me/chats/search/ChatsListSearchScreen;I)V
     .locals 0
 
-    iput-object p2, p0, La63;->X:Lone/me/chats/search/ChatsListSearchScreen;
+    iput p2, p0, La63;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, La63;->b:Lone/me/chats/search/ChatsListSearchScreen;
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 34
 
-    check-cast p1, Lhja;
+    move-object/from16 v0, p0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v1, v0, La63;->a:I
 
-    invoke-virtual {p0, p1, p2}, La63;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v1, :pswitch_data_0
 
-    move-result-object p1
+    iget-object v1, v0, La63;->b:Lone/me/chats/search/ChatsListSearchScreen;
 
-    check-cast p1, La63;
+    iget-object v2, v1, Lone/me/chats/search/ChatsListSearchScreen;->b:Lq32;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lz5;
 
-    invoke-virtual {p1, p2}, La63;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v2
 
-    return-object p2
-.end method
+    const/16 v3, 0x31
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-virtual {v2, v3}, Lz5;->d(I)Lakg;
 
-    new-instance v0, La63;
+    move-result-object v2
 
-    iget-object v1, p0, La63;->X:Lone/me/chats/search/ChatsListSearchScreen;
+    invoke-virtual {v2}, Lakg;->getValue()Ljava/lang/Object;
 
-    invoke-direct {v0, p2, v1}, La63;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/search/ChatsListSearchScreen;)V
+    move-result-object v2
 
-    iput-object p1, v0, La63;->o:Ljava/lang/Object;
+    check-cast v2, Lm16;
 
-    return-object v0
-.end method
+    check-cast v2, Lhjc;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    invoke-virtual {v2}, Lhjc;->s()Z
 
-    iget-object v0, p0, La63;->o:Ljava/lang/Object;
+    move-result v2
 
-    check-cast v0, Lhja;
+    if-eqz v2, :cond_0
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    new-instance v2, Llrc;
 
-    iget-object p1, p0, La63;->X:Lone/me/chats/search/ChatsListSearchScreen;
+    invoke-virtual {v1}, Lone/me/chats/search/ChatsListSearchScreen;->g1()Lg73;
 
-    invoke-static {p1}, Lg3j;->d(La94;)V
+    move-result-object v1
 
-    instance-of p1, v0, Lcpb;
+    iget-object v1, v1, Lg73;->m1:Lakg;
 
-    const/4 v1, 0x0
+    invoke-virtual {v1}, Lakg;->getValue()Ljava/lang/Object;
 
-    if-eqz p1, :cond_0
+    move-result-object v1
 
-    sget-object p1, Ln93;->c:Ln93;
+    check-cast v1, Lbsc;
 
-    check-cast v0, Lcpb;
-
-    iget-object v0, v0, Lhja;->a:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    invoke-virtual {p1}, Ld3;->p0()Ljm4;
-
-    move-result-object p1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v4, ":settings/folder/by-chat?id="
-
-    invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0, v1}, Ljm4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    invoke-direct {v2, v1}, Llrc;-><init>(Lbsc;)V
 
     goto :goto_0
 
     :cond_0
-    instance-of p1, v0, Lv8a;
+    const/4 v2, 0x0
 
-    if-eqz p1, :cond_1
-
-    sget-object p1, Ln93;->c:Ln93;
-
-    check-cast v0, Lv8a;
-
-    iget-object v0, v0, Lhja;->a:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    invoke-virtual {p1}, Ld3;->p0()Ljm4;
-
-    move-result-object p1
-
-    const-string v0, ":profile/change-owner?chat_id="
-
-    const-string v4, "&leave_chat=true"
-
-    invoke-static {v2, v3, v0, v4}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0, v1}, Ljm4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    goto :goto_0
-
-    :cond_1
-    instance-of p1, v0, Lfm4;
-
-    if-eqz p1, :cond_2
-
-    sget-object p1, Ln93;->c:Ln93;
-
-    check-cast v0, Lfm4;
-
-    invoke-virtual {p1, v0}, Ld3;->s0(Lfm4;)V
-
-    :cond_2
     :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    return-object v2
 
-    return-object p1
+    :pswitch_0
+    iget-object v1, v0, La63;->b:Lone/me/chats/search/ChatsListSearchScreen;
+
+    iget-object v2, v1, Lone/me/chats/search/ChatsListSearchScreen;->a:Lq32;
+
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lz5;
+
+    move-result-object v2
+
+    const/16 v3, 0x311
+
+    invoke-virtual {v2, v3}, Lz5;->c(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ltm0;
+
+    iget-object v1, v1, Lone/me/chats/search/ChatsListSearchScreen;->b:Lq32;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lz5;
+
+    move-result-object v1
+
+    const/16 v3, 0x30c
+
+    invoke-virtual {v1, v3}, Lz5;->d(I)Lakg;
+
+    move-result-object v1
+
+    new-instance v3, Lym2;
+
+    const/16 v4, 0x12
+
+    invoke-direct {v3, v4}, Lym2;-><init>(I)V
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v2, v1, v4, v3}, Ltm0;->a(Lia8;ZLxs6;)Lsm0;
+
+    move-result-object v1
+
+    return-object v1
+
+    :pswitch_1
+    iget-object v1, v0, La63;->b:Lone/me/chats/search/ChatsListSearchScreen;
+
+    iget-object v1, v1, Lone/me/chats/search/ChatsListSearchScreen;->a:Lq32;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lz5;
+
+    move-result-object v1
+
+    const/16 v2, 0x25a
+
+    invoke-virtual {v1, v2}, Lz5;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lc9;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Lb9;
+
+    iget-object v3, v1, Lc9;->a:Lia8;
+
+    iget-object v4, v1, Lc9;->b:Lia8;
+
+    iget-object v1, v1, Lc9;->c:Lia8;
+
+    invoke-direct {v2, v3, v4, v1}, Lb9;-><init>(Lia8;Lia8;Lia8;)V
+
+    return-object v2
+
+    :pswitch_2
+    iget-object v1, v0, La63;->b:Lone/me/chats/search/ChatsListSearchScreen;
+
+    iget-object v1, v1, Lone/me/chats/search/ChatsListSearchScreen;->a:Lq32;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lz5;
+
+    move-result-object v1
+
+    const/16 v2, 0x259
+
+    invoke-virtual {v1, v2}, Lz5;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lwy7;
+
+    invoke-virtual {v1}, Lwy7;->a()Lvy7;
+
+    move-result-object v1
+
+    return-object v1
+
+    :pswitch_3
+    iget-object v1, v0, La63;->b:Lone/me/chats/search/ChatsListSearchScreen;
+
+    iget-object v1, v1, Lone/me/chats/search/ChatsListSearchScreen;->a:Lq32;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lz5;
+
+    move-result-object v1
+
+    const/16 v2, 0x321
+
+    invoke-virtual {v1, v2}, Lz5;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lh73;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Lg73;
+
+    iget-object v3, v1, Lh73;->a:Ltxd;
+
+    iget-object v4, v1, Lh73;->b:Lp64;
+
+    iget-object v5, v1, Lh73;->c:Lwa3;
+
+    iget-object v6, v1, Lh73;->d:Lqte;
+
+    iget-object v7, v1, Lh73;->e:Ldng;
+
+    iget-object v8, v1, Lh73;->f:Lic4;
+
+    iget-object v9, v1, Lh73;->g:Lia8;
+
+    iget-object v10, v1, Lh73;->h:Lia8;
+
+    iget-object v11, v1, Lh73;->i:Lia8;
+
+    iget-object v12, v1, Lh73;->j:Lia8;
+
+    iget-object v13, v1, Lh73;->k:Lia8;
+
+    iget-object v14, v1, Lh73;->l:Lia8;
+
+    iget-object v15, v1, Lh73;->m:Lia8;
+
+    iget-object v0, v1, Lh73;->n:Lia8;
+
+    move-object/from16 v16, v0
+
+    iget-object v0, v1, Lh73;->o:Lia8;
+
+    move-object/from16 v17, v0
+
+    iget-object v0, v1, Lh73;->p:Lia8;
+
+    move-object/from16 v18, v0
+
+    iget-object v0, v1, Lh73;->q:Lia8;
+
+    move-object/from16 v19, v0
+
+    iget-object v0, v1, Lh73;->r:Lia8;
+
+    move-object/from16 v20, v0
+
+    iget-object v0, v1, Lh73;->s:Lia8;
+
+    move-object/from16 v21, v0
+
+    iget-object v0, v1, Lh73;->t:Lia8;
+
+    move-object/from16 v22, v0
+
+    iget-object v0, v1, Lh73;->u:Lia8;
+
+    move-object/from16 v23, v0
+
+    iget-object v0, v1, Lh73;->v:Lia8;
+
+    move-object/from16 v24, v0
+
+    iget-object v0, v1, Lh73;->w:Lia8;
+
+    move-object/from16 v25, v0
+
+    iget-object v0, v1, Lh73;->x:Lia8;
+
+    move-object/from16 v26, v0
+
+    iget-object v0, v1, Lh73;->y:Lia8;
+
+    move-object/from16 v27, v0
+
+    iget-object v0, v1, Lh73;->z:Lia8;
+
+    move-object/from16 v28, v0
+
+    iget-object v0, v1, Lh73;->A:Lia8;
+
+    move-object/from16 v29, v0
+
+    iget-object v0, v1, Lh73;->B:Lia8;
+
+    move-object/from16 v30, v0
+
+    iget-object v0, v1, Lh73;->C:Lia8;
+
+    move-object/from16 v31, v0
+
+    iget-object v0, v1, Lh73;->D:Lia8;
+
+    iget-object v1, v1, Lh73;->E:Lia8;
+
+    move-object/from16 v32, v0
+
+    move-object/from16 v33, v1
+
+    invoke-direct/range {v2 .. v33}, Lg73;-><init>(Ltxd;Lp64;Lwa3;Lqte;Ldng;Lic4;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;)V
+
+    return-object v2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

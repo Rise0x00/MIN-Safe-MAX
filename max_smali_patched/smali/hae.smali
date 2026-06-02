@@ -1,42 +1,57 @@
-.class public final Lhae;
-.super Lp0;
+.class public abstract Lhae;
+.super Leae;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lzt6;
+
+
+# instance fields
+.field public final b:I
+
+
+# direct methods
+.method public constructor <init>(ILkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    invoke-direct {p0, p2}, Leae;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    iput p1, p0, Lhae;->b:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final getArity()I
+    .locals 1
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    iget v0, p0, Lhae;->b:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lyn0;->a:Lkotlin/coroutines/Continuation;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lr3e;->a:Ls3e;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p0}, Ls3e;->a(Lzt6;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lp0;->c:Ljava/lang/Thread;
+    return-object v0
 
-    const/4 v0, 0x0
+    :cond_0
+    invoke-super {p0}, Lyn0;->toString()Ljava/lang/String;
 
-    :try_start_0
-    iget-object v1, p0, Lp0;->a:Ljava/lang/Runnable;
+    move-result-object v0
 
-    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
-
-    iput-object v0, p0, Lp0;->c:Ljava/lang/Thread;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    invoke-virtual {p0}, Lp0;->dispose()V
-
-    iput-object v0, p0, Lp0;->c:Ljava/lang/Thread;
-
-    invoke-static {v1}, Lknj;->b(Ljava/lang/Throwable;)V
-
-    throw v1
+    return-object v0
 .end method

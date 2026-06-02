@@ -1,82 +1,108 @@
-.class public final Lty4;
-.super Lp6g;
+.class public final synthetic Lty4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/devmenu/DevMenuGeneralPageScreen;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lwy4;
+
+.field public final synthetic c:Ljava/lang/Runnable;
+
+.field public final synthetic d:Lq5;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/devmenu/DevMenuGeneralPageScreen;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lwy4;Ljava/lang/Runnable;Lq5;I)V
     .locals 0
 
-    iput-object p1, p0, Lty4;->X:Lone/me/devmenu/DevMenuGeneralPageScreen;
+    iput p4, p0, Lty4;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lty4;->b:Lwy4;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lty4;->c:Ljava/lang/Runnable;
+
+    iput-object p3, p0, Lty4;->d:Lq5;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 5
 
-    check-cast p1, Ljava/util/List;
+    iget v0, p0, Lty4;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lty4;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lty4;->b:Lwy4;
 
-    move-result-object p1
+    iget-object v0, v0, Lwy4;->a:Ljava/util/concurrent/ExecutorService;
 
-    check-cast p1, Lty4;
+    new-instance v1, Lry4;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    const/4 v2, 0x1
 
-    invoke-virtual {p1, p2}, Lty4;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v3, p0, Lty4;->c:Ljava/lang/Runnable;
 
-    return-object p2
-.end method
+    iget-object v4, p0, Lty4;->d:Lq5;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-direct {v1, v3, v4, v2}, Lry4;-><init>(Ljava/lang/Runnable;Lq5;I)V
 
-    new-instance v0, Lty4;
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    iget-object v1, p0, Lty4;->X:Lone/me/devmenu/DevMenuGeneralPageScreen;
+    return-void
 
-    invoke-direct {v0, v1, p2}, Lty4;-><init>(Lone/me/devmenu/DevMenuGeneralPageScreen;Lkotlin/coroutines/Continuation;)V
+    :pswitch_0
+    iget-object v0, p0, Lty4;->b:Lwy4;
 
-    iput-object p1, v0, Lty4;->o:Ljava/lang/Object;
+    iget-object v0, v0, Lwy4;->a:Ljava/util/concurrent/ExecutorService;
 
-    return-object v0
-.end method
+    new-instance v1, Lry4;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    const/4 v2, 0x2
 
-    iget-object v0, p0, Lty4;->o:Ljava/lang/Object;
+    iget-object v3, p0, Lty4;->c:Ljava/lang/Runnable;
 
-    check-cast v0, Ljava/util/List;
+    iget-object v4, p0, Lty4;->d:Lq5;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-direct {v1, v3, v4, v2}, Lry4;-><init>(Ljava/lang/Runnable;Lq5;I)V
 
-    iget-object p1, p0, Lty4;->X:Lone/me/devmenu/DevMenuGeneralPageScreen;
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    iget-object p1, p1, Lone/me/devmenu/DevMenuGeneralPageScreen;->d:Ll0f;
+    return-void
 
-    invoke-virtual {p1, v0}, Lnd8;->F(Ljava/util/List;)V
+    :pswitch_1
+    iget-object v0, p0, Lty4;->b:Lwy4;
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    iget-object v0, v0, Lwy4;->a:Ljava/util/concurrent/ExecutorService;
 
-    return-object p1
+    new-instance v1, Lry4;
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lty4;->c:Ljava/lang/Runnable;
+
+    iget-object v4, p0, Lty4;->d:Lq5;
+
+    invoke-direct {v1, v3, v4, v2}, Lry4;-><init>(Ljava/lang/Runnable;Lq5;I)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

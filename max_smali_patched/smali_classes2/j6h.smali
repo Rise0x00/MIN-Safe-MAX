@@ -1,372 +1,547 @@
-.class public final Lj6h;
-.super Lp6g;
+.class public abstract Lj6h;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
 
-
-# instance fields
-.field public final synthetic X:Z
-
-.field public final synthetic Y:Z
-
-.field public final synthetic Z:Lk6h;
-
-.field public o:I
+# static fields
+.field public static final a:Landroid/graphics/RectF;
 
 
 # direct methods
-.method public constructor <init>(ZZLk6h;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-boolean p1, p0, Lj6h;->X:Z
+    new-instance v0, Landroid/graphics/RectF;
 
-    iput-boolean p2, p0, Lj6h;->Y:Z
+    const/high16 v1, -0x40800000    # -1.0f
 
-    iput-object p3, p0, Lj6h;->Z:Lk6h;
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    const/4 p1, 0x2
+    invoke-direct {v0, v1, v1, v2, v2}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lj6h;->a:Landroid/graphics/RectF;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lj6h;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lj6h;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lj6h;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public static a(Landroid/graphics/RectF;Landroid/graphics/RectF;IZ)Landroid/graphics/Matrix;
     .locals 3
 
-    new-instance p1, Lj6h;
+    new-instance v0, Landroid/graphics/Matrix;
 
-    iget-boolean v0, p0, Lj6h;->Y:Z
+    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    iget-object v1, p0, Lj6h;->Z:Lk6h;
+    sget-object v1, Landroid/graphics/Matrix$ScaleToFit;->FILL:Landroid/graphics/Matrix$ScaleToFit;
 
-    iget-boolean v2, p0, Lj6h;->X:Z
+    sget-object v2, Lj6h;->a:Landroid/graphics/RectF;
 
-    invoke-direct {p1, v2, v0, v1, p2}, Lj6h;-><init>(ZZLk6h;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, p0, v2, v1}, Landroid/graphics/Matrix;->setRectToRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Matrix$ScaleToFit;)Z
 
-    return-object p1
+    int-to-float p0, p2
+
+    invoke-virtual {v0, p0}, Landroid/graphics/Matrix;->postRotate(F)Z
+
+    if-eqz p3, :cond_0
+
+    const/high16 p0, -0x40800000    # -1.0f
+
+    const/high16 p2, 0x3f800000    # 1.0f
+
+    invoke-virtual {v0, p0, p2}, Landroid/graphics/Matrix;->postScale(FF)Z
+
+    :cond_0
+    new-instance p0, Landroid/graphics/Matrix;
+
+    invoke-direct {p0}, Landroid/graphics/Matrix;-><init>()V
+
+    invoke-virtual {p0, v2, p1, v1}, Landroid/graphics/Matrix;->setRectToRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Matrix$ScaleToFit;)Z
+
+    invoke-virtual {v0, p0}, Landroid/graphics/Matrix;->postConcat(Landroid/graphics/Matrix;)Z
+
+    return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
+.method public static b(Landroid/graphics/Matrix;)I
+    .locals 4
 
-    iget-object v0, p0, Lj6h;->Z:Lk6h;
+    const/16 v0, 0x9
 
-    iget-object v1, v0, Lk6h;->e:Lo58;
+    new-array v0, v0, [F
 
-    iget v2, p0, Lj6h;->o:I
+    invoke-virtual {p0, v0}, Landroid/graphics/Matrix;->getValues([F)V
 
-    const/4 v3, 0x3
+    const/4 p0, 0x0
 
-    const/4 v4, 0x1
+    aget p0, v0, p0
 
-    const/4 v5, 0x0
+    const/4 v1, 0x3
 
-    iget-boolean v6, p0, Lj6h;->X:Z
+    aget v0, v0, v1
 
-    if-eqz v2, :cond_1
+    float-to-double v0, v0
 
-    if-ne v2, v4, :cond_0
+    float-to-double v2, p0
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->atan2(DD)D
+
+    move-result-wide v0
+
+    const-wide v2, 0x404ca5dc1a63c1f8L    # 57.29577951308232
+
+    mul-double/2addr v0, v2
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->round(D)J
+
+    move-result-wide v0
+
+    long-to-int p0, v0
+
+    invoke-static {p0}, Lj6h;->k(I)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static c(I)Z
+    .locals 2
+
+    const/16 v0, 0x5a
+
+    if-eq p0, v0, :cond_3
+
+    const/16 v0, 0x10e
+
+    if-ne p0, v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    if-eqz p0, :cond_2
+
+    const/16 v0, 0xb4
+
+    if-ne p0, v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Invalid rotation degrees: "
+
+    invoke-static {p0, v1}, Lsb6;->g(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_3
+    :goto_1
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public static d(Landroid/util/Size;ZLandroid/util/Size;)Z
+    .locals 3
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    invoke-virtual {p0}, Landroid/util/Size;->getHeight()I
+
+    move-result p0
+
+    int-to-float p0, p0
+
+    div-float/2addr p1, p0
+
+    move p0, p1
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    new-instance p1, Lzah;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    iput-object v2, p1, Lzah;->u:Ljava/lang/Boolean;
-
-    iget-boolean v2, p0, Lj6h;->Y:Z
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    iput-object v2, p1, Lzah;->v:Ljava/lang/Boolean;
-
-    if-eqz v6, :cond_2
-
-    iput v3, p1, Lzah;->o:I
-
-    iput v3, p1, Lzah;->p:I
-
-    iput v3, p1, Lzah;->w:I
-
-    sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    iput-object v2, p1, Lzah;->x:Ljava/lang/Boolean;
-
-    iput-object v2, p1, Lzah;->y:Ljava/lang/Boolean;
-
-    :cond_2
-    iget-object v2, v0, Lk6h;->a:Lo58;
-
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lt2b;
-
-    new-instance v7, Lhj2;
-
-    new-instance v11, Lbs3;
-
-    new-instance v8, Ldbh;
-
-    invoke-direct {v8, p1}, Ldbh;-><init>(Lzah;)V
-
-    const/16 p1, 0x17
-
-    invoke-direct {v11, v5, v8, p1}, Lbs3;-><init>(Lys;Ldbh;I)V
-
-    const/4 v12, 0x0
-
-    const/4 v8, 0x0
-
-    const-wide/16 v9, 0x0
-
-    invoke-direct/range {v7 .. v12}, Lhj2;-><init>(Ljava/lang/String;JLbs3;Z)V
-
-    iput v4, p0, Lj6h;->o:I
-
-    invoke-virtual {v2, v7, p0}, Lt2b;->E(Lj2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v2, Lac4;->a:Lac4;
-
-    if-ne p1, v2, :cond_3
-
-    return-object v2
-
-    :cond_3
-    :goto_0
-    check-cast p1, Lpr3;
-
-    iget-object p1, p1, Lpr3;->d:Ldbh;
-
-    if-eqz p1, :cond_7
-
-    iget-object v2, p1, Ldbh;->u:Ljava/lang/Boolean;
-
-    iget-object v4, v0, Lk6h;->b:Lo58;
-
-    invoke-interface {v4}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lfbh;
-
-    invoke-virtual {v4, p1}, Lfbh;->t(Ldbh;)V
-
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-static {v2, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_4
-
-    iget-object v4, v0, Lk6h;->c:Lo58;
-
-    invoke-interface {v4}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lef3;
-
-    check-cast v4, Lqi8;
-
-    invoke-virtual {v4}, Lyfe;->s()J
-
-    move-result-wide v7
-
-    new-instance v9, Ljava/lang/StringBuilder;
-
-    const-string v10, "app.pin_"
-
-    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v9, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v4, v7, v5}, Lx3;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_4
-    iget-object v4, v0, Lk6h;->f:Lo58;
-
-    invoke-interface {v4}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lol2;
-
-    iget-object v7, v4, Lol2;->B:Lll2;
-
-    const/4 v8, -0x1
-
-    invoke-virtual {v7, v8}, Lzo8;->i(I)V
-
-    iget-object v4, v4, Lol2;->D:Lnl2;
-
-    invoke-virtual {v4, v8}, Lzo8;->i(I)V
-
-    iget-object v4, v0, Lk6h;->h:Lo58;
-
-    invoke-interface {v4}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Llfc;
-
-    invoke-virtual {v4}, Llfc;->a()V
-
-    iget-object v4, v0, Lk6h;->g:Lo58;
-
-    invoke-interface {v4}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lla3;
-
-    invoke-virtual {v4}, Lla3;->t()V
-
-    iget-object v0, v0, Lk6h;->i:Lo58;
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwj0;
-
-    sget-object v4, Lv33;->a:Lv33;
-
-    invoke-virtual {v0, v4}, Lwj0;->a(Lw33;)V
-
-    if-eqz v6, :cond_5
-
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-static {v2, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lyr3;
-
-    iget-object v0, p1, Lyr3;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v1, Lwr3;
-
-    invoke-direct {v1, p1, v5}, Lwr3;-><init>(Lyr3;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, v5, v5, v1, v3}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
-
-    goto :goto_1
-
-    :cond_5
-    if-nez v6, :cond_6
-
-    invoke-static {v2, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
 
     move-result p1
 
-    if-eqz p1, :cond_6
+    int-to-float p1, p1
 
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+    add-float/2addr p1, v0
 
-    move-result-object p1
+    invoke-virtual {p0}, Landroid/util/Size;->getHeight()I
 
-    check-cast p1, Lyr3;
+    move-result v1
 
-    iget-object v0, p1, Lyr3;->b:Lkotlinx/coroutines/internal/ContextScope;
+    int-to-float v1, v1
 
-    new-instance v1, Lvr3;
+    sub-float/2addr v1, v0
 
-    invoke-direct {v1, p1, v5}, Lvr3;-><init>(Lyr3;Lkotlin/coroutines/Continuation;)V
+    div-float/2addr p1, v1
 
-    invoke-static {v0, v5, v5, v1, v3}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+    invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
 
-    goto :goto_1
+    move-result v1
 
-    :cond_6
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+    int-to-float v1, v1
 
-    move-result-object p1
+    sub-float/2addr v1, v0
 
-    check-cast p1, Lyr3;
+    invoke-virtual {p0}, Landroid/util/Size;->getHeight()I
 
-    iget-object v0, p1, Lyr3;->b:Lkotlinx/coroutines/internal/ContextScope;
+    move-result p0
 
-    new-instance v1, Lxr3;
+    int-to-float p0, p0
 
-    invoke-direct {v1, p1, v5}, Lxr3;-><init>(Lyr3;Lkotlin/coroutines/Continuation;)V
+    add-float/2addr p0, v0
 
-    invoke-static {v0, v5, v5, v1, v3}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+    div-float p0, v1, p0
 
-    :goto_1
-    sget-object p1, Lb3h;->a:Lb3h;
+    :goto_0
+    invoke-virtual {p2}, Landroid/util/Size;->getWidth()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    add-float/2addr v1, v0
+
+    invoke-virtual {p2}, Landroid/util/Size;->getHeight()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    sub-float/2addr v2, v0
+
+    div-float/2addr v1, v2
+
+    invoke-virtual {p2}, Landroid/util/Size;->getWidth()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    sub-float/2addr v2, v0
+
+    invoke-virtual {p2}, Landroid/util/Size;->getHeight()I
+
+    move-result p2
+
+    int-to-float p2, p2
+
+    add-float/2addr p2, v0
+
+    div-float/2addr v2, p2
+
+    cmpl-float p1, p1, v2
+
+    if-ltz p1, :cond_1
+
+    cmpl-float p0, v1, p0
+
+    if-ltz p0, :cond_1
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static e(Landroid/graphics/Matrix;)Z
+    .locals 9
+
+    const/4 v0, 0x4
+
+    new-array v0, v0, [F
+
+    fill-array-data v0, :array_0
+
+    invoke-virtual {p0, v0}, Landroid/graphics/Matrix;->mapVectors([F)V
+
+    const/4 p0, 0x0
+
+    aget v1, v0, p0
+
+    const/4 v2, 0x1
+
+    aget v3, v0, v2
+
+    const/4 v4, 0x2
+
+    aget v4, v0, v4
+
+    const/4 v5, 0x3
+
+    aget v0, v0, v5
+
+    mul-float v5, v1, v4
+
+    mul-float v6, v3, v0
+
+    add-float/2addr v6, v5
+
+    mul-float v5, v1, v0
+
+    mul-float v7, v3, v4
+
+    sub-float/2addr v5, v7
+
+    mul-float/2addr v1, v1
+
+    mul-float/2addr v3, v3
+
+    add-float/2addr v3, v1
+
+    float-to-double v7, v3
+
+    invoke-static {v7, v8}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v7
+
+    mul-float/2addr v4, v4
+
+    mul-float/2addr v0, v0
+
+    add-float/2addr v0, v4
+
+    float-to-double v0, v0
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v0
+
+    float-to-double v3, v6
+
+    mul-double/2addr v7, v0
+
+    div-double/2addr v3, v7
+
+    float-to-double v0, v5
+
+    div-double/2addr v0, v7
+
+    invoke-static {v0, v1, v3, v4}, Ljava/lang/Math;->atan2(DD)D
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->toDegrees(D)D
+
+    move-result-wide v0
+
+    double-to-float v0, v0
+
+    const/4 v1, 0x0
+
+    cmpl-float v0, v0, v1
+
+    if-lez v0, :cond_0
+
+    return v2
+
+    :cond_0
+    return p0
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+        0x0
+    .end array-data
+.end method
+
+.method public static f(Landroid/graphics/Rect;)Landroid/util/Size;
+    .locals 2
+
+    new-instance v0, Landroid/util/Size;
+
+    invoke-virtual {p0}, Landroid/graphics/Rect;->width()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/graphics/Rect;->height()I
+
+    move-result p0
+
+    invoke-direct {v0, v1, p0}, Landroid/util/Size;-><init>(II)V
+
+    return-object v0
+.end method
+
+.method public static g(Landroid/graphics/Rect;)Ljava/lang/String;
+    .locals 3
+
+    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-virtual {p0}, Landroid/graphics/Rect;->width()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/graphics/Rect;->height()I
+
+    move-result v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, "("
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, "x"
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static h(Landroid/util/Size;I)Landroid/util/Size;
+    .locals 3
+
+    rem-int/lit8 v0, p1, 0x5a
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Invalid rotation degrees: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lvfa;->h(Ljava/lang/String;Z)V
+
+    invoke-static {p1}, Lj6h;->k(I)I
+
+    move-result p1
+
+    invoke-static {p1}, Lj6h;->c(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    new-instance p1, Landroid/util/Size;
+
+    invoke-virtual {p0}, Landroid/util/Size;->getHeight()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
+
+    move-result p0
+
+    invoke-direct {p1, v0, p0}, Landroid/util/Size;-><init>(II)V
 
     return-object p1
 
-    :cond_7
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    :cond_1
+    return-object p0
+.end method
 
-    const-string v0, "Required value was null."
+.method public static i(Landroid/util/Size;)Landroid/graphics/Rect;
+    .locals 3
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    new-instance v0, Landroid/graphics/Rect;
 
-    throw p1
+    invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/util/Size;->getHeight()I
+
+    move-result p0
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, v2, v1, p0}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    return-object v0
+.end method
+
+.method public static j(Landroid/util/Size;)Landroid/graphics/RectF;
+    .locals 3
+
+    new-instance v0, Landroid/graphics/RectF;
+
+    const/4 v1, 0x0
+
+    int-to-float v1, v1
+
+    invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    invoke-virtual {p0}, Landroid/util/Size;->getHeight()I
+
+    move-result p0
+
+    int-to-float p0, p0
+
+    invoke-direct {v0, v1, v1, v2, p0}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    return-object v0
+.end method
+
+.method public static k(I)I
+    .locals 0
+
+    rem-int/lit16 p0, p0, 0x168
+
+    add-int/lit16 p0, p0, 0x168
+
+    rem-int/lit16 p0, p0, 0x168
+
+    return p0
 .end method

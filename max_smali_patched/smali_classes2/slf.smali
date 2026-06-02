@@ -1,181 +1,200 @@
-.class public final Lslf;
-.super Lulf;
+.class public final synthetic Lslf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lxs6;
 
 
 # instance fields
-.field public final l:D
+.field public final synthetic a:I
 
-.field public final m:D
-
-.field public final n:J
-
-.field public final o:J
-
-.field public final p:J
-
-.field public final q:J
-
-.field public final r:J
-
-.field public final s:J
+.field public final synthetic b:Lone/me/location/map/show/ShowLocationScreen;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;DDJLjava/lang/String;JJJJJJLa2c;)V
-    .locals 12
+.method public synthetic constructor <init>(Lone/me/location/map/show/ShowLocationScreen;I)V
+    .locals 0
 
-    const/4 v1, 0x1
+    iput p2, p0, Lslf;->a:I
 
-    move-object v0, p0
+    iput-object p1, p0, Lslf;->b:Lone/me/location/map/show/ShowLocationScreen;
 
-    move-wide v2, p1
-
-    move-object v4, p3
-
-    move-object/from16 v5, p4
-
-    move-object/from16 v6, p5
-
-    move-object/from16 v7, p6
-
-    move-wide/from16 v8, p11
-
-    move-object/from16 v10, p13
-
-    move-object/from16 v11, p26
-
-    invoke-direct/range {v0 .. v11}, Lulf;-><init>(IJLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;JLjava/lang/String;La2c;)V
-
-    move-wide/from16 p1, p7
-
-    iput-wide p1, p0, Lslf;->l:D
-
-    move-wide/from16 p1, p9
-
-    iput-wide p1, p0, Lslf;->m:D
-
-    move-wide/from16 p1, p14
-
-    iput-wide p1, p0, Lslf;->n:J
-
-    move-wide/from16 p1, p16
-
-    iput-wide p1, p0, Lslf;->o:J
-
-    move-wide/from16 p1, p18
-
-    iput-wide p1, p0, Lslf;->p:J
-
-    move-wide/from16 p1, p20
-
-    iput-wide p1, p0, Lslf;->q:J
-
-    move-wide/from16 p1, p22
-
-    iput-wide p1, p0, Lslf;->r:J
-
-    move-wide/from16 p1, p24
-
-    iput-wide p1, p0, Lslf;->s:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final invoke()Ljava/lang/Object;
+    .locals 20
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-object/from16 v0, p0
 
-    const-string v1, "AudioRecv{ssrc="
+    iget v1, v0, Lslf;->a:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v2, 0x1
 
-    iget-wide v1, p0, Lylf;->c:J
+    iget-object v3, v0, Lslf;->b:Lone/me/location/map/show/ShowLocationScreen;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    packed-switch v1, :pswitch_data_0
 
-    const-string v1, ", transportId=\'"
+    iget-object v1, v3, Lone/me/location/map/show/ShowLocationScreen;->B0:Lg;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lz5;
 
-    iget-object v1, p0, Lylf;->d:Ljava/lang/String;
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/16 v4, 0x243
 
-    const-string v1, "\', trackId=\'"
+    invoke-virtual {v1, v4}, Lz5;->c(I)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    iget-object v1, p0, Lylf;->e:Ljava/lang/String;
+    check-cast v1, Lbmf;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v5, Lcom/google/android/gms/maps/model/LatLng;
 
-    const-string v1, "\', packetsReceived="
+    iget-object v4, v3, Lone/me/location/map/show/ShowLocationScreen;->b:Lfu;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object v6, Lone/me/location/map/show/ShowLocationScreen;->M0:[Lb88;
 
-    iget-object v1, p0, Lulf;->h:Ljava/math/BigInteger;
+    const/4 v7, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    aget-object v7, v6, v7
 
-    const-string v1, ", packetsLost="
+    invoke-virtual {v4, v3}, Lfu;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v4
 
-    iget-object v1, p0, Lulf;->i:Ljava/math/BigInteger;
+    check-cast v4, Ljava/lang/Number;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4}, Ljava/lang/Number;->doubleValue()D
 
-    const-string v1, ", bytesReceived="
+    move-result-wide v7
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v4, v3, Lone/me/location/map/show/ShowLocationScreen;->c:Lfu;
 
-    iget-object v1, p0, Lulf;->j:Ljava/math/BigInteger;
+    aget-object v2, v6, v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v3}, Lfu;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    const-string v1, ", jitterBufferMs="
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v2, Ljava/lang/Number;
 
-    iget-wide v1, p0, Lulf;->k:J
+    invoke-virtual {v2}, Ljava/lang/Number;->doubleValue()D
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result-wide v9
 
-    const-string v1, ", audioLevel="
+    invoke-direct {v5, v7, v8, v9, v10}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, v3, Lone/me/location/map/show/ShowLocationScreen;->d:Lfu;
 
-    iget-wide v1, p0, Lslf;->l:D
+    const/4 v4, 0x2
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    aget-object v4, v6, v4
 
-    const-string v1, ", totalAudioEnergy="
+    invoke-virtual {v2, v3}, Lfu;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    iget-wide v1, p0, Lslf;->m:D
+    check-cast v2, Ljava/lang/Number;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/Number;->floatValue()F
 
-    const-string v1, ", unknown="
+    move-result v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v4, v3, Lone/me/location/map/show/ShowLocationScreen;->o:Lfu;
 
-    iget-object v1, p0, Lylf;->g:Ljava/util/HashMap;
+    const/4 v7, 0x3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    aget-object v7, v6, v7
 
-    const/16 v1, 0x7d
+    invoke-virtual {v4, v3}, Lfu;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    move-result-object v4
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-object v7, v4
 
-    move-result-object v0
+    check-cast v7, Ljava/lang/Long;
+
+    iget-object v4, v3, Lone/me/location/map/show/ShowLocationScreen;->X:Lfu;
+
+    const/4 v8, 0x4
+
+    aget-object v8, v6, v8
+
+    invoke-virtual {v4, v3}, Lfu;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    move-object v8, v4
+
+    check-cast v8, Ljava/lang/Long;
+
+    iget-object v4, v3, Lone/me/location/map/show/ShowLocationScreen;->Y:Lfu;
+
+    const/4 v9, 0x5
+
+    aget-object v6, v6, v9
+
+    invoke-virtual {v4, v3}, Lfu;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    move-object v9, v3
+
+    check-cast v9, Ljava/lang/Long;
+
+    new-instance v4, Lamf;
+
+    iget-object v10, v1, Lbmf;->a:Lia8;
+
+    iget-object v11, v1, Lbmf;->b:Lia8;
+
+    iget-object v12, v1, Lbmf;->c:Lia8;
+
+    iget-object v13, v1, Lbmf;->d:Lia8;
+
+    iget-object v14, v1, Lbmf;->e:Lia8;
+
+    iget-object v15, v1, Lbmf;->f:Lia8;
+
+    iget-object v3, v1, Lbmf;->g:Lia8;
+
+    iget-object v6, v1, Lbmf;->h:Lia8;
+
+    iget-object v0, v1, Lbmf;->i:Lia8;
+
+    iget-object v1, v1, Lbmf;->j:Lia8;
+
+    move-object/from16 v18, v0
+
+    move-object/from16 v19, v1
+
+    move-object/from16 v16, v3
+
+    move-object/from16 v17, v6
+
+    move v6, v2
+
+    invoke-direct/range {v4 .. v19}, Lamf;-><init>(Lcom/google/android/gms/maps/model/LatLng;FLjava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;)V
+
+    return-object v4
+
+    :pswitch_0
+    sget-object v0, Lone/me/location/map/show/ShowLocationScreen;->M0:[Lb88;
+
+    new-instance v0, Lvsi;
+
+    invoke-direct {v0, v3, v2}, Lvsi;-><init>(Lone/me/sdk/arch/Widget;I)V
 
     return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

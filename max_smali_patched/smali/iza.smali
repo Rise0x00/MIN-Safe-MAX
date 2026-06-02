@@ -1,17 +1,29 @@
-.class public interface abstract Liza;
+.class public final Liza;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()V
-.end method
+# instance fields
+.field public final a:Lide;
 
-.method public abstract b(Ljava/lang/Object;)V
-.end method
+.field public final b:Lxj;
 
-.method public abstract c(Lgza;)V
-.end method
 
-.method public abstract d(Ljava/lang/Throwable;)V
+# direct methods
+.method public constructor <init>(Lide;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Liza;->a:Lide;
+
+    new-instance p1, Lxj;
+
+    const/16 v0, 0x9
+
+    invoke-direct {p1, v0}, Lxj;-><init>(I)V
+
+    iput-object p1, p0, Liza;->b:Lxj;
+
+    return-void
 .end method

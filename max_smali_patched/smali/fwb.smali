@@ -1,572 +1,647 @@
 .class public final Lfwb;
-.super Ljava/lang/Object;
+.super Lgwb;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:C
-
-.field public final b:[F
+.field public final synthetic d:I
 
 
 # direct methods
-.method public constructor <init>(C[F)V
+.method public synthetic constructor <init>(Landroidx/recyclerview/widget/a;I)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lfwb;->d:I
 
-    .line 2
-    iput-char p1, p0, Lfwb;->a:C
-
-    .line 3
-    iput-object p2, p0, Lfwb;->b:[F
+    invoke-direct {p0, p1}, Lgwb;-><init>(Landroidx/recyclerview/widget/a;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lfwb;)V
-    .locals 1
 
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final d(Landroid/view/View;)I
+    .locals 2
 
-    .line 5
-    iget-char v0, p1, Lfwb;->a:C
+    iget v0, p0, Lfwb;->d:I
 
-    iput-char v0, p0, Lfwb;->a:C
+    packed-switch v0, :pswitch_data_0
 
-    .line 6
-    iget-object p1, p1, Lfwb;->b:[F
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    array-length v0, p1
+    move-result-object v0
 
-    invoke-static {v0, p1}, Lejj;->b(I[F)[F
+    check-cast v0, Lm2e;
 
-    move-result-object p1
+    iget-object v1, p0, Lgwb;->b:Ljava/lang/Object;
 
-    iput-object p1, p0, Lfwb;->b:[F
+    check-cast v1, Landroidx/recyclerview/widget/a;
 
-    return-void
-.end method
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public static a(Landroid/graphics/Path;FFFFFFFZZ)V
-    .locals 54
+    invoke-static {p1}, Landroidx/recyclerview/widget/a;->A(Landroid/view/View;)I
 
-    move/from16 v1, p1
+    move-result p1
 
-    move/from16 v3, p3
+    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    move/from16 v0, p5
+    :goto_0
+    add-int/2addr p1, v0
 
-    move/from16 v2, p6
+    return p1
 
-    move/from16 v7, p7
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    float-to-double v4, v7
+    move-result-object v0
 
-    invoke-static {v4, v5}, Ljava/lang/Math;->toRadians(D)D
+    check-cast v0, Lm2e;
 
-    move-result-wide v4
+    iget-object v1, p0, Lgwb;->b:Ljava/lang/Object;
 
-    invoke-static {v4, v5}, Ljava/lang/Math;->cos(D)D
+    check-cast v1, Landroidx/recyclerview/widget/a;
 
-    move-result-wide v8
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
+    invoke-static {p1}, Landroidx/recyclerview/widget/a;->F(Landroid/view/View;)I
 
-    move-result-wide v10
+    move-result p1
 
-    float-to-double v12, v1
-
-    mul-double v14, v12, v8
-
-    move/from16 v6, p2
-
-    move-wide/from16 v16, v4
-
-    float-to-double v4, v6
-
-    mul-double v18, v4, v10
-
-    add-double v18, v18, v14
-
-    float-to-double v14, v0
-
-    div-double v18, v18, v14
-
-    neg-float v0, v1
-
-    float-to-double v0, v0
-
-    mul-double/2addr v0, v10
-
-    mul-double v20, v4, v8
-
-    add-double v20, v20, v0
-
-    float-to-double v0, v2
-
-    div-double v20, v20, v0
-
-    move-wide/from16 v22, v0
-
-    float-to-double v0, v3
-
-    mul-double/2addr v0, v8
-
-    move-wide/from16 v24, v0
-
-    move/from16 v0, p4
-
-    float-to-double v1, v0
-
-    mul-double v26, v1, v10
-
-    add-double v26, v26, v24
-
-    div-double v26, v26, v14
-
-    neg-float v0, v3
-
-    move-wide/from16 v24, v1
-
-    float-to-double v0, v0
-
-    mul-double/2addr v0, v10
-
-    mul-double v24, v24, v8
-
-    add-double v24, v24, v0
-
-    div-double v24, v24, v22
-
-    sub-double v0, v18, v26
-
-    sub-double v28, v20, v24
-
-    add-double v30, v18, v26
-
-    const-wide/high16 v32, 0x4000000000000000L    # 2.0
-
-    div-double v30, v30, v32
-
-    add-double v34, v20, v24
-
-    div-double v34, v34, v32
-
-    mul-double v36, v0, v0
-
-    mul-double v38, v28, v28
-
-    move-wide/from16 v40, v0
-
-    add-double v0, v38, v36
-
-    const-wide/16 v36, 0x0
-
-    cmpl-double v2, v0, v36
-
-    move/from16 v38, v2
-
-    const-string v2, "PathParser"
-
-    if-nez v38, :cond_0
-
-    const-string v0, " Points are coincident"
-
-    invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    :cond_0
-    const-wide/high16 v38, 0x3ff0000000000000L    # 1.0
-
-    div-double v42, v38, v0
-
-    const-wide/high16 v44, 0x3fd0000000000000L    # 0.25
-
-    sub-double v42, v42, v44
-
-    cmpg-double v44, v42, v36
-
-    if-gez v44, :cond_1
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Points are too far apart "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v0, v1}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v2, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v0
-
-    const-wide v4, 0x3ffffff583a53b8eL    # 1.99999
-
-    div-double/2addr v0, v4
-
-    double-to-float v0, v0
-
-    mul-float v5, p5, v0
-
-    mul-float v0, v0, p6
-
-    move/from16 v1, p1
-
-    move/from16 v4, p4
-
-    move/from16 v8, p8
-
-    move/from16 v9, p9
-
-    move v2, v6
-
-    move v6, v0
-
-    move-object/from16 v0, p0
-
-    invoke-static/range {v0 .. v9}, Lfwb;->a(Landroid/graphics/Path;FFFFFFFZZ)V
-
-    return-void
-
-    :cond_1
-    move/from16 v0, p9
-
-    invoke-static/range {v42 .. v43}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v1
-
-    mul-double v6, v1, v40
-
-    mul-double v1, v1, v28
-
-    move/from16 v3, p8
-
-    if-ne v3, v0, :cond_2
-
-    sub-double v30, v30, v1
-
-    add-double v34, v34, v6
+    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     goto :goto_0
 
-    :cond_2
-    add-double v30, v30, v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    sub-double v34, v34, v6
+.method public final e(Landroid/view/View;)I
+    .locals 2
+
+    iget v0, p0, Lfwb;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Lm2e;
+
+    iget-object v1, p0, Lgwb;->b:Ljava/lang/Object;
+
+    check-cast v1, Landroidx/recyclerview/widget/a;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Landroidx/recyclerview/widget/a;->D(Landroid/view/View;)I
+
+    move-result p1
+
+    iget v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    add-int/2addr p1, v1
+
+    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     :goto_0
-    sub-double v1, v20, v34
+    add-int/2addr p1, v0
 
-    sub-double v6, v18, v30
+    return p1
 
-    invoke-static {v1, v2, v6, v7}, Ljava/lang/Math;->atan2(DD)D
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    move-result-wide v1
+    move-result-object v0
 
-    sub-double v6, v24, v34
+    check-cast v0, Lm2e;
 
-    move-wide/from16 p1, v1
+    iget-object v1, p0, Lgwb;->b:Ljava/lang/Object;
 
-    sub-double v1, v26, v30
+    check-cast v1, Landroidx/recyclerview/widget/a;
 
-    invoke-static {v6, v7, v1, v2}, Ljava/lang/Math;->atan2(DD)D
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-wide v1
+    invoke-static {p1}, Landroidx/recyclerview/widget/a;->E(Landroid/view/View;)I
 
-    sub-double v1, v1, p1
+    move-result p1
 
-    cmpl-double v3, v1, v36
+    iget v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    if-ltz v3, :cond_3
+    add-int/2addr p1, v1
 
-    const/4 v7, 0x1
+    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
-    goto :goto_1
+    goto :goto_0
 
-    :cond_3
-    const/4 v7, 0x0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    :goto_1
-    if-eq v0, v7, :cond_5
+.method public final f(Landroid/view/View;)I
+    .locals 2
 
-    const-wide v18, 0x401921fb54442d18L    # 6.283185307179586
+    iget v0, p0, Lfwb;->d:I
 
-    if-lez v3, :cond_4
+    packed-switch v0, :pswitch_data_0
 
-    sub-double v1, v1, v18
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    goto :goto_2
+    move-result-object v0
 
-    :cond_4
-    add-double v1, v1, v18
+    check-cast v0, Lm2e;
 
-    :cond_5
-    :goto_2
-    mul-double v30, v30, v14
+    iget-object v1, p0, Lgwb;->b:Ljava/lang/Object;
 
-    mul-double v34, v34, v22
+    check-cast v1, Landroidx/recyclerview/widget/a;
 
-    mul-double v18, v30, v8
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    mul-double v20, v34, v10
+    invoke-static {p1}, Landroidx/recyclerview/widget/a;->E(Landroid/view/View;)I
 
-    sub-double v18, v18, v20
+    move-result p1
 
-    mul-double v30, v30, v10
+    iget v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    mul-double v34, v34, v8
+    add-int/2addr p1, v1
 
-    add-double v34, v34, v30
+    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
-    const-wide/high16 v7, 0x4010000000000000L    # 4.0
+    :goto_0
+    add-int/2addr p1, v0
 
-    mul-double v9, v1, v7
+    return p1
 
-    const-wide v20, 0x400921fb54442d18L    # Math.PI
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    div-double v9, v9, v20
+    move-result-object v0
 
-    invoke-static {v9, v10}, Ljava/lang/Math;->abs(D)D
+    check-cast v0, Lm2e;
 
-    move-result-wide v9
+    iget-object v1, p0, Lgwb;->b:Ljava/lang/Object;
 
-    invoke-static {v9, v10}, Ljava/lang/Math;->ceil(D)D
+    check-cast v1, Landroidx/recyclerview/widget/a;
 
-    move-result-wide v9
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    double-to-int v0, v9
+    invoke-static {p1}, Landroidx/recyclerview/widget/a;->D(Landroid/view/View;)I
 
-    invoke-static/range {v16 .. v17}, Ljava/lang/Math;->cos(D)D
+    move-result p1
 
-    move-result-wide v9
+    iget v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    invoke-static/range {v16 .. v17}, Ljava/lang/Math;->sin(D)D
+    add-int/2addr p1, v1
 
-    move-result-wide v16
+    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    invoke-static/range {p1 .. p2}, Ljava/lang/Math;->cos(D)D
+    goto :goto_0
 
-    move-result-wide v20
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-static/range {p1 .. p2}, Ljava/lang/Math;->sin(D)D
+.method public final g(Landroid/view/View;)I
+    .locals 2
 
-    move-result-wide v24
+    iget v0, p0, Lfwb;->d:I
 
-    move-wide/from16 p8, v7
+    packed-switch v0, :pswitch_data_0
 
-    neg-double v6, v14
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    mul-double v26, v6, v9
+    move-result-object v0
 
-    mul-double v28, v26, v24
+    check-cast v0, Lm2e;
 
-    mul-double v30, v22, v16
+    iget-object v1, p0, Lgwb;->b:Ljava/lang/Object;
 
-    mul-double v36, v30, v20
+    check-cast v1, Landroidx/recyclerview/widget/a;
 
-    sub-double v28, v28, v36
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    mul-double v6, v6, v16
+    invoke-static {p1}, Landroidx/recyclerview/widget/a;->G(Landroid/view/View;)I
 
-    mul-double v24, v24, v6
+    move-result p1
 
-    mul-double v22, v22, v9
+    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    mul-double v20, v20, v22
+    :goto_0
+    sub-int/2addr p1, v0
 
-    add-double v20, v20, v24
+    return p1
 
-    move-wide/from16 p4, v1
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    int-to-double v1, v0
+    move-result-object v0
 
-    div-double v1, p4, v1
+    check-cast v0, Lm2e;
 
-    move-wide/from16 v24, v20
+    iget-object v1, p0, Lgwb;->b:Ljava/lang/Object;
 
-    move-wide/from16 v20, v12
+    check-cast v1, Landroidx/recyclerview/widget/a;
 
-    move-wide v11, v4
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v5, 0x0
+    invoke-static {p1}, Landroidx/recyclerview/widget/a;->C(Landroid/view/View;)I
 
-    move-wide/from16 v3, p1
+    move-result p1
 
-    :goto_3
-    if-ge v5, v0, :cond_6
+    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    add-double v36, v3, v1
+    goto :goto_0
 
-    invoke-static/range {v36 .. v37}, Ljava/lang/Math;->sin(D)D
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result-wide v40
+.method public final h()I
+    .locals 1
 
-    invoke-static/range {v36 .. v37}, Ljava/lang/Math;->cos(D)D
+    iget v0, p0, Lfwb;->d:I
 
-    move-result-wide v42
+    packed-switch v0, :pswitch_data_0
 
-    mul-double v44, v14, v9
+    iget-object v0, p0, Lgwb;->b:Ljava/lang/Object;
 
-    mul-double v44, v44, v42
+    check-cast v0, Landroidx/recyclerview/widget/a;
 
-    add-double v44, v44, v18
+    iget v0, v0, Landroidx/recyclerview/widget/a;->o:I
 
-    mul-double v46, v30, v40
+    return v0
 
-    move v8, v0
+    :pswitch_0
+    iget-object v0, p0, Lgwb;->b:Ljava/lang/Object;
 
-    move-wide/from16 v48, v1
+    check-cast v0, Landroidx/recyclerview/widget/a;
 
-    sub-double v0, v44, v46
+    iget v0, v0, Landroidx/recyclerview/widget/a;->n:I
 
-    mul-double v44, v14, v16
+    return v0
 
-    mul-double v44, v44, v42
+    nop
 
-    add-double v44, v44, v34
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    mul-double v46, v22, v40
+.method public final i()I
+    .locals 2
 
-    move-wide/from16 p1, v3
+    iget v0, p0, Lfwb;->d:I
 
-    add-double v2, v46, v44
+    packed-switch v0, :pswitch_data_0
 
-    mul-double v44, v26, v40
+    iget-object v0, p0, Lgwb;->b:Ljava/lang/Object;
 
-    mul-double v46, v30, v42
+    check-cast v0, Landroidx/recyclerview/widget/a;
 
-    sub-double v44, v44, v46
+    iget v1, v0, Landroidx/recyclerview/widget/a;->o:I
 
-    mul-double v40, v40, v6
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/a;->J()I
 
-    mul-double v42, v42, v22
+    move-result v0
 
-    add-double v40, v42, v40
+    :goto_0
+    sub-int/2addr v1, v0
 
-    sub-double v42, v36, p1
+    return v1
 
-    div-double v46, v42, v32
+    :pswitch_0
+    iget-object v0, p0, Lgwb;->b:Ljava/lang/Object;
 
-    invoke-static/range {v46 .. v47}, Ljava/lang/Math;->tan(D)D
+    check-cast v0, Landroidx/recyclerview/widget/a;
 
-    move-result-wide v46
+    iget v1, v0, Landroidx/recyclerview/widget/a;->n:I
 
-    invoke-static/range {v42 .. v43}, Ljava/lang/Math;->sin(D)D
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/a;->L()I
 
-    move-result-wide v42
+    move-result v0
 
-    const-wide/high16 v50, 0x4008000000000000L    # 3.0
+    goto :goto_0
 
-    mul-double v52, v46, v50
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    mul-double v52, v52, v46
+.method public final j()I
+    .locals 1
 
-    add-double v52, v52, p8
+    iget v0, p0, Lfwb;->d:I
 
-    invoke-static/range {v52 .. v53}, Ljava/lang/Math;->sqrt(D)D
+    packed-switch v0, :pswitch_data_0
 
-    move-result-wide v46
+    iget-object v0, p0, Lgwb;->b:Ljava/lang/Object;
 
-    sub-double v46, v46, v38
+    check-cast v0, Landroidx/recyclerview/widget/a;
 
-    mul-double v46, v46, v42
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/a;->J()I
 
-    div-double v46, v46, v50
+    move-result v0
 
-    mul-double v28, v28, v46
+    return v0
 
-    move v13, v5
+    :pswitch_0
+    iget-object v0, p0, Lgwb;->b:Ljava/lang/Object;
 
-    add-double v4, v28, v20
+    check-cast v0, Landroidx/recyclerview/widget/a;
 
-    mul-double v24, v24, v46
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/a;->L()I
 
-    add-double v11, v24, v11
+    move-result v0
 
-    mul-double v20, v46, v44
+    return v0
 
-    move-wide/from16 v24, v6
+    nop
 
-    sub-double v6, v0, v20
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    mul-double v46, v46, v40
+.method public final k()I
+    .locals 1
 
-    move-wide/from16 v20, v9
+    iget v0, p0, Lfwb;->d:I
 
-    move v10, v8
+    packed-switch v0, :pswitch_data_0
 
-    sub-double v8, v2, v46
+    iget-object v0, p0, Lgwb;->b:Ljava/lang/Object;
 
-    move/from16 v28, v10
+    check-cast v0, Landroidx/recyclerview/widget/a;
 
-    const/4 v10, 0x0
+    iget v0, v0, Landroidx/recyclerview/widget/a;->m:I
 
-    move/from16 v29, v13
+    return v0
 
-    move-object/from16 v13, p0
+    :pswitch_0
+    iget-object v0, p0, Lgwb;->b:Ljava/lang/Object;
 
-    invoke-virtual {v13, v10, v10}, Landroid/graphics/Path;->rLineTo(FF)V
+    check-cast v0, Landroidx/recyclerview/widget/a;
 
-    double-to-float v4, v4
+    iget v0, v0, Landroidx/recyclerview/widget/a;->l:I
 
-    double-to-float v5, v11
+    return v0
 
-    double-to-float v6, v6
+    nop
 
-    double-to-float v7, v8
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    double-to-float v8, v0
+.method public final l()I
+    .locals 1
 
-    double-to-float v9, v2
+    iget v0, p0, Lfwb;->d:I
 
-    move/from16 p2, v4
+    packed-switch v0, :pswitch_data_0
 
-    move/from16 p3, v5
+    iget-object v0, p0, Lgwb;->b:Ljava/lang/Object;
 
-    move/from16 p4, v6
+    check-cast v0, Landroidx/recyclerview/widget/a;
 
-    move/from16 p5, v7
+    iget v0, v0, Landroidx/recyclerview/widget/a;->l:I
 
-    move/from16 p6, v8
+    return v0
 
-    move/from16 p7, v9
+    :pswitch_0
+    iget-object v0, p0, Lgwb;->b:Ljava/lang/Object;
 
-    move-object/from16 p1, v13
+    check-cast v0, Landroidx/recyclerview/widget/a;
 
-    invoke-virtual/range {p1 .. p7}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
+    iget v0, v0, Landroidx/recyclerview/widget/a;->m:I
 
-    add-int/lit8 v5, v29, 0x1
+    return v0
 
-    move-wide v11, v2
+    nop
 
-    move-wide/from16 v9, v20
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-wide/from16 v6, v24
+.method public final m()I
+    .locals 1
 
-    move-wide/from16 v3, v36
+    iget v0, p0, Lfwb;->d:I
 
-    move-wide/from16 v24, v40
+    packed-switch v0, :pswitch_data_0
 
-    move-wide/from16 v20, v0
+    iget-object v0, p0, Lgwb;->b:Ljava/lang/Object;
 
-    move/from16 v0, v28
+    check-cast v0, Landroidx/recyclerview/widget/a;
 
-    move-wide/from16 v28, v44
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/a;->M()I
 
-    move-wide/from16 v1, v48
+    move-result v0
 
-    goto/16 :goto_3
+    return v0
 
-    :cond_6
+    :pswitch_0
+    iget-object v0, p0, Lgwb;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/recyclerview/widget/a;
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/a;->K()I
+
+    move-result v0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n()I
+    .locals 3
+
+    iget v0, p0, Lfwb;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lgwb;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/recyclerview/widget/a;
+
+    iget v1, v0, Landroidx/recyclerview/widget/a;->o:I
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/a;->M()I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/a;->J()I
+
+    move-result v0
+
+    :goto_0
+    sub-int/2addr v1, v0
+
+    return v1
+
+    :pswitch_0
+    iget-object v0, p0, Lgwb;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/recyclerview/widget/a;
+
+    iget v1, v0, Landroidx/recyclerview/widget/a;->n:I
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/a;->K()I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/a;->L()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final p(Landroid/view/View;)I
+    .locals 2
+
+    iget v0, p0, Lfwb;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lgwb;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/recyclerview/widget/a;
+
+    iget-object v1, p0, Lgwb;->c:Ljava/lang/Object;
+
+    check-cast v1, Landroid/graphics/Rect;
+
+    invoke-virtual {v0, v1, p1}, Landroidx/recyclerview/widget/a;->Q(Landroid/graphics/Rect;Landroid/view/View;)V
+
+    iget p1, v1, Landroid/graphics/Rect;->bottom:I
+
+    return p1
+
+    :pswitch_0
+    iget-object v0, p0, Lgwb;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/recyclerview/widget/a;
+
+    iget-object v1, p0, Lgwb;->c:Ljava/lang/Object;
+
+    check-cast v1, Landroid/graphics/Rect;
+
+    invoke-virtual {v0, v1, p1}, Landroidx/recyclerview/widget/a;->Q(Landroid/graphics/Rect;Landroid/view/View;)V
+
+    iget p1, v1, Landroid/graphics/Rect;->right:I
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final q(Landroid/view/View;)I
+    .locals 2
+
+    iget v0, p0, Lfwb;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lgwb;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/recyclerview/widget/a;
+
+    iget-object v1, p0, Lgwb;->c:Ljava/lang/Object;
+
+    check-cast v1, Landroid/graphics/Rect;
+
+    invoke-virtual {v0, v1, p1}, Landroidx/recyclerview/widget/a;->Q(Landroid/graphics/Rect;Landroid/view/View;)V
+
+    iget p1, v1, Landroid/graphics/Rect;->top:I
+
+    return p1
+
+    :pswitch_0
+    iget-object v0, p0, Lgwb;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/recyclerview/widget/a;
+
+    iget-object v1, p0, Lgwb;->c:Ljava/lang/Object;
+
+    check-cast v1, Landroid/graphics/Rect;
+
+    invoke-virtual {v0, v1, p1}, Landroidx/recyclerview/widget/a;->Q(Landroid/graphics/Rect;Landroid/view/View;)V
+
+    iget p1, v1, Landroid/graphics/Rect;->left:I
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final r(I)V
+    .locals 1
+
+    iget v0, p0, Lfwb;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lgwb;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/recyclerview/widget/a;
+
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/a;->W(I)V
+
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lgwb;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/recyclerview/widget/a;
+
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/a;->V(I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,39 +1,29 @@
-.class public interface abstract Lex0;
-.super Ljava/lang/Object;
+.class public final Lex0;
+.super Lip5;
 .source "SourceFile"
 
-# interfaces
-.implements Lkgf;
-.implements Ljava/nio/channels/WritableByteChannel;
+
+# instance fields
+.field public final Z:Ljava/lang/Thread;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/Thread;)V
+    .locals 0
+
+    invoke-direct {p0}, Lhc4;-><init>()V
+
+    iput-object p1, p0, Lex0;->Z:Ljava/lang/Thread;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract A()Lex0;
-.end method
+.method public final h0()Ljava/lang/Thread;
+    .locals 1
 
-.method public abstract V(Ljava/lang/String;)Lex0;
-.end method
+    iget-object v0, p0, Lex0;->Z:Ljava/lang/Thread;
 
-.method public abstract Y(Lgz0;)Lex0;
-.end method
-
-.method public abstract c0(J)Lex0;
-.end method
-
-.method public abstract flush()V
-.end method
-
-.method public abstract getBuffer()Lxv0;
-.end method
-
-.method public abstract write([B)Lex0;
-.end method
-
-.method public abstract writeByte(I)Lex0;
-.end method
-
-.method public abstract writeInt(I)Lex0;
-.end method
-
-.method public abstract writeShort(I)Lex0;
+    return-object v0
 .end method

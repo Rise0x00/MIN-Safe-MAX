@@ -1,334 +1,190 @@
-.class public final Lca;
+.class public final synthetic Lca;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final h:Lca;
+# interfaces
+.implements Lzs6;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic a:I
 
-.field public final b:Z
+.field public final synthetic b:I
 
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:Z
-
-.field public final f:Z
-
-.field public final g:Z
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public synthetic constructor <init>(ILjava/lang/String;)V
+    .locals 1
 
-    new-instance v0, Lca;
+    .line 1
+    const/4 v0, 0x2
 
-    const/4 v6, 0x1
-
-    const/4 v7, 0x0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x1
-
-    const/4 v5, 0x1
-
-    invoke-direct/range {v0 .. v7}, Lca;-><init>(ZZZZZZZ)V
-
-    sput-object v0, Lca;->h:Lca;
-
-    return-void
-.end method
-
-.method public constructor <init>(ZZZZZZZ)V
-    .locals 0
+    iput v0, p0, Lca;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lca;->a:Z
+    iput p1, p0, Lca;->b:I
 
-    iput-boolean p2, p0, Lca;->b:Z
-
-    iput-boolean p3, p0, Lca;->c:Z
-
-    iput-boolean p4, p0, Lca;->d:Z
-
-    iput-boolean p5, p0, Lca;->e:Z
-
-    iput-boolean p6, p0, Lca;->f:Z
-
-    iput-boolean p7, p0, Lca;->g:Z
+    iput-object p2, p0, Lca;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static a(Lca;ZZZZZZI)Lca;
-    .locals 8
+.method public synthetic constructor <init>(Ljava/lang/Object;II)V
+    .locals 0
 
-    and-int/lit8 v0, p7, 0x1
+    .line 2
+    iput p3, p0, Lca;->a:I
 
-    if-eqz v0, :cond_0
+    iput-object p1, p0, Lca;->c:Ljava/lang/Object;
 
-    iget-boolean p1, p0, Lca;->a:Z
+    iput p2, p0, Lca;->b:I
 
-    :cond_0
-    move v1, p1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    and-int/lit8 p1, p7, 0x2
-
-    if-eqz p1, :cond_1
-
-    iget-boolean p2, p0, Lca;->b:Z
-
-    :cond_1
-    move v2, p2
-
-    and-int/lit8 p1, p7, 0x4
-
-    if-eqz p1, :cond_2
-
-    iget-boolean p3, p0, Lca;->c:Z
-
-    :cond_2
-    move v3, p3
-
-    and-int/lit8 p1, p7, 0x8
-
-    if-eqz p1, :cond_3
-
-    iget-boolean p4, p0, Lca;->d:Z
-
-    :cond_3
-    move v4, p4
-
-    and-int/lit8 p1, p7, 0x10
-
-    if-eqz p1, :cond_4
-
-    iget-boolean p5, p0, Lca;->e:Z
-
-    :cond_4
-    move v5, p5
-
-    iget-boolean v6, p0, Lca;->f:Z
-
-    and-int/lit8 p1, p7, 0x40
-
-    if-eqz p1, :cond_5
-
-    iget-boolean p6, p0, Lca;->g:Z
-
-    :cond_5
-    move v7, p6
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lca;
-
-    invoke-direct/range {v0 .. v7}, Lca;-><init>(ZZZZZZZ)V
-
-    return-object v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lca;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lca;
-
-    iget-boolean v0, p0, Lca;->a:Z
-
-    iget-boolean v1, p1, Lca;->a:Z
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-boolean v0, p0, Lca;->b:Z
-
-    iget-boolean v1, p1, Lca;->b:Z
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-boolean v0, p0, Lca;->c:Z
-
-    iget-boolean v1, p1, Lca;->c:Z
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-boolean v0, p0, Lca;->d:Z
-
-    iget-boolean v1, p1, Lca;->d:Z
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-boolean v0, p0, Lca;->e:Z
-
-    iget-boolean v1, p1, Lca;->e:Z
-
-    if-eq v0, v1, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-boolean v0, p0, Lca;->f:Z
-
-    iget-boolean v1, p1, Lca;->f:Z
-
-    if-eq v0, v1, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget-boolean v0, p0, Lca;->g:Z
-
-    iget-boolean p1, p1, Lca;->g:Z
-
-    if-eq v0, p1, :cond_8
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_8
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-boolean v0, p0, Lca;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lca;->b:Z
-
-    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lca;->c:Z
-
-    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lca;->d:Z
-
-    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lca;->e:Z
-
-    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lca;->f:Z
-
-    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lca;->g:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 
-    const-string v0, ", isEnableCameraAvailableInCall="
+    iget v0, p0, Lca;->a:I
 
-    const-string v1, ", isEnableMicrophoneAvailableInCall="
+    packed-switch v0, :pswitch_data_0
 
-    const-string v2, "AdminCallState(isAdminOrCreator="
+    iget-object v0, p0, Lca;->c:Ljava/lang/Object;
 
-    iget-boolean v3, p0, Lca;->a:Z
+    check-cast v0, Landroidx/work/impl/model/WorkersQueueDao_Impl;
 
-    iget-boolean v4, p0, Lca;->b:Z
+    iget v1, p0, Lca;->b:I
 
-    invoke-static {v2, v3, v0, v4, v1}, Lj27;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p1, Lsie;
 
-    move-result-object v0
+    invoke-static {v0, v1, p1}, Landroidx/work/impl/model/WorkersQueueDao_Impl;->k(Landroidx/work/impl/model/WorkersQueueDao_Impl;ILsie;)Ljava/util/List;
 
-    const-string v1, ", isEnableSharingScreenAvailableInCall="
+    move-result-object p1
 
-    const-string v2, ", isEnableRecordScreenAvailableInCall="
+    return-object p1
 
-    iget-boolean v3, p0, Lca;->c:Z
+    :pswitch_0
+    iget-object v0, p0, Lca;->c:Ljava/lang/Object;
 
-    iget-boolean v4, p0, Lca;->d:Z
+    check-cast v0, Lone/me/sdk/arch/Widget;
 
-    invoke-static {v1, v2, v0, v3, v4}, Lt02;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+    iget v1, p0, Lca;->b:I
 
-    const-string v1, ", isEnableHandsUpAvailableInCall="
+    check-cast p1, Landroid/view/View;
 
-    const-string v2, ", isEnableWaitingRoom="
+    invoke-static {v0, v1, p1}, Lone/me/sdk/arch/Widget;->V0(Lone/me/sdk/arch/Widget;ILandroid/view/View;)Landroid/view/View;
 
-    iget-boolean v3, p0, Lca;->e:Z
+    move-result-object p1
 
-    iget-boolean v4, p0, Lca;->f:Z
+    return-object p1
 
-    invoke-static {v1, v2, v0, v3, v4}, Lt02;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+    :pswitch_1
+    iget v0, p0, Lca;->b:I
 
-    const-string v1, ")"
+    iget-object v1, p0, Lca;->c:Ljava/lang/Object;
 
-    iget-boolean v2, p0, Lca;->g:Z
+    check-cast v1, Ljava/lang/String;
 
-    invoke-static {v0, v2, v1}, Lt02;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    check-cast p1, Lsie;
 
-    move-result-object v0
+    const-string v2, "UPDATE chat_folder SET `order` = ? WHERE id = ?"
 
-    return-object v0
+    invoke-interface {p1, v2}, Lsie;->B0(Ljava/lang/String;)Lyie;
+
+    move-result-object p1
+
+    const/4 v2, 0x1
+
+    int-to-long v3, v0
+
+    :try_start_0
+    invoke-interface {p1, v2, v3, v4}, Lyie;->b(IJ)V
+
+    const/4 v0, 0x2
+
+    invoke-interface {p1, v0, v1}, Lyie;->I(ILjava/lang/String;)V
+
+    invoke-interface {p1}, Lyie;->y0()Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+
+    sget-object p1, Lyeh;->a:Lyeh;
+
+    return-object p1
+
+    :catchall_0
+    move-exception v0
+
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+
+    throw v0
+
+    :pswitch_2
+    iget-object v0, p0, Lca;->c:Ljava/lang/Object;
+
+    check-cast v0, Lmi5;
+
+    check-cast p1, Ljava/lang/Integer;
+
+    iget-object p1, v0, Lmi5;->f:Lakg;
+
+    invoke-virtual {p1}, Lakg;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Loc4;
+
+    new-instance v1, Lok3;
+
+    iget v2, p0, Lca;->b:I
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v2, v0, v3}, Lok3;-><init>(ILmi5;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v0, 0x3
+
+    invoke-static {p1, v3, v3, v1, v0}, Ly6j;->L(Loc4;Lfc4;Lrc4;Lnt6;I)Lhyf;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_3
+    iget-object v0, p0, Lca;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
+
+    check-cast p1, Lb3e;
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getRecycledViewPool()Landroidx/recyclerview/widget/b;
+
+    move-result-object p1
+
+    iget v0, p0, Lca;->b:I
+
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/b;->getRecycledView(I)Lb3e;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

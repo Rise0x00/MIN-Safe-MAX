@@ -1,84 +1,134 @@
 .class public final Lr77;
-.super Ls77;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final b:Lr77;
+
+
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lr77;
+
+    invoke-direct {v0}, Lr77;-><init>()V
+
+    sput-object v0, Lr77;->b:Lr77;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lr77;->a:Ljava/lang/String;
+    const/4 v0, 0x1
 
+    iput-boolean v0, p0, Lr77;->a:Z
+
+    const-string v0, ""
+
+    invoke-static {v0}, Lsr6;->d(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-static {v0}, Lsr6;->d(Ljava/lang/String;)Z
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final a(Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    .locals 4
 
-    const/4 v0, 0x1
+    const-string v0, "prefix = \""
 
-    if-ne p0, p1, :cond_0
+    const-string v1, ""
 
-    return v0
+    const-string v2, "\","
 
-    :cond_0
-    instance-of v1, p1, Lr77;
+    invoke-static {p1, p2, v0, v1, v2}, Lrtc;->B(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v2, 0x0
+    const/16 v0, 0xa
 
-    if-nez v1, :cond_1
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    return v2
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    check-cast p1, Lr77;
+    const-string v3, "suffix = \""
 
-    iget-object v1, p0, Lr77;->a:Ljava/lang/String;
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p1, Lr77;->a:Ljava/lang/String;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result p1
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    if-nez p1, :cond_2
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return v2
+    const-string v1, "removeLeadingZeros = "
 
-    :cond_2
-    return v0
-.end method
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final hashCode()I
-    .locals 1
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lr77;->a:Ljava/lang/String;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    const/16 v1, 0x2c
 
-    move-result v0
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    return v0
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, "minLength = "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    return-void
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
-    const-string v0, "Time(time="
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "NumberHexFormat(\n"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "    "
+
+    invoke-virtual {p0, v0, v1}, Lr77;->a(Ljava/lang/StringBuilder;Ljava/lang/String;)V
+
+    const/16 v1, 0xa
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    iget-object v2, p0, Lr77;->a:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,71 +1,86 @@
-.class public final Laf5;
+.class public Laf5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ldgc;
-
-.field public b:I
-
-.field public c:I
-
-
-# direct methods
-.method public constructor <init>(Landroid/widget/EditText;Z)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const v0, 0x7fffffff
-
-    iput v0, p0, Laf5;->b:I
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Laf5;->c:I
-
-    new-instance v0, Ldgc;
-
-    invoke-direct {v0, p1, p2}, Ldgc;-><init>(Landroid/widget/EditText;Z)V
-
-    iput-object v0, p0, Laf5;->a:Ldgc;
+# virtual methods
+.method public a(Landroid/view/Window;)V
+    .locals 0
 
     return-void
 .end method
 
+.method public b(Lekg;Lekg;Landroid/view/Window;Landroid/view/View;ZZ)V
+    .locals 1
 
-# virtual methods
-.method public final a(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)Lff5;
-    .locals 2
+    const/4 v0, 0x0
 
-    if-nez p1, :cond_0
+    invoke-static {p3, v0}, Lhp7;->G(Landroid/view/Window;Z)V
 
-    const/4 p1, 0x0
+    if-eqz p5, :cond_0
 
-    return-object p1
+    iget p1, p1, Lekg;->b:I
+
+    goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Laf5;->a:Ldgc;
+    iget p1, p1, Lekg;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :goto_0
+    invoke-virtual {p3, p1}, Landroid/view/Window;->setStatusBarColor(I)V
 
-    instance-of v1, p1, Lff5;
+    if-eqz p6, :cond_1
 
-    if-eqz v1, :cond_1
+    iget p1, p2, Lekg;->b:I
 
-    check-cast p1, Lff5;
-
-    return-object p1
+    goto :goto_1
 
     :cond_1
-    new-instance v1, Lff5;
+    iget p1, p2, Lekg;->a:I
 
-    iget-object v0, v0, Ldgc;->b:Ljava/lang/Object;
+    :goto_1
+    invoke-virtual {p3, p1}, Landroid/view/Window;->setNavigationBarColor(I)V
 
-    check-cast v0, Landroid/widget/EditText;
+    new-instance p1, Lr5e;
 
-    invoke-direct {v1, v0, p1, p2}, Lff5;-><init>(Landroid/widget/EditText;Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)V
+    invoke-direct {p1, p4}, Lr5e;-><init>(Landroid/view/View;)V
 
-    return-object v1
+    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 p4, 0x23
+
+    if-lt p2, p4, :cond_2
+
+    new-instance p2, Lqui;
+
+    invoke-direct {p2, p3, p1}, Lqui;-><init>(Landroid/view/Window;Lr5e;)V
+
+    goto :goto_2
+
+    :cond_2
+    const/16 p4, 0x1e
+
+    if-lt p2, p4, :cond_3
+
+    new-instance p2, Lpui;
+
+    invoke-direct {p2, p3, p1}, Lpui;-><init>(Landroid/view/Window;Lr5e;)V
+
+    goto :goto_2
+
+    :cond_3
+    new-instance p2, Loui;
+
+    invoke-direct {p2, p3, p1}, Loui;-><init>(Landroid/view/Window;Lr5e;)V
+
+    :goto_2
+    xor-int/lit8 p1, p5, 0x1
+
+    invoke-virtual {p2, p1}, Lyn8;->L(Z)V
+
+    xor-int/lit8 p1, p6, 0x1
+
+    invoke-virtual {p2, p1}, Lyn8;->K(Z)V
+
+    return-void
 .end method

@@ -2,22 +2,29 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lki8;
 
-# instance fields
-.field public final a:Llhg;
 
-.field public final b:I
+# static fields
+.field public static final a:Lr1f;
+
+.field public static final b:I
 
 
 # direct methods
-.method public constructor <init>(ILlhg;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lr1f;
 
-    iput-object p2, p0, Lr1f;->a:Llhg;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lr1f;->b:I
+    sput-object v0, Lr1f;->a:Lr1f;
+
+    sget v0, Lvhd;->send_report_view_type:I
+
+    sput v0, Lr1f;->b:I
 
     return-void
 .end method
@@ -25,7 +32,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 1
 
     const/4 v0, 0x1
 
@@ -34,103 +41,46 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lr1f;
+    instance-of p1, p1, Lr1f;
 
-    if-nez v1, :cond_1
+    if-nez p1, :cond_1
 
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lr1f;
-
-    iget-object v1, p0, Lr1f;->a:Llhg;
-
-    iget-object v2, p1, Lr1f;->a:Llhg;
-
-    invoke-virtual {v1, v2}, Llhg;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v1, p0, Lr1f;->b:I
-
-    iget p1, p1, Lr1f;->b:I
-
-    if-eq v1, p1, :cond_3
-
-    :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_3
+    :cond_1
     return v0
 .end method
 
+.method public final getItemId()J
+    .locals 2
+
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+.end method
+
 .method public final hashCode()I
-    .locals 3
+    .locals 1
 
-    iget-object v0, p0, Lr1f;->a:Llhg;
+    const v0, -0x73ce51b3
 
-    iget v0, v0, Llhg;->c:I
+    return v0
+.end method
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+.method public final i()I
+    .locals 1
 
-    move-result v0
+    sget v0, Lr1f;->b:I
 
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lr1f;->b:I
-
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Button(title="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lr1f;->a:Llhg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", id="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lr1f;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isNegative=false)"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "SendSupportReport"
 
     return-object v0
 .end method

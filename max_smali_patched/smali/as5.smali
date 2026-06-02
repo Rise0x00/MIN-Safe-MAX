@@ -2,23 +2,22 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lds5;
 
+# instance fields
+.field public final a:Landroid/content/Context;
 
-# static fields
-.field public static final a:Las5;
+.field public final b:Lia8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lia8;Landroid/content/Context;)V
+    .locals 0
 
-    new-instance v0, Las5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Las5;->a:Landroid/content/Context;
 
-    sput-object v0, Las5;->a:Las5;
+    iput-object p1, p0, Las5;->b:Lia8;
 
     return-void
 .end method

@@ -1,11 +1,19 @@
-.class public interface abstract Lvl4;
+.class public final Lvl4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract setWindowCallback(Landroid/view/Window$Callback;)V
-.end method
+# instance fields
+.field public final a:Lvvi;
 
-.method public abstract setWindowTitle(Ljava/lang/CharSequence;)V
+
+# direct methods
+.method public constructor <init>(Lvvi;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lvl4;->a:Lvvi;
+
+    return-void
 .end method

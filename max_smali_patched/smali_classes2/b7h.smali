@@ -1,317 +1,184 @@
-.class public final Lb7h;
-.super Lp6g;
+.class public abstract Lb7h;
+.super Lq94;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:Lo94;
 
-.field public final synthetic Y:Lo7h;
+.field public d:Z
 
-.field public final synthetic Z:Lp7h;
-
-.field public o:I
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(Lo7h;Lp7h;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lb7h;->Y:Lo7h;
-
-    iput-object p2, p0, Lb7h;->Z:Lp7h;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Lq94;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lb7h;->o:Z
+
+    return-void
+.end method
+
+.method public final d()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public f(Lq94;Ll94;)V
     .locals 0
 
-    check-cast p1, Lf76;
+    const/4 p1, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iput-boolean p1, p0, Lb7h;->d:Z
 
-    invoke-virtual {p0, p1, p2}, Lb7h;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lb7h;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lb7h;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+.method public final g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLo94;)V
+    .locals 10
 
-    new-instance v0, Lb7h;
+    iput-object p5, p0, Lb7h;->X:Lo94;
 
-    iget-object v1, p0, Lb7h;->Y:Lo7h;
+    iget-boolean v1, p0, Lb7h;->d:Z
 
-    iget-object v2, p0, Lb7h;->Z:Lp7h;
+    if-eqz v1, :cond_0
 
-    invoke-direct {v0, v1, v2, p2}, Lb7h;-><init>(Lo7h;Lp7h;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p5}, Lo94;->a()V
 
-    iput-object p1, v0, Lb7h;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
-
-    sget-object v0, Lkk8;->d:Lkk8;
-
-    iget-object v1, p0, Lb7h;->X:Ljava/lang/Object;
-
-    check-cast v1, Lf76;
-
-    sget-object v2, Lac4;->a:Lac4;
-
-    iget v3, p0, Lb7h;->o:I
-
-    const/4 v4, 0x2
-
-    const/4 v5, 0x1
-
-    const/4 v6, 0x0
-
-    if-eqz v3, :cond_2
-
-    if-eq v3, v5, :cond_1
-
-    if-ne v3, v4, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto/16 :goto_6
+    return-void
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-boolean v1, p0, Lb7h;->o:Z
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    if-eqz v1, :cond_1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const/4 v4, 0x0
 
-    throw p1
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move v5, p4
+
+    invoke-virtual/range {v0 .. v5}, Lb7h;->k(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lz6h;Z)V
+
+    invoke-virtual {p5}, Lo94;->a()V
+
+    return-void
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    new-instance v7, Lzy9;
 
-    goto/16 :goto_3
+    const/16 v2, 0x14
 
-    :cond_2
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-direct {v7, v2, p5}, Lzy9;-><init>(ILjava/lang/Object;)V
 
-    iget-object p1, p0, Lb7h;->Y:Lo7h;
+    invoke-virtual {p0, p2, p3, p1, p4}, Lb7h;->l(Landroid/view/View;Landroid/view/View;Landroid/view/ViewGroup;Z)Lh7h;
 
-    iget-object p1, p1, Lo7h;->b:Ljava/lang/String;
+    move-result-object v4
 
-    iget-object v3, p0, Lb7h;->Z:Lp7h;
+    new-instance v6, La7h;
 
-    sget-object v7, Lc5j;->a:Ledb;
+    invoke-direct {v6, p0, p1, v7}, La7h;-><init>(Lb7h;Landroid/view/ViewGroup;Lzy9;)V
 
-    if-nez v7, :cond_3
+    invoke-virtual {v4, v6}, Lz6h;->a(Ly6h;)V
 
-    goto :goto_0
+    new-instance v6, Lg25;
 
-    :cond_3
-    invoke-virtual {v7, v0}, Ledb;->b(Lkk8;)Z
+    const/4 v8, 0x4
 
-    move-result v8
+    move-object v1, p0
 
-    if-eqz v8, :cond_4
+    move-object v2, p1
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    move-object v5, p3
 
-    const-string v9, "Starting uploading data="
+    move-object v3, v4
 
-    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-object v0, v6
 
-    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-object v4, p2
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move v6, p4
 
-    move-result-object v3
+    invoke-direct/range {v0 .. v8}, Lg25;-><init>(Lb7h;Landroid/view/ViewGroup;Ljava/lang/Object;Landroid/view/View;Ljava/lang/Object;ZLjava/lang/Object;I)V
 
-    invoke-virtual {v7, v0, p1, v3, v6}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move v9, v6
 
-    :cond_4
-    :goto_0
-    iget-object p1, p0, Lb7h;->Y:Lo7h;
+    move-object v6, v0
 
-    iget-object v3, p0, Lb7h;->Z:Lp7h;
+    move-object v0, v1
 
-    iget-object v7, v3, Lp7h;->a:Ljava/lang/String;
+    move-object v1, v2
 
-    :try_start_0
-    new-instance v8, Ljava/io/File;
+    move-object v2, v4
 
-    invoke-direct {v8, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    move-object v4, v3
 
-    invoke-virtual {v8}, Ljava/io/File;->lastModified()J
+    move-object v3, v5
 
-    move-result-wide v7
+    move v5, v9
 
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual/range {v0 .. v6}, Lb7h;->m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lz6h;ZLg25;)V
 
-    move-result-object v7
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    return-void
+.end method
 
-    goto :goto_1
+.method public k(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lz6h;Z)V
+    .locals 0
 
-    :catchall_0
-    move-exception v7
+    if-eqz p2, :cond_0
 
-    new-instance v8, Lszd;
+    invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    invoke-direct {v8, v7}, Lszd;-><init>(Ljava/lang/Throwable;)V
+    move-result-object p4
 
-    move-object v7, v8
+    if-ne p4, p1, :cond_0
 
-    :goto_1
-    const-wide/16 v8, 0x0
+    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :cond_0
+    if-eqz p3, :cond_1
 
-    move-result-object v10
+    invoke-virtual {p3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    instance-of v11, v7, Lszd;
+    move-result-object p2
 
-    if-eqz v11, :cond_5
+    if-nez p2, :cond_1
 
-    move-object v7, v10
+    invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    :cond_5
-    check-cast v7, Ljava/lang/Number;
+    :cond_1
+    return-void
+.end method
 
-    invoke-virtual {v7}, Ljava/lang/Number;->longValue()J
+.method public abstract l(Landroid/view/View;Landroid/view/View;Landroid/view/ViewGroup;Z)Lh7h;
+.end method
 
-    move-result-wide v10
+.method public m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lz6h;ZLg25;)V
+    .locals 0
 
-    cmp-long v7, v10, v8
+    invoke-virtual {p6}, Lg25;->c()V
 
-    if-eqz v7, :cond_7
-
-    iget-wide v7, v3, Lp7h;->b:J
-
-    cmp-long v7, v10, v7
-
-    if-nez v7, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    iget-object v0, p1, Lo7h;->b:Ljava/lang/String;
-
-    const-string v1, "File is changed during uploading, aborting!"
-
-    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lo7h;->g()Lv8h;
-
-    move-result-object p1
-
-    sget-object v0, Lu8h;->Y:Lu8h;
-
-    iget-object v1, v3, Lp7h;->d:Ljava/lang/String;
-
-    invoke-static {p1, v0, v1}, Lhyb;->f(Lv8h;Luxb;Ljava/lang/String;)V
-
-    new-instance p1, Lone/me/sdk/transfer/domain/UploadException;
-
-    const-string v0, "Error to upload, file changed"
-
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_7
-    :goto_2
-    iget-object p1, p0, Lb7h;->Y:Lo7h;
-
-    iget-object v3, p0, Lb7h;->Z:Lp7h;
-
-    iput-object v1, p0, Lb7h;->X:Ljava/lang/Object;
-
-    iput v5, p0, Lb7h;->o:I
-
-    invoke-static {p1, v3, p0}, Lo7h;->a(Lo7h;Lp7h;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v2, :cond_8
-
-    goto :goto_5
-
-    :cond_8
-    :goto_3
-    check-cast p1, Lq6h;
-
-    iget-object v3, p0, Lb7h;->Y:Lo7h;
-
-    iget-object v3, v3, Lo7h;->b:Ljava/lang/String;
-
-    sget-object v5, Lc5j;->a:Ledb;
-
-    if-nez v5, :cond_9
-
-    goto :goto_4
-
-    :cond_9
-    invoke-virtual {v5, v0}, Ledb;->b(Lkk8;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_a
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    const-string v8, "Retrieved upload from repository = "
-
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v7, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v5, v0, v3, v7, v6}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_a
-    :goto_4
-    iput-object v6, p0, Lb7h;->X:Ljava/lang/Object;
-
-    iput v4, p0, Lb7h;->o:I
-
-    invoke-interface {v1, p1, p0}, Lf76;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v2, :cond_b
-
-    :goto_5
-    return-object v2
-
-    :cond_b
-    :goto_6
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-void
 .end method

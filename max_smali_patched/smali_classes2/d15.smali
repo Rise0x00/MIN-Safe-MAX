@@ -2,128 +2,204 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Le15;
+
 
 # instance fields
-.field public final a:Landroid/content/Intent;
+.field public final a:J
 
-.field public final b:Ljava/lang/String;
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:Lbwd;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 20
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object/from16 v0, p0
 
-    iput-object p1, p0, Ld15;->a:Landroid/content/Intent;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ld15;->b:Ljava/lang/String;
+    sget-object v1, Lf05;->b:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide v3
+
+    iput-wide v3, v0, Ld15;->a:J
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide v10
+
+    iput-wide v10, v0, Ld15;->b:J
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide v13
+
+    iput-wide v13, v0, Ld15;->c:J
+
+    new-instance v2, Lmm4;
+
+    sget v1, Ltnd;->oneme_settings_old_dev_menu:I
+
+    new-instance v5, Ldtg;
+
+    invoke-direct {v5, v1}, Ldtg;-><init>(I)V
+
+    sget v6, Lxhe;->H:I
+
+    const/16 v9, 0x8
+
+    const/4 v7, 0x0
+
+    sget-object v18, Lkm4;->a:Lkm4;
+
+    move-object/from16 v8, v18
+
+    invoke-direct/range {v2 .. v9}, Lmm4;-><init>(JLitg;ILitg;Ltwj;I)V
+
+    new-instance v5, Lmm4;
+
+    sget v1, Ltnd;->oneme_settings_old_logs_menu:I
+
+    new-instance v8, Ldtg;
+
+    invoke-direct {v8, v1}, Ldtg;-><init>(I)V
+
+    sget v9, Lxhe;->v:I
+
+    move-wide v6, v10
+
+    const/4 v10, 0x0
+
+    const/16 v12, 0x8
+
+    move-object/from16 v11, v18
+
+    invoke-direct/range {v5 .. v12}, Lmm4;-><init>(JLitg;ILitg;Ltwj;I)V
+
+    new-instance v12, Lmm4;
+
+    new-instance v15, Lhtg;
+
+    const-string v1, "\u0414\u0435\u0431\u0430\u0433 \u043f\u0430\u043c\u044f\u0442\u0438"
+
+    invoke-direct {v15, v1}, Lhtg;-><init>(Ljava/lang/CharSequence;)V
+
+    sget v16, Lxhe;->k0:I
+
+    const/16 v17, 0x0
+
+    const/16 v19, 0x8
+
+    invoke-direct/range {v12 .. v19}, Lmm4;-><init>(JLitg;ILitg;Ltwj;I)V
+
+    filled-new-array {v2, v5, v12}, [Lmm4;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljj3;->M0([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lc1g;->a(Ljava/lang/Object;)Lb1g;
+
+    move-result-object v1
+
+    new-instance v2, Lbwd;
+
+    invoke-direct {v2, v1}, Lbwd;-><init>(Lvia;)V
+
+    iput-object v2, v0, Ld15;->d:Lbwd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final c()Lw0g;
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Ld15;->d:Lbwd;
 
-    if-ne p0, p1, :cond_0
+    return-object v0
+.end method
 
-    return v0
+.method public final d(Lmm4;)V
+    .locals 6
 
-    :cond_0
-    instance-of v1, p1, Ld15;
+    iget-wide v0, p1, Lmm4;->a:J
 
-    const/4 v2, 0x0
+    iget-wide v2, p0, Ld15;->b:J
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ld15;
-
-    iget-object v1, p0, Ld15;->a:Landroid/content/Intent;
-
-    iget-object v3, p1, Ld15;->a:Landroid/content/Intent;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Ld15;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Ld15;->b:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1, v2, v3}, Lf05;->a(JJ)Z
 
     move-result p1
 
-    if-nez p1, :cond_3
+    const/4 v2, 0x6
 
-    return v2
+    const/4 v3, 0x0
 
-    :cond_3
-    return v0
-.end method
+    if-eqz p1, :cond_0
 
-.method public final hashCode()I
-    .locals 2
+    sget-object p1, Lt05;->c:Lt05;
 
-    iget-object v0, p0, Ld15;->a:Landroid/content/Intent;
+    invoke-virtual {p1}, Ldp0;->O()Lao4;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    move-result-object p1
 
-    move-result v0
+    const-string v0, ":settings/dev/logsviewer"
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-static {p1, v0, v3, v3, v2}, Lao4;->b(Lao4;Ljava/lang/String;Landroid/os/Bundle;Ljl8;I)Z
 
-    iget-object v1, p0, Ld15;->b:Ljava/lang/String;
+    return-void
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    :cond_0
+    iget-wide v4, p0, Ld15;->a:J
 
-    move-result v1
+    invoke-static {v0, v1, v4, v5}, Lf05;->a(JJ)Z
 
-    add-int/2addr v1, v0
+    move-result p1
 
-    return v1
-.end method
+    if-eqz p1, :cond_1
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    sget-object p1, Lt05;->c:Lt05;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Ldp0;->O()Lao4;
 
-    const-string v1, "DirectionsIntentHolder(intent="
+    move-result-object p1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v0, ":settings/dev/showroom"
 
-    iget-object v1, p0, Ld15;->a:Landroid/content/Intent;
+    invoke-static {p1, v0, v3, v3, v2}, Lao4;->b(Lao4;Ljava/lang/String;Landroid/os/Bundle;Ljl8;I)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-void
 
-    const-string v1, ", tag="
+    :cond_1
+    iget-wide v4, p0, Ld15;->c:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1, v4, v5}, Lf05;->a(JJ)Z
 
-    iget-object v1, p0, Ld15;->b:Ljava/lang/String;
+    move-result p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz p1, :cond_2
 
-    const-string v1, ")"
+    sget-object p1, Lt05;->c:Lt05;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Ldp0;->O()Lao4;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
+    const-string v0, ":settings/dev/memorydebugger"
 
-    return-object v0
+    invoke-static {p1, v0, v3, v3, v2}, Lao4;->b(Lao4;Ljava/lang/String;Landroid/os/Bundle;Ljl8;I)Z
+
+    :cond_2
+    return-void
 .end method

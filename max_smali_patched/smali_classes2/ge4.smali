@@ -1,65 +1,96 @@
-.class public final Lge4;
-.super Lo84;
+.class public final synthetic Lge4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lxs6;
 
 
 # instance fields
-.field public X:Lgj2;
+.field public final synthetic a:I
 
-.field public Y:Lhe4;
-
-.field public Z:Lqfa;
-
-.field public d:J
-
-.field public o:J
-
-.field public t0:I
-
-.field public u0:I
-
-.field public synthetic v0:Ljava/lang/Object;
-
-.field public final synthetic w0:Lhe4;
-
-.field public x0:I
+.field public final synthetic b:Lone/me/mediapicker/crop/CropPhotoScreen;
 
 
 # direct methods
-.method public constructor <init>(Lhe4;Lo84;)V
+.method public synthetic constructor <init>(Lone/me/mediapicker/crop/CropPhotoScreen;I)V
     .locals 0
 
-    iput-object p1, p0, Lge4;->w0:Lhe4;
+    iput p2, p0, Lge4;->a:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lge4;->b:Lone/me/mediapicker/crop/CropPhotoScreen;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    iput-object p1, p0, Lge4;->v0:Ljava/lang/Object;
+    iget v0, p0, Lge4;->a:I
 
-    iget p1, p0, Lge4;->x0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lge4;->b:Lone/me/mediapicker/crop/CropPhotoScreen;
 
-    or-int/2addr p1, v0
+    iget-object v0, v0, Lone/me/mediapicker/crop/CropPhotoScreen;->o:Lg;
 
-    iput p1, p0, Lge4;->x0:I
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lz5;
 
-    const-wide/16 v0, 0x0
+    move-result-object v0
 
-    const/4 p1, 0x0
+    const/16 v1, 0x27d
 
-    iget-object v2, p0, Lge4;->w0:Lhe4;
+    invoke-virtual {v0, v1}, Lz5;->c(I)Ljava/lang/Object;
 
-    invoke-virtual {v2, v0, v1, p1, p0}, Lhe4;->m(JLgj2;Lo84;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
+    check-cast v0, Lue4;
 
-    return-object p1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lte4;
+
+    iget-object v2, v0, Lue4;->a:Lia8;
+
+    iget-object v3, v0, Lue4;->b:Lia8;
+
+    iget-object v4, v0, Lue4;->c:Lia8;
+
+    iget-object v0, v0, Lue4;->d:Lia8;
+
+    invoke-direct {v1, v2, v3, v4, v0}, Lte4;-><init>(Lia8;Lia8;Lia8;Lia8;)V
+
+    return-object v1
+
+    :pswitch_0
+    iget-object v0, p0, Lge4;->b:Lone/me/mediapicker/crop/CropPhotoScreen;
+
+    iget-object v1, v0, Lone/me/mediapicker/crop/CropPhotoScreen;->a:Lfu;
+
+    sget-object v2, Lone/me/mediapicker/crop/CropPhotoScreen;->F0:[Lb88;
+
+    const/4 v3, 0x0
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v0}, Lfu;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

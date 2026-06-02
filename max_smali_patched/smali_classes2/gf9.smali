@@ -1,98 +1,961 @@
 .class public final Lgf9;
-.super Lp6g;
+.super Landroid/os/Handler;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
+.field public final a:Ljava/util/ArrayList;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Ljava/util/ArrayList;
+
+.field public final synthetic c:Lif9;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;)V
+.method public constructor <init>(Lif9;)V
     .locals 0
 
-    iput-object p2, p0, Lgf9;->X:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
+    iput-object p1, p0, Lgf9;->c:Lif9;
 
-    const/4 p2, 0x2
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lgf9;->a:Ljava/util/ArrayList;
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lgf9;->b:Ljava/util/ArrayList;
 
     return-void
 .end method
 
+.method public static a(Lff9;ILjava/lang/Object;)V
+    .locals 4
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    iget-object v0, p0, Lff9;->a:Lmf9;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lff9;->b:Lud9;
 
-    invoke-virtual {p0, p1, p2}, Lgf9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const v1, 0xff00
 
-    move-result-object p1
+    and-int/2addr v1, p1
 
-    check-cast p1, Lgf9;
+    const/16 v2, 0x100
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    if-eq v1, v2, :cond_4
 
-    invoke-virtual {p1, p2}, Lgf9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const/16 p0, 0x200
 
-    return-object p2
-.end method
+    if-eq v1, p0, :cond_3
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    const/16 p0, 0x300
 
-    new-instance v0, Lgf9;
+    if-eq v1, p0, :cond_0
 
-    iget-object v1, p0, Lgf9;->X:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
+    goto/16 :goto_c
 
-    invoke-direct {v0, p2, v1}, Lgf9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;)V
+    :cond_0
+    const/16 p0, 0x301
 
-    iput-object p1, v0, Lgf9;->o:Ljava/lang/Object;
+    if-eq p1, p0, :cond_1
 
-    return-object v0
-.end method
+    goto/16 :goto_c
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    :cond_1
+    if-nez p2, :cond_2
 
-    iget-object v0, p0, Lgf9;->o:Ljava/lang/Object;
+    iget p0, v0, Lud9;->a:I
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    packed-switch p0, :pswitch_data_0
 
-    check-cast v0, Lef9;
+    :pswitch_0
+    return-void
 
-    sget-object p1, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->Y:[Lz28;
+    :cond_2
+    new-instance p0, Ljava/lang/ClassCastException;
 
-    iget-object p1, p0, Lgf9;->X:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
+    invoke-direct {p0}, Ljava/lang/ClassCastException;-><init>()V
 
-    iget-object p1, p1, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->o:Lro0;
+    throw p0
 
-    sget-object v1, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->Y:[Lz28;
+    :cond_3
+    check-cast p2, Lkf9;
 
-    const/4 v2, 0x2
+    packed-switch p1, :pswitch_data_1
 
-    aget-object v1, v1, v2
+    goto/16 :goto_c
 
-    invoke-virtual {p1}, Lro0;->getValue()Ljava/lang/Object;
+    :pswitch_1
+    iget p0, v0, Lud9;->a:I
 
-    move-result-object p1
+    packed-switch p0, :pswitch_data_2
 
-    check-cast p1, Lne9;
+    goto :goto_0
 
+    :pswitch_2
+    iget-object p0, v0, Lud9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p0, Lwd9;
+
+    invoke-virtual {p0}, Lwd9;->b()V
+
+    :goto_0
+    return-void
+
+    :pswitch_3
+    iget p0, v0, Lud9;->a:I
+
+    packed-switch p0, :pswitch_data_3
+
+    goto :goto_1
+
+    :pswitch_4
+    iget-object p0, v0, Lud9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p0, Lwd9;
+
+    invoke-virtual {p0}, Lwd9;->b()V
+
+    :goto_1
+    return-void
+
+    :pswitch_5
+    iget p0, v0, Lud9;->a:I
+
+    packed-switch p0, :pswitch_data_4
+
+    goto :goto_2
+
+    :pswitch_6
+    iget-object p0, v0, Lud9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p0, Lwd9;
+
+    invoke-virtual {p0}, Lwd9;->b()V
+
+    :goto_2
+    return-void
+
+    :cond_4
+    const/16 v1, 0x106
+
+    const/16 v2, 0x108
+
+    if-eq p1, v2, :cond_6
+
+    if-ne p1, v1, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    move-object v3, p2
+
+    check-cast v3, Llf9;
+
+    goto :goto_4
+
+    :cond_6
+    :goto_3
+    move-object v3, p2
+
+    check-cast v3, Lizb;
+
+    iget-object v3, v3, Lizb;->b:Ljava/lang/Object;
+
+    check-cast v3, Llf9;
+
+    :goto_4
+    if-eq p1, v2, :cond_7
+
+    if-ne p1, v1, :cond_8
+
+    :cond_7
+    check-cast p2, Lizb;
+
+    iget-object p2, p2, Lizb;->a:Ljava/lang/Object;
+
+    check-cast p2, Llf9;
+
+    :cond_8
+    if-eqz v3, :cond_12
+
+    iget p2, p0, Lff9;->d:I
+
+    and-int/lit8 p2, p2, 0x2
+
+    if-nez p2, :cond_a
+
+    iget-object p0, p0, Lff9;->c:Lef9;
+
+    invoke-virtual {v3, p0}, Llf9;->h(Lef9;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_9
+
+    goto :goto_5
+
+    :cond_9
+    invoke-static {}, Lmf9;->c()Lif9;
+
+    return-void
+
+    :cond_a
+    :goto_5
+    packed-switch p1, :pswitch_data_5
+
+    goto/16 :goto_c
+
+    :pswitch_7
+    invoke-virtual {v0, v3}, Lud9;->f(Llf9;)V
+
+    return-void
+
+    :pswitch_8
+    iget p0, v0, Lud9;->a:I
+
+    packed-switch p0, :pswitch_data_6
+
+    :pswitch_9
+    goto :goto_6
+
+    :pswitch_a
+    iget-object p0, v0, Lud9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p0, Lye9;
+
+    invoke-virtual {p0}, Lye9;->o()V
+
+    goto :goto_6
+
+    :pswitch_b
+    iget-object p0, v0, Lud9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p0, Landroidx/mediarouter/app/d;
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Landroidx/mediarouter/app/d;->s(Z)V
+
+    goto :goto_6
+
+    :pswitch_c
+    iget-object p0, v0, Lud9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p0, Lwd9;
+
+    invoke-virtual {p0}, Lwd9;->b()V
+
+    :goto_6
+    return-void
+
+    :pswitch_d
+    invoke-virtual {v0, v3}, Lud9;->f(Llf9;)V
+
+    return-void
+
+    :pswitch_e
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Laf9;->a:Laf9;
+    return-void
 
-    invoke-virtual {p1, v0}, Lne9;->setSelected(Ldf9;)V
+    :pswitch_f
+    iget p0, v0, Lud9;->a:I
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    packed-switch p0, :pswitch_data_7
 
-    return-object p1
+    :pswitch_10
+    goto :goto_8
+
+    :pswitch_11
+    iget p0, v3, Llf9;->o:I
+
+    sget-boolean p1, Lye9;->k1:Z
+
+    if-eqz p1, :cond_b
+
+    const-string p1, "MediaRouteCtrlDialog"
+
+    const-string p2, "onRouteVolumeChanged(), route.getVolume:"
+
+    invoke-static {p0, p2, p1}, Ls54;->g(ILjava/lang/String;Ljava/lang/String;)V
+
+    :cond_b
+    iget-object p0, v0, Lud9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p0, Lye9;
+
+    iget-object p1, p0, Lye9;->N0:Llf9;
+
+    if-eq p1, v3, :cond_e
+
+    iget-object p0, p0, Lye9;->M0:Ljava/util/HashMap;
+
+    iget-object p1, v3, Llf9;->c:Ljava/lang/String;
+
+    invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroidx/mediarouter/app/e;
+
+    if-eqz p0, :cond_e
+
+    iget-object p1, p0, Landroidx/mediarouter/app/e;->L0:Llf9;
+
+    iget p1, p1, Llf9;->o:I
+
+    if-nez p1, :cond_c
+
+    const/4 p2, 0x1
+
+    goto :goto_7
+
+    :cond_c
+    const/4 p2, 0x0
+
+    :goto_7
+    invoke-virtual {p0, p2}, Landroidx/mediarouter/app/e;->E(Z)V
+
+    iget-object p0, p0, Landroidx/mediarouter/app/e;->N0:Landroidx/mediarouter/app/MediaRouteVolumeSlider;
+
+    invoke-virtual {p0, p1}, Landroid/widget/ProgressBar;->setProgress(I)V
+
+    goto :goto_8
+
+    :pswitch_12
+    iget-object p0, v0, Lud9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p0, Landroidx/mediarouter/app/d;
+
+    iget-object p1, p0, Landroidx/mediarouter/app/d;->h1:Ljava/util/HashMap;
+
+    invoke-virtual {p1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/SeekBar;
+
+    iget p2, v3, Llf9;->o:I
+
+    sget-boolean v0, Landroidx/mediarouter/app/d;->F1:Z
+
+    if-eqz v0, :cond_d
+
+    const-string v0, "MediaRouteCtrlDialog"
+
+    const-string v1, "onRouteVolumeChanged(), route.getVolume:"
+
+    invoke-static {p2, v1, v0}, Ls54;->g(ILjava/lang/String;Ljava/lang/String;)V
+
+    :cond_d
+    if-eqz p1, :cond_e
+
+    iget-object p0, p0, Landroidx/mediarouter/app/d;->c1:Llf9;
+
+    if-eq p0, v3, :cond_e
+
+    invoke-virtual {p1, p2}, Landroid/widget/ProgressBar;->setProgress(I)V
+
+    :cond_e
+    :goto_8
+    return-void
+
+    :pswitch_13
+    iget p0, v0, Lud9;->a:I
+
+    packed-switch p0, :pswitch_data_8
+
+    iget-object p0, v0, Lud9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p0, Lye9;
+
+    iget-object p1, p0, Lye9;->z0:Llf9;
+
+    if-ne v3, p1, :cond_11
+
+    invoke-static {}, Llf9;->a()Laf9;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_11
+
+    iget-object p1, v3, Llf9;->a:Lkf9;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Lmf9;->b()V
+
+    iget-object p1, p1, Lkf9;->b:Ljava/util/ArrayList;
+
+    invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_f
+    :goto_9
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_11
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Llf9;
+
+    iget-object v0, p0, Lye9;->z0:Llf9;
+
+    iget-object v0, v0, Llf9;->u:Ljava/util/ArrayList;
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0, p2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_10
+
+    goto :goto_9
+
+    :cond_10
+    iget-object v0, p0, Lye9;->z0:Llf9;
+
+    invoke-virtual {v0, p2}, Llf9;->b(Llf9;)Lv7;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_f
+
+    iget-object v0, v0, Lv7;->b:Ljava/lang/Object;
+
+    check-cast v0, Lze9;
+
+    if-eqz v0, :cond_f
+
+    iget-boolean v0, v0, Lze9;->d:Z
+
+    if-eqz v0, :cond_f
+
+    iget-object v0, p0, Lye9;->B0:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_f
+
+    invoke-virtual {p0}, Lye9;->p()V
+
+    invoke-virtual {p0}, Lye9;->n()V
+
+    goto :goto_a
+
+    :cond_11
+    invoke-virtual {p0}, Lye9;->o()V
+
+    goto :goto_a
+
+    :pswitch_14
+    iget-object p0, v0, Lud9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p0, Lpe9;
+
+    invoke-virtual {p0}, Lpe9;->g()V
+
+    goto :goto_a
+
+    :pswitch_15
+    iget-object p0, v0, Lud9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p0, Landroidx/mediarouter/app/d;
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Landroidx/mediarouter/app/d;->s(Z)V
+
+    goto :goto_a
+
+    :pswitch_16
+    iget-object p0, v0, Lud9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p0, Lyd9;
+
+    invoke-virtual {p0}, Lyd9;->g()V
+
+    goto :goto_a
+
+    :pswitch_17
+    iget-object p0, v0, Lud9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p0, Lwd9;
+
+    invoke-virtual {p0}, Lwd9;->b()V
+
+    :goto_a
+    return-void
+
+    :pswitch_18
+    iget p0, v0, Lud9;->a:I
+
+    packed-switch p0, :pswitch_data_9
+
+    :pswitch_19
+    goto :goto_b
+
+    :pswitch_1a
+    iget-object p0, v0, Lud9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p0, Lye9;
+
+    invoke-virtual {p0}, Lye9;->o()V
+
+    goto :goto_b
+
+    :pswitch_1b
+    iget-object p0, v0, Lud9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p0, Lpe9;
+
+    invoke-virtual {p0}, Lpe9;->g()V
+
+    goto :goto_b
+
+    :pswitch_1c
+    iget-object p0, v0, Lud9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p0, Lyd9;
+
+    invoke-virtual {p0}, Lyd9;->g()V
+
+    goto :goto_b
+
+    :pswitch_1d
+    iget-object p0, v0, Lud9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p0, Lwd9;
+
+    invoke-virtual {p0}, Lwd9;->b()V
+
+    :goto_b
+    return-void
+
+    :pswitch_1e
+    iget p0, v0, Lud9;->a:I
+
+    packed-switch p0, :pswitch_data_a
+
+    :pswitch_1f
+    goto :goto_c
+
+    :pswitch_20
+    iget-object p0, v0, Lud9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p0, Lye9;
+
+    invoke-virtual {p0}, Lye9;->o()V
+
+    goto :goto_c
+
+    :pswitch_21
+    iget-object p0, v0, Lud9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p0, Lpe9;
+
+    invoke-virtual {p0}, Lpe9;->g()V
+
+    goto :goto_c
+
+    :pswitch_22
+    iget-object p0, v0, Lud9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p0, Lyd9;
+
+    invoke-virtual {p0}, Lyd9;->g()V
+
+    goto :goto_c
+
+    :pswitch_23
+    iget-object p0, v0, Lud9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p0, Lwd9;
+
+    invoke-virtual {p0}, Lwd9;->b()V
+
+    :cond_12
+    :goto_c
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+
+    :pswitch_data_1
+    .packed-switch 0x201
+        :pswitch_5
+        :pswitch_3
+        :pswitch_1
+    .end packed-switch
+
+    :pswitch_data_2
+    .packed-switch 0x0
+        :pswitch_2
+    .end packed-switch
+
+    :pswitch_data_3
+    .packed-switch 0x0
+        :pswitch_4
+    .end packed-switch
+
+    :pswitch_data_4
+    .packed-switch 0x0
+        :pswitch_6
+    .end packed-switch
+
+    :pswitch_data_5
+    .packed-switch 0x101
+        :pswitch_1e
+        :pswitch_18
+        :pswitch_13
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_8
+        :pswitch_7
+    .end packed-switch
+
+    :pswitch_data_6
+    .packed-switch 0x0
+        :pswitch_c
+        :pswitch_9
+        :pswitch_b
+        :pswitch_9
+        :pswitch_a
+    .end packed-switch
+
+    :pswitch_data_7
+    .packed-switch 0x2
+        :pswitch_12
+        :pswitch_10
+        :pswitch_11
+    .end packed-switch
+
+    :pswitch_data_8
+    .packed-switch 0x0
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+    .end packed-switch
+
+    :pswitch_data_9
+    .packed-switch 0x0
+        :pswitch_1d
+        :pswitch_1c
+        :pswitch_19
+        :pswitch_1b
+        :pswitch_1a
+    .end packed-switch
+
+    :pswitch_data_a
+    .packed-switch 0x0
+        :pswitch_23
+        :pswitch_22
+        :pswitch_1f
+        :pswitch_21
+        :pswitch_20
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public final b(ILjava/lang/Object;)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
+
+    return-void
+.end method
+
+.method public final handleMessage(Landroid/os/Message;)V
+    .locals 8
+
+    iget-object v0, p0, Lgf9;->a:Ljava/util/ArrayList;
+
+    iget-object v1, p0, Lgf9;->c:Lif9;
+
+    iget-object v2, v1, Lif9;->f:Ljava/util/ArrayList;
+
+    iget v3, p1, Landroid/os/Message;->what:I
+
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    const/16 v4, 0x103
+
+    if-ne v3, v4, :cond_0
+
+    invoke-virtual {v1}, Lif9;->e()Llf9;
+
+    move-result-object v4
+
+    iget-object v4, v4, Llf9;->c:Ljava/lang/String;
+
+    move-object v5, p1
+
+    check-cast v5, Llf9;
+
+    iget-object v5, v5, Llf9;->c:Ljava/lang/String;
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v1, v4}, Lif9;->m(Z)V
+
+    :cond_0
+    const/16 v4, 0x106
+
+    iget-object v5, p0, Lgf9;->b:Ljava/util/ArrayList;
+
+    if-eq v3, v4, :cond_2
+
+    const/16 v4, 0x108
+
+    if-eq v3, v4, :cond_1
+
+    packed-switch v3, :pswitch_data_0
+
+    goto/16 :goto_1
+
+    :pswitch_0
+    iget-object v1, v1, Lif9;->c:Lykg;
+
+    move-object v4, p1
+
+    check-cast v4, Llf9;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v4}, Llf9;->c()Lfsc;
+
+    move-result-object v5
+
+    if-eq v5, v1, :cond_4
+
+    invoke-virtual {v1, v4}, Lclg;->m(Llf9;)I
+
+    move-result v4
+
+    if-ltz v4, :cond_4
+
+    iget-object v5, v1, Lclg;->I0:Ljava/util/ArrayList;
+
+    invoke-virtual {v5, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lblg;
+
+    invoke-virtual {v1, v4}, Lclg;->x(Lblg;)V
+
+    goto :goto_1
+
+    :pswitch_1
+    iget-object v1, v1, Lif9;->c:Lykg;
+
+    move-object v4, p1
+
+    check-cast v4, Llf9;
+
+    invoke-virtual {v1, v4}, Lclg;->r(Llf9;)V
+
+    goto :goto_1
+
+    :pswitch_2
+    iget-object v1, v1, Lif9;->c:Lykg;
+
+    move-object v4, p1
+
+    check-cast v4, Llf9;
+
+    invoke-virtual {v1, v4}, Lclg;->q(Llf9;)V
+
+    goto :goto_1
+
+    :cond_1
+    move-object v4, p1
+
+    check-cast v4, Lizb;
+
+    iget-object v4, v4, Lizb;->b:Ljava/lang/Object;
+
+    check-cast v4, Llf9;
+
+    invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object v5, v1, Lif9;->c:Lykg;
+
+    invoke-virtual {v5, v4}, Lclg;->q(Llf9;)V
+
+    iget-object v1, v1, Lif9;->c:Lykg;
+
+    invoke-virtual {v1, v4}, Lclg;->s(Llf9;)V
+
+    goto :goto_1
+
+    :cond_2
+    move-object v4, p1
+
+    check-cast v4, Lizb;
+
+    iget-object v4, v4, Lizb;->b:Ljava/lang/Object;
+
+    check-cast v4, Llf9;
+
+    iget-object v6, v1, Lif9;->c:Lykg;
+
+    invoke-virtual {v6, v4}, Lclg;->s(Llf9;)V
+
+    iget-object v6, v1, Lif9;->p:Llf9;
+
+    if-eqz v6, :cond_4
+
+    invoke-virtual {v4}, Llf9;->d()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    :goto_0
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_3
+
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Llf9;
+
+    iget-object v7, v1, Lif9;->c:Lykg;
+
+    invoke-virtual {v7, v6}, Lclg;->r(Llf9;)V
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
+
+    :cond_4
+    :goto_1
+    :try_start_0
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    :goto_2
+    add-int/lit8 v1, v1, -0x1
+
+    if-ltz v1, :cond_6
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v4}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lmf9;
+
+    if-nez v4, :cond_5
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_4
+
+    :cond_5
+    iget-object v4, v4, Lmf9;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    goto :goto_2
+
+    :cond_6
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    :goto_3
+    if-ge v2, v1, :cond_7
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lff9;
+
+    invoke-static {v4, v3, p1}, Lgf9;->a(Lff9;ILjava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_3
+
+    :cond_7
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    return-void
+
+    :goto_4
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x101
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

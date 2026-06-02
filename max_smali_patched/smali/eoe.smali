@@ -1,81 +1,46 @@
-.class public final Leoe;
-.super Lkotlinx/coroutines/internal/Segment;
+.class public final synthetic Leoe;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lj9d;
 
 
 # instance fields
-.field public final synthetic a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+.field public final synthetic a:Lhoe;
+
+.field public final synthetic b:I
+
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public constructor <init>(JLeoe;I)V
+.method public synthetic constructor <init>(Lhoe;IZ)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lkotlinx/coroutines/internal/Segment;-><init>(JLkotlinx/coroutines/internal/Segment;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReferenceArray;
+    iput-object p1, p0, Leoe;->a:Lhoe;
 
-    sget p2, Ldoe;->f:I
+    iput p2, p0, Leoe;->b:I
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
-
-    iput-object p1, p0, Leoe;->a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+    iput-boolean p3, p0, Leoe;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getNumberOfSlots()I
-    .locals 1
-
-    sget v0, Ldoe;->f:I
-
-    return v0
-.end method
-
-.method public final onCancellation(ILjava/lang/Throwable;Lqb4;)V
-    .locals 0
-
-    sget-object p2, Ldoe;->e:Lkotlinx/coroutines/internal/Symbol;
-
-    iget-object p3, p0, Leoe;->a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
-
-    invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->set(ILjava/lang/Object;)V
-
-    invoke-virtual {p0}, Lkotlinx/coroutines/internal/Segment;->onSlotCleaned()V
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final get()Ljava/lang/Object;
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Leoe;->b:I
 
-    const-string v1, "SemaphoreSegment[id="
+    iget-boolean v1, p0, Leoe;->c:Z
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v2, p0, Leoe;->a:Lhoe;
 
-    iget-wide v1, p0, Lkotlinx/coroutines/internal/Segment;->id:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", hashCode="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x5d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2, v0, v1}, Lhoe;->c(IZ)Ljava/lang/Object;
 
     move-result-object v0
 

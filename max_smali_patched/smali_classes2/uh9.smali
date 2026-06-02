@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnq6;
+.implements Lei9;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ly07;
+.field public final synthetic b:Ln99;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ly07;I)V
+.method public synthetic constructor <init>(Ln99;I)V
     .locals 0
 
     iput p2, p0, Luh9;->a:I
 
-    iput-object p1, p0, Luh9;->b:Ly07;
+    iput-object p1, p0, Luh9;->b:Ln99;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,61 +27,46 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final j(Lsg9;Lvf9;I)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Luh9;->a:I
+    iget p3, p0, Luh9;->a:I
 
-    const/4 v1, 0x0
+    packed-switch p3, :pswitch_data_0
 
-    iget-object v2, p0, Luh9;->b:Ly07;
+    iget-object p3, p0, Luh9;->b:Ln99;
 
-    check-cast p1, Ljava/lang/Integer;
+    invoke-static {p3}, Len7;->m(Ljava/lang/Object;)Lv4e;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p3
 
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/members/list/MembersListWidget;->D0:[Lz28;
-
-    invoke-virtual {v2, p1}, Ly07;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lbg9;
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-boolean v1, p1, Lbg9;->v0:Z
-
-    :goto_0
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {p1, p2, p3}, Lsg9;->l(Lvf9;Ljava/util/List;)Lyi8;
 
     move-result-object p1
 
     return-object p1
 
     :pswitch_0
-    sget-object v0, Lone/me/members/list/MembersListWidget;->D0:[Lz28;
+    iget-object p3, p0, Luh9;->b:Ln99;
 
-    invoke-virtual {v2, p1}, Ly07;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p3}, Len7;->m(Ljava/lang/Object;)Lv4e;
+
+    move-result-object p3
+
+    invoke-virtual {p1, p2, p3}, Lsg9;->l(Lvf9;Ljava/util/List;)Lyi8;
 
     move-result-object p1
 
-    check-cast p1, Lbg9;
+    return-object p1
 
-    if-nez p1, :cond_1
+    :pswitch_1
+    iget-object p3, p0, Luh9;->b:Ln99;
 
-    goto :goto_1
+    invoke-static {p3}, Len7;->m(Ljava/lang/Object;)Lv4e;
 
-    :cond_1
-    const/4 v1, 0x1
+    move-result-object p3
 
-    :goto_1
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {p1, p2, p3}, Lsg9;->l(Lvf9;Ljava/util/List;)Lyi8;
 
     move-result-object p1
 
@@ -89,6 +74,7 @@
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

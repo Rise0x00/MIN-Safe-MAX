@@ -1,54 +1,119 @@
-.class public final synthetic Lux8;
-.super Lt8;
+.class public final Lux8;
+.super Ll2;
 .source "SourceFile"
 
-# interfaces
-.implements Ldr6;
 
-
-# static fields
-.field public static final Z:Lux8;
+# instance fields
+.field public final synthetic a:Lvx8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lvx8;)V
+    .locals 0
 
-    new-instance v0, Lux8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const-class v4, Lktb;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lt8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lux8;->Z:Lux8;
+    iput-object p1, p0, Lux8;->a:Lvx8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final bridge contains(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Ljava/lang/Boolean;
+    instance-of v0, p1, Ljava/lang/String;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    if-nez v0, :cond_0
 
-    check-cast p2, Ljava/util/List;
+    const/4 p1, 0x0
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    return p1
 
-    sget-object p3, Lfy8;->P0:[Lz28;
+    :cond_0
+    check-cast p1, Ljava/lang/String;
 
-    new-instance p3, Lktb;
+    invoke-super {p0, p1}, Ll2;->contains(Ljava/lang/Object;)Z
 
-    invoke-direct {p3, p1, p2}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    move-result p1
 
-    return-object p3
+    return p1
+.end method
+
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lux8;->a:Lvx8;
+
+    iget-object v0, v0, Lvx8;->a:Ljava/util/regex/Matcher;
+
+    invoke-virtual {v0, p1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    const-string p1, ""
+
+    :cond_0
+    return-object p1
+.end method
+
+.method public final getSize()I
+    .locals 1
+
+    iget-object v0, p0, Lux8;->a:Lvx8;
+
+    iget-object v0, v0, Lvx8;->a:Ljava/util/regex/Matcher;
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->groupCount()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    return v0
+.end method
+
+.method public final bridge indexOf(Ljava/lang/Object;)I
+    .locals 1
+
+    instance-of v0, p1, Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, -0x1
+
+    return p1
+
+    :cond_0
+    check-cast p1, Ljava/lang/String;
+
+    invoke-super {p0, p1}, Ll2;->indexOf(Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final bridge lastIndexOf(Ljava/lang/Object;)I
+    .locals 1
+
+    instance-of v0, p1, Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, -0x1
+
+    return p1
+
+    :cond_0
+    check-cast p1, Ljava/lang/String;
+
+    invoke-super {p0, p1}, Ll2;->lastIndexOf(Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
 .end method

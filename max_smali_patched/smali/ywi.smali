@@ -1,35 +1,21 @@
 .class public final Lywi;
-.super Ljava/lang/Object;
+.super Lgn5;
 .source "SourceFile"
-
-# interfaces
-.implements Lyjj;
-.implements Lh2b;
-.implements Lz1b;
-.implements Lw1b;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final b:Ljava/util/concurrent/Executor;
-
-.field public final c:Lm84;
-
-.field public final d:Liqj;
+.field public final synthetic b:Landroidx/work/impl/model/WorkersQueueDao_Impl;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Lm84;Liqj;I)V
+.method public synthetic constructor <init>(ILandroidx/work/impl/model/WorkersQueueDao_Impl;)V
     .locals 0
 
-    iput p4, p0, Lywi;->a:I
+    iput p1, p0, Lywi;->a:I
 
-    iput-object p1, p0, Lywi;->b:Ljava/util/concurrent/Executor;
-
-    iput-object p2, p0, Lywi;->c:Lm84;
-
-    iput-object p3, p0, Lywi;->d:Liqj;
+    iput-object p2, p0, Lywi;->b:Landroidx/work/impl/model/WorkersQueueDao_Impl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,49 +24,591 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Lywi;->d:Liqj;
-
-    invoke-virtual {v0, p1}, Liqj;->o(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final b(Lcom/google/android/gms/tasks/Task;)V
-    .locals 3
+.method public final a(Lyie;Ljava/lang/Object;)V
+    .locals 8
 
     iget v0, p0, Lywi;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Ldkg;
+    check-cast p2, Lpwi;
+
+    const/4 v0, 0x1
+
+    iget-object v1, p2, Lpwi;->a:Ljava/lang/String;
+
+    invoke-interface {p1, v0, v1}, Lyie;->I(ILjava/lang/String;)V
+
+    const/4 v0, 0x2
+
+    iget-object v1, p2, Lpwi;->b:Ljava/lang/String;
+
+    invoke-interface {p1, v0, v1}, Lyie;->I(ILjava/lang/String;)V
+
+    iget-object v0, p0, Lywi;->b:Landroidx/work/impl/model/WorkersQueueDao_Impl;
+
+    iget-object v1, p2, Lpwi;->c:Ltr5;
+
+    invoke-static {v0, v1}, Landroidx/work/impl/model/WorkersQueueDao_Impl;->access$__ExistingWorkPolicy_enumToString(Landroidx/work/impl/model/WorkersQueueDao_Impl;Ltr5;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x3
+
+    invoke-interface {p1, v1, v0}, Lyie;->I(ILjava/lang/String;)V
+
+    iget-object v2, p2, Lpwi;->e:Ljava/util/Set;
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x3e
+
+    const-string v3, ","
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    invoke-static/range {v2 .. v7}, Lij3;->q1(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lzs6;I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x4
+
+    invoke-interface {p1, v1, v0}, Lyie;->I(ILjava/lang/String;)V
+
+    const/4 v0, 0x5
+
+    iget-wide v1, p2, Lpwi;->f:J
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    iget v0, p2, Lpwi;->g:I
+
+    int-to-long v0, v0
+
+    const/4 v2, 0x6
+
+    invoke-interface {p1, v2, v0, v1}, Lyie;->b(IJ)V
+
+    iget-object p2, p2, Lpwi;->d:Lfwi;
+
+    const/4 v0, 0x7
+
+    iget-object v1, p2, Lfwi;->a:Ljava/lang/String;
+
+    invoke-interface {p1, v0, v1}, Lyie;->I(ILjava/lang/String;)V
+
+    iget-object v0, p2, Lfwi;->b:Lkvi;
+
+    invoke-static {v0}, Lmtd;->e0(Lkvi;)I
+
+    move-result v0
 
     const/16 v1, 0x8
 
-    invoke-direct {v0, p0, v1, p1}, Ldkg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    int-to-long v2, v0
 
-    iget-object p1, p0, Lywi;->b:Ljava/util/concurrent/Executor;
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
 
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    const/16 v0, 0x9
+
+    iget-object v1, p2, Lfwi;->c:Ljava/lang/String;
+
+    invoke-interface {p1, v0, v1}, Lyie;->I(ILjava/lang/String;)V
+
+    iget-object v0, p2, Lfwi;->d:Ljava/lang/String;
+
+    const/16 v1, 0xa
+
+    if-nez v0, :cond_0
+
+    invoke-interface {p1, v1}, Lyie;->e(I)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {p1, v1, v0}, Lyie;->I(ILjava/lang/String;)V
+
+    :goto_0
+    iget-object v0, p2, Lfwi;->e:Ljj4;
+
+    invoke-static {v0}, Ljj4;->f(Ljj4;)[B
+
+    move-result-object v0
+
+    const/16 v1, 0xb
+
+    invoke-interface {p1, v1, v0}, Lyie;->c(I[B)V
+
+    iget-object v0, p2, Lfwi;->f:Ljj4;
+
+    invoke-static {v0}, Ljj4;->f(Ljj4;)[B
+
+    move-result-object v0
+
+    const/16 v1, 0xc
+
+    invoke-interface {p1, v1, v0}, Lyie;->c(I[B)V
+
+    const/16 v0, 0xd
+
+    iget-wide v1, p2, Lfwi;->g:J
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    const/16 v0, 0xe
+
+    iget-wide v1, p2, Lfwi;->h:J
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    const/16 v0, 0xf
+
+    iget-wide v1, p2, Lfwi;->i:J
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    iget v0, p2, Lfwi;->k:I
+
+    int-to-long v0, v0
+
+    const/16 v2, 0x10
+
+    invoke-interface {p1, v2, v0, v1}, Lyie;->b(IJ)V
+
+    iget-object v0, p2, Lfwi;->l:Lfl0;
+
+    invoke-static {v0}, Lmtd;->e(Lfl0;)I
+
+    move-result v0
+
+    const/16 v1, 0x11
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
+
+    const/16 v0, 0x12
+
+    iget-wide v1, p2, Lfwi;->m:J
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    const/16 v0, 0x13
+
+    iget-wide v1, p2, Lfwi;->n:J
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    const/16 v0, 0x14
+
+    iget-wide v1, p2, Lfwi;->o:J
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    const/16 v0, 0x15
+
+    iget-wide v1, p2, Lfwi;->p:J
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    iget-boolean v0, p2, Lfwi;->q:Z
+
+    const/16 v1, 0x16
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
+
+    iget-object v0, p2, Lfwi;->r:Lrwb;
+
+    invoke-static {v0}, Lmtd;->T(Lrwb;)I
+
+    move-result v0
+
+    const/16 v1, 0x17
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
+
+    iget v0, p2, Lfwi;->s:I
+
+    int-to-long v0, v0
+
+    const/16 v2, 0x18
+
+    invoke-interface {p1, v2, v0, v1}, Lyie;->b(IJ)V
+
+    iget v0, p2, Lfwi;->t:I
+
+    int-to-long v0, v0
+
+    const/16 v2, 0x19
+
+    invoke-interface {p1, v2, v0, v1}, Lyie;->b(IJ)V
+
+    iget-object p2, p2, Lfwi;->j:Loz3;
+
+    iget v0, p2, Loz3;->a:I
+
+    invoke-static {v0}, Lmtd;->N(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1a
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
+
+    iget-boolean v0, p2, Loz3;->b:Z
+
+    const/16 v1, 0x1b
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
+
+    iget-boolean v0, p2, Loz3;->c:Z
+
+    const/16 v1, 0x1c
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
+
+    iget-boolean v0, p2, Loz3;->d:Z
+
+    const/16 v1, 0x1d
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
+
+    iget-boolean v0, p2, Loz3;->e:Z
+
+    const/16 v1, 0x1e
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
+
+    const/16 v0, 0x1f
+
+    iget-wide v1, p2, Loz3;->f:J
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    const/16 v0, 0x20
+
+    iget-wide v1, p2, Loz3;->g:J
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    iget-object p2, p2, Loz3;->h:Ljava/util/Set;
+
+    invoke-static {p2}, Lmtd;->c0(Ljava/util/Set;)[B
+
+    move-result-object p2
+
+    const/16 v0, 0x21
+
+    invoke-interface {p1, v0, p2}, Lyie;->c(I[B)V
 
     return-void
 
     :pswitch_0
-    new-instance v0, Lkuf;
+    check-cast p2, Lpwi;
 
-    const/16 v1, 0x9
+    const/4 v0, 0x1
 
-    const/4 v2, 0x0
+    iget-object v1, p2, Lpwi;->a:Ljava/lang/String;
 
-    invoke-direct {v0, p0, p1, v2, v1}, Lkuf;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+    invoke-interface {p1, v0, v1}, Lyie;->I(ILjava/lang/String;)V
 
-    iget-object p1, p0, Lywi;->b:Ljava/util/concurrent/Executor;
+    const/4 v0, 0x2
 
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    iget-object v1, p2, Lpwi;->b:Ljava/lang/String;
+
+    invoke-interface {p1, v0, v1}, Lyie;->I(ILjava/lang/String;)V
+
+    iget-object v0, p0, Lywi;->b:Landroidx/work/impl/model/WorkersQueueDao_Impl;
+
+    iget-object v1, p2, Lpwi;->c:Ltr5;
+
+    invoke-static {v0, v1}, Landroidx/work/impl/model/WorkersQueueDao_Impl;->access$__ExistingWorkPolicy_enumToString(Landroidx/work/impl/model/WorkersQueueDao_Impl;Ltr5;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x3
+
+    invoke-interface {p1, v1, v0}, Lyie;->I(ILjava/lang/String;)V
+
+    iget-object v2, p2, Lpwi;->e:Ljava/util/Set;
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x3e
+
+    const-string v3, ","
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    invoke-static/range {v2 .. v7}, Lij3;->q1(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lzs6;I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x4
+
+    invoke-interface {p1, v1, v0}, Lyie;->I(ILjava/lang/String;)V
+
+    const/4 v0, 0x5
+
+    iget-wide v1, p2, Lpwi;->f:J
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    iget v0, p2, Lpwi;->g:I
+
+    int-to-long v0, v0
+
+    const/4 v2, 0x6
+
+    invoke-interface {p1, v2, v0, v1}, Lyie;->b(IJ)V
+
+    iget-object p2, p2, Lpwi;->d:Lfwi;
+
+    const/4 v0, 0x7
+
+    iget-object v1, p2, Lfwi;->a:Ljava/lang/String;
+
+    invoke-interface {p1, v0, v1}, Lyie;->I(ILjava/lang/String;)V
+
+    iget-object v0, p2, Lfwi;->b:Lkvi;
+
+    invoke-static {v0}, Lmtd;->e0(Lkvi;)I
+
+    move-result v0
+
+    const/16 v1, 0x8
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
+
+    const/16 v0, 0x9
+
+    iget-object v1, p2, Lfwi;->c:Ljava/lang/String;
+
+    invoke-interface {p1, v0, v1}, Lyie;->I(ILjava/lang/String;)V
+
+    iget-object v0, p2, Lfwi;->d:Ljava/lang/String;
+
+    const/16 v1, 0xa
+
+    if-nez v0, :cond_1
+
+    invoke-interface {p1, v1}, Lyie;->e(I)V
+
+    goto :goto_1
+
+    :cond_1
+    invoke-interface {p1, v1, v0}, Lyie;->I(ILjava/lang/String;)V
+
+    :goto_1
+    iget-object v0, p2, Lfwi;->e:Ljj4;
+
+    invoke-static {v0}, Ljj4;->f(Ljj4;)[B
+
+    move-result-object v0
+
+    const/16 v1, 0xb
+
+    invoke-interface {p1, v1, v0}, Lyie;->c(I[B)V
+
+    iget-object v0, p2, Lfwi;->f:Ljj4;
+
+    invoke-static {v0}, Ljj4;->f(Ljj4;)[B
+
+    move-result-object v0
+
+    const/16 v1, 0xc
+
+    invoke-interface {p1, v1, v0}, Lyie;->c(I[B)V
+
+    const/16 v0, 0xd
+
+    iget-wide v1, p2, Lfwi;->g:J
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    const/16 v0, 0xe
+
+    iget-wide v1, p2, Lfwi;->h:J
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    const/16 v0, 0xf
+
+    iget-wide v1, p2, Lfwi;->i:J
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    iget v0, p2, Lfwi;->k:I
+
+    int-to-long v0, v0
+
+    const/16 v2, 0x10
+
+    invoke-interface {p1, v2, v0, v1}, Lyie;->b(IJ)V
+
+    iget-object v0, p2, Lfwi;->l:Lfl0;
+
+    invoke-static {v0}, Lmtd;->e(Lfl0;)I
+
+    move-result v0
+
+    const/16 v1, 0x11
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
+
+    const/16 v0, 0x12
+
+    iget-wide v1, p2, Lfwi;->m:J
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    const/16 v0, 0x13
+
+    iget-wide v1, p2, Lfwi;->n:J
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    const/16 v0, 0x14
+
+    iget-wide v1, p2, Lfwi;->o:J
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    const/16 v0, 0x15
+
+    iget-wide v1, p2, Lfwi;->p:J
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    iget-boolean v0, p2, Lfwi;->q:Z
+
+    const/16 v1, 0x16
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
+
+    iget-object v0, p2, Lfwi;->r:Lrwb;
+
+    invoke-static {v0}, Lmtd;->T(Lrwb;)I
+
+    move-result v0
+
+    const/16 v1, 0x17
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
+
+    iget v0, p2, Lfwi;->s:I
+
+    int-to-long v0, v0
+
+    const/16 v2, 0x18
+
+    invoke-interface {p1, v2, v0, v1}, Lyie;->b(IJ)V
+
+    iget v0, p2, Lfwi;->t:I
+
+    int-to-long v0, v0
+
+    const/16 v2, 0x19
+
+    invoke-interface {p1, v2, v0, v1}, Lyie;->b(IJ)V
+
+    iget-object p2, p2, Lfwi;->j:Loz3;
+
+    iget v0, p2, Loz3;->a:I
+
+    invoke-static {v0}, Lmtd;->N(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1a
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
+
+    iget-boolean v0, p2, Loz3;->b:Z
+
+    const/16 v1, 0x1b
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
+
+    iget-boolean v0, p2, Loz3;->c:Z
+
+    const/16 v1, 0x1c
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
+
+    iget-boolean v0, p2, Loz3;->d:Z
+
+    const/16 v1, 0x1d
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
+
+    iget-boolean v0, p2, Loz3;->e:Z
+
+    const/16 v1, 0x1e
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lyie;->b(IJ)V
+
+    const/16 v0, 0x1f
+
+    iget-wide v1, p2, Loz3;->f:J
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    const/16 v0, 0x20
+
+    iget-wide v1, p2, Loz3;->g:J
+
+    invoke-interface {p1, v0, v1, v2}, Lyie;->b(IJ)V
+
+    iget-object p2, p2, Loz3;->h:Ljava/util/Set;
+
+    invoke-static {p2}, Lmtd;->c0(Ljava/util/Set;)[B
+
+    move-result-object p2
+
+    const/16 v0, 0x21
+
+    invoke-interface {p1, v0, p2}, Lyie;->c(I[B)V
 
     return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
@@ -88,22 +616,26 @@
     .end packed-switch
 .end method
 
-.method public e()V
+.method public final b()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lywi;->d:Liqj;
+    iget v0, p0, Lywi;->a:I
 
-    invoke-virtual {v0}, Liqj;->p()V
+    packed-switch v0, :pswitch_data_0
 
-    return-void
-.end method
+    const-string v0, "INSERT OR REPLACE INTO `WorkerQueueItem` (`uuid`,`uniqueWorkName`,`existingWorkPolicy`,`tags`,`time`,`state`,`work_spec_id`,`work_spec_state`,`work_spec_worker_class_name`,`work_spec_input_merger_class_name`,`work_spec_input`,`work_spec_output`,`work_spec_initial_delay`,`work_spec_interval_duration`,`work_spec_flex_duration`,`work_spec_run_attempt_count`,`work_spec_backoff_policy`,`work_spec_backoff_delay_duration`,`work_spec_last_enqueue_time`,`work_spec_minimum_retention_duration`,`work_spec_schedule_requested_at`,`work_spec_run_in_foreground`,`work_spec_out_of_quota_policy`,`work_spec_period_count`,`work_spec_generation`,`work_spec_required_network_type`,`work_spec_requires_charging`,`work_spec_requires_device_idle`,`work_spec_requires_battery_not_low`,`work_spec_requires_storage_not_low`,`work_spec_trigger_content_update_delay`,`work_spec_trigger_max_content_delay`,`work_spec_content_uri_triggers`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
 
-.method public onFailure(Ljava/lang/Exception;)V
-    .locals 1
+    return-object v0
 
-    iget-object v0, p0, Lywi;->d:Liqj;
+    :pswitch_0
+    const-string v0, "INSERT OR IGNORE INTO `WorkerQueueItem` (`uuid`,`uniqueWorkName`,`existingWorkPolicy`,`tags`,`time`,`state`,`work_spec_id`,`work_spec_state`,`work_spec_worker_class_name`,`work_spec_input_merger_class_name`,`work_spec_input`,`work_spec_output`,`work_spec_initial_delay`,`work_spec_interval_duration`,`work_spec_flex_duration`,`work_spec_run_attempt_count`,`work_spec_backoff_policy`,`work_spec_backoff_delay_duration`,`work_spec_last_enqueue_time`,`work_spec_minimum_retention_duration`,`work_spec_schedule_requested_at`,`work_spec_run_in_foreground`,`work_spec_out_of_quota_policy`,`work_spec_period_count`,`work_spec_generation`,`work_spec_required_network_type`,`work_spec_requires_charging`,`work_spec_requires_device_idle`,`work_spec_requires_battery_not_low`,`work_spec_requires_storage_not_low`,`work_spec_trigger_content_update_delay`,`work_spec_trigger_max_content_delay`,`work_spec_content_uri_triggers`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
 
-    invoke-virtual {v0, p1}, Liqj;->n(Ljava/lang/Exception;)V
+    return-object v0
 
-    return-void
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

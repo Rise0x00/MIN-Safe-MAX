@@ -2919,7 +2919,7 @@
         <item name="android:scaleType">center</item>
     </style>
     <style name="ExtraActionButton.Down" parent="@style/ExtraActionButton">
-        <item name="android:src">@drawable/ic_down_16</item>
+        <item name="android:src">@drawable/icon_chevron_down_mini</item>
         <item name="android:contentDescription">@string/chat_extra_actions_show</item>
     </style>
     <style name="MaterialAlertDialog.Material3" parent="@style/MaterialAlertDialog.MaterialComponents">
@@ -3026,10 +3026,10 @@
         <item name="textAllCaps">false</item>
     </style>
     <style name="MenuOverflow" parent="@style/Widget.AppCompat.ActionButton.Overflow">
-        <item name="android:src">@drawable/ic_more_vertical_24</item>
+        <item name="android:src">@drawable/icon_dots_vertical</item>
     </style>
     <style name="MenuOverflowWhite" parent="@style/Widget.AppCompat.ActionButton.Overflow">
-        <item name="android:src">@drawable/ic_more_vertical_24</item>
+        <item name="android:src">@drawable/icon_dots_vertical</item>
         <item name="android:tint">@color/white</item>
     </style>
     <style name="OneMe.Launch" parent="@style/Theme.AppCompat.Light.NoActionBar">
@@ -3449,15 +3449,15 @@
         <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDown</item>
         <item name="android:colorControlActivated">@color/accent</item>
         <item name="actionModeCloseButtonStyle">@style/TamTamTheme.CloseMode</item>
-        <item name="actionModeCloseDrawable">@drawable/ic_back_24</item>
+        <item name="actionModeCloseDrawable">@drawable/icon_arrow_left</item>
         <item name="colorAccent">@color/accent</item>
         <item name="colorPrimary">@color/gray_88</item>
         <item name="colorPrimaryDark">@color/status_bar_bg</item>
         <item name="colorSecondary">?colorPrimary</item>
         <item name="divider">@color/divider_gray</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
-        <item name="homeAsUpIndicator">@drawable/ic_back_24</item>
-        <item name="navigationIcon">@drawable/ic_back_24</item>
+        <item name="homeAsUpIndicator">@drawable/icon_arrow_left</item>
+        <item name="navigationIcon">@drawable/icon_arrow_left</item>
         <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
         <item name="scrimBackground">@color/mtrl_scrim_color</item>
         <item name="textAppearanceBody1">@style/TextAppearance.MaterialComponents.Body1</item>

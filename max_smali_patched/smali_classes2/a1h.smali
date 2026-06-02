@@ -1,72 +1,148 @@
-.class public final synthetic La1h;
-.super Ljava/lang/Object;
+.class public final La1h;
+.super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
-
-# interfaces
-.implements Lnq6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Lb1h;
 
-.field public final synthetic b:Ld1h;
+.field public final synthetic b:Lb1h;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ld1h;I)V
+.method public constructor <init>(Lb1h;Lb1h;)V
     .locals 0
 
-    iput p2, p0, La1h;->a:I
+    iput-object p1, p0, La1h;->b:Lb1h;
 
-    iput-object p1, p0, La1h;->b:Ld1h;
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, La1h;->a:Lb1h;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()V
+    .locals 3
 
-    iget v0, p0, La1h;->a:I
+    const/4 v0, 0x3
 
-    check-cast p1, Ljava/lang/CharSequence;
+    const-string v1, "FirebaseMessaging"
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
-    iget-object v0, p0, La1h;->b:Ld1h;
-
-    iget-object v0, v0, Ld1h;->x0:Lc1h;
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lc1h;->u(Ljava/lang/CharSequence;)V
+    const-string v0, "Connectivity change received registered"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    iget-object v0, p0, La1h;->b:Lb1h;
 
-    return-object p1
+    iget-object v0, v0, Lb1h;->a:Landroid/content/Context;
 
-    :pswitch_0
-    iget-object v0, p0, La1h;->b:Ld1h;
+    new-instance v1, Landroid/content/IntentFilter;
 
-    iget-object v0, v0, Ld1h;->x0:Lc1h;
+    const-string v2, "android.net.conn.CONNECTIVITY_CHANGE"
 
-    if-eqz v0, :cond_1
+    invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v0, p1}, Lc1h;->W(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    return-void
+.end method
+
+.method public final declared-synchronized onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 4
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object p2, p0, La1h;->a:Lb1h;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez p2, :cond_0
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_0
+    :try_start_1
+    invoke-virtual {p2}, Lb1h;->d()Z
+
+    move-result p2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-nez p2, :cond_1
+
+    monitor-exit p0
+
+    return-void
 
     :cond_1
-    sget-object p1, Lb3h;->a:Lb3h;
+    :try_start_2
+    const-string p2, "FirebaseMessaging"
 
-    return-object p1
+    const/4 v0, 0x3
 
-    nop
+    invoke-static {p2, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    const-string p2, "FirebaseMessaging"
+
+    const-string v0, "Connectivity changed. Starting background sync."
+
+    invoke-static {p2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    iget-object p2, p0, La1h;->a:Lb1h;
+
+    iget-object v0, p2, Lb1h;->d:Lz0h;
+
+    iget-object v0, v0, Lz0h;->f:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v2, 0x0
+
+    invoke-virtual {v0, p2, v2, v3, v1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    invoke-virtual {p1, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, La1h;->a:Lb1h;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :goto_1
+    :try_start_3
+    monitor-exit p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    throw p1
 .end method

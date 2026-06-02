@@ -2,120 +2,114 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lr4a;
-
 
 # instance fields
-.field public final a:I
+.field public final a:J
+
+.field public final b:Ljava/lang/CharSequence;
+
+.field public final c:Ljava/lang/CharSequence;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:[Ljava/lang/Object;
+
+.field public final f:Ljava/lang/CharSequence;
+
+.field public final g:Ljava/lang/String;
+
+.field public final h:J
+
+.field public final i:I
+
+.field public final j:I
+
+.field public final k:Z
+
+.field public final l:Z
+
+.field public final m:Z
+
+.field public final n:J
+
+.field public final o:Ljava/lang/Long;
+
+.field public final p:J
+
+.field public final q:Ljava/lang/CharSequence;
+
+.field public final r:Ljava/lang/String;
+
+.field public final s:[B
+
+.field public final t:Ljava/lang/CharSequence;
+
+.field public final u:Z
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 2
+.method public constructor <init>(JLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/String;JIIZZZJLjava/lang/Long;JLjava/lang/CharSequence;Ljava/lang/String;[BLjava/lang/CharSequence;Z)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_1
+    iput-wide p1, p0, Lz9a;->a:J
 
-    const/16 v0, 0x5a
+    iput-object p3, p0, Lz9a;->b:Ljava/lang/CharSequence;
 
-    if-eq p1, v0, :cond_1
+    iput-object p4, p0, Lz9a;->c:Ljava/lang/CharSequence;
 
-    const/16 v0, 0xb4
+    iput-object p5, p0, Lz9a;->d:Ljava/lang/String;
 
-    if-eq p1, v0, :cond_1
+    iput-object p6, p0, Lz9a;->e:[Ljava/lang/Object;
 
-    const/16 v0, 0x10e
+    iput-object p7, p0, Lz9a;->f:Ljava/lang/CharSequence;
 
-    if-ne p1, v0, :cond_0
+    iput-object p8, p0, Lz9a;->g:Ljava/lang/String;
 
-    goto :goto_0
+    iput-wide p9, p0, Lz9a;->h:J
 
-    :cond_0
-    const/4 v0, 0x0
+    iput p11, p0, Lz9a;->i:I
 
-    goto :goto_1
+    iput p12, p0, Lz9a;->j:I
 
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
+    iput-boolean p13, p0, Lz9a;->k:Z
 
-    :goto_1
-    const-string v1, "Unsupported orientation"
+    iput-boolean p14, p0, Lz9a;->l:Z
 
-    invoke-static {v1, v0}, Lh6j;->a(Ljava/lang/Object;Z)V
+    iput-boolean p15, p0, Lz9a;->m:Z
 
-    iput p1, p0, Lz9a;->a:I
+    move-wide/from16 p1, p16
+
+    iput-wide p1, p0, Lz9a;->n:J
+
+    move-object/from16 p1, p18
+
+    iput-object p1, p0, Lz9a;->o:Ljava/lang/Long;
+
+    move-wide/from16 p1, p19
+
+    iput-wide p1, p0, Lz9a;->p:J
+
+    move-object/from16 p1, p21
+
+    iput-object p1, p0, Lz9a;->q:Ljava/lang/CharSequence;
+
+    move-object/from16 p1, p22
+
+    iput-object p1, p0, Lz9a;->r:Ljava/lang/String;
+
+    move-object/from16 p1, p23
+
+    iput-object p1, p0, Lz9a;->s:[B
+
+    move-object/from16 p1, p24
+
+    iput-object p1, p0, Lz9a;->t:Ljava/lang/CharSequence;
+
+    move/from16 p1, p25
+
+    iput-boolean p1, p0, Lz9a;->u:Z
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lz9a;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lz9a;
-
-    iget v1, p0, Lz9a;->a:I
-
-    iget p1, p1, Lz9a;->a:I
-
-    if-ne v1, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lz9a;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    add-int/lit16 v0, v0, 0x20f
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Orientation= "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lz9a;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

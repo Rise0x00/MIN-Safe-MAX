@@ -1,247 +1,160 @@
 .class public final Lwlf;
-.super Lulf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final l:J
+.field public final a:Lcom/google/android/gms/maps/model/LatLng;
 
-.field public final m:J
+.field public final b:F
 
-.field public final n:J
-
-.field public final o:J
-
-.field public final p:J
-
-.field public final q:J
-
-.field public final r:J
-
-.field public final s:J
-
-.field public final t:Ljava/lang/Double;
-
-.field public final u:Ljava/lang/Double;
-
-.field public final v:J
-
-.field public final w:J
+.field public final c:Landroid/graphics/Bitmap;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;JJJJJJJJLjava/lang/String;JLjava/lang/Double;Ljava/lang/Double;La2c;JJ)V
-    .locals 12
+.method public constructor <init>(Lcom/google/android/gms/maps/model/LatLng;FLandroid/graphics/Bitmap;)V
+    .locals 0
 
-    const/4 v1, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object v0, p0
+    iput-object p1, p0, Lwlf;->a:Lcom/google/android/gms/maps/model/LatLng;
 
-    move-wide v2, p1
+    iput p2, p0, Lwlf;->b:F
 
-    move-object v4, p3
-
-    move-object/from16 v5, p4
-
-    move-object/from16 v6, p5
-
-    move-object/from16 v7, p6
-
-    move-wide/from16 v8, p7
-
-    move-object/from16 v10, p23
-
-    move-object/from16 v11, p28
-
-    invoke-direct/range {v0 .. v11}, Lulf;-><init>(IJLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;JLjava/lang/String;La2c;)V
-
-    move-wide/from16 p1, p9
-
-    iput-wide p1, p0, Lwlf;->l:J
-
-    move-wide/from16 p1, p11
-
-    iput-wide p1, p0, Lwlf;->m:J
-
-    move-wide/from16 p1, p13
-
-    iput-wide p1, p0, Lwlf;->n:J
-
-    move-wide/from16 p1, p15
-
-    iput-wide p1, p0, Lwlf;->o:J
-
-    move-wide/from16 p1, p17
-
-    iput-wide p1, p0, Lwlf;->p:J
-
-    move-wide/from16 p1, p19
-
-    iput-wide p1, p0, Lwlf;->q:J
-
-    move-wide/from16 p1, p21
-
-    iput-wide p1, p0, Lwlf;->r:J
-
-    move-wide/from16 p1, p24
-
-    iput-wide p1, p0, Lwlf;->s:J
-
-    move-object/from16 p1, p26
-
-    iput-object p1, p0, Lwlf;->t:Ljava/lang/Double;
-
-    move-object/from16 p1, p27
-
-    iput-object p1, p0, Lwlf;->u:Ljava/lang/Double;
-
-    move-wide/from16 p1, p29
-
-    iput-wide p1, p0, Lwlf;->v:J
-
-    move-wide/from16 p1, p31
-
-    iput-wide p1, p0, Lwlf;->w:J
+    iput-object p3, p0, Lwlf;->c:Landroid/graphics/Bitmap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lwlf;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lwlf;
+
+    iget-object v1, p0, Lwlf;->a:Lcom/google/android/gms/maps/model/LatLng;
+
+    iget-object v3, p1, Lwlf;->a:Lcom/google/android/gms/maps/model/LatLng;
+
+    invoke-static {v1, v3}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Lwlf;->b:F
+
+    iget v3, p1, Lwlf;->b:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lwlf;->c:Landroid/graphics/Bitmap;
+
+    iget-object p1, p1, Lwlf;->c:Landroid/graphics/Bitmap;
+
+    invoke-static {v1, p1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lwlf;->a:Lcom/google/android/gms/maps/model/LatLng;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/maps/model/LatLng;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lwlf;->b:F
+
+    invoke-static {v0, v2, v1}, Lx82;->d(IFI)I
+
+    move-result v0
+
+    iget-object v1, p0, Lwlf;->c:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "VideoRecv{ssrc="
+    const-string v1, "MarkerModel(latLng="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v1, p0, Lylf;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", transportId=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lylf;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', trackId=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lylf;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', packetsReceived="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lulf;->h:Ljava/math/BigInteger;
+    iget-object v1, p0, Lwlf;->a:Lcom/google/android/gms/maps/model/LatLng;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", packetsLost="
+    const-string v1, ", zoom="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lulf;->i:Ljava/math/BigInteger;
+    iget v1, p0, Lwlf;->b:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", icon="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lwlf;->c:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", bytesReceived="
+    const-string v1, ")"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lulf;->j:Ljava/math/BigInteger;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", jitterBufferMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lulf;->k:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", nacksSent="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lwlf;->l:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", pliSent="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lwlf;->m:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", firSent="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lwlf;->n:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", framesDecoded="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lwlf;->o:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", framesReceived="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lwlf;->p:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", frameHeight="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lwlf;->q:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", frameWidth="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lwlf;->r:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", unknown="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lylf;->g:Ljava/util/HashMap;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", framesDropped="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lwlf;->s:J
-
-    const/16 v3, 0x7d
-
-    invoke-static {v0, v1, v2, v3}, Lpqb;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

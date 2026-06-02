@@ -1,82 +1,151 @@
-.class public final Lou6;
-.super Lp6g;
+.class public final synthetic Lou6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lp12;
+.implements Lcz;
 
 
 # instance fields
-.field public final synthetic X:Lbv6;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lyi8;
 
 
 # direct methods
-.method public constructor <init>(Lbv6;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lyi8;I)V
     .locals 0
 
-    iput-object p1, p0, Lou6;->X:Lbv6;
+    iput p2, p0, Lou6;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lou6;->b:Lyi8;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public apply(Ljava/lang/Object;)Lyi8;
+    .locals 1
 
-    check-cast p1, Ljava/util/List;
+    iget v0, p0, Lou6;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lou6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p1, Ljava/lang/Void;
+
+    iget-object p1, p0, Lou6;->b:Lyi8;
+
+    invoke-interface {p1}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lou6;
+    check-cast p1, Lh72;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    invoke-interface {p1}, Lh72;->b()Lyi8;
 
-    invoke-virtual {p1, p2}, Lou6;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lou6;
-
-    iget-object v1, p0, Lou6;->X:Lbv6;
-
-    invoke-direct {v0, v1, p2}, Lou6;-><init>(Lbv6;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lou6;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lou6;->o:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/List;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lou6;->X:Lbv6;
-
-    iget-object p1, p1, Lbv6;->u0:Lspf;
-
-    invoke-virtual {p1, v0}, Lspf;->setValue(Ljava/lang/Object;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
+    move-result-object p1
 
     return-object p1
+
+    :pswitch_0
+    check-cast p1, Lh72;
+
+    iget-object p1, p0, Lou6;->b:Lyi8;
+
+    invoke-interface {p1}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lh72;
+
+    invoke-interface {p1}, Lh72;->a()Lyi8;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public x(Lo12;)Ljava/lang/String;
+    .locals 3
+
+    iget v0, p0, Lou6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lmv4;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p1, v1}, Lmv4;-><init>(Lo12;I)V
+
+    invoke-static {}, Lenj;->b()Lb35;
+
+    move-result-object p1
+
+    iget-object v1, p0, Lou6;->b:Lyi8;
+
+    invoke-interface {v1, v0, p1}, Lyi8;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "transformVoidFuture ["
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "]"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    const/4 v0, 0x0
+
+    invoke-static {}, Lenj;->b()Lb35;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lou6;->b:Lyi8;
+
+    invoke-static {v0, v2, p1, v1}, Lszb;->j(ZLyi8;Lo12;Lb35;)V
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "nonCancellationPropagating["
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "]"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

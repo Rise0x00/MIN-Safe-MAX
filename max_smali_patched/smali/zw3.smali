@@ -3,57 +3,50 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfpe;
+.implements Lww3;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final synthetic a:Lwvc;
+
+.field public final synthetic b:Lxw3;
 
 
 # direct methods
-.method public constructor <init>(Lfpe;)V
-    .locals 1
+.method public constructor <init>(Lwvc;Lxw3;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p1, p0, Lzw3;->a:Lwvc;
 
-    invoke-direct {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lzw3;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p2, p0, Lzw3;->b:Lxw3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final iterator()Ljava/util/Iterator;
+.method public final a()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final b()V
     .locals 2
 
-    iget-object v0, p0, Lzw3;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Lzw3;->b:Lxw3;
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0}, Lxw3;->b()Lyx3;
 
     move-result-object v0
 
-    check-cast v0, Lfpe;
+    iget-object v1, p0, Lzw3;->a:Lwvc;
 
-    if-eqz v0, :cond_0
+    check-cast v1, Ltvc;
 
-    invoke-interface {v0}, Lfpe;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v1, v0}, Ltvc;->h(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "This sequence can be consumed only once."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-void
 .end method

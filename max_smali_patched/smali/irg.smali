@@ -3,129 +3,89 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic a:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+.field public static final synthetic b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+.field public static final synthetic c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+.field public static final synthetic d:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+.field public static final synthetic e:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+
 # instance fields
-.field public a:J
+.field private volatile synthetic _value$volatile:Ljava/lang/Object;
 
-.field public b:J
+.field private volatile synthetic exceptionWhenReading$volatile:Ljava/lang/Object;
 
-.field public c:I
+.field private volatile synthetic reader$volatile:Ljava/lang/Object;
 
-.field public d:I
+.field private volatile synthetic readers$volatile:I
 
-.field public e:[J
-
-.field public f:[I
-
-.field public g:[I
-
-.field public h:[J
-
-.field public i:[Z
-
-.field public j:Z
-
-.field public k:[Z
-
-.field public l:Z
-
-.field public m:J
-
-.field public n:Z
-
-.field public o:Ljava/lang/Object;
-
-.field public p:Ljava/lang/Object;
-
-.field public final q:Ljava/lang/Object;
+.field private volatile synthetic writer$volatile:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    packed-switch p1, :pswitch_data_0
+    const-string v0, "reader$volatile"
+
+    const-class v1, Lirg;
+
+    const-class v2, Ljava/lang/Object;
+
+    invoke-static {v1, v2, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Lirg;->a:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    const-string v0, "readers$volatile"
+
+    invoke-static {v1, v0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Lirg;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    const-string v0, "writer$volatile"
+
+    invoke-static {v1, v2, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Lirg;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    const-string v0, "exceptionWhenReading$volatile"
+
+    invoke-static {v1, v2, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Lirg;->d:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    const-string v0, "_value$volatile"
+
+    invoke-static {v1, v2, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Lirg;->e:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x0
+    const/4 v0, 0x0
 
-    new-array v0, p1, [J
-
-    iput-object v0, p0, Lirg;->e:[J
-
-    new-array v0, p1, [I
-
-    iput-object v0, p0, Lirg;->f:[I
-
-    new-array v0, p1, [I
-
-    iput-object v0, p0, Lirg;->g:[I
-
-    new-array v0, p1, [J
-
-    iput-object v0, p0, Lirg;->h:[J
-
-    new-array v0, p1, [Z
-
-    iput-object v0, p0, Lirg;->i:[Z
-
-    new-array p1, p1, [Z
-
-    iput-object p1, p0, Lirg;->k:[Z
-
-    new-instance p1, Ldch;
-
-    const/4 v0, 0x2
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v0, v1}, Ldch;-><init>(IZ)V
-
-    iput-object p1, p0, Lirg;->q:Ljava/lang/Object;
+    iput-object v0, p0, Lirg;->_value$volatile:Ljava/lang/Object;
 
     return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 p1, 0x0
-
-    new-array v0, p1, [J
-
-    iput-object v0, p0, Lirg;->e:[J
-
-    new-array v0, p1, [I
-
-    iput-object v0, p0, Lirg;->f:[I
-
-    new-array v0, p1, [I
-
-    iput-object v0, p0, Lirg;->g:[I
-
-    new-array v0, p1, [J
-
-    iput-object v0, p0, Lirg;->h:[J
-
-    new-array v0, p1, [Z
-
-    iput-object v0, p0, Lirg;->i:[Z
-
-    new-array p1, p1, [Z
-
-    iput-object p1, p0, Lirg;->k:[Z
-
-    new-instance p1, Lwtb;
-
-    invoke-direct {p1}, Lwtb;-><init>()V
-
-    iput-object p1, p0, Lirg;->q:Ljava/lang/Object;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method

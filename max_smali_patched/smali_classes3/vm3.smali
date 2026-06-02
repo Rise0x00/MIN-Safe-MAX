@@ -2,105 +2,158 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwm3;
+
 
 # instance fields
-.field public final a:Lvna;
+.field public final a:Lej2;
 
-.field public final b:Ljava/util/HashMap;
+.field public final b:Ljava/lang/CharSequence;
 
-.field public final c:Ljava/util/HashMap;
+.field public final c:Ljava/lang/String;
 
-.field public final d:Ljava/util/HashMap;
-
-.field public final e:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final d:J
 
 
 # direct methods
-.method public constructor <init>(Lvna;)V
+.method static constructor <clinit>()V
     .locals 1
+
+    const-class v0, Lvm3;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    return-void
+.end method
+
+.method public constructor <init>(Lej2;Ljava/lang/CharSequence;Ljava/lang/String;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvm3;->a:Lvna;
+    iput-object p1, p0, Lvm3;->a:Lej2;
 
-    new-instance p1, Ljava/util/HashMap;
+    iput-object p2, p0, Lvm3;->b:Ljava/lang/CharSequence;
 
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+    iput-object p3, p0, Lvm3;->c:Ljava/lang/String;
 
-    iput-object p1, p0, Lvm3;->b:Ljava/util/HashMap;
+    iget-wide p1, p1, Lej2;->a:J
 
-    new-instance p1, Ljava/util/HashMap;
-
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p1, p0, Lvm3;->c:Ljava/util/HashMap;
-
-    new-instance p1, Ljava/util/HashMap;
-
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p1, p0, Lvm3;->d:Ljava/util/HashMap;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    iput-object p1, p0, Lvm3;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput-wide p1, p0, Lvm3;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lvm3;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
+    if-ne p0, p1, :cond_0
 
-    const/4 v1, 0x1
+    goto :goto_1
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
+    :cond_0
+    instance-of v0, p1, Lvm3;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lvm3;
+
+    iget-wide v0, p1, Lvm3;->d:J
+
+    iget-wide v2, p0, Lvm3;->d:J
+
+    cmp-long v0, v2, v0
+
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lvm3;->b:Ljava/lang/CharSequence;
+
+    iget-object v1, p1, Lvm3;->b:Ljava/lang/CharSequence;
+
+    invoke-static {v0, v1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_3
 
-    iget-object v0, p0, Lvm3;->a:Lvna;
+    goto :goto_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_3
+    iget-object v0, p0, Lvm3;->c:Ljava/lang/String;
 
-    invoke-static {p0}, Lvna;->s(Lvm3;)V
+    iget-object p1, p1, Lvm3;->c:Ljava/lang/String;
 
-    :cond_0
-    return-void
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final b(ILjava/lang/String;)V
-    .locals 1
+.method public final getId()J
+    .locals 2
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-wide v0, p0, Lvm3;->d:J
 
-    move-result-object p1
-
-    iget-object v0, p0, Lvm3;->c:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
+    return-wide v0
 .end method
 
-.method public final c(ILjava/lang/String;)V
-    .locals 1
+.method public final hashCode()I
+    .locals 4
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-class v0, Lvm3;
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    iget-object v0, p0, Lvm3;->b:Ljava/util/HashMap;
+    move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    return-void
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lvm3;->d:J
+
+    invoke-static {v0, v1, v2, v3}, Lwph;->a(IIJ)I
+
+    move-result v0
+
+    iget-object v2, p0, Lvm3;->b:Ljava/lang/CharSequence;
+
+    invoke-static {v0, v1, v2}, Ls54;->c(IILjava/lang/CharSequence;)I
+
+    move-result v0
+
+    iget-object v1, p0, Lvm3;->c:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method

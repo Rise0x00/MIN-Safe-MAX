@@ -1,85 +1,50 @@
 .class public final Lx6g;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public A0:I
+.field public final a:J
 
-.field public B0:I
+.field public final b:I
 
-.field public C0:I
-
-.field public D0:I
-
-.field public E0:I
-
-.field public F0:J
-
-.field public synthetic G0:Ljava/lang/Object;
-
-.field public final synthetic H0:Lb7g;
-
-.field public I0:I
-
-.field public X:Ljava/io/File;
-
-.field public Y:Ljava/io/Closeable;
-
-.field public Z:Ljava/io/InputStream;
-
-.field public d:Lufh;
-
-.field public o:Ljava/lang/String;
-
-.field public t0:Ljava/io/Closeable;
-
-.field public u0:Ljava/io/OutputStream;
-
-.field public v0:[B
-
-.field public w0:I
-
-.field public x0:I
-
-.field public y0:I
-
-.field public z0:I
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Lb7g;Lo84;)V
-    .locals 0
+.method public constructor <init>(JIII)V
+    .locals 2
 
-    iput-object p1, p0, Lx6g;->H0:Lb7g;
+    and-int/lit8 v0, p5, 0x1
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    if-eqz v0, :cond_0
+
+    const-wide/16 p1, 0x0
+
+    :cond_0
+    and-int/lit8 v0, p5, 0x2
+
+    const/4 v1, -0x1
+
+    if-eqz v0, :cond_1
+
+    move p3, v1
+
+    :cond_1
+    and-int/lit8 p5, p5, 0x4
+
+    if-eqz p5, :cond_2
+
+    move p4, v1
+
+    :cond_2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lx6g;->a:J
+
+    iput p3, p0, Lx6g;->b:I
+
+    iput p4, p0, Lx6g;->c:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lx6g;->G0:Ljava/lang/Object;
-
-    iget p1, p0, Lx6g;->I0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lx6g;->I0:I
-
-    iget-object p1, p0, Lx6g;->H0:Lb7g;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0, p0}, Lb7g;->c(Lufh;Lp74;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

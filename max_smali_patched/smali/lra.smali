@@ -1,55 +1,64 @@
-.class public abstract Llra;
+.class public final Llra;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmra;
+
+
+# static fields
+.field public static final b:Llra;
+
 
 # direct methods
-.method public static a(Landroid/app/Notification;)Z
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/app/Notification;->getAllowSystemGeneratedContextualActions()Z
+    new-instance v0, Llra;
 
-    move-result p0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return p0
+    sput-object v0, Llra;->b:Llra;
+
+    return-void
 .end method
 
-.method public static b(Landroid/app/Notification;)Landroid/app/Notification$BubbleMetadata;
-    .locals 0
 
-    invoke-virtual {p0}, Landroid/app/Notification;->getBubbleMetadata()Landroid/app/Notification$BubbleMetadata;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    move-result-object p0
+    const/4 v0, 0x1
 
-    return-object p0
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Llra;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
 .end method
 
-.method public static c(Landroid/app/RemoteInput;)I
-    .locals 0
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getEditChoicesBeforeSending()I
+    const v0, -0x38b39d6b
 
-    move-result p0
-
-    return p0
+    return v0
 .end method
 
-.method public static d(Landroid/app/Notification;)Landroid/content/LocusId;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/app/Notification;->getLocusId()Landroid/content/LocusId;
+    const-string v0, "System"
 
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static e(Landroid/app/Notification$Action;)Z
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/Notification$Action;->isContextual()Z
-
-    move-result p0
-
-    return p0
+    return-object v0
 .end method

@@ -1,114 +1,185 @@
-.class public final Llv3;
+.class public abstract synthetic Llv3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Liv3;
 
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-# instance fields
-.field public final synthetic a:Ljv3;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
-.field public final synthetic b:Lg62;
+.field public static final synthetic $EnumSwitchMapping$2:[I
 
-.field public final synthetic c:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public static final synthetic $EnumSwitchMapping$3:[I
+
+.field public static final synthetic $EnumSwitchMapping$4:[I
 
 
 # direct methods
-.method public constructor <init>(Ljv3;Lg62;Ljava/util/concurrent/atomic/AtomicBoolean;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x3
 
-    iput-object p1, p0, Llv3;->a:Ljv3;
+    invoke-static {v0}, Lo52;->J(I)[I
 
-    iput-object p2, p0, Llv3;->b:Lg62;
+    move-result-object v1
 
-    iput-object p3, p0, Llv3;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    array-length v1, v1
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()V
-    .locals 4
-
-    iget-object v0, p0, Llv3;->a:Ljv3;
-
-    invoke-interface {v0}, Ljv3;->f()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0, p0}, Ljv3;->e(Liv3;)V
-
-    iget-object v0, p0, Llv3;->b:Lg62;
-
-    invoke-virtual {v0}, Lg62;->r()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x0
+    new-array v1, v1, [I
 
     const/4 v2, 0x1
 
-    iget-object v3, p0, Llv3;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    const/4 v3, 0x0
 
-    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result v1
+    :catch_0
+    const/4 v4, 0x2
 
-    if-eqz v1, :cond_0
+    :try_start_1
+    aput v4, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    sget-object v1, Lb3h;->a:Lb3h;
+    :catch_1
+    :try_start_2
+    aput v0, v1, v4
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    invoke-virtual {v0, v1}, Lg62;->resumeWith(Ljava/lang/Object;)V
+    :catch_2
+    sput-object v1, Llv3;->$EnumSwitchMapping$0:[I
 
-    :cond_0
-    return-void
-.end method
+    invoke-static {v0}, Lo52;->J(I)[I
 
-.method public final b()V
-    .locals 4
+    move-result-object v1
 
-    iget-object v0, p0, Llv3;->a:Ljv3;
+    array-length v1, v1
 
-    invoke-interface {v0}, Ljv3;->f()Z
+    new-array v1, v1, [I
 
-    move-result v1
+    :try_start_3
+    aput v2, v1, v4
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    if-eqz v1, :cond_0
+    :catch_3
+    :try_start_4
+    aput v4, v1, v3
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    invoke-interface {v0, p0}, Ljv3;->e(Liv3;)V
+    :catch_4
+    :try_start_5
+    aput v0, v1, v2
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    iget-object v0, p0, Llv3;->b:Lg62;
+    :catch_5
+    sput-object v1, Llv3;->$EnumSwitchMapping$1:[I
 
-    invoke-virtual {v0}, Lg62;->r()Z
+    const/4 v1, 0x4
 
-    move-result v1
+    invoke-static {v1}, Lo52;->J(I)[I
 
-    if-eqz v1, :cond_0
+    move-result-object v5
 
-    const/4 v1, 0x0
+    array-length v5, v5
 
-    const/4 v2, 0x1
+    new-array v5, v5, [I
 
-    iget-object v3, p0, Llv3;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    :try_start_6
+    aput v2, v5, v3
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    :catch_6
+    :try_start_7
+    aput v4, v5, v2
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
 
-    move-result v1
+    :catch_7
+    :try_start_8
+    aput v0, v5, v4
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
 
-    if-eqz v1, :cond_0
+    :catch_8
+    :try_start_9
+    aput v1, v5, v0
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
 
-    sget-object v1, Lb3h;->a:Lb3h;
+    :catch_9
+    sput-object v5, Llv3;->$EnumSwitchMapping$2:[I
 
-    invoke-virtual {v0, v1}, Lg62;->resumeWith(Ljava/lang/Object;)V
+    invoke-static {v1}, Lo52;->J(I)[I
 
-    :cond_0
+    move-result-object v5
+
+    array-length v5, v5
+
+    new-array v5, v5, [I
+
+    :try_start_a
+    aput v2, v5, v3
+    :try_end_a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
+
+    :catch_a
+    :try_start_b
+    aput v4, v5, v2
+    :try_end_b
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
+
+    :catch_b
+    :try_start_c
+    aput v0, v5, v4
+    :try_end_c
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_c} :catch_c
+
+    :catch_c
+    :try_start_d
+    aput v1, v5, v0
+    :try_end_d
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_d .. :try_end_d} :catch_d
+
+    :catch_d
+    sput-object v5, Llv3;->$EnumSwitchMapping$3:[I
+
+    invoke-static {v0}, Lo52;->J(I)[I
+
+    move-result-object v1
+
+    array-length v1, v1
+
+    new-array v1, v1, [I
+
+    :try_start_e
+    aput v2, v1, v3
+    :try_end_e
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_e .. :try_end_e} :catch_e
+
+    :catch_e
+    :try_start_f
+    aput v4, v1, v2
+    :try_end_f
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_f .. :try_end_f} :catch_f
+
+    :catch_f
+    :try_start_10
+    aput v0, v1, v4
+    :try_end_10
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_10 .. :try_end_10} :catch_10
+
+    :catch_10
+    sput-object v1, Llv3;->$EnumSwitchMapping$4:[I
+
     return-void
 .end method

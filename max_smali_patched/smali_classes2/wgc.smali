@@ -1,41 +1,200 @@
 .class public final Lwgc;
-.super Ljz;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lo1i;
 
 
 # instance fields
-.field public final X:Ljava/lang/Long;
-
-.field public final Y:Ljava/lang/Long;
-
-.field public final Z:I
-
-.field public final d:Ljava/lang/Long;
-
-.field public final o:Ljava/lang/Long;
-
-.field public final t0:Ljava/lang/String;
+.field public final synthetic b:Lbhc;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;ILjava/lang/String;ZZ)V
-    .locals 1
+.method public constructor <init>(Lbhc;)V
+    .locals 0
 
-    sget-object v0, Le10;->x0:Le10;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0, p7, p8}, Ljz;-><init>(Le10;ZZ)V
+    iput-object p1, p0, Lwgc;->b:Lbhc;
 
-    iput-object p1, p0, Lwgc;->d:Ljava/lang/Long;
+    return-void
+.end method
 
-    iput-object p2, p0, Lwgc;->o:Ljava/lang/Long;
 
-    iput-object p3, p0, Lwgc;->X:Ljava/lang/Long;
+# virtual methods
+.method public final a(Landroidx/media3/exoplayer/video/VideoSink$VideoSinkException;)V
+    .locals 7
 
-    iput-object p4, p0, Lwgc;->Y:Ljava/lang/Long;
+    iget-object v0, p0, Lwgc;->b:Lbhc;
 
-    iput p5, p0, Lwgc;->Z:I
+    iget-object v0, v0, Lbhc;->h:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iput-object p6, p0, Lwgc;->t0:Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lygc;
+
+    invoke-static {p1}, Landroidx/media3/common/VideoFrameProcessingException;->a(Ljava/lang/Exception;)Landroidx/media3/common/VideoFrameProcessingException;
+
+    move-result-object v2
+
+    iget-object v3, v1, Lygc;->g:Lo1i;
+
+    iget-object v4, v1, Lygc;->h:Ljava/util/concurrent/Executor;
+
+    new-instance v5, Lmg5;
+
+    const/16 v6, 0x1a
+
+    invoke-direct {v5, v1, v3, v2, v6}, Lmg5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-interface {v4, v5}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final b()V
+    .locals 5
+
+    iget-object v0, p0, Lwgc;->b:Lbhc;
+
+    iget-object v0, v0, Lbhc;->h:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lygc;
+
+    iget-object v2, v1, Lygc;->g:Lo1i;
+
+    iget-object v1, v1, Lygc;->h:Ljava/util/concurrent/Executor;
+
+    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v3, Lxgc;
+
+    const/4 v4, 0x1
+
+    invoke-direct {v3, v2, v4}, Lxgc;-><init>(Lo1i;I)V
+
+    invoke-interface {v1, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final g(Ls1i;)V
+    .locals 5
+
+    iget-object v0, p0, Lwgc;->b:Lbhc;
+
+    iget-object v0, v0, Lbhc;->h:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lygc;
+
+    iget-object v2, v1, Lygc;->g:Lo1i;
+
+    iget-object v1, v1, Lygc;->h:Ljava/util/concurrent/Executor;
+
+    new-instance v3, Lcha;
+
+    const/16 v4, 0x11
+
+    invoke-direct {v3, v2, v4, p1}, Lcha;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-interface {v1, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onFirstFrameRendered()V
+    .locals 5
+
+    iget-object v0, p0, Lwgc;->b:Lbhc;
+
+    iget-object v0, v0, Lbhc;->h:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lygc;
+
+    iget-object v2, v1, Lygc;->g:Lo1i;
+
+    iget-object v1, v1, Lygc;->h:Ljava/util/concurrent/Executor;
+
+    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v3, Lxgc;
+
+    const/4 v4, 0x2
+
+    invoke-direct {v3, v2, v4}, Lxgc;-><init>(Lo1i;I)V
+
+    invoke-interface {v1, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method

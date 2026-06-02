@@ -2,18 +2,19 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljfg;
 
-# instance fields
-.field public final a:Lxii;
 
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 1
 
-# direct methods
-.method public constructor <init>(Lxii;)V
-    .locals 0
+    sget-object v0, Lz0;->k:Ljava/lang/NullPointerException;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v0}, Lnwj;->b(Ljava/lang/Exception;)Lqpf;
 
-    iput-object p1, p0, Lfk4;->a:Lxii;
+    move-result-object v0
 
-    return-void
+    return-object v0
 .end method

@@ -1,236 +1,812 @@
-.class public final Ljqf;
+.class public abstract Ljqf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lncg;
+.implements Lan4;
+
 
 # instance fields
-.field public final a:I
+.field public final a:Lrpf;
 
-.field public final b:I
+.field public final b:Ljava/lang/Object;
 
-.field public final c:I
+.field public final c:Ljava/util/ArrayDeque;
 
-.field public final d:I
+.field public final d:Ljava/util/ArrayDeque;
 
-.field public final e:I
+.field public final e:[Lfn4;
 
-.field public final f:I
+.field public final f:[Lee2;
 
-.field public final g:I
+.field public g:I
+
+.field public h:I
+
+.field public i:Lfn4;
+
+.field public j:Lcom/google/android/exoplayer2/text/SubtitleDecoderException;
+
+.field public k:Z
+
+.field public l:Z
 
 
 # direct methods
-.method public constructor <init>(IIIIIII)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 7
+
+    const/4 v0, 0x2
+
+    new-array v1, v0, [Lscg;
+
+    new-array v2, v0, [Lee2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Ljqf;->a:I
+    new-instance v3, Ljava/lang/Object;
 
-    iput p2, p0, Ljqf;->b:I
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
 
-    iput p3, p0, Ljqf;->c:I
+    iput-object v3, p0, Ljqf;->b:Ljava/lang/Object;
 
-    iput p4, p0, Ljqf;->d:I
+    new-instance v3, Ljava/util/ArrayDeque;
 
-    iput p5, p0, Ljqf;->e:I
+    invoke-direct {v3}, Ljava/util/ArrayDeque;-><init>()V
 
-    iput p6, p0, Ljqf;->f:I
+    iput-object v3, p0, Ljqf;->c:Ljava/util/ArrayDeque;
 
-    iput p7, p0, Ljqf;->g:I
+    new-instance v3, Ljava/util/ArrayDeque;
 
+    invoke-direct {v3}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object v3, p0, Ljqf;->d:Ljava/util/ArrayDeque;
+
+    iput-object v1, p0, Ljqf;->e:[Lfn4;
+
+    iput v0, p0, Ljqf;->g:I
+
+    const/4 v1, 0x0
+
+    move v3, v1
+
+    :goto_0
+    iget v4, p0, Ljqf;->g:I
+
+    const/4 v5, 0x1
+
+    if-ge v3, v4, :cond_0
+
+    iget-object v4, p0, Ljqf;->e:[Lfn4;
+
+    new-instance v6, Lscg;
+
+    invoke-direct {v6, v5}, Lfn4;-><init>(I)V
+
+    aput-object v6, v4, v3
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    iput-object v2, p0, Ljqf;->f:[Lee2;
+
+    iput v0, p0, Ljqf;->h:I
+
+    move v0, v1
+
+    :goto_1
+    iget v2, p0, Ljqf;->h:I
+
+    if-ge v0, v2, :cond_1
+
+    iget-object v2, p0, Ljqf;->f:[Lee2;
+
+    new-instance v3, Lee2;
+
+    const/4 v4, 0x2
+
+    invoke-direct {v3, p0, v4}, Lee2;-><init>(Lncg;I)V
+
+    aput-object v3, v2, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    new-instance v0, Lrpf;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, p0}, Lrpf;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p0, Ljqf;->a:Lrpf;
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+
+    iget v0, p0, Ljqf;->g:I
+
+    iget-object v2, p0, Ljqf;->e:[Lfn4;
+
+    array-length v3, v2
+
+    if-ne v0, v3, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    move v5, v1
+
+    :goto_2
+    invoke-static {v5}, Lmhj;->d(Z)V
+
+    array-length v0, v2
+
+    :goto_3
+    if-ge v1, v0, :cond_3
+
+    aget-object v3, v2, v1
+
+    const/16 v4, 0x400
+
+    invoke-virtual {v3, v4}, Lfn4;->v(I)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_3
+
+    :cond_3
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a(J)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final b()Lee2;
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Ljqf;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Ljqf;->j:Lcom/google/android/exoplayer2/text/SubtitleDecoderException;
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Ljqf;->d:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x0
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, p0, Ljqf;->d:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lee2;
+
+    monitor-exit v0
+
+    return-object v1
+
+    :cond_1
+    throw v1
+
+    :goto_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public final c()Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Ljqf;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Ljqf;->j:Lcom/google/android/exoplayer2/text/SubtitleDecoderException;
+
+    if-nez v1, :cond_2
+
+    iget-object v1, p0, Ljqf;->i:Lfn4;
+
+    const/4 v2, 0x1
+
+    if-nez v1, :cond_0
+
+    move v1, v2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-static {v1}, Lmhj;->d(Z)V
+
+    iget v1, p0, Ljqf;->g:I
+
+    if-nez v1, :cond_1
+
+    const/4 v1, 0x0
 
     goto :goto_1
 
-    :cond_0
-    instance-of v0, p1, Ljqf;
+    :cond_1
+    iget-object v3, p0, Ljqf;->e:[Lfn4;
 
-    if-nez v0, :cond_1
+    sub-int/2addr v1, v2
+
+    iput v1, p0, Ljqf;->g:I
+
+    aget-object v1, v3, v1
+
+    :goto_1
+    iput-object v1, p0, Ljqf;->i:Lfn4;
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_2
+
+    :cond_2
+    throw v1
+
+    :goto_2
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public final d(Lscg;)V
+    .locals 2
+
+    iget-object v0, p0, Ljqf;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Ljqf;->j:Lcom/google/android/exoplayer2/text/SubtitleDecoderException;
+
+    if-nez v1, :cond_2
+
+    iget-object v1, p0, Ljqf;->i:Lfn4;
+
+    if-ne p1, v1, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-static {v1}, Lmhj;->b(Z)V
+
+    iget-object v1, p0, Ljqf;->c:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1, p1}, Ljava/util/ArrayDeque;->addLast(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ljqf;->c:Ljava/util/ArrayDeque;
+
+    invoke-virtual {p1}, Ljava/util/ArrayDeque;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    iget p1, p0, Ljqf;->h:I
+
+    if-lez p1, :cond_1
+
+    iget-object p1, p0, Ljqf;->b:Ljava/lang/Object;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->notify()V
+
+    :cond_1
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Ljqf;->i:Lfn4;
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_2
+    throw v1
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public abstract e(IZ[B)Llcg;
+.end method
+
+.method public final f(Lfn4;Lee2;Z)Lcom/google/android/exoplayer2/text/SubtitleDecoderException;
+    .locals 8
+
+    check-cast p1, Lscg;
+
+    :try_start_0
+    iget-object v0, p1, Lfn4;->d:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->limit()I
+
+    move-result v0
+
+    invoke-virtual {p0, v0, p3, v1}, Ljqf;->e(IZ[B)Llcg;
+
+    move-result-object v5
+
+    iget-wide v3, p1, Lfn4;->X:J
+
+    iget-wide v6, p1, Lscg;->z0:J
+
+    move-object v2, p2
+
+    invoke-virtual/range {v2 .. v7}, Lee2;->u(JLlcg;J)V
+
+    iget p1, v2, Lu20;->b:I
+
+    const p2, 0x7fffffff
+
+    and-int/2addr p1, p2
+
+    iput p1, v2, Lu20;->b:I
+    :try_end_0
+    .catch Lcom/google/android/exoplayer2/text/SubtitleDecoderException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :catch_0
+    move-exception v0
+
+    move-object p1, v0
+
+    return-object p1
+.end method
+
+.method public final flush()V
+    .locals 5
+
+    iget-object v0, p0, Ljqf;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    const/4 v1, 0x1
+
+    :try_start_0
+    iput-boolean v1, p0, Ljqf;->k:Z
+
+    iget-object v1, p0, Ljqf;->i:Lfn4;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Lfn4;->t()V
+
+    iget-object v2, p0, Ljqf;->e:[Lfn4;
+
+    iget v3, p0, Ljqf;->g:I
+
+    add-int/lit8 v4, v3, 0x1
+
+    iput v4, p0, Ljqf;->g:I
+
+    aput-object v1, v2, v3
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Ljqf;->i:Lfn4;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_2
+
+    :cond_0
+    :goto_0
+    iget-object v1, p0, Ljqf;->c:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Ljqf;->c:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lfn4;
+
+    invoke-virtual {v1}, Lfn4;->t()V
+
+    iget-object v2, p0, Ljqf;->e:[Lfn4;
+
+    iget v3, p0, Ljqf;->g:I
+
+    add-int/lit8 v4, v3, 0x1
+
+    iput v4, p0, Ljqf;->g:I
+
+    aput-object v1, v2, v3
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Ljqf;
-
-    iget v0, p0, Ljqf;->a:I
-
-    iget v1, p1, Ljqf;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Ljqf;->b:I
-
-    iget v1, p1, Ljqf;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p0, Ljqf;->c:I
-
-    iget v1, p1, Ljqf;->c:I
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Ljqf;->d:I
-
-    iget v1, p1, Ljqf;->d:I
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget v0, p0, Ljqf;->e:I
-
-    iget v1, p1, Ljqf;->e:I
-
-    if-eq v0, v1, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget v0, p0, Ljqf;->f:I
-
-    iget v1, p1, Ljqf;->f:I
-
-    if-eq v0, v1, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget v0, p0, Ljqf;->g:I
-
-    iget p1, p1, Ljqf;->g:I
-
-    if-eq v0, p1, :cond_8
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_8
     :goto_1
-    const/4 p1, 0x1
+    iget-object v1, p0, Ljqf;->d:Ljava/util/ArrayDeque;
 
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Ljqf;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ljqf;->b:I
-
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
-
-    move-result v0
-
-    iget v2, p0, Ljqf;->c:I
-
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
-
-    move-result v0
-
-    iget v2, p0, Ljqf;->d:I
-
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
-
-    move-result v0
-
-    iget v2, p0, Ljqf;->e:I
-
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
-
-    move-result v0
-
-    iget v2, p0, Ljqf;->f:I
-
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
-
-    move-result v0
-
-    iget v1, p0, Ljqf;->g:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
 
     move-result v1
 
-    add-int/2addr v1, v0
+    if-nez v1, :cond_2
 
-    return v1
+    iget-object v1, p0, Ljqf;->d:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lee2;
+
+    invoke-virtual {v1}, Lee2;->t()V
+
+    goto :goto_1
+
+    :cond_2
+    monitor-exit v0
+
+    return-void
+
+    :goto_2
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final g()Z
+    .locals 8
 
-    const-string v0, ", contrastStatic="
+    iget-object v0, p0, Ljqf;->b:Ljava/lang/Object;
 
-    const-string v1, ", negative="
+    monitor-enter v0
 
-    const-string v2, "StatesTextDisabledColors(contrast="
+    :goto_0
+    :try_start_0
+    iget-boolean v1, p0, Ljqf;->l:Z
 
-    iget v3, p0, Ljqf;->a:I
+    const/4 v2, 0x1
 
-    iget v4, p0, Ljqf;->b:I
+    const/4 v3, 0x0
 
-    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Ljqf;->c:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget v1, p0, Ljqf;->h:I
+
+    if-lez v1, :cond_0
+
+    move v1, v2
+
+    goto :goto_1
+
+    :cond_0
+    move v1, v3
+
+    :goto_1
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Ljqf;->b:Ljava/lang/Object;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->wait()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto/16 :goto_7
+
+    :cond_1
+    iget-boolean v1, p0, Ljqf;->l:Z
+
+    if-eqz v1, :cond_2
+
+    monitor-exit v0
+
+    return v3
+
+    :cond_2
+    iget-object v1, p0, Ljqf;->c:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lfn4;
+
+    iget-object v4, p0, Ljqf;->f:[Lee2;
+
+    iget v5, p0, Ljqf;->h:I
+
+    sub-int/2addr v5, v2
+
+    iput v5, p0, Ljqf;->h:I
+
+    aget-object v4, v4, v5
+
+    iget-boolean v5, p0, Ljqf;->k:Z
+
+    iput-boolean v3, p0, Ljqf;->k:Z
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const/4 v0, 0x4
+
+    invoke-virtual {v1, v0}, Lu20;->i(I)Z
+
+    move-result v6
+
+    const/high16 v7, -0x80000000
+
+    if-eqz v6, :cond_3
+
+    invoke-virtual {v4, v0}, Lu20;->a(I)V
+
+    goto :goto_4
+
+    :cond_3
+    invoke-virtual {v1, v7}, Lu20;->i(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {v4, v7}, Lu20;->a(I)V
+
+    :cond_4
+    :try_start_1
+    invoke-virtual {p0, v1, v4, v5}, Ljqf;->f(Lfn4;Lee2;Z)Lcom/google/android/exoplayer2/text/SubtitleDecoderException;
+
+    move-result-object v0
+    :try_end_1
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_3
+
+    :catch_0
+    move-exception v0
+
+    new-instance v5, Lcom/google/android/exoplayer2/text/SubtitleDecoderException;
+
+    const-string v6, "Unexpected decode error"
+
+    invoke-direct {v5, v6, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_2
+    move-object v0, v5
+
+    goto :goto_3
+
+    :catch_1
+    move-exception v0
+
+    new-instance v5, Lcom/google/android/exoplayer2/text/SubtitleDecoderException;
+
+    const-string v6, "Unexpected decode error"
+
+    invoke-direct {v5, v6, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_2
+
+    :goto_3
+    if-eqz v0, :cond_5
+
+    iget-object v5, p0, Ljqf;->b:Ljava/lang/Object;
+
+    monitor-enter v5
+
+    :try_start_2
+    iput-object v0, p0, Ljqf;->j:Lcom/google/android/exoplayer2/text/SubtitleDecoderException;
+
+    monitor-exit v5
+
+    return v3
+
+    :catchall_1
+    move-exception v0
+
+    monitor-exit v5
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    throw v0
+
+    :cond_5
+    :goto_4
+    iget-object v3, p0, Ljqf;->b:Ljava/lang/Object;
+
+    monitor-enter v3
+
+    :try_start_3
+    iget-boolean v0, p0, Ljqf;->k:Z
+
+    if-eqz v0, :cond_6
+
+    invoke-virtual {v4}, Lee2;->t()V
+
+    goto :goto_5
+
+    :catchall_2
+    move-exception v0
+
+    goto :goto_6
+
+    :cond_6
+    invoke-virtual {v4, v7}, Lu20;->i(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    invoke-virtual {v4}, Lee2;->t()V
+
+    goto :goto_5
+
+    :cond_7
+    iget-object v0, p0, Ljqf;->d:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v0, v4}, Ljava/util/ArrayDeque;->addLast(Ljava/lang/Object;)V
+
+    :goto_5
+    invoke-virtual {v1}, Lfn4;->t()V
+
+    iget-object v0, p0, Ljqf;->e:[Lfn4;
+
+    iget v4, p0, Ljqf;->g:I
+
+    add-int/lit8 v5, v4, 0x1
+
+    iput v5, p0, Ljqf;->g:I
+
+    aput-object v1, v0, v4
+
+    monitor-exit v3
+
+    return v2
+
+    :goto_6
+    monitor-exit v3
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+
+    throw v0
+
+    :goto_7
+    :try_start_4
+    monitor-exit v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    throw v1
+.end method
+
+.method public final release()V
+    .locals 2
+
+    iget-object v0, p0, Ljqf;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    const/4 v1, 0x1
+
+    :try_start_0
+    iput-boolean v1, p0, Ljqf;->l:Z
+
+    iget-object v1, p0, Ljqf;->b:Ljava/lang/Object;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->notify()V
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    iget-object v0, p0, Ljqf;->a:Lrpf;
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->join()V
+    :try_end_1
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
+
+    return-void
+
+    :catch_0
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
-    const-string v1, ", neutralThemed="
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
-    const-string v2, ", primary="
+    return-void
 
-    iget v3, p0, Ljqf;->c:I
+    :catchall_0
+    move-exception v1
 
-    iget v4, p0, Ljqf;->d:I
+    :try_start_2
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    invoke-static {v0, v3, v1, v4, v2}, Lxi4;->q(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", primaryStatic="
-
-    const-string v2, ", themed="
-
-    iget v3, p0, Ljqf;->e:I
-
-    iget v4, p0, Ljqf;->f:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lxi4;->q(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ")"
-
-    iget v2, p0, Ljqf;->g:I
-
-    invoke-static {v0, v2, v1}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    throw v1
 .end method

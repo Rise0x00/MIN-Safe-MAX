@@ -4,120 +4,122 @@
 
 
 # instance fields
-.field public a:J
+.field public final a:Landroid/net/Uri;
 
-.field public b:Ljava/lang/String;
+.field public final b:Z
 
-.field public c:Ljava/lang/String;
 
-.field public d:Ljava/lang/String;
+# direct methods
+.method public constructor <init>(Landroid/net/Uri;Z)V
+    .locals 0
 
-.field public e:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public f:Ljava/util/List;
+    iput-object p1, p0, Lnz3;->a:Landroid/net/Uri;
 
-.field public g:J
+    iput-boolean p2, p0, Lnz3;->b:Z
 
-.field public h:J
-
-.field public i:Ltz3;
-
-.field public j:I
-
-.field public k:Luz3;
-
-.field public l:I
-
-.field public m:I
-
-.field public n:Ljava/util/List;
-
-.field public o:Ljava/lang/String;
-
-.field public p:Ljava/lang/String;
-
-.field public q:Ljava/lang/String;
-
-.field public r:J
-
-.field public s:J
-
-.field public t:J
-
-.field public u:Lqz3;
-
-.field public v:[I
-
-.field public w:Lsz3;
-
-.field public x:Ljava/lang/String;
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Lvz3;
+.method public final a()Landroid/net/Uri;
     .locals 1
 
-    iget-object v0, p0, Lnz3;->k:Luz3;
+    iget-object v0, p0, Lnz3;->a:Landroid/net/Uri;
 
-    if-nez v0, :cond_0
+    return-object v0
+.end method
 
-    sget-object v0, Luz3;->b:Luz3;
+.method public final b()Z
+    .locals 1
 
-    iput-object v0, p0, Lnz3;->k:Luz3;
+    iget-boolean v0, p0, Lnz3;->b:Z
 
-    :cond_0
-    iget v0, p0, Lnz3;->l:I
+    return v0
+.end method
 
-    if-nez v0, :cond_1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
     const/4 v0, 0x1
 
-    iput v0, p0, Lnz3;->l:I
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lnz3;->n:Ljava/util/List;
+    const/4 v1, 0x0
 
-    if-nez v0, :cond_2
+    :goto_0
+    const-class v2, Lnz3;
 
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iput-object v0, p0, Lnz3;->n:Ljava/util/List;
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_2
+
+    return v2
 
     :cond_2
-    iget-object v0, p0, Lnz3;->f:Ljava/util/List;
+    check-cast p1, Lnz3;
 
-    if-eqz v0, :cond_3
+    iget-object v1, p0, Lnz3;->a:Landroid/net/Uri;
 
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+    iget-object v3, p1, Lnz3;->a:Landroid/net/Uri;
+
+    invoke-static {v1, v3}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Lnz3;->b:Z
+
+    iget-boolean p1, p1, Lnz3;->b:Z
+
+    if-eq v1, p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lnz3;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    mul-int/lit8 v0, v0, 0x1f
 
-    :cond_3
-    sget-object v0, Lpz3;->e:Lpz3;
+    iget-boolean v1, p0, Lnz3;->b:Z
 
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    move-result-object v0
+    move-result v1
 
-    iput-object v0, p0, Lnz3;->f:Ljava/util/List;
+    add-int/2addr v1, v0
 
-    :cond_4
-    iget-object v0, p0, Lnz3;->v:[I
-
-    if-nez v0, :cond_5
-
-    const/4 v0, 0x0
-
-    new-array v0, v0, [I
-
-    iput-object v0, p0, Lnz3;->v:[I
-
-    :cond_5
-    new-instance v0, Lvz3;
-
-    invoke-direct {v0, p0}, Lvz3;-><init>(Lnz3;)V
-
-    return-object v0
+    return v1
 .end method

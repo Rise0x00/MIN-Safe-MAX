@@ -1,37 +1,46 @@
-.class public abstract Ld6e;
-.super Ljava/lang/Object;
+.class public final Ld6e;
+.super Lmy4;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# virtual methods
+.method public final h(ILjava/lang/Object;)V
+    .locals 2
 
-.field public static final b:I
+    check-cast p2, Lpk5;
 
-.field public static final c:I
+    const/4 v0, 0x0
 
-.field public static final d:I
+    :try_start_0
+    invoke-static {p2}, Lpk5;->F0(Lpk5;)Z
 
+    move-result v1
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+    if-eqz v1, :cond_0
 
-    sget v0, Lr5d;->gray_66:I
+    if-eqz p2, :cond_0
 
-    sput v0, Ld6e;->a:I
+    iget-object p2, p2, Lpk5;->a:Lug3;
 
-    sget v0, Lr5d;->range_seek_bar_border_shadow_color:I
+    invoke-static {p2}, Lug3;->J(Lug3;)Lug3;
 
-    sput v0, Ld6e;->b:I
+    move-result-object v0
 
-    sget v0, Lr5d;->white:I
+    :cond_0
+    iget-object p2, p0, Lmy4;->b:Lxn0;
 
-    sput v0, Ld6e;->c:I
+    invoke-virtual {p2, p1, v0}, Lxn0;->g(ILjava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sget v0, Lr5d;->white_50:I
-
-    sput v0, Ld6e;->d:I
+    invoke-static {v0}, Lug3;->g0(Lug3;)V
 
     return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {v0}, Lug3;->g0(Lug3;)V
+
+    throw p1
 .end method

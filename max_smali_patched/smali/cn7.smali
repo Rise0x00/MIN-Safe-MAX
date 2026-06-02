@@ -1,213 +1,37 @@
 .class public final Lcn7;
-.super Ljava/lang/Object;
+.super Lb2;
 .source "SourceFile"
-
-# interfaces
-.implements Like;
 
 
 # instance fields
-.field public final a:Ls95;
-
-.field public final b:Ls95;
-
-.field public c:J
+.field public final d:Len7;
 
 
 # direct methods
-.method public constructor <init>(J[J[J)V
-    .locals 6
+.method public constructor <init>(Len7;I)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
 
-    array-length v0, p3
+    move-result v0
 
-    array-length v1, p4
+    invoke-direct {p0, v0, p2}, Lb2;-><init>(II)V
 
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    move v0, v3
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v2
-
-    :goto_0
-    invoke-static {v0}, Lh6j;->b(Z)V
-
-    array-length v0, p4
-
-    if-lez v0, :cond_1
-
-    aget-wide v1, p4, v2
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v1, v1, v4
-
-    if-lez v1, :cond_1
-
-    new-instance v1, Ls95;
-
-    add-int/2addr v0, v3
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v0, v2}, Ls95;-><init>(II)V
-
-    iput-object v1, p0, Lcn7;->a:Ls95;
-
-    new-instance v2, Ls95;
-
-    const/4 v3, 0x2
-
-    invoke-direct {v2, v0, v3}, Ls95;-><init>(II)V
-
-    iput-object v2, p0, Lcn7;->b:Ls95;
-
-    invoke-virtual {v1, v4, v5}, Ls95;->a(J)V
-
-    invoke-virtual {v2, v4, v5}, Ls95;->a(J)V
-
-    goto :goto_1
-
-    :cond_1
-    new-instance v1, Ls95;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v0, v2}, Ls95;-><init>(II)V
-
-    iput-object v1, p0, Lcn7;->a:Ls95;
-
-    new-instance v1, Ls95;
-
-    invoke-direct {v1, v0, v2}, Ls95;-><init>(II)V
-
-    iput-object v1, p0, Lcn7;->b:Ls95;
-
-    :goto_1
-    iget-object v0, p0, Lcn7;->a:Ls95;
-
-    invoke-virtual {v0, p3}, Ls95;->b([J)V
-
-    iget-object p3, p0, Lcn7;->b:Ls95;
-
-    invoke-virtual {p3, p4}, Ls95;->b([J)V
-
-    iput-wide p1, p0, Lcn7;->c:J
+    iput-object p1, p0, Lcn7;->d:Len7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Z
+.method public final a(I)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lcn7;->b:Ls95;
+    iget-object v0, p0, Lcn7;->d:Len7;
 
-    iget v0, v0, Ls95;->b:I
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final e(J)Lgke;
-    .locals 8
-
-    iget-object v0, p0, Lcn7;->b:Ls95;
-
-    iget v1, v0, Ls95;->b:I
-
-    if-nez v1, :cond_0
-
-    new-instance p1, Lgke;
-
-    sget-object p2, Lmke;->c:Lmke;
-
-    invoke-direct {p1, p2, p2}, Lgke;-><init>(Lmke;Lmke;)V
+    move-result-object p1
 
     return-object p1
-
-    :cond_0
-    invoke-static {v0, p1, p2}, Lmbh;->b(Ls95;J)I
-
-    move-result v1
-
-    new-instance v2, Lmke;
-
-    invoke-virtual {v0, v1}, Ls95;->c(I)J
-
-    move-result-wide v3
-
-    iget-object v5, p0, Lcn7;->a:Ls95;
-
-    invoke-virtual {v5, v1}, Ls95;->c(I)J
-
-    move-result-wide v6
-
-    invoke-direct {v2, v3, v4, v6, v7}, Lmke;-><init>(JJ)V
-
-    cmp-long p1, v3, p1
-
-    if-eqz p1, :cond_2
-
-    iget p1, v0, Ls95;->b:I
-
-    add-int/lit8 p1, p1, -0x1
-
-    if-ne v1, p1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    new-instance p1, Lmke;
-
-    add-int/lit8 v1, v1, 0x1
-
-    invoke-virtual {v0, v1}, Ls95;->c(I)J
-
-    move-result-wide v3
-
-    invoke-virtual {v5, v1}, Ls95;->c(I)J
-
-    move-result-wide v0
-
-    invoke-direct {p1, v3, v4, v0, v1}, Lmke;-><init>(JJ)V
-
-    new-instance p2, Lgke;
-
-    invoke-direct {p2, v2, p1}, Lgke;-><init>(Lmke;Lmke;)V
-
-    return-object p2
-
-    :cond_2
-    :goto_0
-    new-instance p1, Lgke;
-
-    invoke-direct {p1, v2, v2}, Lgke;-><init>(Lmke;Lmke;)V
-
-    return-object p1
-.end method
-
-.method public final f()J
-    .locals 2
-
-    iget-wide v0, p0, Lcn7;->c:J
-
-    return-wide v0
 .end method

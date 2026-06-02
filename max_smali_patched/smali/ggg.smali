@@ -1,266 +1,556 @@
 .class public final Lggg;
-.super Lu4;
+.super Ligg;
 .source "SourceFile"
 
 
 # instance fields
-.field public final d:Lcom/google/android/material/textfield/TextInputLayout;
+.field public X:[D
+
+.field public Y:[Ljava/lang/String;
+
+.field public Z:[[B
+
+.field public d:[I
+
+.field public o:[J
+
+.field public z0:Landroid/database/Cursor;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/textfield/TextInputLayout;)V
+.method public constructor <init>(Lyfg;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Lu4;-><init>()V
+    invoke-direct {p0, p1, p2}, Ligg;-><init>(Lyfg;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lggg;->d:Lcom/google/android/material/textfield/TextInputLayout;
+    const/4 p1, 0x0
+
+    new-array p2, p1, [I
+
+    iput-object p2, p0, Lggg;->d:[I
+
+    new-array p2, p1, [J
+
+    iput-object p2, p0, Lggg;->o:[J
+
+    new-array p2, p1, [D
+
+    iput-object p2, p0, Lggg;->X:[D
+
+    new-array p2, p1, [Ljava/lang/String;
+
+    iput-object p2, p0, Lggg;->Y:[Ljava/lang/String;
+
+    new-array p1, p1, [[B
+
+    iput-object p1, p0, Lggg;->Z:[[B
 
     return-void
+.end method
+
+.method public static g0(Landroid/database/Cursor;I)V
+    .locals 0
+
+    if-ltz p1, :cond_0
+
+    invoke-interface {p0}, Landroid/database/Cursor;->getColumnCount()I
+
+    move-result p0
+
+    if-ge p1, p0, :cond_0
+
+    return-void
+
+    :cond_0
+    const/16 p0, 0x19
+
+    const-string p1, "column index out of range"
+
+    invoke-static {p0, p1}, Lvfa;->O(ILjava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    throw p0
 .end method
 
 
 # virtual methods
-.method public final d(Landroid/view/View;Lg5;)V
-    .locals 17
+.method public final G(II)V
+    .locals 3
 
-    move-object/from16 v0, p0
+    const/4 v0, 0x1
 
-    move-object/from16 v1, p2
+    add-int/2addr p2, v0
 
-    iget-object v2, v1, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
+    iget-object v1, p0, Lggg;->d:[I
 
-    iget-object v3, v0, Lu4;->a:Landroid/view/View$AccessibilityDelegate;
+    array-length v2, v1
 
-    move-object/from16 v4, p1
+    if-ge v2, p2, :cond_0
 
-    invoke-virtual {v3, v4, v2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    invoke-static {v1, p2}, Ljava/util/Arrays;->copyOf([II)[I
 
-    iget-object v3, v0, Lggg;->d:Lcom/google/android/material/textfield/TextInputLayout;
+    move-result-object v1
 
-    invoke-virtual {v3}, Lcom/google/android/material/textfield/TextInputLayout;->getEditText()Landroid/widget/EditText;
+    iput-object v1, p0, Lggg;->d:[I
 
-    move-result-object v4
+    :cond_0
+    if-eq p1, v0, :cond_4
 
-    if-eqz v4, :cond_0
+    const/4 v0, 0x2
 
-    invoke-virtual {v4}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    if-eq p1, v0, :cond_3
 
-    move-result-object v4
+    const/4 v0, 0x3
+
+    if-eq p1, v0, :cond_2
+
+    const/4 v0, 0x4
+
+    if-eq p1, v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    const/4 v4, 0x0
-
-    :goto_0
-    invoke-virtual {v3}, Lcom/google/android/material/textfield/TextInputLayout;->getHint()Ljava/lang/CharSequence;
-
-    move-result-object v5
-
-    invoke-virtual {v3}, Lcom/google/android/material/textfield/TextInputLayout;->getError()Ljava/lang/CharSequence;
-
-    move-result-object v6
-
-    invoke-virtual {v3}, Lcom/google/android/material/textfield/TextInputLayout;->getPlaceholderText()Ljava/lang/CharSequence;
-
-    move-result-object v7
-
-    invoke-virtual {v3}, Lcom/google/android/material/textfield/TextInputLayout;->getCounterMaxLength()I
-
-    move-result v8
-
-    invoke-virtual {v3}, Lcom/google/android/material/textfield/TextInputLayout;->getCounterOverflowDescription()Ljava/lang/CharSequence;
-
-    move-result-object v9
-
-    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v10
-
-    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v11
-
-    iget-boolean v12, v3, Lcom/google/android/material/textfield/TextInputLayout;->F1:Z
-
-    invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_2
-
-    invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v14
-
-    if-nez v14, :cond_1
-
-    goto :goto_1
-
     :cond_1
-    const/4 v14, 0x0
+    iget-object p1, p0, Lggg;->Z:[[B
 
-    goto :goto_2
+    array-length v0, p1
+
+    if-ge v0, p2, :cond_5
+
+    invoke-static {p1, p2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [[B
+
+    iput-object p1, p0, Lggg;->Z:[[B
+
+    return-void
 
     :cond_2
-    :goto_1
-    const/4 v14, 0x1
+    iget-object p1, p0, Lggg;->Y:[Ljava/lang/String;
 
-    :goto_2
-    if-nez v11, :cond_3
+    array-length v0, p1
 
-    invoke-interface {v5}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    if-ge v0, p2, :cond_5
 
-    move-result-object v5
+    invoke-static {p1, p2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    goto :goto_3
+    move-result-object p1
+
+    check-cast p1, [Ljava/lang/String;
+
+    iput-object p1, p0, Lggg;->Y:[Ljava/lang/String;
+
+    return-void
 
     :cond_3
-    const-string v5, ""
+    iget-object p1, p0, Lggg;->X:[D
 
-    :goto_3
-    iget-object v11, v3, Lcom/google/android/material/textfield/TextInputLayout;->b:Ldnf;
+    array-length v0, p1
 
-    iget-object v15, v11, Ldnf;->b:Landroidx/appcompat/widget/AppCompatTextView;
+    if-ge v0, p2, :cond_5
 
-    invoke-virtual {v15}, Landroid/view/View;->getVisibility()I
+    invoke-static {p1, p2}, Ljava/util/Arrays;->copyOf([DI)[D
 
-    move-result v16
+    move-result-object p1
 
-    if-nez v16, :cond_4
+    iput-object p1, p0, Lggg;->X:[D
 
-    invoke-virtual {v2, v15}, Landroid/view/accessibility/AccessibilityNodeInfo;->setLabelFor(Landroid/view/View;)V
-
-    invoke-virtual {v2, v15}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTraversalAfter(Landroid/view/View;)V
-
-    goto :goto_4
+    return-void
 
     :cond_4
-    iget-object v11, v11, Ldnf;->d:Lcom/google/android/material/internal/CheckableImageButton;
+    iget-object p1, p0, Lggg;->o:[J
 
-    invoke-virtual {v2, v11}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTraversalAfter(Landroid/view/View;)V
+    array-length v0, p1
 
-    :goto_4
-    if-nez v10, :cond_5
+    if-ge v0, p2, :cond_5
 
-    invoke-virtual {v2, v4}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
+    invoke-static {p1, p2}, Ljava/util/Arrays;->copyOf([JI)[J
 
-    goto :goto_5
+    move-result-object p1
+
+    iput-object p1, p0, Lggg;->o:[J
 
     :cond_5
-    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    :goto_0
+    return-void
+.end method
 
-    move-result v11
+.method public final I(ILjava/lang/String;)V
+    .locals 2
 
-    if-nez v11, :cond_6
+    invoke-virtual {p0}, Ligg;->l()V
 
-    invoke-virtual {v2, v5}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
+    const/4 v0, 0x3
 
-    if-nez v12, :cond_7
+    invoke-virtual {p0, v0, p1}, Lggg;->G(II)V
 
-    if-eqz v7, :cond_7
+    iget-object v1, p0, Lggg;->d:[I
 
-    new-instance v11, Ljava/lang/StringBuilder;
+    aput v0, v1, p1
 
-    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v0, p0, Lggg;->Y:[Ljava/lang/String;
 
-    invoke-virtual {v11, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v12, ", "
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v11, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v2, v7}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
-
-    goto :goto_5
-
-    :cond_6
-    if-eqz v7, :cond_7
-
-    invoke-virtual {v2, v7}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
-
-    :cond_7
-    :goto_5
-    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_8
-
-    invoke-virtual {v2, v5}, Landroid/view/accessibility/AccessibilityNodeInfo;->setHintText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v2, v10}, Landroid/view/accessibility/AccessibilityNodeInfo;->setShowingHintText(Z)V
-
-    :cond_8
-    if-eqz v4, :cond_9
-
-    invoke-interface {v4}, Ljava/lang/CharSequence;->length()I
-
-    move-result v4
-
-    if-ne v4, v8, :cond_9
-
-    goto :goto_6
-
-    :cond_9
-    const/4 v8, -0x1
-
-    :goto_6
-    invoke-virtual {v2, v8}, Landroid/view/accessibility/AccessibilityNodeInfo;->setMaxTextLength(I)V
-
-    if-eqz v14, :cond_b
-
-    if-nez v13, :cond_a
-
-    goto :goto_7
-
-    :cond_a
-    move-object v6, v9
-
-    :goto_7
-    invoke-virtual {v2, v6}, Landroid/view/accessibility/AccessibilityNodeInfo;->setError(Ljava/lang/CharSequence;)V
-
-    :cond_b
-    iget-object v4, v3, Lcom/google/android/material/textfield/TextInputLayout;->x0:Ljn7;
-
-    iget-object v4, v4, Ljn7;->y:Landroidx/appcompat/widget/AppCompatTextView;
-
-    if-eqz v4, :cond_c
-
-    invoke-virtual {v2, v4}, Landroid/view/accessibility/AccessibilityNodeInfo;->setLabelFor(Landroid/view/View;)V
-
-    :cond_c
-    iget-object v2, v3, Lcom/google/android/material/textfield/TextInputLayout;->c:Lmj5;
-
-    invoke-virtual {v2}, Lmj5;->b()Lnj5;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Lnj5;->n(Lg5;)V
+    aput-object p2, v0, p1
 
     return-void
 .end method
 
-.method public final e(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
-    .locals 0
+.method public final J()V
+    .locals 2
 
-    invoke-super {p0, p1, p2}, Lu4;->e(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    iget-object v0, p0, Lggg;->z0:Landroid/database/Cursor;
 
-    iget-object p1, p0, Lggg;->d:Lcom/google/android/material/textfield/TextInputLayout;
+    if-nez v0, :cond_0
 
-    iget-object p1, p1, Lcom/google/android/material/textfield/TextInputLayout;->c:Lmj5;
+    new-instance v0, Lb90;
 
-    invoke-virtual {p1}, Lmj5;->b()Lnj5;
+    invoke-direct {v0, p0}, Lb90;-><init>(Ljava/lang/Object;)V
+
+    iget-object v1, p0, Ligg;->a:Lyfg;
+
+    invoke-interface {v1, v0}, Lyfg;->w(Ldgg;)Landroid/database/Cursor;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lggg;->z0:Landroid/database/Cursor;
+
+    :cond_0
+    return-void
+.end method
+
+.method public final a(ID)V
+    .locals 2
+
+    invoke-virtual {p0}, Ligg;->l()V
+
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0, p1}, Lggg;->G(II)V
+
+    iget-object v1, p0, Lggg;->d:[I
+
+    aput v0, v1, p1
+
+    iget-object v0, p0, Lggg;->X:[D
+
+    aput-wide p2, v0, p1
+
+    return-void
+.end method
+
+.method public final b(IJ)V
+    .locals 2
+
+    invoke-virtual {p0}, Ligg;->l()V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0, p1}, Lggg;->G(II)V
+
+    iget-object v1, p0, Lggg;->d:[I
+
+    aput v0, v1, p1
+
+    iget-object v0, p0, Lggg;->o:[J
+
+    aput-wide p2, v0, p1
+
+    return-void
+.end method
+
+.method public final c(I[B)V
+    .locals 2
+
+    invoke-virtual {p0}, Ligg;->l()V
+
+    const/4 v0, 0x4
+
+    invoke-virtual {p0, v0, p1}, Lggg;->G(II)V
+
+    iget-object v1, p0, Lggg;->d:[I
+
+    aput v0, v1, p1
+
+    iget-object v0, p0, Lggg;->Z:[[B
+
+    aput-object p2, v0, p1
+
+    return-void
+.end method
+
+.method public final close()V
+    .locals 1
+
+    iget-boolean v0, p0, Ligg;->c:Z
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lggg;->s()V
+
+    invoke-virtual {p0}, Lggg;->reset()V
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ligg;->c:Z
+
+    return-void
+.end method
+
+.method public final e(I)V
+    .locals 2
+
+    invoke-virtual {p0}, Ligg;->l()V
+
+    const/4 v0, 0x5
+
+    invoke-virtual {p0, v0, p1}, Lggg;->G(II)V
+
+    iget-object v1, p0, Lggg;->d:[I
+
+    aput v0, v1, p1
+
+    return-void
+.end method
+
+.method public final f0(I)Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0}, Ligg;->l()V
+
+    invoke-virtual {p0}, Lggg;->h0()Landroid/database/Cursor;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lggg;->g0(Landroid/database/Cursor;I)V
+
+    invoke-interface {v0, p1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lnj5;->o(Landroid/view/accessibility/AccessibilityEvent;)V
+    return-object p1
+.end method
+
+.method public final getBlob(I)[B
+    .locals 1
+
+    invoke-virtual {p0}, Ligg;->l()V
+
+    invoke-virtual {p0}, Lggg;->h0()Landroid/database/Cursor;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lggg;->g0(Landroid/database/Cursor;I)V
+
+    invoke-interface {v0, p1}, Landroid/database/Cursor;->getBlob(I)[B
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final getColumnCount()I
+    .locals 1
+
+    invoke-virtual {p0}, Ligg;->l()V
+
+    invoke-virtual {p0}, Lggg;->J()V
+
+    iget-object v0, p0, Lggg;->z0:Landroid/database/Cursor;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Landroid/database/Cursor;->getColumnCount()I
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final getColumnName(I)Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0}, Ligg;->l()V
+
+    invoke-virtual {p0}, Lggg;->J()V
+
+    iget-object v0, p0, Lggg;->z0:Landroid/database/Cursor;
+
+    if-eqz v0, :cond_0
+
+    invoke-static {v0, p1}, Lggg;->g0(Landroid/database/Cursor;I)V
+
+    invoke-interface {v0, p1}, Landroid/database/Cursor;->getColumnName(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Required value was null."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final getDouble(I)D
+    .locals 2
+
+    invoke-virtual {p0}, Ligg;->l()V
+
+    invoke-virtual {p0}, Lggg;->h0()Landroid/database/Cursor;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lggg;->g0(Landroid/database/Cursor;I)V
+
+    invoke-interface {v0, p1}, Landroid/database/Cursor;->getDouble(I)D
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final getLong(I)J
+    .locals 2
+
+    invoke-virtual {p0}, Ligg;->l()V
+
+    invoke-virtual {p0}, Lggg;->h0()Landroid/database/Cursor;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lggg;->g0(Landroid/database/Cursor;I)V
+
+    invoke-interface {v0, p1}, Landroid/database/Cursor;->getLong(I)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final h0()Landroid/database/Cursor;
+    .locals 2
+
+    iget-object v0, p0, Lggg;->z0:Landroid/database/Cursor;
+
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    const/16 v0, 0x15
+
+    const-string v1, "no row"
+
+    invoke-static {v0, v1}, Lvfa;->O(ILjava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    throw v0
+.end method
+
+.method public final isNull(I)Z
+    .locals 1
+
+    invoke-virtual {p0}, Ligg;->l()V
+
+    invoke-virtual {p0}, Lggg;->h0()Landroid/database/Cursor;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lggg;->g0(Landroid/database/Cursor;I)V
+
+    invoke-interface {v0, p1}, Landroid/database/Cursor;->isNull(I)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final reset()V
+    .locals 1
+
+    invoke-virtual {p0}, Ligg;->l()V
+
+    iget-object v0, p0, Lggg;->z0:Landroid/database/Cursor;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    :cond_0
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lggg;->z0:Landroid/database/Cursor;
 
     return-void
+.end method
+
+.method public final s()V
+    .locals 2
+
+    invoke-virtual {p0}, Ligg;->l()V
+
+    const/4 v0, 0x0
+
+    new-array v1, v0, [I
+
+    iput-object v1, p0, Lggg;->d:[I
+
+    new-array v1, v0, [J
+
+    iput-object v1, p0, Lggg;->o:[J
+
+    new-array v1, v0, [D
+
+    iput-object v1, p0, Lggg;->X:[D
+
+    new-array v1, v0, [Ljava/lang/String;
+
+    iput-object v1, p0, Lggg;->Y:[Ljava/lang/String;
+
+    new-array v0, v0, [[B
+
+    iput-object v0, p0, Lggg;->Z:[[B
+
+    return-void
+.end method
+
+.method public final y0()Z
+    .locals 2
+
+    invoke-virtual {p0}, Ligg;->l()V
+
+    invoke-virtual {p0}, Lggg;->J()V
+
+    iget-object v0, p0, Lggg;->z0:Landroid/database/Cursor;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Required value was null."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

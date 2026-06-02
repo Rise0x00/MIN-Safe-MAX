@@ -1,97 +1,86 @@
 .class public final Lgvf;
-.super Ljava/lang/Object;
+.super Lkvf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lo58;
-
-.field public final b:Lo58;
-
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public final d:Lspf;
-
-.field public final e:Lpld;
-
-.field public final f:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public g:Lmmf;
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Lo58;Lo58;Lrrf;Lmbg;)V
-    .locals 2
+.method public constructor <init>(J)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x3
 
-    iput-object p1, p0, Lgvf;->a:Lo58;
+    invoke-direct {p0, p1, p2, v0}, Lkvf;-><init>(JI)V
 
-    iput-object p2, p0, Lgvf;->b:Lo58;
+    iput-wide p1, p0, Lgvf;->c:J
 
-    check-cast p4, Lj9b;
+    return-void
+.end method
 
-    invoke-virtual {p4}, Lj9b;->b()Lsb4;
 
-    move-result-object p1
-
-    invoke-static {p1}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lgvf;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    sget-object p2, Ldh5;->a:Ldh5;
-
-    invoke-static {p2}, Ltpf;->a(Ljava/lang/Object;)Lspf;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lgvf;->d:Lspf;
-
-    new-instance p4, Lpld;
-
-    invoke-direct {p4, p2}, Lpld;-><init>(Lmfa;)V
-
-    iput-object p4, p0, Lgvf;->e:Lpld;
-
-    new-instance p2, Ljava/util/concurrent/atomic/AtomicReference;
-
-    const-wide/16 v0, 0x0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p4
-
-    invoke-direct {p2, p4}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p2, p0, Lgvf;->f:Ljava/util/concurrent/atomic/AtomicReference;
-
-    iget-object p2, p3, Lrrf;->l:Lmn0;
-
-    invoke-static {p2}, Ljnj;->c(Lsza;)Lpw1;
-
-    move-result-object p2
-
-    new-instance p3, Ltub;
-
-    const/16 p4, 0x1a
-
-    invoke-direct {p3, p2, p0, p4}, Ltub;-><init>(Ld76;Ljava/lang/Object;I)V
-
-    new-instance p2, Lcvf;
-
-    const/4 p4, 0x0
-
-    invoke-direct {p2, p0, p4}, Lcvf;-><init>(Lgvf;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p4, Lm96;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
     const/4 v0, 0x1
 
-    invoke-direct {p4, p3, p2, v0}, Lm96;-><init>(Ld76;Lbr6;I)V
+    if-ne p0, p1, :cond_0
 
-    invoke-static {p4, p1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
+    return v0
 
-    return-void
+    :cond_0
+    instance-of v1, p1, Lgvf;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lgvf;
+
+    iget-wide v3, p0, Lgvf;->c:J
+
+    iget-wide v5, p1, Lgvf;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lgvf;->c:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "ChatId(chatId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lgvf;->c:J
+
+    invoke-static {v2, v3, v0, v1}, Lwph;->c(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

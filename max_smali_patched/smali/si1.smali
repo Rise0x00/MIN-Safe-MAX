@@ -2,221 +2,300 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lp94;
+
 
 # instance fields
-.field public final a:Lo58;
-
-.field public final b:Lo58;
-
-.field public final c:Lo58;
-
-.field public final d:Lo58;
-
-.field public final e:Lo58;
-
-.field public final f:Lo58;
+.field public final synthetic a:Lvi1;
 
 
 # direct methods
-.method public constructor <init>(Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;)V
+.method public constructor <init>(Lvi1;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lsi1;->a:Lo58;
-
-    iput-object p2, p0, Lsi1;->b:Lo58;
-
-    iput-object p3, p0, Lsi1;->c:Lo58;
-
-    iput-object p4, p0, Lsi1;->d:Lo58;
-
-    iput-object p5, p0, Lsi1;->e:Lo58;
-
-    iput-object p6, p0, Lsi1;->f:Lo58;
+    iput-object p1, p0, Lsi1;->a:Lvi1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/String;ZZ)Ljava/lang/CharSequence;
-    .locals 1
+.method public final a(Ll94;Ll94;Z)V
+    .locals 12
 
-    if-eqz p3, :cond_0
+    iget-object v0, p0, Lsi1;->a:Lvi1;
 
-    return-object p2
+    iget-object v1, v0, Lvi1;->C0:Lia8;
+
+    iget-object v2, v0, Lvi1;->a:Lo22;
+
+    const/4 v3, 0x0
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v0}, Lvi1;->a()Ltt1;
+
+    move-result-object v4
+
+    instance-of v5, p1, Lpra;
+
+    invoke-virtual {v4, v5, v3}, Ltt1;->c(ZZ)V
 
     :cond_0
-    new-instance p3, Ljava/lang/StringBuilder;
+    const/4 v4, 0x1
 
-    const-string v0, "\u26a0\ufe0f "
+    if-nez p3, :cond_1
 
-    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    instance-of p3, p2, Lpra;
 
-    if-eqz p2, :cond_1
+    if-eqz p3, :cond_1
 
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    instance-of p3, p2, Lone/me/calls/ui/ui/pip/PipScreen;
 
-    const-string p2, " "
+    if-nez p3, :cond_1
 
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez p1, :cond_1
+
+    invoke-virtual {v0}, Lvi1;->a()Ltt1;
+
+    move-result-object p3
+
+    instance-of v5, p1, Lpra;
+
+    invoke-virtual {p3, v5, v4}, Ltt1;->c(ZZ)V
 
     :cond_1
-    iget-object p2, p0, Lsi1;->e:Lo58;
+    instance-of p3, p1, Lone/me/calls/ui/ui/pip/PipScreen;
 
-    invoke-interface {p2}, Lo58;->getValue()Ljava/lang/Object;
+    const/4 v5, 0x0
 
-    move-result-object p2
+    sget-object v6, Lb2g;->b:Lb2g;
 
-    check-cast p2, Landroid/content/Context;
+    if-eqz p3, :cond_3
 
-    sget v0, Ladd;->call_incoming_warning_not_contact:I
+    instance-of v7, p2, Lone/me/calls/ui/ui/pip/PipScreen;
 
-    invoke-virtual {p2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    if-nez v7, :cond_3
 
-    move-result-object p2
+    invoke-interface {v1}, Lia8;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v7
 
-    if-nez p4, :cond_2
+    check-cast v7, Lc2g;
 
-    if-eqz p1, :cond_2
+    move-object v8, v2
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    check-cast v8, Lx22;
 
-    move-result p2
+    invoke-virtual {v8}, Lx22;->n()Lmg4;
 
-    if-lez p2, :cond_2
+    move-result-object v8
 
-    iget-object p2, p0, Lsi1;->b:Lo58;
+    iget-object v8, v8, Lmg4;->c:Ljava/lang/String;
 
-    invoke-interface {p2}, Lo58;->getValue()Ljava/lang/Object;
+    iget-object v9, v7, Lc2g;->a:Lb1g;
 
-    move-result-object p2
+    invoke-virtual {v9}, Lb1g;->getValue()Ljava/lang/Object;
 
-    check-cast p2, Lttd;
+    move-result-object v10
 
-    invoke-static {p2, p1}, Lttd;->a(Lttd;Ljava/lang/String;)Ljava/lang/String;
+    if-eq v10, v6, :cond_2
 
-    move-result-object p1
+    iget-object v7, v7, Lc2g;->c:Lia8;
 
-    const-string p2, " ("
+    invoke-interface {v7}, Lia8;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v7
 
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v7, Lf42;
 
-    const-string p1, ")"
+    const-wide/16 v10, 0x1
 
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v10, v11, v8}, Lf42;->r(JLjava/lang/String;)V
 
     :cond_2
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v9, v5, v6}, Lb1g;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object p1
+    :cond_3
+    instance-of v7, p2, Lone/me/calls/ui/ui/pip/PipScreen;
 
-    iget-object p2, p0, Lsi1;->a:Lo58;
+    if-eqz v7, :cond_5
 
-    invoke-interface {p2}, Lo58;->getValue()Ljava/lang/Object;
+    if-nez p3, :cond_5
 
-    move-result-object p2
+    invoke-interface {v1}, Lia8;->getValue()Ljava/lang/Object;
 
-    check-cast p2, Lof5;
+    move-result-object p3
 
-    invoke-virtual {p2, p1}, Lof5;->d(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    check-cast p3, Lc2g;
 
-    move-result-object p1
+    move-object v1, v2
 
-    return-object p1
-.end method
+    check-cast v1, Lx22;
 
-.method public final b(Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/CharSequence;
-    .locals 3
-
-    iget-object v0, p0, Lsi1;->f:Lo58;
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwx5;
-
-    check-cast v0, Lpy5;
-
-    invoke-virtual {v0}, Lpy5;->o()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lsi1;->c:Lo58;
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lm64;
-
-    iget-object v1, p0, Lsi1;->d:Lo58;
-
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1}, Lx22;->n()Lmg4;
 
     move-result-object v1
 
-    check-cast v1, Lef3;
+    iget-object v1, v1, Lmg4;->c:Ljava/lang/String;
 
-    check-cast v1, Lyfe;
+    iget-object v8, p3, Lc2g;->a:Lb1g;
 
-    invoke-virtual {v1}, Lyfe;->s()J
+    invoke-virtual {v8}, Lb1g;->getValue()Ljava/lang/Object;
 
-    move-result-wide v1
+    move-result-object v9
 
-    invoke-virtual {v0, v1, v2}, Lm64;->d(J)Lpld;
+    if-ne v9, v6, :cond_4
 
-    move-result-object v0
+    iget-object p3, p3, Lc2g;->c:Lia8;
 
-    iget-object v0, v0, Lpld;->a:Llpf;
+    invoke-interface {p3}, Lia8;->getValue()Ljava/lang/Object;
 
-    invoke-interface {v0}, Llpf;->getValue()Ljava/lang/Object;
+    move-result-object p3
 
-    move-result-object v0
+    check-cast p3, Lf42;
 
-    check-cast v0, Ley3;
+    const-wide/16 v9, 0x0
 
-    if-eqz v0, :cond_2
+    invoke-virtual {p3, v9, v10, v1}, Lf42;->r(JLjava/lang/String;)V
 
-    invoke-virtual {v0}, Ley3;->e()Ljava/lang/String;
+    :cond_4
+    sget-object p3, Lb2g;->a:Lb2g;
 
-    move-result-object v0
+    invoke-virtual {v8, v5, p3}, Lb1g;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-nez v0, :cond_1
+    :cond_5
+    if-eqz v7, :cond_6
+
+    if-nez p1, :cond_6
+
+    const-string p1, "PipAppController"
+
+    const-string p2, "pip screen was hidden quietly, skip hide fake pip."
+
+    invoke-static {p1, p2}, Lnm4;->y(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_6
+    instance-of p1, p2, Lpra;
+
+    if-nez p1, :cond_8
+
+    if-nez p2, :cond_7
 
     goto :goto_0
 
-    :cond_1
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    :cond_7
+    return-void
+
+    :cond_8
+    :goto_0
+    check-cast v2, Lx22;
+
+    invoke-virtual {v2}, Lx22;->z()Z
 
     move-result p1
 
-    invoke-virtual {v0, p3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-eqz p1, :cond_9
 
-    move-result v0
-
-    invoke-virtual {p0, p3, p2, p1, v0}, Lsi1;->a(Ljava/lang/String;Ljava/lang/String;ZZ)Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Lvi1;->a()Ltt1;
 
     move-result-object p1
 
-    return-object p1
+    invoke-virtual {p1}, Ltt1;->a()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_9
+
+    move v3, v4
+
+    :cond_9
+    iput-boolean v3, v0, Lvi1;->H0:Z
+
+    return-void
+.end method
+
+.method public final b(Ll94;Ll94;Z)V
+    .locals 5
+
+    instance-of v0, p1, Lpra;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Lsi1;->a:Lvi1;
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {v3}, Lvi1;->d()Lmge;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lmge;->e()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lij3;->u1(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lqge;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Lqge;->a:Ll94;
+
+    if-eqz v0, :cond_0
+
+    instance-of v0, v0, Lpra;
+
+    if-ne v0, v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v0, v2
+
+    :goto_1
+    if-eqz p1, :cond_2
+
+    invoke-virtual {v3}, Lvi1;->a()Ltt1;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v0, v1}, Ltt1;->b(ZZ)V
 
     :cond_2
-    :goto_0
-    const/4 p1, 0x0
+    if-nez p3, :cond_3
 
-    return-object p1
+    instance-of p3, p2, Lpra;
+
+    if-eqz p3, :cond_3
+
+    instance-of p2, p2, Lone/me/calls/ui/ui/pip/PipScreen;
+
+    if-nez p2, :cond_3
+
+    if-nez p1, :cond_3
+
+    invoke-virtual {v3}, Lvi1;->a()Ltt1;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0, v2}, Ltt1;->b(ZZ)V
+
+    :cond_3
+    return-void
 .end method

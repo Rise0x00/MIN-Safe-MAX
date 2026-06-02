@@ -1,155 +1,189 @@
-.class public abstract synthetic Lfmg;
-.super Ljava/lang/Object;
+.class public final Lfmg;
+.super Lu5i;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final a:Ljava/lang/ref/WeakReference;
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+.field public b:I
+
+.field public c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lcom/google/android/material/tabs/TabLayout;)V
+    .locals 1
 
-    invoke-static {}, Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;->values()[Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    new-instance v0, Ljava/lang/ref/WeakReference;
 
-    array-length v0, v0
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    new-array v0, v0, [I
+    iput-object v0, p0, Lfmg;->a:Ljava/lang/ref/WeakReference;
 
-    const/4 v1, 0x1
+    const/4 p1, 0x0
 
-    :try_start_0
-    sget-object v2, Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;->NEED_UNWRAP:Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;
+    iput p1, p0, Lfmg;->c:I
 
-    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+    iput p1, p0, Lfmg;->b:I
 
-    move-result v2
+    return-void
+.end method
 
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    :catch_0
+# virtual methods
+.method public final g(I)V
+    .locals 1
+
+    iget v0, p0, Lfmg;->c:I
+
+    iput v0, p0, Lfmg;->b:I
+
+    iput p1, p0, Lfmg;->c:I
+
+    iget-object p1, p0, Lfmg;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/material/tabs/TabLayout;
+
+    if-eqz p1, :cond_0
+
+    iget v0, p0, Lfmg;->c:I
+
+    iput v0, p1, Lcom/google/android/material/tabs/TabLayout;->l1:I
+
+    :cond_0
+    return-void
+.end method
+
+.method public final h(IFI)V
+    .locals 6
+
+    iget-object p3, p0, Lfmg;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {p3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object p3
+
+    move-object v0, p3
+
+    check-cast v0, Lcom/google/android/material/tabs/TabLayout;
+
+    if-eqz v0, :cond_4
+
+    iget p3, p0, Lfmg;->c:I
+
+    const/4 v1, 0x0
+
     const/4 v2, 0x2
 
-    :try_start_1
-    sget-object v3, Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;->NEED_WRAP:Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;
+    const/4 v3, 0x1
 
-    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
+    if-ne p3, v2, :cond_1
 
-    move-result v3
+    iget v4, p0, Lfmg;->b:I
 
-    aput v2, v0, v3
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    if-ne v4, v3, :cond_0
 
-    :catch_1
-    const/4 v3, 0x3
+    goto :goto_0
 
-    :try_start_2
-    sget-object v4, Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;->NOT_HANDSHAKING:Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;
+    :cond_0
+    move v4, v3
 
-    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
+    move v3, v1
 
-    move-result v4
+    goto :goto_1
 
-    aput v3, v0, v4
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    :cond_1
+    :goto_0
+    move v4, v3
 
-    :catch_2
-    const/4 v4, 0x4
+    :goto_1
+    if-ne p3, v2, :cond_3
 
-    :try_start_3
-    sget-object v5, Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;->FINISHED:Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;
+    iget p3, p0, Lfmg;->b:I
 
-    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
+    if-eqz p3, :cond_2
 
-    move-result v5
+    goto :goto_2
 
-    aput v4, v0, v5
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    :cond_2
+    move v4, v1
 
-    :catch_3
-    :try_start_4
-    sget-object v5, Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;->NEED_TASK:Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;
+    :cond_3
+    :goto_2
+    const/4 v5, 0x0
 
-    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
+    move v1, p1
 
-    move-result v5
+    move v2, p2
 
-    const/4 v6, 0x5
+    invoke-virtual/range {v0 .. v5}, Lcom/google/android/material/tabs/TabLayout;->o(IFZZZ)V
 
-    aput v6, v0, v5
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    :cond_4
+    return-void
+.end method
 
-    :catch_4
-    sput-object v0, Lfmg;->$EnumSwitchMapping$0:[I
+.method public final i(I)V
+    .locals 3
 
-    invoke-static {}, Ljavax/net/ssl/SSLEngineResult$Status;->values()[Ljavax/net/ssl/SSLEngineResult$Status;
+    iget-object v0, p0, Lfmg;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    array-length v0, v0
+    check-cast v0, Lcom/google/android/material/tabs/TabLayout;
 
-    new-array v0, v0, [I
+    if-eqz v0, :cond_2
 
-    :try_start_5
-    sget-object v5, Ljavax/net/ssl/SSLEngineResult$Status;->OK:Ljavax/net/ssl/SSLEngineResult$Status;
-
-    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v5
-
-    aput v1, v0, v5
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    :try_start_6
-    sget-object v1, Ljavax/net/ssl/SSLEngineResult$Status;->CLOSED:Ljavax/net/ssl/SSLEngineResult$Status;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v0}, Lcom/google/android/material/tabs/TabLayout;->getSelectedTabPosition()I
 
     move-result v1
 
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    if-eq v1, p1, :cond_2
 
-    :catch_6
-    :try_start_7
-    sget-object v1, Ljavax/net/ssl/SSLEngineResult$Status;->BUFFER_OVERFLOW:Ljavax/net/ssl/SSLEngineResult$Status;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v0}, Lcom/google/android/material/tabs/TabLayout;->getTabCount()I
 
     move-result v1
 
-    aput v3, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+    if-ge p1, v1, :cond_2
 
-    :catch_7
-    :try_start_8
-    sget-object v1, Ljavax/net/ssl/SSLEngineResult$Status;->BUFFER_UNDERFLOW:Ljavax/net/ssl/SSLEngineResult$Status;
+    iget v1, p0, Lfmg;->c:I
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    if-eqz v1, :cond_1
 
-    move-result v1
+    const/4 v2, 0x2
 
-    aput v4, v0, v1
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+    if-ne v1, v2, :cond_0
 
-    :catch_8
-    sput-object v0, Lfmg;->$EnumSwitchMapping$1:[I
+    iget v1, p0, Lfmg;->b:I
 
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v1, 0x1
+
+    :goto_1
+    invoke-virtual {v0, p1}, Lcom/google/android/material/tabs/TabLayout;->h(I)Lamg;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1, v1}, Lcom/google/android/material/tabs/TabLayout;->n(Lamg;Z)V
+
+    :cond_2
     return-void
 .end method

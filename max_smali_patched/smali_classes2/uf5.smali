@@ -1,242 +1,242 @@
 .class public final Luf5;
-.super Lcsd;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Luig;
 
 
 # instance fields
-.field public final a:F
+.field public final a:Ln99;
 
-.field public final b:Landroid/graphics/Paint;
+.field public final b:Z
+
+.field public final c:Z
+
+.field public final d:J
+
+.field public final e:I
+
+.field public final f:Lig5;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public constructor <init>(Ln99;ZZJILig5;)V
+    .locals 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    if-eqz p2, :cond_1
 
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v1, 0x41000000    # 8.0f
-
-    mul-float/2addr v0, v1
-
-    iput v0, p0, Luf5;->a:F
-
-    new-instance v0, Landroid/graphics/Paint;
-
-    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
-
-    sget-object v1, Lpc3;->t0:Lkme;
-
-    invoke-virtual {v1, p1}, Lkme;->n(Landroid/content/Context;)Lpc3;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lpc3;->j()Lzlb;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lzlb;->a()Ln13;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ln13;->C()Lkl3;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lkl3;->e:Lam3;
-
-    iget-object p1, p1, Lam3;->a:Lyl3;
-
-    iget-object p1, p1, Lyl3;->b:Lzl3;
-
-    iget p1, p1, Lzl3;->b:I
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
-
-    iput-object v0, p0, Luf5;->b:Landroid/graphics/Paint;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final i(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 16
-
-    move-object/from16 v0, p0
-
-    invoke-virtual/range {p2 .. p2}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lwrd;
-
-    move-result-object v1
-
-    instance-of v2, v1, Lke5;
-
-    const/4 v3, 0x0
-
-    if-eqz v2, :cond_0
-
-    check-cast v1, Lke5;
+    if-nez p3, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move-object v1, v3
+    move v2, v1
 
-    :goto_0
-    if-nez v1, :cond_1
-
-    goto :goto_5
+    goto :goto_1
 
     :cond_1
-    const/4 v2, 0x0
-
-    move v4, v2
+    :goto_0
+    move v2, v0
 
     :goto_1
-    invoke-virtual/range {p2 .. p2}, Landroid/view/ViewGroup;->getChildCount()I
+    const-string v3, "Audio and video cannot both be removed"
 
-    move-result v5
+    invoke-static {v3, v2}, Lh43;->n(Ljava/lang/Object;Z)V
 
-    if-ge v4, v5, :cond_2
+    invoke-static {p1}, Luf5;->c(Ln99;)Z
 
-    const/4 v5, 0x1
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v2, p4, v2
+
+    if-eqz v2, :cond_2
+
+    move v2, v0
 
     goto :goto_2
 
     :cond_2
-    move v5, v2
+    move v2, v1
 
     :goto_2
-    if-eqz v5, :cond_7
+    invoke-static {v2}, Lh43;->j(Z)V
 
-    add-int/lit8 v5, v4, 0x1
+    if-nez p2, :cond_3
 
-    move-object/from16 v6, p2
+    iget-object v2, p7, Lig5;->a:Len7;
 
-    invoke-virtual {v6, v4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v2}, Ljava/util/AbstractCollection;->isEmpty()Z
 
-    move-result-object v4
+    move-result v2
 
-    if-eqz v4, :cond_6
-
-    invoke-static {v4}, Landroidx/recyclerview/widget/RecyclerView;->R(Landroid/view/View;)I
-
-    move-result v7
-
-    invoke-virtual {v1, v7}, Lnd8;->D(I)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lud8;
-
-    instance-of v8, v7, Lmf5;
-
-    if-eqz v8, :cond_3
-
-    check-cast v7, Lmf5;
+    if-eqz v2, :cond_3
 
     goto :goto_3
 
     :cond_3
-    move-object v7, v3
+    move v0, v1
 
     :goto_3
-    if-nez v7, :cond_4
-
-    goto :goto_4
+    invoke-static {v0}, Lh43;->j(Z)V
 
     :cond_4
-    iget-boolean v7, v7, Lmf5;->Y:Z
+    iput-object p1, p0, Luf5;->a:Ln99;
 
-    if-nez v7, :cond_5
+    iput-boolean p2, p0, Luf5;->b:Z
 
-    invoke-virtual {v4}, Landroid/view/View;->getLeft()I
+    iput-boolean p3, p0, Luf5;->c:Z
 
-    move-result v7
+    iput-wide p4, p0, Luf5;->d:J
 
-    int-to-float v9, v7
+    iput p6, p0, Luf5;->e:I
 
-    invoke-virtual {v4}, Landroid/view/View;->getTop()I
+    iput-object p7, p0, Luf5;->f:Lig5;
 
-    move-result v7
-
-    int-to-float v10, v7
-
-    invoke-virtual {v4}, Landroid/view/View;->getRight()I
-
-    move-result v7
-
-    int-to-float v11, v7
-
-    invoke-virtual {v4}, Landroid/view/View;->getBottom()I
-
-    move-result v4
-
-    int-to-float v12, v4
-
-    iget v13, v0, Luf5;->a:F
-
-    iget-object v15, v0, Luf5;->b:Landroid/graphics/Paint;
-
-    move v14, v13
-
-    move-object/from16 v8, p1
-
-    invoke-virtual/range {v8 .. v15}, Landroid/graphics/Canvas;->drawRoundRect(FFFFFFLandroid/graphics/Paint;)V
-
-    :cond_5
-    :goto_4
-    move v4, v5
-
-    goto :goto_1
-
-    :cond_6
-    new-instance v1, Ljava/lang/IndexOutOfBoundsException;
-
-    invoke-direct {v1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
-
-    throw v1
-
-    :cond_7
-    :goto_5
     return-void
 .end method
 
-.method public final onThemeChanged(Lzlb;)V
+.method public static c(Ln99;)Z
     .locals 1
 
-    invoke-interface {p1}, Lzlb;->a()Ln13;
+    iget-object p0, p0, Ln99;->a:Ljava/lang/String;
 
-    move-result-object p1
+    const-string v0, "androidx-media3-GapMediaItem"
 
-    invoke-interface {p1}, Ln13;->C()Lkl3;
+    invoke-static {p0, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object p1
+    move-result p0
 
-    iget-object p1, p1, Lkl3;->e:Lam3;
+    return p0
+.end method
 
-    iget-object p1, p1, Lam3;->a:Lyl3;
 
-    iget-object p1, p1, Lyl3;->b:Lzl3;
+# virtual methods
+.method public final a()Ltf5;
+    .locals 3
 
-    iget p1, p1, Lzl3;->b:I
+    new-instance v0, Ltf5;
 
-    iget-object v0, p0, Luf5;->b:Landroid/graphics/Paint;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
+    iget-object v1, p0, Luf5;->a:Ln99;
 
-    return-void
+    iput-object v1, v0, Ltf5;->a:Ln99;
+
+    iget-boolean v1, p0, Luf5;->b:Z
+
+    iput-boolean v1, v0, Ltf5;->b:Z
+
+    iget-boolean v1, p0, Luf5;->c:Z
+
+    iput-boolean v1, v0, Ltf5;->c:Z
+
+    iget-wide v1, p0, Luf5;->d:J
+
+    iput-wide v1, v0, Ltf5;->d:J
+
+    iget v1, p0, Luf5;->e:I
+
+    iput v1, v0, Ltf5;->e:I
+
+    iget-object v1, p0, Luf5;->f:Lig5;
+
+    iput-object v1, v0, Ltf5;->f:Lig5;
+
+    return-object v0
+.end method
+
+.method public final b(J)J
+    .locals 8
+
+    iget-boolean v0, p0, Luf5;->b:Z
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Luf5;->f:Lig5;
+
+    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
+
+    if-eqz v0, :cond_0
+
+    move-wide v5, v3
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v0, v2, Lig5;->a:Len7;
+
+    invoke-virtual {v0, v1}, Len7;->l(I)Lcn7;
+
+    move-result-object v0
+
+    move-wide v5, p1
+
+    :goto_0
+    invoke-virtual {v0}, Lb2;->hasNext()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_1
+
+    invoke-virtual {v0}, Lb2;->next()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lta0;
+
+    invoke-interface {v7, v5, v6}, Lta0;->f(J)J
+
+    move-result-wide v5
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    iget-boolean v0, p0, Luf5;->c:Z
+
+    if-eqz v0, :cond_2
+
+    move-wide p1, v3
+
+    goto :goto_3
+
+    :cond_2
+    iget-object v0, v2, Lig5;->b:Len7;
+
+    invoke-virtual {v0, v1}, Len7;->l(I)Lcn7;
+
+    move-result-object v0
+
+    :goto_2
+    invoke-virtual {v0}, Lb2;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v0}, Lb2;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lhg5;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    goto :goto_2
+
+    :cond_3
+    :goto_3
+    invoke-static {v5, v6, p1, p2}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide p1
+
+    return-wide p1
 .end method

@@ -1,45 +1,41 @@
 .class public final Lrs;
-.super Lg2;
+.super Ldp0;
 .source "SourceFile"
 
 
-# instance fields
-.field public final transient X:I
+# static fields
+.field public static final c:Lrs;
+
+.field public static final d:Lyn4;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 5
 
-    const/16 v0, 0xc
-
-    invoke-static {v0}, Lnm3;->a(I)Lnm3;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Lg2;-><init>(Ljava/util/Map;)V
-
-    const-string v0, "expectedValuesPerKey"
+    new-instance v0, Lrs;
 
     const/4 v1, 0x3
 
-    invoke-static {v1, v0}, Lbjj;->a(ILjava/lang/String;)V
+    invoke-direct {v0, v1}, Ldp0;-><init>(I)V
 
-    iput v1, p0, Lrs;->X:I
+    sput-object v0, Lrs;->c:Lrs;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    sget-object v2, Lz66;->X:Ltn4;
+
+    const/16 v3, 0xa
+
+    const-string v4, ":app-update/force"
+
+    invoke-static {v0, v4, v1, v2, v3}, Ldp0;->e(Ldp0;Ljava/lang/String;[Ljava/lang/String;Ltn4;I)Lyn4;
+
+    move-result-object v0
+
+    sput-object v0, Lrs;->d:Lyn4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final d()Ljava/util/Collection;
-    .locals 2
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    iget v1, p0, Lrs;->X:I
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    return-object v0
 .end method

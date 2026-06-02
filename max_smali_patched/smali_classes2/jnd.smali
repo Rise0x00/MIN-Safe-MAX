@@ -1,80 +1,26 @@
-.class public final Ljnd;
+.class public abstract Ljnd;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Comparable;
 
 
-# instance fields
-.field public final a:Lnd2;
+# static fields
+.field public static call_incoming_from_organization:I = 0x7f13017b
 
-.field public final b:Ley3;
+.field public static call_incoming_warning_not_contact:I = 0x7f13017e
 
+.field public static call_notification_active_call:I = 0x7f1301b5
 
-# direct methods
-.method public constructor <init>(Lnd2;Ley3;)V
-    .locals 0
+.field public static call_notification_channel_incoming:I = 0x7f1301b8
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static call_notification_channel_outgoing:I = 0x7f1301b9
 
-    iput-object p1, p0, Ljnd;->a:Lnd2;
+.field public static call_notification_incoming_call:I = 0x7f1301bc
 
-    iput-object p2, p0, Ljnd;->b:Ley3;
+.field public static call_notification_incoming_cancel_call:I = 0x7f1301bd
 
-    return-void
-.end method
+.field public static call_notification_incoming_take_call:I = 0x7f1301be
 
+.field public static call_notification_incoming_video_call:I = 0x7f1301c0
 
-# virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 4
+.field public static call_notification_name_temp:I = 0x7f1301c1
 
-    check-cast p1, Ljnd;
-
-    iget-object v0, p0, Ljnd;->a:Lnd2;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, v0, Lnd2;->b:Luh2;
-
-    iget-wide v0, v0, Luh2;->Z:J
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Ljnd;->b:Ley3;
-
-    iget-object v0, v0, Ley3;->a:Lwz3;
-
-    iget-object v0, v0, Lwz3;->b:Lvz3;
-
-    iget-wide v0, v0, Lvz3;->r:J
-
-    :goto_0
-    iget-object v2, p1, Ljnd;->a:Lnd2;
-
-    if-eqz v2, :cond_1
-
-    iget-object p1, v2, Lnd2;->b:Luh2;
-
-    iget-wide v2, p1, Luh2;->Z:J
-
-    goto :goto_1
-
-    :cond_1
-    iget-object p1, p1, Ljnd;->b:Ley3;
-
-    iget-object p1, p1, Ley3;->a:Lwz3;
-
-    iget-object p1, p1, Lwz3;->b:Lvz3;
-
-    iget-wide v2, p1, Lvz3;->r:J
-
-    :goto_1
-    invoke-static {v2, v3, v0, v1}, Ljui;->a(JJ)I
-
-    move-result p1
-
-    return p1
-.end method
+.field public static not_contact_with_hidden_phone_number:I = 0x7f1307da

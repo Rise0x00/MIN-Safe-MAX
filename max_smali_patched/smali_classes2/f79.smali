@@ -1,5 +1,5 @@
 .class public final Lf79;
-.super Lo84;
+.super Lz84;
 .source "SourceFile"
 
 
@@ -8,16 +8,16 @@
 
 .field public synthetic d:Ljava/lang/Object;
 
-.field public final synthetic o:Li79;
+.field public final synthetic o:Lv79;
 
 
 # direct methods
-.method public constructor <init>(Li79;Lo84;)V
+.method public constructor <init>(Lv79;Lz84;)V
     .locals 0
 
-    iput-object p1, p0, Lf79;->o:Li79;
+    iput-object p1, p0, Lf79;->o:Lv79;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -37,11 +37,11 @@
 
     iput p1, p0, Lf79;->X:I
 
-    iget-object p1, p0, Lf79;->o:Li79;
+    iget-object p1, p0, Lf79;->o:Lv79;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0, v0, p0}, Li79;->s(Li79;Ljava/io/File;Landroid/net/Uri;Lo84;)Ljava/lang/Object;
+    invoke-static {p1, v0, v0, p0}, Lv79;->u(Lv79;Ljava/io/File;Landroid/net/Uri;Lz84;)Ljava/lang/Object;
 
     move-result-object p1
 

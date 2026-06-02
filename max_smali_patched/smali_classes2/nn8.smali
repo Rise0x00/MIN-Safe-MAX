@@ -1,48 +1,57 @@
 .class public final Lnn8;
-.super Lo84;
+.super Lip0;
+.source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lnq7;
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final synthetic b:Lj1g;
 
 
 # direct methods
-.method public constructor <init>(Lnq7;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lj1g;I)V
     .locals 0
 
-    iput-object p1, p0, Lnn8;->X:Lnq7;
+    iput p2, p0, Lnn8;->a:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lnn8;->b:Lj1g;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()V
     .locals 1
 
-    iput-object p1, p0, Lnn8;->d:Ljava/lang/Object;
+    iget v0, p0, Lnn8;->a:I
 
-    iget p1, p0, Lnn8;->o:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lnn8;->b:Lj1g;
 
-    or-int/2addr p1, v0
+    check-cast v0, Lrn8;
 
-    iput p1, p0, Lnn8;->o:I
+    invoke-virtual {v0}, Lj1g;->a()V
 
-    iget-object p1, p0, Lnn8;->X:Lnq7;
+    return-void
 
-    const/4 v0, 0x0
+    :pswitch_0
+    iget-object v0, p0, Lnn8;->b:Lj1g;
 
-    invoke-virtual {p1, v0, p0}, Lnq7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    check-cast v0, Lmn8;
 
-    move-result-object p1
+    invoke-virtual {v0}, Lj1g;->a()V
 
-    return-object p1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

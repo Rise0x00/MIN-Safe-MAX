@@ -2,156 +2,132 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lz0h;
-
 
 # instance fields
-.field public final a:Llhg;
+.field public final a:Z
 
-.field public final b:Llhg;
+.field public final b:Z
 
-.field public final c:Lx0h;
+.field public final c:Z
+
+.field public final d:Z
+
+.field public final e:Z
+
+.field public final f:Ll0h;
 
 
 # direct methods
-.method public constructor <init>(Llhg;Llhg;Lx0h;)V
-    .locals 1
-
-    sget v0, Lf6e;->a:I
+.method public constructor <init>(ZZZZZLl0h;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lv0h;->a:Llhg;
+    iput-boolean p1, p0, Lv0h;->a:Z
 
-    iput-object p2, p0, Lv0h;->b:Llhg;
+    iput-boolean p2, p0, Lv0h;->b:Z
 
-    iput-object p3, p0, Lv0h;->c:Lx0h;
+    iput-boolean p3, p0, Lv0h;->c:Z
+
+    iput-boolean p4, p0, Lv0h;->d:Z
+
+    iput-boolean p5, p0, Lv0h;->e:Z
+
+    iput-object p6, p0, Lv0h;->f:Ll0h;
 
     return-void
 .end method
 
-.method public static c(Lv0h;Lx0h;)Lv0h;
-    .locals 2
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget v0, Lf6e;->a:I
-
-    iget-object v0, p0, Lv0h;->a:Llhg;
-
-    iget-object v1, p0, Lv0h;->b:Llhg;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p0, Lv0h;
-
-    invoke-direct {p0, v0, v1, p1}, Lv0h;-><init>(Llhg;Llhg;Lx0h;)V
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public final a()Lqhg;
-    .locals 1
-
-    iget-object v0, p0, Lv0h;->b:Llhg;
-
-    return-object v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 4
+
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lv0h;
+    instance-of v1, p1, Lv0h;
 
-    if-nez v0, :cond_1
+    const/4 v2, 0x0
 
-    goto :goto_0
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
     check-cast p1, Lv0h;
 
-    sget v0, Lf6e;->a:I
+    iget-boolean v1, p0, Lv0h;->a:Z
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-boolean v3, p1, Lv0h;->a:Z
 
-    iget-object v0, p0, Lv0h;->a:Llhg;
+    if-eq v1, v3, :cond_2
 
-    iget-object v1, p1, Lv0h;->a:Llhg;
-
-    invoke-virtual {v0, v1}, Llhg;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
+    return v2
 
     :cond_2
-    iget-object v0, p0, Lv0h;->b:Llhg;
+    iget-boolean v1, p0, Lv0h;->b:Z
 
-    iget-object v1, p1, Lv0h;->b:Llhg;
+    iget-boolean v3, p1, Lv0h;->b:Z
 
-    invoke-virtual {v0, v1}, Llhg;->equals(Ljava/lang/Object;)Z
+    if-eq v1, v3, :cond_3
 
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
+    return v2
 
     :cond_3
-    iget-object v0, p0, Lv0h;->c:Lx0h;
+    iget-boolean v1, p0, Lv0h;->c:Z
 
-    iget-object p1, p1, Lv0h;->c:Lx0h;
+    iget-boolean v3, p1, Lv0h;->c:Z
 
-    invoke-virtual {v0, p1}, Lx0h;->equals(Ljava/lang/Object;)Z
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-boolean v1, p0, Lv0h;->d:Z
+
+    iget-boolean v3, p1, Lv0h;->d:Z
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-boolean v1, p0, Lv0h;->e:Z
+
+    iget-boolean v3, p1, Lv0h;->e:Z
+
+    if-eq v1, v3, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Lv0h;->f:Ll0h;
+
+    iget-object p1, p1, Lv0h;->f:Ll0h;
+
+    invoke-static {v1, p1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-nez p1, :cond_4
+    if-nez p1, :cond_7
 
-    :goto_0
-    const/4 p1, 0x0
+    return v2
 
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final getIcon()I
-    .locals 1
-
-    sget v0, Lf6e;->e1:I
-
+    :cond_7
     return v0
-.end method
-
-.method public final getTitle()Lqhg;
-    .locals 1
-
-    iget-object v0, p0, Lv0h;->a:Llhg;
-
-    return-object v0
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    sget v0, Lf6e;->e1:I
+    iget-boolean v0, p0, Lv0h;->a:Z
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
@@ -159,75 +135,93 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lv0h;->a:Llhg;
+    iget-boolean v2, p0, Lv0h;->b:Z
 
-    iget v2, v2, Llhg;->c:I
-
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+    invoke-static {v0, v1, v2}, Lwph;->b(IIZ)I
 
     move-result v0
 
-    iget-object v2, p0, Lv0h;->b:Llhg;
+    iget-boolean v2, p0, Lv0h;->c:Z
 
-    iget v2, v2, Llhg;->c:I
-
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+    invoke-static {v0, v1, v2}, Lwph;->b(IIZ)I
 
     move-result v0
 
-    iget-object v1, p0, Lv0h;->c:Lx0h;
+    iget-boolean v2, p0, Lv0h;->d:Z
 
-    invoke-virtual {v1}, Lx0h;->hashCode()I
+    invoke-static {v0, v1, v2}, Lwph;->b(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lv0h;->e:Z
+
+    invoke-static {v0, v1, v2}, Lwph;->b(IIZ)I
+
+    move-result v0
+
+    iget-object v1, p0, Lv0h;->f:Ll0h;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ll0h;->hashCode()I
 
     move-result v1
 
-    add-int/2addr v1, v0
+    :goto_0
+    add-int/2addr v0, v1
 
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 5
 
-    sget v0, Lf6e;->e1:I
+    const-string v0, ", shouldShowTitleAndStatus="
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, ", isRecordEnabled="
 
-    const-string v2, "CreateHint(icon="
+    const-string v2, "TopPanelState(isGroupCall="
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-boolean v3, p0, Lv0h;->a:Z
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-boolean v4, p0, Lv0h;->b:Z
 
-    const-string v0, ", title="
+    invoke-static {v2, v3, v0, v4, v1}, Lsb6;->w(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    iget-object v0, p0, Lv0h;->a:Llhg;
+    const-string v1, ", isMenuButtonVisible="
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v2, ", isAddUserEnabled="
 
-    const-string v0, ", subtitle="
+    iget-boolean v3, p0, Lv0h;->c:Z
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-boolean v4, p0, Lv0h;->d:Z
 
-    iget-object v0, p0, Lv0h;->b:Llhg;
+    invoke-static {v1, v2, v0, v3, v4}, Lo52;->C(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-boolean v1, p0, Lv0h;->e:Z
 
-    const-string v0, ", inputState="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, ", recordStateTooltip="
 
-    iget-object v0, p0, Lv0h;->c:Lx0h;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lv0h;->f:Ll0h;
 
-    const-string v0, ")"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, ")"
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

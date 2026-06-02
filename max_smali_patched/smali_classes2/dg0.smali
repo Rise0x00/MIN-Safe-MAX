@@ -3,138 +3,266 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lld5;
+.implements Leyi;
 
 
 # instance fields
-.field public final a:Landroid/graphics/drawable/Drawable;
+.field public final a:F
 
-.field public final b:Landroid/graphics/Rect;
+.field public final b:F
 
-.field public c:I
+.field public final c:F
 
-.field public d:I
+.field public final d:F
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
-    .locals 1
+.method public constructor <init>(FFFF)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Landroid/graphics/Rect;
+    iput p1, p0, Ldg0;->a:F
 
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+    iput p2, p0, Ldg0;->b:F
 
-    iput-object v0, p0, Ldg0;->b:Landroid/graphics/Rect;
+    iput p3, p0, Ldg0;->c:F
 
-    iput-object p1, p0, Ldg0;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
-
-    move-result v0
-
-    iput v0, p0, Ldg0;->c:I
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
-
-    move-result p1
-
-    iput p1, p0, Ldg0;->d:I
+    iput p4, p0, Ldg0;->d:F
 
     return-void
 .end method
 
-.method public static a(Ldg0;IILandroid/graphics/Rect;)V
+.method public static e(Leyi;)Ldg0;
     .locals 4
 
-    int-to-float v0, p1
+    new-instance v0, Ldg0;
 
-    iget v1, p0, Ldg0;->d:I
+    invoke-interface {p0}, Leyi;->c()F
 
-    int-to-float v2, v1
+    move-result v1
 
-    iget p0, p0, Ldg0;->c:I
+    invoke-interface {p0}, Leyi;->a()F
 
-    int-to-float v3, p0
+    move-result v2
 
-    div-float/2addr v2, v3
+    invoke-interface {p0}, Leyi;->b()F
 
-    mul-float/2addr v2, v0
+    move-result v3
 
-    float-to-int v0, v2
+    invoke-interface {p0}, Leyi;->d()F
 
-    if-le v0, p2, :cond_0
+    move-result p0
 
-    int-to-float v0, p2
+    invoke-direct {v0, v1, v2, v3, p0}, Ldg0;-><init>(FFFF)V
 
-    int-to-float p0, p0
-
-    int-to-float v1, v1
-
-    div-float/2addr p0, v1
-
-    mul-float/2addr p0, v0
-
-    float-to-int p0, p0
-
-    move v0, p2
-
-    goto :goto_0
-
-    :cond_0
-    move p0, p1
-
-    :goto_0
-    sub-int/2addr p2, v0
-
-    int-to-float p2, p2
-
-    const/high16 v1, 0x40000000    # 2.0f
-
-    div-float/2addr p2, v1
-
-    float-to-int p2, p2
-
-    sub-int/2addr p1, p0
-
-    int-to-float p1, p1
-
-    div-float/2addr p1, v1
-
-    float-to-int p1, p1
-
-    add-int/2addr p0, p1
-
-    add-int/2addr v0, p2
-
-    invoke-virtual {p3, p1, p2, p0, v0}, Landroid/graphics/Rect;->set(IIII)V
-
-    return-void
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 3
+.method public final a()F
+    .locals 1
 
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
+    iget v0, p0, Ldg0;->b:F
 
-    move-result v0
+    return v0
+.end method
 
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->getHeight()I
+.method public final b()F
+    .locals 1
+
+    iget v0, p0, Ldg0;->c:F
+
+    return v0
+.end method
+
+.method public final c()F
+    .locals 1
+
+    iget v0, p0, Ldg0;->a:F
+
+    return v0
+.end method
+
+.method public final d()F
+    .locals 1
+
+    iget v0, p0, Ldg0;->d:F
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p1, p0, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ldg0;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
+
+    check-cast p1, Ldg0;
+
+    iget v1, p0, Ldg0;->a:F
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v1
 
-    iget-object v2, p0, Ldg0;->b:Landroid/graphics/Rect;
+    iget v3, p1, Ldg0;->a:F
 
-    invoke-static {p0, v0, v1, v2}, Ldg0;->a(Ldg0;IILandroid/graphics/Rect;)V
+    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
 
-    iget-object v0, p0, Ldg0;->a:Landroid/graphics/drawable/Drawable;
+    move-result v3
 
-    invoke-virtual {v0, v2}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+    if-ne v1, v3, :cond_1
 
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+    iget v1, p0, Ldg0;->b:F
 
-    return-void
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    iget v3, p1, Ldg0;->b:F
+
+    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v3
+
+    if-ne v1, v3, :cond_1
+
+    iget v1, p0, Ldg0;->c:F
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    iget v3, p1, Ldg0;->c:F
+
+    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v3
+
+    if-ne v1, v3, :cond_1
+
+    iget v1, p0, Ldg0;->d:F
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    iget p1, p1, Ldg0;->d:F
+
+    invoke-static {p1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result p1
+
+    if-ne v1, p1, :cond_1
+
+    return v0
+
+    :cond_1
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Ldg0;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Ldg0;->b:F
+
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Ldg0;->c:F
+
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v1, p0, Ldg0;->d:F
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    xor-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ImmutableZoomState{zoomRatio="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Ldg0;->a:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", maxZoomRatio="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ldg0;->b:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", minZoomRatio="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ldg0;->c:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", linearZoom="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ldg0;->d:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

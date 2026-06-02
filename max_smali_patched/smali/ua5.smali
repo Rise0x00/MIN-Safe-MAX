@@ -3,13 +3,37 @@
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Lmp0;
+
+
 # direct methods
-.method public static final a(Ljava/time/Duration;)J
-    .locals 2
+.method public constructor <init>(Lmp0;)V
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/time/Duration;->toMillis()J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-wide v0
+    iput-object p1, p0, Lua5;->a:Lmp0;
 
-    return-wide v0
+    return-void
+.end method
+
+
+# virtual methods
+.method public abstract a(Landroid/graphics/Canvas;Landroid/graphics/Rect;FZZ)V
+.end method
+
+.method public abstract b(Landroid/graphics/Canvas;Landroid/graphics/Paint;II)V
+.end method
+
+.method public abstract c(Landroid/graphics/Canvas;Landroid/graphics/Paint;Lta5;I)V
+.end method
+
+.method public abstract d(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFIII)V
+.end method
+
+.method public abstract e()I
+.end method
+
+.method public abstract f()I
 .end method

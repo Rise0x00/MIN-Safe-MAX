@@ -37,6 +37,18 @@
         <item quantity="few">подписчика</item>
         <item quantity="many">подписчиков</item>
     </plurals>
+    <plurals name="chat_list_accessibility_folders_tab_with_unread">
+        <item quantity="other">Папка %1$s. Не прочитано %2$d чата</item>
+        <item quantity="one">Папка %1$s. Не прочитан %2$d чат</item>
+        <item quantity="few">Папка %1$s. Не прочитано %2$d чата</item>
+        <item quantity="many">Папка %1$s. Не прочитано %2$d чатов</item>
+    </plurals>
+    <plurals name="chat_list_multiselect_delete_count">
+        <item quantity="other">Вы удалили %d чата</item>
+        <item quantity="one">Вы удалили %d чат</item>
+        <item quantity="few">Вы удалили %d чата</item>
+        <item quantity="many">Вы удалили %d чатов</item>
+    </plurals>
     <plurals name="chat_screen_action_copy_success">
         <item quantity="other">Вы скопировали сообщения</item>
         <item quantity="zero">Сообщений скопировано</item>
@@ -51,6 +63,29 @@
         <item quantity="two">Удалить сообщения?</item>
         <item quantity="few">Удалить сообщения?</item>
         <item quantity="many">Удалить сообщения?</item>
+    </plurals>
+    <plurals name="chat_screen_reminder_confirmation_delete_title">
+        <item quantity="other">Удалить напоминания?</item>
+        <item quantity="one">Удалить напоминание?</item>
+        <item quantity="two">Удалить напоминания?</item>
+        <item quantity="few">Удалить напоминания?</item>
+        <item quantity="many">Удалить напоминания?</item>
+    </plurals>
+    <plurals name="chat_screen_share_contact_snackbar_title">
+        <item quantity="other">Вы поделились контактом в %d чатах</item>
+        <item quantity="zero">Вы поделились контактом в %d чатах</item>
+        <item quantity="one">Вы поделились контактом в %d чате</item>
+        <item quantity="two">Вы поделились контактом в %d чатах</item>
+        <item quantity="few">Вы поделились контактом в %d чатах</item>
+        <item quantity="many">Вы поделились контактом в %d чатах</item>
+    </plurals>
+    <plurals name="dates_hours">
+        <item quantity="other">%d часов</item>
+        <item quantity="zero">%d часов</item>
+        <item quantity="one">%d час</item>
+        <item quantity="two">%d часа</item>
+        <item quantity="few">%d часа</item>
+        <item quantity="many">%d часов</item>
     </plurals>
     <plurals name="forward_snackbar_messages_sent">
         <item quantity="other">Вы переслали сообщения</item>
@@ -80,23 +115,27 @@
         <item quantity="few">Сообщение не может содержать более чем %d вложения</item>
         <item quantity="many">Сообщение не может содержать более чем %d вложений</item>
     </plurals>
+    <plurals name="messages_list_discussion_entry_comments_count">
+        <item quantity="other">%s комментариев</item>
+        <item quantity="one">%s комментарий</item>
+        <item quantity="few">%s комментария</item>
+    </plurals>
+    <plurals name="messages_list_message_poll_answers_count">
+        <item quantity="other">%d ответов</item>
+        <item quantity="one">%d ответ</item>
+        <item quantity="few">%d ответа</item>
+    </plurals>
     <plurals name="mtrl_badge_content_description">
         <item quantity="other">%d new notifications</item>
         <item quantity="one">%d new notification</item>
     </plurals>
-    <plurals name="oneme_folders_picker_snackbar_add_channel_title">
-        <item quantity="other">Добавили канал в %d папки</item>
-        <item quantity="one">Добавили канал в %d папку</item>
-        <item quantity="two">Добавили канал в %d папки</item>
-        <item quantity="few">Добавили канал в %d папки</item>
-        <item quantity="many">Добавили канал в %d папок</item>
-    </plurals>
-    <plurals name="oneme_folders_picker_snackbar_add_chat_title">
-        <item quantity="other">Добавили чат в %d папки</item>
-        <item quantity="one">Добавили чат в %d папку</item>
-        <item quantity="two">Добавили чат в %d папки</item>
-        <item quantity="few">Добавили чат в %d папки</item>
-        <item quantity="many">Добавили чат в %d папок</item>
+    <plurals name="n_contacts">
+        <item quantity="other">%d контактов</item>
+        <item quantity="zero">%d контактов</item>
+        <item quantity="one">%d контакт</item>
+        <item quantity="two">%d контакта</item>
+        <item quantity="few">%d контакта</item>
+        <item quantity="many">%d контактов</item>
     </plurals>
     <plurals name="oneme_gallery_max_attach_count_error">
         <item quantity="other">Сообщение не может содержать более чем %d вложений</item>
@@ -119,6 +158,16 @@
         <item quantity="two">%1$d звезды</item>
         <item quantity="few">%1$d звезды</item>
         <item quantity="many">%1$d звёзд</item>
+    </plurals>
+    <plurals name="oneme_poll_create__answer_limit_hint">
+        <item quantity="other">Можно добавить ещё %d ответов</item>
+        <item quantity="one">Можно добавить ещё %d ответ</item>
+        <item quantity="few">Можно добавить ещё %d ответа</item>
+    </plurals>
+    <plurals name="oneme_poll_result__vote_count">
+        <item quantity="other">%d ответов</item>
+        <item quantity="one">%d ответ</item>
+        <item quantity="few">%d ответа</item>
     </plurals>
     <plurals name="oneme_settings_privacy_twofa_delete_user_days_left_notif">
         <item quantity="other">Удаляем ваш профиль, осталось %1$d дней</item>
@@ -152,6 +201,18 @@
         <item quantity="two">%d стикера</item>
         <item quantity="few">%d стикера</item>
         <item quantity="many">%d стикеров</item>
+    </plurals>
+    <plurals name="picker_chats_channel_limit_add_subscribers_error">
+        <item quantity="other">За один раз можно добавить не больше %s подписчиков</item>
+        <item quantity="one">За один раз можно добавить не больше %s подписчика</item>
+    </plurals>
+    <plurals name="picker_chats_chat_limit_add_participant_error">
+        <item quantity="other">За один раз можно добавить не больше %s участников</item>
+        <item quantity="one">За один раз можно добавить не больше %s участника</item>
+    </plurals>
+    <plurals name="picker_chats_chat_participant_count_limit_error">
+        <item quantity="other">В чате может быть не больше %s участников</item>
+        <item quantity="one">В чате может быть не больше %s участника</item>
     </plurals>
     <plurals name="picker_chats_list_forward_messages">
         <item quantity="other">%d пересылаемых сообщений из $s</item>
@@ -196,12 +257,12 @@
         <item quantity="many">%d участников</item>
     </plurals>
     <plurals name="profile_delete_dates_days_left">
-        <item quantity="other">Удалим ваш профиль через %d дней</item>
+        <item quantity="other">Удалим ваш профиль через %d дней</item>
         <item quantity="zero">Удалим ваш профиль через %d дней</item>
-        <item quantity="one">Удалим ваш профиль через %d день</item>
+        <item quantity="one">Удалим ваш профиль через %d день</item>
         <item quantity="two">Удалим ваш профиль через %d дня</item>
-        <item quantity="few">Удалим ваш профиль через %d дня</item>
-        <item quantity="many">Удалим ваш профиль через %d дней</item>
+        <item quantity="few">Удалим ваш профиль через %d дня</item>
+        <item quantity="many">Удалим ваш профиль через %d дней</item>
     </plurals>
     <plurals name="profile_edit_reactions_settings_slider_current_value">
         <item quantity="other">%d реакций</item>

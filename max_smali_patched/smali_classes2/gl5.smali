@@ -1,152 +1,267 @@
-.class public final synthetic Lgl5;
+.class public final Lgl5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Liv6;
 
+# instance fields
+.field public final a:Landroid/media/MediaCodec;
 
-# static fields
-.field public static final a:Lgl5;
+.field public final b:I
 
-.field private static final descriptor:Lxpe;
+.field public final c:Ljava/nio/ByteBuffer;
+
+.field public final d:Lr12;
+
+.field public final e:Lo12;
+
+.field public final f:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public g:J
+
+.field public h:Z
+
+.field public final synthetic i:Lpl5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lpl5;Landroid/media/MediaCodec;I)V
+    .locals 3
 
-    new-instance v0, Lgl5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lgl5;->i:Lpl5;
 
-    sput-object v0, Lgl5;->a:Lgl5;
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    new-instance v1, Lgdc;
+    const/4 v0, 0x0
 
-    const-string v2, "one.me.webapp.domain.jsbridge.ErrorResponse.Error"
+    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    const/4 v3, 0x1
+    iput-object p1, p0, Lgl5;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-direct {v1, v2, v0, v3}, Lgdc;-><init>(Ljava/lang/String;Liv6;I)V
+    const-wide/16 v1, 0x0
 
-    const-string v0, "code"
+    iput-wide v1, p0, Lgl5;->g:J
 
-    const/4 v2, 0x0
+    iput-boolean v0, p0, Lgl5;->h:Z
 
-    invoke-virtual {v1, v0, v2}, Lgdc;->k(Ljava/lang/String;Z)V
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sput-object v1, Lgl5;->descriptor:Lxpe;
+    iput-object p2, p0, Lgl5;->a:Landroid/media/MediaCodec;
+
+    invoke-static {p3}, Lvfa;->k(I)V
+
+    iput p3, p0, Lgl5;->b:I
+
+    invoke-virtual {p2, p3}, Landroid/media/MediaCodec;->getInputBuffer(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lgl5;->c:Ljava/nio/ByteBuffer;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    new-instance p2, Lo01;
+
+    const/4 p3, 0x5
+
+    invoke-direct {p2, p1, p3}, Lo01;-><init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
+
+    invoke-static {p2}, Lmmj;->a(Lp12;)Lr12;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lgl5;->d:Lr12;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lo12;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Lgl5;->e:Lo12;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
-    .locals 2
+.method public final a()Z
+    .locals 10
 
-    check-cast p2, Lil5;
+    iget-object v1, p0, Lgl5;->e:Lo12;
 
-    sget-object v0, Lgl5;->descriptor:Lxpe;
+    iget-object v0, p0, Lgl5;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->a(Lxpe;)Lkotlinx/serialization/json/internal/b;
+    const/4 v2, 0x1
 
-    move-result-object p1
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
 
-    iget-object p2, p2, Lil5;->a:Ljava/lang/String;
+    move-result v0
 
-    const/4 v1, 0x0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v0, v1, p2}, Lkotlinx/serialization/json/internal/b;->s(Lxpe;ILjava/lang/String;)V
+    const/4 v0, 0x0
 
-    invoke-virtual {p1}, Lkotlinx/serialization/json/internal/b;->t()V
+    return v0
 
-    return-void
-.end method
+    :cond_0
+    :try_start_0
+    iget-object v3, p0, Lgl5;->a:Landroid/media/MediaCodec;
 
-.method public final b(Lkl4;)Ljava/lang/Object;
-    .locals 8
+    iget v4, p0, Lgl5;->b:I
 
-    sget-object v0, Lgl5;->descriptor:Lxpe;
+    const-wide/16 v7, 0x0
 
-    invoke-interface {p1, v0}, Lkl4;->r(Lxpe;)Lqp3;
+    const/4 v9, 0x0
 
-    move-result-object p1
+    const/4 v5, 0x0
 
-    const/4 v1, 0x1
+    const/4 v6, 0x0
 
-    const/4 v2, 0x0
+    invoke-virtual/range {v3 .. v9}, Landroid/media/MediaCodec;->queueInputBuffer(IIIJI)V
 
-    const/4 v3, 0x0
+    const/4 v0, 0x0
 
-    move v4, v1
+    invoke-virtual {v1, v0}, Lo12;->b(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move v5, v2
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v1, v0}, Lo12;->d(Ljava/lang/Throwable;)Z
 
     :goto_0
-    if-eqz v4, :cond_2
+    return v2
+.end method
 
-    invoke-interface {p1, v0}, Lqp3;->e(Lxpe;)I
+.method public final b(J)V
+    .locals 2
 
-    move-result v6
+    iget-object v0, p0, Lgl5;->i:Lpl5;
 
-    const/4 v7, -0x1
+    iget-boolean v1, v0, Lpl5;->c:Z
 
-    if-eq v6, v7, :cond_1
-
-    if-nez v6, :cond_0
-
-    invoke-interface {p1, v0, v2}, Lqp3;->j(Lxpe;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    move v5, v1
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+    invoke-virtual {v0, p1, p2}, Lpl5;->o(J)J
 
-    invoke-direct {p1, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+    move-result-wide p1
 
-    throw p1
+    :goto_0
+    iget-object v0, p0, Lgl5;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    :cond_1
-    move v4, v2
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    goto :goto_0
+    move-result v0
 
-    :cond_2
-    invoke-interface {p1, v0}, Lqp3;->m(Lxpe;)V
+    if-nez v0, :cond_2
 
-    new-instance p1, Lil5;
+    const-wide/16 v0, 0x0
 
-    invoke-direct {p1, v5, v3}, Lil5;-><init>(ILjava/lang/String;)V
+    cmp-long v0, p1, v0
 
-    return-object p1
-.end method
-
-.method public final c()[La38;
-    .locals 3
+    if-ltz v0, :cond_1
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [La38;
+    goto :goto_1
 
-    sget-object v1, Lnzf;->a:Lnzf;
+    :cond_1
+    const/4 v0, 0x0
 
-    const/4 v2, 0x0
+    :goto_1
+    invoke-static {v0}, Lvfa;->i(Z)V
 
-    aput-object v1, v0, v2
+    iput-wide p1, p0, Lgl5;->g:J
 
-    return-object v0
+    return-void
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "The buffer is submitted or canceled."
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public final d()Lxpe;
-    .locals 1
+.method public final c()Z
+    .locals 12
 
-    sget-object v0, Lgl5;->descriptor:Lxpe;
+    iget-object v1, p0, Lgl5;->e:Lo12;
 
-    return-object v0
+    iget-object v0, p0, Lgl5;->c:Ljava/nio/ByteBuffer;
+
+    iget-object v2, p0, Lgl5;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v2, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
+
+    move-result v2
+
+    const/4 v4, 0x0
+
+    if-eqz v2, :cond_0
+
+    return v4
+
+    :cond_0
+    :try_start_0
+    iget-object v5, p0, Lgl5;->a:Landroid/media/MediaCodec;
+
+    iget v6, p0, Lgl5;->b:I
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
+
+    move-result v7
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->limit()I
+
+    move-result v8
+
+    iget-wide v9, p0, Lgl5;->g:J
+
+    iget-boolean v0, p0, Lgl5;->h:Z
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x4
+
+    move v11, v0
+
+    goto :goto_0
+
+    :cond_1
+    move v11, v4
+
+    :goto_0
+    invoke-virtual/range {v5 .. v11}, Landroid/media/MediaCodec;->queueInputBuffer(IIIJI)V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v1, v0}, Lo12;->b(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v3
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v1, v0}, Lo12;->d(Ljava/lang/Throwable;)Z
+
+    return v4
 .end method

@@ -1,69 +1,391 @@
 .class public final Lxp9;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Liu5;
 
 
 # instance fields
-.field public X:I
+.field public final a:Liu5;
 
-.field public Y:Ljava/util/ArrayList;
-
-.field public Z:Lnd2;
-
-.field public d:J
-
-.field public o:J
-
-.field public t0:Ljm9;
-
-.field public synthetic u0:Ljava/lang/Object;
-
-.field public final synthetic v0:Laq9;
-
-.field public w0:I
+.field public final b:Ld3h;
 
 
 # direct methods
-.method public constructor <init>(Laq9;Lo84;)V
+.method public constructor <init>(Liu5;Ld3h;)V
     .locals 0
 
-    iput-object p1, p0, Lxp9;->v0:Laq9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lxp9;->a:Liu5;
+
+    iput-object p2, p0, Lxp9;->b:Ld3h;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final a()Ld3h;
+    .locals 1
 
-    iput-object p1, p0, Lxp9;->u0:Ljava/lang/Object;
+    iget-object v0, p0, Lxp9;->b:Ld3h;
 
-    iget p1, p0, Lxp9;->w0:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final b()I
+    .locals 1
 
-    or-int/2addr p1, v0
+    iget-object v0, p0, Lxp9;->a:Liu5;
 
-    iput p1, p0, Lxp9;->w0:I
+    invoke-interface {v0}, Liu5;->b()I
 
-    const/4 v5, 0x0
+    move-result v0
 
-    const/4 v6, 0x0
+    return v0
+.end method
 
-    iget-object v0, p0, Lxp9;->v0:Laq9;
+.method public final c(Z)V
+    .locals 1
 
-    const-wide/16 v1, 0x0
+    iget-object v0, p0, Lxp9;->a:Liu5;
 
-    const-wide/16 v3, 0x0
+    invoke-interface {v0, p1}, Liu5;->c(Z)V
 
-    move-object v7, p0
+    return-void
+.end method
 
-    invoke-virtual/range {v0 .. v7}, Laq9;->b(JJILjava/util/ArrayList;Lo84;)Ljava/lang/Object;
+.method public final d(I)Lgm6;
+    .locals 1
 
-    move-result-object p1
+    iget-object v0, p0, Lxp9;->a:Liu5;
+
+    invoke-interface {v0, p1}, Liu5;->f(I)I
+
+    move-result p1
+
+    iget-object v0, p0, Lxp9;->b:Ld3h;
+
+    iget-object v0, v0, Ld3h;->d:[Lgm6;
+
+    aget-object p1, v0, p1
 
     return-object p1
+.end method
+
+.method public final e()V
+    .locals 1
+
+    iget-object v0, p0, Lxp9;->a:Liu5;
+
+    invoke-interface {v0}, Liu5;->e()V
+
+    return-void
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lxp9;->v(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    instance-of v0, p1, Lxp9;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    check-cast p1, Lxp9;
+
+    iget-object v0, p0, Lxp9;->b:Ld3h;
+
+    iget-object p1, p1, Lxp9;->b:Ld3h;
+
+    invoke-virtual {v0, p1}, Ld3h;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final f(I)I
+    .locals 1
+
+    iget-object v0, p0, Lxp9;->a:Liu5;
+
+    invoke-interface {v0, p1}, Liu5;->f(I)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final g(JLjava/util/List;)I
+    .locals 1
+
+    iget-object v0, p0, Lxp9;->a:Liu5;
+
+    invoke-interface {v0, p1, p2, p3}, Liu5;->g(JLjava/util/List;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final h()V
+    .locals 1
+
+    iget-object v0, p0, Lxp9;->a:Liu5;
+
+    invoke-interface {v0}, Liu5;->h()V
+
+    return-void
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lxp9;->a:Liu5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lxp9;->b:Ld3h;
+
+    invoke-virtual {v1}, Ld3h;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final i()I
+    .locals 1
+
+    iget-object v0, p0, Lxp9;->a:Liu5;
+
+    invoke-interface {v0}, Liu5;->i()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final j()Lgm6;
+    .locals 2
+
+    iget-object v0, p0, Lxp9;->a:Liu5;
+
+    invoke-interface {v0}, Liu5;->i()I
+
+    move-result v0
+
+    iget-object v1, p0, Lxp9;->b:Ld3h;
+
+    iget-object v1, v1, Ld3h;->d:[Lgm6;
+
+    aget-object v0, v1, v0
+
+    return-object v0
+.end method
+
+.method public final k()I
+    .locals 1
+
+    iget-object v0, p0, Lxp9;->a:Liu5;
+
+    invoke-interface {v0}, Liu5;->k()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final l(F)V
+    .locals 1
+
+    iget-object v0, p0, Lxp9;->a:Liu5;
+
+    invoke-interface {v0, p1}, Liu5;->l(F)V
+
+    return-void
+.end method
+
+.method public final length()I
+    .locals 1
+
+    iget-object v0, p0, Lxp9;->a:Liu5;
+
+    invoke-interface {v0}, Liu5;->length()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final m()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lxp9;->a:Liu5;
+
+    invoke-interface {v0}, Liu5;->m()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final n()V
+    .locals 1
+
+    iget-object v0, p0, Lxp9;->a:Liu5;
+
+    invoke-interface {v0}, Liu5;->n()V
+
+    return-void
+.end method
+
+.method public final o()V
+    .locals 1
+
+    iget-object v0, p0, Lxp9;->a:Liu5;
+
+    invoke-interface {v0}, Liu5;->o()V
+
+    return-void
+.end method
+
+.method public final p(I)I
+    .locals 1
+
+    iget-object v0, p0, Lxp9;->a:Liu5;
+
+    invoke-interface {v0, p1}, Liu5;->p(I)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final q(IJ)Z
+    .locals 1
+
+    iget-object v0, p0, Lxp9;->a:Liu5;
+
+    invoke-interface {v0, p1, p2, p3}, Liu5;->q(IJ)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final r(JJJLjava/util/List;[Ll39;)V
+    .locals 9
+
+    iget-object v0, p0, Lxp9;->a:Liu5;
+
+    move-wide v1, p1
+
+    move-wide v3, p3
+
+    move-wide v5, p5
+
+    move-object/from16 v7, p7
+
+    move-object/from16 v8, p8
+
+    invoke-interface/range {v0 .. v8}, Liu5;->r(JJJLjava/util/List;[Ll39;)V
+
+    return-void
+.end method
+
+.method public final s(Lgm6;)I
+    .locals 1
+
+    iget-object v0, p0, Lxp9;->b:Ld3h;
+
+    invoke-virtual {v0, p1}, Ld3h;->b(Lgm6;)I
+
+    move-result p1
+
+    iget-object v0, p0, Lxp9;->a:Liu5;
+
+    invoke-interface {v0, p1}, Liu5;->p(I)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final t(JLed3;Ljava/util/List;)Z
+    .locals 1
+
+    iget-object v0, p0, Lxp9;->a:Liu5;
+
+    invoke-interface {v0, p1, p2, p3, p4}, Liu5;->t(JLed3;Ljava/util/List;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final u(IJ)Z
+    .locals 1
+
+    iget-object v0, p0, Lxp9;->a:Liu5;
+
+    invoke-interface {v0, p1, p2, p3}, Liu5;->u(IJ)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final v(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    instance-of v0, p1, Lxp9;
+
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Lxp9;
+
+    iget-object v0, p0, Lxp9;->a:Liu5;
+
+    iget-object p1, p1, Lxp9;->a:Liu5;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method

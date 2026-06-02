@@ -1,85 +1,70 @@
-.class public final Lzke;
-.super Lxke;
+.class public final synthetic Lzke;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lzs6;
 
 
 # instance fields
-.field public final j:Ljava/util/List;
+.field public final synthetic a:J
+
+.field public final synthetic b:J
 
 
 # direct methods
-.method public constructor <init>(Lshd;JJJJLjava/util/List;JLjava/util/List;JJ)V
-    .locals 17
+.method public synthetic constructor <init>(JJ)V
+    .locals 0
 
-    move-object/from16 v0, p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object/from16 v1, p1
+    iput-wide p1, p0, Lzke;->a:J
 
-    move-wide/from16 v2, p2
-
-    move-wide/from16 v4, p4
-
-    move-wide/from16 v6, p6
-
-    move-wide/from16 v8, p8
-
-    move-object/from16 v10, p10
-
-    move-wide/from16 v11, p11
-
-    move-wide/from16 v13, p14
-
-    move-wide/from16 v15, p16
-
-    invoke-direct/range {v0 .. v16}, Lxke;-><init>(Lshd;JJJJLjava/util/List;JJJ)V
-
-    move-object/from16 v1, p13
-
-    iput-object v1, v0, Lzke;->j:Ljava/util/List;
+    iput-wide p3, p0, Lzke;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(J)J
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    iget-object p1, p0, Lzke;->j:Ljava/util/List;
+    iget-wide v0, p0, Lzke;->a:J
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    iget-wide v2, p0, Lzke;->b:J
 
-    move-result p1
+    check-cast p1, Lsie;
 
-    int-to-long p1, p1
+    const-string v4, "INSERT OR REPLACE INTO saved_msg_chat(user_id, chat_id) VALUES(?, ?)"
 
-    return-wide p1
-.end method
-
-.method public final i(Lexd;J)Lshd;
-    .locals 2
-
-    iget-wide v0, p0, Lxke;->d:J
-
-    sub-long/2addr p2, v0
-
-    long-to-int p1, p2
-
-    iget-object p2, p0, Lzke;->j:Ljava/util/List;
-
-    invoke-interface {p2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {p1, v4}, Lsie;->B0(Ljava/lang/String;)Lyie;
 
     move-result-object p1
 
-    check-cast p1, Lshd;
+    const/4 v4, 0x1
+
+    :try_start_0
+    invoke-interface {p1, v4, v0, v1}, Lyie;->b(IJ)V
+
+    const/4 v0, 0x2
+
+    invoke-interface {p1, v0, v2, v3}, Lyie;->b(IJ)V
+
+    invoke-interface {p1}, Lyie;->y0()Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+
+    sget-object p1, Lyeh;->a:Lyeh;
 
     return-object p1
-.end method
 
-.method public final j()Z
-    .locals 1
+    :catchall_0
+    move-exception v0
 
-    const/4 v0, 0x1
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
 
-    return v0
+    throw v0
 .end method

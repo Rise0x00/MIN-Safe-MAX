@@ -1,72 +1,41 @@
-.class public final Lyp2;
-.super Lp6g;
+.class final Lyp2;
+.super Lru/ok/tamtam/exception/IssueKeyException;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
 
-
-# instance fields
-.field public final synthetic o:Ljq2;
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0003\n\u0002\u0008\u0004\u0008\u0002\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0004\u0010\u0005\u00a8\u0006\u0006"
+    }
+    d2 = {
+        "Lyp2;",
+        "Lru/ok/tamtam/exception/IssueKeyException;",
+        "",
+        "cause",
+        "<init>",
+        "(Ljava/lang/Throwable;)V",
+        "chats-list_release"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x3,
+        0x0
+    }
+    xi = 0x30
+.end annotation
 
 
 # direct methods
-.method public constructor <init>(Ljq2;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/Throwable;)V
+    .locals 2
 
-    iput-object p1, p0, Lyp2;->o:Ljq2;
+    const-string v0, "45402"
 
-    const/4 p1, 0x2
+    const-string v1, "fail process typing"
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, v0, v1, p1}, Lru/ok/tamtam/exception/IssueKeyException;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lyp2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lyp2;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lyp2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lyp2;
-
-    iget-object v0, p0, Lyp2;->o:Ljq2;
-
-    invoke-direct {p1, v0, p2}, Lyp2;-><init>(Ljq2;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lyp2;->o:Ljq2;
-
-    invoke-static {p1}, Ljq2;->u(Ljq2;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
 .end method

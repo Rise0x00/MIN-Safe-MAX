@@ -1,37 +1,29 @@
-.class public final Lk98;
-.super Lj2;
+.class public abstract Lk98;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final d:Z
-
-
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Z)V
+.method public static a(Landroid/content/Context;)Landroid/app/KeyguardManager;
     .locals 1
 
-    sget-object v0, Lwob;->O1:Lwob;
+    const-class v0, Landroid/app/KeyguardManager;
 
-    invoke-direct {p0, v0}, Lj2;-><init>(Lwob;)V
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
-    iput-boolean p2, p0, Lk98;->d:Z
+    move-result-object p0
 
-    const-string p2, "link"
+    check-cast p0, Landroid/app/KeyguardManager;
 
-    invoke-virtual {p0, p2, p1}, Lj2;->A(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    return-object p0
 .end method
 
+.method public static b(Landroid/app/KeyguardManager;)Z
+    .locals 0
 
-# virtual methods
-.method public final g0()Z
-    .locals 1
+    invoke-virtual {p0}, Landroid/app/KeyguardManager;->isDeviceSecure()Z
 
-    iget-boolean v0, p0, Lk98;->d:Z
+    move-result p0
 
-    xor-int/lit8 v0, v0, 0x1
-
-    return v0
+    return p0
 .end method

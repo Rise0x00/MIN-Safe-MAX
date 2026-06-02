@@ -3,60 +3,82 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lfb5;
 
 
 # instance fields
-.field public final a:Ljava/lang/Runnable;
-
-.field public final b:Ltn5;
-
-.field public final c:Lun5;
+.field public final a:Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Runnable;Ltn5;Lun5;)V
+.method public constructor <init>(Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxn5;->a:Ljava/lang/Runnable;
-
-    iput-object p2, p0, Lxn5;->b:Ltn5;
-
-    iput-object p3, p0, Lxn5;->c:Lun5;
+    iput-object p1, p0, Lxn5;->a:Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final a()Ljava/util/UUID;
+    .locals 1
 
-    iget-object v0, p0, Lxn5;->c:Lun5;
+    sget-object v0, Lz31;->a:Ljava/util/UUID;
 
-    iget-object v1, p0, Lxn5;->b:Ltn5;
+    return-object v0
+.end method
 
-    invoke-virtual {v1}, Ltn5;->a()J
+.method public final c()Z
+    .locals 1
 
-    move-result-wide v1
+    const/4 v0, 0x0
 
-    :try_start_0
-    iget-object v3, p0, Lxn5;->a:Ljava/lang/Runnable;
+    return v0
+.end method
 
-    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0, v1, v2}, Lun5;->a(J)V
+.method public final d(Ljb5;)V
+    .locals 0
 
     return-void
+.end method
 
-    :catchall_0
-    move-exception v3
+.method public final e(Ljb5;)V
+    .locals 0
 
-    invoke-virtual {v0, v1, v2}, Lun5;->a(J)V
+    return-void
+.end method
 
-    throw v3
+.method public final f(Ljava/lang/String;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final g()Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;
+    .locals 1
+
+    iget-object v0, p0, Lxn5;->a:Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;
+
+    return-object v0
+.end method
+
+.method public final getState()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final h()Lwf4;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
 .end method

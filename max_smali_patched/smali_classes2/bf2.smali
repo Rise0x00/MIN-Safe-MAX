@@ -1,47 +1,131 @@
 .class public final Lbf2;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public a:I
 
-.field public synthetic d:Ljava/lang/Object;
+.field public b:I
 
-.field public final synthetic o:Lrf2;
+.field public c:I
+
+.field public d:I
+
+.field public final e:Landroid/view/View;
+
+.field public f:I
+
+.field public g:I
 
 
 # direct methods
-.method public constructor <init>(Lrf2;Lo84;)V
+.method public constructor <init>(Landroid/view/View;)V
     .locals 0
 
-    iput-object p1, p0, Lbf2;->o:Lrf2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lbf2;->e:Landroid/view/View;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Landroid/graphics/PointF;)V
+    .locals 4
 
-    iput-object p1, p0, Lbf2;->d:Ljava/lang/Object;
+    iget v0, p1, Landroid/graphics/PointF;->x:F
 
-    iget p1, p0, Lbf2;->X:I
+    invoke-static {v0}, Ljava/lang/Math;->round(F)I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
+    iput v0, p0, Lbf2;->c:I
 
-    iput p1, p0, Lbf2;->X:I
+    iget p1, p1, Landroid/graphics/PointF;->y:F
 
-    iget-object p1, p0, Lbf2;->o:Lrf2;
+    invoke-static {p1}, Ljava/lang/Math;->round(F)I
 
-    invoke-virtual {p1, p0}, Lrf2;->n(Lo84;)Ljava/lang/Object;
+    move-result p1
 
-    move-result-object p1
+    iput p1, p0, Lbf2;->d:I
 
-    return-object p1
+    iget v0, p0, Lbf2;->g:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lbf2;->g:I
+
+    iget v1, p0, Lbf2;->f:I
+
+    if-ne v1, v0, :cond_0
+
+    iget v0, p0, Lbf2;->a:I
+
+    iget v1, p0, Lbf2;->b:I
+
+    iget v2, p0, Lbf2;->c:I
+
+    iget-object v3, p0, Lbf2;->e:Landroid/view/View;
+
+    invoke-static {v3, v0, v1, v2, p1}, Lq6i;->c(Landroid/view/View;IIII)V
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lbf2;->f:I
+
+    iput p1, p0, Lbf2;->g:I
+
+    :cond_0
+    return-void
+.end method
+
+.method public final b(Landroid/graphics/PointF;)V
+    .locals 4
+
+    iget v0, p1, Landroid/graphics/PointF;->x:F
+
+    invoke-static {v0}, Ljava/lang/Math;->round(F)I
+
+    move-result v0
+
+    iput v0, p0, Lbf2;->a:I
+
+    iget p1, p1, Landroid/graphics/PointF;->y:F
+
+    invoke-static {p1}, Ljava/lang/Math;->round(F)I
+
+    move-result p1
+
+    iput p1, p0, Lbf2;->b:I
+
+    iget v0, p0, Lbf2;->f:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lbf2;->f:I
+
+    iget v1, p0, Lbf2;->g:I
+
+    if-ne v0, v1, :cond_0
+
+    iget v0, p0, Lbf2;->a:I
+
+    iget v1, p0, Lbf2;->c:I
+
+    iget v2, p0, Lbf2;->d:I
+
+    iget-object v3, p0, Lbf2;->e:Landroid/view/View;
+
+    invoke-static {v3, v0, p1, v1, v2}, Lq6i;->c(Landroid/view/View;IIII)V
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lbf2;->f:I
+
+    iput p1, p0, Lbf2;->g:I
+
+    :cond_0
+    return-void
 .end method

@@ -3,24 +3,18 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpg1;
+.implements Lvn4;
 
 
 # static fields
 .field public static final a:Log1;
 
-.field public static final b:J
-
-.field public static final c:Llhg;
-
-.field public static final d:Lw58;
-
-.field public static final o:Li0f;
+.field public static final b:Lpg1;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 1
 
     new-instance v0, Log1;
 
@@ -28,129 +22,188 @@
 
     sput-object v0, Log1;->a:Log1;
 
-    sget-wide v0, Lo6b;->e:J
+    sget-object v0, Lpg1;->c:Lpg1;
 
-    sput-wide v0, Log1;->b:J
-
-    sget v0, Lq6b;->j:I
-
-    new-instance v1, Llhg;
-
-    invoke-direct {v1, v0}, Llhg;-><init>(I)V
-
-    sput-object v1, Log1;->c:Llhg;
-
-    new-instance v0, Lw58;
-
-    sget v1, Lm6b;->j:I
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x6
-
-    invoke-direct {v0, v1, v2, v3}, Lw58;-><init>(III)V
-
-    sput-object v0, Log1;->d:Lw58;
-
-    sget-object v0, Li0f;->a:Li0f;
-
-    sput-object v0, Log1;->o:Li0f;
+    sput-object v0, Log1;->b:Lpg1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()Ldp0;
     .locals 1
 
-    const/4 v0, 0x1
+    sget-object v0, Log1;->b:Lpg1;
 
-    if-ne p0, p1, :cond_0
+    return-object v0
+.end method
 
-    return v0
+.method public final b(Ljava/lang/String;Lyn4;Landroid/os/Bundle;)Lgo4;
+    .locals 10
+
+    sget-object v0, Log1;->b:Lpg1;
+
+    iget-object v0, v0, Ldp0;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/LinkedHashSet;
+
+    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return-object v0
 
     :cond_0
-    instance-of p1, p1, Log1;
+    new-instance v9, Ljl8;
 
-    if-nez p1, :cond_1
+    const-string v0, "arg_account_id_override"
 
-    const/4 p1, 0x0
+    invoke-virtual {p3, v0}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
 
-    return p1
+    move-result v0
+
+    invoke-direct {v9, v0}, Ljl8;-><init>(I)V
+
+    sget-object v0, Lpg1;->c:Lpg1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Lpg1;->d:Lyn4;
+
+    invoke-virtual {p2, v0}, Lyn4;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v0, Lmg1;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p3, v1}, Lmg1;-><init>(Landroid/os/Bundle;I)V
+
+    move-object v7, v0
+
+    goto :goto_3
 
     :cond_1
-    return v0
-.end method
+    sget-object v0, Lpg1;->o:Lyn4;
 
-.method public final f()Ly58;
-    .locals 1
+    invoke-virtual {p2, v0}, Lyn4;->equals(Ljava/lang/Object;)Z
 
-    sget-object v0, Log1;->d:Lw58;
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const-string v0, "call_link"
+
+    invoke-virtual {p3, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    const-string v0, "call_title"
+
+    invoke-virtual {p3, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    const-string v0, "call_chat_id"
+
+    invoke-static {v0, p3}, Lmtd;->R(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
+
+    move-result-object v5
+
+    const-string v0, "is_link_call"
+
+    invoke-static {v0, p3}, Lmtd;->P(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    :goto_0
+    move v8, v0
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :goto_1
+    new-instance v4, Lng1;
+
+    invoke-direct/range {v4 .. v9}, Lng1;-><init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;ZLjl8;)V
+
+    :goto_2
+    move-object v7, v4
+
+    goto :goto_3
+
+    :cond_3
+    sget-object v0, Lpg1;->X:Lyn4;
+
+    invoke-virtual {p2, v0}, Lyn4;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    const-string v0, "chat_id"
+
+    invoke-static {v0, p3}, Lmtd;->X(Ljava/lang/String;Landroid/os/Bundle;)J
+
+    move-result-wide v0
+
+    new-instance v4, Lx40;
+
+    const/4 v5, 0x1
+
+    invoke-direct {v4, v0, v1, v5}, Lx40;-><init>(JI)V
+
+    goto :goto_2
+
+    :goto_3
+    new-instance v0, Lgo4;
+
+    const/16 v8, 0x38
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    invoke-direct/range {v0 .. v8}, Lgo4;-><init>(Ljava/lang/String;Lyn4;Landroid/os/Bundle;ILp2;ZLfo4;I)V
 
     return-object v0
-.end method
 
-.method public final getItemId()J
-    .locals 2
+    :cond_4
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    sget-wide v0, Log1;->b:J
+    const-string v1, "invalid route "
 
-    return-wide v0
-.end method
+    invoke-static {v1, p2}, Lo52;->m(Ljava/lang/String;Lyn4;)Ljava/lang/String;
 
-.method public final getTitle()Lqhg;
-    .locals 1
+    move-result-object v1
 
-    sget-object v0, Log1;->c:Llhg;
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    return-object v0
-.end method
-
-.method public final getType()Li0f;
-    .locals 1
-
-    sget-object v0, Log1;->o:Li0f;
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x1553d49d
-
-    return v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    sget v0, Ln6b;->m:I
-
-    return v0
-.end method
-
-.method public final t()I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ShareLink"
-
-    return-object v0
-.end method
-
-.method public final u()I
-    .locals 1
-
-    const/4 v0, 0x3
-
-    return v0
+    throw v0
 .end method

@@ -3,300 +3,257 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvu8;
+.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field public final a:F
+.field public final A0:Lt9e;
 
-.field public final b:Landroid/graphics/Matrix;
+.field public final B0:J
 
-.field public c:Landroid/graphics/Matrix;
+.field public final C0:J
+
+.field public final D0:Lk92;
+
+.field public final X:Ls67;
+
+.field public final Y:Lv9e;
+
+.field public final Z:Lt9e;
+
+.field public final a:Lj80;
+
+.field public final b:Lw8d;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:I
+
+.field public final o:Ln57;
+
+.field public final z0:Lt9e;
 
 
 # direct methods
-.method public constructor <init>(F)V
-    .locals 2
+.method public constructor <init>(Lj80;Lw8d;Ljava/lang/String;ILn57;Ls67;Lv9e;Lt9e;Lt9e;Lt9e;JJLk92;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lt9e;->a:F
+    iput-object p1, p0, Lt9e;->a:Lj80;
 
-    new-instance v0, Landroid/graphics/Matrix;
+    iput-object p2, p0, Lt9e;->b:Lw8d;
 
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+    iput-object p3, p0, Lt9e;->c:Ljava/lang/String;
 
-    iput-object v0, p0, Lt9e;->b:Landroid/graphics/Matrix;
+    iput p4, p0, Lt9e;->d:I
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    iput-object p5, p0, Lt9e;->o:Ln57;
 
-    invoke-virtual {v0, v1, v1}, Landroid/graphics/Matrix;->postScale(FF)Z
+    iput-object p6, p0, Lt9e;->X:Ls67;
 
-    invoke-virtual {v0, p1}, Landroid/graphics/Matrix;->postRotate(F)Z
+    iput-object p7, p0, Lt9e;->Y:Lv9e;
+
+    iput-object p8, p0, Lt9e;->Z:Lt9e;
+
+    iput-object p9, p0, Lt9e;->z0:Lt9e;
+
+    iput-object p10, p0, Lt9e;->A0:Lt9e;
+
+    iput-wide p11, p0, Lt9e;->B0:J
+
+    iput-wide p13, p0, Lt9e;->C0:J
+
+    iput-object p15, p0, Lt9e;->D0:Lk92;
 
     return-void
 .end method
 
+.method public static G(Lt9e;Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lt9e;->X:Ls67;
+
+    invoke-virtual {p0, p1}, Ls67;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    :cond_0
+    return-object p0
+.end method
+
 
 # virtual methods
-.method public final b()Landroid/graphics/Matrix;
+.method public final J()Z
+    .locals 3
+
+    const/16 v0, 0xc8
+
+    const/4 v1, 0x0
+
+    iget v2, p0, Lt9e;->d:I
+
+    if-gt v0, v2, :cond_0
+
+    const/16 v0, 0x12c
+
+    if-ge v2, v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    return v1
+.end method
+
+.method public final close()V
     .locals 2
 
-    iget-object v0, p0, Lt9e;->c:Landroid/graphics/Matrix;
+    iget-object v0, p0, Lt9e;->Y:Lv9e;
 
-    const-string v1, "configure must be called first"
+    if-eqz v0, :cond_0
 
-    invoke-static {v0, v1}, Lh6j;->i(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v0}, Lv9e;->close()V
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "response is not eligible for a body and must not be closed"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final g0()Ls9e;
+    .locals 3
+
+    new-instance v0, Ls9e;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iget-object v1, p0, Lt9e;->a:Lj80;
+
+    iput-object v1, v0, Ls9e;->a:Lj80;
+
+    iget-object v1, p0, Lt9e;->b:Lw8d;
+
+    iput-object v1, v0, Ls9e;->b:Lw8d;
+
+    iget v1, p0, Lt9e;->d:I
+
+    iput v1, v0, Ls9e;->c:I
+
+    iget-object v1, p0, Lt9e;->c:Ljava/lang/String;
+
+    iput-object v1, v0, Ls9e;->d:Ljava/lang/String;
+
+    iget-object v1, p0, Lt9e;->o:Ln57;
+
+    iput-object v1, v0, Ls9e;->e:Ln57;
+
+    iget-object v1, p0, Lt9e;->X:Ls67;
+
+    invoke-virtual {v1}, Ls67;->c()Leyf;
+
+    move-result-object v1
+
+    iput-object v1, v0, Ls9e;->f:Leyf;
+
+    iget-object v1, p0, Lt9e;->Y:Lv9e;
+
+    iput-object v1, v0, Ls9e;->g:Lv9e;
+
+    iget-object v1, p0, Lt9e;->Z:Lt9e;
+
+    iput-object v1, v0, Ls9e;->h:Lt9e;
+
+    iget-object v1, p0, Lt9e;->z0:Lt9e;
+
+    iput-object v1, v0, Ls9e;->i:Lt9e;
+
+    iget-object v1, p0, Lt9e;->A0:Lt9e;
+
+    iput-object v1, v0, Ls9e;->j:Lt9e;
+
+    iget-wide v1, p0, Lt9e;->B0:J
+
+    iput-wide v1, v0, Ls9e;->k:J
+
+    iget-wide v1, p0, Lt9e;->C0:J
+
+    iput-wide v1, v0, Ls9e;->l:J
+
+    iget-object v1, p0, Lt9e;->D0:Lk92;
+
+    iput-object v1, v0, Ls9e;->m:Lk92;
 
     return-object v0
 .end method
 
-.method public final d(II)Z
+.method public final l()Lv9e;
+    .locals 1
+
+    iget-object v0, p0, Lt9e;->Y:Lv9e;
+
+    return-object v0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    invoke-virtual {p0, p1, p2}, Lt9e;->e(II)Llgf;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Response{protocol="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lt9e;->b:Lw8d;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", code="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lt9e;->d:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", message="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lt9e;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", url="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lt9e;->a:Lj80;
+
+    iget-object v1, v1, Lj80;->b:Ljava/lang/Object;
+
+    check-cast v1, Lgg7;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lt9e;->c:Landroid/graphics/Matrix;
-
-    invoke-static {v1}, Lh6j;->h(Ljava/lang/Object;)V
-
-    invoke-virtual {v1}, Landroid/graphics/Matrix;->isIdentity()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget v1, v0, Llgf;->a:I
-
-    if-ne p1, v1, :cond_0
-
-    iget p1, v0, Llgf;->b:I
-
-    if-ne p2, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final e(II)Llgf;
-    .locals 12
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    if-lez p1, :cond_0
-
-    move v2, v1
-
-    goto :goto_0
-
-    :cond_0
-    move v2, v0
-
-    :goto_0
-    const-string v3, "inputWidth must be positive"
-
-    invoke-static {v3, v2}, Lh6j;->a(Ljava/lang/Object;Z)V
-
-    if-lez p2, :cond_1
-
-    move v2, v1
-
-    goto :goto_1
-
-    :cond_1
-    move v2, v0
-
-    :goto_1
-    const-string v3, "inputHeight must be positive"
-
-    invoke-static {v3, v2}, Lh6j;->a(Ljava/lang/Object;Z)V
-
-    new-instance v2, Landroid/graphics/Matrix;
-
-    iget-object v3, p0, Lt9e;->b:Landroid/graphics/Matrix;
-
-    invoke-direct {v2, v3}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
-
-    iput-object v2, p0, Lt9e;->c:Landroid/graphics/Matrix;
-
-    invoke-virtual {v3}, Landroid/graphics/Matrix;->isIdentity()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    new-instance v0, Llgf;
-
-    invoke-direct {v0, p1, p2}, Llgf;-><init>(II)V
-
     return-object v0
-
-    :cond_2
-    int-to-float p1, p1
-
-    int-to-float p2, p2
-
-    div-float v2, p1, p2
-
-    iget-object v3, p0, Lt9e;->c:Landroid/graphics/Matrix;
-
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    invoke-virtual {v3, v2, v4}, Landroid/graphics/Matrix;->preScale(FF)Z
-
-    iget-object v3, p0, Lt9e;->c:Landroid/graphics/Matrix;
-
-    div-float v2, v4, v2
-
-    invoke-virtual {v3, v2, v4}, Landroid/graphics/Matrix;->postScale(FF)Z
-
-    const/4 v2, 0x4
-
-    new-array v3, v2, [F
-
-    fill-array-data v3, :array_0
-
-    new-array v5, v2, [F
-
-    fill-array-data v5, :array_1
-
-    new-array v6, v2, [F
-
-    fill-array-data v6, :array_2
-
-    new-array v7, v2, [F
-
-    fill-array-data v7, :array_3
-
-    filled-new-array {v3, v5, v6, v7}, [[F
-
-    move-result-object v3
-
-    const/4 v5, 0x1
-
-    const v6, 0x7f7fffff    # Float.MAX_VALUE
-
-    move v9, v0
-
-    move v7, v6
-
-    move v8, v7
-
-    move v6, v5
-
-    :goto_2
-    if-ge v9, v2, :cond_3
-
-    aget-object v10, v3, v9
-
-    iget-object v11, p0, Lt9e;->c:Landroid/graphics/Matrix;
-
-    invoke-virtual {v11, v10}, Landroid/graphics/Matrix;->mapPoints([F)V
-
-    aget v11, v10, v0
-
-    invoke-static {v7, v11}, Ljava/lang/Math;->min(FF)F
-
-    move-result v7
-
-    aget v11, v10, v0
-
-    invoke-static {v5, v11}, Ljava/lang/Math;->max(FF)F
-
-    move-result v5
-
-    aget v11, v10, v1
-
-    invoke-static {v8, v11}, Ljava/lang/Math;->min(FF)F
-
-    move-result v8
-
-    aget v10, v10, v1
-
-    invoke-static {v6, v10}, Ljava/lang/Math;->max(FF)F
-
-    move-result v6
-
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_2
-
-    :cond_3
-    sub-float/2addr v5, v7
-
-    const/high16 v0, 0x40000000    # 2.0f
-
-    div-float/2addr v5, v0
-
-    sub-float/2addr v6, v8
-
-    div-float/2addr v6, v0
-
-    iget-object v0, p0, Lt9e;->c:Landroid/graphics/Matrix;
-
-    div-float v1, v4, v5
-
-    div-float/2addr v4, v6
-
-    invoke-virtual {v0, v1, v4}, Landroid/graphics/Matrix;->postScale(FF)Z
-
-    new-instance v0, Llgf;
-
-    mul-float/2addr p1, v5
-
-    invoke-static {p1}, Ljava/lang/Math;->round(F)I
-
-    move-result p1
-
-    mul-float/2addr p2, v6
-
-    invoke-static {p2}, Ljava/lang/Math;->round(F)I
-
-    move-result p2
-
-    invoke-direct {v0, p1, p2}, Llgf;-><init>(II)V
-
-    return-object v0
-
-    :array_0
-    .array-data 4
-        -0x40800000    # -1.0f
-        -0x40800000    # -1.0f
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
-
-    :array_1
-    .array-data 4
-        -0x40800000    # -1.0f
-        0x3f800000    # 1.0f
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
-
-    :array_2
-    .array-data 4
-        0x3f800000    # 1.0f
-        -0x40800000    # -1.0f
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
-
-    :array_3
-    .array-data 4
-        0x3f800000    # 1.0f
-        0x3f800000    # 1.0f
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
 .end method

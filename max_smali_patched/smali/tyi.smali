@@ -1,50 +1,62 @@
-.class public final Ltyi;
+.class public final synthetic Ltyi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Lcom/my/tracker/core/EngineCore$EventPacker;
 
 
-# static fields
-.field public static final a:Ltyi;
+# instance fields
+.field public final synthetic a:Lcom/my/tracker/userlifecycle/o/a;
+
+.field public final synthetic b:Ljava/util/Map;
+
+.field public final synthetic c:Z
+
+.field public final synthetic d:Ljava/lang/String;
+
+.field public final synthetic o:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lcom/my/tracker/userlifecycle/o/a;Ljava/util/Map;ZLjava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Ltyi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ltyi;->a:Lcom/my/tracker/userlifecycle/o/a;
 
-    sput-object v0, Ltyi;->a:Ltyi;
+    iput-object p2, p0, Ltyi;->b:Ljava/util/Map;
 
-    new-instance v0, Lbri;
+    iput-boolean p3, p0, Ltyi;->c:Z
 
-    const/4 v1, 0x1
+    iput-object p4, p0, Ltyi;->d:Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
-
-    const-class v1, Lpri;
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    iput-object p5, p0, Ltyi;->o:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final invoke(Lcom/my/tracker/core/EngineCore$InsertEventTools;)[B
+    .locals 6
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v3, p0, Ltyi;->d:Ljava/lang/String;
+
+    iget-object v4, p0, Ltyi;->o:Ljava/lang/String;
+
+    iget-object v0, p0, Ltyi;->a:Lcom/my/tracker/userlifecycle/o/a;
+
+    iget-object v1, p0, Ltyi;->b:Ljava/util/Map;
+
+    iget-boolean v2, p0, Ltyi;->c:Z
+
+    move-object v5, p1
+
+    invoke-static/range {v0 .. v5}, Lcom/my/tracker/userlifecycle/o/a;->b(Lcom/my/tracker/userlifecycle/o/a;Ljava/util/Map;ZLjava/lang/String;Ljava/lang/String;Lcom/my/tracker/core/EngineCore$InsertEventTools;)[B
 
     move-result-object p1
 
-    throw p1
+    return-object p1
 .end method

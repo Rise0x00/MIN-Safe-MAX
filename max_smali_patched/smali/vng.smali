@@ -1,55 +1,62 @@
-.class public abstract Lvng;
+.class public interface abstract Lvng;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final f0:Ljava/util/List;
+
+.field public static final g0:Lxm0;
+
+
 # direct methods
-.method public static a(Landroid/view/View;)Landroid/window/OnBackInvokedDispatcher;
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 11
 
-    invoke-virtual {p0}, Landroid/view/View;->findOnBackInvokedDispatcher()Landroid/window/OnBackInvokedDispatcher;
+    const-string v9, "login.flood"
 
-    move-result-object p0
+    const-string v10, "login.blocked"
 
-    return-object p0
-.end method
+    const-string v0, "session.state"
 
-.method public static b(Ljava/lang/Runnable;)Landroid/window/OnBackInvokedCallback;
-    .locals 2
+    const-string v1, "proto.state"
 
-    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v2, "proto.payload"
 
-    new-instance v0, Lco;
+    const-string v3, "internal"
 
-    const/4 v1, 0x2
+    const-string v4, "service.unavailable"
 
-    invoke-direct {v0, v1, p0}, Lco;-><init>(ILjava/lang/Object;)V
+    const-string v5, "service.timeout"
 
-    return-object v0
-.end method
+    const-string v6, "proto.ver"
 
-.method public static c(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+    const-string v7, "error.call.history.inconsistency"
 
-    check-cast p0, Landroid/window/OnBackInvokedDispatcher;
+    const-string v8, "errors.event.unavailable"
 
-    const v0, 0xf4240
+    filled-new-array/range {v0 .. v10}, [Ljava/lang/String;
 
-    check-cast p1, Landroid/window/OnBackInvokedCallback;
+    move-result-object v0
 
-    invoke-interface {p0, v0, p1}, Landroid/window/OnBackInvokedDispatcher;->registerOnBackInvokedCallback(ILandroid/window/OnBackInvokedCallback;)V
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public static d(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    sput-object v0, Lvng;->f0:Ljava/util/List;
 
-    check-cast p0, Landroid/window/OnBackInvokedDispatcher;
+    new-instance v0, Lxm0;
 
-    check-cast p1, Landroid/window/OnBackInvokedCallback;
+    const/16 v1, 0x14
 
-    invoke-interface {p0, p1}, Landroid/window/OnBackInvokedDispatcher;->unregisterOnBackInvokedCallback(Landroid/window/OnBackInvokedCallback;)V
+    invoke-direct {v0, v1}, Lxm0;-><init>(I)V
+
+    sput-object v0, Lvng;->g0:Lxm0;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract c(IJF)J
 .end method

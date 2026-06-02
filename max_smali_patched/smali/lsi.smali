@@ -1,10 +1,3 @@
-.class public abstract Llsi;
-.super Lcpi;
+.class public final Llsi;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lnsi;
-
-
-# static fields
-.field public static final synthetic d:I

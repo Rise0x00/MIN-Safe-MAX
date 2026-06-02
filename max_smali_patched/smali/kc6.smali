@@ -1,19 +1,51 @@
 .class public final Lkc6;
-.super Ljava/lang/Object;
+.super Lz84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic X:Lxwa;
+
+.field public Y:I
+
+.field public d:Lxwa;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(Lxwa;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lkc6;->X:Lxwa;
 
-    iput-boolean p1, p0, Lkc6;->a:Z
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lkc6;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lkc6;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lkc6;->Y:I
+
+    iget-object p1, p0, Lkc6;->X:Lxwa;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lxwa;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

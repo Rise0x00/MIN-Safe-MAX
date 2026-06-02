@@ -1,94 +1,47 @@
-.class public final Ldr1;
+.class public interface abstract Ldr1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lnue;
-
-
-# direct methods
-.method public constructor <init>(Lmue;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ldr1;->a:Lnue;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ldr1;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ldr1;
-
-    iget-object v1, p0, Ldr1;->a:Lnue;
-
-    iget-object p1, p1, Ldr1;->a:Lnue;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+.method public abstract a()Z
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ldr1;->a:Lnue;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
+.method public abstract b()Z
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public abstract c()J
+.end method
 
-    new-instance v0, Ljava/lang/StringBuilder;
+.method public abstract d()Z
+.end method
 
-    const-string v1, "RemovedParams(roomId="
+.method public abstract e()Ljava/lang/Long;
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public abstract f()Ljava/lang/String;
+.end method
 
-    iget-object v1, p0, Ldr1;->a:Lnue;
+.method public abstract g()I
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method public abstract getConversationId()Ljava/lang/String;
+.end method
 
-    const-string v1, ")"
+.method public abstract h()Ljava/lang/CharSequence;
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public abstract i()Ljava/lang/Long;
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.method public abstract j()Z
+.end method
 
-    move-result-object v0
+.method public abstract k()J
+.end method
 
-    return-object v0
+.method public abstract l()Ljava/lang/String;
+.end method
+
+.method public abstract m()Z
 .end method

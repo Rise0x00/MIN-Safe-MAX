@@ -2,141 +2,140 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:J
+.field public X:J
 
-.field public final b:I
+.field public final synthetic Y:Lone;
+
+.field public final a:Ljava/lang/Object;
+
+.field public final b:Lrb2;
+
+.field public final c:J
+
+.field public d:J
+
+.field public o:J
 
 
 # direct methods
-.method public constructor <init>(JI)V
+.method public constructor <init>(Lone;JLjava/lang/Runnable;JLrb2;J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lnne;->a:J
+    iput-object p1, p0, Lnne;->Y:Lone;
 
-    iput p3, p0, Lnne;->b:I
+    iput-object p4, p0, Lnne;->a:Ljava/lang/Object;
+
+    iput-object p7, p0, Lnne;->b:Lrb2;
+
+    iput-wide p8, p0, Lnne;->c:J
+
+    iput-wide p5, p0, Lnne;->o:J
+
+    iput-wide p2, p0, Lnne;->X:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final run()V
+    .locals 15
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lnne;->a:Ljava/lang/Object;
 
-    goto :goto_1
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    :cond_0
-    instance-of v0, p1, Lnne;
+    iget-object v0, p0, Lnne;->b:Lrb2;
 
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lnne;
-
-    iget-wide v0, p0, Lnne;->a:J
-
-    iget-wide v2, p1, Lnne;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lnne;->b:I
-
-    iget p1, p1, Lnne;->b:I
-
-    if-eq v0, p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lnne;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lnne;->b:I
-
-    invoke-static {v1}, Lt02;->t(I)I
+    invoke-virtual {v0}, Lrb2;->f()Z
 
     move-result v1
 
-    add-int/2addr v1, v0
+    if-nez v1, :cond_2
 
-    return v1
-.end method
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    iget-object v2, p0, Lnne;->Y:Lone;
 
-    const-string v0, "SelectedMention(id="
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v1, ", selectedMentionType="
+    invoke-static {v1}, Lone;->a(Ljava/util/concurrent/TimeUnit;)J
 
-    iget-wide v2, p0, Lnne;->a:J
+    move-result-wide v3
 
-    invoke-static {v2, v3, v0, v1}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-wide v5, Lqne;->b:J
 
-    move-result-object v0
+    add-long v7, v3, v5
 
-    const/4 v1, 0x1
+    iget-wide v9, p0, Lnne;->o:J
 
-    iget v2, p0, Lnne;->b:I
+    cmp-long v7, v7, v9
 
-    if-eq v2, v1, :cond_1
+    const-wide/16 v11, 0x1
 
-    const/4 v1, 0x2
+    iget-wide v13, p0, Lnne;->c:J
 
-    if-eq v2, v1, :cond_0
+    if-ltz v7, :cond_1
 
-    const-string v1, "null"
+    add-long/2addr v9, v13
+
+    add-long/2addr v9, v5
+
+    cmp-long v5, v3, v9
+
+    if-ltz v5, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const-string v1, "NAME"
+    iget-wide v5, p0, Lnne;->X:J
 
-    goto :goto_0
+    iget-wide v7, p0, Lnne;->d:J
+
+    add-long/2addr v7, v11
+
+    iput-wide v7, p0, Lnne;->d:J
+
+    mul-long/2addr v7, v13
+
+    add-long/2addr v7, v5
+
+    goto :goto_1
 
     :cond_1
-    const-string v1, "SHORTLINK"
-
     :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    add-long v7, v3, v13
 
-    const-string v1, ")"
+    iget-wide v5, p0, Lnne;->d:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    add-long/2addr v5, v11
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iput-wide v5, p0, Lnne;->d:J
 
-    move-result-object v0
+    mul-long/2addr v13, v5
 
-    return-object v0
+    sub-long v5, v7, v13
+
+    iput-wide v5, p0, Lnne;->X:J
+
+    :goto_1
+    iput-wide v3, p0, Lnne;->o:J
+
+    sub-long/2addr v7, v3
+
+    invoke-virtual {v2, p0, v7, v8, v1}, Lone;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ls45;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lw45;->d(Ljava/util/concurrent/atomic/AtomicReference;Ls45;)Z
+
+    :cond_2
+    return-void
 .end method

@@ -1,8 +1,3 @@
-.class public interface abstract Ljhh;
-.super Ljava/lang/Object;
+.class public abstract Ljhh;
+.super Lio0;
 .source "SourceFile"
-
-
-# virtual methods
-.method public abstract d(JJLoj6;Landroid/media/MediaFormat;)V
-.end method

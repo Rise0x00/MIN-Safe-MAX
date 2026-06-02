@@ -1,114 +1,88 @@
 .class public final Lhkg;
-.super Lhid;
+.super Lp2;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Z
-
-.field public final c:Z
+.field public final synthetic d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(I)V
     .locals 0
 
+    iput p1, p0, Lhkg;->d:I
+
+    packed-switch p1, :pswitch_data_0
+
+    .line 2
+    sget-object p1, Lhd5;->d:Lhd5;
+
+    invoke-direct {p0, p1}, Lp2;-><init>(Lhd5;)V
+
     return-void
+
+    .line 3
+    :pswitch_0
+    sget-object p1, Lhd5;->d:Lhd5;
+
+    invoke-direct {p0, p1}, Lp2;-><init>(Lhd5;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public constructor <init>()V
+.method public synthetic constructor <init>(Lhd5;)V
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    .line 2
-    iput-boolean v0, p0, Lhkg;->b:Z
-
-    .line 3
-    iput-boolean v0, p0, Lhkg;->c:Z
-
-    return-void
-.end method
-
-.method public constructor <init>(Z)V
-    .locals 1
-
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     const/4 v0, 0x1
 
-    .line 5
-    iput-boolean v0, p0, Lhkg;->b:Z
+    iput v0, p0, Lhkg;->d:I
 
-    .line 6
-    iput-boolean p1, p0, Lhkg;->c:Z
+    invoke-direct {p0, p1}, Lp2;-><init>(Lhd5;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final w()J
     .locals 2
 
-    instance-of v0, p1, Lhkg;
+    iget v0, p0, Lhkg;->d:I
 
-    if-nez v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    goto :goto_0
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    :cond_0
-    check-cast p1, Lhkg;
+    move-result-wide v0
 
-    iget-boolean v0, p0, Lhkg;->c:Z
+    return-wide v0
 
-    iget-boolean v1, p1, Lhkg;->c:Z
+    :pswitch_0
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    if-ne v0, v1, :cond_1
+    move-result-wide v0
 
-    iget-boolean v0, p0, Lhkg;->b:Z
+    return-wide v0
 
-    iget-boolean p1, p1, Lhkg;->b:Z
+    :pswitch_1
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    if-ne v0, p1, :cond_1
+    move-result-wide v0
 
-    const/4 p1, 0x1
+    return-wide v0
 
-    return p1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-boolean v0, p0, Lhkg;->b:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    iget-boolean v1, p0, Lhkg;->c:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

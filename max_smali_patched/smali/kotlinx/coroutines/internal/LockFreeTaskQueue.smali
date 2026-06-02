@@ -25,7 +25,7 @@
         "singleConsumer",
         "<init>",
         "(Z)V",
-        "Lb3h;",
+        "Lyeh;",
         "close",
         "()V",
         "element",
@@ -38,7 +38,7 @@
         "transform",
         "",
         "map",
-        "(Lnq6;)Ljava/util/List;",
+        "(Lzs6;)Ljava/util/List;",
         "isClosed",
         "()Z",
         "isEmpty",
@@ -121,14 +121,14 @@
     return-object v0
 .end method
 
-.method private final synthetic loop$atomicfu$ATOMIC_FIELD_UPDATER$Any(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/lang/Object;Lnq6;)V
+.method private final synthetic loop$atomicfu$ATOMIC_FIELD_UPDATER$Any(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/lang/Object;Lzs6;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;",
             "Ljava/lang/Object;",
-            "Lnq6;",
+            "Lzs6;",
             ")V"
         }
     .end annotation
@@ -138,7 +138,7 @@
 
     move-result-object v0
 
-    invoke-interface {p3, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v0}, Lzs6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method
@@ -225,7 +225,7 @@
 .end method
 
 .method public final close()V
-    .locals 5
+    .locals 4
 
     invoke-static {}, Lkotlinx/coroutines/internal/LockFreeTaskQueue;->get_cur$volatile$FU()Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
@@ -255,21 +255,7 @@
 
     move-result-object v3
 
-    :cond_1
-    invoke-virtual {v2, p0, v1, v3}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {v2, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    if-eq v4, v1, :cond_1
+    invoke-static {v2, p0, v1, v3}, Lop7;->j(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Lkotlinx/coroutines/internal/LockFreeTaskQueue;Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;)V
 
     goto :goto_0
 .end method
@@ -334,14 +320,14 @@
     return v0
 .end method
 
-.method public final map(Lnq6;)Ljava/util/List;
+.method public final map(Lzs6;)Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<R:",
             "Ljava/lang/Object;",
             ">(",
-            "Lnq6;",
+            "Lzs6;",
             ")",
             "Ljava/util/List<",
             "TR;>;"
@@ -358,7 +344,7 @@
 
     check-cast v0, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;
 
-    invoke-virtual {v0, p1}, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;->map(Lnq6;)Ljava/util/List;
+    invoke-virtual {v0, p1}, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore;->map(Lzs6;)Ljava/util/List;
 
     move-result-object p1
 

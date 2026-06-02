@@ -1,154 +1,52 @@
 .class public final Ln5i;
-.super Lp6g;
+.super Landroid/view/ViewGroup$LayoutParams;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public a:Z
 
-.field public final synthetic Y:Lo5i;
-
-.field public final synthetic Z:Le5i;
-
-.field public o:I
-
-.field public final synthetic t0:Lk4i;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lk4i;Le5i;Lo5i;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p3, p0, Ln5i;->Y:Lo5i;
+    const/4 v0, -0x1
 
-    iput-object p2, p0, Ln5i;->Z:Le5i;
-
-    iput-object p1, p0, Ln5i;->t0:Lk4i;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 1
+    invoke-direct {p0, v0, v0}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
     return-void
 .end method
 
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    .line 2
+    invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    check-cast p1, Ljava/lang/Throwable;
+    .line 3
+    sget-object v0, Landroidx/viewpager/widget/ViewPager;->c1:[I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ln5i;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ln5i;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Ln5i;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    const/4 p2, 0x0
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
+    const/16 v0, 0x30
 
-    new-instance v0, Ln5i;
+    .line 4
+    invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getInteger(II)I
 
-    iget-object v1, p0, Ln5i;->Z:Le5i;
+    move-result p2
 
-    iget-object v2, p0, Ln5i;->t0:Lk4i;
+    iput p2, p0, Ln5i;->b:I
 
-    iget-object v3, p0, Ln5i;->Y:Lo5i;
+    .line 5
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
-    invoke-direct {v0, v2, v1, v3, p2}, Ln5i;-><init>(Lk4i;Le5i;Lo5i;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Ln5i;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget-object v0, p0, Ln5i;->X:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    iget v1, p0, Ln5i;->o:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v2, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-static {v0}, Lo5i;->e(Ljava/lang/Throwable;)Lb08;
-
-    move-result-object v3
-
-    iget-object p1, p0, Ln5i;->Y:Lo5i;
-
-    invoke-virtual {p1}, Lo5i;->f()Lol3;
-
-    move-result-object v1
-
-    iget-object p1, p1, Lo5i;->d:Lyw0;
-
-    iget-object v0, p0, Ln5i;->t0:Lk4i;
-
-    iget-object v5, v0, Lk4i;->c:Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Ln5i;->X:Ljava/lang/Object;
-
-    iput v2, p0, Ln5i;->o:I
-
-    iget-object v4, p0, Ln5i;->Z:Le5i;
-
-    move-object v6, p0
-
-    move-object v2, p1
-
-    invoke-virtual/range {v1 .. v6}, Lol3;->a(Lmb2;Lb08;Lf6i;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-void
 .end method

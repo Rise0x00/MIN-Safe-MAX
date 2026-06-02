@@ -1,71 +1,888 @@
-.class public abstract Lwz8;
+.class public final Lwz8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Luz8;
+.implements Ls45;
+.implements Lb3b;
+.implements Lirf;
 
-# static fields
-.field public static final a:Ljava/lang/Object;
 
-.field public static final b:Ljava/lang/Object;
+# instance fields
+.field public final synthetic a:I
+
+.field public b:Ls45;
+
+.field public final c:Ljava/lang/Object;
+
+.field public d:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lw08;
+    iput p2, p0, Lwz8;->a:I
 
-    const/16 v1, 0x16
+    iput-object p1, p0, Lwz8;->c:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Lw08;-><init>(I)V
+    iput-object p3, p0, Lwz8;->d:Ljava/lang/Object;
 
-    const/4 v1, 0x3
-
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object v0
-
-    sput-object v0, Lwz8;->a:Ljava/lang/Object;
-
-    new-instance v0, Lw08;
-
-    const/16 v2, 0x17
-
-    invoke-direct {v0, v2}, Lw08;-><init>(I)V
-
-    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
-
-    move-result-object v0
-
-    sput-object v0, Lwz8;->b:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static final a()[F
-    .locals 1
 
-    sget-object v0, Lwz8;->b:Ljava/lang/Object;
+# virtual methods
+.method public a(Ljava/lang/Object;)V
+    .locals 2
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    iget v0, p0, Lwz8;->a:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v0, [F
+    iget-object v0, p0, Lwz8;->c:Ljava/lang/Object;
 
-    return-object v0
+    check-cast v0, Lirf;
+
+    invoke-interface {v0, p1}, Lirf;->a(Ljava/lang/Object;)V
+
+    :try_start_0
+    iget-object p1, p0, Lwz8;->d:Ljava/lang/Object;
+
+    check-cast p1, Lkja;
+
+    invoke-virtual {p1}, Lkja;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Lmzj;->c(Ljava/lang/Throwable;)V
+
+    invoke-static {p1}, Lq98;->J(Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    sget-object v0, Lw45;->a:Lw45;
+
+    iput-object v0, p0, Lwz8;->b:Ls45;
+
+    iget-object v0, p0, Lwz8;->c:Ljava/lang/Object;
+
+    check-cast v0, Lirf;
+
+    invoke-interface {v0, p1}, Lirf;->a(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    sget-object v1, Lw45;->a:Lw45;
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    :try_start_1
+    iget-object v0, p0, Lwz8;->d:Ljava/lang/Object;
+
+    check-cast v0, Lxz8;
+
+    iget-object v0, v0, Lxz8;->b:Ltz3;
+
+    invoke-interface {v0, p1}, Ltz3;->accept(Ljava/lang/Object;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    iput-object v1, p0, Lwz8;->b:Ls45;
+
+    iget-object v0, p0, Lwz8;->c:Ljava/lang/Object;
+
+    check-cast v0, Luz8;
+
+    invoke-interface {v0, p1}, Luz8;->a(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p1
+
+    invoke-static {p1}, Lmzj;->c(Ljava/lang/Throwable;)V
+
+    invoke-virtual {p0, p1}, Lwz8;->d(Ljava/lang/Throwable;)V
+
+    :goto_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public static final b()Landroid/graphics/Path;
+.method public b()V
+    .locals 3
+
+    iget v0, p0, Lwz8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lwz8;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/Collection;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lwz8;->d:Ljava/lang/Object;
+
+    iget-object v1, p0, Lwz8;->c:Ljava/lang/Object;
+
+    check-cast v1, Lb3b;
+
+    invoke-interface {v1, v0}, Lb3b;->e(Ljava/lang/Object;)V
+
+    invoke-interface {v1}, Lb3b;->b()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lwz8;->c:Ljava/lang/Object;
+
+    check-cast v0, Lb3b;
+
+    invoke-interface {v0}, Lb3b;->b()V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    sget-object v1, Lw45;->a:Lw45;
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iput-object v1, p0, Lwz8;->b:Ls45;
+
+    iget-object v0, p0, Lwz8;->c:Ljava/lang/Object;
+
+    check-cast v0, Lb3b;
+
+    invoke-interface {v0}, Lb3b;->b()V
+
+    :goto_0
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lwz8;->c:Ljava/lang/Object;
+
+    check-cast v0, Lirf;
+
+    sget-object v1, Lw45;->a:Lw45;
+
+    iput-object v1, p0, Lwz8;->b:Ls45;
+
+    iget-object v1, p0, Lwz8;->d:Ljava/lang/Object;
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0, v1}, Lirf;->a(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_1
+    new-instance v1, Ljava/util/NoSuchElementException;
+
+    const-string v2, "The MaybeSource is empty"
+
+    invoke-direct {v1, v2}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+
+    invoke-interface {v0, v1}, Lirf;->onError(Ljava/lang/Throwable;)V
+
+    :goto_1
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    sget-object v1, Lw45;->a:Lw45;
+
+    if-ne v0, v1, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    :try_start_0
+    iget-object v0, p0, Lwz8;->d:Ljava/lang/Object;
+
+    check-cast v0, Lxz8;
+
+    iget-object v0, v0, Lxz8;->d:Lx7;
+
+    invoke-interface {v0}, Lx7;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iput-object v1, p0, Lwz8;->b:Ls45;
+
+    iget-object v0, p0, Lwz8;->c:Ljava/lang/Object;
+
+    check-cast v0, Luz8;
+
+    invoke-interface {v0}, Luz8;->b()V
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lmzj;->c(Ljava/lang/Throwable;)V
+
+    invoke-virtual {p0, v0}, Lwz8;->d(Ljava/lang/Throwable;)V
+
+    :goto_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final c(Ls45;)V
+    .locals 2
+
+    iget v0, p0, Lwz8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    invoke-static {v0, p1}, Lw45;->l(Ls45;Ls45;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Lwz8;->b:Ls45;
+
+    iget-object p1, p0, Lwz8;->c:Ljava/lang/Object;
+
+    check-cast p1, Lirf;
+
+    invoke-interface {p1, p0}, Lirf;->c(Ls45;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    invoke-static {v0, p1}, Lw45;->l(Ls45;Ls45;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iput-object p1, p0, Lwz8;->b:Ls45;
+
+    iget-object p1, p0, Lwz8;->c:Ljava/lang/Object;
+
+    check-cast p1, Lb3b;
+
+    invoke-interface {p1, p0}, Lb3b;->c(Ls45;)V
+
+    :cond_1
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    invoke-static {v0, p1}, Lw45;->l(Ls45;Ls45;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iput-object p1, p0, Lwz8;->b:Ls45;
+
+    iget-object p1, p0, Lwz8;->c:Ljava/lang/Object;
+
+    check-cast p1, Lb3b;
+
+    invoke-interface {p1, p0}, Lb3b;->c(Ls45;)V
+
+    :cond_2
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    invoke-static {v0, p1}, Lw45;->l(Ls45;Ls45;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iput-object p1, p0, Lwz8;->b:Ls45;
+
+    iget-object p1, p0, Lwz8;->c:Ljava/lang/Object;
+
+    check-cast p1, Lb3b;
+
+    invoke-interface {p1, p0}, Lb3b;->c(Ls45;)V
+
+    :cond_3
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    invoke-static {v0, p1}, Lw45;->l(Ls45;Ls45;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    iput-object p1, p0, Lwz8;->b:Ls45;
+
+    iget-object p1, p0, Lwz8;->c:Ljava/lang/Object;
+
+    check-cast p1, Lirf;
+
+    invoke-interface {p1, p0}, Lirf;->c(Ls45;)V
+
+    :cond_4
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Lwz8;->c:Ljava/lang/Object;
+
+    check-cast v0, Luz8;
+
+    iget-object v1, p0, Lwz8;->b:Ls45;
+
+    invoke-static {v1, p1}, Lw45;->l(Ls45;Ls45;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    iput-object p1, p0, Lwz8;->b:Ls45;
+
+    invoke-interface {v0, p0}, Luz8;->c(Ls45;)V
+
+    :cond_5
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public d(Ljava/lang/Throwable;)V
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lwz8;->d:Ljava/lang/Object;
+
+    check-cast v0, Lxz8;
+
+    iget-object v0, v0, Lxz8;->c:Ltz3;
+
+    invoke-interface {v0, p1}, Ltz3;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lmzj;->c(Ljava/lang/Throwable;)V
+
+    new-instance v1, Lio/reactivex/rxjava3/exceptions/CompositeException;
+
+    filled-new-array {p1, v0}, [Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
+
+    move-object p1, v1
+
+    :goto_0
+    sget-object v0, Lw45;->a:Lw45;
+
+    iput-object v0, p0, Lwz8;->b:Ls45;
+
+    iget-object v0, p0, Lwz8;->c:Ljava/lang/Object;
+
+    check-cast v0, Luz8;
+
+    invoke-interface {v0, p1}, Luz8;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final dispose()V
     .locals 1
 
-    sget-object v0, Lwz8;->a:Ljava/lang/Object;
+    iget v0, p0, Lwz8;->a:I
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object v0, p0, Lwz8;->b:Ls45;
 
-    check-cast v0, Landroid/graphics/Path;
+    invoke-interface {v0}, Ls45;->dispose()V
 
-    return-object v0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    invoke-interface {v0}, Ls45;->dispose()V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    invoke-interface {v0}, Ls45;->dispose()V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    invoke-interface {v0}, Ls45;->dispose()V
+
+    sget-object v0, Lw45;->a:Lw45;
+
+    iput-object v0, p0, Lwz8;->b:Ls45;
+
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    invoke-interface {v0}, Ls45;->dispose()V
+
+    sget-object v0, Lw45;->a:Lw45;
+
+    iput-object v0, p0, Lwz8;->b:Ls45;
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    invoke-interface {v0}, Ls45;->dispose()V
+
+    sget-object v0, Lw45;->a:Lw45;
+
+    iput-object v0, p0, Lwz8;->b:Ls45;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public e(Ljava/lang/Object;)V
+    .locals 3
+
+    iget v0, p0, Lwz8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lwz8;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/Collection;
+
+    invoke-interface {v0, p1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lwz8;->c:Ljava/lang/Object;
+
+    check-cast v0, Lb3b;
+
+    invoke-interface {v0, p1}, Lb3b;->e(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    sget-object v1, Lw45;->a:Lw45;
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lwz8;->d:Ljava/lang/Object;
+
+    check-cast v0, Lot6;
+
+    invoke-interface {v0, p1}, Lot6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Iterable;
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+
+    iget-object v0, p0, Lwz8;->c:Ljava/lang/Object;
+
+    check-cast v0, Lb3b;
+
+    :goto_0
+    :try_start_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    if-eqz v1, :cond_1
+
+    :try_start_2
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    const-string v2, "The iterator returned a null value"
+
+    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-interface {v0, v1}, Lb3b;->e(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Lmzj;->c(Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    invoke-interface {v0}, Ls45;->dispose()V
+
+    invoke-virtual {p0, p1}, Lwz8;->onError(Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p1
+
+    invoke-static {p1}, Lmzj;->c(Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    invoke-interface {v0}, Ls45;->dispose()V
+
+    invoke-virtual {p0, p1}, Lwz8;->onError(Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :catchall_2
+    move-exception p1
+
+    invoke-static {p1}, Lmzj;->c(Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    invoke-interface {v0}, Ls45;->dispose()V
+
+    invoke-virtual {p0, p1}, Lwz8;->onError(Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    iget v0, p0, Lwz8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    invoke-interface {v0}, Ls45;->f()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    invoke-interface {v0}, Ls45;->f()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_1
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    invoke-interface {v0}, Ls45;->f()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_2
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    invoke-interface {v0}, Ls45;->f()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_3
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    invoke-interface {v0}, Ls45;->f()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_4
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    invoke-interface {v0}, Ls45;->f()Z
+
+    move-result v0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 3
+
+    iget v0, p0, Lwz8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lwz8;->c:Ljava/lang/Object;
+
+    check-cast v0, Lirf;
+
+    invoke-interface {v0, p1}, Lirf;->onError(Ljava/lang/Throwable;)V
+
+    :try_start_0
+    iget-object p1, p0, Lwz8;->d:Ljava/lang/Object;
+
+    check-cast p1, Lkja;
+
+    invoke-virtual {p1}, Lkja;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Lmzj;->c(Ljava/lang/Throwable;)V
+
+    invoke-static {p1}, Lq98;->J(Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lwz8;->d:Ljava/lang/Object;
+
+    iget-object v0, p0, Lwz8;->c:Ljava/lang/Object;
+
+    check-cast v0, Lb3b;
+
+    invoke-interface {v0, p1}, Lb3b;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lwz8;->c:Ljava/lang/Object;
+
+    check-cast v0, Lb3b;
+
+    :try_start_1
+    iget-object v1, p0, Lwz8;->d:Ljava/lang/Object;
+
+    check-cast v1, Leu6;
+
+    iget-object v1, v1, Leu6;->a:Ljava/lang/Object;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Ljava/lang/NullPointerException;
+
+    const-string v2, "The supplied value is null"
+
+    invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    invoke-interface {v0, v1}, Lb3b;->onError(Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :cond_0
+    invoke-interface {v0, v1}, Lb3b;->e(Ljava/lang/Object;)V
+
+    invoke-interface {v0}, Lb3b;->b()V
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception v1
+
+    invoke-static {v1}, Lmzj;->c(Ljava/lang/Throwable;)V
+
+    new-instance v2, Lio/reactivex/rxjava3/exceptions/CompositeException;
+
+    filled-new-array {p1, v1}, [Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    invoke-direct {v2, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
+
+    invoke-interface {v0, v2}, Lb3b;->onError(Ljava/lang/Throwable;)V
+
+    :goto_1
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    sget-object v1, Lw45;->a:Lw45;
+
+    if-ne v0, v1, :cond_1
+
+    invoke-static {p1}, Lq98;->J(Ljava/lang/Throwable;)V
+
+    goto :goto_2
+
+    :cond_1
+    iput-object v1, p0, Lwz8;->b:Ls45;
+
+    iget-object v0, p0, Lwz8;->c:Ljava/lang/Object;
+
+    check-cast v0, Lb3b;
+
+    invoke-interface {v0, p1}, Lb3b;->onError(Ljava/lang/Throwable;)V
+
+    :goto_2
+    return-void
+
+    :pswitch_3
+    sget-object v0, Lw45;->a:Lw45;
+
+    iput-object v0, p0, Lwz8;->b:Ls45;
+
+    iget-object v0, p0, Lwz8;->c:Ljava/lang/Object;
+
+    check-cast v0, Lirf;
+
+    invoke-interface {v0, p1}, Lirf;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Lwz8;->b:Ls45;
+
+    sget-object v1, Lw45;->a:Lw45;
+
+    if-ne v0, v1, :cond_2
+
+    invoke-static {p1}, Lq98;->J(Ljava/lang/Throwable;)V
+
+    goto :goto_3
+
+    :cond_2
+    invoke-virtual {p0, p1}, Lwz8;->d(Ljava/lang/Throwable;)V
+
+    :goto_3
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

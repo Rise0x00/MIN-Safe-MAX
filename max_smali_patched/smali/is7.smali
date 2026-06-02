@@ -1,89 +1,100 @@
-.class public abstract Lis7;
-.super Ljava/lang/Object;
+.class public final Lis7;
+.super Lav9;
 .source "SourceFile"
 
 
-# static fields
-.field public static a:Landroid/content/Context;
-
-.field public static b:Ljava/lang/Boolean;
-
-.field public static final c:[Ljava/lang/String;
+# instance fields
+.field public a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 11
+.method public constructor <init>()V
+    .locals 1
 
-    const-string v9, "MSM8917"
+    invoke-direct {p0}, Lav9;-><init>()V
 
-    const-string v10, "SDM439"
+    const/4 v0, 0x0
 
-    const-string v0, "EXYNOS 850"
+    iput v0, p0, Lis7;->a:I
 
-    const-string v1, "EXYNOS 7872"
+    const/4 v0, -0x1
 
-    const-string v2, "EXYNOS 7880"
-
-    const-string v3, "EXYNOS 7870"
-
-    const-string v4, "MSM8953"
-
-    const-string v5, "MSM8937"
-
-    const-string v6, "MSM8940"
-
-    const-string v7, "MSM8992"
-
-    const-string v8, "MSM8952"
-
-    filled-new-array/range {v0 .. v10}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lis7;->c:[Ljava/lang/String;
+    iput v0, p0, Lav9;->cachedSize:I
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;I)I
-    .locals 1
 
-    const v0, 0x1030001
-
-    filled-new-array {p1}, [I
-
-    move-result-object p1
-
-    invoke-virtual {p0, v0, p1}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
-
-    move-result-object p0
-
-    const/4 p1, 0x0
-
-    const/4 v0, -0x1
-
-    invoke-virtual {p0, p1, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result p1
-
-    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
-
-    return p1
-.end method
-
-.method public static final b(Lr4h;)V
+# virtual methods
+.method public final computeSerializedSize()I
     .locals 2
 
-    new-instance v0, Lffe;
+    iget v0, p0, Lis7;->a:I
 
-    const/16 v1, 0x11
-
-    invoke-direct {v0, v1}, Lffe;-><init>(I)V
+    if-eqz v0, :cond_0
 
     const/4 v1, 0x1
 
-    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
+    invoke-static {v1, v0}, Lhh3;->n(II)I
 
+    move-result v0
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final mergeFrom(Lgh3;)Lav9;
+    .locals 2
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lgh3;->s()I
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/16 v1, 0x8
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Lgh3;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Lgh3;->p()I
+
+    move-result v0
+
+    iput v0, p0, Lis7;->a:I
+
+    goto :goto_0
+
+    :cond_2
+    :goto_1
+    return-object p0
+.end method
+
+.method public final writeTo(Lhh3;)V
+    .locals 2
+
+    iget v0, p0, Lis7;->a:I
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v1, v0}, Lhh3;->G(II)V
+
+    :cond_0
     return-void
 .end method

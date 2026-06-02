@@ -1,201 +1,101 @@
 .class public final Ltzh;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-.field public final synthetic Y:Li0i;
+.field public final synthetic b:Z
 
-.field public o:Lj0i;
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public constructor <init>(Li0i;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;ZZ)V
     .locals 0
 
-    iput-object p1, p0, Ltzh;->Y:Li0i;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ltzh;->a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p2, p0, Ltzh;->b:Z
+
+    iput-boolean p3, p0, Ltzh;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
 
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ltzh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ltzh;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Ltzh;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 0
 
-    new-instance p1, Ltzh;
-
-    iget-object v0, p0, Ltzh;->Y:Li0i;
-
-    invoke-direct {p1, v0, p2}, Ltzh;-><init>(Li0i;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 17
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
 
-    move-object/from16 v5, p0
+    return-void
+.end method
 
-    iget-object v6, v5, Ltzh;->Y:Li0i;
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 4
 
-    iget-object v7, v6, Li0i;->h:Lo58;
+    sget-object p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->S0:[Lb88;
 
-    iget v0, v5, Ltzh;->X:I
+    iget-object p1, p0, Ltzh;->a:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    const/4 v8, 0x2
+    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->j1()Landroid/widget/ImageView;
 
-    const/4 v9, 0x1
+    move-result-object v0
 
-    sget-object v10, Lac4;->a:Lac4;
+    iget-boolean v1, p0, Ltzh;->b:Z
 
-    if-eqz v0, :cond_2
+    const/16 v2, 0x8
 
-    if-eq v0, v9, :cond_1
+    const/4 v3, 0x0
 
-    if-ne v0, v8, :cond_0
+    if-eqz v1, :cond_0
 
-    iget-object v0, v5, Ltzh;->o:Lj0i;
-
-    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    move-object/from16 v0, p1
+    move v1, v3
 
     goto :goto_0
 
-    :cond_2
-    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
+    :cond_0
+    move v1, v2
 
-    invoke-interface {v7}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lfzh;
-
-    iget-wide v1, v6, Li0i;->a:J
-
-    iget-wide v3, v6, Li0i;->b:J
-
-    iput v9, v5, Ltzh;->X:I
-
-    invoke-virtual/range {v0 .. v5}, Lfzh;->a(JJLp6g;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-ne v0, v10, :cond_3
-
-    goto :goto_3
-
-    :cond_3
     :goto_0
-    check-cast v0, Lj0i;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    if-eqz v0, :cond_4
-
-    const/16 v1, 0xf
-
-    invoke-static {v0, v9, v9, v1}, Lj0i;->a(Lj0i;ZZI)Lj0i;
+    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->g1()Landroid/widget/ImageView;
 
     move-result-object v0
 
-    goto :goto_1
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
-    :cond_4
-    new-instance v11, Lj0i;
+    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->i1()Landroid/widget/TextView;
 
-    iget-wide v12, v6, Li0i;->a:J
+    move-result-object p1
 
-    iget-wide v14, v6, Li0i;->b:J
+    iget-boolean v0, p0, Ltzh;->c:Z
 
-    const/16 v16, 0x1
+    if-eqz v0, :cond_1
 
-    invoke-direct/range {v11 .. v16}, Lj0i;-><init>(JJZ)V
+    move v2, v3
 
-    move-object v0, v11
+    :cond_1
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    :goto_1
-    invoke-interface {v7}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lfzh;
-
-    iput-object v0, v5, Ltzh;->o:Lj0i;
-
-    iput v8, v5, Ltzh;->X:I
-
-    iget-object v2, v1, Lfzh;->a:Lb2e;
-
-    new-instance v3, Lezh;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, v1, v0, v4}, Lezh;-><init>(Lfzh;Lj0i;I)V
-
-    const/4 v1, 0x0
-
-    invoke-static {v3, v2, v5, v1, v9}, Lulj;->f(Lnq6;Lb2e;Lkotlin/coroutines/Continuation;ZZ)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-ne v1, v10, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    sget-object v1, Lb3h;->a:Lb3h;
-
-    :goto_2
-    if-ne v1, v10, :cond_6
-
-    :goto_3
-    return-object v10
-
-    :cond_6
-    return-object v0
+    return-void
 .end method

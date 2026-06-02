@@ -1,72 +1,34 @@
-.class public final synthetic Lpue;
+.class public final Lpue;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Ljava/lang/reflect/Method;
 
-.field public final synthetic b:Lnq6;
+.field public b:Ljava/lang/reflect/Method;
+
+.field public c:Ljava/lang/reflect/Method;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILnq6;)V
-    .locals 0
+.method public static a()V
+    .locals 2
 
-    iput p1, p0, Lpue;->a:I
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    iput-object p2, p0, Lpue;->b:Lnq6;
+    const/16 v1, 0x1d
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 1
-
-    iget v0, p0, Lpue;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lpue;->b:Lnq6;
-
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->a(Lnq6;)V
+    if-ge v0, v1, :cond_0
 
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Lpue;->b:Lnq6;
+    :cond_0
+    new-instance v0, Ljava/lang/UnsupportedClassVersionError;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->b(Lnq6;)V
+    const-string v1, "This function can only be used for API Level < 29."
 
-    return-void
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedClassVersionError;-><init>(Ljava/lang/String;)V
 
-    :pswitch_1
-    iget-object v0, p0, Lpue;->b:Lnq6;
-
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->h(Lnq6;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lpue;->b:Lnq6;
-
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->a(Lnq6;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw v0
 .end method

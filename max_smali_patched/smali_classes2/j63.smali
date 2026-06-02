@@ -1,65 +1,132 @@
 .class public final Lj63;
-.super Ljava/lang/Throwable;
+.super Lc7h;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Landroid/view/View;
+
+.field public final synthetic b:Lk63;
+
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(Landroid/view/View;Lk63;Z)V
+    .locals 0
 
-    .line 1
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lj63;->a:I
+    iput-object p1, p0, Lj63;->a:Landroid/view/View;
 
-    invoke-direct {p0, p1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
+    iput-object p2, p0, Lj63;->b:Lk63;
 
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x0
-
-    iput v0, p0, Lj63;->a:I
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    iput-boolean p3, p0, Lj63;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public declared-synchronized fillInStackTrace()Ljava/lang/Throwable;
-    .locals 1
+.method public final a(Lz6h;)V
+    .locals 5
 
-    iget v0, p0, Lj63;->a:I
+    iget-object p1, p0, Lj63;->a:Landroid/view/View;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lj63;->b:Lk63;
 
-    invoke-super {p0}, Ljava/lang/Throwable;->fillInStackTrace()Ljava/lang/Throwable;
+    iget-object v0, v0, Lk63;->D0:Ljava/lang/String;
 
-    move-result-object v0
+    invoke-static {p1, v0}, Luzj;->c(Landroid/view/View;Ljava/lang/String;)Landroid/view/View;
 
-    return-object v0
+    move-result-object p1
 
-    :pswitch_0
-    monitor-enter p0
+    if-nez p1, :cond_0
 
-    monitor-exit p0
+    iget-object p1, p0, Lj63;->b:Lk63;
 
-    return-object p0
+    iget-object p1, p1, Lk63;->E0:Ljava/lang/String;
 
-    nop
+    const-string v0, "transitionView is null!"
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    invoke-static {p1, v0}, Lnm4;->p0(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    instance-of v0, p1, Lirb;
+
+    if-nez v0, :cond_3
+
+    iget-object v0, p0, Lj63;->b:Lk63;
+
+    iget-object v0, v0, Lk63;->E0:Ljava/lang/String;
+
+    sget-object v1, Lnm4;->d:Lnfb;
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v2, Lgp8;->X:Lgp8;
+
+    invoke-virtual {v1, v2}, Lnfb;->b(Lgp8;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "transitionView is not toolbar "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v0, p1, v3}, Lnfb;->c(Lgp8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_0
+    return-void
+
+    :cond_3
+    check-cast p1, Lirb;
+
+    invoke-virtual {p1}, Lirb;->getSearchView()Lolb;
+
+    move-result-object p1
+
+    if-nez p1, :cond_4
+
+    iget-object p1, p0, Lj63;->b:Lk63;
+
+    iget-object p1, p1, Lk63;->E0:Ljava/lang/String;
+
+    const-string v0, "searchView is null!"
+
+    invoke-static {p1, v0}, Lnm4;->p0(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_4
+    iget-boolean v0, p0, Lj63;->c:Z
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {p1}, Lolb;->d()V
+
+    return-void
+
+    :cond_5
+    invoke-virtual {p1}, Lolb;->b()V
+
+    return-void
 .end method

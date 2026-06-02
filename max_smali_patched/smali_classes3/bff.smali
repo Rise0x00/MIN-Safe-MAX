@@ -1,72 +1,42 @@
-.class public abstract Lbff;
-.super Ljava/lang/Object;
+.class public final Lbff;
+.super Llqf;
 .source "SourceFile"
-
-# interfaces
-.implements Lhs7;
-
-
-# instance fields
-.field public volatile a:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v0, Liui;->a:Ljava/lang/Object;
-
-    iput-object v0, p0, Lbff;->a:Ljava/lang/Object;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final a(Lr5;)Ljava/lang/Object;
-    .locals 2
+.method public final D(Lki8;)V
+    .locals 4
 
-    iget-object v0, p0, Lbff;->a:Ljava/lang/Object;
+    instance-of v0, p1, Lpve;
 
-    sget-object v1, Liui;->a:Ljava/lang/Object;
+    if-nez v0, :cond_0
 
-    if-eq v0, v1, :cond_0
-
-    return-object v0
+    return-void
 
     :cond_0
-    monitor-enter p0
+    iget-object v0, p0, Lb3e;->a:Landroid/view/View;
 
-    :try_start_0
-    iget-object v0, p0, Lbff;->a:Ljava/lang/Object;
+    move-object v1, v0
 
-    if-eq v0, v1, :cond_1
+    check-cast v1, Lcdf;
 
-    goto :goto_0
+    move-object v2, p1
 
-    :cond_1
-    invoke-virtual {p0, p1}, Lbff;->b(Lr5;)Ljava/lang/Object;
+    check-cast v2, Lpve;
 
-    move-result-object v0
+    iget-wide v2, v2, Lpve;->d:J
 
-    iput-object v0, p0, Lbff;->a:Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {v2, v3}, Ljava/lang/Long;->hashCode(J)I
 
-    :goto_0
-    monitor-exit p0
+    move-result v2
 
-    return-object v0
+    invoke-virtual {v1, v2}, Landroid/view/View;->setId(I)V
 
-    :catchall_0
-    move-exception p1
+    check-cast v0, Lcdf;
 
-    monitor-exit p0
+    check-cast p1, Lscf;
 
-    throw p1
-.end method
+    invoke-virtual {v0, p1}, Lcdf;->setModelItem(Lscf;)V
 
-.method public abstract b(Lr5;)Ljava/lang/Object;
+    return-void
 .end method

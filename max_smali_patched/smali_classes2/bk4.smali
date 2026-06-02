@@ -1,21 +1,28 @@
-.class public final Lbk4;
-.super Ltsd;
+.class public interface abstract Lbk4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Luj4;
 
-# instance fields
-.field public final F0:Landroidx/appcompat/widget/AppCompatTextView;
 
+# virtual methods
+.method public abstract G(Ljk4;)J
+.end method
 
-# direct methods
-.method public constructor <init>(Landroid/view/View;)V
-    .locals 0
+.method public abstract H(Ld6h;)V
+.end method
 
-    invoke-direct {p0, p1}, Ltsd;-><init>(Landroid/view/View;)V
+.method public abstract close()V
+.end method
 
-    check-cast p1, Landroidx/appcompat/widget/AppCompatTextView;
+.method public abstract getUri()Landroid/net/Uri;
+.end method
 
-    iput-object p1, p0, Lbk4;->F0:Landroidx/appcompat/widget/AppCompatTextView;
+.method public w()Ljava/util/Map;
+    .locals 1
 
-    return-void
+    sget-object v0, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    return-object v0
 .end method

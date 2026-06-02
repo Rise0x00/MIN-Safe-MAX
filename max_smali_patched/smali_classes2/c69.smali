@@ -3,244 +3,155 @@
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Lh59;
+
+.field public final b:Lugc;
+
+.field public final c:Lxa9;
+
+.field public final d:Ljava/util/List;
+
+.field public final e:Ljava/lang/CharSequence;
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:Landroid/os/Bundle;
+
+
 # direct methods
-.method public static a(Ljava/util/Set;Lsk1;Lnue;)Lorg/json/JSONObject;
-    .locals 3
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Lorg/json/JSONObject;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+    const/4 v0, 0x0
 
-    if-eqz p1, :cond_0
+    .line 2
+    iput-object v0, p0, Lc69;->a:Lh59;
 
-    invoke-virtual {p1}, Lsk1;->b()Ljava/lang/String;
+    .line 3
+    iput-object v0, p0, Lc69;->b:Lugc;
 
-    move-result-object p1
+    .line 4
+    iput-object v0, p0, Lc69;->c:Lxa9;
 
-    goto :goto_0
+    .line 5
+    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    :cond_0
-    const/4 p1, 0x0
+    iput-object v1, p0, Lc69;->d:Ljava/util/List;
 
-    :goto_0
-    const-string v1, "participantId"
+    .line 6
+    iput-object v0, p0, Lc69;->e:Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, v1, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    const/4 v0, 0x0
 
-    new-instance p1, Lorg/json/JSONArray;
+    .line 7
+    iput v0, p0, Lc69;->f:I
 
-    invoke-direct {p1}, Lorg/json/JSONArray;-><init>()V
+    .line 8
+    iput v0, p0, Lc69;->g:I
 
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    .line 9
+    sget-object v0, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
-    move-result-object p0
+    iput-object v0, p0, Lc69;->h:Landroid/os/Bundle;
 
-    :goto_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ly59;
-
-    sget-object v2, Lb69;->$EnumSwitchMapping$0:[I
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    aget v1, v2, v1
-
-    const/4 v2, 0x1
-
-    if-eq v1, v2, :cond_4
-
-    const/4 v2, 0x2
-
-    if-eq v1, v2, :cond_3
-
-    const/4 v2, 0x3
-
-    if-eq v1, v2, :cond_2
-
-    const/4 v2, 0x4
-
-    if-ne v1, v2, :cond_1
-
-    const-string v1, "MOVIE_SHARING"
-
-    goto :goto_2
-
-    :cond_1
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_2
-    const-string v1, "SCREEN_SHARING"
-
-    goto :goto_2
-
-    :cond_3
-    const-string v1, "VIDEO"
-
-    goto :goto_2
-
-    :cond_4
-    const-string v1, "AUDIO"
-
-    :goto_2
-    invoke-virtual {p1, v1}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
-
-    goto :goto_1
-
-    :cond_5
-    const-string p0, "requestedMedia"
-
-    invoke-virtual {v0, p0, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string p0, "command"
-
-    const-string p1, "mute-participant"
-
-    invoke-virtual {v0, p0, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    instance-of p0, p2, Lmue;
-
-    if-eqz p0, :cond_6
-
-    check-cast p2, Lmue;
-
-    iget p0, p2, Lmue;->a:I
-
-    const-string p1, "roomId"
-
-    invoke-virtual {v0, p1, p0}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
-
-    :cond_6
-    return-object v0
+    return-void
 .end method
 
-.method public static b(Ljava/util/Map;Lsk1;Lnue;)Lorg/json/JSONObject;
-    .locals 3
+.method public constructor <init>(Lc69;)V
+    .locals 1
 
-    new-instance v0, Lorg/json/JSONObject;
+    .line 20
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+    .line 21
+    iget-object v0, p1, Lc69;->a:Lh59;
 
-    if-eqz p1, :cond_0
+    iput-object v0, p0, Lc69;->a:Lh59;
 
-    invoke-virtual {p1}, Lsk1;->b()Ljava/lang/String;
+    .line 22
+    iget-object v0, p1, Lc69;->b:Lugc;
 
-    move-result-object p1
+    iput-object v0, p0, Lc69;->b:Lugc;
+
+    .line 23
+    iget-object v0, p1, Lc69;->c:Lxa9;
+
+    iput-object v0, p0, Lc69;->c:Lxa9;
+
+    .line 24
+    iget-object v0, p1, Lc69;->d:Ljava/util/List;
+
+    iput-object v0, p0, Lc69;->d:Ljava/util/List;
+
+    .line 25
+    iget-object v0, p1, Lc69;->e:Ljava/lang/CharSequence;
+
+    iput-object v0, p0, Lc69;->e:Ljava/lang/CharSequence;
+
+    .line 26
+    iget v0, p1, Lc69;->f:I
+
+    iput v0, p0, Lc69;->f:I
+
+    .line 27
+    iget v0, p1, Lc69;->g:I
+
+    iput v0, p0, Lc69;->g:I
+
+    .line 28
+    iget-object p1, p1, Lc69;->h:Landroid/os/Bundle;
+
+    iput-object p1, p0, Lc69;->h:Landroid/os/Bundle;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lh59;Lugc;Lxa9;Ljava/util/List;Ljava/lang/CharSequence;IILandroid/os/Bundle;)V
+    .locals 0
+
+    .line 10
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 11
+    iput-object p1, p0, Lc69;->a:Lh59;
+
+    .line 12
+    iput-object p2, p0, Lc69;->b:Lugc;
+
+    .line 13
+    iput-object p3, p0, Lc69;->c:Lxa9;
+
+    .line 14
+    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 15
+    iput-object p4, p0, Lc69;->d:Ljava/util/List;
+
+    .line 16
+    iput-object p5, p0, Lc69;->e:Ljava/lang/CharSequence;
+
+    .line 17
+    iput p6, p0, Lc69;->f:I
+
+    .line 18
+    iput p7, p0, Lc69;->g:I
+
+    if-eqz p8, :cond_0
 
     goto :goto_0
 
+    .line 19
     :cond_0
-    const/4 p1, 0x0
+    sget-object p8, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
     :goto_0
-    const-string v1, "participantId"
+    iput-object p8, p0, Lc69;->h:Landroid/os/Bundle;
 
-    invoke-virtual {v0, v1, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    new-instance p1, Lorg/json/JSONObject;
-
-    invoke-direct {p1}, Lorg/json/JSONObject;-><init>()V
-
-    sget-object v1, Ly59;->a:Ly59;
-
-    invoke-interface {p0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lz59;
-
-    invoke-static {v1}, Lspj;->z(Lz59;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "AUDIO"
-
-    invoke-virtual {p1, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    sget-object v1, Ly59;->b:Ly59;
-
-    invoke-interface {p0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lz59;
-
-    invoke-static {v1}, Lspj;->z(Lz59;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "VIDEO"
-
-    invoke-virtual {p1, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    sget-object v1, Ly59;->c:Ly59;
-
-    invoke-interface {p0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lz59;
-
-    invoke-static {v1}, Lspj;->z(Lz59;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "SCREEN_SHARING"
-
-    invoke-virtual {p1, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    sget-object v1, Ly59;->d:Ly59;
-
-    invoke-interface {p0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lz59;
-
-    invoke-static {p0}, Lspj;->z(Lz59;)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v1, "MOVIE_SHARING"
-
-    invoke-virtual {p1, v1, p0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string p0, "muteStates"
-
-    invoke-virtual {v0, p0, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string p0, "command"
-
-    const-string p1, "mute-participant"
-
-    invoke-virtual {v0, p0, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    instance-of p0, p2, Lmue;
-
-    if-eqz p0, :cond_1
-
-    check-cast p2, Lmue;
-
-    iget p0, p2, Lmue;->a:I
-
-    const-string p1, "roomId"
-
-    invoke-virtual {v0, p1, p0}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
-
-    :cond_1
-    return-object v0
+    return-void
 .end method

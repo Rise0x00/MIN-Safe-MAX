@@ -1,31 +1,218 @@
-.class public interface abstract Lj1g;
+.class public abstract Lj1g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final b0:Lnpd;
+
+# instance fields
+.field public final a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final b:Lxn0;
+
+.field public final c:Lvvc;
+
+.field public final d:Lsvc;
+
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lxn0;Lvvc;Lsvc;Ljava/lang/String;)V
     .locals 2
 
-    new-instance v0, Lnpd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x6
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-direct {v0, v1}, Lnpd;-><init>(I)V
+    const/4 v1, 0x0
 
-    sput-object v0, Lj1g;->b0:Lnpd;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object v0, p0, Lj1g;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    iput-object p1, p0, Lj1g;->b:Lxn0;
+
+    iput-object p2, p0, Lj1g;->c:Lvvc;
+
+    iput-object p3, p0, Lj1g;->d:Lsvc;
+
+    iput-object p4, p0, Lj1g;->o:Ljava/lang/String;
+
+    invoke-interface {p2, p3, p4}, Lvvc;->j(Lsvc;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract e(Lpj6;)Z
+.method public final a()V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x2
+
+    iget-object v2, p0, Lj1g;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lj1g;->e()V
+
+    :cond_0
+    return-void
 .end method
 
-.method public abstract f(Lpj6;)Li1g;
+.method public abstract b(Ljava/lang/Object;)V
+.end method
+
+.method public c(Ljava/lang/Object;)Ljava/util/Map;
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public abstract d()Ljava/lang/Object;
+.end method
+
+.method public e()V
+    .locals 3
+
+    iget-object v0, p0, Lj1g;->c:Lvvc;
+
+    iget-object v1, p0, Lj1g;->d:Lsvc;
+
+    iget-object v2, p0, Lj1g;->o:Ljava/lang/String;
+
+    invoke-interface {v0, v1, v2}, Lvvc;->i(Lsvc;Ljava/lang/String;)Z
+
+    invoke-interface {v0, v1, v2}, Lvvc;->k(Lsvc;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lj1g;->b:Lxn0;
+
+    invoke-virtual {v0}, Lxn0;->c()V
+
+    return-void
+.end method
+
+.method public f(Ljava/lang/Exception;)V
+    .locals 4
+
+    iget-object v0, p0, Lj1g;->c:Lvvc;
+
+    iget-object v1, p0, Lj1g;->d:Lsvc;
+
+    iget-object v2, p0, Lj1g;->o:Ljava/lang/String;
+
+    invoke-interface {v0, v1, v2}, Lvvc;->i(Lsvc;Ljava/lang/String;)Z
+
+    const/4 v3, 0x0
+
+    invoke-interface {v0, v1, v2, p1, v3}, Lvvc;->d(Lsvc;Ljava/lang/String;Ljava/lang/Throwable;Ljava/util/Map;)V
+
+    iget-object v0, p0, Lj1g;->b:Lxn0;
+
+    invoke-virtual {v0, p1}, Lxn0;->e(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public g(Ljava/lang/Object;)V
+    .locals 4
+
+    iget-object v0, p0, Lj1g;->c:Lvvc;
+
+    iget-object v1, p0, Lj1g;->d:Lsvc;
+
+    iget-object v2, p0, Lj1g;->o:Ljava/lang/String;
+
+    invoke-interface {v0, v1, v2}, Lvvc;->i(Lsvc;Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {p0, p1}, Lj1g;->c(Ljava/lang/Object;)Ljava/util/Map;
+
+    move-result-object v3
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v3, 0x0
+
+    :goto_0
+    invoke-interface {v0, v1, v2, v3}, Lvvc;->a(Lsvc;Ljava/lang/String;Ljava/util/Map;)V
+
+    iget-object v0, p0, Lj1g;->b:Lxn0;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1, p1}, Lxn0;->g(ILjava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final run()V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Lj1g;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    :try_start_0
+    invoke-virtual {p0}, Lj1g;->d()Ljava/lang/Object;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 v1, 0x3
+
+    invoke-virtual {v2, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+
+    :try_start_1
+    invoke-virtual {p0, v0}, Lj1g;->g(Ljava/lang/Object;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-virtual {p0, v0}, Lj1g;->b(Ljava/lang/Object;)V
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    invoke-virtual {p0, v0}, Lj1g;->b(Ljava/lang/Object;)V
+
+    throw v1
+
+    :catch_0
+    move-exception v0
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v2, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+
+    invoke-virtual {p0, v0}, Lj1g;->f(Ljava/lang/Exception;)V
+
+    return-void
 .end method

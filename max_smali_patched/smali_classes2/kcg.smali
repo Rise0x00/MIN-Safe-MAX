@@ -1,126 +1,275 @@
-.class public final Lkcg;
-.super Ljava/lang/Object;
+.class public final enum Lkcg;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Ljcg;
+.implements Lhcg;
 
 
-# instance fields
-.field public final a:Lo58;
+# static fields
+.field public static final enum a:Lkcg;
 
-.field public final b:Ln8g;
-
-.field public final c:Ln8g;
-
-.field public final d:Ln8g;
-
-.field public final e:Ln8g;
-
-.field public final f:Ln8g;
-
-.field public final g:Ln8g;
+.field public static final synthetic b:[Lkcg;
 
 
 # direct methods
-.method public constructor <init>(Lo58;Ln8g;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lkcg;
 
-    iput-object p1, p0, Lkcg;->a:Lo58;
+    const-string v1, "CANCELLED"
 
-    iput-object p2, p0, Lkcg;->f:Ln8g;
+    const/4 v2, 0x0
 
-    new-instance p2, Lhld;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v0, 0x5
+    sput-object v0, Lkcg;->a:Lkcg;
 
-    invoke-direct {p2, p1, v0}, Lhld;-><init>(Lo58;I)V
+    filled-new-array {v0}, [Lkcg;
 
-    new-instance v0, Ln8g;
+    move-result-object v0
 
-    invoke-direct {v0, p2}, Ln8g;-><init>(Llq6;)V
-
-    iput-object v0, p0, Lkcg;->c:Ln8g;
-
-    new-instance p2, Lhld;
-
-    const/4 v0, 0x6
-
-    invoke-direct {p2, p1, v0}, Lhld;-><init>(Lo58;I)V
-
-    new-instance v0, Ln8g;
-
-    invoke-direct {v0, p2}, Ln8g;-><init>(Llq6;)V
-
-    iput-object v0, p0, Lkcg;->d:Ln8g;
-
-    new-instance p2, Lhld;
-
-    const/4 v0, 0x7
-
-    invoke-direct {p2, p1, v0}, Lhld;-><init>(Lo58;I)V
-
-    new-instance v0, Ln8g;
-
-    invoke-direct {v0, p2}, Ln8g;-><init>(Llq6;)V
-
-    iput-object v0, p0, Lkcg;->b:Ln8g;
-
-    new-instance p2, Lhld;
-
-    const/16 v0, 0x8
-
-    invoke-direct {p2, p1, v0}, Lhld;-><init>(Lo58;I)V
-
-    new-instance v0, Ln8g;
-
-    invoke-direct {v0, p2}, Ln8g;-><init>(Llq6;)V
-
-    iput-object v0, p0, Lkcg;->e:Ln8g;
-
-    new-instance p2, Lhld;
-
-    const/16 v0, 0x9
-
-    invoke-direct {p2, p1, v0}, Lhld;-><init>(Lo58;I)V
-
-    new-instance p1, Ln8g;
-
-    invoke-direct {p1, p2}, Ln8g;-><init>(Llq6;)V
-
-    iput-object p1, p0, Lkcg;->g:Ln8g;
+    sput-object v0, Lkcg;->b:[Lkcg;
 
     return-void
 .end method
 
+.method public static a(Ljava/util/concurrent/atomic/AtomicReference;)V
+    .locals 2
 
-# virtual methods
-.method public final a()Lpbe;
-    .locals 1
-
-    iget-object v0, p0, Lkcg;->b:Ln8g;
-
-    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lpbe;
+    check-cast v0, Lhcg;
+
+    sget-object v1, Lkcg;->a:Lkcg;
+
+    if-eq v0, v1, :cond_0
+
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lhcg;
+
+    if-eq p0, v1, :cond_0
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p0}, Lhcg;->cancel()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public static c(Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/atomic/AtomicLong;J)V
+    .locals 2
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lhcg;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p2, p3}, Lhcg;->g(J)V
+
+    return-void
+
+    :cond_0
+    invoke-static {p2, p3}, Lkcg;->f(J)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {p1, p2, p3}, Lejj;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lhcg;
+
+    if-eqz p0, :cond_1
+
+    const-wide/16 p2, 0x0
+
+    invoke-virtual {p1, p2, p3}, Ljava/util/concurrent/atomic/AtomicLong;->getAndSet(J)J
+
+    move-result-wide v0
+
+    cmp-long p1, v0, p2
+
+    if-eqz p1, :cond_1
+
+    invoke-interface {p0, v0, v1}, Lhcg;->g(J)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public static d(Ljava/util/concurrent/atomic/AtomicReference;Lhcg;)Z
+    .locals 1
+
+    const-string v0, "s is null"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    :cond_0
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_1
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Lhcg;->cancel()V
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lkcg;->a:Lkcg;
+
+    if-eq p0, p1, :cond_2
+
+    new-instance p0, Lio/reactivex/rxjava3/exceptions/ProtocolViolationException;
+
+    const-string p1, "Subscription already set!"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p0}, Lq98;->J(Ljava/lang/Throwable;)V
+
+    :cond_2
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static f(J)Z
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p0, v0
+
+    if-gtz v0, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "n > 0 required but it was "
+
+    invoke-static {p0, p1, v1}, Lx82;->h(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v0}, Lq98;->J(Ljava/lang/Throwable;)V
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public static i(Lhcg;Lhcg;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_0
+
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string p1, "next is null"
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p0}, Lq98;->J(Ljava/lang/Throwable;)V
+
+    return v0
+
+    :cond_0
+    if-eqz p0, :cond_1
+
+    invoke-interface {p1}, Lhcg;->cancel()V
+
+    new-instance p0, Lio/reactivex/rxjava3/exceptions/ProtocolViolationException;
+
+    const-string p1, "Subscription already set!"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p0}, Lq98;->J(Ljava/lang/Throwable;)V
+
+    return v0
+
+    :cond_1
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lkcg;
+    .locals 1
+
+    const-class v0, Lkcg;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lkcg;
+
+    return-object p0
+.end method
+
+.method public static values()[Lkcg;
+    .locals 1
+
+    sget-object v0, Lkcg;->b:[Lkcg;
+
+    invoke-virtual {v0}, [Lkcg;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lkcg;
 
     return-object v0
 .end method
 
-.method public final b()Lpbe;
-    .locals 1
 
-    iget-object v0, p0, Lkcg;->f:Ln8g;
+# virtual methods
+.method public final cancel()V
+    .locals 0
 
-    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object v0
+.method public final g(J)V
+    .locals 0
 
-    check-cast v0, Lpbe;
-
-    return-object v0
+    return-void
 .end method

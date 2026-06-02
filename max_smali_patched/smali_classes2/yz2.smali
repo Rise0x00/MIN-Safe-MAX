@@ -1,52 +1,86 @@
 .class public final Lyz2;
-.super Lo84;
-
-
-# instance fields
-.field public final synthetic X:Lsx;
-
-.field public Y:Lf76;
-
-.field public Z:I
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
-
-
-# direct methods
-.method public constructor <init>(Lsx;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lyz2;->X:Lsx;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.super Landroid/widget/FrameLayout;
+.source "SourceFile"
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final measureChildWithMargins(Landroid/view/View;IIII)V
+    .locals 7
 
-    iput-object p1, p0, Lyz2;->d:Ljava/lang/Object;
+    if-eqz p1, :cond_1
 
-    iget p1, p0, Lyz2;->o:I
+    invoke-virtual {p1}, Landroid/view/View;->getId()I
+
+    move-result v0
+
+    sget v1, Lmab;->b:I
+
+    if-ne v0, v1, :cond_1
 
     const/high16 v0, -0x80000000
 
-    or-int/2addr p1, v0
+    invoke-static {p4, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
-    iput p1, p0, Lyz2;->o:I
+    move-result v5
 
-    iget-object p1, p0, Lyz2;->X:Lsx;
+    sget p4, Lmab;->o:I
 
-    const/4 v0, 0x0
+    invoke-virtual {p0, p4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {p1, v0, p0}, Lsx;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object p4
 
-    move-result-object p1
+    invoke-virtual {p4}, Landroid/view/View;->getMeasuredHeight()I
 
-    return-object p1
+    move-result p4
+
+    sget v0, Lmab;->l:I
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v0
+
+    invoke-static {p0}, Ljde;->P(Landroid/view/View;)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    add-int/2addr p4, v0
+
+    add-int/2addr p4, v1
+
+    invoke-static {p5, p4}, Ljava/lang/Math;->max(II)I
+
+    move-result v6
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move v3, p2
+
+    move v4, p3
+
+    invoke-super/range {v1 .. v6}, Landroid/view/ViewGroup;->measureChildWithMargins(Landroid/view/View;IIII)V
+
+    return-void
+
+    :cond_1
+    invoke-super/range {p0 .. p5}, Landroid/view/ViewGroup;->measureChildWithMargins(Landroid/view/View;IIII)V
+
+    return-void
 .end method

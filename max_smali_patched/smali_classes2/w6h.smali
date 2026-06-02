@@ -1,51 +1,25 @@
-.class public final Lw6h;
-.super Lo84;
+.class public abstract Lw6h;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lo7h;
-
-.field public Y:I
-
-.field public d:Lp7h;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
 # direct methods
-.method public constructor <init>(Lo7h;Lo84;)V
-    .locals 0
+.method public static a(Landroid/animation/Animator;)J
+    .locals 2
 
-    iput-object p1, p0, Lw6h;->X:Lo7h;
+    invoke-virtual {p0}, Landroid/animation/Animator;->getTotalDuration()J
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    move-result-wide v0
 
-    return-void
+    return-wide v0
 .end method
 
+.method public static b(Landroid/animation/Animator;J)V
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    check-cast p0, Landroid/animation/AnimatorSet;
 
-    iput-object p1, p0, Lw6h;->o:Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Landroid/animation/AnimatorSet;->setCurrentPlayTime(J)V
 
-    iget p1, p0, Lw6h;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lw6h;->Y:I
-
-    iget-object p1, p0, Lw6h;->X:Lo7h;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Lo7h;->a(Lo7h;Lp7h;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

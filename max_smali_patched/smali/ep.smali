@@ -1,351 +1,412 @@
-.class public final Lep;
-.super Lde8;
+.class public final synthetic Lep;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lgp;
+.implements Ljx6;
 
 
-# instance fields
-.field public N0:Ljava/lang/CharSequence;
+# static fields
+.field public static final a:Lep;
 
-.field public O0:Lbp;
-
-.field public final P0:Landroid/graphics/Rect;
-
-.field public Q0:I
-
-.field public final synthetic R0:Lhp;
+.field private static final descriptor:Lt2f;
 
 
 # direct methods
-.method public constructor <init>(Lhp;Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Lep;->R0:Lhp;
+    new-instance v0, Lep;
 
-    const/4 v0, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2, p3, p4, v0}, Lde8;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    sput-object v0, Lep;->a:Lep;
 
-    new-instance p2, Landroid/graphics/Rect;
+    new-instance v1, Lyic;
 
-    invoke-direct {p2}, Landroid/graphics/Rect;-><init>()V
+    const-string v2, "ru.ok.tamtam.models.AppClockDump"
 
-    iput-object p2, p0, Lep;->P0:Landroid/graphics/Rect;
+    const/4 v3, 0x6
 
-    iput-object p1, p0, Lde8;->z0:Landroid/view/View;
+    invoke-direct {v1, v2, v0, v3}, Lyic;-><init>(Ljava/lang/String;Ljx6;I)V
 
-    const/4 p1, 0x1
+    const-string v0, "sr"
 
-    iput-boolean p1, p0, Lde8;->J0:Z
+    const/4 v2, 0x1
 
-    iget-object p2, p0, Lde8;->K0:Lro;
+    invoke-virtual {v1, v0, v2}, Lyic;->k(Ljava/lang/String;Z)V
 
-    invoke-virtual {p2, p1}, Landroid/widget/PopupWindow;->setFocusable(Z)V
+    const-string v0, "su"
 
-    new-instance p1, Lcp;
+    invoke-virtual {v1, v0, v2}, Lyic;->k(Ljava/lang/String;Z)V
 
-    const/4 p2, 0x0
+    const-string v0, "lr"
 
-    invoke-direct {p1, p2, p0}, Lcp;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v1, v0, v2}, Lyic;->k(Ljava/lang/String;Z)V
 
-    iput-object p1, p0, Lde8;->A0:Landroid/widget/AdapterView$OnItemClickListener;
+    const-string v0, "lu"
+
+    invoke-virtual {v1, v0, v2}, Lyic;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "v"
+
+    invoke-virtual {v1, v0, v2}, Lyic;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "isfg"
+
+    invoke-virtual {v1, v0, v2}, Lyic;->k(Ljava/lang/String;Z)V
+
+    sput-object v1, Lep;->descriptor:Lt2f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e()Ljava/lang/CharSequence;
-    .locals 1
+.method public final a(Lvk5;Ljava/lang/Object;)V
+    .locals 9
 
-    iget-object v0, p0, Lep;->N0:Ljava/lang/CharSequence;
+    check-cast p2, Lgp;
+
+    iget-object v0, p2, Lgp;->e:Laia;
+
+    iget-wide v1, p2, Lgp;->b:J
+
+    iget-wide v3, p2, Lgp;->a:J
+
+    sget-object v5, Lep;->descriptor:Lt2f;
+
+    invoke-interface {p1, v5}, Lvk5;->b(Lt2f;)Lsq3;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lsq3;->z()Z
+
+    move-result v6
+
+    const-wide/16 v7, 0x0
+
+    if-eqz v6, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    cmp-long v6, v3, v7
+
+    if-eqz v6, :cond_1
+
+    :goto_0
+    const/4 v6, 0x0
+
+    invoke-interface {p1, v5, v6, v3, v4}, Lsq3;->h(Lt2f;IJ)V
+
+    :cond_1
+    invoke-interface {p1}, Lsq3;->z()Z
+
+    move-result v3
+
+    const/4 v4, 0x1
+
+    if-eqz v3, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    cmp-long v3, v1, v7
+
+    if-eqz v3, :cond_3
+
+    :goto_1
+    invoke-interface {p1, v5, v4, v1, v2}, Lsq3;->h(Lt2f;IJ)V
+
+    :cond_3
+    invoke-interface {p1}, Lsq3;->z()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    iget-wide v1, p2, Lgp;->c:J
+
+    cmp-long v1, v1, v7
+
+    if-eqz v1, :cond_5
+
+    :goto_2
+    iget-wide v1, p2, Lgp;->c:J
+
+    const/4 v3, 0x2
+
+    invoke-interface {p1, v5, v3, v1, v2}, Lsq3;->h(Lt2f;IJ)V
+
+    :cond_5
+    invoke-interface {p1}, Lsq3;->z()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    iget-wide v1, p2, Lgp;->d:J
+
+    cmp-long v1, v1, v7
+
+    if-eqz v1, :cond_7
+
+    :goto_3
+    iget-wide v1, p2, Lgp;->d:J
+
+    const/4 v3, 0x3
+
+    invoke-interface {p1, v5, v3, v1, v2}, Lsq3;->h(Lt2f;IJ)V
+
+    :cond_7
+    invoke-interface {p1}, Lsq3;->z()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    goto :goto_4
+
+    :cond_8
+    new-instance v1, Laia;
+
+    invoke-direct {v1}, Laia;-><init>()V
+
+    invoke-static {v0, v1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_9
+
+    :goto_4
+    sget-object v1, Lbia;->a:Lbia;
+
+    const/4 v2, 0x4
+
+    invoke-interface {p1, v5, v2, v1, v0}, Lsq3;->m(Lt2f;ILc88;Ljava/lang/Object;)V
+
+    :cond_9
+    invoke-interface {p1}, Lsq3;->z()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    goto :goto_5
+
+    :cond_a
+    iget-boolean v0, p2, Lgp;->f:Z
+
+    if-eq v0, v4, :cond_b
+
+    :goto_5
+    iget-boolean p2, p2, Lgp;->f:Z
+
+    const/4 v0, 0x5
+
+    invoke-interface {p1, v5, v0, p2}, Lsq3;->l(Lt2f;IZ)V
+
+    :cond_b
+    invoke-interface {p1}, Lsq3;->e()V
+
+    return-void
+.end method
+
+.method public final b(Lbn4;)Ljava/lang/Object;
+    .locals 19
+
+    sget-object v0, Lep;->descriptor:Lt2f;
+
+    move-object/from16 v1, p1
+
+    invoke-interface {v1, v0}, Lbn4;->b(Lt2f;)Lqq3;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    const-wide/16 v4, 0x0
+
+    const/4 v6, 0x0
+
+    move v8, v3
+
+    move/from16 v18, v8
+
+    move-wide v9, v4
+
+    move-wide v11, v9
+
+    move-wide v13, v11
+
+    move-wide v15, v13
+
+    move v4, v2
+
+    :goto_0
+    if-eqz v4, :cond_0
+
+    invoke-interface {v1, v0}, Lqq3;->h(Lt2f;)I
+
+    move-result v5
+
+    packed-switch v5, :pswitch_data_0
+
+    new-instance v0, Lkotlinx/serialization/UnknownFieldException;
+
+    invoke-direct {v0, v5}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+
+    throw v0
+
+    :pswitch_0
+    const/4 v5, 0x5
+
+    invoke-interface {v1, v0, v5}, Lqq3;->y(Lt2f;I)Z
+
+    move-result v18
+
+    or-int/lit8 v8, v8, 0x20
+
+    goto :goto_0
+
+    :pswitch_1
+    sget-object v5, Lbia;->a:Lbia;
+
+    const/4 v7, 0x4
+
+    invoke-interface {v1, v0, v7, v5, v6}, Lqq3;->q(Lt2f;ILc88;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    move-object v6, v5
+
+    check-cast v6, Laia;
+
+    or-int/lit8 v8, v8, 0x10
+
+    goto :goto_0
+
+    :pswitch_2
+    const/4 v5, 0x3
+
+    invoke-interface {v1, v0, v5}, Lqq3;->D(Lt2f;I)J
+
+    move-result-wide v15
+
+    or-int/lit8 v8, v8, 0x8
+
+    goto :goto_0
+
+    :pswitch_3
+    const/4 v5, 0x2
+
+    invoke-interface {v1, v0, v5}, Lqq3;->D(Lt2f;I)J
+
+    move-result-wide v13
+
+    or-int/lit8 v8, v8, 0x4
+
+    goto :goto_0
+
+    :pswitch_4
+    invoke-interface {v1, v0, v2}, Lqq3;->D(Lt2f;I)J
+
+    move-result-wide v11
+
+    or-int/lit8 v8, v8, 0x2
+
+    goto :goto_0
+
+    :pswitch_5
+    invoke-interface {v1, v0, v3}, Lqq3;->D(Lt2f;I)J
+
+    move-result-wide v9
+
+    or-int/lit8 v8, v8, 0x1
+
+    goto :goto_0
+
+    :pswitch_6
+    move v4, v3
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {v1, v0}, Lqq3;->o(Lt2f;)V
+
+    new-instance v7, Lgp;
+
+    move-object/from16 v17, v6
+
+    invoke-direct/range {v7 .. v18}, Lgp;-><init>(IJJJJLaia;Z)V
+
+    return-object v7
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final c()[Lc88;
+    .locals 3
+
+    const/4 v0, 0x6
+
+    new-array v0, v0, [Lc88;
+
+    sget-object v1, Lat8;->a:Lat8;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    const/4 v2, 0x2
+
+    aput-object v1, v0, v2
+
+    const/4 v2, 0x3
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lbia;->a:Lbia;
+
+    const/4 v2, 0x4
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ltx0;->a:Ltx0;
+
+    const/4 v2, 0x5
+
+    aput-object v1, v0, v2
 
     return-object v0
 .end method
 
-.method public final g(Ljava/lang/CharSequence;)V
-    .locals 0
+.method public final d()Lt2f;
+    .locals 1
 
-    iput-object p1, p0, Lep;->N0:Ljava/lang/CharSequence;
+    sget-object v0, Lep;->descriptor:Lt2f;
 
-    return-void
-.end method
-
-.method public final l(I)V
-    .locals 0
-
-    iput p1, p0, Lep;->Q0:I
-
-    return-void
-.end method
-
-.method public final n(II)V
-    .locals 4
-
-    iget-object v0, p0, Lde8;->K0:Lro;
-
-    invoke-virtual {v0}, Landroid/widget/PopupWindow;->isShowing()Z
-
-    move-result v1
-
-    invoke-virtual {p0}, Lep;->s()V
-
-    const/4 v2, 0x2
-
-    iget-object v3, p0, Lde8;->K0:Lro;
-
-    invoke-virtual {v3, v2}, Landroid/widget/PopupWindow;->setInputMethodMode(I)V
-
-    invoke-virtual {p0}, Lde8;->h()V
-
-    iget-object v2, p0, Lde8;->c:Lr95;
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v2, v3}, Landroid/widget/AbsListView;->setChoiceMode(I)V
-
-    invoke-virtual {v2, p1}, Landroid/view/View;->setTextDirection(I)V
-
-    invoke-virtual {v2, p2}, Landroid/view/View;->setTextAlignment(I)V
-
-    iget-object p1, p0, Lep;->R0:Lhp;
-
-    invoke-virtual {p1}, Landroid/widget/AdapterView;->getSelectedItemPosition()I
-
-    move-result p2
-
-    iget-object v2, p0, Lde8;->c:Lr95;
-
-    invoke-virtual {v0}, Landroid/widget/PopupWindow;->isShowing()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    if-eqz v2, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-virtual {v2, v0}, Lr95;->setListSelectionHidden(Z)V
-
-    invoke-virtual {v2, p2}, Landroid/widget/AdapterView;->setSelection(I)V
-
-    invoke-virtual {v2}, Landroid/widget/AbsListView;->getChoiceMode()I
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v2, p2, v3}, Landroid/widget/AbsListView;->setItemChecked(IZ)V
-
-    :cond_0
-    if-eqz v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    new-instance p2, Lyo;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p2, v0, p0}, Lyo;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, p2}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
-
-    new-instance p1, Ldp;
-
-    invoke-direct {p1, p0, p2}, Ldp;-><init>(Lep;Lyo;)V
-
-    iget-object p2, p0, Lde8;->K0:Lro;
-
-    invoke-virtual {p2, p1}, Landroid/widget/PopupWindow;->setOnDismissListener(Landroid/widget/PopupWindow$OnDismissListener;)V
-
-    :cond_2
-    :goto_0
-    return-void
-.end method
-
-.method public final p(Landroid/widget/ListAdapter;)V
-    .locals 0
-
-    invoke-super {p0, p1}, Lde8;->p(Landroid/widget/ListAdapter;)V
-
-    check-cast p1, Lbp;
-
-    iput-object p1, p0, Lep;->O0:Lbp;
-
-    return-void
-.end method
-
-.method public final s()V
-    .locals 10
-
-    iget-object v0, p0, Lep;->R0:Lhp;
-
-    iget-object v1, v0, Lhp;->v0:Landroid/graphics/Rect;
-
-    iget-object v2, p0, Lde8;->K0:Lro;
-
-    invoke-virtual {v2}, Landroid/widget/PopupWindow;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v3
-
-    const/4 v4, 0x1
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v3, v1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
-
-    sget-boolean v3, Llvh;->a:Z
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutDirection()I
-
-    move-result v3
-
-    if-ne v3, v4, :cond_0
-
-    iget v3, v1, Landroid/graphics/Rect;->right:I
-
-    goto :goto_0
-
-    :cond_0
-    iget v3, v1, Landroid/graphics/Rect;->left:I
-
-    neg-int v3, v3
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v3, 0x0
-
-    iput v3, v1, Landroid/graphics/Rect;->right:I
-
-    iput v3, v1, Landroid/graphics/Rect;->left:I
-
-    :goto_0
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v5
-
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v6
-
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
-
-    move-result v7
-
-    iget v8, v0, Lhp;->u0:I
-
-    const/4 v9, -0x2
-
-    if-ne v8, v9, :cond_3
-
-    iget-object v8, p0, Lep;->O0:Lbp;
-
-    invoke-virtual {v2}, Landroid/widget/PopupWindow;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v8, v2}, Lhp;->a(Landroid/widget/SpinnerAdapter;Landroid/graphics/drawable/Drawable;)I
-
-    move-result v2
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v8
-
-    iget v8, v8, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    iget v9, v1, Landroid/graphics/Rect;->left:I
-
-    sub-int/2addr v8, v9
-
-    iget v1, v1, Landroid/graphics/Rect;->right:I
-
-    sub-int/2addr v8, v1
-
-    if-le v2, v8, :cond_2
-
-    move v2, v8
-
-    :cond_2
-    sub-int v1, v7, v5
-
-    sub-int/2addr v1, v6
-
-    invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Lde8;->r(I)V
-
-    goto :goto_1
-
-    :cond_3
-    const/4 v1, -0x1
-
-    if-ne v8, v1, :cond_4
-
-    sub-int v1, v7, v5
-
-    sub-int/2addr v1, v6
-
-    invoke-virtual {p0, v1}, Lde8;->r(I)V
-
-    goto :goto_1
-
-    :cond_4
-    invoke-virtual {p0, v8}, Lde8;->r(I)V
-
-    :goto_1
-    sget-boolean v1, Llvh;->a:Z
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutDirection()I
-
-    move-result v0
-
-    if-ne v0, v4, :cond_5
-
-    sub-int/2addr v7, v6
-
-    iget v0, p0, Lde8;->o:I
-
-    sub-int/2addr v7, v0
-
-    iget v0, p0, Lep;->Q0:I
-
-    sub-int/2addr v7, v0
-
-    add-int/2addr v7, v3
-
-    goto :goto_2
-
-    :cond_5
-    iget v0, p0, Lep;->Q0:I
-
-    add-int/2addr v5, v0
-
-    add-int v7, v5, v3
-
-    :goto_2
-    iput v7, p0, Lde8;->X:I
-
-    return-void
+    return-object v0
 .end method

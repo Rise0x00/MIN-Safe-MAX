@@ -1,37 +1,38 @@
-.class public abstract Le6e;
+.class public final Le6e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lrvc;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
+# instance fields
+.field public final a:Lrvc;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lrvc;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Le6e;->a:Lrvc;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lxn0;Lsvc;)V
     .locals 1
 
-    sget v0, Lv5d;->font_normal:I
+    new-instance v0, Ld6e;
 
-    sput v0, Le6e;->a:I
+    invoke-direct {v0, p1}, Lmy4;-><init>(Lxn0;)V
 
-    sget v0, Lv5d;->font_only_emoji:I
+    iget-object p1, p0, Le6e;->a:Lrvc;
 
-    sput v0, Le6e;->b:I
-
-    sget v0, Lv5d;->font_small:I
-
-    sput v0, Le6e;->c:I
-
-    sget v0, Lv5d;->huge_horizontal_margin:I
-
-    sput v0, Le6e;->d:I
+    invoke-interface {p1, v0, p2}, Lrvc;->a(Lxn0;Lsvc;)V
 
     return-void
 .end method

@@ -1,67 +1,25 @@
-.class public final Llud;
-.super Lhk7;
+.class public abstract Llud;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final transient c:[Ljava/lang/Object;
+# static fields
+.field public static volatile a:I = 0x8
 
-.field public final transient d:I
-
-.field public final transient o:I
+.field public static final b:Landroid/util/Size;
 
 
 # direct methods
-.method public constructor <init>(II[Ljava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    new-instance v0, Landroid/util/Size;
 
-    iput-object p3, p0, Llud;->c:[Ljava/lang/Object;
+    const/16 v1, 0xa0
 
-    iput p1, p0, Llud;->d:I
+    invoke-direct {v0, v1, v1}, Landroid/util/Size;-><init>(II)V
 
-    iput p2, p0, Llud;->o:I
+    sput-object v0, Llud;->b:Landroid/util/Size;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final f()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Llud;->o:I
-
-    invoke-static {p1, v0}, Lekj;->d(II)V
-
-    mul-int/lit8 p1, p1, 0x2
-
-    iget v0, p0, Llud;->d:I
-
-    add-int/2addr p1, v0
-
-    iget-object v0, p0, Llud;->c:[Ljava/lang/Object;
-
-    aget-object p1, v0, p1
-
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget v0, p0, Llud;->o:I
-
-    return v0
 .end method

@@ -1,23 +1,24 @@
-.class public final Lwq5;
-.super Lh4h;
+.class public interface abstract Lwq5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final b()Ljava/lang/String;
+# static fields
+.field public static final t:Lxra;
+
+
+# direct methods
+.method static constructor <clinit>()V
     .locals 1
 
-    const-string v0, "ExoSoSource"
+    sget-object v0, Lxra;->X:Lxra;
 
-    return-object v0
+    sput-object v0, Lwq5;->t:Lxra;
+
+    return-void
 .end method
 
-.method public final g(Z)Lcom/facebook/soloader/e;
-    .locals 0
 
-    new-instance p1, Lcom/facebook/soloader/c;
-
-    invoke-direct {p1, p0, p0}, Lcom/facebook/soloader/c;-><init>(Lwq5;Lwq5;)V
-
-    return-object p1
+# virtual methods
+.method public abstract b()J
 .end method

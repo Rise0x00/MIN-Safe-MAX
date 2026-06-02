@@ -1,91 +1,51 @@
 .class public final Lu5e;
-.super Ljava/lang/Object;
+.super Lz84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lcl8;
+.field public final synthetic X:Lv5e;
 
-.field public volatile b:I
+.field public Y:I
 
-.field public volatile c:I
+.field public d:J
 
-.field public volatile d:I
-
-.field public volatile e:I
-
-.field public volatile f:I
-
-.field public volatile g:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lcl8;)V
-    .locals 1
+.method public constructor <init>(Lv5e;Lz84;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lu5e;->X:Lv5e;
 
-    const v0, 0x7fffffff
-
-    iput v0, p0, Lu5e;->c:I
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lu5e;->d:I
-
-    iput v0, p0, Lu5e;->e:I
-
-    iput-object p1, p0, Lu5e;->a:Lcl8;
-
-    const/16 p1, 0x1f4
-
-    iput p1, p0, Lu5e;->b:I
-
-    const/16 p1, 0x19
-
-    iput p1, p0, Lu5e;->g:I
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget v0, p0, Lu5e;->e:I
+    iput-object p1, p0, Lu5e;->o:Ljava/lang/Object;
 
-    const/4 v1, -0x1
+    iget p1, p0, Lu5e;->Y:I
 
-    if-ne v0, v1, :cond_0
+    const/high16 v0, -0x80000000
 
-    iget v0, p0, Lu5e;->b:I
+    or-int/2addr p1, v0
 
-    div-int/lit8 v0, v0, 0x4
+    iput p1, p0, Lu5e;->Y:I
 
-    return v0
+    iget-object p1, p0, Lu5e;->X:Lv5e;
 
-    :cond_0
-    iget v0, p0, Lu5e;->e:I
+    const-wide/16 v0, 0x0
 
-    return v0
-.end method
+    invoke-virtual {p1, v0, v1, p0}, Lv5e;->a(JLz84;)Ljava/lang/Object;
 
-.method public final b()I
-    .locals 2
+    move-result-object p1
 
-    iget v0, p0, Lu5e;->d:I
-
-    const/4 v1, -0x1
-
-    if-ne v0, v1, :cond_0
-
-    iget v0, p0, Lu5e;->b:I
-
-    return v0
-
-    :cond_0
-    iget v0, p0, Lu5e;->d:I
-
-    return v0
+    return-object p1
 .end method

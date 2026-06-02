@@ -2,49 +2,91 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvwa;
 
+# instance fields
+.field public final a:Ljava/lang/String;
 
-# static fields
-.field public static final a:Lpwi;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ltr5;
+
+.field public final d:Lfwi;
+
+.field public final e:Ljava/util/Set;
+
+.field public final f:J
+
+.field public final g:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ltr5;Lfwi;Ljava/util/Set;JI)V
+    .locals 0
 
-    new-instance v0, Lpwi;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    .line 2
+    iput-object p1, p0, Lpwi;->a:Ljava/lang/String;
 
-    sput-object v0, Lpwi;->a:Lpwi;
+    .line 3
+    iput-object p2, p0, Lpwi;->b:Ljava/lang/String;
 
-    new-instance v0, Lbri;
+    .line 4
+    iput-object p3, p0, Lpwi;->c:Ltr5;
 
-    const/4 v1, 0x1
+    .line 5
+    iput-object p4, p0, Lpwi;->d:Lfwi;
 
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+    .line 6
+    iput-object p5, p0, Lpwi;->e:Ljava/util/Set;
 
-    const-class v1, Lpri;
+    .line 7
+    iput-wide p6, p0, Lpwi;->f:J
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    .line 8
+    iput p8, p0, Lpwi;->g:I
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;Ltr5;Landroidx/work/WorkRequest;)V
+    .locals 10
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    .line 9
+    invoke-virtual {p3}, Landroidx/work/WorkRequest;->getId()Ljava/util/UUID;
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    move-result-object v0
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;
 
-    throw p1
+    move-result-object v2
+
+    .line 10
+    invoke-virtual {p3}, Landroidx/work/WorkRequest;->getWorkSpec()Lfwi;
+
+    move-result-object v5
+
+    .line 11
+    invoke-virtual {p3}, Landroidx/work/WorkRequest;->getTags()Ljava/util/Set;
+
+    move-result-object v6
+
+    .line 12
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v7
+
+    const/4 v9, 0x0
+
+    move-object v1, p0
+
+    move-object v3, p1
+
+    move-object v4, p2
+
+    .line 13
+    invoke-direct/range {v1 .. v9}, Lpwi;-><init>(Ljava/lang/String;Ljava/lang/String;Ltr5;Lfwi;Ljava/util/Set;JI)V
+
+    return-void
 .end method

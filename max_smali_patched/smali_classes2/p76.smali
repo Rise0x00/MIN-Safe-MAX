@@ -1,48 +1,13 @@
-.class public final Lp76;
-.super Lo84;
-
-
-# instance fields
-.field public final synthetic X:Ld83;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.class public abstract Lp76;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # direct methods
-.method public constructor <init>(Ld83;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lp76;->X:Ld83;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static a()I
     .locals 1
 
-    iput-object p1, p0, Lp76;->d:Ljava/lang/Object;
+    sget v0, Lffd;->colorError:I
 
-    iget p1, p0, Lp76;->o:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lp76;->o:I
-
-    iget-object p1, p0, Lp76;->X:Ld83;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ld83;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method

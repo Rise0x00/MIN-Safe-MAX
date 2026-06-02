@@ -1,48 +1,35 @@
 .class public final Lmq1;
-.super Lo84;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lnq1;
+.field public final a:La6c;
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final b:Ls5c;
 
-.field public o:I
+.field public final c:Lmf3;
+
+.field public final d:Lia8;
+
+.field public final e:Lia8;
 
 
 # direct methods
-.method public constructor <init>(Lnq1;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(La6c;Ls5c;Lmf3;Lia8;Lia8;)V
     .locals 0
 
-    iput-object p1, p0, Lmq1;->X:Lnq1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lmq1;->a:La6c;
+
+    iput-object p2, p0, Lmq1;->b:Ls5c;
+
+    iput-object p3, p0, Lmq1;->c:Lmf3;
+
+    iput-object p4, p0, Lmq1;->d:Lia8;
+
+    iput-object p5, p0, Lmq1;->e:Lia8;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lmq1;->d:Ljava/lang/Object;
-
-    iget p1, p0, Lmq1;->o:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lmq1;->o:I
-
-    iget-object p1, p0, Lmq1;->X:Lnq1;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lnq1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

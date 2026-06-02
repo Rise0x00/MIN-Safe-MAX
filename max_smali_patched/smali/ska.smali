@@ -1,125 +1,188 @@
 .class public final Lska;
-.super Landroid/telephony/PhoneStateListener;
+.super Liig;
 .source "SourceFile"
+
+# interfaces
+.implements Lnt6;
 
 
 # instance fields
-.field public final synthetic a:Ltka;
+.field public synthetic X:J
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Ltka;)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    iput-object p1, p0, Lska;->a:Ltka;
+    iput p3, p0, Lska;->o:I
 
-    invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
+    invoke-direct {p0, p1, p2}, Liig;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDisplayInfoChanged(Landroid/telephony/TelephonyDisplayInfo;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-static {p1}, Lc89;->c(Landroid/telephony/TelephonyDisplayInfo;)I
+    iget v0, p0, Lska;->o:I
 
-    move-result p1
+    check-cast p1, Ljava/lang/Number;
 
-    const/4 v0, 0x3
+    packed-switch v0, :pswitch_data_0
 
-    if-eq p1, v0, :cond_1
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
 
-    const/4 v0, 0x4
+    move-result-wide v0
 
-    if-ne p1, v0, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    :goto_1
-    if-eqz p1, :cond_2
-
-    const/16 p1, 0xa
-
-    goto :goto_2
-
-    :cond_2
-    const/4 p1, 0x5
-
-    :goto_2
-    iget-object v0, p0, Lska;->a:Ltka;
-
-    invoke-static {p1, v0}, Ltka;->a(ILtka;)V
-
-    return-void
-.end method
-
-.method public final onServiceStateChanged(Landroid/telephony/ServiceState;)V
-    .locals 1
-
-    if-nez p1, :cond_0
-
-    const-string p1, ""
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/telephony/ServiceState;->toString()Ljava/lang/String;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
-    :goto_0
-    const-string v0, "nrState=CONNECTED"
+    invoke-virtual {p0, p1, p2}, Lska;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    move-result-object p1
 
-    move-result v0
+    check-cast p1, Lska;
 
-    if-nez v0, :cond_2
+    sget-object p2, Lyeh;->a:Lyeh;
 
-    const-string v0, "nrState=NOT_RESTRICTED"
+    invoke-virtual {p1, p2}, Lska;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    return-object p2
 
-    move-result p1
+    :pswitch_0
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
 
-    if-eqz p1, :cond_1
+    move-result-wide v0
 
-    goto :goto_1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :cond_1
-    const/4 p1, 0x0
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    goto :goto_2
+    move-result-object p1
 
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
+    invoke-virtual {p0, p1, p2}, Lska;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :goto_2
-    if-eqz p1, :cond_3
+    move-result-object p1
 
-    const/16 p1, 0xa
+    check-cast p1, Lska;
 
-    goto :goto_3
+    sget-object p2, Lyeh;->a:Lyeh;
 
-    :cond_3
-    const/4 p1, 0x5
+    invoke-virtual {p1, p2}, Lska;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :goto_3
-    iget-object v0, p0, Lska;->a:Ltka;
+    return-object p2
 
-    invoke-static {p1, v0}, Ltka;->a(ILtka;)V
+    nop
 
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    iget v0, p0, Lska;->o:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lska;
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, p2, v2}, Lska;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide p1
+
+    iput-wide p1, v0, Lska;->X:J
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Lska;
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, p2, v2}, Lska;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide p1
+
+    iput-wide p1, v0, Lska;->X:J
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lska;->o:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-wide v0, p0, Lska;->X:J
+
+    invoke-static {p1}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lcom/my/tracker/userlifecycle/MyTrackerUserLifecycle;->trackLoginEvent(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object p1, Lyeh;->a:Lyeh;
+
+    return-object p1
+
+    :pswitch_0
+    iget-wide v0, p0, Lska;->X:J
+
+    invoke-static {p1}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    invoke-static {}, Lcom/my/tracker/MyTracker;->getTrackerParams()Lcom/my/tracker/MyTrackerParams;
+
+    move-result-object p1
+
+    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcom/my/tracker/MyTrackerParams;->setCustomUserId(Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
+
+    sget-object p1, Lyeh;->a:Lyeh;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

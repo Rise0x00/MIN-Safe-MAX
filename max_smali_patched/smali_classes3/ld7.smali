@@ -4,11 +4,5 @@
 
 
 # virtual methods
-.method public abstract getContentLength()J
-.end method
-
-.method public abstract getContentType()Ljava/lang/String;
-.end method
-
-.method public abstract writeTo(Ljava/io/OutputStream;)V
+.method public abstract verify(Ljava/lang/String;Ljava/security/cert/X509Certificate;)Z
 .end method

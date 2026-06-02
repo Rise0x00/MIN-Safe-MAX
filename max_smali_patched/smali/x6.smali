@@ -1,19 +1,29 @@
 .class public final Lx6;
-.super Lv6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lz6;
-
-
 # direct methods
-.method public constructor <init>(Lz6;)V
+.method public static final a(Lx6;Landroid/app/Activity;)Z
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object p1, p0, Lx6;->a:Lz6;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-void
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "CSPDialogActivity"
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    xor-int/lit8 p0, p0, 0x1
+
+    return p0
 .end method

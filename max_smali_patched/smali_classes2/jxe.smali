@@ -1,87 +1,90 @@
 .class public final Ljxe;
-.super Ljava/lang/Object;
+.super Lgie;
 .source "SourceFile"
-
-# interfaces
-.implements Lmxe;
 
 
 # instance fields
-.field public final a:J
+.field public final A0:Lhxe;
+
+.field public final B0:[B
+
+.field public final C0:Ly41;
+
+.field public final Z:Lixe;
+
+.field public final z0:Li41;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public constructor <init>(Lixe;Li41;Lhxe;[B)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lgie;-><init>()V
 
-    iput-wide p1, p0, Ljxe;->a:J
+    iput-object p1, p0, Ljxe;->Z:Lixe;
+
+    iput-object p2, p0, Ljxe;->z0:Li41;
+
+    iput-object p3, p0, Ljxe;->A0:Lhxe;
+
+    iput-object p4, p0, Ljxe;->B0:[B
+
+    new-instance v0, Ly41;
+
+    iget-object p1, p1, Lixe;->b:Ljk4;
+
+    invoke-direct {v0, p2, p1, p4, p3}, Ly41;-><init>(Li41;Ljk4;[BLx41;)V
+
+    iput-object v0, p0, Ljxe;->C0:Ly41;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ljxe;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ljxe;
-
-    iget-wide v3, p0, Ljxe;->a:J
-
-    iget-wide v5, p1, Ljxe;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final c()V
     .locals 2
 
-    iget-wide v0, p0, Ljxe;->a:J
+    iget-object v0, p0, Ljxe;->C0:Ly41;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    const/4 v1, 0x1
 
-    move-result v0
+    iput-boolean v1, v0, Ly41;->j:Z
 
-    return v0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final d()Ljava/lang/Object;
+    .locals 8
 
-    const-string v0, "Error(requestId="
+    iget-object v0, p0, Ljxe;->C0:Ly41;
 
-    const-string v1, ")"
+    invoke-virtual {v0}, Ly41;->a()V
 
-    iget-wide v2, p0, Ljxe;->a:J
+    iget-object v0, p0, Ljxe;->A0:Lhxe;
 
-    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    iget v1, v0, Lhxe;->o:I
+
+    add-int/lit8 v1, v1, 0x1
+
+    iput v1, v0, Lhxe;->o:I
+
+    iget-object v2, v0, Lhxe;->a:Li85;
+
+    iget-wide v4, v0, Lhxe;->b:J
+
+    iget-wide v6, v0, Lhxe;->d:J
+
+    invoke-virtual {v0}, Lhxe;->b()F
+
+    move-result v3
+
+    invoke-virtual/range {v2 .. v7}, Li85;->b(FJJ)V
+
+    :cond_0
+    const/4 v0, 0x0
 
     return-object v0
 .end method

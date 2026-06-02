@@ -3,89 +3,106 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemSelectedListener;
+.implements Ljava/util/Iterator;
+.implements Lr78;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Ljava/lang/String;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public b:Z
+
+.field public final synthetic c:Lcv;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lcv;)V
     .locals 0
-
-    iput p1, p0, Lyd8;->a:I
-
-    iput-object p2, p0, Lyd8;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method private final a(Landroid/widget/AdapterView;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/widget/AdapterView;)V
-    .locals 0
+    iput-object p1, p0, Lyd8;->c:Lcv;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 0
+.method public final hasNext()Z
+    .locals 2
 
-    iget p1, p0, Lyd8;->a:I
+    iget-object v0, p0, Lyd8;->a:Ljava/lang/String;
 
-    packed-switch p1, :pswitch_data_0
+    const/4 v1, 0x1
 
-    iget-object p1, p0, Lyd8;->b:Ljava/lang/Object;
+    if-nez v0, :cond_0
 
-    check-cast p1, Landroidx/appcompat/widget/e;
+    iget-boolean v0, p0, Lyd8;->b:Z
 
-    invoke-virtual {p1, p3}, Landroidx/appcompat/widget/e;->onItemSelected(I)Z
+    if-nez v0, :cond_0
 
-    return-void
+    iget-object v0, p0, Lyd8;->c:Lcv;
 
-    :pswitch_0
-    const/4 p1, -0x1
+    iget-object v0, v0, Lcv;->b:Ljava/lang/Object;
 
-    if-eq p3, p1, :cond_0
+    check-cast v0, Ljava/io/BufferedReader;
 
-    iget-object p1, p0, Lyd8;->b:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
-    check-cast p1, Lde8;
+    move-result-object v0
 
-    iget-object p1, p1, Lde8;->c:Lr95;
+    iput-object v0, p0, Lyd8;->a:Ljava/lang/String;
 
-    if-eqz p1, :cond_0
+    if-nez v0, :cond_0
 
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Lr95;->setListSelectionHidden(Z)V
+    iput-boolean v1, p0, Lyd8;->b:Z
 
     :cond_0
-    return-void
+    iget-object v0, p0, Lyd8;->a:Ljava/lang/String;
 
-    nop
+    if-eqz v0, :cond_1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v1
+
+    :cond_1
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
-.method public final onNothingSelected(Landroid/widget/AdapterView;)V
-    .locals 0
+.method public final next()Ljava/lang/Object;
+    .locals 2
 
-    iget p1, p0, Lyd8;->a:I
+    invoke-virtual {p0}, Lyd8;->hasNext()Z
 
-    return-void
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lyd8;->a:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lyd8;->a:Ljava/lang/String;
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final remove()V
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

@@ -3,240 +3,123 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lno0;
+.implements Lrvc;
 
 
 # instance fields
-.field public final a:Lylg;
+.field public final a:Ld9e;
 
-.field public final b:Lwtb;
+.field public b:I
 
-.field public final c:I
+.field public final c:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+.field public final d:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method public constructor <init>(ILylg;)V
+.method public constructor <init>(Ljava/util/concurrent/Executor;Ld9e;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lxvg;->c:I
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object p2, p0, Lxvg;->a:Lylg;
+    iput-object p1, p0, Lxvg;->d:Ljava/util/concurrent/Executor;
 
-    new-instance p1, Lwtb;
+    iput-object p2, p0, Lxvg;->a:Ld9e;
 
-    invoke-direct {p1}, Lwtb;-><init>()V
+    new-instance p1, Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    iput-object p1, p0, Lxvg;->b:Lwtb;
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
+
+    iput-object p1, p0, Lxvg;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lxvg;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 3
+.method public final a(Lxn0;Lsvc;)V
+    .locals 4
 
-    sget-object v0, Lmbh;->b:[B
+    move-object v0, p2
 
-    iget-object v1, p0, Lxvg;->b:Lwtb;
+    check-cast v0, Lhp0;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v1, v0, Lhp0;->c:Lvvc;
 
-    array-length v2, v0
+    const-string v2, "ThrottlingProducer"
 
-    invoke-virtual {v1, v2, v0}, Lwtb;->H(I[B)V
+    invoke-interface {v1, p2, v2}, Lvvc;->j(Lsvc;Ljava/lang/String;)V
 
-    return-void
-.end method
+    monitor-enter p0
 
-.method public final d(Lit5;J)Llo0;
-    .locals 18
+    :try_start_0
+    iget v1, p0, Lxvg;->b:I
 
-    move-object/from16 v0, p0
+    const/4 v2, 0x5
 
-    invoke-interface/range {p1 .. p1}, Lit5;->getPosition()J
+    const/4 v3, 0x1
 
-    move-result-wide v5
+    if-lt v1, v2, :cond_0
 
-    const v1, 0x1b8a0
+    iget-object v1, p0, Lxvg;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    int-to-long v1, v1
+    invoke-static {p1, p2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    invoke-interface/range {p1 .. p1}, Lit5;->getLength()J
+    move-result-object v2
 
-    move-result-wide v3
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/ConcurrentLinkedQueue;->add(Ljava/lang/Object;)Z
 
-    sub-long/2addr v3, v5
+    goto :goto_0
 
-    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v1
-
-    long-to-int v1, v1
-
-    iget-object v2, v0, Lxvg;->b:Lwtb;
-
-    invoke-virtual {v2, v1}, Lwtb;->G(I)V
-
-    iget-object v3, v2, Lwtb;->a:[B
-
-    const/4 v4, 0x0
-
-    move-object/from16 v7, p1
-
-    invoke-interface {v7, v4, v3, v1}, Lit5;->i(I[BI)V
-
-    iget v1, v2, Lwtb;->c:I
-
-    const-wide/16 v3, -0x1
-
-    move-wide v9, v3
-
-    const-wide v13, -0x7fffffffffffffffL    # -4.9E-324
-
-    :goto_0
-    invoke-virtual {v2}, Lwtb;->a()I
-
-    move-result v11
-
-    const/16 v12, 0xbc
-
-    if-lt v11, v12, :cond_7
-
-    iget-object v11, v2, Lwtb;->a:[B
-
-    iget v12, v2, Lwtb;->b:I
-
-    :goto_1
-    if-ge v12, v1, :cond_0
-
-    aget-byte v15, v11, v12
-
-    const-wide v16, -0x7fffffffffffffffL    # -4.9E-324
-
-    const/16 v7, 0x47
-
-    if-eq v15, v7, :cond_1
-
-    add-int/lit8 v12, v12, 0x1
+    :catchall_0
+    move-exception p1
 
     goto :goto_1
 
     :cond_0
-    const-wide v16, -0x7fffffffffffffffL    # -4.9E-324
+    add-int/2addr v1, v3
+
+    iput v1, p0, Lxvg;->b:I
+
+    const/4 v3, 0x0
+
+    :goto_0
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v3, :cond_1
+
+    iget-object v0, v0, Lhp0;->c:Lvvc;
+
+    const-string v1, "ThrottlingProducer"
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, p2, v1, v2}, Lvvc;->a(Lsvc;Ljava/lang/String;Ljava/util/Map;)V
+
+    iget-object v0, p0, Lxvg;->a:Ld9e;
+
+    new-instance v1, Lwvg;
+
+    invoke-direct {v1, p0, p1}, Lwvg;-><init>(Lxvg;Lxn0;)V
+
+    invoke-virtual {v0, v1, p2}, Ld9e;->a(Lxn0;Lsvc;)V
 
     :cond_1
-    add-int/lit16 v7, v12, 0xbc
+    return-void
 
-    if-le v7, v1, :cond_2
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    goto :goto_2
-
-    :cond_2
-    iget v3, v0, Lxvg;->c:I
-
-    invoke-static {v2, v12, v3}, Lo2j;->c(Lwtb;II)J
-
-    move-result-wide v3
-
-    cmp-long v8, v3, v16
-
-    if-eqz v8, :cond_6
-
-    iget-object v8, v0, Lxvg;->a:Lylg;
-
-    invoke-virtual {v8, v3, v4}, Lylg;->b(J)J
-
-    move-result-wide v3
-
-    cmp-long v8, v3, p2
-
-    if-lez v8, :cond_4
-
-    cmp-long v1, v13, v16
-
-    if-nez v1, :cond_3
-
-    new-instance v1, Llo0;
-
-    const/4 v2, -0x1
-
-    invoke-direct/range {v1 .. v6}, Llo0;-><init>(IJJ)V
-
-    return-object v1
-
-    :cond_3
-    add-long v15, v5, v9
-
-    new-instance v11, Llo0;
-
-    const/4 v12, 0x0
-
-    const-wide v13, -0x7fffffffffffffffL    # -4.9E-324
-
-    invoke-direct/range {v11 .. v16}, Llo0;-><init>(IJJ)V
-
-    return-object v11
-
-    :cond_4
-    const-wide/32 v8, 0x186a0
-
-    add-long/2addr v8, v3
-
-    cmp-long v8, v8, p2
-
-    if-lez v8, :cond_5
-
-    int-to-long v1, v12
-
-    add-long v11, v5, v1
-
-    new-instance v7, Llo0;
-
-    const/4 v8, 0x0
-
-    const-wide v9, -0x7fffffffffffffffL    # -4.9E-324
-
-    invoke-direct/range {v7 .. v12}, Llo0;-><init>(IJJ)V
-
-    return-object v7
-
-    :cond_5
-    int-to-long v8, v12
-
-    move-wide v13, v3
-
-    move-wide v9, v8
-
-    :cond_6
-    invoke-virtual {v2, v7}, Lwtb;->J(I)V
-
-    int-to-long v3, v7
-
-    goto :goto_0
-
-    :cond_7
-    const-wide v16, -0x7fffffffffffffffL    # -4.9E-324
-
-    :goto_2
-    cmp-long v1, v13, v16
-
-    if-eqz v1, :cond_8
-
-    add-long v15, v5, v3
-
-    new-instance v11, Llo0;
-
-    const/4 v12, -0x2
-
-    invoke-direct/range {v11 .. v16}, Llo0;-><init>(IJJ)V
-
-    return-object v11
-
-    :cond_8
-    sget-object v1, Llo0;->e:Llo0;
-
-    return-object v1
+    throw p1
 .end method

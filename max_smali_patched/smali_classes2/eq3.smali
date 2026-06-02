@@ -1,79 +1,295 @@
-.class public final Leq3;
-.super Landroid/view/TouchDelegate;
+.class public Leq3;
+.super Landroid/app/Dialog;
 .source "SourceFile"
+
+# interfaces
+.implements Lad8;
+.implements Lt4b;
+.implements Lole;
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public a:Lcd8;
+
+.field public final b:Lnle;
+
+.field public final c:Ls4b;
 
 
 # direct methods
-.method public constructor <init>(Leo9;)V
+.method public constructor <init>(Landroid/content/Context;I)V
     .locals 1
 
-    new-instance v0, Landroid/graphics/Rect;
+    invoke-direct {p0, p1, p2}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
 
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+    new-instance p1, Lnle;
 
-    invoke-direct {p0, v0, p1}, Landroid/view/TouchDelegate;-><init>(Landroid/graphics/Rect;Landroid/view/View;)V
+    invoke-direct {p1, p0}, Lnle;-><init>(Lole;)V
 
-    new-instance p1, Ljava/util/ArrayList;
+    iput-object p1, p0, Leq3;->b:Lnle;
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    new-instance p1, Ls4b;
 
-    iput-object p1, p0, Leq3;->a:Ljava/util/ArrayList;
+    new-instance p2, Lk52;
+
+    const/16 v0, 0x13
+
+    invoke-direct {p2, v0, p0}, Lk52;-><init>(ILjava/lang/Object;)V
+
+    invoke-direct {p1, p2}, Ls4b;-><init>(Ljava/lang/Runnable;)V
+
+    iput-object p1, p0, Leq3;->c:Ls4b;
+
+    return-void
+.end method
+
+.method public static b(Leq3;)V
+    .locals 0
+
+    invoke-super {p0}, Landroid/app/Dialog;->onBackPressed()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
+.method public final a()Ls4b;
+    .locals 1
+
+    iget-object v0, p0, Leq3;->c:Ls4b;
+
+    return-object v0
+.end method
+
+.method public addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    .locals 0
+
+    invoke-virtual {p0}, Leq3;->c()V
+
+    invoke-super {p0, p1, p2}, Landroid/app/Dialog;->addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+.end method
+
+.method public final c()V
     .locals 2
 
-    iget-object v0, p0, Leq3;->a:Ljava/util/ArrayList;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-static {v0, p0}, Lf90;->n0(Landroid/view/View;Lad8;)V
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    sget v1, Lhld;->view_tree_on_back_pressed_dispatcher_owner:I
+
+    invoke-virtual {v0, v1, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-static {v0, p0}, Lhk0;->m0(Landroid/view/View;Lole;)V
+
+    return-void
+.end method
+
+.method public final k()Lmle;
+    .locals 1
+
+    iget-object v0, p0, Leq3;->b:Lnle;
+
+    iget-object v0, v0, Lnle;->c:Ljava/lang/Object;
+
+    check-cast v0, Lmle;
+
+    return-object v0
+.end method
+
+.method public final onBackPressed()V
+    .locals 1
+
+    iget-object v0, p0, Leq3;->c:Ls4b;
+
+    invoke-virtual {v0}, Ls4b;->d()V
+
+    return-void
+.end method
+
+.method public onCreate(Landroid/os/Bundle;)V
+    .locals 2
+
+    invoke-super {p0, p1}, Landroid/app/Dialog;->onCreate(Landroid/os/Bundle;)V
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x21
+
+    if-lt v0, v1, :cond_0
+
+    invoke-static {p0}, Lfe;->j(Leq3;)Landroid/window/OnBackInvokedDispatcher;
+
+    move-result-object v0
+
+    iget-object v1, p0, Leq3;->c:Ls4b;
+
+    iput-object v0, v1, Ls4b;->e:Landroid/window/OnBackInvokedDispatcher;
+
+    iget-boolean v0, v1, Ls4b;->g:Z
+
+    invoke-virtual {v1, v0}, Ls4b;->e(Z)V
+
+    :cond_0
+    iget-object v0, p0, Leq3;->b:Lnle;
+
+    invoke-virtual {v0, p1}, Lnle;->b(Landroid/os/Bundle;)V
+
+    iget-object p1, p0, Leq3;->a:Lcd8;
+
+    if-nez p1, :cond_1
+
+    new-instance p1, Lcd8;
+
+    invoke-direct {p1, p0}, Lcd8;-><init>(Lad8;)V
+
+    iput-object p1, p0, Leq3;->a:Lcd8;
+
     :cond_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    sget-object v0, Lgc8;->ON_CREATE:Lgc8;
 
-    move-result v1
+    invoke-virtual {p1, v0}, Lcd8;->d(Lgc8;)V
 
-    if-eqz v1, :cond_2
+    return-void
+.end method
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+.method public final onSaveInstanceState()Landroid/os/Bundle;
+    .locals 2
 
-    move-result-object v1
+    invoke-super {p0}, Landroid/app/Dialog;->onSaveInstanceState()Landroid/os/Bundle;
 
-    check-cast v1, Landroid/view/TouchDelegate;
+    move-result-object v0
 
-    invoke-virtual {v1, p1}, Landroid/view/TouchDelegate;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    iget-object v1, p0, Leq3;->b:Lnle;
 
-    move-result v1
+    invoke-virtual {v1, v0}, Lnle;->c(Landroid/os/Bundle;)V
 
-    if-eqz v1, :cond_1
+    return-object v0
+.end method
 
-    const/4 p1, 0x1
+.method public final onStart()V
+    .locals 2
 
-    return p1
+    invoke-super {p0}, Landroid/app/Dialog;->onStart()V
 
-    :cond_2
-    :goto_0
-    const/4 p1, 0x0
+    iget-object v0, p0, Leq3;->a:Lcd8;
 
-    return p1
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcd8;
+
+    invoke-direct {v0, p0}, Lcd8;-><init>(Lad8;)V
+
+    iput-object v0, p0, Leq3;->a:Lcd8;
+
+    :cond_0
+    sget-object v1, Lgc8;->ON_RESUME:Lgc8;
+
+    invoke-virtual {v0, v1}, Lcd8;->d(Lgc8;)V
+
+    return-void
+.end method
+
+.method public onStop()V
+    .locals 2
+
+    iget-object v0, p0, Leq3;->a:Lcd8;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcd8;
+
+    invoke-direct {v0, p0}, Lcd8;-><init>(Lad8;)V
+
+    iput-object v0, p0, Leq3;->a:Lcd8;
+
+    :cond_0
+    sget-object v1, Lgc8;->ON_DESTROY:Lgc8;
+
+    invoke-virtual {v0, v1}, Lcd8;->d(Lgc8;)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Leq3;->a:Lcd8;
+
+    invoke-super {p0}, Landroid/app/Dialog;->onStop()V
+
+    return-void
+.end method
+
+.method public final q()Lcd8;
+    .locals 1
+
+    iget-object v0, p0, Leq3;->a:Lcd8;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcd8;
+
+    invoke-direct {v0, p0}, Lcd8;-><init>(Lad8;)V
+
+    iput-object v0, p0, Leq3;->a:Lcd8;
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public setContentView(I)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Leq3;->c()V
+
+    .line 2
+    invoke-super {p0, p1}, Landroid/app/Dialog;->setContentView(I)V
+
+    return-void
+.end method
+
+.method public setContentView(Landroid/view/View;)V
+    .locals 0
+
+    .line 3
+    invoke-virtual {p0}, Leq3;->c()V
+
+    .line 4
+    invoke-super {p0, p1}, Landroid/app/Dialog;->setContentView(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    .locals 0
+
+    .line 5
+    invoke-virtual {p0}, Leq3;->c()V
+
+    .line 6
+    invoke-super {p0, p1, p2}, Landroid/app/Dialog;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
 .end method

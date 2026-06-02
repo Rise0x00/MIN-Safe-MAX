@@ -1,355 +1,145 @@
 .class public final Lz22;
-.super Landroid/view/View;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final A0:F
-
-.field public static final B0:F
-
-.field public static final C0:F
-
-.field public static final synthetic w0:[Lz28;
-
-.field public static final x0:F
-
-.field public static final y0:F
-
-.field public static final z0:F
-
-
 # instance fields
-.field public final a:Lpk;
+.field public final a:Lsmh;
 
-.field public final b:Landroid/animation/ArgbEvaluator;
-
-.field public final c:Landroid/animation/FloatEvaluator;
-
-.field public d:Landroid/animation/ValueAnimator;
-
-.field public final o:Landroid/graphics/Paint;
-
-.field public final t0:Landroid/graphics/Paint;
-
-.field public u0:F
-
-.field public v0:F
+.field public final b:Lsif;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lia8;Lia8;Lsmh;)V
+    .locals 2
 
-    new-instance v0, Lhfa;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "type"
+    iput-object p3, p0, Lz22;->a:Lsmh;
 
-    const-string v2, "getType()Lone/me/sdk/gallery/view/quickcamera/CameraCentralButton$Type;"
+    const/4 v0, 0x7
 
-    const-class v3, Lz22;
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v3, v1, v2}, Lhfa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lctd;->a:Ldtd;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lz28;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Lz22;->w0:[Lz28;
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {v1, v1, v0}, Ltif;->b(III)Lsif;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    iput-object v0, p0, Lz22;->b:Lsif;
 
-    move-result-object v0
+    invoke-interface {p1}, Lia8;->getValue()Ljava/lang/Object;
 
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+    move-result-object p1
 
-    const/high16 v1, 0x40800000    # 4.0f
+    check-cast p1, Lov8;
 
-    mul-float/2addr v0, v1
+    invoke-virtual {p1, p0}, Lov8;->e(Ljava/lang/Object;)V
 
-    sput v0, Lz22;->x0:F
+    new-instance p1, Lx;
 
-    const/4 v2, 0x2
+    const/16 v0, 0x1c
 
-    int-to-float v2, v2
+    const/4 v1, 0x0
 
-    div-float/2addr v0, v2
+    invoke-direct {p1, p2, p0, v1, v0}, Lx;-><init>(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
 
-    sput v0, Lz22;->y0:F
+    const/4 p2, 0x3
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    sput v0, Lz22;->z0:F
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v2, 0x41000000    # 8.0f
-
-    mul-float/2addr v0, v2
-
-    sput v0, Lz22;->A0:F
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    sput v0, Lz22;->B0:F
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v1, 0x41600000    # 14.0f
-
-    mul-float/2addr v0, v1
-
-    sput v0, Lz22;->C0:F
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    new-instance p1, Lpk;
-
-    invoke-direct {p1, p0}, Lpk;-><init>(Lz22;)V
-
-    iput-object p1, p0, Lz22;->a:Lpk;
-
-    new-instance p1, Landroid/animation/ArgbEvaluator;
-
-    invoke-direct {p1}, Landroid/animation/ArgbEvaluator;-><init>()V
-
-    iput-object p1, p0, Lz22;->b:Landroid/animation/ArgbEvaluator;
-
-    new-instance p1, Landroid/animation/FloatEvaluator;
-
-    invoke-direct {p1}, Landroid/animation/FloatEvaluator;-><init>()V
-
-    iput-object p1, p0, Lz22;->c:Landroid/animation/FloatEvaluator;
-
-    new-instance p1, Landroid/graphics/Paint;
-
-    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
-
-    const/4 v0, -0x1
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
-
-    sget-object v0, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    sget v0, Lz22;->x0:F
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStrokeWidth(F)V
-
-    iput-object p1, p0, Lz22;->o:Landroid/graphics/Paint;
-
-    new-instance p1, Landroid/graphics/Paint;
-
-    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
-
-    sget-object v0, Lpc3;->t0:Lkme;
-
-    invoke-virtual {v0, p0}, Lkme;->p(Landroid/view/View;)Lzlb;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lzlb;->i()Lb0g;
-
-    const v0, 0x4dffffff    # 5.3687088E8f
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
-
-    iput-object p1, p0, Lz22;->t0:Landroid/graphics/Paint;
-
-    sget p1, Lz22;->z0:F
-
-    iput p1, p0, Lz22;->u0:F
+    invoke-static {p3, v1, v1, p1, p2}, Ly6j;->L(Loc4;Lfc4;Lrc4;Lnt6;I)Lhyf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getType()Ly22;
-    .locals 2
+.method public final onEvent(Lfe8;)V
+    .locals 3
+    .annotation runtime Lacg;
+    .end annotation
 
-    sget-object v0, Lz22;->w0:[Lz28;
+    .line 3
+    new-instance v0, Ly22;
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    aget-object v0, v0, v1
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Lz22;->a:Lpk;
+    invoke-direct {v0, p0, p1, v2, v1}, Ly22;-><init>(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
 
-    iget-object v0, v0, Ld3;->b:Ljava/lang/Object;
+    const/4 p1, 0x3
 
-    check-cast v0, Ly22;
+    iget-object v1, p0, Lz22;->a:Lsmh;
 
-    return-object v0
-.end method
-
-.method public final onDraw(Landroid/graphics/Canvas;)V
-    .locals 10
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    const/high16 v1, 0x40000000    # 2.0f
-
-    div-float/2addr v0, v1
-
-    sget v1, Lz22;->y0:F
-
-    sub-float v1, v0, v1
-
-    iget-object v2, p0, Lz22;->o:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0, v0, v1, v2}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
-
-    sget v0, Lz22;->x0:F
-
-    iget v1, p0, Lz22;->u0:F
-
-    add-float v3, v0, v1
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    sub-float/2addr v0, v3
-
-    const/4 v1, 0x2
-
-    int-to-float v1, v1
-
-    div-float/2addr v0, v1
-
-    iget v1, p0, Lz22;->v0:F
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v2
-
-    const/high16 v4, 0x3f000000    # 0.5f
-
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v4
-
-    iget-object v5, p0, Lz22;->c:Landroid/animation/FloatEvaluator;
-
-    invoke-virtual {v5, v1, v2, v4}, Landroid/animation/FloatEvaluator;->evaluate(FLjava/lang/Number;Ljava/lang/Number;)Ljava/lang/Float;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Number;->floatValue()F
-
-    move-result v1
-
-    mul-float v7, v1, v0
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    sub-float v5, v0, v3
-
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    sub-float v6, v0, v3
-
-    iget-object v9, p0, Lz22;->t0:Landroid/graphics/Paint;
-
-    move v4, v3
-
-    move v8, v7
-
-    move-object v2, p1
-
-    invoke-virtual/range {v2 .. v9}, Landroid/graphics/Canvas;->drawRoundRect(FFFFFFLandroid/graphics/Paint;)V
-
-    invoke-super {p0, v2}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
+    invoke-static {v1, v2, v2, v0, p1}, Ly6j;->L(Loc4;Lfc4;Lrc4;Lnt6;I)Lhyf;
 
     return-void
 .end method
 
-.method public final setType(Ly22;)V
-    .locals 2
+.method public final onEvent(Lho0;)V
+    .locals 3
+    .annotation runtime Lacg;
+    .end annotation
 
-    sget-object v0, Lz22;->w0:[Lz28;
+    .line 4
+    new-instance v0, Ly22;
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p0, p1, v2, v1}, Ly22;-><init>(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+
+    const/4 p1, 0x3
+
+    iget-object v1, p0, Lz22;->a:Lsmh;
+
+    invoke-static {v1, v2, v2, v0, p1}, Ly6j;->L(Loc4;Lfc4;Lrc4;Lnt6;I)Lhyf;
+
+    return-void
+.end method
+
+.method public final onEvent(Lj74;)V
+    .locals 3
+    .annotation runtime Lacg;
+    .end annotation
+
+    .line 1
+    new-instance v0, Lx;
+
+    const/16 v1, 0x1d
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p0, p1, v2, v1}, Lx;-><init>(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+
+    const/4 p1, 0x3
+
+    iget-object v1, p0, Lz22;->a:Lsmh;
+
+    invoke-static {v1, v2, v2, v0, p1}, Ly6j;->L(Loc4;Lfc4;Lrc4;Lnt6;I)Lhyf;
+
+    return-void
+.end method
+
+.method public final onEvent(Lqb3;)V
+    .locals 3
+    .annotation runtime Lacg;
+    .end annotation
+
+    .line 2
+    new-instance v0, Ly22;
 
     const/4 v1, 0x0
 
-    aget-object v0, v0, v1
+    const/4 v2, 0x0
 
-    iget-object v1, p0, Lz22;->a:Lpk;
+    invoke-direct {v0, p0, p1, v2, v1}, Ly22;-><init>(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
 
-    invoke-virtual {v1, p0, v0, p1}, Ld3;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
+    const/4 p1, 0x3
+
+    iget-object v1, p0, Lz22;->a:Lsmh;
+
+    invoke-static {v1, v2, v2, v0, p1}, Ly6j;->L(Loc4;Lfc4;Lrc4;Lnt6;I)Lhyf;
 
     return-void
 .end method

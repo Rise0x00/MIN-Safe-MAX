@@ -1,18 +1,47 @@
-.class public abstract Lw9d;
+.class public final Lw9d;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_snackbar_caption_id:I = 0x7f0a083c
+# instance fields
+.field public final a:Lqg5;
 
-.field public static oneme_snackbar_container_id:I = 0x7f0a083d
+.field public final b:Lxxg;
 
-.field public static oneme_snackbar_left_icon_id:I = 0x7f0a083e
+.field public final c:Lyd2;
 
-.field public static oneme_snackbar_right_button_id:I = 0x7f0a083f
+.field public d:Z
 
-.field public static oneme_snackbar_style_circle:I = 0x7f0a0840
+.field public e:Z
 
-.field public static oneme_snackbar_style_shine:I = 0x7f0a0841
+.field public f:Z
 
-.field public static oneme_snackbar_title_id:I = 0x7f0a0842
+.field public g:J
+
+
+# direct methods
+.method public constructor <init>(Lqg5;Lxxg;)V
+    .locals 3
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lw9d;->a:Lqg5;
+
+    iput-object p2, p0, Lw9d;->b:Lxxg;
+
+    new-instance p1, Lyd2;
+
+    const/16 p2, 0x40
+
+    new-array v0, p2, [B
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x0
+
+    invoke-direct {p1, v0, p2, v1, v2}, Lyd2;-><init>([BIIB)V
+
+    iput-object p1, p0, Lw9d;->c:Lyd2;
+
+    return-void
+.end method

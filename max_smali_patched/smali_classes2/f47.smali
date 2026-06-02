@@ -1,61 +1,376 @@
-.class public final enum Lf47;
-.super Ljava/lang/Enum;
+.class public final Lf47;
+.super Lcti;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lf47;
-
-.field public static final synthetic b:[Lf47;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Le47;)V
+    .locals 1
 
-    new-instance v0, Lf47;
+    invoke-direct {p0, p1}, Lcti;-><init>(Llz3;)V
 
-    const-string v1, "ONE_VIDEO_TIMEOUT"
+    iget-object v0, p1, Llz3;->d:Lmc7;
 
-    const/4 v2, 0x0
+    invoke-virtual {v0}, Lmc7;->f()V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget-object v0, p1, Llz3;->e:Lcqh;
 
-    sput-object v0, Lf47;->a:Lf47;
+    invoke-virtual {v0}, Lcqh;->f()V
 
-    filled-new-array {v0}, [Lf47;
+    iget p1, p1, Le47;->u0:I
 
-    move-result-object v0
-
-    sput-object v0, Lf47;->b:[Lf47;
+    iput p1, p0, Lcti;->f:I
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lf47;
-    .locals 1
 
-    const-class v0, Lf47;
+# virtual methods
+.method public final a(Llz4;)V
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object p1, p0, Lcti;->h:Lpz4;
 
-    move-result-object p0
+    iget-boolean v0, p1, Lpz4;->c:Z
 
-    check-cast p0, Lf47;
+    if-nez v0, :cond_0
 
-    return-object p0
-.end method
+    goto :goto_0
 
-.method public static values()[Lf47;
-    .locals 1
+    :cond_0
+    iget-boolean v0, p1, Lpz4;->j:Z
 
-    sget-object v0, Lf47;->b:[Lf47;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, [Lf47;->clone()Ljava/lang/Object;
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v0, p1, Lpz4;->l:Ljava/util/ArrayList;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lf47;
+    check-cast v0, Lpz4;
 
-    return-object v0
+    iget-object v1, p0, Lcti;->b:Llz3;
+
+    check-cast v1, Le47;
+
+    iget v0, v0, Lpz4;->g:I
+
+    int-to-float v0, v0
+
+    iget v1, v1, Le47;->q0:F
+
+    mul-float/2addr v0, v1
+
+    const/high16 v1, 0x3f000000    # 0.5f
+
+    add-float/2addr v0, v1
+
+    float-to-int v0, v0
+
+    invoke-virtual {p1, v0}, Lpz4;->d(I)V
+
+    return-void
+.end method
+
+.method public final d()V
+    .locals 7
+
+    iget-object v0, p0, Lcti;->b:Llz3;
+
+    move-object v1, v0
+
+    check-cast v1, Le47;
+
+    iget v2, v1, Le47;->r0:I
+
+    iget v3, v1, Le47;->s0:I
+
+    iget v1, v1, Le47;->u0:I
+
+    const/4 v4, -0x1
+
+    iget-object v5, p0, Lcti;->h:Lpz4;
+
+    const/4 v6, 0x1
+
+    if-ne v1, v6, :cond_2
+
+    if-eq v2, v4, :cond_0
+
+    iget-object v1, v5, Lpz4;->l:Ljava/util/ArrayList;
+
+    iget-object v0, v0, Llz3;->T:Llz3;
+
+    iget-object v0, v0, Llz3;->d:Lmc7;
+
+    iget-object v0, v0, Lcti;->h:Lpz4;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcti;->b:Llz3;
+
+    iget-object v0, v0, Llz3;->T:Llz3;
+
+    iget-object v0, v0, Llz3;->d:Lmc7;
+
+    iget-object v0, v0, Lcti;->h:Lpz4;
+
+    iget-object v0, v0, Lpz4;->k:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iput v2, v5, Lpz4;->f:I
+
+    goto :goto_0
+
+    :cond_0
+    if-eq v3, v4, :cond_1
+
+    iget-object v1, v5, Lpz4;->l:Ljava/util/ArrayList;
+
+    iget-object v0, v0, Llz3;->T:Llz3;
+
+    iget-object v0, v0, Llz3;->d:Lmc7;
+
+    iget-object v0, v0, Lcti;->i:Lpz4;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcti;->b:Llz3;
+
+    iget-object v0, v0, Llz3;->T:Llz3;
+
+    iget-object v0, v0, Llz3;->d:Lmc7;
+
+    iget-object v0, v0, Lcti;->i:Lpz4;
+
+    iget-object v0, v0, Lpz4;->k:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    neg-int v0, v3
+
+    iput v0, v5, Lpz4;->f:I
+
+    goto :goto_0
+
+    :cond_1
+    iput-boolean v6, v5, Lpz4;->b:Z
+
+    iget-object v1, v5, Lpz4;->l:Ljava/util/ArrayList;
+
+    iget-object v0, v0, Llz3;->T:Llz3;
+
+    iget-object v0, v0, Llz3;->d:Lmc7;
+
+    iget-object v0, v0, Lcti;->i:Lpz4;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcti;->b:Llz3;
+
+    iget-object v0, v0, Llz3;->T:Llz3;
+
+    iget-object v0, v0, Llz3;->d:Lmc7;
+
+    iget-object v0, v0, Lcti;->i:Lpz4;
+
+    iget-object v0, v0, Lpz4;->k:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_0
+    iget-object v0, p0, Lcti;->b:Llz3;
+
+    iget-object v0, v0, Llz3;->d:Lmc7;
+
+    iget-object v0, v0, Lcti;->h:Lpz4;
+
+    invoke-virtual {p0, v0}, Lf47;->m(Lpz4;)V
+
+    iget-object v0, p0, Lcti;->b:Llz3;
+
+    iget-object v0, v0, Llz3;->d:Lmc7;
+
+    iget-object v0, v0, Lcti;->i:Lpz4;
+
+    invoke-virtual {p0, v0}, Lf47;->m(Lpz4;)V
+
+    return-void
+
+    :cond_2
+    if-eq v2, v4, :cond_3
+
+    iget-object v1, v5, Lpz4;->l:Ljava/util/ArrayList;
+
+    iget-object v0, v0, Llz3;->T:Llz3;
+
+    iget-object v0, v0, Llz3;->e:Lcqh;
+
+    iget-object v0, v0, Lcti;->h:Lpz4;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcti;->b:Llz3;
+
+    iget-object v0, v0, Llz3;->T:Llz3;
+
+    iget-object v0, v0, Llz3;->e:Lcqh;
+
+    iget-object v0, v0, Lcti;->h:Lpz4;
+
+    iget-object v0, v0, Lpz4;->k:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iput v2, v5, Lpz4;->f:I
+
+    goto :goto_1
+
+    :cond_3
+    if-eq v3, v4, :cond_4
+
+    iget-object v1, v5, Lpz4;->l:Ljava/util/ArrayList;
+
+    iget-object v0, v0, Llz3;->T:Llz3;
+
+    iget-object v0, v0, Llz3;->e:Lcqh;
+
+    iget-object v0, v0, Lcti;->i:Lpz4;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcti;->b:Llz3;
+
+    iget-object v0, v0, Llz3;->T:Llz3;
+
+    iget-object v0, v0, Llz3;->e:Lcqh;
+
+    iget-object v0, v0, Lcti;->i:Lpz4;
+
+    iget-object v0, v0, Lpz4;->k:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    neg-int v0, v3
+
+    iput v0, v5, Lpz4;->f:I
+
+    goto :goto_1
+
+    :cond_4
+    iput-boolean v6, v5, Lpz4;->b:Z
+
+    iget-object v1, v5, Lpz4;->l:Ljava/util/ArrayList;
+
+    iget-object v0, v0, Llz3;->T:Llz3;
+
+    iget-object v0, v0, Llz3;->e:Lcqh;
+
+    iget-object v0, v0, Lcti;->i:Lpz4;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcti;->b:Llz3;
+
+    iget-object v0, v0, Llz3;->T:Llz3;
+
+    iget-object v0, v0, Llz3;->e:Lcqh;
+
+    iget-object v0, v0, Lcti;->i:Lpz4;
+
+    iget-object v0, v0, Lpz4;->k:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_1
+    iget-object v0, p0, Lcti;->b:Llz3;
+
+    iget-object v0, v0, Llz3;->e:Lcqh;
+
+    iget-object v0, v0, Lcti;->h:Lpz4;
+
+    invoke-virtual {p0, v0}, Lf47;->m(Lpz4;)V
+
+    iget-object v0, p0, Lcti;->b:Llz3;
+
+    iget-object v0, v0, Llz3;->e:Lcqh;
+
+    iget-object v0, v0, Lcti;->i:Lpz4;
+
+    invoke-virtual {p0, v0}, Lf47;->m(Lpz4;)V
+
+    return-void
+.end method
+
+.method public final e()V
+    .locals 4
+
+    iget-object v0, p0, Lcti;->b:Llz3;
+
+    move-object v1, v0
+
+    check-cast v1, Le47;
+
+    iget v1, v1, Le47;->u0:I
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Lcti;->h:Lpz4;
+
+    if-ne v1, v2, :cond_0
+
+    iget v1, v3, Lpz4;->g:I
+
+    iput v1, v0, Llz3;->Y:I
+
+    return-void
+
+    :cond_0
+    iget v1, v3, Lpz4;->g:I
+
+    iput v1, v0, Llz3;->Z:I
+
+    return-void
+.end method
+
+.method public final f()V
+    .locals 1
+
+    iget-object v0, p0, Lcti;->h:Lpz4;
+
+    invoke-virtual {v0}, Lpz4;->c()V
+
+    return-void
+.end method
+
+.method public final k()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final m(Lpz4;)V
+    .locals 2
+
+    iget-object v0, p0, Lcti;->h:Lpz4;
+
+    iget-object v1, v0, Lpz4;->k:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object p1, p1, Lpz4;->l:Ljava/util/ArrayList;
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
 .end method

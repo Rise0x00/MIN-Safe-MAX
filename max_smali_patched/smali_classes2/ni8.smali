@@ -3,463 +3,338 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Lmp9;
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # instance fields
-.field public final X:Z
+.field public X:Llp9;
 
-.field public final Y:Z
+.field public Y:Lmi8;
 
-.field public final Z:Z
+.field public a:Landroid/content/Context;
 
-.field public final a:Z
+.field public b:Landroid/view/LayoutInflater;
 
-.field public final b:Z
+.field public c:Lvo9;
 
-.field public final c:Z
+.field public d:Landroidx/appcompat/view/menu/ExpandedMenuView;
 
-.field public final d:Z
-
-.field public final o:Z
-
-.field public final t0:Lh2d;
-
-.field public final u0:Z
-
-.field public final v0:I
-
-.field public final w0:Z
-
-.field public final x0:Z
-
-.field public final y0:Z
-
-.field public final z0:Z
+.field public final o:I
 
 
 # direct methods
-.method public constructor <init>(Lmi8;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-boolean v0, p1, Lmi8;->a:Z
+    iput p2, p0, Lni8;->o:I
 
-    iput-boolean v0, p0, Lni8;->a:Z
+    iput-object p1, p0, Lni8;->a:Landroid/content/Context;
 
-    iget-boolean v0, p1, Lmi8;->b:Z
+    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    iput-boolean v0, p0, Lni8;->b:Z
+    move-result-object p1
 
-    iget-boolean v0, p1, Lmi8;->c:Z
-
-    iput-boolean v0, p0, Lni8;->c:Z
-
-    iget-boolean v0, p1, Lmi8;->d:Z
-
-    iput-boolean v0, p0, Lni8;->d:Z
-
-    iget-boolean v0, p1, Lmi8;->e:Z
-
-    iput-boolean v0, p0, Lni8;->o:Z
-
-    iget-boolean v0, p1, Lmi8;->f:Z
-
-    iput-boolean v0, p0, Lni8;->X:Z
-
-    iget-boolean v0, p1, Lmi8;->g:Z
-
-    iput-boolean v0, p0, Lni8;->Y:Z
-
-    iget-boolean v0, p1, Lmi8;->h:Z
-
-    iput-boolean v0, p0, Lni8;->Z:Z
-
-    iget-object v0, p1, Lmi8;->i:Lh2d;
-
-    iput-object v0, p0, Lni8;->t0:Lh2d;
-
-    iget-boolean v0, p1, Lmi8;->j:Z
-
-    iput-boolean v0, p0, Lni8;->u0:Z
-
-    iget v0, p1, Lmi8;->k:I
-
-    iput v0, p0, Lni8;->v0:I
-
-    iget-boolean v0, p1, Lmi8;->l:Z
-
-    iput-boolean v0, p0, Lni8;->w0:Z
-
-    iget-boolean v0, p1, Lmi8;->m:Z
-
-    iput-boolean v0, p0, Lni8;->x0:Z
-
-    iget-boolean v0, p1, Lmi8;->n:Z
-
-    iput-boolean v0, p0, Lni8;->y0:Z
-
-    iget-boolean p1, p1, Lmi8;->o:Z
-
-    iput-boolean p1, p0, Lni8;->z0:Z
+    iput-object p1, p0, Lni8;->b:Landroid/view/LayoutInflater;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final a()Lmi8;
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lni8;->Y:Lmi8;
 
-    goto :goto_0
+    if-nez v0, :cond_0
+
+    new-instance v0, Lmi8;
+
+    invoke-direct {v0, p0}, Lmi8;-><init>(Lni8;)V
+
+    iput-object v0, p0, Lni8;->Y:Lmi8;
 
     :cond_0
-    if-eqz p1, :cond_2
+    iget-object v0, p0, Lni8;->Y:Lmi8;
 
-    const-class v0, Lni8;
+    return-object v0
+.end method
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.method public final b(Lubg;)Z
+    .locals 5
 
-    move-result-object v1
+    invoke-virtual {p1}, Lvo9;->hasVisibleItems()Z
 
-    if-eq v0, v1, :cond_1
+    move-result v0
 
-    goto :goto_1
+    if-nez v0, :cond_0
 
-    :cond_1
-    check-cast p1, Lni8;
-
-    iget-boolean v0, p0, Lni8;->a:Z
-
-    iget-boolean v1, p1, Lni8;->a:Z
-
-    if-ne v0, v1, :cond_2
-
-    iget-boolean v0, p0, Lni8;->b:Z
-
-    iget-boolean v1, p1, Lni8;->b:Z
-
-    if-ne v0, v1, :cond_2
-
-    iget-boolean v0, p0, Lni8;->c:Z
-
-    iget-boolean v1, p1, Lni8;->c:Z
-
-    if-ne v0, v1, :cond_2
-
-    iget-boolean v0, p0, Lni8;->d:Z
-
-    iget-boolean v1, p1, Lni8;->d:Z
-
-    if-ne v0, v1, :cond_2
-
-    iget-boolean v0, p0, Lni8;->o:Z
-
-    iget-boolean v1, p1, Lni8;->o:Z
-
-    if-ne v0, v1, :cond_2
-
-    iget-boolean v0, p0, Lni8;->X:Z
-
-    iget-boolean v1, p1, Lni8;->X:Z
-
-    if-ne v0, v1, :cond_2
-
-    iget-boolean v0, p0, Lni8;->Y:Z
-
-    iget-boolean v1, p1, Lni8;->Y:Z
-
-    if-ne v0, v1, :cond_2
-
-    iget-boolean v0, p0, Lni8;->Z:Z
-
-    iget-boolean v1, p1, Lni8;->Z:Z
-
-    if-ne v0, v1, :cond_2
-
-    iget-boolean v0, p0, Lni8;->u0:Z
-
-    iget-boolean v1, p1, Lni8;->u0:Z
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Lni8;->v0:I
-
-    iget v1, p1, Lni8;->v0:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-boolean v0, p0, Lni8;->w0:Z
-
-    iget-boolean v1, p1, Lni8;->w0:Z
-
-    if-ne v0, v1, :cond_2
-
-    iget-boolean v0, p0, Lni8;->x0:Z
-
-    iget-boolean v1, p1, Lni8;->x0:Z
-
-    if-ne v0, v1, :cond_2
-
-    iget-boolean v0, p0, Lni8;->y0:Z
-
-    iget-boolean v1, p1, Lni8;->y0:Z
-
-    if-ne v0, v1, :cond_2
-
-    iget-boolean v0, p0, Lni8;->z0:Z
-
-    iget-boolean v1, p1, Lni8;->z0:Z
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lni8;->t0:Lh2d;
-
-    iget-object p1, p1, Lni8;->t0:Lh2d;
-
-    if-ne v0, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
+    const/4 p1, 0x0
 
     return p1
 
+    :cond_0
+    new-instance v0, Lxo9;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, v0, Lxo9;->a:Lubg;
+
+    new-instance v1, Lqe;
+
+    iget-object v2, p1, Lvo9;->a:Landroid/content/Context;
+
+    invoke-direct {v1, v2}, Lqe;-><init>(Landroid/content/Context;)V
+
+    new-instance v2, Lni8;
+
+    invoke-virtual {v1}, Lqe;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    sget v4, Lxld;->abc_list_menu_item_layout:I
+
+    invoke-direct {v2, v3, v4}, Lni8;-><init>(Landroid/content/Context;I)V
+
+    iput-object v2, v0, Lxo9;->c:Lni8;
+
+    iput-object v0, v2, Lni8;->X:Llp9;
+
+    invoke-virtual {p1, v2}, Lvo9;->b(Lmp9;)V
+
+    iget-object v2, v0, Lxo9;->c:Lni8;
+
+    invoke-virtual {v2}, Lni8;->a()Lmi8;
+
+    move-result-object v2
+
+    iget-object v3, v1, Lqe;->a:Lme;
+
+    iput-object v2, v3, Lme;->o:Landroid/widget/ListAdapter;
+
+    iput-object v0, v3, Lme;->p:Landroid/content/DialogInterface$OnClickListener;
+
+    iget-object v2, p1, Lvo9;->F0:Landroid/view/View;
+
+    if-eqz v2, :cond_1
+
+    iput-object v2, v3, Lme;->e:Landroid/view/View;
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v2, p1, Lvo9;->E0:Landroid/graphics/drawable/Drawable;
+
+    iput-object v2, v3, Lme;->c:Landroid/graphics/drawable/Drawable;
+
+    iget-object v2, p1, Lvo9;->D0:Ljava/lang/CharSequence;
+
+    invoke-virtual {v1, v2}, Lqe;->setTitle(Ljava/lang/CharSequence;)Lqe;
+
+    :goto_0
+    iput-object v0, v3, Lme;->m:Lxo9;
+
+    invoke-virtual {v1}, Lqe;->create()Lre;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lxo9;->b:Lre;
+
+    invoke-virtual {v1, v0}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+
+    iget-object v1, v0, Lxo9;->b:Lre;
+
+    invoke-virtual {v1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v1
+
+    const/16 v2, 0x3eb
+
+    iput v2, v1, Landroid/view/WindowManager$LayoutParams;->type:I
+
+    iget v2, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    const/high16 v3, 0x20000
+
+    or-int/2addr v2, v3
+
+    iput v2, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    iget-object v0, v0, Lxo9;->b:Lre;
+
+    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
+
+    iget-object v0, p0, Lni8;->X:Llp9;
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0, p1}, Llp9;->B(Lvo9;)Z
+
     :cond_2
-    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final c()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final d(Lzo9;)Z
+    .locals 0
+
     const/4 p1, 0x0
 
     return p1
 .end method
 
-.method public final hashCode()I
-    .locals 17
+.method public final e(Lvo9;Z)V
+    .locals 1
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Lni8;->X:Llp9;
 
-    iget-boolean v1, v0, Lni8;->a:Z
+    if-eqz v0, :cond_0
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-interface {v0, p1, p2}, Llp9;->e(Lvo9;Z)V
 
-    move-result-object v2
-
-    iget-boolean v1, v0, Lni8;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v3
-
-    iget-boolean v1, v0, Lni8;->c:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v4
-
-    iget-boolean v1, v0, Lni8;->d:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v5
-
-    iget-boolean v1, v0, Lni8;->o:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v6
-
-    iget-boolean v1, v0, Lni8;->X:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v7
-
-    iget-boolean v1, v0, Lni8;->Y:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v8
-
-    iget-boolean v1, v0, Lni8;->Z:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v9
-
-    iget-boolean v1, v0, Lni8;->u0:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v11
-
-    iget v1, v0, Lni8;->v0:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v12
-
-    iget-boolean v1, v0, Lni8;->w0:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v13
-
-    iget-boolean v1, v0, Lni8;->x0:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v14
-
-    iget-boolean v1, v0, Lni8;->y0:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v15
-
-    iget-boolean v1, v0, Lni8;->z0:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v16
-
-    iget-object v10, v0, Lni8;->t0:Lh2d;
-
-    filled-new-array/range {v2 .. v16}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result v1
-
-    return v1
+    :cond_0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final f(Llp9;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-object p1, p0, Lni8;->X:Llp9;
 
-    const-string v1, "LocalMediaToolboxViewState{qualityButtonEnable="
+    return-void
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public final g(Landroid/view/ViewGroup;)Lop9;
+    .locals 3
 
-    iget-boolean v1, p0, Lni8;->a:Z
+    iget-object v0, p0, Lni8;->d:Landroidx/appcompat/view/menu/ExpandedMenuView;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_1
 
-    const-string v1, ", qualityTextVisibility="
+    iget-object v0, p0, Lni8;->b:Landroid/view/LayoutInflater;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget v1, Lxld;->abc_expanded_menu_layout:I
 
-    iget-boolean v1, p0, Lni8;->b:Z
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    const-string v1, ", qualityProgressBarVisibility="
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p1, Landroidx/appcompat/view/menu/ExpandedMenuView;
 
-    iget-boolean v1, p0, Lni8;->c:Z
+    iput-object p1, p0, Lni8;->d:Landroidx/appcompat/view/menu/ExpandedMenuView;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-object p1, p0, Lni8;->Y:Lmi8;
 
-    const-string v1, ", multiSelect="
+    if-nez p1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance p1, Lmi8;
 
-    iget-boolean v1, p0, Lni8;->d:Z
+    invoke-direct {p1, p0}, Lmi8;-><init>(Lni8;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iput-object p1, p0, Lni8;->Y:Lmi8;
 
-    const-string v1, ", videoControlsVisibility="
+    :cond_0
+    iget-object p1, p0, Lni8;->d:Landroidx/appcompat/view/menu/ExpandedMenuView;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lni8;->Y:Lmi8;
 
-    iget-boolean v1, p0, Lni8;->o:Z
+    invoke-virtual {p1, v0}, Landroid/widget/AbsListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-object p1, p0, Lni8;->d:Landroidx/appcompat/view/menu/ExpandedMenuView;
 
-    const-string v1, ", videoSeekBarVisibility="
+    invoke-virtual {p1, p0}, Landroid/widget/AdapterView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_1
+    iget-object p1, p0, Lni8;->d:Landroidx/appcompat/view/menu/ExpandedMenuView;
 
-    iget-boolean v1, p0, Lni8;->X:Z
+    return-object p1
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+.method public final h(Lzo9;)Z
+    .locals 0
 
-    const-string v1, ", cropVisibility="
+    const/4 p1, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return p1
+.end method
 
-    iget-boolean v1, p0, Lni8;->Y:Z
+.method public final i()V
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lni8;->Y:Lmi8;
 
-    const-string v1, ", editVisibility="
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lmi8;->notifyDataSetChanged()V
 
-    iget-boolean v1, p0, Lni8;->Z:Z
+    :cond_0
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+.method public final k(Landroid/content/Context;Lvo9;)V
+    .locals 1
 
-    const-string v1, ", quality="
+    iget-object v0, p0, Lni8;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lni8;->t0:Lh2d;
+    iput-object p1, p0, Lni8;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lni8;->b:Landroid/view/LayoutInflater;
 
-    const-string v1, ", isNumericCheckButtonEnabled="
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    iget-boolean v1, p0, Lni8;->u0:Z
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iput-object p1, p0, Lni8;->b:Landroid/view/LayoutInflater;
 
-    const-string v1, ", numberForNumericCheckButton="
+    :cond_0
+    iput-object p2, p0, Lni8;->c:Lvo9;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p1, p0, Lni8;->Y:Lmi8;
 
-    iget v1, p0, Lni8;->v0:I
+    if-eqz p1, :cond_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Lmi8;->notifyDataSetChanged()V
 
-    const-string v1, ", highlightCropButton="
+    :cond_1
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 0
 
-    iget-boolean v1, p0, Lni8;->w0:Z
+    iget-object p1, p0, Lni8;->c:Lvo9;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-object p2, p0, Lni8;->Y:Lmi8;
 
-    const-string v1, ", highlightEditButton="
+    invoke-virtual {p2, p3}, Lmi8;->b(I)Lzo9;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p2
 
-    iget-boolean v1, p0, Lni8;->x0:Z
+    const/4 p3, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2, p0, p3}, Lvo9;->r(Landroid/view/MenuItem;Lmp9;I)Z
 
-    const-string v1, ", muteVideo="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lni8;->y0:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

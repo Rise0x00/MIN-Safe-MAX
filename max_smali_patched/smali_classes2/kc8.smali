@@ -1,137 +1,256 @@
-.class public final enum Lkc8;
-.super Ljava/lang/Enum;
+.class public final Lkc8;
+.super Ln82;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lkc8;
-
-.field public static final synthetic Y:[Lkc8;
-
-.field public static final synthetic Z:Lal5;
-
-.field public static final enum a:Lkc8;
-
-.field public static final enum b:Lkc8;
-
-.field public static final enum c:Lkc8;
-
-.field public static final enum d:Lkc8;
-
-.field public static final enum o:Lkc8;
+# instance fields
+.field public K:Lad8;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 9
+# virtual methods
+.method public final r()Ljc8;
+    .locals 11
 
-    new-instance v0, Lkc8;
+    iget-object v0, p0, Lkc8;->K:Lad8;
 
-    const-string v1, "URL"
+    const-string v1, "CamLifecycleController"
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    if-nez v0, :cond_0
 
-    sput-object v0, Lkc8;->a:Lkc8;
+    const-string v0, "Lifecycle is not set."
 
-    new-instance v1, Lkc8;
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v2, "HASH_TAG"
+    return-object v2
+
+    :cond_0
+    iget-object v0, p0, Ln82;->q:Lyuc;
+
+    if-nez v0, :cond_1
+
+    const-string v0, "CameraProvider is not ready."
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v2
+
+    :cond_1
+    invoke-virtual {p0}, Ln82;->k()Z
+
+    move-result v0
+
+    const-string v1, "CameraController"
+
+    if-nez v0, :cond_2
+
+    const-string v0, "Camera not initialized."
+
+    invoke-static {v1, v0}, Lw8g;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    move-object v0, v2
+
+    goto/16 :goto_3
+
+    :cond_2
+    iget-object v0, p0, Ln82;->s:Ljtc;
+
+    if-eqz v0, :cond_8
+
+    iget-object v0, p0, Ln82;->r:La6i;
+
+    if-eqz v0, :cond_8
+
+    invoke-virtual {p0}, Ln82;->k()Z
+
+    move-result v0
+
+    const/4 v1, 0x2
 
     const/4 v3, 0x1
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/4 v4, 0x4
 
-    sput-object v1, Lkc8;->b:Lkc8;
+    if-nez v0, :cond_3
 
-    new-instance v2, Lkc8;
+    goto :goto_1
 
-    const-string v3, "BOT_COMMAND"
+    :cond_3
+    iget-object v0, p0, Ln82;->q:Lyuc;
 
-    const/4 v4, 0x2
+    iget-object v5, p0, Ln82;->c:Lktc;
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget-object v6, p0, Ln82;->e:Lfk7;
 
-    sput-object v2, Lkc8;->c:Lkc8;
+    iget-object v7, p0, Ln82;->h:Lbj7;
 
-    new-instance v3, Lkc8;
+    iget-object v8, p0, Ln82;->i:Lzqh;
 
-    const-string v4, "PROFILE_TAG"
+    new-array v9, v4, [Lemh;
+
+    const/4 v10, 0x0
+
+    aput-object v5, v9, v10
+
+    aput-object v6, v9, v3
+
+    aput-object v7, v9, v1
 
     const/4 v5, 0x3
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    aput-object v8, v9, v5
 
-    sput-object v3, Lkc8;->d:Lkc8;
+    invoke-virtual {v0, v9}, Lyuc;->a([Lemh;)V
 
-    new-instance v4, Lkc8;
+    :goto_1
+    new-instance v0, Lmmh;
 
-    const-string v5, "MENTION"
+    invoke-direct {v0}, Lmmh;-><init>()V
 
-    const/4 v6, 0x4
+    iget-object v5, p0, Ln82;->c:Lktc;
 
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-virtual {v0, v5}, Lmmh;->a(Lemh;)V
 
-    sput-object v4, Lkc8;->o:Lkc8;
+    invoke-static {}, Llyj;->a()V
 
-    new-instance v5, Lkc8;
+    iget v5, p0, Ln82;->b:I
 
-    const-string v6, "ML_ENTRY"
+    and-int/2addr v3, v5
 
-    const/4 v7, 0x5
+    if-eqz v3, :cond_4
 
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget-object v3, p0, Ln82;->e:Lfk7;
 
-    new-instance v6, Lkc8;
+    invoke-virtual {v0, v3}, Lmmh;->a(Lemh;)V
 
-    const-string v7, "MARKDOWN_LINK"
+    :cond_4
+    invoke-static {}, Llyj;->a()V
 
-    const/4 v8, 0x6
+    iget v3, p0, Ln82;->b:I
 
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    and-int/2addr v1, v3
 
-    sput-object v6, Lkc8;->X:Lkc8;
+    if-eqz v1, :cond_5
 
-    filled-new-array/range {v0 .. v6}, [Lkc8;
+    iget-object v1, p0, Ln82;->h:Lbj7;
+
+    invoke-virtual {v0, v1}, Lmmh;->a(Lemh;)V
+
+    :cond_5
+    invoke-static {}, Llyj;->a()V
+
+    iget v1, p0, Ln82;->b:I
+
+    and-int/2addr v1, v4
+
+    if-eqz v1, :cond_6
+
+    iget-object v1, p0, Ln82;->i:Lzqh;
+
+    invoke-virtual {v0, v1}, Lmmh;->a(Lemh;)V
+
+    :cond_6
+    iget-object v1, p0, Ln82;->r:La6i;
+
+    iput-object v1, v0, Lmmh;->a:La6i;
+
+    iget-object v1, p0, Ln82;->F:Ljava/util/HashSet;
+
+    invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_2
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_7
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Livh;
+
+    iget-object v4, v0, Lmmh;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_2
+
+    :cond_7
+    invoke-virtual {v0}, Lmmh;->b()Lal8;
 
     move-result-object v0
 
-    sput-object v0, Lkc8;->Y:[Lkc8;
+    goto :goto_3
 
-    new-instance v1, Lal5;
+    :cond_8
+    const-string v0, "PreviewView not attached to CameraController."
 
-    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
+    invoke-static {v1, v0}, Lw8g;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    sput-object v1, Lkc8;->Z:Lal5;
+    goto/16 :goto_0
 
-    return-void
-.end method
+    :goto_3
+    if-nez v0, :cond_9
 
-.method public static valueOf(Ljava/lang/String;)Lkc8;
-    .locals 1
+    return-object v2
 
-    const-class v0, Lkc8;
+    :cond_9
+    :try_start_0
+    iget-object v1, p0, Ln82;->q:Lyuc;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v2, p0, Lkc8;->K:Lad8;
 
-    move-result-object p0
+    iget-object v3, p0, Ln82;->a:Lea2;
 
-    check-cast p0, Lkc8;
+    iget-object v1, v1, Lyuc;->a:Lxuc;
 
-    return-object p0
-.end method
-
-.method public static values()[Lkc8;
-    .locals 1
-
-    sget-object v0, Lkc8;->Y:[Lkc8;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {v1, v2, v3, v0}, Lxuc;->a(Lad8;Lea2;Lal8;)Ljc8;
 
     move-result-object v0
-
-    check-cast v0, [Lkc8;
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "The selected camera does not support the enabled use cases. Please disable use case and/or select a different camera. e.g. #setVideoCaptureEnabled(false)"
+
+    invoke-direct {v1, v2, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+.end method
+
+.method public final x()V
+    .locals 1
+
+    invoke-static {}, Llyj;->a()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lkc8;->K:Lad8;
+
+    iput-object v0, p0, Ln82;->p:Ljc8;
+
+    iget-object v0, p0, Ln82;->q:Lyuc;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Lyuc;->a:Lxuc;
+
+    iget-object v0, v0, Lxuc;->a:Lxd5;
+
+    invoke-virtual {v0}, Lxd5;->z()V
+
+    :cond_0
+    return-void
 .end method

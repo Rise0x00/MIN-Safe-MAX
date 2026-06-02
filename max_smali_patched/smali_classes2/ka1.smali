@@ -1,180 +1,105 @@
-.class public final Lka1;
-.super Ljava/lang/Object;
+.class public final enum Lka1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final enum b:Lka1;
+
+.field public static final enum c:Lka1;
+
+.field public static final enum d:Lka1;
+
+.field public static final synthetic o:[Lka1;
+
+
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:I
-
-.field public final c:I
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lka1;
 
-    iput-object p1, p0, Lka1;->a:Ljava/lang/String;
+    const/4 v1, 0x0
 
-    iput p2, p0, Lka1;->b:I
+    sget v2, Lxhe;->n1:I
 
-    iput p3, p0, Lka1;->c:I
+    const-string v3, "UP"
+
+    invoke-direct {v0, v3, v1, v2}, Lka1;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Lka1;->b:Lka1;
+
+    new-instance v1, Lka1;
+
+    const/4 v2, 0x1
+
+    sget v3, Lxhe;->m1:I
+
+    const-string v4, "LEFT"
+
+    invoke-direct {v1, v4, v2, v3}, Lka1;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lka1;->c:Lka1;
+
+    new-instance v2, Lka1;
+
+    const/4 v3, 0x2
+
+    sget v4, Lxhe;->l1:I
+
+    const-string v5, "RIGHT"
+
+    invoke-direct {v2, v5, v3, v4}, Lka1;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lka1;->d:Lka1;
+
+    filled-new-array {v0, v1, v2}, [Lka1;
+
+    move-result-object v0
+
+    sput-object v0, Lka1;->o:[Lka1;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-ne p0, p1, :cond_0
+    iput p3, p0, Lka1;->a:I
 
-    goto :goto_0
-
-    :cond_0
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    const-class v1, Lka1;
-
-    if-eq v1, v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, Lka1;
-
-    iget-object v0, p0, Lka1;->a:Ljava/lang/String;
-
-    iget-object v1, p1, Lka1;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget v0, p0, Lka1;->b:I
-
-    iget v1, p1, Lka1;->b:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Lka1;->c:I
-
-    iget p1, p1, Lka1;->c:I
-
-    if-ne v0, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public static valueOf(Ljava/lang/String;)Lka1;
+    .locals 1
 
-    iget v0, p0, Lka1;->c:I
+    const-class v0, Lka1;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result-object v0
+    move-result-object p0
 
-    iget v1, p0, Lka1;->b:I
+    check-cast p0, Lka1;
 
-    invoke-static {v1}, Lt02;->b(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lka1;->a:Ljava/lang/String;
-
-    filled-new-array {v2, v1, v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
+    return-object p0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public static values()[Lka1;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object v0, Lka1;->o:[Lka1;
 
-    const-string v1, "CallExternalId{id=\'"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lka1;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', type="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Lka1;->b:I
-
-    if-eq v2, v1, :cond_2
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x3
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "ANONYM"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "VK"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "UNKNOWN"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", deviceIndex="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lka1;->c:I
-
-    const/16 v2, 0x7d
-
-    invoke-static {v0, v1, v2}, Lhc0;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lka1;
 
     return-object v0
 .end method

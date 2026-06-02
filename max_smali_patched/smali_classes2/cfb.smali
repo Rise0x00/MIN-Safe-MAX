@@ -1,54 +1,121 @@
-.class public final synthetic Lcfb;
+.class public abstract Lcfb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnKeyListener;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:Lefb;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lefb;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lcod;->oneme_media_keyboard_emoji_animals_and_plants:I
 
-    iput-object p1, p0, Lcfb;->a:Lefb;
+    sput v0, Lcfb;->a:I
+
+    sget v0, Lcod;->oneme_media_keyboard_emoji_classic:I
+
+    sput v0, Lcfb;->b:I
+
+    sget v0, Lcod;->oneme_media_keyboard_emoji_flags:I
+
+    sput v0, Lcfb;->c:I
+
+    sget v0, Lcod;->oneme_media_keyboard_emoji_food_and_drink:I
+
+    sput v0, Lcfb;->d:I
+
+    sget v0, Lcod;->oneme_media_keyboard_emoji_gestures_and_people:I
+
+    sput v0, Lcfb;->e:I
+
+    sget v0, Lcod;->oneme_media_keyboard_emoji_objects:I
+
+    sput v0, Lcfb;->f:I
+
+    sget v0, Lcod;->oneme_media_keyboard_emoji_sport_and_activity:I
+
+    sput v0, Lcfb;->g:I
+
+    sget v0, Lcod;->oneme_media_keyboard_emoji_symbols:I
+
+    sput v0, Lcfb;->h:I
+
+    sget v0, Lcod;->oneme_media_keyboard_emoji_travels_and_transport:I
+
+    sput v0, Lcfb;->i:I
+
+    sget v0, Lcod;->oneme_media_keyboard_favorite:I
+
+    sput v0, Lcfb;->j:I
+
+    sget v0, Lcod;->oneme_media_keyboard_popular:I
+
+    sput v0, Lcfb;->k:I
+
+    sget v0, Lcod;->oneme_media_keyboard_recent:I
+
+    sput v0, Lcfb;->l:I
+
+    sget v0, Lcod;->oneme_media_keyboard_recent_clear_action:I
+
+    sput v0, Lcfb;->m:I
+
+    sget v0, Lcod;->oneme_media_keyboard_recent_clear_cancel:I
+
+    sput v0, Lcfb;->n:I
+
+    sget v0, Lcod;->oneme_media_keyboard_recent_clear_title:I
+
+    sput v0, Lcfb;->o:I
+
+    sget v0, Lcod;->oneme_media_keyboard_tab_emoji:I
+
+    sput v0, Lcfb;->p:I
+
+    sget v0, Lcod;->oneme_media_keyboard_tab_gifs:I
+
+    sput v0, Lcfb;->q:I
+
+    sget v0, Lcod;->oneme_media_keyboard_tab_stickers:I
+
+    sput v0, Lcfb;->r:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
-    .locals 0
-
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
-
-    move-result p1
-
-    const/4 p3, 0x0
-
-    if-nez p1, :cond_0
-
-    const/16 p1, 0x43
-
-    if-ne p2, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    move p1, p3
-
-    :goto_0
-    iget-object p2, p0, Lcfb;->a:Lefb;
-
-    iput-boolean p1, p2, Lefb;->o:Z
-
-    return p3
 .end method

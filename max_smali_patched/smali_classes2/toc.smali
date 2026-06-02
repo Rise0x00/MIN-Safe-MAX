@@ -1,84 +1,53 @@
 .class public final Ltoc;
-.super Ljava/lang/Object;
+.super Lt3;
 .source "SourceFile"
-
-# interfaces
-.implements Lvoc;
 
 
 # instance fields
-.field public final a:Lqj3;
+.field public final a:Lo78;
+
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lqj3;)V
-    .locals 0
+.method public constructor <init>(Lo78;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ltoc;->a:Lqj3;
+    iput-object p1, p0, Ltoc;->a:Lo78;
+
+    new-instance p1, Lefc;
+
+    const/4 v0, 0x7
+
+    invoke-direct {p1, v0, p0}, Lefc;-><init>(ILjava/lang/Object;)V
+
+    const/4 v0, 0x2
+
+    invoke-static {v0, p1}, Ltf3;->M(ILxs6;)Lia8;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ltoc;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ltoc;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ltoc;
-
-    iget-object v1, p0, Ltoc;->a:Lqj3;
-
-    iget-object p1, p1, Ltoc;->a:Lqj3;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final d()Lt2f;
     .locals 1
 
-    iget-object v0, p0, Ltoc;->a:Lqj3;
+    iget-object v0, p0, Ltoc;->b:Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    return v0
+    check-cast v0, Lt2f;
 
-    :cond_0
-    iget-object v0, v0, Lqj3;->a:Ljava/util/List;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
+    return-object v0
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -86,17 +55,17 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "LastNamePayload(errorText="
+    const-string v1, "kotlinx.serialization.PolymorphicSerializer(baseClass: "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Ltoc;->a:Lqj3;
+    iget-object v1, p0, Ltoc;->a:Lo78;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ")"
+    const/16 v1, 0x29
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

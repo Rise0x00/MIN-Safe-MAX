@@ -1,120 +1,151 @@
 .class public final Lfz8;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lfz8;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Luz8;
+.implements Ls45;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Ltz3;
 
-.field public final b:Lp29;
+.field public final b:Ltz3;
+
+.field public final c:Lx7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ltz3;Ltz3;Lx7;)V
+    .locals 0
 
-    new-instance v0, Lhu8;
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    const/4 v1, 0x2
+    iput-object p1, p0, Lfz8;->a:Ltz3;
 
-    invoke-direct {v0, v1}, Lhu8;-><init>(I)V
+    iput-object p2, p0, Lfz8;->b:Ltz3;
 
-    sput-object v0, Lfz8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lfz8;->a:I
-
-    sget-object v0, Lp29;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lp29;
-
-    iput-object p1, p0, Lfz8;->b:Lp29;
+    iput-object p3, p0, Lfz8;->c:Lx7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final a(Ljava/lang/Object;)V
     .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Lw45;->a:Lw45;
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    :try_start_0
+    iget-object v0, p0, Lfz8;->a:Ltz3;
+
+    invoke-interface {v0, p1}, Ltz3;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Lmzj;->c(Ljava/lang/Throwable;)V
+
+    invoke-static {p1}, Lq98;->J(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final b()V
+    .locals 1
+
+    sget-object v0, Lw45;->a:Lw45;
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    :try_start_0
+    iget-object v0, p0, Lfz8;->c:Lx7;
+
+    invoke-interface {v0}, Lx7;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lmzj;->c(Ljava/lang/Throwable;)V
+
+    invoke-static {v0}, Lq98;->J(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final c(Ls45;)V
+    .locals 0
+
+    invoke-static {p0, p1}, Lw45;->i(Ljava/util/concurrent/atomic/AtomicReference;Ls45;)Z
+
+    return-void
+.end method
+
+.method public final dispose()V
+    .locals 0
+
+    invoke-static {p0}, Lw45;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ls45;
+
+    invoke-static {v0}, Lw45;->c(Ls45;)Z
+
+    move-result v0
 
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final onError(Ljava/lang/Throwable;)V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object v0, Lw45;->a:Lw45;
 
-    const-string v1, "MediaItem{mFlags="
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :try_start_0
+    iget-object v0, p0, Lfz8;->b:Ltz3;
 
-    iget v1, p0, Lfz8;->a:I
+    invoke-interface {v0, p1}, Ltz3;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    return-void
 
-    const-string v1, ", mDescription="
+    :catchall_0
+    move-exception v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Lmzj;->c(Ljava/lang/Throwable;)V
 
-    iget-object v1, p0, Lfz8;->b:Lp29;
+    new-instance v1, Lio/reactivex/rxjava3/exceptions/CompositeException;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    filled-new-array {p1, v0}, [Ljava/lang/Throwable;
 
-    const/16 v1, 0x7d
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-direct {v1, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
-
-    iget v0, p0, Lfz8;->a:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-object v0, p0, Lfz8;->b:Lp29;
-
-    invoke-virtual {v0, p1, p2}, Lp29;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-static {v1}, Lq98;->J(Ljava/lang/Throwable;)V
 
     return-void
 .end method

@@ -1,86 +1,181 @@
 .class public final Ls20;
-.super Ljz;
+.super Lu20;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Ljava/lang/Long;
+.field public final c:J
 
-.field public final Y:[B
+.field public final d:Ljava/util/ArrayList;
 
-.field public final Z:Ljava/lang/String;
-
-.field public final d:Ljava/lang/Long;
-
-.field public final o:Ljava/lang/String;
-
-.field public final t0:Ljava/lang/String;
-
-.field public final u0:I
+.field public final o:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;J[BZLjava/lang/String;Ljava/lang/String;ZI)V
+.method public constructor <init>(IJ)V
     .locals 1
 
-    sget-object v0, Le10;->X:Le10;
+    const/4 v0, 0x0
 
-    invoke-direct {p0, v0, p7, p10}, Ljz;-><init>(Le10;ZZ)V
+    invoke-direct {p0, p1, v0}, Lu20;-><init>(II)V
 
-    invoke-static {p4, p5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iput-wide p2, p0, Ls20;->c:J
 
-    move-result-object p4
+    new-instance p1, Ljava/util/ArrayList;
 
-    iput-object p4, p0, Ls20;->X:Ljava/lang/Long;
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iput-object p1, p0, Ls20;->d:Ljava/util/ArrayList;
 
-    move-result-object p1
+    new-instance p1, Ljava/util/ArrayList;
 
-    iput-object p1, p0, Ls20;->d:Ljava/lang/Long;
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p3, p0, Ls20;->o:Ljava/lang/String;
-
-    iput-object p6, p0, Ls20;->Y:[B
-
-    iput-object p8, p0, Ls20;->Z:Ljava/lang/String;
-
-    iput-object p9, p0, Ls20;->t0:Ljava/lang/String;
-
-    iput p11, p0, Ls20;->u0:I
+    iput-object p1, p0, Ls20;->o:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/HashMap;
-    .locals 3
+.method public final t(I)Ls20;
+    .locals 5
 
-    invoke-super {p0}, Ljz;->a()Ljava/util/HashMap;
+    iget-object v0, p0, Ls20;->o:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ls20;
+
+    iget v4, v3, Lu20;->b:I
+
+    if-ne v4, p1, :cond_0
+
+    return-object v3
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    iget v0, p0, Lu20;->b:I
+
+    invoke-static {v0}, Lu20;->c(I)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Ls20;->Z:Ljava/lang/String;
+    iget-object v1, p0, Ls20;->d:Ljava/util/ArrayList;
 
-    invoke-static {v1}, Lzsi;->e(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v1}, Ljava/util/ArrayList;->toArray()[Ljava/lang/Object;
 
-    move-result v2
+    move-result-object v1
 
-    if-nez v2, :cond_0
+    invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
-    const-string v2, "token"
+    move-result-object v1
 
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v2, p0, Ls20;->o:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->toArray()[Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/16 v3, 0x16
+
+    invoke-static {v3, v0}, Ls54;->d(ILjava/lang/String;)I
+
+    move-result v3
+
+    invoke-static {v3, v1}, Ls54;->d(ILjava/lang/String;)I
+
+    move-result v3
+
+    invoke-static {v3, v2}, Ls54;->d(ILjava/lang/String;)I
+
+    move-result v3
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, " leaves: "
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, " containers: "
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
+.end method
+
+.method public final u(I)Lt20;
+    .locals 5
+
+    iget-object v0, p0, Ls20;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lt20;
+
+    iget v4, v3, Lu20;->b:I
+
+    if-ne v4, p1, :cond_0
+
+    return-object v3
 
     :cond_0
-    const-string v1, "audioId"
+    add-int/lit8 v2, v2, 0x1
 
-    iget-object v2, p0, Ls20;->d:Ljava/lang/Long;
+    goto :goto_0
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_1
+    const/4 p1, 0x0
 
-    return-object v0
+    return-object p1
 .end method

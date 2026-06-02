@@ -1,94 +1,76 @@
-.class public final Lbrg;
+.class public final synthetic Lbrg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxs6;
+
 
 # instance fields
-.field public final a:Lpj6;
+.field public final synthetic a:I
 
-.field public final b:Ljava/util/ArrayList;
-
-.field public final c:Ljava/util/ArrayList;
-
-.field public final d:Ljava/util/ArrayList;
-
-.field public final e:Ljava/util/ArrayDeque;
-
-.field public final f:Ljava/util/ArrayDeque;
-
-.field public g:Z
-
-.field public h:[B
-
-.field public i:J
+.field public final synthetic b:Lzc3;
 
 
 # direct methods
-.method public constructor <init>(ILpj6;)V
+.method public synthetic constructor <init>(Lzc3;I)V
     .locals 0
 
+    iput p2, p0, Lbrg;->a:I
+
+    iput-object p1, p0, Lbrg;->b:Lzc3;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lbrg;->a:Lpj6;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lbrg;->b:Ljava/util/ArrayList;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lbrg;->c:Ljava/util/ArrayList;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lbrg;->d:Ljava/util/ArrayList;
-
-    new-instance p1, Ljava/util/ArrayDeque;
-
-    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object p1, p0, Lbrg;->e:Ljava/util/ArrayDeque;
-
-    new-instance p1, Ljava/util/ArrayDeque;
-
-    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object p1, p0, Lbrg;->f:Ljava/util/ArrayDeque;
-
-    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
-
-    iput-wide p1, p0, Lbrg;->i:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Lbrg;->a:Lpj6;
+    iget v0, p0, Lbrg;->a:I
 
-    iget-object v0, v0, Lpj6;->n:Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v0}, Lw5a;->i(Ljava/lang/String;)Z
+    new-instance v0, Ljava/io/DataInputStream;
 
-    move-result v0
+    iget-object v1, p0, Lbrg;->b:Lzc3;
 
-    if-eqz v0, :cond_0
+    iget-object v1, v1, Lzc3;->b:Ljava/lang/Object;
 
-    const v0, 0xbb80
+    check-cast v1, Ljava/net/Socket;
 
-    return v0
+    invoke-virtual {v1}, Ljava/net/Socket;->getInputStream()Ljava/io/InputStream;
 
-    :cond_0
-    const v0, 0x15f90
+    move-result-object v1
 
-    return v0
+    invoke-direct {v0, v1}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Ljava/io/DataOutputStream;
+
+    iget-object v1, p0, Lbrg;->b:Lzc3;
+
+    iget-object v1, v1, Lzc3;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/net/Socket;
+
+    invoke-virtual {v1}, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

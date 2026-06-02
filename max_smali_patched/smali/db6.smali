@@ -1,47 +1,24 @@
 .class public final Ldb6;
-.super Lx0;
+.super Lkotlinx/coroutines/internal/ScopeCoroutine;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:Lv1j;
-
-.field public final d:I
-
-
-# direct methods
-.method public constructor <init>(Lpa6;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lx0;-><init>(Lpa6;)V
-
-    sget-object p1, Lhbe;->a:Lv1j;
-
-    iput-object p1, p0, Ldb6;->c:Lv1j;
-
-    const p1, 0x7fffffff
-
-    iput p1, p0, Ldb6;->d:I
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final f(Lxb6;)V
-    .locals 3
+.method public final childCancelled(Ljava/lang/Throwable;)Z
+    .locals 1
 
-    new-instance v0, Lcb6;
+    instance-of v0, p1, Lkotlinx/coroutines/flow/internal/ChildCancelledException;
 
-    iget-object v1, p0, Ldb6;->c:Lv1j;
+    if-eqz v0, :cond_0
 
-    iget v2, p0, Ldb6;->d:I
+    const/4 p1, 0x1
 
-    invoke-direct {v0, p1, v1, v2}, Lcb6;-><init>(Lz0g;Lv1j;I)V
+    return p1
 
-    iget-object p1, p0, Lx0;->b:Lpa6;
+    :cond_0
+    invoke-virtual {p0, p1}, Lz18;->cancelImpl$kotlinx_coroutines_core(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1, v0}, Lpa6;->c(Lxb6;)V
+    move-result p1
 
-    return-void
+    return p1
 .end method

@@ -1,91 +1,95 @@
-.class public final synthetic Lwt4;
+.class public final Lwt4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ldy3;
-
 
 # instance fields
-.field public final synthetic a:Lxt4;
+.field public final a:Lo8a;
 
-.field public final synthetic b:Ly5g;
-
-.field public final synthetic c:Landroid/graphics/SurfaceTexture;
-
-.field public final synthetic d:Landroid/view/Surface;
+.field public final b:Ldfb;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxt4;Ly5g;Landroid/graphics/SurfaceTexture;Landroid/view/Surface;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lwt4;
 
-    iput-object p1, p0, Lwt4;->a:Lxt4;
+    new-instance v1, Lae3;
 
-    iput-object p2, p0, Lwt4;->b:Ly5g;
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lwt4;->c:Landroid/graphics/SurfaceTexture;
-
-    iput-object p4, p0, Lwt4;->d:Landroid/view/Surface;
+    invoke-direct {v0, v1}, Lwt4;-><init>(Ln8a;)V
 
     return-void
 .end method
 
+.method public constructor <init>(Ln8a;)V
+    .locals 2
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Lwt4;->a:Lxt4;
+    new-instance p1, Lo8a;
 
-    iget-object v1, p0, Lwt4;->b:Ly5g;
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    iget-object v2, p0, Lwt4;->c:Landroid/graphics/SurfaceTexture;
+    iput-object p1, p0, Lwt4;->a:Lo8a;
 
-    iget-object v3, p0, Lwt4;->d:Landroid/view/Surface;
+    new-instance p1, Ldfb;
 
-    check-cast p1, Lwc0;
+    const-string v0, "/io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto"
 
-    iget-object p1, v1, Ly5g;->a:Ljava/lang/Object;
+    invoke-direct {p1, v0}, Ldfb;-><init>(Ljava/lang/String;)V
 
-    monitor-enter p1
+    iput-object p1, p0, Lwt4;->b:Ldfb;
 
-    const/4 v4, 0x0
+    const-string p1, "/io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto"
 
-    :try_start_0
-    iput-object v4, v1, Ly5g;->n:Lx5g;
+    const-string v0, "_"
 
-    iput-object v4, v1, Ly5g;->o:Ljava/util/concurrent/Executor;
+    invoke-virtual {p1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const-string p1, "/io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto"
 
-    invoke-virtual {v2, v4}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
+    invoke-virtual {p1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v2}, Landroid/graphics/SurfaceTexture;->release()V
+    new-instance p1, Lxvi;
 
-    invoke-virtual {v3}, Landroid/view/Surface;->release()V
+    new-instance v0, Lwfa;
 
-    iget p1, v0, Lxt4;->t0:I
+    const/16 v1, 0xf
 
-    add-int/lit8 p1, p1, -0x1
+    invoke-direct {v0, v1}, Lwfa;-><init>(I)V
 
-    iput p1, v0, Lxt4;->t0:I
+    invoke-direct {p1, v0}, Lxvi;-><init>(Lrv8;)V
 
-    invoke-virtual {v0}, Lxt4;->a()V
+    new-instance p1, Lxvi;
+
+    new-instance v0, Ljba;
+
+    invoke-direct {v0, v1}, Ljba;-><init>(I)V
+
+    invoke-direct {p1, v0}, Lxvi;-><init>(Lrv8;)V
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     return-void
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
 .end method

@@ -1,54 +1,59 @@
-.class public final synthetic Lpn3;
-.super Ljava/lang/Object;
+.class public final Lpn3;
+.super Lqn3;
 .source "SourceFile"
-
-# interfaces
-.implements Lnm4;
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/Long;
-
-.field public final synthetic b:[J
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic d:Ljava/lang/Integer;
+.field public final d:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Long;[JLjava/lang/String;Ljava/lang/Integer;)V
+.method public constructor <init>(I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpn3;->a:Ljava/lang/Long;
-
-    iput-object p2, p0, Lpn3;->b:[J
-
-    iput-object p3, p0, Lpn3;->c:Ljava/lang/String;
-
-    iput-object p4, p0, Lpn3;->d:Ljava/lang/Integer;
+    iput p1, p0, Lpn3;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 5
+.method public final a(II)Lqn3;
+    .locals 0
 
-    new-instance v0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;
+    return-object p0
+.end method
 
-    iget-object v1, p0, Lpn3;->a:Ljava/lang/Long;
+.method public final b(JJ)Lqn3;
+    .locals 0
 
-    iget-object v2, p0, Lpn3;->b:[J
+    return-object p0
+.end method
 
-    iget-object v3, p0, Lpn3;->c:Ljava/lang/String;
+.method public final c(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Lqn3;
+    .locals 0
 
-    iget-object v4, p0, Lpn3;->d:Ljava/lang/Integer;
+    return-object p0
+.end method
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lone/me/complaintbottomsheet/ComplaintBottomSheet;-><init>(Ljava/lang/Long;[JLjava/lang/String;Ljava/lang/Integer;)V
+.method public final d(ZZ)Lqn3;
+    .locals 0
 
-    return-object v0
+    return-object p0
+.end method
+
+.method public final e(ZZ)Lqn3;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final f()I
+    .locals 1
+
+    iget v0, p0, Lpn3;->d:I
+
+    return v0
 .end method

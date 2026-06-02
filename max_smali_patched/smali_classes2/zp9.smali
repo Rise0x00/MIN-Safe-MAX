@@ -1,59 +1,97 @@
 .class public final Lzp9;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lyje;
 
 
 # instance fields
-.field public X:Ljava/util/List;
+.field public final a:Lyje;
 
-.field public Y:Luea;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public d:J
-
-.field public o:Luea;
-
-.field public final synthetic t0:Laq9;
-
-.field public u0:I
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Laq9;Lo84;)V
+.method public constructor <init>(Lyje;J)V
     .locals 0
 
-    iput-object p1, p0, Lzp9;->t0:Laq9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lzp9;->a:Lyje;
+
+    iput-wide p2, p0, Lzp9;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final b()V
+    .locals 1
 
-    iput-object p1, p0, Lzp9;->Z:Ljava/lang/Object;
+    iget-object v0, p0, Lzp9;->a:Lyje;
 
-    iget p1, p0, Lzp9;->u0:I
+    invoke-interface {v0}, Lyje;->b()V
 
-    const/high16 v0, -0x80000000
+    return-void
+.end method
 
-    or-int/2addr p1, v0
+.method public final e()Z
+    .locals 1
 
-    iput p1, p0, Lzp9;->u0:I
+    iget-object v0, p0, Lzp9;->a:Lyje;
 
-    const-wide/16 v0, 0x0
+    invoke-interface {v0}, Lyje;->e()Z
 
-    const/4 p1, 0x0
+    move-result v0
 
-    iget-object v2, p0, Lzp9;->t0:Laq9;
+    return v0
+.end method
 
-    invoke-virtual {v2, v0, v1, p1, p0}, Laq9;->e(JLuea;Lo84;)Ljava/lang/Object;
+.method public final g(J)I
+    .locals 2
 
-    move-result-object p1
+    iget-wide v0, p0, Lzp9;->b:J
 
-    return-object p1
+    sub-long/2addr p1, v0
+
+    iget-object v0, p0, Lzp9;->a:Lyje;
+
+    invoke-interface {v0, p1, p2}, Lyje;->g(J)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final i(Lrc5;Lfn4;I)I
+    .locals 4
+
+    iget-object v0, p0, Lzp9;->a:Lyje;
+
+    invoke-interface {v0, p1, p2, p3}, Lyje;->i(Lrc5;Lfn4;I)I
+
+    move-result p1
+
+    const/4 p3, -0x4
+
+    if-ne p1, p3, :cond_0
+
+    iget-wide v0, p2, Lfn4;->X:J
+
+    iget-wide v2, p0, Lzp9;->b:J
+
+    add-long/2addr v0, v2
+
+    const-wide/16 v2, 0x0
+
+    invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v0
+
+    iput-wide v0, p2, Lfn4;->X:J
+
+    :cond_0
+    return p1
 .end method

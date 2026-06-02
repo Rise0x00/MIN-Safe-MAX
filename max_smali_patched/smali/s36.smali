@@ -1,42 +1,144 @@
 .class public final Ls36;
-.super Ljava/lang/Object;
+.super Lyrf;
 .source "SourceFile"
 
-# interfaces
-.implements Lfpe;
 
-
-# instance fields
-.field public final a:Lfpe;
-
-.field public final b:Z
-
-.field public final c:Lnq6;
+# static fields
+.field public static final b:Ls36;
 
 
 # direct methods
-.method public constructor <init>(Lfpe;ZLnq6;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ls36;
 
-    iput-object p1, p0, Ls36;->a:Lfpe;
+    invoke-direct {v0}, Lyrf;-><init>()V
 
-    iput-boolean p2, p0, Ls36;->b:Z
-
-    iput-object p3, p0, Ls36;->c:Lnq6;
+    sput-object v0, Ls36;->b:Ls36;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final iterator()Ljava/util/Iterator;
-    .locals 1
+.method public final c()Lp2;
+    .locals 4
 
-    new-instance v0, Lr36;
+    new-instance v0, Lco4;
 
-    invoke-direct {v0, p0}, Lr36;-><init>(Ls36;)V
+    new-instance v1, Lx54;
+
+    const/16 v2, 0x13
+
+    invoke-direct {v1, v2}, Lx54;-><init>(I)V
+
+    new-instance v2, Lx54;
+
+    const/16 v3, 0x14
+
+    invoke-direct {v2, v3}, Lx54;-><init>(I)V
+
+    invoke-direct {v0, v1, v2}, Lco4;-><init>(Lxs6;Lxs6;)V
 
     return-object v0
+.end method
+
+.method public final d(Landroid/os/Bundle;)Lfo4;
+    .locals 13
+
+    const-string v0, "chat_id"
+
+    invoke-static {v0, p1}, Lmtd;->X(Ljava/lang/String;Landroid/os/Bundle;)J
+
+    move-result-wide v3
+
+    const-string v0, "message_id"
+
+    invoke-static {v0, p1}, Lmtd;->X(Ljava/lang/String;Landroid/os/Bundle;)J
+
+    move-result-wide v5
+
+    const-string v0, "attach_id"
+
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    const-string v0, "file_id"
+
+    invoke-static {v0, p1}, Lmtd;->X(Ljava/lang/String;Landroid/os/Bundle;)J
+
+    move-result-wide v8
+
+    const-string v0, "file_name"
+
+    invoke-static {v0, p1}, Lmtd;->Z(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+
+    move-result-object v10
+
+    const-string v0, "file_size"
+
+    invoke-static {v0, p1}, Lmtd;->X(Ljava/lang/String;Landroid/os/Bundle;)J
+
+    move-result-wide v11
+
+    const-string v0, "file_url"
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    move-object v2, p1
+
+    check-cast v2, Landroid/net/Uri;
+
+    new-instance v1, Lr36;
+
+    invoke-direct/range {v1 .. v12}, Lr36;-><init>(Landroid/net/Uri;JJLjava/lang/String;JLjava/lang/String;J)V
+
+    return-object v1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Required value was null."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final e(Lxrf;)V
+    .locals 5
+
+    const-string v0, "file_name"
+
+    const-string v1, "file_size"
+
+    const-string v2, "chat_id"
+
+    const-string v3, "message_id"
+
+    const-string v4, "file_id"
+
+    filled-new-array {v2, v3, v4, v0, v1}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "file_url"
+
+    invoke-static {v1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v1
+
+    const/16 v2, 0xc
+
+    const-string v3, ":dialogs/file-download-warning"
+
+    invoke-static {p1, v3, v0, v1, v2}, Ldp0;->A(Ldp0;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyn4;
+
+    return-void
 .end method

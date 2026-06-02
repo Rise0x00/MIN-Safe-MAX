@@ -1,48 +1,177 @@
 .class public final Ljm7;
-.super Lo84;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lyi8;
+
+
+# static fields
+.field public static final b:Ljm7;
+
+.field public static final c:Loa8;
 
 
 # instance fields
-.field public final synthetic X:Lr3;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lr3;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ljm7;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljm7;-><init>(Ljava/lang/Object;)V
+
+    sput-object v0, Ljm7;->b:Ljm7;
+
+    new-instance v0, Loa8;
+
+    const-class v1, Ljm7;
+
+    invoke-direct {v0, v1}, Loa8;-><init>(Ljava/lang/Class;)V
+
+    sput-object v0, Ljm7;->c:Loa8;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Ljm7;->X:Lr3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ljm7;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    .locals 5
 
-    iput-object p1, p0, Ljm7;->d:Ljava/lang/Object;
+    const-string v0, "Executor was null."
 
-    iget p1, p0, Ljm7;->o:I
+    invoke-static {p2, v0}, Lhp7;->n(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const/high16 v0, -0x80000000
+    :try_start_0
+    invoke-interface {p2, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    or-int/2addr p1, v0
+    return-void
 
-    iput p1, p0, Ljm7;->o:I
+    :catch_0
+    move-exception v0
 
-    iget-object p1, p0, Ljm7;->X:Lr3;
+    sget-object v1, Ljm7;->c:Loa8;
 
-    const/4 v0, 0x0
+    invoke-virtual {v1}, Loa8;->a()Ljava/util/logging/Logger;
 
-    invoke-virtual {p1, v0, p0}, Lr3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object v1
+
+    sget-object v2, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "RuntimeException while executing runnable "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, " with executor "
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
+    invoke-virtual {v1, v2, p1, v0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final cancel(Z)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final get()Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Ljm7;->a:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 0
+
+    .line 2
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 3
+    iget-object p1, p0, Ljm7;->a:Ljava/lang/Object;
+
     return-object p1
+.end method
+
+.method public final isCancelled()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final isDone()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "[status=SUCCESS, result=["
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ljm7;->a:Ljava/lang/Object;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "]]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpdg;
+.implements Lcpg;
 
 
 # annotations
@@ -14,10 +14,10 @@
     d2 = {
         "Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;",
         "Landroidx/appcompat/widget/AppCompatButton;",
-        "Lpdg;",
+        "Lcpg;",
         "",
         "title",
-        "Lb3h;",
+        "Lyeh;",
         "setTitle",
         "(Ljava/lang/CharSequence;)V",
         "subtitle",
@@ -27,7 +27,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x2,
+        0x3,
         0x0
     }
     xi = 0x30
@@ -35,13 +35,13 @@
 
 
 # instance fields
+.field public final A0:Landroid/text/style/TextAppearanceSpan;
+
 .field public d:Ljava/lang/CharSequence;
 
 .field public o:Ljava/lang/CharSequence;
 
-.field public final t0:Landroid/text/style/TextAppearanceSpan;
-
-.field public final u0:Landroid/text/style/TextAppearanceSpan;
+.field public final z0:Landroid/text/style/TextAppearanceSpan;
 
 
 # direct methods
@@ -54,33 +54,33 @@
 
     new-instance v0, Landroid/text/style/TextAppearanceSpan;
 
-    sget v1, Lvfd;->UiUtils_TextAppearance_LongRoundedTitleSubtitleButton_Title:I
+    sget v1, Llqd;->UiUtils_TextAppearance_LongRoundedTitleSubtitleButton_Title:I
 
     invoke-direct {v0, p1, v1}, Landroid/text/style/TextAppearanceSpan;-><init>(Landroid/content/Context;I)V
 
-    iput-object v0, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->t0:Landroid/text/style/TextAppearanceSpan;
+    iput-object v0, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->z0:Landroid/text/style/TextAppearanceSpan;
 
     new-instance v0, Landroid/text/style/TextAppearanceSpan;
 
-    sget v1, Lvfd;->UiUtils_TextAppearance_LongRoundedTitleSubtitleButton_Subtitle:I
+    sget v1, Llqd;->UiUtils_TextAppearance_LongRoundedTitleSubtitleButton_Subtitle:I
 
     invoke-direct {v0, p1, v1}, Landroid/text/style/TextAppearanceSpan;-><init>(Landroid/content/Context;I)V
 
-    iput-object v0, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->u0:Landroid/text/style/TextAppearanceSpan;
+    iput-object v0, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->A0:Landroid/text/style/TextAppearanceSpan;
 
-    sget-object v0, Ligd;->LongRoundedTitleSubtitleButton:[I
+    sget-object v0, Lwqd;->LongRoundedTitleSubtitleButton:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Ligd;->LongRoundedTitleSubtitleButton_lrts_title:I
+    sget p2, Lwqd;->LongRoundedTitleSubtitleButton_lrts_title:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object p2
 
-    sget v0, Ligd;->LongRoundedTitleSubtitleButton_lrts_subtitle:I
+    sget v0, Lwqd;->LongRoundedTitleSubtitleButton_lrts_subtitle:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -112,7 +112,7 @@
 
     if-eqz p1, :cond_2
 
-    sget-object p1, Lau4;->e0:Lau4;
+    sget-object p1, Ltv4;->c0:Ltv4;
 
     goto :goto_0
 
@@ -121,14 +121,14 @@
 
     move-result-object p1
 
-    sget-object p2, Lldg;->a0:Ln8g;
+    sget-object p2, Lapg;->Y:Lakg;
 
-    invoke-static {p1}, Ls6g;->h(Landroid/content/Context;)Lldg;
+    invoke-static {p1}, Lg84;->E0(Landroid/content/Context;)Lapg;
 
     move-result-object p1
 
     :goto_0
-    invoke-virtual {p0, p1}, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->d(Lldg;)V
+    invoke-virtual {p0, p1}, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->d(Lapg;)V
 
     return-void
 .end method
@@ -163,7 +163,7 @@
 
     move-result p1
 
-    iget-object v4, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->t0:Landroid/text/style/TextAppearanceSpan;
+    iget-object v4, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->z0:Landroid/text/style/TextAppearanceSpan;
 
     invoke-interface {v0, v4, v3, p1, v2}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
 
@@ -194,7 +194,7 @@
 
     move-result p2
 
-    iget-object v0, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->u0:Landroid/text/style/TextAppearanceSpan;
+    iget-object v0, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->A0:Landroid/text/style/TextAppearanceSpan;
 
     invoke-interface {p1, v0, v3, p2, v2}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
 
@@ -239,14 +239,14 @@
     return-void
 .end method
 
-.method public final d(Lldg;)V
+.method public final d(Lapg;)V
     .locals 5
 
     const/16 v0, 0x2a
 
     int-to-float v0, v0
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -258,19 +258,19 @@
 
     mul-float/2addr v0, v1
 
-    invoke-static {v0}, Lq7j;->c(F)I
+    invoke-static {v0}, Lh43;->U(F)I
 
     move-result v0
 
-    iget v1, p1, Lldg;->k:I
+    iget v1, p1, Lapg;->i:I
 
-    iget v2, p1, Lldg;->l:I
+    iget v2, p1, Lapg;->j:I
 
-    iget p1, p1, Lldg;->i:I
+    iget p1, p1, Lapg;->g:I
 
     const v3, 0x3e99999a    # 0.3f
 
-    invoke-static {v1, v3}, Lcjj;->b(IF)I
+    invoke-static {v1, v3}, Lf90;->r0(IF)I
 
     move-result v3
 
@@ -288,7 +288,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1, v1, v4}, Llkg;->d(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;[F)Landroid/graphics/drawable/GradientDrawable;
+    invoke-static {v0, v1, v1, v4}, Lf90;->m0(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;[F)Landroid/graphics/drawable/GradientDrawable;
 
     move-result-object v0
 
@@ -296,11 +296,11 @@
 
     move-result-object v3
 
-    invoke-static {v3, v1, v1, v4}, Llkg;->d(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;[F)Landroid/graphics/drawable/GradientDrawable;
+    invoke-static {v3, v1, v1, v4}, Lf90;->m0(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;[F)Landroid/graphics/drawable/GradientDrawable;
 
     move-result-object v3
 
-    invoke-static {v0, v1, v3}, Llkg;->e(Landroid/graphics/drawable/GradientDrawable;Landroid/graphics/drawable/GradientDrawable;Landroid/graphics/drawable/GradientDrawable;)Landroid/graphics/drawable/StateListDrawable;
+    invoke-static {v0, v1, v3}, Lf90;->o0(Landroid/graphics/drawable/GradientDrawable;Landroid/graphics/drawable/GradientDrawable;Landroid/graphics/drawable/GradientDrawable;)Landroid/graphics/drawable/StateListDrawable;
 
     move-result-object v0
 
@@ -310,7 +310,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v1, v1, v4}, Llkg;->d(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;[F)Landroid/graphics/drawable/GradientDrawable;
+    invoke-static {v3, v1, v1, v4}, Lf90;->m0(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;[F)Landroid/graphics/drawable/GradientDrawable;
 
     move-result-object v1
 

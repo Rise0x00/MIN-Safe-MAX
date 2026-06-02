@@ -1,123 +1,72 @@
 .class public final Lyvb;
-.super Lb3d;
+.super Lao0;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:[B
+.field public final synthetic b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+.field public final synthetic c:Lzvb;
+
+
+# direct methods
+.method public constructor <init>(Lone/me/sdk/uikit/common/views/OneMeDraweeView;Lzvb;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lyvb;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    iput-object p2, p0, Lyvb;->c:Lzvb;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Lz2d;Lc3d;Lyi;)V
+.method public final d(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 2
 
-    new-instance p2, Lgwb;
+    const/16 p1, 0x8
 
-    iget-object p3, p1, Lz2d;->a:Lzue;
+    iget-object p2, p0, Lyvb;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    iget-object p3, p3, Lzue;->b:Ljava/lang/Object;
+    invoke-virtual {p2, p1}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object p3, p0, Lyvb;->a:[B
+    iget-object p1, p0, Lyvb;->c:Lzvb;
 
-    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p1, Lzvb;->a:Landroid/widget/ImageView;
 
-    array-length v0, p3
+    if-nez v0, :cond_0
 
-    const/16 v1, 0x8
-
-    if-ne v0, v1, :cond_0
-
-    iput-object p3, p2, Lgwb;->a:[B
-
-    new-instance p3, Lhf3;
-
-    const/4 v0, 0x3
-
-    invoke-direct {p3, v0}, Lhf3;-><init>(I)V
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, p2, p3, v0}, Lz2d;->k(Lb3d;Ljava/util/function/Consumer;Z)V
-
-    return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "Path Response Frame must contain 8 bytes data"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final b()I
-    .locals 1
-
-    const/16 v0, 0x9
-
-    return v0
-.end method
-
-.method public final f(Ljava/nio/ByteBuffer;)V
-    .locals 1
-
-    const/16 v0, 0x1a
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    iget-object v0, p0, Lyvb;->a:[B
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
-
-    return-void
-.end method
-
-.method public final g(Ljava/nio/ByteBuffer;)V
-    .locals 2
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
-
-    move-result v0
-
-    const/16 v1, 0x1a
-
-    if-ne v0, v1, :cond_0
-
-    const/16 v0, 0x8
-
-    new-array v0, v0, [B
-
-    iput-object v0, p0, Lyvb;->a:[B
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
-
-    return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    invoke-direct {p1}, Ljava/lang/RuntimeException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Lyvb;->a:[B
-
-    invoke-static {v0}, Luaj;->a([B)Ljava/lang/String;
+    invoke-virtual {p1}, Lzvb;->b()Landroid/widget/ImageView;
 
     move-result-object v0
 
-    const-string v1, "PathChallengeFrame["
+    iput-object v0, p1, Lzvb;->a:Landroid/widget/ImageView;
 
-    const-string v2, "]"
+    sget-object v1, Lzc3;->A0:Lz66;
 
-    invoke-static {v1, v0, v2}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object v0
+    move-result-object p2
 
-    return-object v0
+    invoke-virtual {v1, p2}, Lz66;->d(Landroid/content/Context;)Lzc3;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Lzc3;->m()Ldqb;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Lzvb;->a(Ldqb;)V
+
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    :cond_0
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
 .end method

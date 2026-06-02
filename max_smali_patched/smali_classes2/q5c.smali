@@ -2,101 +2,99 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lu4c;
-
 
 # instance fields
-.field public final synthetic a:Lone/me/chats/picker/chats/PickerChatsListWidget;
+.field public final a:Lia8;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chats/picker/chats/PickerChatsListWidget;)V
+.method public constructor <init>(Lia8;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lq5c;->a:Lone/me/chats/picker/chats/PickerChatsListWidget;
+    iput-object p1, p0, Lq5c;->a:Lia8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final X(Lq6c;Z)Z
-    .locals 3
+.method public final a(Z)Li09;
+    .locals 2
 
-    sget-object v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->C0:[Lz28;
+    invoke-virtual {p0}, Lq5c;->b()La6c;
 
-    iget-object v0, p0, Lq5c;->a:Lone/me/chats/picker/chats/PickerChatsListWidget;
+    move-result-object v0
 
-    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->G0()Ln5c;
+    sget-object v1, La6c;->n:[Ljava/lang/String;
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, La6c;->d([Ljava/lang/String;)Z
 
-    iget-object v1, v1, Ln5c;->G0:Lpld;
+    move-result v0
 
-    iget-object v1, v1, Lpld;->a:Llpf;
+    if-nez v0, :cond_0
 
-    invoke-interface {v1}, Llpf;->getValue()Ljava/lang/Object;
+    sget-object p1, Li09;->o:Li09;
 
-    move-result-object v1
+    return-object p1
 
-    check-cast v1, Ljava/lang/Boolean;
+    :cond_0
+    if-eqz p1, :cond_1
 
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+    sget-object p1, Li09;->b:Li09;
 
-    move-result v1
+    return-object p1
 
-    if-eqz v1, :cond_0
+    :cond_1
+    sget-object p1, Li09;->a:Li09;
 
-    const/4 p1, 0x0
+    return-object p1
+.end method
+
+.method public final b()La6c;
+    .locals 1
+
+    iget-object v0, p0, Lq5c;->a:Lia8;
+
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, La6c;
+
+    return-object v0
+.end method
+
+.method public final c(Lvsi;)Z
+    .locals 2
+
+    invoke-virtual {p0}, Lq5c;->b()La6c;
+
+    move-result-object v0
+
+    sget-object v1, La6c;->i:[Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, La6c;->d([Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lq5c;->b()La6c;
+
+    move-result-object v0
+
+    sget v1, Lk9b;->G:I
+
+    invoke-virtual {v0, p1, v1}, La6c;->l(Lvsi;I)V
+
+    const/4 p1, 0x1
 
     return p1
 
     :cond_0
-    iget-object v1, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->X:Lnq6;
+    const/4 p1, 0x0
 
-    if-eqz v1, :cond_1
-
-    sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-interface {v1, v2}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->E0()Lb5c;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->D0()Lbj2;
-
-    move-result-object v0
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, p1, p2, v0, v2}, Lb5c;->s(Lq6c;ZLbj2;Z)V
-
-    return v2
-.end method
-
-.method public final f0(Lq6c;Z)V
-    .locals 3
-
-    sget-object v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->C0:[Lz28;
-
-    iget-object v0, p0, Lq5c;->a:Lone/me/chats/picker/chats/PickerChatsListWidget;
-
-    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->E0()Lb5c;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->D0()Lbj2;
-
-    move-result-object v0
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, p1, p2, v0, v2}, Lb5c;->s(Lq6c;ZLbj2;Z)V
-
-    return-void
+    return p1
 .end method

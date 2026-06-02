@@ -1,100 +1,118 @@
-.class public final synthetic Lgr;
-.super Ljava/lang/Object;
+.class public final Lgr;
+.super Ls5b;
 .source "SourceFile"
-
-# interfaces
-.implements Lnq6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic e:I
 
-.field public final synthetic b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+.field public final synthetic f:I
+
+.field public final synthetic g:Ljava/lang/ref/WeakReference;
+
+.field public final synthetic h:Llr;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;I)V
+.method public constructor <init>(Llr;IILjava/lang/ref/WeakReference;)V
     .locals 0
 
-    iput p2, p0, Lgr;->a:I
-
-    iput-object p1, p0, Lgr;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lgr;->h:Llr;
+
+    iput p2, p0, Lgr;->e:I
+
+    iput p3, p0, Lgr;->f:I
+
+    iput-object p4, p0, Lgr;->g:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final B(I)V
+    .locals 0
 
-    iget v0, p0, Lgr;->a:I
+    return-void
+.end method
 
-    iget-object v1, p0, Lgr;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+.method public final C(Landroid/graphics/Typeface;)V
+    .locals 4
 
-    packed-switch v0, :pswitch_data_0
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    check-cast p1, Ljava/lang/Integer;
+    const/16 v1, 0x1c
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    if-lt v0, v1, :cond_1
 
-    move-result p1
+    const/4 v0, -0x1
 
-    iget-object v0, v1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Y:Lrdi;
+    iget v1, p0, Lgr;->e:I
 
-    invoke-virtual {v0}, Lrdi;->j()I
+    if-eq v1, v0, :cond_1
 
-    move-result v0
+    iget v0, p0, Lgr;->f:I
 
-    if-gtz v0, :cond_0
+    and-int/lit8 v0, v0, 0x2
 
-    const/4 p1, 0x0
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, v1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Y:Lrdi;
-
-    invoke-virtual {v0, p1}, Lnd8;->D(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lud8;
-
-    check-cast p1, Lfjg;
-
-    iget-boolean p1, p1, Lfjg;->a:Z
+    const/4 v0, 0x0
 
     :goto_0
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {p1, v1, v0}, Lkr;->a(Landroid/graphics/Typeface;IZ)Landroid/graphics/Typeface;
 
     move-result-object p1
 
-    return-object p1
+    :cond_1
+    iget-object v0, p0, Lgr;->h:Llr;
 
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
+    iget-boolean v1, v0, Llr;->m:Z
 
-    sget-object p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Z:[Lz28;
+    if-eqz v1, :cond_3
 
-    invoke-virtual {v1}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->z0()Lbs;
+    iput-object p1, v0, Llr;->l:Landroid/graphics/Typeface;
 
-    move-result-object p1
+    iget-object v1, p0, Lgr;->g:Ljava/lang/ref/WeakReference;
 
-    iget-object p1, p1, Lbs;->F0:Lcm5;
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    sget-object v0, Lag3;->b:Lag3;
+    move-result-object v1
 
-    invoke-static {p1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+    check-cast v1, Landroid/widget/TextView;
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    if-eqz v1, :cond_3
 
-    return-object p1
+    invoke-virtual {v1}, Landroid/view/View;->isAttachedToWindow()Z
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget v0, v0, Llr;->j:I
+
+    new-instance v2, Lhr;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v1, p1, v0, v3}, Lhr;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :cond_2
+    iget v0, v0, Llr;->j:I
+
+    invoke-virtual {v1, p1, v0}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
+
+    :cond_3
+    return-void
 .end method

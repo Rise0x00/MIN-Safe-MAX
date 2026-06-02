@@ -1,110 +1,137 @@
-.class public final Li70;
-.super Lp6g;
+.class public final synthetic Li70;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Ljava/util/Comparator;
 
 
 # instance fields
-.field public final synthetic o:Lm70;
+.field public final synthetic a:I
+
+.field public final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(Lm70;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(II)V
     .locals 0
 
-    iput-object p1, p0, Li70;->o:Lm70;
+    iput p2, p0, Li70;->a:I
 
-    const/4 p1, 0x2
+    iput p1, p0, Li70;->b:I
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 3
 
-    check-cast p1, Lzb4;
+    iget v0, p0, Li70;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Li70;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p1, Landroid/util/Size;
 
-    move-result-object p1
+    check-cast p2, Landroid/util/Size;
 
-    check-cast p1, Li70;
+    invoke-static {p1}, Lmsf;->a(Landroid/util/Size;)I
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    move-result p1
 
-    invoke-virtual {p1, p2}, Li70;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v0, p0, Li70;->b:I
 
-    return-object p2
-.end method
+    sub-int/2addr p1, v0
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
 
-    new-instance p1, Li70;
+    move-result p1
 
-    iget-object v0, p0, Li70;->o:Lm70;
+    invoke-static {p2}, Lmsf;->a(Landroid/util/Size;)I
 
-    invoke-direct {p1, v0, p2}, Li70;-><init>(Lm70;Lkotlin/coroutines/Continuation;)V
+    move-result p2
 
-    return-object p1
-.end method
+    sub-int/2addr p2, v0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    move-result p2
 
-    iget-object p1, p0, Li70;->o:Lm70;
+    sub-int/2addr p1, p2
 
-    iget-object p1, p1, Lm70;->n:Lmmf;
+    return p1
 
-    const/4 v0, 0x0
+    :pswitch_0
+    check-cast p1, Ljava/lang/Integer;
 
-    if-eqz p1, :cond_0
+    check-cast p2, Ljava/lang/Integer;
 
-    invoke-virtual {p1, v0}, Lvy7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    iget v1, p0, Li70;->b:I
+
+    sub-int/2addr v0, v1
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
+
+    move-result v0
+
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    sub-int/2addr v2, v1
+
+    invoke-static {v2}, Ljava/lang/Math;->abs(I)I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+
+    move-result p2
+
+    sub-int/2addr p1, p2
+
+    int-to-float p1, p1
+
+    invoke-static {p1}, Ljava/lang/Math;->signum(F)F
+
+    move-result p1
+
+    :goto_0
+    float-to-int p1, p1
+
+    goto :goto_1
 
     :cond_0
-    iget-object p1, p0, Li70;->o:Lm70;
+    int-to-float p1, v0
 
-    iput-object v0, p1, Lm70;->n:Lmmf;
+    invoke-static {p1}, Ljava/lang/Math;->signum(F)F
 
-    iget-object p1, p0, Li70;->o:Lm70;
+    move-result p1
 
-    iget-object p1, p1, Lm70;->g:Lspf;
+    goto :goto_0
 
-    invoke-virtual {p1, v0}, Lspf;->setValue(Ljava/lang/Object;)V
+    :goto_1
+    return p1
 
-    iget-object p1, p0, Li70;->o:Lm70;
+    nop
 
-    iput-object v0, p1, Lm70;->b:[B
-
-    iget-object p1, p0, Li70;->o:Lm70;
-
-    iput-object v0, p1, Lm70;->k:Ljava/lang/Byte;
-
-    iget-object p1, p1, Lm70;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
-
-    iget-object p1, p0, Li70;->o:Lm70;
-
-    iget-object p1, p1, Lm70;->j:Lns;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Lns;->clear()V
-
-    :cond_1
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

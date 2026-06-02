@@ -3,22 +3,14 @@
 
 
 # static fields
-.field public static ColorSelectorView:[I
+.field public static fastscroll_default_thickness:I = 0x7f0700e9
 
-.field public static ColorSelectorView_color_selector_orientation:I
+.field public static fastscroll_margin:I = 0x7f0700ea
 
+.field public static fastscroll_minimum_range:I = 0x7f0700eb
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.field public static item_touch_helper_max_drag_scroll_per_frame:I = 0x7f070136
 
-    const v0, 0x7f0402f0
+.field public static item_touch_helper_swipe_escape_max_velocity:I = 0x7f070137
 
-    filled-new-array {v0}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lggd;->ColorSelectorView:[I
-
-    return-void
-.end method
+.field public static item_touch_helper_swipe_escape_velocity:I = 0x7f070138

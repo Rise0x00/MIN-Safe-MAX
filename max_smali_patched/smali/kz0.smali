@@ -1,71 +1,116 @@
-.class public abstract Lkz0;
+.class public final Lkz0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lkuf;
+
 
 # static fields
-.field public static final a:Ljava/util/UUID;
-
-.field public static final b:Ljava/util/UUID;
-
-.field public static final c:Ljava/util/UUID;
-
-.field public static final d:Ljava/util/UUID;
-
-.field public static final e:Ljava/util/UUID;
+.field public static final a:Ljz0;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 1
 
-    new-instance v0, Ljava/util/UUID;
+    new-instance v0, Ljz0;
 
-    const-wide/16 v1, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1, v2, v1, v2}, Ljava/util/UUID;-><init>(JJ)V
+    sput-object v0, Lkz0;->a:Ljz0;
 
-    sput-object v0, Lkz0;->a:Ljava/util/UUID;
+    return-void
+.end method
 
-    new-instance v0, Ljava/util/UUID;
 
-    const-wide v1, 0x1077efecc0b24d02L
+# virtual methods
+.method public final a(Ljavax/net/ssl/SSLSocket;)Z
+    .locals 0
 
-    const-wide v3, -0x531cc3e1ad1d04b5L    # -1.8442503140481377E-92
+    const/4 p1, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
+    return p1
+.end method
 
-    sput-object v0, Lkz0;->b:Ljava/util/UUID;
+.method public final b()Z
+    .locals 1
 
-    new-instance v0, Ljava/util/UUID;
+    sget-boolean v0, Liz0;->d:Z
 
-    const-wide v1, -0x1d8e62a7567a4c37L    # -1.6229728350858627E166
+    invoke-static {}, Lhz0;->d()Z
 
-    const-wide v3, 0x781ab030af78d30eL    # 3.524813189889319E270
+    move-result v0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
+    return v0
+.end method
 
-    sput-object v0, Lkz0;->c:Ljava/util/UUID;
+.method public final c(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+    .locals 1
 
-    new-instance v0, Ljava/util/UUID;
+    check-cast p1, Lorg/bouncycastle/jsse/BCSSLSocket;
 
-    const-wide v1, -0x121074568629b532L    # -3.563403477674908E221
+    invoke-interface {p1}, Lorg/bouncycastle/jsse/BCSSLSocket;->getApplicationProtocol()Ljava/lang/String;
 
-    const-wide v3, -0x5c37d8232ae2de13L
+    move-result-object p1
 
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
+    if-nez p1, :cond_0
 
-    sput-object v0, Lkz0;->d:Ljava/util/UUID;
+    const/4 v0, 0x1
 
-    new-instance v0, Ljava/util/UUID;
+    goto :goto_0
 
-    const-wide v1, -0x65fb0f8667bfbd7aL
+    :cond_0
+    const-string v0, ""
 
-    const-wide v3, -0x546d19a41f77a06bL    # -8.640911267670052E-99
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
+    move-result v0
 
-    sput-object v0, Lkz0;->e:Ljava/util/UUID;
+    :goto_0
+    if-eqz v0, :cond_1
 
+    const/4 p1, 0x0
+
+    :cond_1
+    return-object p1
+.end method
+
+.method public final d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lkz0;->a(Ljavax/net/ssl/SSLSocket;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    check-cast p1, Lorg/bouncycastle/jsse/BCSSLSocket;
+
+    invoke-interface {p1}, Lorg/bouncycastle/jsse/BCSSLSocket;->getParameters()Lorg/bouncycastle/jsse/BCSSLParameters;
+
+    move-result-object p2
+
+    sget-object v0, Ldgc;->a:Ldgc;
+
+    invoke-static {p3}, Lura;->k(Ljava/util/List;)Ljava/util/ArrayList;
+
+    move-result-object p3
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    invoke-virtual {p3, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, [Ljava/lang/String;
+
+    invoke-virtual {p2, p3}, Lorg/bouncycastle/jsse/BCSSLParameters;->setApplicationProtocols([Ljava/lang/String;)V
+
+    invoke-interface {p1, p2}, Lorg/bouncycastle/jsse/BCSSLSocket;->setParameters(Lorg/bouncycastle/jsse/BCSSLParameters;)V
+
+    :cond_0
     return-void
 .end method

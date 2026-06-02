@@ -1,87 +1,254 @@
-.class public final Lky3;
-.super Ljz;
+.class public Lky3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lfwe;
 
 
 # instance fields
-.field public final X:Ljava/lang/String;
+.field public final X:J
 
-.field public final Y:Ljava/lang/String;
+.field public final Y:Z
 
-.field public final Z:Ljava/lang/String;
+.field public final a:J
 
-.field public final d:Ljava/lang/String;
+.field public final b:J
 
-.field public final o:J
+.field public final c:I
 
-.field public final t0:Ljava/lang/String;
+.field public final d:J
 
-.field public final u0:Ljava/lang/String;
+.field public final o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
+.method public constructor <init>(JJIIZ)V
     .locals 1
 
-    sget-object v0, Le10;->w0:Le10;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0, p9, p10}, Ljz;-><init>(Le10;ZZ)V
+    iput-wide p1, p0, Lky3;->a:J
 
-    iput-object p1, p0, Lky3;->d:Ljava/lang/String;
+    iput-wide p3, p0, Lky3;->b:J
 
-    iput-wide p2, p0, Lky3;->o:J
+    const/4 v0, -0x1
 
-    iput-object p4, p0, Lky3;->X:Ljava/lang/String;
+    if-ne p6, v0, :cond_0
 
-    iput-object p7, p0, Lky3;->t0:Ljava/lang/String;
+    const/4 p6, 0x1
 
-    iput-object p8, p0, Lky3;->u0:Ljava/lang/String;
+    :cond_0
+    iput p6, p0, Lky3;->c:I
 
-    iput-object p5, p0, Lky3;->Y:Ljava/lang/String;
+    iput p5, p0, Lky3;->o:I
 
-    iput-object p6, p0, Lky3;->Z:Ljava/lang/String;
+    iput-boolean p7, p0, Lky3;->Y:Z
+
+    const-wide/16 p6, -0x1
+
+    cmp-long v0, p1, p6
+
+    if-nez v0, :cond_1
+
+    iput-wide p6, p0, Lky3;->d:J
+
+    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
+
+    iput-wide p1, p0, Lky3;->X:J
+
+    return-void
+
+    :cond_1
+    sub-long/2addr p1, p3
+
+    iput-wide p1, p0, Lky3;->d:J
+
+    const-wide/16 p3, 0x0
+
+    invoke-static {p3, p4, p1, p2}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide p1
+
+    const-wide/32 p3, 0x7a1200
+
+    mul-long/2addr p1, p3
+
+    int-to-long p3, p5
+
+    div-long/2addr p1, p3
+
+    iput-wide p1, p0, Lky3;->X:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/HashMap;
-    .locals 5
+.method public final c()Z
+    .locals 4
 
-    invoke-super {p0}, Ljz;->a()Ljava/util/HashMap;
+    iget-wide v0, p0, Lky3;->d:J
 
-    move-result-object v0
+    const-wide/16 v2, -0x1
 
-    iget-object v1, p0, Lky3;->d:Ljava/lang/String;
+    cmp-long v0, v0, v2
 
-    invoke-static {v1}, Lzsi;->e(Ljava/lang/CharSequence;)Z
+    if-nez v0, :cond_1
 
-    move-result v2
+    iget-boolean v0, p0, Lky3;->Y:Z
 
-    if-nez v2, :cond_0
+    if-eqz v0, :cond_0
 
-    const-string v2, "vcfBody"
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    goto :goto_0
 
     :cond_0
-    const-wide/16 v1, 0x0
+    const/4 v0, 0x0
 
-    iget-wide v3, p0, Lky3;->o:J
+    return v0
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final e(J)Ldwe;
+    .locals 17
+
+    move-object/from16 v0, p0
+
+    const-wide/16 v1, -0x1
+
+    iget-wide v3, v0, Lky3;->d:J
 
     cmp-long v1, v3, v1
 
+    iget-wide v5, v0, Lky3;->b:J
+
+    const-wide/16 v7, 0x0
+
+    if-nez v1, :cond_0
+
+    iget-boolean v2, v0, Lky3;->Y:Z
+
+    if-nez v2, :cond_0
+
+    new-instance v1, Ldwe;
+
+    new-instance v2, Ljwe;
+
+    invoke-direct {v2, v7, v8, v5, v6}, Ljwe;-><init>(JJ)V
+
+    invoke-direct {v1, v2, v2}, Ldwe;-><init>(Ljwe;Ljwe;)V
+
+    return-object v1
+
+    :cond_0
+    iget v2, v0, Lky3;->o:I
+
+    int-to-long v9, v2
+
+    mul-long v9, v9, p1
+
+    const-wide/32 v11, 0x7a1200
+
+    div-long/2addr v9, v11
+
+    iget v13, v0, Lky3;->c:I
+
+    int-to-long v13, v13
+
+    div-long/2addr v9, v13
+
+    mul-long/2addr v9, v13
+
     if-eqz v1, :cond_1
 
-    const-string v1, "contactId"
+    sub-long/2addr v3, v13
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v9, v10, v3, v4}, Ljava/lang/Math;->min(JJ)J
 
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-wide v9
 
     :cond_1
-    return-object v0
+    invoke-static {v9, v10, v7, v8}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v3
+
+    add-long/2addr v3, v5
+
+    sub-long v9, v3, v5
+
+    invoke-static {v7, v8, v9, v10}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v9
+
+    mul-long/2addr v9, v11
+
+    move-wide v15, v11
+
+    int-to-long v11, v2
+
+    div-long/2addr v9, v11
+
+    new-instance v11, Ljwe;
+
+    invoke-direct {v11, v9, v10, v3, v4}, Ljwe;-><init>(JJ)V
+
+    if-eqz v1, :cond_3
+
+    cmp-long v1, v9, p1
+
+    if-gez v1, :cond_3
+
+    add-long/2addr v3, v13
+
+    iget-wide v9, v0, Lky3;->a:J
+
+    cmp-long v1, v3, v9
+
+    if-ltz v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    sub-long v5, v3, v5
+
+    invoke-static {v7, v8, v5, v6}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v5
+
+    mul-long/2addr v5, v15
+
+    int-to-long v1, v2
+
+    div-long/2addr v5, v1
+
+    new-instance v1, Ljwe;
+
+    invoke-direct {v1, v5, v6, v3, v4}, Ljwe;-><init>(JJ)V
+
+    new-instance v2, Ldwe;
+
+    invoke-direct {v2, v11, v1}, Ldwe;-><init>(Ljwe;Ljwe;)V
+
+    return-object v2
+
+    :cond_3
+    :goto_0
+    new-instance v1, Ldwe;
+
+    invoke-direct {v1, v11, v11}, Ldwe;-><init>(Ljwe;Ljwe;)V
+
+    return-object v1
+.end method
+
+.method public final f()J
+    .locals 2
+
+    iget-wide v0, p0, Lky3;->X:J
+
+    return-wide v0
 .end method

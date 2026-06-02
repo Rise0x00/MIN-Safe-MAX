@@ -3,276 +3,180 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/app/Application$ActivityLifecycleCallbacks;
-.implements Landroid/content/ComponentCallbacks2;
+.implements Lovf;
 
 
 # static fields
-.field public static final o:Lcg0;
+.field public static final c:Lcg0;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final a:Lq1h;
 
-.field public final b:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final c:Ljava/util/ArrayList;
-
-.field public d:Z
+.field public final b:Lve0;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
-    new-instance v0, Lcg0;
+    sget-object v0, Ltn7;->b:Ltn7;
 
-    invoke-direct {v0}, Lcg0;-><init>()V
+    sget-object v1, Lhu;->a:Lve0;
 
-    sput-object v0, Lcg0;->o:Lcg0;
+    new-instance v2, Lcg0;
+
+    invoke-direct {v2, v0, v1}, Lcg0;-><init>(Lq1h;Lve0;)V
+
+    sput-object v2, Lcg0;->c:Lcg0;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lq1h;Lve0;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    if-eqz p1, :cond_1
 
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+    iput-object p1, p0, Lcg0;->a:Lq1h;
 
-    iput-object v0, p0, Lcg0;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    if-eqz p2, :cond_0
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
-
-    iput-object v0, p0, Lcg0;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcg0;->c:Ljava/util/ArrayList;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcg0;->d:Z
+    iput-object p2, p0, Lcg0;->b:Lve0;
 
     return-void
-.end method
-
-.method public static a(Landroid/app/Application;)V
-    .locals 2
-
-    sget-object v0, Lcg0;->o:Lcg0;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, v0, Lcg0;->d:Z
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {p0, v0}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
-
-    invoke-virtual {p0, v0}, Landroid/app/Application;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
-
-    const/4 p0, 0x1
-
-    iput-boolean p0, v0, Lcg0;->d:Z
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
 
     :cond_0
-    :goto_0
-    monitor-exit v0
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    return-void
+    const-string p2, "Null traceState"
 
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p0
-.end method
+    throw p1
 
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
 
-# virtual methods
-.method public final b(Z)V
-    .locals 3
+    const-string p2, "Null traceFlags"
 
-    sget-object v0, Lcg0;->o:Lcg0;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lcg0;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lbg0;
-
-    invoke-interface {v2, p1}, Lbg0;->a(Z)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method
 
-.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 2
 
-    iget-object p1, p0, Lcg0;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 p2, 0x1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, p2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
-
-    move-result p1
-
-    iget-object v1, p0, Lcg0;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0, v0}, Lcg0;->b(Z)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onActivityDestroyed(Landroid/app/Activity;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onActivityPaused(Landroid/app/Activity;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onActivityResumed(Landroid/app/Activity;)V
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
-
-    iget-object p1, p0, Lcg0;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p1, p0, :cond_0
 
-    invoke-virtual {p1, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lcg0;
+
+    if-eqz v1, :cond_1
+
+    check-cast p1, Lcg0;
+
+    iget-object v1, p0, Lcg0;->a:Lq1h;
+
+    iget-object v2, p1, Lcg0;->a:Lq1h;
+
+    invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lcg0;->b:Lve0;
+
+    iget-object p1, p1, Lcg0;->b:Lve0;
+
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    iget-object v2, p0, Lcg0;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+    if-eqz p1, :cond_1
 
-    invoke-virtual {v2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    return v0
 
-    if-eqz p1, :cond_0
+    :cond_1
+    const/4 p1, 0x0
 
-    invoke-virtual {p0, v1}, Lcg0;->b(Z)V
-
-    :cond_0
-    return-void
+    return p1
 .end method
 
-.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 3
 
-    return-void
+    iget-object v0, p0, Lcg0;->a:Lq1h;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const v1, 0x2c2ddcdb
+
+    xor-int/2addr v0, v1
+
+    const v1, 0xf4243
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lcg0;->b:Lve0;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    xor-int/lit16 v0, v0, 0x4d5
+
+    mul-int/2addr v0, v1
+
+    xor-int/lit16 v0, v0, 0x4d5
+
+    return v0
 .end method
 
-.method public final onActivityStarted(Landroid/app/Activity;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onActivityStopped(Landroid/app/Activity;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onLowMemory()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onTrimMemory(I)V
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    const/16 v0, 0x14
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-ne p1, v0, :cond_0
+    const-string v1, "ImmutableSpanContext{traceId=00000000000000000000000000000000, spanId=0000000000000000, traceFlags="
 
-    iget-object p1, p0, Lcg0;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v0, 0x0
+    iget-object v1, p0, Lcg0;->a:Lq1h;
 
-    const/4 v1, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    const-string v1, ", traceState="
 
-    move-result p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz p1, :cond_0
+    iget-object v1, p0, Lcg0;->b:Lve0;
 
-    iget-object p1, p0, Lcg0;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    const-string v1, ", remote=false, valid=false}"
 
-    invoke-virtual {p0, v1}, Lcg0;->b(Z)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    return-void
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

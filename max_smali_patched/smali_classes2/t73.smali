@@ -11,7 +11,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    invoke-static {}, Lfjb;->values()[Lfjb;
+    invoke-static {}, Lumb;->values()[Lumb;
 
     move-result-object v0
 

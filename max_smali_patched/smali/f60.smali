@@ -1,323 +1,143 @@
-.class public final synthetic Lf60;
+.class public final Lf60;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Ljava/util/List;
 
-.field public final synthetic b:Lws8;
+.field public b:Lus7;
 
-
-# direct methods
-.method public synthetic constructor <init>(Lws8;IJJ)V
-    .locals 0
-
-    .line 1
-    const/4 p2, 0x7
-
-    iput p2, p0, Lf60;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lf60;->b:Lws8;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lws8;J)V
-    .locals 0
-
-    .line 2
-    const/4 p2, 0x3
-
-    iput p2, p0, Lf60;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lf60;->b:Lws8;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lws8;Ljava/lang/Object;I)V
-    .locals 0
-
-    .line 4
-    iput p3, p0, Lf60;->a:I
-
-    iput-object p1, p0, Lf60;->b:Lws8;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lws8;Ljava/lang/String;JJ)V
-    .locals 0
-
-    .line 5
-    const/4 p2, 0x1
-
-    iput p2, p0, Lf60;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lf60;->b:Lws8;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lws8;Loj6;Lql4;)V
-    .locals 0
-
-    .line 3
-    const/4 p2, 0x5
-
-    iput p2, p0, Lf60;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lf60;->b:Lws8;
-
-    return-void
-.end method
+.field public c:Li7e;
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final a(Le60;)V
+    .locals 1
 
-    iget v0, p0, Lf60;->a:I
+    iget-object v0, p0, Lf60;->a:Ljava/util/List;
 
-    const/16 v1, 0x15
+    if-nez v0, :cond_0
 
-    iget-object v2, p0, Lf60;->b:Lws8;
+    new-instance v0, Ljava/util/ArrayList;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iget-object v0, v2, Lws8;->c:Ljava/lang/Object;
+    iput-object v0, p0, Lf60;->a:Ljava/util/List;
 
-    check-cast v0, Lwp5;
+    :cond_0
+    iget-object v0, p0, Lf60;->a:Ljava/util/List;
 
-    sget v1, Lkbh;->a:I
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, v0, Lwp5;->a:Lcq5;
+    return-void
+.end method
 
-    iget-object v0, v0, Lcq5;->C0:Lnn4;
+.method public final b()I
+    .locals 1
 
-    invoke-virtual {v0}, Lnn4;->g()Lhd;
+    iget-object v0, p0, Lf60;->a:Ljava/util/List;
 
-    move-result-object v1
+    if-eqz v0, :cond_0
 
-    new-instance v2, Lfn4;
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    const/16 v3, 0x11
+    move-result v0
 
-    invoke-direct {v2, v3}, Lfn4;-><init>(I)V
+    return v0
 
-    const/16 v3, 0x3f3
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1, v3, v2}, Lnn4;->K(Lhd;ILpe8;)V
+    return v0
+.end method
+
+.method public final c()Lps0;
+    .locals 1
+
+    iget-object v0, p0, Lf60;->a:Ljava/util/List;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lf60;->a:Ljava/util/List;
+
+    :cond_0
+    new-instance v0, Lps0;
+
+    invoke-direct {v0, p0}, Lps0;-><init>(Lf60;)V
+
+    return-object v0
+.end method
+
+.method public final d(I)Le60;
+    .locals 1
+
+    if-ltz p1, :cond_0
+
+    invoke-virtual {p0}, Lf60;->b()I
+
+    move-result v0
+
+    if-ge p1, v0, :cond_0
+
+    iget-object v0, p0, Lf60;->a:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Le60;
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "index < 0 or index >= attaches.size()"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final e(ILe60;)V
+    .locals 1
+
+    iget-object v0, p0, Lf60;->a:Ljava/util/List;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lf60;->a:Ljava/util/List;
+
+    :cond_0
+    if-ltz p1, :cond_1
+
+    invoke-virtual {p0}, Lf60;->b()I
+
+    move-result v0
+
+    if-ge p1, v0, :cond_1
+
+    iget-object v0, p0, Lf60;->a:Ljava/util/List;
+
+    invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
-    :pswitch_0
-    iget-object v0, v2, Lws8;->c:Ljava/lang/Object;
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    check-cast v0, Lwp5;
+    const-string p2, "index < 0 or index >= attaches.size()"
 
-    sget v1, Lkbh;->a:I
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, v0, Lwp5;->a:Lcq5;
-
-    iget-object v0, v0, Lcq5;->C0:Lnn4;
-
-    invoke-virtual {v0}, Lnn4;->g()Lhd;
-
-    move-result-object v1
-
-    new-instance v2, Lwm4;
-
-    const/16 v3, 0x1c
-
-    invoke-direct {v2, v3}, Lwm4;-><init>(I)V
-
-    const/16 v3, 0x3f6
-
-    invoke-virtual {v0, v1, v3, v2}, Lnn4;->K(Lhd;ILpe8;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, v2, Lws8;->c:Ljava/lang/Object;
-
-    check-cast v0, Lwp5;
-
-    sget v1, Lkbh;->a:I
-
-    iget-object v0, v0, Lwp5;->a:Lcq5;
-
-    iget-object v0, v0, Lcq5;->C0:Lnn4;
-
-    invoke-virtual {v0}, Lnn4;->g()Lhd;
-
-    move-result-object v1
-
-    new-instance v2, Ljf3;
-
-    const/16 v3, 0x16
-
-    invoke-direct {v2, v3}, Ljf3;-><init>(I)V
-
-    const/16 v3, 0x3f1
-
-    invoke-virtual {v0, v1, v3, v2}, Lnn4;->K(Lhd;ILpe8;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, v2, Lws8;->c:Ljava/lang/Object;
-
-    check-cast v0, Lwp5;
-
-    sget v1, Lkbh;->a:I
-
-    iget-object v0, v0, Lwp5;->a:Lcq5;
-
-    iget-object v0, v0, Lcq5;->C0:Lnn4;
-
-    invoke-virtual {v0}, Lnn4;->g()Lhd;
-
-    move-result-object v1
-
-    new-instance v2, Lfn4;
-
-    const/4 v3, 0x6
-
-    invoke-direct {v2, v3}, Lfn4;-><init>(I)V
-
-    const/16 v3, 0x3ef
-
-    invoke-virtual {v0, v1, v3, v2}, Lnn4;->K(Lhd;ILpe8;)V
-
-    return-void
-
-    :pswitch_3
-    iget-object v0, v2, Lws8;->c:Ljava/lang/Object;
-
-    check-cast v0, Lwp5;
-
-    sget v2, Lkbh;->a:I
-
-    iget-object v0, v0, Lwp5;->a:Lcq5;
-
-    iget-object v0, v0, Lcq5;->C0:Lnn4;
-
-    invoke-virtual {v0}, Lnn4;->g()Lhd;
-
-    move-result-object v2
-
-    new-instance v3, Lwm4;
-
-    invoke-direct {v3, v1}, Lwm4;-><init>(I)V
-
-    const/16 v1, 0x3f2
-
-    invoke-virtual {v0, v2, v1, v3}, Lnn4;->K(Lhd;ILpe8;)V
-
-    return-void
-
-    :pswitch_4
-    iget-object v0, v2, Lws8;->c:Ljava/lang/Object;
-
-    check-cast v0, Lwp5;
-
-    sget v1, Lkbh;->a:I
-
-    iget-object v0, v0, Lwp5;->a:Lcq5;
-
-    iget-object v0, v0, Lcq5;->C0:Lnn4;
-
-    invoke-virtual {v0}, Lnn4;->g()Lhd;
-
-    move-result-object v1
-
-    new-instance v2, Lfn4;
-
-    const/16 v3, 0x1b
-
-    invoke-direct {v2, v3}, Lfn4;-><init>(I)V
-
-    const/16 v3, 0x405
-
-    invoke-virtual {v0, v1, v3, v2}, Lnn4;->K(Lhd;ILpe8;)V
-
-    return-void
-
-    :pswitch_5
-    iget-object v0, v2, Lws8;->c:Ljava/lang/Object;
-
-    check-cast v0, Lwp5;
-
-    sget v2, Lkbh;->a:I
-
-    iget-object v0, v0, Lwp5;->a:Lcq5;
-
-    iget-object v0, v0, Lcq5;->C0:Lnn4;
-
-    invoke-virtual {v0}, Lnn4;->g()Lhd;
-
-    move-result-object v2
-
-    new-instance v3, Ljf3;
-
-    invoke-direct {v3, v1}, Ljf3;-><init>(I)V
-
-    const/16 v1, 0x3f0
-
-    invoke-virtual {v0, v2, v1, v3}, Lnn4;->K(Lhd;ILpe8;)V
-
-    return-void
-
-    :pswitch_6
-    iget-object v0, v2, Lws8;->c:Ljava/lang/Object;
-
-    check-cast v0, Lwp5;
-
-    sget v1, Lkbh;->a:I
-
-    iget-object v0, v0, Lwp5;->a:Lcq5;
-
-    iget-object v0, v0, Lcq5;->C0:Lnn4;
-
-    invoke-virtual {v0}, Lnn4;->g()Lhd;
-
-    move-result-object v1
-
-    new-instance v2, Lwm4;
-
-    const/16 v3, 0x13
-
-    invoke-direct {v2, v3}, Lwm4;-><init>(I)V
-
-    const/16 v3, 0x3f4
-
-    invoke-virtual {v0, v1, v3, v2}, Lnn4;->K(Lhd;ILpe8;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

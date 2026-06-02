@@ -3,96 +3,180 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Ln9d;
 
 
-# static fields
-.field public static final a:Lz90;
-
-.field public static final b:Lfz5;
-
-.field public static final c:Lfz5;
+# instance fields
+.field public final synthetic a:Lba0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lba0;)V
+    .locals 0
 
-    new-instance v0, Lz90;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lz90;->a:Lz90;
-
-    new-instance v0, Lxy;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lxy;-><init>(I)V
-
-    const-class v1, Lvyc;
-
-    invoke-static {v1, v0}, Lt02;->m(Ljava/lang/Class;Lxy;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Lfz5;
-
-    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "startMs"
-
-    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lz90;->b:Lfz5;
-
-    new-instance v0, Lxy;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v2}, Lxy;-><init>(I)V
-
-    invoke-static {v1, v0}, Lt02;->m(Ljava/lang/Class;Lxy;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v1, Lfz5;
-
-    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v2, "endMs"
-
-    invoke-direct {v1, v2, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v1, Lz90;->c:Lfz5;
+    iput-object p1, p0, Lz90;->a:Lba0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 3
+.method public final a()V
+    .locals 12
 
-    check-cast p1, Lelg;
+    iget-object v0, p0, Lz90;->a:Lba0;
 
-    check-cast p2, Lwwa;
+    iget-object v1, v0, Lba0;->a:Loha;
 
-    sget-object v0, Lz90;->b:Lfz5;
+    invoke-static {v0}, Lba0;->c(Lba0;)Z
 
-    iget-wide v1, p1, Lelg;->a:J
+    move-result v2
 
-    invoke-interface {p2, v0, v1, v2}, Lwwa;->e(Lfz5;J)Lwwa;
+    if-eqz v2, :cond_0
 
-    sget-object v0, Lz90;->c:Lfz5;
+    return-void
 
-    iget-wide v1, p1, Lelg;->b:J
+    :cond_0
+    move-object v2, v1
 
-    invoke-interface {p2, v0, v1, v2}, Lwwa;->e(Lfz5;J)Lwwa;
+    check-cast v2, Lqha;
+
+    iget-object v2, v2, Lqha;->a:Lgfe;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v3, Lt60;
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x2
+
+    const/4 v7, 0x1
+
+    move v8, v5
+
+    move v9, v5
+
+    invoke-direct/range {v3 .. v9}, Lt60;-><init>(IIIIIZ)V
+
+    iget-object v2, v2, Lgfe;->Y:Lb59;
+
+    if-eqz v2, :cond_1
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v3, v4}, Lb59;->D(Lt60;Z)V
+
+    :cond_1
+    iget-object v0, v0, Lba0;->b:Lo9d;
+
+    invoke-virtual {v0}, Lo9d;->c()V
+
+    move-object v0, v1
+
+    check-cast v0, Lqha;
+
+    iget-object v0, v0, Lqha;->a:Lgfe;
+
+    iget-object v0, v0, Lgfe;->E0:Lbwd;
+
+    iget-object v0, v0, Lbwd;->a:Lw0g;
+
+    invoke-interface {v0}, Lw0g;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v2
+
+    const-wide/16 v4, 0x3e8
+
+    sub-long v8, v2, v4
+
+    check-cast v1, Lqha;
+
+    iget-object v7, v1, Lqha;->a:Lgfe;
+
+    iget-object v0, v7, Lgfe;->d:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v6, Lzh1;
+
+    const/16 v11, 0x9
+
+    const/4 v10, 0x0
+
+    invoke-direct/range {v6 .. v11}, Lzh1;-><init>(Ljava/lang/Object;JLkotlin/coroutines/Continuation;I)V
+
+    const/4 v1, 0x3
+
+    invoke-static {v0, v10, v10, v6, v1}, Ly6j;->L(Loc4;Lfc4;Lrc4;Lnt6;I)Lhyf;
+
+    return-void
+.end method
+
+.method public final b()V
+    .locals 10
+
+    iget-object v0, p0, Lz90;->a:Lba0;
+
+    iget-object v1, v0, Lba0;->a:Loha;
+
+    invoke-static {v0}, Lba0;->c(Lba0;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    return-void
+
+    :cond_0
+    move-object v2, v1
+
+    check-cast v2, Lqha;
+
+    iget-object v2, v2, Lqha;->a:Lgfe;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v3, Lt60;
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x1
+
+    const/4 v7, 0x1
+
+    move v8, v5
+
+    move v9, v5
+
+    invoke-direct/range {v3 .. v9}, Lt60;-><init>(IIIIIZ)V
+
+    iget-object v2, v2, Lgfe;->Y:Lb59;
+
+    if-eqz v2, :cond_1
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v3, v4}, Lb59;->D(Lt60;Z)V
+
+    :cond_1
+    iget-object v0, v0, Lba0;->b:Lo9d;
+
+    invoke-virtual {v0}, Lo9d;->d()V
+
+    check-cast v1, Lqha;
+
+    invoke-virtual {v1}, Lqha;->b()V
 
     return-void
 .end method

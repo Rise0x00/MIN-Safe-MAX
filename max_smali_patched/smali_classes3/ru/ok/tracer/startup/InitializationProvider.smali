@@ -18,8 +18,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x7,
-        0x1
+        0x8,
+        0x0
     }
     xi = 0x30
 .end annotation
@@ -67,7 +67,7 @@
 .end method
 
 .method public final onCreate()Z
-    .locals 1
+    .locals 3
 
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
@@ -75,8 +75,23 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lyqg;->a(Landroid/content/Context;)V
+    :try_start_0
+    invoke-static {v0}, Lp2h;->a(Landroid/content/Context;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "Tracer"
+
+    const-string v2, "Unable to initialize tracer due to error"
+
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_0
     const/4 v0, 0x1
 
     return v0

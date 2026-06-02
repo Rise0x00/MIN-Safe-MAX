@@ -9,20 +9,16 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/Object;
-
-.field public final synthetic c:I
+.field public final synthetic b:Lone/me/login/confirm/ConfirmPhoneScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;II)V
+.method public synthetic constructor <init>(Lone/me/login/confirm/ConfirmPhoneScreen;I)V
     .locals 0
 
-    iput p3, p0, Lau3;->a:I
+    iput p2, p0, Lau3;->a:I
 
-    iput-object p1, p0, Lau3;->b:Ljava/lang/Object;
-
-    iput p2, p0, Lau3;->c:I
+    iput-object p1, p0, Lau3;->b:Lone/me/login/confirm/ConfirmPhoneScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,290 +28,200 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 8
+    .locals 9
 
     iget p1, p0, Lau3;->a:I
 
-    const/4 v0, 0x4
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x5
-
-    iget v4, p0, Lau3;->c:I
-
-    iget-object v5, p0, Lau3;->b:Ljava/lang/Object;
+    const/4 v0, 0x0
 
     packed-switch p1, :pswitch_data_0
 
-    check-cast v5, Lkid;
+    iget-object p1, p0, Lau3;->b:Lone/me/login/confirm/ConfirmPhoneScreen;
 
-    iput v4, v5, Lkid;->G0:I
+    sget-object v1, Lone/me/login/confirm/ConfirmPhoneScreen;->N0:[Lb88;
 
-    const/4 p1, 0x0
+    invoke-virtual {p1}, Lone/me/login/confirm/ConfirmPhoneScreen;->i1()Llu3;
 
-    move v0, p1
+    move-result-object p1
 
-    :goto_0
-    if-ge v0, v3, :cond_1
+    iput-object v0, p1, Llu3;->K0:Ljava/lang/String;
 
-    invoke-virtual {v5, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    iget-object v1, p1, Lw4i;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    move-result-object v1
+    iget-object v2, p1, Llu3;->A0:Lia8;
 
-    check-cast v1, Landroid/widget/ImageView;
-
-    if-gt v0, v4, :cond_0
-
-    sget v2, Lccb;->b:I
-
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    goto :goto_1
-
-    :cond_0
-    new-instance v2, Lone/me/sdk/richvector/EnhancedVectorDrawable;
-
-    invoke-virtual {v5}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v6
-
-    sget v7, Lccb;->c:I
-
-    invoke-direct {v2, v6, v7}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
-
-    sget-object v6, Lpc3;->t0:Lkme;
-
-    invoke-virtual {v6, v5}, Lkme;->p(Landroid/view/View;)Lzlb;
-
-    move-result-object v6
-
-    invoke-interface {v6}, Lzlb;->i()Lb0g;
-
-    move-result-object v6
-
-    iget-object v6, v6, Lb0g;->b:Lh0g;
-
-    iget v6, v6, Lh0g;->b:I
-
-    const-string v7, "stroke"
-
-    invoke-static {v2, v7, v6}, Lroj;->c(Ladh;Ljava/lang/String;I)V
-
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    :goto_1
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v5}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    sget v1, Lecb;->a:I
-
-    invoke-virtual {v5}, Lkid;->getSelected()I
-
-    move-result v2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-interface {v2}, Lia8;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    check-cast v2, Ldng;
 
-    move-result-object v4
+    check-cast v2, Lsbb;
 
-    filled-new-array {v2, v4}, [Ljava/lang/Object;
+    invoke-virtual {v2}, Lsbb;->b()Lhc4;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v3, v2}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
+    new-instance v3, Lg7;
 
-    move-result-object v0
+    const/16 v4, 0x16
 
-    invoke-virtual {v5, v0}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-direct {v3, p1, v0, v4}, Lg7;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
 
-    iget-object v0, v5, Lkid;->H0:Ljid;
+    sget-object v0, Lrc4;->a:Lrc4;
 
-    if-eqz v0, :cond_2
+    iget-object p1, p1, Llu3;->b:Ly4i;
 
-    invoke-virtual {v5}, Lkid;->getSelected()I
+    invoke-virtual {p1, v1, v2, v0, v3}, Ly4i;->a(Loc4;Lfc4;Lrc4;Lnt6;)Lz08;
 
-    move-result v1
-
-    check-cast v0, Lpl;
-
-    iget-object v2, v0, Lpl;->b:Ljava/lang/Object;
-
-    check-cast v2, Landroidx/appcompat/widget/AppCompatTextView;
-
-    iget-object v3, v0, Lpl;->c:Ljava/lang/Object;
-
-    check-cast v3, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;
-
-    iget-object v0, v0, Lpl;->d:Ljava/lang/Object;
-
-    check-cast v0, Landroid/widget/FrameLayout;
-
-    sget-object v4, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;->M0:[Lz28;
-
-    invoke-virtual {v2, p1}, Landroid/view/View;->setPressed(Z)V
-
-    iget-object v4, v3, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;->J0:Ln8g;
-
-    invoke-virtual {v4}, Ln8g;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/graphics/drawable/RippleDrawable;
-
-    invoke-virtual {v2, v4}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    const/4 v4, -0x1
-
-    invoke-virtual {v2, v4}, Landroid/widget/TextView;->setTextColor(I)V
-
-    new-instance v4, Lfu5;
-
-    invoke-direct {v4, v3, v1, v0, p1}, Lfu5;-><init>(Ljava/lang/Object;ILjava/lang/Object;I)V
-
-    invoke-static {v2, v4}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    :cond_2
     return-void
 
     :pswitch_0
-    check-cast v5, Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+    iget-object p1, p0, Lau3;->b:Lone/me/login/confirm/ConfirmPhoneScreen;
 
-    sget-object p1, Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;->M0:[Lz28;
+    sget-object v1, Lone/me/login/confirm/ConfirmPhoneScreen;->N0:[Lb88;
 
-    iget-object p1, v5, Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;->J0:Lls;
-
-    sget-object v6, Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;->M0:[Lz28;
-
-    aget-object v7, v6, v3
-
-    invoke-virtual {p1, v5}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Ljava/lang/Boolean;
-
-    invoke-virtual {v7}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v7
-
-    if-nez v7, :cond_4
-
-    aget-object v3, v6, v3
-
-    sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-virtual {p1, v5, v3}, Lls;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
-
-    invoke-virtual {v5}, La94;->getTargetController()La94;
+    invoke-virtual {p1}, Lone/me/login/confirm/ConfirmPhoneScreen;->i1()Llu3;
 
     move-result-object p1
 
-    instance-of v3, p1, Ldu3;
+    iget-object v1, p1, Llu3;->X:Lia8;
 
-    if-eqz v3, :cond_3
+    invoke-interface {v1}, Lia8;->getValue()Ljava/lang/Object;
 
-    move-object v1, p1
+    move-result-object v1
 
-    check-cast v1, Ldu3;
+    check-cast v1, Lgjc;
+
+    iget-object v1, v1, Lgjc;->y:Lejc;
+
+    sget-object v2, Lgjc;->x5:[Lb88;
+
+    const/16 v3, 0x11
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v2}, Lejc;->a(Lb88;)Lkjc;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lkjc;->i()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    const-string v2, "https://go.max.ru/selfrecovery"
+
+    if-nez v1, :cond_0
+
+    move-object v3, v2
+
+    goto :goto_0
+
+    :cond_0
+    move-object v3, v1
+
+    :goto_0
+    :try_start_0
+    invoke-static {v3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v3
+
+    new-instance v4, Lmae;
+
+    invoke-direct {v4, v3}, Lmae;-><init>(Ljava/lang/Throwable;)V
+
+    move-object v3, v4
+
+    :goto_1
+    invoke-static {v3}, Loae;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object v4
+
+    if-nez v4, :cond_1
+
+    goto :goto_3
+
+    :cond_1
+    const-class v3, Llu3;
+
+    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v3
+
+    sget-object v5, Lnm4;->d:Lnfb;
+
+    if-nez v5, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    sget-object v6, Lgp8;->X:Lgp8;
+
+    invoke-virtual {v5, v6}, Lnfb;->b(Lgp8;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_3
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    const-string v8, "Parsing sessionInit.recoveryUrl:"
+
+    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " returns error:"
+
+    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "."
+
+    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v5, v6, v3, v1, v0}, Lnfb;->c(Lgp8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_3
-    if-eqz v1, :cond_4
+    :goto_2
+    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    iget-object p1, v5, Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;->H0:Lls;
+    move-result-object v3
 
-    aget-object v0, v6, v0
+    :goto_3
+    check-cast v3, Landroid/net/Uri;
 
-    invoke-virtual {p1, v5}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    if-eqz v3, :cond_4
 
-    move-result-object p1
+    iget-object p1, p1, Llu3;->F0:Lzo5;
 
-    check-cast p1, Landroid/os/Bundle;
+    new-instance v0, Lxt3;
 
-    invoke-interface {v1, v4, p1}, Ldu3;->g(ILandroid/os/Bundle;)V
+    invoke-direct {v0, v3}, Lxt3;-><init>(Landroid/net/Uri;)V
+
+    invoke-static {p1, v0}, Lw4i;->s(Lzo5;Ljava/lang/Object;)V
 
     :cond_4
-    invoke-virtual {v5, v2}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
-
-    return-void
-
-    :pswitch_1
-    check-cast v5, Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
-
-    sget-object p1, Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;->M0:[Lz28;
-
-    iget-object p1, v5, Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;->J0:Lls;
-
-    sget-object v6, Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;->M0:[Lz28;
-
-    aget-object v7, v6, v3
-
-    invoke-virtual {p1, v5}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Ljava/lang/Boolean;
-
-    invoke-virtual {v7}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v7
-
-    if-nez v7, :cond_6
-
-    aget-object v3, v6, v3
-
-    sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-virtual {p1, v5, v3}, Lls;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
-
-    invoke-virtual {v5}, La94;->getTargetController()La94;
-
-    move-result-object p1
-
-    instance-of v3, p1, Ldu3;
-
-    if-eqz v3, :cond_5
-
-    move-object v1, p1
-
-    check-cast v1, Ldu3;
-
-    :cond_5
-    if-eqz v1, :cond_6
-
-    iget-object p1, v5, Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;->H0:Lls;
-
-    aget-object v0, v6, v0
-
-    invoke-virtual {p1, v5}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/os/Bundle;
-
-    invoke-interface {v1, v4, p1}, Ldu3;->g(ILandroid/os/Bundle;)V
-
-    :cond_6
-    invoke-virtual {v5, v2}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
-
     return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

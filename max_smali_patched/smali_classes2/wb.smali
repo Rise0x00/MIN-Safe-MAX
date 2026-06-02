@@ -1,124 +1,137 @@
 .class public final Lwb;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lbc4;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lbc4;
 
-.field public final synthetic Y:Lac;
-
-.field public o:I
+.field public final b:F
 
 
 # direct methods
-.method public constructor <init>(Lac;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(FLbc4;)V
+    .locals 1
 
-    iput-object p1, p0, Lwb;->Y:Lac;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    :goto_0
+    instance-of v0, p2, Lwb;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    if-eqz v0, :cond_0
+
+    check-cast p2, Lwb;
+
+    iget-object p2, p2, Lwb;->a:Lbc4;
+
+    move-object v0, p2
+
+    check-cast v0, Lwb;
+
+    iget v0, v0, Lwb;->b:F
+
+    add-float/2addr p1, v0
+
+    goto :goto_0
+
+    :cond_0
+    iput-object p2, p0, Lwb;->a:Lbc4;
+
+    iput p1, p0, Lwb;->b:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Landroid/graphics/RectF;)F
+    .locals 1
 
-    check-cast p1, Ljava/util/List;
+    iget-object v0, p0, Lwb;->a:Lbc4;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-interface {v0, p1}, Lbc4;->a(Landroid/graphics/RectF;)F
 
-    invoke-virtual {p0, p1, p2}, Lwb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result p1
 
-    move-result-object p1
+    iget v0, p0, Lwb;->b:F
 
-    check-cast p1, Lwb;
+    add-float/2addr p1, v0
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    const/4 v0, 0x0
 
-    invoke-virtual {p1, p2}, Lwb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, p1}, Ljava/lang/Math;->max(FF)F
 
-    move-result-object p1
+    move-result p1
 
-    return-object p1
+    return p1
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    new-instance v0, Lwb;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lwb;->Y:Lac;
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {v0, v1, p2}, Lwb;-><init>(Lac;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lwb;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget-object v0, p0, Lwb;->X:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/List;
-
-    iget v1, p0, Lwb;->o:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v2, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lwb;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    check-cast p1, Lwb;
 
-    iget-object p1, p0, Lwb;->Y:Lac;
+    iget-object v1, p0, Lwb;->a:Lbc4;
 
-    iget-object p1, p1, Lac;->X:Li7f;
+    iget-object v3, p1, Lwb;->a:Lbc4;
 
-    const/4 v1, 0x0
+    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iput-object v1, p0, Lwb;->X:Ljava/lang/Object;
+    move-result v1
 
-    iput v2, p0, Lwb;->o:I
+    if-eqz v1, :cond_2
 
-    invoke-virtual {p1, v0, p0}, Li7f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget v1, p0, Lwb;->b:F
 
-    move-result-object p1
+    iget p1, p1, Lwb;->b:F
 
-    sget-object v0, Lac4;->a:Lac4;
+    cmpl-float p1, v1, p1
 
-    if-ne p1, v0, :cond_2
+    if-nez p1, :cond_2
 
-    return-object v0
+    return v0
 
     :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    return v2
+.end method
 
-    return-object p1
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Lwb;->b:F
+
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lwb;->a:Lbc4;
+
+    filled-new-array {v1, v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

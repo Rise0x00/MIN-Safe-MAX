@@ -1,86 +1,81 @@
-.class public final Lq4h;
-.super Ljava/lang/Object;
+.class public final enum Lq4h;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lo58;
-.implements Ljava/io/Serializable;
+
+# static fields
+.field public static final enum a:Lq4h;
+
+.field public static final enum b:Lq4h;
+
+.field public static final synthetic c:[Lq4h;
 
 
-# instance fields
-.field public a:Llq6;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 5
 
-.field public b:Ljava/lang/Object;
+    new-instance v0, Lq4h;
 
+    const-string v1, "DEFERRED"
 
-# virtual methods
-.method public final e()Z
-    .locals 2
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Lq4h;->b:Ljava/lang/Object;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget-object v1, Lwna;->C0:Lwna;
+    sput-object v0, Lq4h;->a:Lq4h;
 
-    if-eq v0, v1, :cond_0
+    new-instance v1, Lq4h;
 
-    const/4 v0, 0x1
+    const-string v2, "IMMEDIATE"
 
-    return v0
+    const/4 v3, 0x1
 
-    :cond_0
-    const/4 v0, 0x0
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    return v0
-.end method
+    sput-object v1, Lq4h;->b:Lq4h;
 
-.method public final getValue()Ljava/lang/Object;
-    .locals 2
+    new-instance v2, Lq4h;
 
-    iget-object v0, p0, Lq4h;->b:Ljava/lang/Object;
+    const-string v3, "EXCLUSIVE"
 
-    sget-object v1, Lwna;->C0:Lwna;
+    const/4 v4, 0x2
 
-    if-ne v0, v1, :cond_0
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object v0, p0, Lq4h;->a:Llq6;
-
-    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+    filled-new-array {v0, v1, v2}, [Lq4h;
 
     move-result-object v0
 
-    iput-object v0, p0, Lq4h;->b:Ljava/lang/Object;
+    sput-object v0, Lq4h;->c:[Lq4h;
 
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lq4h;->a:Llq6;
-
-    :cond_0
-    iget-object v0, p0, Lq4h;->b:Ljava/lang/Object;
-
-    return-object v0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public static valueOf(Ljava/lang/String;)Lq4h;
     .locals 1
 
-    invoke-virtual {p0}, Lq4h;->e()Z
+    const-class v0, Lq4h;
 
-    move-result v0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    if-eqz v0, :cond_0
+    move-result-object p0
 
-    invoke-virtual {p0}, Lq4h;->getValue()Ljava/lang/Object;
+    check-cast p0, Lq4h;
+
+    return-object p0
+.end method
+
+.method public static values()[Lq4h;
+    .locals 1
+
+    sget-object v0, Lq4h;->c:[Lq4h;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    const-string v0, "Lazy value not initialized yet."
+    check-cast v0, [Lq4h;
 
     return-object v0
 .end method

@@ -4,99 +4,137 @@
 
 
 # instance fields
-.field public final a:Lpj6;
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:I
-
-.field public final h:I
-
-.field public final i:Lw50;
-
-.field public final j:Z
-
-.field public final k:Z
-
-.field public final l:Z
+.field public final a:Ljava/util/LinkedHashMap;
 
 
 # direct methods
-.method public constructor <init>(Lpj6;IIIIIIILw50;ZZZ)V
-    .locals 0
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lun4;->a:Lpj6;
+    new-instance v0, Ljava/util/LinkedHashMap;
 
-    iput p2, p0, Lun4;->b:I
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    iput p3, p0, Lun4;->c:I
+    iput-object v0, p0, Lun4;->a:Ljava/util/LinkedHashMap;
 
-    iput p4, p0, Lun4;->d:I
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    iput p5, p0, Lun4;->e:I
+    move-result-object p1
 
-    iput p6, p0, Lun4;->f:I
+    :cond_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    iput p7, p0, Lun4;->g:I
+    move-result v0
 
-    iput p8, p0, Lun4;->h:I
+    if-eqz v0, :cond_1
 
-    iput-object p9, p0, Lun4;->i:Lw50;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iput-boolean p10, p0, Lun4;->j:Z
+    move-result-object v0
 
-    iput-boolean p11, p0, Lun4;->k:Z
+    check-cast v0, Lvn4;
 
-    iput-boolean p12, p0, Lun4;->l:Z
+    invoke-interface {v0}, Lvn4;->a()Ldp0;
 
+    move-result-object v1
+
+    iget-object v1, v1, Ldp0;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/LinkedHashSet;
+
+    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lyn4;
+
+    iget-object v3, p0, Lun4;->a:Ljava/util/LinkedHashMap;
+
+    invoke-interface {v3, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ln60;
-    .locals 7
+.method public final a(Landroid/net/Uri;)Lgzb;
+    .locals 4
 
-    new-instance v0, Ln60;
+    invoke-static {p1}, Lho4;->a(Landroid/net/Uri;)Ljava/lang/String;
 
-    iget v1, p0, Lun4;->c:I
+    move-result-object p1
 
-    const/4 v2, 0x1
+    iget-object v0, p0, Lun4;->a:Ljava/util/LinkedHashMap;
 
-    if-ne v1, v2, :cond_0
+    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    :goto_0
-    move v5, v2
+    move-result-object v0
 
-    goto :goto_1
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
 
     :cond_0
-    const/4 v2, 0x0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    goto :goto_0
+    move-result v1
 
-    :goto_1
-    iget v6, p0, Lun4;->h:I
+    if-eqz v1, :cond_1
 
-    iget v1, p0, Lun4;->g:I
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget v2, p0, Lun4;->e:I
+    move-result-object v1
 
-    iget v3, p0, Lun4;->f:I
+    check-cast v1, Ljava/util/Map$Entry;
 
-    iget-boolean v4, p0, Lun4;->l:Z
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v6}, Ln60;-><init>(IIIZZI)V
+    move-result-object v2
 
-    return-object v0
+    check-cast v2, Lyn4;
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lvn4;
+
+    iget-object v3, v2, Lyn4;->a:Landroid/net/Uri;
+
+    invoke-static {v3}, Lho4;->a(Landroid/net/Uri;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    new-instance p1, Lgzb;
+
+    invoke-direct {p1, v2, v1}, Lgzb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return-object p1
 .end method

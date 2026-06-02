@@ -1,233 +1,122 @@
-.class public final Ll15;
-.super Ljava/lang/Object;
+.class public final enum Ll15;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic X:[Ll15;
+
+.field public static volatile b:Ll15;
+
+.field public static final enum c:Ll15;
+
+.field public static final enum d:Ll15;
+
+.field public static final enum o:Ll15;
+
+
 # instance fields
-.field public final a:I
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Li4g;
-
-.field public final d:J
-
-.field public final e:J
-
-.field public final f:J
-
-.field public final g:Lv1j;
-
-.field public final h:Lsna;
-
-.field public final i:Ltna;
-
-.field public final j:Landroid/content/Context;
+.field public final a:B
 
 
 # direct methods
-.method public constructor <init>(Lk15;)V
-    .locals 5
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ll15;
 
-    iget-object v0, p1, Lk15;->g:Landroid/content/Context;
+    const-string v1, "LOW"
 
-    iput-object v0, p0, Ll15;->j:Landroid/content/Context;
+    const/4 v2, 0x0
 
-    iget-object v1, p1, Lk15;->b:Li4g;
+    const/4 v3, 0x1
 
-    const/4 v2, 0x1
+    invoke-direct {v0, v1, v2, v3}, Ll15;-><init>(Ljava/lang/String;IB)V
 
-    if-nez v1, :cond_1
+    sput-object v0, Ll15;->c:Ll15;
 
-    if-eqz v0, :cond_0
+    new-instance v1, Ll15;
 
-    goto :goto_0
+    const-string v2, "AVERAGE"
 
-    :cond_0
-    const/4 v3, 0x0
+    const/4 v4, 0x2
 
-    goto :goto_1
+    invoke-direct {v1, v2, v3, v4}, Ll15;-><init>(Ljava/lang/String;IB)V
 
-    :cond_1
-    :goto_0
-    move v3, v2
+    sput-object v1, Ll15;->d:Ll15;
 
-    :goto_1
-    const-string v4, "Either a non-null context or a base directory path or supplier must be provided."
+    new-instance v2, Ll15;
 
-    if-eqz v3, :cond_6
+    const-string v3, "HIGH"
 
-    if-nez v1, :cond_2
+    const/4 v5, 0x3
 
-    if-eqz v0, :cond_2
+    invoke-direct {v2, v3, v4, v5}, Ll15;-><init>(Ljava/lang/String;IB)V
 
-    new-instance v0, Lj15;
+    sput-object v2, Ll15;->o:Ll15;
 
-    const/4 v1, 0x0
+    filled-new-array {v0, v1, v2}, [Ll15;
 
-    invoke-direct {v0, v1, p0}, Lj15;-><init>(ILjava/lang/Object;)V
+    move-result-object v0
 
-    iput-object v0, p1, Lk15;->b:Li4g;
-
-    :cond_2
-    iput v2, p0, Ll15;->a:I
-
-    iget-object v0, p1, Lk15;->a:Ljava/lang/String;
-
-    iput-object v0, p0, Ll15;->b:Ljava/lang/String;
-
-    iget-object v0, p1, Lk15;->b:Li4g;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object v0, p0, Ll15;->c:Li4g;
-
-    iget-wide v0, p1, Lk15;->c:J
-
-    iput-wide v0, p0, Ll15;->d:J
-
-    iget-wide v0, p1, Lk15;->d:J
-
-    iput-wide v0, p0, Ll15;->e:J
-
-    iget-wide v0, p1, Lk15;->e:J
-
-    iput-wide v0, p0, Ll15;->f:J
-
-    iget-object p1, p1, Lk15;->f:Lv1j;
-
-    iput-object p1, p0, Ll15;->g:Lv1j;
-
-    const-class p1, Lsna;
-
-    monitor-enter p1
-
-    :try_start_0
-    sget-object v0, Lsna;->b:Lsna;
-
-    if-nez v0, :cond_3
-
-    new-instance v0, Lsna;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lsna;-><init>(I)V
-
-    sput-object v0, Lsna;->b:Lsna;
-
-    goto :goto_2
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_7
-
-    :cond_3
-    :goto_2
-    sget-object v0, Lsna;->b:Lsna;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p1
-
-    iput-object v0, p0, Ll15;->h:Lsna;
-
-    const-class v0, Ltna;
-
-    monitor-enter v0
-
-    :try_start_1
-    sget-object p1, Ltna;->b:Ltna;
-
-    if-nez p1, :cond_4
-
-    new-instance p1, Ltna;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v1}, Ltna;-><init>(I)V
-
-    sput-object p1, Ltna;->b:Ltna;
-
-    goto :goto_3
-
-    :catchall_1
-    move-exception p1
-
-    goto :goto_6
-
-    :cond_4
-    :goto_3
-    sget-object p1, Ltna;->b:Ltna;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    monitor-exit v0
-
-    iput-object p1, p0, Ll15;->i:Ltna;
-
-    const-class p1, Lvna;
-
-    monitor-enter p1
-
-    :try_start_2
-    sget-object v0, Lvna;->b:Lvna;
-
-    if-nez v0, :cond_5
-
-    new-instance v0, Lvna;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lvna;-><init>(I)V
-
-    sput-object v0, Lvna;->b:Lvna;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    goto :goto_4
-
-    :catchall_2
-    move-exception v0
-
-    goto :goto_5
-
-    :cond_5
-    :goto_4
-    monitor-exit p1
+    sput-object v0, Ll15;->X:[Ll15;
 
     return-void
+.end method
 
-    :goto_5
-    :try_start_3
-    monitor-exit p1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+.method public constructor <init>(Ljava/lang/String;IB)V
+    .locals 0
 
-    throw v0
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    :goto_6
-    :try_start_4
-    monitor-exit v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+    iput-byte p3, p0, Ll15;->a:B
 
-    throw p1
+    return-void
+.end method
 
-    :goto_7
-    :try_start_5
-    monitor-exit p1
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+.method public static valueOf(Ljava/lang/String;)Ll15;
+    .locals 1
 
-    throw v0
+    const-class v0, Ll15;
 
-    :cond_6
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-direct {p1, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object p0
 
-    throw p1
+    check-cast p0, Ll15;
+
+    return-object p0
+.end method
+
+.method public static values()[Ll15;
+    .locals 1
+
+    sget-object v0, Ll15;->X:[Ll15;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ll15;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final a()Z
+    .locals 1
+
+    sget-object v0, Ll15;->c:Ll15;
+
+    if-ne p0, v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

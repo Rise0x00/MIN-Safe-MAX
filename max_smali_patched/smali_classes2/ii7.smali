@@ -1,11 +1,32 @@
-.class public interface abstract Lii7;
+.class public abstract Lii7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ld8a;
 
-# virtual methods
-.method public abstract d()V
+
+# instance fields
+.field public final a:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lii7;->a:Ljava/lang/String;
+
+    return-void
 .end method
 
-.method public abstract p(Ljava/lang/String;)V
+
+# virtual methods
+.method public toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lii7;->a:Ljava/lang/String;
+
+    return-object v0
 .end method

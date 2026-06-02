@@ -1,43 +1,180 @@
-.class public final Lb4;
+.class public Lb4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Lb4;
+# interfaces
+.implements Luvd;
+.implements Ljavax/inject/Provider;
 
 
 # instance fields
-.field public final a:Ljava/lang/Runnable;
+.field public X:Ljava/lang/Object;
 
-.field public final b:Ljava/util/concurrent/Executor;
+.field public Y:Ljava/lang/Object;
 
-.field public c:Lb4;
+.field public a:Ljava/lang/Object;
+
+.field public b:Ljava/lang/Object;
+
+.field public c:Ljava/lang/Object;
+
+.field public d:Ljava/lang/Object;
+
+.field public o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lb4;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1, v1}, Lb4;-><init>(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    sput-object v0, Lb4;->d:Lb4;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Object;Lma8;Lsif;Lbe3;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lb4;->a:Ljava/lang/Runnable;
+    iput-object p1, p0, Lb4;->a:Ljava/lang/Object;
 
-    iput-object p2, p0, Lb4;->b:Ljava/util/concurrent/Executor;
+    iput-object p2, p0, Lb4;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Lb4;->d:Ljava/lang/Object;
+
+    iput-object p4, p0, Lb4;->o:Ljava/lang/Object;
+
+    iput-object p5, p0, Lb4;->X:Ljava/lang/Object;
+
+    const-class p1, Lb4;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lb4;->b:Ljava/lang/Object;
+
+    new-instance p1, La4;
+
+    invoke-direct {p1, p0}, La4;-><init>(Lb4;)V
+
+    iput-object p1, p0, Lb4;->Y:Ljava/lang/Object;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public a()Ls3b;
+    .locals 3
+
+    new-instance v0, Lzc3;
+
+    invoke-direct {v0}, Lzc3;-><init>()V
+
+    iget-object v1, p0, Lb4;->a:Ljava/lang/Object;
+
+    check-cast v1, Lw46;
+
+    iput-object v1, v0, Lzc3;->X:Ljava/lang/Object;
+
+    iget-object v1, p0, Lb4;->b:Ljava/lang/Object;
+
+    check-cast v1, Lw46;
+
+    iput-object v1, v0, Lzc3;->Z:Ljava/lang/Object;
+
+    iget-object v1, p0, Lb4;->c:Ljava/lang/Object;
+
+    check-cast v1, Lw46;
+
+    iput-object v1, v0, Lzc3;->Y:Ljava/lang/Object;
+
+    new-instance v1, Llge;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v2, p0}, Llge;-><init>(ILjava/lang/Object;)V
+
+    iput-object v1, v0, Lzc3;->d:Ljava/lang/Object;
+
+    iget-object v1, p0, Lb4;->d:Ljava/lang/Object;
+
+    check-cast v1, Lia8;
+
+    invoke-interface {v1}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lb8b;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v1, p0, Lb4;->X:Ljava/lang/Object;
+
+    check-cast v1, Lia8;
+
+    invoke-interface {v1}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lc4f;
+
+    check-cast v1, Lijc;
+
+    invoke-virtual {v1}, Lijc;->d()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    if-ne v1, v2, :cond_0
+
+    iget-object v1, p0, Lb4;->Y:Ljava/lang/Object;
+
+    check-cast v1, Lzn1;
+
+    iput-object v1, v0, Lzc3;->o:Ljava/lang/Object;
+
+    :cond_0
+    invoke-virtual {v0}, Lzc3;->f()Ls3b;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public b(Landroid/content/res/Resources;Ltx4;Ly95;Ljava/util/concurrent/Executor;Lzn9;Ly30;)Lofc;
+    .locals 7
+
+    new-instance v0, Lofc;
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    move-object v5, p5
+
+    move-object v6, p6
+
+    invoke-direct/range {v0 .. v6}, Lofc;-><init>(Landroid/content/res/Resources;Ltx4;Ly95;Ljava/util/concurrent/Executor;Lzn9;Ly30;)V
+
+    return-object v0
+.end method
+
+.method public bridge synthetic get()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lb4;->a()Ls3b;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public y(Ljava/lang/Object;Lb88;)Ljava/lang/Object;
+    .locals 0
+
+    iget-object p1, p0, Lb4;->Y:Ljava/lang/Object;
+
+    check-cast p1, La4;
+
+    return-object p1
 .end method

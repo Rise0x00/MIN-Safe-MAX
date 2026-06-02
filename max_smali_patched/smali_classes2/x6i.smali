@@ -1,194 +1,118 @@
-.class public final Lx6i;
-.super Lp6g;
+.class public Lx6i;
+.super Lf2k;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
 
+# static fields
+.field public static d:Z = true
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public static e:Z = true
 
-.field public final synthetic Y:Ly6i;
+.field public static f:Z = true
 
-.field public final synthetic Z:Lb7i;
-
-.field public o:I
-
-
-# direct methods
-.method public constructor <init>(Ly6i;Lb7i;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lx6i;->Y:Ly6i;
-
-    iput-object p2, p0, Lx6i;->Z:Lb7i;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public static g:Z = true
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public c(Landroid/view/View;I)V
+    .locals 2
 
-    check-cast p1, Ljava/lang/Throwable;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/16 v1, 0x1c
 
-    invoke-virtual {p0, p1, p2}, Lx6i;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne v0, v1, :cond_0
 
-    move-result-object p1
+    invoke-super {p0, p1, p2}, Lf2k;->c(Landroid/view/View;I)V
 
-    check-cast p1, Lx6i;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lx6i;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance v0, Lx6i;
-
-    iget-object v1, p0, Lx6i;->Y:Ly6i;
-
-    iget-object v2, p0, Lx6i;->Z:Lb7i;
-
-    invoke-direct {v0, v1, v2, p2}, Lx6i;-><init>(Ly6i;Lb7i;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lx6i;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
-
-    iget-object v0, p0, Lx6i;->X:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    iget v1, p0, Lx6i;->o:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v2, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_3
+    return-void
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    sget-boolean v0, Lx6i;->g:Z
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    if-eqz v0, :cond_1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :try_start_0
+    invoke-static {p1, p2}, Lw6i;->a(Landroid/view/View;I)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
 
-    throw p1
+    return-void
+
+    :catch_0
+    const/4 p1, 0x0
+
+    sput-boolean p1, Lx6i;->g:Z
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    return-void
+.end method
 
-    instance-of p1, v0, Lt6i;
+.method public d(Landroid/view/View;IIII)V
+    .locals 1
 
-    const/4 v1, 0x0
+    sget-boolean v0, Lx6i;->f:Z
 
-    if-eqz p1, :cond_2
+    if-eqz v0, :cond_0
 
-    check-cast v0, Lt6i;
+    :try_start_0
+    invoke-static {p1, p2, p3, p4, p5}, Lv6i;->a(Landroid/view/View;IIII)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    return-void
 
-    :cond_2
-    move-object v0, v1
+    :catch_0
+    const/4 p1, 0x0
 
-    :goto_0
-    if-eqz v0, :cond_3
+    sput-boolean p1, Lx6i;->f:Z
 
-    new-instance p1, Lzz7;
+    :cond_0
+    return-void
+.end method
 
-    new-instance v0, Lc08;
+.method public e(Landroid/view/View;Landroid/graphics/Matrix;)V
+    .locals 1
 
-    const-string v3, "request_denied"
+    sget-boolean v0, Lx6i;->d:Z
 
-    const/4 v4, 0x0
+    if-eqz v0, :cond_0
 
-    invoke-direct {v0, v3, v4}, Lc08;-><init>(Ljava/lang/String;I)V
+    :try_start_0
+    invoke-static {p1, p2}, Lt6i;->b(Landroid/view/View;Landroid/graphics/Matrix;)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-direct {p1, v0}, Lzz7;-><init>(Lc08;)V
+    return-void
 
-    :goto_1
-    move-object v5, p1
+    :catch_0
+    const/4 p1, 0x0
 
-    goto :goto_2
+    sput-boolean p1, Lx6i;->d:Z
 
-    :cond_3
-    if-nez v0, :cond_5
+    :cond_0
+    return-void
+.end method
 
-    sget-object p1, La08;->d:La08;
+.method public f(Landroid/view/View;Landroid/graphics/Matrix;)V
+    .locals 1
 
-    goto :goto_1
+    sget-boolean v0, Lx6i;->e:Z
 
-    :goto_2
-    iget-object p1, p0, Lx6i;->Y:Ly6i;
+    if-eqz v0, :cond_0
 
-    iget-object v0, p1, Ly6i;->c:Lo58;
+    :try_start_0
+    invoke-static {p1, p2}, Lt6i;->c(Landroid/view/View;Landroid/graphics/Matrix;)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    return-void
 
-    move-result-object v0
+    :catch_0
+    const/4 p1, 0x0
 
-    move-object v3, v0
+    sput-boolean p1, Lx6i;->e:Z
 
-    check-cast v3, Lol3;
-
-    iget-object v4, p1, Ly6i;->e:Lyw0;
-
-    iget-object p1, p0, Lx6i;->Z:Lb7i;
-
-    iget-object v7, p1, Lb7i;->a:Ljava/lang/String;
-
-    iput-object v1, p0, Lx6i;->X:Ljava/lang/Object;
-
-    iput v2, p0, Lx6i;->o:I
-
-    sget-object v6, Lu6i;->a:Lu6i;
-
-    move-object v8, p0
-
-    invoke-virtual/range {v3 .. v8}, Lol3;->a(Lmb2;Lb08;Lf6i;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_4
-
-    return-object v0
-
-    :cond_4
-    :goto_3
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
-
-    :cond_5
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
+    :cond_0
+    return-void
 .end method

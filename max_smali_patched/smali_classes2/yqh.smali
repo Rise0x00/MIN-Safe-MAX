@@ -1,73 +1,149 @@
-.class public final enum Lyqh;
-.super Ljava/lang/Enum;
+.class public final Lyqh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum a:Lyqh;
-
-.field public static final enum b:Lyqh;
-
-.field public static final synthetic c:[Lyqh;
+# interfaces
+.implements Lf0b;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+# instance fields
+.field public a:Lj82;
 
-    new-instance v0, Lyqh;
+.field public b:Z
 
-    const-string v1, "ASPECT_RATIO"
 
-    const/4 v2, 0x0
+# virtual methods
+.method public final a(Ljava/lang/Object;)V
+    .locals 2
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    check-cast p1, Ljava/lang/Boolean;
 
-    sput-object v0, Lyqh;->a:Lyqh;
+    invoke-static {}, Llyj;->b()Z
 
-    new-instance v1, Lyqh;
+    move-result v0
 
-    const-string v2, "FILL"
+    const-string v1, "SourceStreamRequirementObserver can be updated from main thread only"
 
-    const/4 v3, 0x1
+    invoke-static {v1, v0}, Lvfa;->m(Ljava/lang/String;Z)V
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    sput-object v1, Lyqh;->b:Lyqh;
+    invoke-virtual {v0, p1}, Ljava/lang/Boolean;->equals(Ljava/lang/Object;)Z
 
-    filled-new-array {v0, v1}, [Lyqh;
+    move-result p1
 
-    move-result-object v0
+    iget-boolean v0, p0, Lyqh;->b:Z
 
-    sput-object v0, Lyqh;->c:[Lyqh;
+    if-ne v0, p1, :cond_0
+
+    return-void
+
+    :cond_0
+    iput-boolean p1, p0, Lyqh;->b:Z
+
+    iget-object v0, p0, Lyqh;->a:Lj82;
+
+    if-eqz v0, :cond_2
+
+    if-eqz p1, :cond_1
+
+    invoke-interface {v0}, Lj82;->n()V
+
+    return-void
+
+    :cond_1
+    invoke-interface {v0}, Lj82;->a()V
+
+    return-void
+
+    :cond_2
+    const-string p1, "VideoCapture"
+
+    const-string v0, "SourceStreamRequirementObserver#isSourceStreamRequired: Received new data despite being closed already"
+
+    invoke-static {p1, v0}, Lw8g;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lyqh;
-    .locals 1
+.method public final b()V
+    .locals 3
 
-    const-class v0, Lyqh;
+    invoke-static {}, Llyj;->b()Z
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    move-result v0
 
-    move-result-object p0
+    const-string v1, "SourceStreamRequirementObserver can be closed from main thread only"
 
-    check-cast p0, Lyqh;
+    invoke-static {v1, v0}, Lvfa;->m(Ljava/lang/String;Z)V
 
-    return-object p0
-.end method
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.method public static values()[Lyqh;
-    .locals 1
+    const-string v1, "SourceStreamRequirementObserver#close: mIsSourceStreamRequired = "
 
-    sget-object v0, Lyqh;->c:[Lyqh;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-boolean v1, p0, Lyqh;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, [Lyqh;
+    const-string v1, "VideoCapture"
 
-    return-object v0
+    invoke-static {v1, v0}, Lw8g;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lyqh;->a:Lj82;
+
+    if-nez v0, :cond_0
+
+    const-string v0, "SourceStreamRequirementObserver#close: Already closed!"
+
+    invoke-static {v1, v0}, Lw8g;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    iget-boolean v2, p0, Lyqh;->b:Z
+
+    if-nez v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v2, 0x0
+
+    iput-boolean v2, p0, Lyqh;->b:Z
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0}, Lj82;->a()V
+
+    goto :goto_0
+
+    :cond_2
+    const-string v0, "SourceStreamRequirementObserver#isSourceStreamRequired: Received new data despite being closed already"
+
+    invoke-static {v1, v0}, Lw8g;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lyqh;->a:Lj82;
+
+    return-void
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 2
+
+    const-string v0, "VideoCapture"
+
+    const-string v1, "SourceStreamRequirementObserver#onError"
+
+    invoke-static {v0, v1, p1}, Lw8g;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
 .end method

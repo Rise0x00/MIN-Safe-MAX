@@ -1,86 +1,92 @@
-.class public final Lr13;
-.super Lie0;
+.class public final synthetic Lr13;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lzs6;
 
 
 # instance fields
-.field public final b:J
+.field public final synthetic a:I
+
+.field public final synthetic b:Lt13;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method public synthetic constructor <init>(Lt13;I)V
+    .locals 0
 
-    const/4 v0, 0x5
+    iput p2, p0, Lr13;->a:I
 
-    invoke-direct {p0, v0}, Lie0;-><init>(I)V
+    iput-object p1, p0, Lr13;->b:Lt13;
 
-    iput-wide p1, p0, Lr13;->b:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    const/4 v0, 0x1
+    iget v0, p0, Lr13;->a:I
 
-    if-ne p0, p1, :cond_0
+    sget-object v1, Lyeh;->a:Lyeh;
 
-    return v0
+    iget-object v2, p0, Lr13;->b:Lt13;
 
-    :cond_0
-    instance-of v1, p1, Lr13;
+    check-cast p1, Landroid/view/View;
 
-    const/4 v2, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v1, :cond_1
+    sget-object v0, Lt13;->z1:[Lb88;
 
-    return v2
-
-    :cond_1
-    check-cast p1, Lr13;
-
-    iget-wide v3, p0, Lr13;->b:J
-
-    iget-wide v5, p1, Lr13;->b:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lr13;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "OpenChatAndUpdateBackstack(chatId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lr13;->b:J
-
-    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2}, Lt13;->A()Ldng;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lsbb;
+
+    invoke-virtual {v0}, Lsbb;->b()Lhc4;
+
+    move-result-object v0
+
+    new-instance v3, Lrw1;
+
+    const/4 v4, 0x0
+
+    const/16 v5, 0x17
+
+    invoke-direct {v3, v2, p1, v4, v5}, Lrw1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+
+    const/4 p1, 0x2
+
+    invoke-static {v2, v0, v3, p1}, Lw4i;->r(Lw4i;Lfc4;Lnt6;I)Lhyf;
+
+    return-object v1
+
+    :pswitch_0
+    iget-object p1, v2, Lt13;->r1:Lzo5;
+
+    sget-object v0, Lf03;->c:Lf03;
+
+    invoke-static {p1, v0}, Lw4i;->s(Lzo5;Ljava/lang/Object;)V
+
+    return-object v1
+
+    :pswitch_1
+    iget-object p1, v2, Lt13;->r1:Lzo5;
+
+    sget-object v0, Lf03;->c:Lf03;
+
+    invoke-static {p1, v0}, Lw4i;->s(Lzo5;Ljava/lang/Object;)V
+
+    return-object v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

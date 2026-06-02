@@ -1,196 +1,186 @@
 .class public final Lf45;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
+
+# static fields
+.field public static j:Ljava/util/ArrayList;
+
+.field public static k:Lf45;
+
+.field public static final l:Ljava/util/ArrayList;
+
+.field public static final m:Lw7;
 
 
 # instance fields
-.field public final synthetic X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+.field public final a:Ljava/util/ArrayList;
 
-.field public final synthetic Y:Li20;
+.field public final b:Landroid/util/SparseIntArray;
 
-.field public final synthetic Z:Li20;
+.field public final c:Ljava/util/ArrayList;
 
-.field public o:I
+.field public final d:I
 
-.field public final synthetic t0:Ljm9;
+.field public e:I
+
+.field public final f:I
+
+.field public g:I
+
+.field public h:Z
+
+.field public final i:Lsg;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Li20;Li20;Ljm9;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lf45;->X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-object p2, p0, Lf45;->Y:Li20;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p3, p0, Lf45;->Z:Li20;
+    sput-object v0, Lf45;->l:Ljava/util/ArrayList;
 
-    iput-object p4, p0, Lf45;->t0:Ljm9;
+    new-instance v0, Lw7;
 
-    const/4 p1, 0x2
+    const/4 v1, 0x1
 
-    invoke-direct {p0, p1, p5}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Lw7;-><init>(I)V
+
+    sput-object v0, Lf45;->m:Lw7;
 
     return-void
 .end method
 
+.method public constructor <init>(I)V
+    .locals 2
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p1, Lzb4;
+    new-instance v0, Ljava/util/ArrayList;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/16 v1, 0xa
 
-    invoke-virtual {p0, p1, p2}, Lf45;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    move-result-object p1
+    iput-object v0, p0, Lf45;->a:Ljava/util/ArrayList;
 
-    check-cast p1, Lf45;
+    new-instance v0, Landroid/util/SparseIntArray;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
-    invoke-virtual {p1, p2}, Lf45;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object v0, p0, Lf45;->b:Landroid/util/SparseIntArray;
 
-    move-result-object p1
+    new-instance v0, Ljava/util/ArrayList;
 
-    return-object p1
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object v0, p0, Lf45;->c:Ljava/util/ArrayList;
+
+    new-instance v0, Lsg;
+
+    const/16 v1, 0xb
+
+    invoke-direct {v0, v1, p0}, Lsg;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p0, Lf45;->i:Lsg;
+
+    iput p1, p0, Lf45;->d:I
+
+    sget-object p1, Le45;->j:Ljava/security/SecureRandom;
+
+    invoke-virtual {p1}, Ljava/util/Random;->nextInt()I
+
+    move-result p1
+
+    iput p1, p0, Lf45;->f:I
+
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 6
+.method public static a(Ljava/lang/Runnable;Z)V
+    .locals 3
 
-    new-instance v0, Lf45;
+    invoke-static {}, Lfg;->b()Z
 
-    iget-object v3, p0, Lf45;->Z:Li20;
+    move-result v0
 
-    iget-object v4, p0, Lf45;->t0:Ljm9;
+    if-nez v0, :cond_0
 
-    iget-object v1, p0, Lf45;->X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lxla;
 
-    iget-object v2, p0, Lf45;->Y:Li20;
+    move-result-object p0
 
-    move-object v5, p2
+    new-instance p1, Ljava/lang/RuntimeException;
 
-    invoke-direct/range {v0 .. v5}, Lf45;-><init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Li20;Li20;Ljm9;Lkotlin/coroutines/Continuation;)V
+    const-string v0, "wrong thread"
 
-    return-object v0
-.end method
+    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+    invoke-interface {p0, p1}, Lxla;->i(Ljava/lang/Throwable;)V
 
-    sget-object v0, Lac4;->a:Lac4;
-
-    iget v1, p0, Lf45;->o:I
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x1
-
-    if-eqz v1, :cond_2
-
-    if-eq v1, v3, :cond_1
-
-    if-ne v1, v2, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    return-object p1
+    return-void
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    sget-object v0, Lf45;->j:Ljava/util/ArrayList;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    sget-object v1, Lf45;->m:Lw7;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v0, :cond_2
 
-    throw p1
+    sget-object v0, Lf45;->l:Ljava/util/ArrayList;
 
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, -0x1
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    sput-object v0, Lf45;->j:Ljava/util/ArrayList;
 
     goto :goto_0
 
+    :cond_1
+    new-instance v0, Ljava/util/ArrayList;
+
+    const/16 v2, 0x64
+
+    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(I)V
+
+    sput-object v0, Lf45;->j:Ljava/util/ArrayList;
+
+    :goto_0
+    if-nez p1, :cond_2
+
+    invoke-static {v1}, Lfg;->d(Ljava/lang/Runnable;)V
+
     :cond_2
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    sget-object v0, Lf45;->j:Ljava/util/ArrayList;
 
-    iget-object p1, p0, Lf45;->X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iget p1, p1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->R0:I
+    if-eqz p1, :cond_3
 
-    iget-object v1, p0, Lf45;->X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    sget-object p0, Lfg;->a:Landroid/os/Handler;
 
-    add-int/2addr p1, v3
+    invoke-virtual {p0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    iput p1, v1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->R0:I
-
-    iget-object p1, p0, Lf45;->X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iput v3, p0, Lf45;->o:I
-
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->q(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v0, :cond_3
-
-    goto :goto_2
+    invoke-virtual {v1}, Lw7;->run()V
 
     :cond_3
-    :goto_0
-    iget-object p1, p0, Lf45;->X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iget-object v1, p0, Lf45;->Y:Li20;
-
-    iget-object v3, p0, Lf45;->Z:Li20;
-
-    iget-object v4, p0, Lf45;->t0:Ljm9;
-
-    iput v2, p0, Lf45;->o:I
-
-    iget-object v2, v1, Li20;->d:Lh20;
-
-    if-nez v2, :cond_4
-
-    invoke-static {}, Lme8;->a()Lje8;
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_4
-    iget-wide v5, v2, Lh20;->a:J
-
-    const-wide/16 v7, 0x0
-
-    cmp-long v2, v5, v7
-
-    if-nez v2, :cond_5
-
-    if-eqz v3, :cond_5
-
-    invoke-virtual {p1, v3, v4, p0}, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->u(Li20;Ljm9;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_5
-    invoke-virtual {p1, v1, v4, p0}, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->t(Li20;Ljm9;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    :goto_1
-    if-ne p1, v0, :cond_6
-
-    :goto_2
-    return-object v0
-
-    :cond_6
-    return-object p1
+    return-void
 .end method

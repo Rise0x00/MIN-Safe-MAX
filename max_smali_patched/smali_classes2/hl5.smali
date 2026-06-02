@@ -1,19 +1,80 @@
-.class public final Lhl5;
+.class public final synthetic Lhl5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lp12;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lkl5;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lkl5;I)V
+    .locals 0
+
+    iput p2, p0, Lhl5;->a:I
+
+    iput-object p1, p0, Lhl5;->b:Lkl5;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public final serializer()La38;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "La38;"
-        }
-    .end annotation
+.method public final x(Lo12;)Ljava/lang/String;
+    .locals 4
 
-    sget-object v0, Lgl5;->a:Lgl5;
+    iget v0, p0, Lhl5;->a:I
 
-    return-object v0
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lhl5;->b:Lkl5;
+
+    iget-object v1, v0, Lkl5;->d:Lpl5;
+
+    iget-object v1, v1, Lpl5;->i:Ls2f;
+
+    new-instance v2, Lil5;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v0, p1, v3}, Lil5;-><init>(Lkl5;Lo12;I)V
+
+    invoke-virtual {v1, v2}, Ls2f;->execute(Ljava/lang/Runnable;)V
+
+    const-string p1, "acquireBuffer"
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lhl5;->b:Lkl5;
+
+    iget-object v1, v0, Lkl5;->d:Lpl5;
+
+    iget-object v1, v1, Lpl5;->i:Ls2f;
+
+    new-instance v2, Lil5;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v0, p1, v3}, Lil5;-><init>(Lkl5;Lo12;I)V
+
+    invoke-virtual {v1, v2}, Ls2f;->execute(Ljava/lang/Runnable;)V
+
+    const-string p1, "fetchData"
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,135 +1,84 @@
 .class public final Lge9;
-.super Ljava/lang/Object;
+.super Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lyd9;
-
-.field public final b:J
-
-.field public final c:Ljava/util/ArrayList;
-
-.field public volatile d:I
-
-.field public volatile e:I
-
-.field public final f:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final g:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final synthetic a:Landroidx/mediarouter/app/d;
 
 
 # direct methods
-.method public constructor <init>(Lyd9;)V
-    .locals 2
+.method public constructor <init>(Landroidx/mediarouter/app/d;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lge9;->a:Landroidx/mediarouter/app/d;
 
-    iput-object p1, p0, Lge9;->a:Lyd9;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lge9;->b:J
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lge9;->c:Ljava/util/ArrayList;
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Lge9;->d:I
-
-    iput p1, p0, Lge9;->e:I
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Lge9;->f:Ljava/util/concurrent/atomic/AtomicReference;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Lge9;->g:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {p0}, Landroid/support/v4/media/session/MediaControllerCompat$Callback;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lone/me/sdk/media/transformer/MediaTransformException;)V
+.method public final onMetadataChanged(Landroid/support/v4/media/MediaMetadataCompat;)V
     .locals 1
 
-    iget-object v0, p0, Lge9;->g:Ljava/util/concurrent/atomic/AtomicReference;
+    if-nez p1, :cond_0
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/support/v4/media/MediaMetadataCompat;->getDescription()Landroid/support/v4/media/MediaDescriptionCompat;
+
+    move-result-object p1
+
+    :goto_0
+    iget-object v0, p0, Lge9;->a:Landroidx/mediarouter/app/d;
+
+    iput-object p1, v0, Landroidx/mediarouter/app/d;->l1:Landroid/support/v4/media/MediaDescriptionCompat;
+
+    invoke-virtual {v0}, Landroidx/mediarouter/app/d;->t()V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Landroidx/mediarouter/app/d;->s(Z)V
 
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 8
+.method public final onPlaybackStateChanged(Landroid/support/v4/media/session/PlaybackStateCompat;)V
+    .locals 1
 
-    iget-object v0, p0, Lge9;->a:Lyd9;
+    iget-object v0, p0, Lge9;->a:Landroidx/mediarouter/app/d;
 
-    iget-object v1, v0, Lyd9;->b:Ljava/util/ArrayList;
+    iput-object p1, v0, Landroidx/mediarouter/app/d;->k1:Landroid/support/v4/media/session/PlaybackStateCompat;
 
-    invoke-static {v1}, Ljs5;->g(Ljava/util/ArrayList;)Ljava/lang/String;
+    const/4 p1, 0x0
 
-    move-result-object v1
+    invoke-virtual {v0, p1}, Landroidx/mediarouter/app/d;->s(Z)V
 
-    iget-object v2, p0, Lge9;->c:Ljava/util/ArrayList;
+    return-void
+.end method
 
-    invoke-static {v2}, Ljs5;->d(Ljava/util/List;)Ljava/lang/String;
+.method public final onSessionDestroyed()V
+    .locals 3
 
-    move-result-object v2
+    iget-object v0, p0, Lge9;->a:Landroidx/mediarouter/app/d;
 
-    iget-object v3, v0, Lyd9;->c:Ljava/lang/String;
+    iget-object v1, v0, Landroidx/mediarouter/app/d;->i1:Landroid/support/v4/media/session/MediaControllerCompat;
 
-    const-string v4, "              "
+    if-eqz v1, :cond_0
 
-    invoke-static {v0, v4}, Ljs5;->f(Lyd9;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v2, v0, Landroidx/mediarouter/app/d;->j1:Lge9;
 
-    move-result-object v4
+    invoke-virtual {v1, v2}, Landroid/support/v4/media/session/MediaControllerCompat;->unregisterCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)V
 
-    invoke-static {v0}, Ljs5;->e(Lyd9;)Ljava/lang/String;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    iput-object v1, v0, Landroidx/mediarouter/app/d;->i1:Landroid/support/v4/media/session/MediaControllerCompat;
 
-    const-string v5, "\n              }\n              inputMedias={"
-
-    const-string v6, "\n              }\n              out="
-
-    const-string v7, "\n            MediaTransformRequest(\n              in={"
-
-    invoke-static {v7, v1, v5, v2, v6}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "\n              anc={"
-
-    const-string v5, "\n              }\n              request={"
-
-    invoke-static {v1, v3, v2, v4, v5}, Lmrf;->s(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "\n              }\n            )\n        "
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lszf;->f(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :cond_0
+    return-void
 .end method

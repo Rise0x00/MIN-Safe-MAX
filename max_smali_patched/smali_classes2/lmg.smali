@@ -1,51 +1,49 @@
-.class public final Llmg;
-.super Lo84;
+.class public Llmg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final b:Llmg;
+
+
 # instance fields
-.field public final synthetic X:Lxmg;
-
-.field public Y:I
-
-.field public d:Lp0b;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:Landroid/util/ArrayMap;
 
 
 # direct methods
-.method public constructor <init>(Lxmg;Lo84;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Llmg;
+
+    new-instance v1, Landroid/util/ArrayMap;
+
+    invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
+
+    invoke-direct {v0, v1}, Llmg;-><init>(Landroid/util/ArrayMap;)V
+
+    sput-object v0, Llmg;->b:Llmg;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/util/ArrayMap;)V
     .locals 0
 
-    iput-object p1, p0, Llmg;->X:Lxmg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Llmg;->a:Landroid/util/ArrayMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
     .locals 1
 
-    iput-object p1, p0, Llmg;->o:Ljava/lang/Object;
+    const-string v0, "android.hardware.camera2.CaptureRequest.setTag.CX"
 
-    iget p1, p0, Llmg;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Llmg;->Y:I
-
-    iget-object p1, p0, Llmg;->X:Lxmg;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lxmg;->d(Lp0b;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

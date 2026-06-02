@@ -1,10 +1,8 @@
-.class public abstract Ln8a;
-.super Landroidx/constraintlayout/widget/ConstraintLayout;
+.class public interface abstract Ln8a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxja;
 
-
-# static fields
-.field public static final synthetic G0:I
+# virtual methods
+.method public abstract b(Ljava/lang/String;)Ljava/io/InputStream;
+.end method

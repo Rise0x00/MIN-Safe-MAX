@@ -1,103 +1,123 @@
-.class public abstract Lv0b;
-.super Ljava/lang/Object;
+.class public final Lv0b;
+.super Ldr0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lpc3;
+.field public X:Ljava/lang/Object;
 
-
-# direct methods
-.method public constructor <init>(Lpc3;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lv0b;->a:Lpc3;
-
-    return-void
-.end method
+.field public Y:Z
 
 
 # virtual methods
-.method public final a(Lpc3;)V
+.method public final e(Ljava/lang/Object;)V
     .locals 2
 
-    iget-object v0, p0, Lv0b;->a:Lpc3;
+    iget-boolean v0, p0, Ldr0;->d:Z
 
-    iget-object v1, v0, Lpc3;->a:Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    check-cast v1, Lis3;
+    goto :goto_0
 
-    iput-object v1, p1, Lpc3;->a:Ljava/lang/Object;
+    :cond_0
+    iget v0, p0, Ldr0;->o:I
 
-    iget-object v1, v0, Lpc3;->d:Ljava/lang/Object;
+    iget-object v1, p0, Ldr0;->a:Lb3b;
 
-    check-cast v1, Lmm;
+    if-eqz v0, :cond_1
 
-    iput-object v1, p1, Lpc3;->d:Ljava/lang/Object;
+    invoke-interface {v1, p1}, Lb3b;->e(Ljava/lang/Object;)V
 
-    iget-object v1, v0, Lpc3;->b:Ljava/lang/Object;
+    return-void
 
-    check-cast v1, Ltng;
+    :cond_1
+    :try_start_0
+    iget-boolean v0, p0, Lv0b;->Y:Z
 
-    iput-object v1, p1, Lpc3;->b:Ljava/lang/Object;
+    if-eqz v0, :cond_2
 
-    iget-object v1, v0, Lpc3;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lv0b;->X:Ljava/lang/Object;
 
-    check-cast v1, Lv4e;
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iput-object v1, p1, Lpc3;->c:Ljava/lang/Object;
+    move-result v0
 
-    iget-object v1, v0, Lpc3;->Y:Ljava/lang/Object;
+    iput-object p1, p0, Lv0b;->X:Ljava/lang/Object;
 
-    check-cast v1, Lum;
+    if-eqz v0, :cond_3
 
-    iput-object v1, p1, Lpc3;->Y:Ljava/lang/Object;
+    :goto_0
+    return-void
 
-    iget-object v1, v0, Lpc3;->X:Ljava/lang/Object;
+    :catchall_0
+    move-exception p1
 
-    check-cast v1, Lym;
+    goto :goto_1
 
-    iput-object v1, p1, Lpc3;->X:Ljava/lang/Object;
+    :cond_2
+    const/4 v0, 0x1
 
-    iget-object v1, v0, Lpc3;->o:Ljava/lang/Object;
+    iput-boolean v0, p0, Lv0b;->Y:Z
 
-    check-cast v1, Lui8;
+    iput-object p1, p0, Lv0b;->X:Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iput-object v1, p1, Lpc3;->o:Ljava/lang/Object;
+    :cond_3
+    invoke-interface {v1, p1}, Lb3b;->e(Ljava/lang/Object;)V
 
-    iget-object v0, v0, Lpc3;->Z:Ljava/lang/Object;
+    return-void
 
-    iput-object v0, p1, Lpc3;->Z:Ljava/lang/Object;
+    :goto_1
+    invoke-virtual {p0, p1}, Ldr0;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method public abstract b()Lol;
-.end method
+.method public final poll()Ljava/lang/Object;
+    .locals 2
 
-.method public c()Lnl;
-    .locals 1
+    :goto_0
+    iget-object v0, p0, Ldr0;->c:Lycd;
 
-    const/4 v0, 0x0
+    invoke-interface {v0}, Laqf;->poll()Ljava/lang/Object;
 
-    return-object v0
-.end method
+    move-result-object v0
 
-.method public d()Lzl;
-    .locals 1
+    if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
     return-object v0
-.end method
 
-.method public abstract e()Lw0b;
-.end method
+    :cond_0
+    iget-boolean v1, p0, Lv0b;->Y:Z
 
-.method public abstract f()Lt6e;
-.end method
+    if-nez v1, :cond_1
 
-.method public abstract g()Lpc3;
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lv0b;->Y:Z
+
+    iput-object v0, p0, Lv0b;->X:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_1
+    iget-object v1, p0, Lv0b;->X:Ljava/lang/Object;
+
+    invoke-static {v1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    iput-object v0, p0, Lv0b;->X:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_2
+    iput-object v0, p0, Lv0b;->X:Ljava/lang/Object;
+
+    goto :goto_0
 .end method

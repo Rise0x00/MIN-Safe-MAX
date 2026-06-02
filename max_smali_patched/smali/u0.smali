@@ -1,194 +1,165 @@
 .class public final Lu0;
-.super Ljava/lang/Object;
+.super Leo0;
 .source "SourceFile"
-
-# interfaces
-.implements Li4g;
 
 
 # instance fields
-.field public final synthetic a:Lk85;
+.field public final synthetic a:Ljava/lang/String;
 
-.field public final synthetic b:Ljava/lang/String;
+.field public final synthetic b:Z
 
-.field public final synthetic c:Ljava/lang/Object;
-
-.field public final synthetic d:I
-
-.field public final synthetic e:Lv0;
+.field public final synthetic c:Lw0;
 
 
 # direct methods
-.method public constructor <init>(Lv0;Lk85;Ljava/lang/String;Ljava/lang/Object;I)V
+.method public constructor <init>(Lw0;Ljava/lang/String;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lu0;->e:Lv0;
+    iput-object p1, p0, Lu0;->c:Lw0;
 
-    iput-object p2, p0, Lu0;->a:Lk85;
+    iput-object p2, p0, Lu0;->a:Ljava/lang/String;
 
-    iput-object p3, p0, Lu0;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lu0;->c:Ljava/lang/Object;
-
-    iput p5, p0, Lu0;->d:I
+    iput-boolean p3, p0, Lu0;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 8
+.method public final a(Lzj4;)V
+    .locals 4
 
-    iget-object v0, p0, Lu0;->e:Lv0;
+    check-cast p1, Ls0;
 
-    iget-object v1, p0, Lu0;->a:Lk85;
+    invoke-virtual {p1}, Ls0;->g()Z
 
-    iget-object v7, p0, Lu0;->b:Ljava/lang/String;
+    move-result v0
 
-    iget-object v2, p0, Lu0;->c:Ljava/lang/Object;
+    invoke-virtual {p1}, Ls0;->e()F
 
-    iget v3, p0, Lu0;->d:I
+    move-result v1
 
-    check-cast v0, Ly9c;
+    iget-object v2, p0, Lu0;->a:Ljava/lang/String;
 
-    check-cast v2, Lcj7;
+    iget-object v3, p0, Lu0;->c:Lw0;
 
-    iget-object v0, v0, Ly9c;->m:Loi7;
+    invoke-virtual {v3, v2, p1}, Lw0;->g(Ljava/lang/String;Lzj4;)Z
 
-    invoke-static {v3}, Lt02;->t(I)I
+    move-result v2
 
-    move-result v4
+    if-nez v2, :cond_0
 
-    if-eqz v4, :cond_5
+    const-string v0, "ignore_old_datasource @ onProgress"
 
-    const/4 v5, 0x1
+    const/4 v1, 0x0
 
-    if-eq v4, v5, :cond_4
+    invoke-virtual {v3, v0, v1}, Lw0;->h(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const/4 v5, 0x2
+    invoke-interface {p1}, Lzj4;->close()Z
 
-    if-ne v4, v5, :cond_0
-
-    sget-object v3, Lbj7;->d:Lbj7;
-
-    :goto_0
-    move-object v5, v3
-
-    goto :goto_2
+    return-void
 
     :cond_0
-    new-instance v0, Ljava/lang/RuntimeException;
+    if-nez v0, :cond_2
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object p1, v3, Lw0;->h:Lsx6;
 
-    const-string v2, "Cache level"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const/4 v2, 0x1
-
-    if-eq v3, v2, :cond_3
-
-    const/4 v2, 0x2
-
-    if-eq v3, v2, :cond_2
+    iget-object v0, p1, Lsx6;->e:Luw5;
 
     const/4 v2, 0x3
 
-    if-eq v3, v2, :cond_1
+    invoke-virtual {v0, v2}, Luw5;->c(I)Landroid/graphics/drawable/Drawable;
 
-    const-string v2, "null"
+    move-result-object v2
 
-    goto :goto_1
+    if-nez v2, :cond_1
+
+    goto :goto_0
 
     :cond_1
-    const-string v2, "BITMAP_MEMORY_CACHE"
+    iget v2, v0, Luw5;->I0:I
 
-    goto :goto_1
+    add-int/lit8 v2, v2, 0x1
+
+    iput v2, v0, Luw5;->I0:I
+
+    invoke-virtual {p1, v1}, Lsx6;->l(F)V
+
+    invoke-virtual {v0}, Luw5;->a()V
 
     :cond_2
-    const-string v2, "DISK_CACHE"
-
-    goto :goto_1
-
-    :cond_3
-    const-string v2, "FULL_FETCH"
-
-    :goto_1
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "is not supported. "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_4
-    sget-object v3, Lbj7;->c:Lbj7;
-
-    goto :goto_0
-
-    :cond_5
-    sget-object v3, Lbj7;->b:Lbj7;
-
-    goto :goto_0
-
-    :goto_2
-    instance-of v3, v1, Lx9c;
-
-    if-eqz v3, :cond_6
-
-    check-cast v1, Lx9c;
-
-    monitor-enter v1
-
-    monitor-exit v1
-
-    :cond_6
-    const/4 v4, 0x0
-
-    const/4 v6, 0x0
-
-    move-object v3, v2
-
-    move-object v2, v0
-
-    invoke-virtual/range {v2 .. v7}, Loi7;->a(Lcj7;Ljava/lang/Object;Lbj7;Lcm6;Ljava/lang/String;)Lo0;
-
-    move-result-object v0
-
-    return-object v0
+    :goto_0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final e(Lzj4;)V
+    .locals 4
 
-    invoke-static {p0}, Lhdj;->b(Ljava/lang/Object;)Lle5;
+    check-cast p1, Ls0;
 
-    move-result-object v0
-
-    iget-object v1, p0, Lu0;->c:Ljava/lang/Object;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "request"
-
-    invoke-virtual {v0, v1, v2}, Lle5;->h(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lle5;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ls0;->b()Ljava/lang/Throwable;
 
     move-result-object v0
 
-    return-object v0
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Lu0;->c:Lw0;
+
+    iget-object v3, p0, Lu0;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, p1, v0, v1}, Lw0;->k(Ljava/lang/String;Lzj4;Ljava/lang/Throwable;Z)V
+
+    return-void
+.end method
+
+.method public final f(Ls0;)V
+    .locals 8
+
+    invoke-virtual {p1}, Ls0;->g()Z
+
+    move-result v5
+
+    instance-of v7, p1, Luae;
+
+    invoke-virtual {p1}, Ls0;->e()F
+
+    move-result v4
+
+    invoke-interface {p1}, Lzj4;->c()Ljava/lang/Object;
+
+    move-result-object v3
+
+    iget-object v0, p0, Lu0;->c:Lw0;
+
+    if-eqz v3, :cond_0
+
+    iget-object v1, p0, Lu0;->a:Ljava/lang/String;
+
+    iget-boolean v6, p0, Lu0;->b:Z
+
+    move-object v2, p1
+
+    invoke-virtual/range {v0 .. v7}, Lw0;->l(Ljava/lang/String;Lzj4;Ljava/lang/Object;FZZZ)V
+
+    return-void
+
+    :cond_0
+    move-object v2, p1
+
+    if-eqz v5, :cond_1
+
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1}, Ljava/lang/NullPointerException;-><init>()V
+
+    const/4 v1, 0x1
+
+    iget-object v3, p0, Lu0;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v3, v2, p1, v1}, Lw0;->k(Ljava/lang/String;Lzj4;Ljava/lang/Throwable;Z)V
+
+    :cond_1
+    return-void
 .end method

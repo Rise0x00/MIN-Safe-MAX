@@ -4,8 +4,23 @@
 
 
 # virtual methods
-.method public abstract onRecordStarted(Lvm1;)V
+.method public abstract a(Landroid/view/MotionEvent;)Z
 .end method
 
-.method public abstract onRecordStopped(Lwm1;)V
+.method public abstract b(Landroid/view/MotionEvent;)Z
+.end method
+
+.method public abstract c()V
+.end method
+
+.method public abstract d()V
+.end method
+
+.method public abstract e()V
+.end method
+
+.method public abstract f()Z
+.end method
+
+.method public abstract isIdle()Z
 .end method

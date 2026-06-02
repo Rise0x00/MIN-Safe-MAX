@@ -1,23 +1,14 @@
-.class public final Lye3;
+.class public interface abstract Lye3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:[B
-
-.field public final b:J
-
-
-# direct methods
-.method public constructor <init>(J[B)V
+# virtual methods
+.method public k(Ljava/lang/String;Lms9;Landroid/view/MotionEvent;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p3, p0, Lye3;->a:[B
-
-    iput-wide p1, p0, Lye3;->b:J
-
     return-void
+.end method
+
+.method public abstract s(Landroid/text/style/ClickableSpan;IILjava/lang/String;Lyg8;Landroid/view/MotionEvent;)Z
 .end method

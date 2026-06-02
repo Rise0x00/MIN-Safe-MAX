@@ -1,50 +1,48 @@
-.class public abstract Lq8d;
-.super Ljava/lang/Object;
+.class public final Lq8d;
+.super Lz84;
 
 
-# static fields
-.field public static oneme_folders_chats_picker_toolbar:I = 0x7f0a0667
+# instance fields
+.field public final synthetic X:Lbd9;
 
-.field public static oneme_folders_delete_folder_bottom_sheet_cancel_button:I = 0x7f0a0668
+.field public synthetic d:Ljava/lang/Object;
 
-.field public static oneme_folders_delete_folder_bottom_sheet_delete_button:I = 0x7f0a0669
+.field public o:I
 
-.field public static oneme_folders_edit_bottom_sheet_cancel_button:I = 0x7f0a066a
 
-.field public static oneme_folders_edit_bottom_sheet_delete_button:I = 0x7f0a066b
+# direct methods
+.method public constructor <init>(Lbd9;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static oneme_folders_edit_create_button:I = 0x7f0a066c
+    iput-object p1, p0, Lq8d;->X:Lbd9;
 
-.field public static oneme_folders_edit_delete_button:I = 0x7f0a066d
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
 
-.field public static oneme_folders_edit_folder_name_field:I = 0x7f0a066e
+    return-void
+.end method
 
-.field public static oneme_folders_edit_members_add_button:I = 0x7f0a066f
 
-.field public static oneme_folders_edit_members_list:I = 0x7f0a0670
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.field public static oneme_folders_edit_save_button:I = 0x7f0a0671
+    iput-object p1, p0, Lq8d;->d:Ljava/lang/Object;
 
-.field public static oneme_folders_edit_screen:I = 0x7f0a0672
+    iget p1, p0, Lq8d;->o:I
 
-.field public static oneme_folders_edit_title_input:I = 0x7f0a0673
+    const/high16 v0, -0x80000000
 
-.field public static oneme_folders_edit_toolbar:I = 0x7f0a0674
+    or-int/2addr p1, v0
 
-.field public static oneme_folders_list_all_folder_view_type:I = 0x7f0a0675
+    iput p1, p0, Lq8d;->o:I
 
-.field public static oneme_folders_list_create_folder_view_type:I = 0x7f0a0676
+    iget-object p1, p0, Lq8d;->X:Lbd9;
 
-.field public static oneme_folders_list_menu_action_change:I = 0x7f0a0677
+    const/4 v0, 0x0
 
-.field public static oneme_folders_list_menu_action_delete_folder:I = 0x7f0a0678
+    invoke-virtual {p1, v0, p0}, Lbd9;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.field public static oneme_folders_list_recommended_folder_view_type:I = 0x7f0a0679
+    move-result-object p1
 
-.field public static oneme_folders_list_recycler_view:I = 0x7f0a067a
-
-.field public static oneme_folders_list_screen:I = 0x7f0a067b
-
-.field public static oneme_folders_list_toolbar:I = 0x7f0a067c
-
-.field public static oneme_folders_list_user_folder_view_type:I = 0x7f0a067d
+    return-object p1
+.end method

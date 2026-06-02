@@ -1,27 +1,47 @@
 .class public final Lid6;
-.super Ljef;
+.super Lz84;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final C()V
-    .locals 2
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
+.field public Y:I
 
-    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
+.field public d:Ln3e;
 
-    const/4 v1, 0x0
+.field public o:Lgd6;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+# direct methods
+.method public constructor <init>(Lz84;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public final bridge synthetic y(Lud8;)V
-    .locals 0
 
-    check-cast p1, Lhd6;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    return-void
+    iput-object p1, p0, Lid6;->X:Ljava/lang/Object;
+
+    iget p1, p0, Lid6;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lid6;->Y:I
+
+    const/4 p1, 0x0
+
+    invoke-static {p1, p0}, Lhk0;->K(Lxa6;Lz84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

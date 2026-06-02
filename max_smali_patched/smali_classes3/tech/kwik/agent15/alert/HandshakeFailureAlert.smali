@@ -7,9 +7,9 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    sget-object v0, Lhng;->c:Lhng;
+    sget-object v0, Lizg;->c:Lizg;
 
-    invoke-direct {p0, p1, v0}, Ltech/kwik/agent15/alert/ErrorAlert;-><init>(Ljava/lang/String;Lhng;)V
+    invoke-direct {p0, p1, v0}, Ltech/kwik/agent15/alert/ErrorAlert;-><init>(Ljava/lang/String;Lizg;)V
 
     return-void
 .end method

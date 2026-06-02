@@ -1,61 +1,38 @@
-.class public final Lus5;
+.class public final synthetic Lus5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhj8;
 
-# static fields
-.field public static final a:Lus5;
+
+# instance fields
+.field public final synthetic a:Lit5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lit5;)V
+    .locals 0
 
-    new-instance v0, Lus5;
+    iput-object p1, p0, Lus5;->a:Lit5;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lus5;->a:Lus5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public invoke(Ljava/lang/Object;)V
     .locals 1
 
-    const/4 v0, 0x1
+    check-cast p1, Lfhc;
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lus5;->a:Lit5;
 
-    return v0
+    iget-object v0, v0, Lit5;->Z0:Lchc;
 
-    :cond_0
-    instance-of p1, p1, Lus5;
+    invoke-interface {p1, v0}, Lfhc;->F(Lchc;)V
 
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x1b0269f
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Removed"
-
-    return-object v0
+    return-void
 .end method

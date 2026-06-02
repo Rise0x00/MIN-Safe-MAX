@@ -1,347 +1,532 @@
 .class public final Ls7g;
-.super Landroid/widget/FrameLayout;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic o:I
+.field public static final c:Ljava/util/concurrent/locks/ReentrantLock;
+
+.field public static d:Ls7g;
 
 
 # instance fields
-.field public final a:Lbth;
+.field public final a:Ljava/util/concurrent/locks/ReentrantLock;
 
-.field public b:Z
-
-.field public c:Landroid/animation/ValueAnimator;
-
-.field public d:Lr7g;
+.field public final b:Landroid/content/SharedPreferences;
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+
+    sput-object v0, Ls7g;->c:Ljava/util/concurrent/locks/ReentrantLock;
+
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
-    new-instance p1, Lcu0;
+    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
-    const/4 v0, 0x3
+    iput-object v0, p0, Ls7g;->a:Ljava/util/concurrent/locks/ReentrantLock;
 
-    invoke-direct {p1, v0, p0}, Lcu0;-><init>(ILjava/lang/Object;)V
+    const-string v0, "com.google.android.gms.signin"
 
-    new-instance v0, Lbth;
+    const/4 v1, 0x0
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p1, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    move-result-object v1
+    move-result-object p1
 
-    invoke-direct {v0, v1, p0, p1}, Lbth;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;Lq5j;)V
-
-    iget p1, v0, Lbth;->b:I
-
-    int-to-float p1, p1
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    mul-float/2addr v1, p1
-
-    float-to-int p1, v1
-
-    iput p1, v0, Lbth;->b:I
-
-    iput-object v0, p0, Ls7g;->a:Lbth;
+    iput-object p1, p0, Ls7g;->b:Landroid/content/SharedPreferences;
 
     return-void
 .end method
 
-.method public static a(Ls7g;F)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Ls7g;->setBackgroundAlpha(F)V
-
-    return-void
-.end method
-
-.method public static b(Ls7g;FF)V
+.method public static a(Landroid/content/Context;)Ls7g;
     .locals 2
 
-    const/4 v0, 0x0
+    invoke-static {p0}, Lis6;->m(Ljava/lang/Object;)V
 
-    cmpg-float v0, p2, v0
+    sget-object v0, Ls7g;->c:Ljava/util/concurrent/locks/ReentrantLock;
 
-    const/4 v1, 0x1
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    if-nez v0, :cond_0
+    :try_start_0
+    sget-object v1, Ls7g;->d:Ls7g;
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Ls7g;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    invoke-direct {v1, p0}, Ls7g;-><init>(Landroid/content/Context;)V
+
+    sput-object v1, Ls7g;->d:Ls7g;
 
     goto :goto_0
 
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
     :cond_0
-    int-to-float v0, v1
-
-    sub-float p2, v0, p2
-
     :goto_0
-    cmpl-float p2, p1, p2
+    sget-object p0, Ls7g;->d:Ls7g;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-lez p2, :cond_1
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    int-to-float p2, v1
+    return-object p0
 
-    sub-float/2addr p2, p1
+    :goto_1
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    invoke-direct {p0, p2}, Ls7g;->setBackgroundAlpha(F)V
-
-    :cond_1
-    return-void
+    throw p0
 .end method
 
-.method private final setBackgroundAlpha(F)V
-    .locals 4
+.method public static final f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+    const-string v0, ":"
 
-    move-result-object v0
+    invoke-static {p0, v0, p1}, Lx82;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    move-result-object p0
 
-    const/16 v1, 0xff
-
-    int-to-float v1, v1
-
-    const/4 v2, 0x0
-
-    const/high16 v3, 0x3f800000    # 1.0f
-
-    invoke-static {p1, v2, v3}, Lamj;->c(FFF)F
-
-    move-result p1
-
-    mul-float/2addr p1, v1
-
-    float-to-int p1, p1
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
-
-    :cond_0
-    return-void
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public final c(IILlq6;Llq6;Lbr6;)V
-    .locals 4
-
-    iget-object v0, p0, Ls7g;->d:Lr7g;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v1, p0, Ls7g;->c:Landroid/animation/ValueAnimator;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
-
-    move-result v1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_0
-    iget-object v2, p0, Ls7g;->c:Landroid/animation/ValueAnimator;
-
-    if-eqz v2, :cond_2
-
-    invoke-static {v2}, Ln4j;->a(Landroid/animation/Animator;)V
-
-    :cond_2
-    filled-new-array {p1, p2}, [I
-
-    move-result-object p1
-
-    invoke-static {p1}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
-
-    move-result-object p1
-
-    const-wide/16 v2, 0xc8
-
-    invoke-virtual {p1, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    new-instance p2, Lof;
-
-    const/4 v2, 0x2
-
-    invoke-direct {p2, v0, p5, v1, v2}, Lof;-><init>(Ljava/lang/Object;Ljava/lang/Object;FI)V
-
-    invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    new-instance p2, Lxg;
-
-    const/4 p5, 0x2
-
-    invoke-direct {p2, p4, p0, p3, p5}, Lxg;-><init>(Llq6;Landroid/widget/FrameLayout;Llq6;I)V
-
-    invoke-virtual {p1, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
-
-    iput-object p1, p0, Ls7g;->c:Landroid/animation/ValueAnimator;
-
-    return-void
-.end method
-
-.method public final computeScroll()V
-    .locals 1
-
-    iget-object v0, p0, Ls7g;->a:Lbth;
-
-    invoke-virtual {v0}, Lbth;->f()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->postInvalidateOnAnimation()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d()V
-    .locals 8
-
-    iget-object v0, p0, Ls7g;->d:Lr7g;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-interface {v0}, Lr7g;->p()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
-
-    move-result v1
-
-    if-lez v1, :cond_1
-
-    invoke-interface {v0}, Lr7g;->r()I
-
-    move-result v3
-
-    invoke-interface {v0}, Lr7g;->c()I
-
-    move-result v4
-
-    new-instance v5, Lmnf;
-
-    const/16 v0, 0x12
-
-    invoke-direct {v5, v0}, Lmnf;-><init>(I)V
-
-    new-instance v6, Lmnf;
-
-    invoke-direct {v6, v0}, Lmnf;-><init>(I)V
-
-    new-instance v7, Lq7g;
-
-    const/4 v0, 0x0
-
-    invoke-direct {v7, p0, v0}, Lq7g;-><init>(Ls7g;I)V
-
-    move-object v2, p0
-
-    invoke-virtual/range {v2 .. v7}, Ls7g;->c(IILlq6;Llq6;Lbr6;)V
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    return-void
-.end method
-
-.method public final getCallback()Lr7g;
-    .locals 1
-
-    iget-object v0, p0, Ls7g;->d:Lr7g;
-
-    return-object v0
-.end method
-
-.method public final onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 1
-
-    iget-object v0, p0, Ls7g;->a:Lbth;
-
-    invoke-virtual {v0, p1}, Lbth;->p(Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final onLayout(ZIIII)V
+.method public final b()Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
     .locals 3
 
-    iget-object v0, p0, Ls7g;->d:Lr7g;
+    const-string v0, "defaultGoogleSignInAccount"
 
-    if-nez v0, :cond_0
+    invoke-virtual {p0, v0}, Ls7g;->d(Ljava/lang/String;)Ljava/lang/String;
 
-    return-void
+    move-result-object v0
 
-    :cond_0
-    invoke-interface {v0}, Lr7g;->p()Landroid/view/View;
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result-object v1
+    move-result v1
 
-    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
+    const/4 v2, 0x0
 
-    move-result v2
-
-    if-lez v2, :cond_1
-
-    invoke-virtual {v1}, Landroid/view/View;->getTop()I
-
-    move-result v0
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    const-string v1, "googleSignInAccount"
+
+    invoke-static {v1, v0}, Ls7g;->f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Ls7g;->d(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    :try_start_0
+    invoke-static {v0}, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;->b(Ljava/lang/String;)Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
+
+    move-result-object v0
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
     :cond_1
-    invoke-interface {v0}, Lr7g;->r()I
-
-    move-result v0
-
     :goto_0
-    invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->offsetTopAndBottom(I)V
-
-    return-void
+    return-object v2
 .end method
 
-.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 1
+.method public final c(Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;)V
+    .locals 8
 
-    iget-object v0, p0, Ls7g;->a:Lbth;
+    invoke-static {p2}, Lis6;->m(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, p1}, Lbth;->j(Landroid/view/MotionEvent;)V
+    iget-object v0, p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;->z0:Ljava/lang/String;
 
-    const/4 p1, 0x1
+    const-string v1, "defaultGoogleSignInAccount"
 
-    return p1
-.end method
+    invoke-virtual {p0, v1, v0}, Ls7g;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-.method public final setCallback(Lr7g;)V
-    .locals 0
+    const-string v1, "googleSignInAccount"
 
-    iput-object p1, p0, Ls7g;->d:Lr7g;
+    invoke-static {v1, v0}, Ls7g;->f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Lorg/json/JSONObject;
+
+    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
+
+    :try_start_0
+    iget-object v3, p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;->b:Ljava/lang/String;
+
+    if-eqz v3, :cond_0
+
+    const-string v4, "id"
+
+    invoke-virtual {v2, v4, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    goto/16 :goto_4
+
+    :cond_0
+    :goto_0
+    iget-object v3, p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;->c:Ljava/lang/String;
+
+    if-eqz v3, :cond_1
+
+    const-string v4, "tokenId"
+
+    invoke-virtual {v2, v4, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    :cond_1
+    iget-object v3, p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;->d:Ljava/lang/String;
+
+    if-eqz v3, :cond_2
+
+    const-string v4, "email"
+
+    invoke-virtual {v2, v4, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    :cond_2
+    iget-object v3, p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;->o:Ljava/lang/String;
+
+    if-eqz v3, :cond_3
+
+    const-string v4, "displayName"
+
+    invoke-virtual {v2, v4, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    :cond_3
+    iget-object v3, p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;->B0:Ljava/lang/String;
+
+    if-eqz v3, :cond_4
+
+    const-string v4, "givenName"
+
+    invoke-virtual {v2, v4, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    :cond_4
+    iget-object v3, p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;->C0:Ljava/lang/String;
+
+    if-eqz v3, :cond_5
+
+    const-string v4, "familyName"
+
+    invoke-virtual {v2, v4, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    :cond_5
+    iget-object v3, p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;->X:Landroid/net/Uri;
+
+    if-eqz v3, :cond_6
+
+    const-string v4, "photoUrl"
+
+    invoke-virtual {v3}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v4, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    :cond_6
+    iget-object v3, p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;->Y:Ljava/lang/String;
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const-string v4, "serverAuthCode"
+
+    if-eqz v3, :cond_7
+
+    :try_start_1
+    invoke-virtual {v2, v4, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    :cond_7
+    const-string v3, "expirationTime"
+
+    iget-wide v5, p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;->Z:J
+
+    invoke-virtual {v2, v3, v5, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+
+    const-string v3, "obfuscatedIdentifier"
+
+    invoke-virtual {v2, v3, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    new-instance v3, Lorg/json/JSONArray;
+
+    invoke-direct {v3}, Lorg/json/JSONArray;-><init>()V
+
+    iget-object p1, p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;->A0:Ljava/util/List;
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v5
+
+    new-array v5, v5, [Lcom/google/android/gms/common/api/Scope;
+
+    invoke-interface {p1, v5}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [Lcom/google/android/gms/common/api/Scope;
+
+    sget-object v5, Lyb5;->Y:Lyb5;
+
+    invoke-static {p1, v5}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
+
+    array-length v5, p1
+
+    const/4 v6, 0x0
+
+    :goto_1
+    if-ge v6, v5, :cond_8
+
+    aget-object v7, p1, v6
+
+    iget-object v7, v7, Lcom/google/android/gms/common/api/Scope;->b:Ljava/lang/String;
+
+    invoke-virtual {v3, v7}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_1
+
+    :cond_8
+    const-string p1, "grantedScopes"
+
+    invoke-virtual {v2, p1, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    :try_end_1
+    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
+
+    invoke-virtual {v2, v4}, Lorg/json/JSONObject;->remove(Ljava/lang/String;)Ljava/lang/Object;
+
+    invoke-virtual {v2}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, v1, p1}, Ls7g;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string p1, "googleSignInOptions"
+
+    invoke-static {p1, v0}, Ls7g;->f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object v0, p2, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->Z:Ljava/lang/String;
+
+    iget-object v1, p2, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->Y:Ljava/lang/String;
+
+    iget-object v2, p2, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->b:Ljava/util/ArrayList;
+
+    new-instance v3, Lorg/json/JSONObject;
+
+    invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
+
+    :try_start_2
+    new-instance v4, Lorg/json/JSONArray;
+
+    invoke-direct {v4}, Lorg/json/JSONArray;-><init>()V
+
+    sget-object v5, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->F0:Lc1j;
+
+    invoke-static {v2, v5}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_2
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_9
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/google/android/gms/common/api/Scope;
+
+    iget-object v5, v5, Lcom/google/android/gms/common/api/Scope;->b:Ljava/lang/String;
+
+    invoke-virtual {v4, v5}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
+    goto :goto_2
+
+    :catch_1
+    move-exception p1
+
+    goto :goto_3
+
+    :cond_9
+    const-string v2, "scopes"
+
+    invoke-virtual {v3, v2, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    iget-object v2, p2, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->c:Landroid/accounts/Account;
+
+    if-eqz v2, :cond_a
+
+    const-string v4, "accountName"
+
+    iget-object v2, v2, Landroid/accounts/Account;->name:Ljava/lang/String;
+
+    invoke-virtual {v3, v4, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    :cond_a
+    const-string v2, "idTokenRequested"
+
+    iget-boolean v4, p2, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->d:Z
+
+    invoke-virtual {v3, v2, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+
+    const-string v2, "forceCodeForRefreshToken"
+
+    iget-boolean v4, p2, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->X:Z
+
+    invoke-virtual {v3, v2, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+
+    const-string v2, "serverAuthRequested"
+
+    iget-boolean p2, p2, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;->o:Z
+
+    invoke-virtual {v3, v2, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_b
+
+    const-string p2, "serverClientId"
+
+    invoke-virtual {v3, p2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    :cond_b
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_c
+
+    const-string p2, "hostedDomain"
+
+    invoke-virtual {v3, p2, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    :try_end_2
+    .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_1
+
+    :cond_c
+    invoke-virtual {v3}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p1, p2}, Ls7g;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
+
+    :goto_3
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :goto_4
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p2
+.end method
+
+.method public final d(Ljava/lang/String;)Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Ls7g;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    :try_start_0
+    iget-object v1, p0, Ls7g;->b:Landroid/content/SharedPreferences;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v1, p1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw p1
+.end method
+
+.method public final e(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    iget-object v0, p0, Ls7g;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    :try_start_0
+    iget-object v1, p0, Ls7g;->b:Landroid/content/SharedPreferences;
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    invoke-interface {v1, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw p1
 .end method

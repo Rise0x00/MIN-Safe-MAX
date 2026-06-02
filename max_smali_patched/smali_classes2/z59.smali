@@ -1,97 +1,63 @@
-.class public final enum Lz59;
-.super Ljava/lang/Enum;
+.class public final synthetic Lz59;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lij8;
+.implements Lkj8;
 
-# static fields
-.field public static final enum a:Lz59;
 
-.field public static final enum b:Lz59;
-
-.field public static final enum c:Lz59;
-
-.field public static final enum d:Lz59;
-
-.field public static final synthetic o:[Lz59;
+# instance fields
+.field public final synthetic a:Ld69;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Ld69;)V
+    .locals 0
 
-    new-instance v0, Lz59;
+    iput-object p1, p0, Lz59;->a:Ld69;
 
-    const-string v1, "UNMUTED"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lz59;->a:Lz59;
-
-    new-instance v1, Lz59;
-
-    const-string v2, "UNMUTED_BUT_MUTED_ONCE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lz59;->b:Lz59;
-
-    new-instance v2, Lz59;
-
-    const-string v3, "MUTED_PERMANENT"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lz59;->c:Lz59;
-
-    new-instance v3, Lz59;
-
-    const-string v4, "MUTED_PERMANENT_BUT_UNMUTED_ONCE"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lz59;->d:Lz59;
-
-    filled-new-array {v0, v1, v2, v3}, [Lz59;
-
-    move-result-object v0
-
-    sput-object v0, Lz59;->o:[Lz59;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lz59;
-    .locals 1
 
-    const-class v0, Lz59;
+# virtual methods
+.method public f(Ljava/lang/Object;Laa6;)V
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Lghc;
 
-    move-result-object p0
+    iget-object v0, p0, Lz59;->a:Ld69;
 
-    check-cast p0, Lz59;
+    iget-object v0, v0, Ld69;->b:Lb59;
 
-    return-object p0
+    new-instance v1, Lehc;
+
+    invoke-direct {v1, p2}, Lehc;-><init>(Laa6;)V
+
+    invoke-interface {p1, v0, v1}, Lghc;->f0(Ljhc;Lehc;)V
+
+    return-void
 .end method
 
-.method public static values()[Lz59;
+.method public invoke(Ljava/lang/Object;)V
     .locals 1
 
-    sget-object v0, Lz59;->o:[Lz59;
+    check-cast p1, Lghc;
 
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Lz59;->a:Ld69;
 
-    move-result-object v0
+    iget-object v0, v0, Ld69;->p:Ljbb;
 
-    check-cast v0, [Lz59;
+    iget-object v0, v0, Ljbb;->a:Ljava/lang/Object;
 
-    return-object v0
+    check-cast v0, Lcic;
+
+    iget-object v0, v0, Lcic;->z:Lwa9;
+
+    invoke-interface {p1, v0}, Lghc;->i0(Lwa9;)V
+
+    return-void
 .end method

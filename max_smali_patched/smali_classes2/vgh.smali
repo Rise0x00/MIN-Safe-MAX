@@ -4,20 +4,20 @@
 
 
 # instance fields
-.field public final a:Laz5;
+.field public final a:Ls01;
 
-.field public final b:J
+.field public final b:Ljava/util/Date;
 
 
 # direct methods
-.method public constructor <init>(Laz5;J)V
+.method public constructor <init>(Ls01;Ljava/util/Date;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvgh;->a:Laz5;
+    iput-object p1, p0, Lvgh;->a:Ls01;
 
-    iput-wide p2, p0, Lvgh;->b:J
+    iput-object p2, p0, Lvgh;->b:Ljava/util/Date;
 
     return-void
 .end method

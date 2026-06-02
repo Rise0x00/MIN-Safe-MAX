@@ -1,120 +1,218 @@
 .class public final Lykg;
-.super Ljava/lang/Object;
+.super Lclg;
 .source "SourceFile"
 
 # interfaces
-.implements Lxkg;
-
-
-# instance fields
-.field public a:Ljava/lang/Long;
-
-.field public b:Ljava/lang/Long;
+.implements Lqf9;
 
 
 # virtual methods
-.method public final getMsSinceBoot()J
-    .locals 2
+.method public final n()Landroid/media/MediaRouter$RouteInfo;
+    .locals 1
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    iget-object v0, p0, Lclg;->A0:Ljava/lang/Object;
 
-    move-result-wide v0
+    check-cast v0, Landroid/media/MediaRouter;
 
-    return-wide v0
-.end method
-
-.method public final getServerTimeMs()Ljava/lang/Long;
-    .locals 6
-
-    iget-object v0, p0, Lykg;->b:Ljava/lang/Long;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v4
-
-    sub-long/2addr v4, v2
-
-    iget-object v0, p0, Lykg;->a:Ljava/lang/Long;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    add-long/2addr v0, v4
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v0}, Landroid/media/MediaRouter;->getDefaultRoute()Landroid/media/MediaRouter$RouteInfo;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final p(Lalg;Lz3d;)V
+    .locals 4
+
+    iget-object v0, p2, Lz3d;->a:Ljava/lang/Object;
+
+    check-cast v0, Landroid/os/Bundle;
+
+    invoke-super {p0, p1, p2}, Lclg;->p(Lalg;Lz3d;)V
+
+    iget-object v1, p1, Lalg;->a:Ljava/lang/Object;
+
+    move-object v2, v1
+
+    check-cast v2, Landroid/media/MediaRouter$RouteInfo;
+
+    invoke-virtual {v2}, Landroid/media/MediaRouter$RouteInfo;->isEnabled()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
+
+    const-string v3, "enabled"
+
+    invoke-virtual {v0, v3, v2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
 
     :cond_0
-    return-object v1
-.end method
+    iget-object v2, p1, Lalg;->a:Ljava/lang/Object;
 
-.method public final localTimeMs()J
-    .locals 2
+    check-cast v2, Landroid/media/MediaRouter$RouteInfo;
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-virtual {v2}, Landroid/media/MediaRouter$RouteInfo;->isConnecting()Z
 
-    move-result-wide v0
+    move-result v2
 
-    return-wide v0
-.end method
+    if-eqz v2, :cond_1
 
-.method public final mapToLocalTimeMs(J)Ljava/lang/Long;
-    .locals 2
+    const/4 v2, 0x1
 
-    invoke-virtual {p0}, Lykg;->getServerTimeMs()Ljava/lang/Long;
+    const-string v3, "connectionState"
+
+    invoke-virtual {v0, v3, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    :cond_1
+    :try_start_0
+    check-cast v1, Landroid/media/MediaRouter$RouteInfo;
+
+    invoke-virtual {v1}, Landroid/media/MediaRouter$RouteInfo;->getPresentationDisplay()Landroid/view/Display;
+
+    move-result-object v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    const-string v2, "MediaRouterJellybeanMr1"
+
+    const-string v3, "Cannot get presentation display for the route."
+
+    invoke-static {v2, v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v1}, Landroid/view/Display;->getDisplayId()I
+
+    move-result v1
+
+    const-string v2, "presentationDisplayId"
+
+    invoke-virtual {v0, v2, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    :cond_2
+    iget-object v0, p1, Lalg;->a:Ljava/lang/Object;
+
+    check-cast v0, Landroid/media/MediaRouter$RouteInfo;
+
+    invoke-virtual {v0}, Landroid/media/MediaRouter$RouteInfo;->getDescription()Ljava/lang/CharSequence;
 
     move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p2, Lz3d;->a:Ljava/lang/Object;
+
+    check-cast v1, Landroid/os/Bundle;
+
+    const-string v2, "status"
+
+    invoke-virtual {v1, v2, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_3
+    iget-object p1, p1, Lalg;->a:Ljava/lang/Object;
+
+    check-cast p1, Landroid/media/MediaRouter$RouteInfo;
+
+    invoke-virtual {p1}, Landroid/media/MediaRouter$RouteInfo;->getDeviceType()I
+
+    move-result p1
+
+    iget-object p2, p2, Lz3d;->a:Ljava/lang/Object;
+
+    check-cast p2, Landroid/os/Bundle;
+
+    const-string v0, "deviceType"
+
+    invoke-virtual {p2, v0, p1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public final u(Ljava/lang/Object;)V
+    .locals 2
+
+    iget-object v0, p0, Lclg;->A0:Ljava/lang/Object;
+
+    check-cast v0, Landroid/media/MediaRouter;
+
+    check-cast p1, Landroid/media/MediaRouter$RouteInfo;
+
+    const v1, 0x800003
+
+    invoke-virtual {v0, v1, p1}, Landroid/media/MediaRouter;->selectRoute(ILandroid/media/MediaRouter$RouteInfo;)V
+
+    return-void
+.end method
+
+.method public final v()V
+    .locals 4
+
+    iget-boolean v0, p0, Lclg;->G0:Z
+
+    iget-object v1, p0, Lclg;->B0:Ljava/lang/Object;
+
+    iget-object v2, p0, Lclg;->A0:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+    move-object v0, v2
 
-    move-result-wide v0
+    check-cast v0, Landroid/media/MediaRouter;
 
-    sub-long/2addr p1, v0
+    move-object v3, v1
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    check-cast v3, Landroid/media/MediaRouter$Callback;
 
-    move-result-wide v0
-
-    add-long/2addr v0, p1
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    return-object p1
+    invoke-virtual {v0, v3}, Landroid/media/MediaRouter;->removeCallback(Landroid/media/MediaRouter$Callback;)V
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 v0, 0x1
 
-    return-object p1
+    iput-boolean v0, p0, Lclg;->G0:Z
+
+    iget v0, p0, Lclg;->E0:I
+
+    iget-boolean v3, p0, Lclg;->F0:Z
+
+    or-int/lit8 v3, v3, 0x2
+
+    check-cast v2, Landroid/media/MediaRouter;
+
+    check-cast v1, Landroid/media/MediaRouter$Callback;
+
+    invoke-virtual {v2, v0, v1, v3}, Landroid/media/MediaRouter;->addCallback(ILandroid/media/MediaRouter$Callback;I)V
+
+    return-void
 .end method
 
-.method public final utcTimeMs()J
-    .locals 2
+.method public final x(Lblg;)V
+    .locals 1
 
-    invoke-static {}, Ljava/time/Clock;->systemUTC()Ljava/time/Clock;
+    invoke-super {p0, p1}, Lclg;->x(Lblg;)V
 
-    move-result-object v0
+    iget-object v0, p1, Lblg;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/time/Clock;->millis()J
+    iget-object p1, p1, Lblg;->a:Llf9;
 
-    move-result-wide v0
+    iget-object p1, p1, Llf9;->e:Ljava/lang/String;
 
-    return-wide v0
+    check-cast v0, Landroid/media/MediaRouter$UserRouteInfo;
+
+    invoke-virtual {v0, p1}, Landroid/media/MediaRouter$UserRouteInfo;->setDescription(Ljava/lang/CharSequence;)V
+
+    return-void
 .end method

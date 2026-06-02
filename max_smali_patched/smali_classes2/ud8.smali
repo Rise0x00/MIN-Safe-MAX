@@ -1,54 +1,82 @@
-.class public interface abstract Lud8;
-.super Ljava/lang/Object;
+.class public final Lud8;
+.super Lmp0;
 .source "SourceFile"
 
 
+# instance fields
+.field public h:I
+
+.field public i:I
+
+.field public j:Z
+
+.field public k:I
+
+
 # virtual methods
-.method public abstract getItemId()J
-.end method
+.method public final a()V
+    .locals 2
 
-.method public h(Lud8;)Z
-    .locals 4
+    invoke-super {p0}, Lmp0;->a()V
 
-    invoke-interface {p0}, Lud8;->getItemId()J
+    iget v0, p0, Lud8;->k:I
 
-    move-result-wide v0
+    if-ltz v0, :cond_4
 
-    invoke-interface {p1}, Lud8;->getItemId()J
+    iget v0, p0, Lud8;->h:I
 
-    move-result-wide v2
+    if-nez v0, :cond_3
 
-    cmp-long p1, v0, v2
+    iget v0, p0, Lmp0;->b:I
 
-    if-nez p1, :cond_0
+    if-lez v0, :cond_1
 
-    const/4 p1, 0x1
+    iget v0, p0, Lmp0;->g:I
 
-    return p1
+    if-eqz v0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    return p1
-.end method
+    const-string v1, "Rounded corners without gap are not supported in contiguous indeterminate animation."
 
-.method public k(Lud8;)Ljava/lang/Object;
-    .locals 0
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    const/4 p1, 0x0
+    throw v0
 
-    return-object p1
-.end method
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Lmp0;->c:[I
 
-.method public abstract m()I
-.end method
+    array-length v0, v0
 
-.method public q(Lud8;)Z
-    .locals 0
+    const/4 v1, 0x3
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-lt v0, v1, :cond_2
 
-    move-result p1
+    goto :goto_1
 
-    return p1
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Contiguous indeterminate animation must be used with 3 or more indicator colors."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_3
+    :goto_1
+    return-void
+
+    :cond_4
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Stop indicator size must be >= 0."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

@@ -1,230 +1,151 @@
-.class public final Lqee;
+.class public final synthetic Lqee;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltvh;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic a:Lbxa;
+.field public final synthetic a:I
 
-.field public final synthetic b:Landroid/graphics/Rect;
+.field public final synthetic b:Landroid/view/View;
 
-.field public final synthetic c:Landroid/graphics/Rect;
-
-.field public final synthetic d:Landroid/graphics/Rect;
-
-.field public final synthetic e:I
+.field public final synthetic c:F
 
 
 # direct methods
-.method public constructor <init>(Lbxa;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;I)V
-    .locals 0
+.method public synthetic constructor <init>(FLandroid/view/View;)V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    iput v0, p0, Lqee;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqee;->a:Lbxa;
+    iput p1, p0, Lqee;->c:F
 
-    iput-object p2, p0, Lqee;->b:Landroid/graphics/Rect;
+    iput-object p2, p0, Lqee;->b:Landroid/view/View;
 
-    iput-object p3, p0, Lqee;->c:Landroid/graphics/Rect;
+    return-void
+.end method
 
-    iput-object p4, p0, Lqee;->d:Landroid/graphics/Rect;
+.method public synthetic constructor <init>(Landroid/view/View;F)V
+    .locals 1
 
-    iput p5, p0, Lqee;->e:I
+    .line 2
+    const/4 v0, 0x1
+
+    iput v0, p0, Lqee;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqee;->b:Landroid/view/View;
+
+    iput p2, p0, Lqee;->c:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 0
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 4
 
-    return-void
-.end method
+    iget v0, p0, Lqee;->a:I
 
-.method public final b()V
-    .locals 5
+    iget v1, p0, Lqee;->c:F
 
-    iget-object v0, p0, Lqee;->a:Lbxa;
+    iget-object v2, p0, Lqee;->b:Landroid/view/View;
 
-    iget-object v1, v0, Lbxa;->c:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v1, Landroid/view/View;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    instance-of v2, v1, Landroidx/recyclerview/widget/RecyclerView;
+    move-result-object v0
 
-    const/4 v3, 0x0
+    check-cast v0, Ljava/lang/Float;
 
-    if-eqz v2, :cond_0
-
-    check-cast v1, Landroidx/recyclerview/widget/RecyclerView;
-
-    goto :goto_0
-
-    :cond_0
-    move-object v1, v3
-
-    :goto_0
-    if-eqz v1, :cond_1
-
-    new-instance v2, Li6c;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v2, v1, v4}, Li6c;-><init>(Landroidx/recyclerview/widget/RecyclerView;I)V
-
-    const/4 v4, 0x5
-
-    invoke-static {v4, v1, v2, v3}, Lhmj;->c(ILandroidx/recyclerview/widget/RecyclerView;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
-
-    :cond_1
-    iput-object v3, v0, Lbxa;->c:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final c(Landroid/graphics/Rect;Landroid/view/View;)V
-    .locals 6
-
-    iget-object v0, p0, Lqee;->a:Lbxa;
-
-    iget-object v1, v0, Lbxa;->b:Ljava/lang/Object;
-
-    check-cast v1, Landroid/view/View;
-
-    iget-object v2, v0, Lbxa;->c:Ljava/lang/Object;
-
-    check-cast v2, Landroid/view/View;
-
-    const/4 v3, 0x0
-
-    if-nez v2, :cond_2
-
-    invoke-static {p2}, Lbxa;->k(Landroid/view/View;)Landroid/view/View;
-
-    move-result-object v2
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/view/View;
-
-    :cond_0
-    iput-object v2, v0, Lbxa;->c:Ljava/lang/Object;
-
-    instance-of v4, v2, Landroidx/recyclerview/widget/RecyclerView;
-
-    if-eqz v4, :cond_1
-
-    check-cast v2, Landroidx/recyclerview/widget/RecyclerView;
-
-    goto :goto_0
-
-    :cond_1
-    move-object v2, v3
-
-    :goto_0
-    if-eqz v2, :cond_2
-
-    new-instance v4, Li6c;
-
-    const/4 v5, 0x2
-
-    invoke-direct {v4, v2, v5}, Li6c;-><init>(Landroidx/recyclerview/widget/RecyclerView;I)V
-
-    const/4 v5, 0x5
-
-    invoke-static {v5, v2, v4, v3}, Lhmj;->c(ILandroidx/recyclerview/widget/RecyclerView;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
-
-    :cond_2
-    iget-object v2, p0, Lqee;->b:Landroid/graphics/Rect;
-
-    invoke-static {v2, v1}, Lhvh;->d(Landroid/graphics/Rect;Landroid/view/View;)V
-
-    invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v1
-
-    instance-of v4, v1, Lxec;
-
-    if-eqz v4, :cond_3
-
-    move-object v3, v1
-
-    check-cast v3, Lxec;
-
-    :cond_3
-    if-eqz v3, :cond_4
-
-    invoke-virtual {v3}, Lxec;->getCallback()Lrec;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_4
-
-    invoke-virtual {v1}, Lrec;->b()I
-
-    move-result v1
-
-    goto :goto_1
-
-    :cond_4
-    iget v1, v2, Landroid/graphics/Rect;->top:I
-
-    :goto_1
-    iget-object v0, v0, Lbxa;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/View;
-
-    iget-object v2, p0, Lqee;->c:Landroid/graphics/Rect;
-
-    if-eqz v0, :cond_5
-
-    invoke-static {v2, v0}, Lhvh;->d(Landroid/graphics/Rect;Landroid/view/View;)V
-
-    :cond_5
-    iget v0, v2, Landroid/graphics/Rect;->top:I
-
-    iget v3, p0, Lqee;->e:I
-
-    add-int/2addr v0, v3
-
-    iget-object v4, p0, Lqee;->d:Landroid/graphics/Rect;
-
-    iput v0, v4, Landroid/graphics/Rect;->top:I
-
-    sub-int/2addr v1, v3
-
-    iput v1, v4, Landroid/graphics/Rect;->bottom:I
-
-    iget v0, v2, Landroid/graphics/Rect;->left:I
-
-    iput v0, v4, Landroid/graphics/Rect;->left:I
-
-    iget v0, v2, Landroid/graphics/Rect;->right:I
-
-    iput v0, v4, Landroid/graphics/Rect;->right:I
-
-    invoke-virtual {v4, p1}, Landroid/graphics/Rect;->contains(Landroid/graphics/Rect;)Z
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
     move-result v0
 
-    if-nez v0, :cond_6
+    invoke-virtual {v2, v0}, Landroid/view/View;->setTranslationY(F)V
 
-    invoke-static {p2, p2}, Lbxa;->j(Landroid/view/View;Landroid/view/View;)Ld3;
+    const/4 v0, 0x0
 
-    move-result-object p2
+    cmpg-float v3, v1, v0
 
-    if-eqz p2, :cond_6
+    if-nez v3, :cond_0
 
-    invoke-virtual {p2, p1, v4}, Ld3;->k0(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+    move v1, v0
 
-    :cond_6
+    :cond_0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
+
+    move-result v0
+
+    cmpl-float v0, v0, v1
+
+    if-ltz v0, :cond_1
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
+
+    move-result p1
+
+    invoke-virtual {v2, p1}, Landroid/view/View;->setAlpha(F)V
+
+    :cond_1
     return-void
+
+    :pswitch_0
+    sget-object v0, Lone/me/android/root/RootController;->A0:[Lb88;
+
+    const-string v0, "topMarginProp"
+
+    invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->getAnimatedValue(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    instance-of v0, p1, Ljava/lang/Float;
+
+    if-eqz v0, :cond_2
+
+    check-cast p1, Ljava/lang/Float;
+
+    goto :goto_0
+
+    :cond_2
+    const/4 p1, 0x0
+
+    :goto_0
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result v1
+
+    :cond_3
+    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    float-to-int v0, v1
+
+    iput v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    invoke-virtual {v2, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

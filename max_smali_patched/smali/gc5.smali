@@ -3,128 +3,100 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final Z:[I
-
-.field public static final t0:[I
+.implements Lb2f;
+.implements Lhc5;
 
 
 # instance fields
-.field public X:Landroid/opengl/EGLSurface;
-
-.field public Y:Landroid/graphics/SurfaceTexture;
-
 .field public final synthetic a:I
 
-.field public final b:Landroid/os/Handler;
+.field public final b:Lb2f;
 
-.field public final c:[I
-
-.field public d:Landroid/opengl/EGLDisplay;
-
-.field public o:Landroid/opengl/EGLContext;
+.field public final c:I
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 2
-
-    const/16 v0, 0x11
-
-    new-array v1, v0, [I
-
-    fill-array-data v1, :array_0
-
-    sput-object v1, Lgc5;->Z:[I
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_1
-
-    sput-object v0, Lgc5;->t0:[I
-
-    return-void
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x3040
-        0x4
-        0x3024
-        0x8
-        0x3023
-        0x8
-        0x3022
-        0x8
-        0x3021
-        0x8
-        0x3025
-        0x0
-        0x3027
-        0x3038
-        0x3033
-        0x4
-        0x3038
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0x3040
-        0x4
-        0x3024
-        0x8
-        0x3023
-        0x8
-        0x3022
-        0x8
-        0x3021
-        0x8
-        0x3025
-        0x0
-        0x3027
-        0x3038
-        0x3033
-        0x4
-        0x3038
-    .end array-data
-.end method
-
-.method public constructor <init>(Landroid/os/Handler;I)V
+.method public constructor <init>(Lb2f;II)V
     .locals 0
 
-    iput p2, p0, Lgc5;->a:I
+    iput p3, p0, Lgc5;->a:I
 
-    packed-switch p2, :pswitch_data_0
+    packed-switch p3, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgc5;->b:Landroid/os/Handler;
+    iput-object p1, p0, Lgc5;->b:Lb2f;
 
-    const/4 p1, 0x1
+    iput p2, p0, Lgc5;->c:I
 
-    new-array p1, p1, [I
-
-    iput-object p1, p0, Lgc5;->c:[I
+    if-ltz p2, :cond_0
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string p3, "count must be non-negative, but was "
+
+    invoke-direct {p1, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const/16 p2, 0x2e
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
 
     :pswitch_0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgc5;->b:Landroid/os/Handler;
+    iput-object p1, p0, Lgc5;->b:Lb2f;
 
-    const/4 p1, 0x1
+    iput p2, p0, Lgc5;->c:I
 
-    new-array p1, p1, [I
-
-    iput-object p1, p0, Lgc5;->c:[I
+    if-ltz p2, :cond_1
 
     return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string p3, "count must be non-negative, but was "
+
+    invoke-direct {p1, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const/16 p2, 0x2e
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
 
     nop
 
@@ -136,25 +108,121 @@
 
 
 # virtual methods
-.method public final onFrameAvailable(Landroid/graphics/SurfaceTexture;)V
-    .locals 0
+.method public final a(I)Lb2f;
+    .locals 3
 
-    iget p1, p0, Lgc5;->a:I
+    iget v0, p0, Lgc5;->a:I
 
-    packed-switch p1, :pswitch_data_0
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p1, p0, Lgc5;->b:Landroid/os/Handler;
+    iget v0, p0, Lgc5;->c:I
 
-    invoke-virtual {p1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    if-lt p1, v0, :cond_0
 
-    return-void
+    move-object v0, p0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lgc5;
+
+    iget-object v1, p0, Lgc5;->b:Lb2f;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, p1, v2}, Lgc5;-><init>(Lb2f;II)V
+
+    :goto_0
+    return-object v0
 
     :pswitch_0
-    iget-object p1, p0, Lgc5;->b:Landroid/os/Handler;
+    iget v0, p0, Lgc5;->c:I
 
-    invoke-virtual {p1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    add-int v1, v0, p1
 
-    return-void
+    if-gez v1, :cond_1
+
+    new-instance v0, Lgc5;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, p1, v1}, Lgc5;-><init>(Lb2f;II)V
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p1, Lwbg;
+
+    iget-object v2, p0, Lgc5;->b:Lb2f;
+
+    invoke-direct {p1, v2, v0, v1}, Lwbg;-><init>(Lb2f;II)V
+
+    move-object v0, p1
+
+    :goto_1
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b(I)Lb2f;
+    .locals 3
+
+    iget v0, p0, Lgc5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lgc5;->c:I
+
+    if-lt p1, v0, :cond_0
+
+    sget-object p1, Lxj5;->a:Lxj5;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v1, Lwbg;
+
+    iget-object v2, p0, Lgc5;->b:Lb2f;
+
+    invoke-direct {v1, v2, p1, v0}, Lwbg;-><init>(Lb2f;II)V
+
+    move-object p1, v1
+
+    :goto_0
+    return-object p1
+
+    :pswitch_0
+    iget v0, p0, Lgc5;->c:I
+
+    add-int/2addr v0, p1
+
+    if-gez v0, :cond_1
+
+    new-instance v0, Lgc5;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Lgc5;-><init>(Lb2f;II)V
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p1, Lgc5;
+
+    iget-object v1, p0, Lgc5;->b:Lb2f;
+
+    const/4 v2, 0x0
+
+    invoke-direct {p1, v1, v0, v2}, Lgc5;-><init>(Lb2f;II)V
+
+    move-object v0, p1
+
+    :goto_1
+    return-object v0
 
     nop
 
@@ -164,41 +232,27 @@
     .end packed-switch
 .end method
 
-.method public final run()V
-    .locals 1
+.method public final iterator()Ljava/util/Iterator;
+    .locals 2
 
     iget v0, p0, Lgc5;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lgc5;->Y:Landroid/graphics/SurfaceTexture;
+    new-instance v0, Lfc5;
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x0
 
-    :try_start_0
-    invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {v0, p0, v1}, Lfc5;-><init>(Lgc5;B)V
 
-    :catch_0
-    :cond_0
-    return-void
+    return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lgc5;->Y:Landroid/graphics/SurfaceTexture;
+    new-instance v0, Lfc5;
 
-    if-eqz v0, :cond_1
+    invoke-direct {v0, p0}, Lfc5;-><init>(Lgc5;)V
 
-    :try_start_1
-    invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
-    :try_end_1
-    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :cond_1
-    return-void
-
-    nop
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0

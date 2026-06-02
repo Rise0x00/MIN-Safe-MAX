@@ -1,378 +1,456 @@
-.class public final Lj48;
-.super Landroid/widget/FrameLayout;
+.class public abstract Lj48;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Luig;
 
 
 # static fields
-.field public static final synthetic c:[Lz28;
-
-
-# instance fields
-.field public final a:Landroid/widget/TextView;
-
-.field public final b:Lpk;
+.field public static final a:Ly30;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lhfa;
-
-    const-string v1, "tabItem"
-
-    const-string v2, "getTabItem()Lone/me/common/tablayout/model/OneMeBaseTabItemModel;"
-
-    const-class v3, Lj48;
-
-    invoke-direct {v0, v3, v1, v2}, Lhfa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lctd;->a:Ldtd;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lz28;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Lj48;->c:[Lz28;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 3
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    new-instance v0, Landroid/widget/TextView;
-
-    invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
-
-    sget p1, Lw5e;->F0:I
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setId(I)V
-
-    sget-object p1, Lr1h;->m:Lrhg;
-
-    invoke-static {p1, v0}, Lrhg;->d(Lrhg;Landroid/widget/TextView;)V
-
-    const/16 p1, 0x11
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setGravity(I)V
-
-    sget-object p1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setLetterSpacing(F)V
-
-    const/4 p1, 0x1
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setSingleLine(Z)V
-
-    iput-object v0, p0, Lj48;->a:Landroid/widget/TextView;
-
-    sget-object p1, Lp4b;->g:Ln8g;
-
-    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lp4b;
-
-    new-instance v1, Lpk;
-
-    const/16 v2, 0xc
-
-    invoke-direct {v1, p1, v2, p0}, Lpk;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iput-object v1, p0, Lj48;->b:Lpk;
-
-    invoke-virtual {p0}, Lj48;->getTabItem()Lp4b;
-
-    move-result-object p1
-
-    iget p1, p1, Lp4b;->c:I
-
-    sget-object v1, Lpc3;->t0:Lkme;
-
-    invoke-virtual {v1, p0}, Lkme;->p(Landroid/view/View;)Lzlb;
-
-    move-result-object v1
-
-    invoke-static {p1, v1}, Lj48;->b(ILzlb;)Li48;
-
-    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
-
-    const/16 v1, 0x48
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Lq7j;->c(F)I
-
-    move-result v1
-
-    const/4 v2, -0x2
-
-    invoke-direct {p1, v1, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setClipToPadding(Z)V
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public static final a(Lj48;)V
-    .locals 2
-
-    invoke-virtual {p0}, Lj48;->getTabItem()Lp4b;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lp4b;->b:Ljava/lang/CharSequence;
-
-    invoke-direct {p0, v0}, Lj48;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p0}, Lj48;->getTabItem()Lp4b;
-
-    move-result-object v0
-
-    iget v0, v0, Lp4b;->c:I
-
-    sget-object v1, Lpc3;->t0:Lkme;
-
-    invoke-virtual {v1, p0}, Lkme;->p(Landroid/view/View;)Lzlb;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lj48;->b(ILzlb;)Li48;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lj48;->a:Landroid/widget/TextView;
-
-    iget v0, v0, Li48;->a:I
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    return-void
-.end method
-
-.method public static b(ILzlb;)Li48;
-    .locals 1
-
-    invoke-static {p0}, Lt02;->t(I)I
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_1
+    .locals 5
 
     const/4 v0, 0x2
 
-    if-ne p0, v0, :cond_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    new-instance p0, Li48;
+    move-result-object v0
 
-    invoke-interface {p1}, Lzlb;->c()Leqf;
+    const/4 v1, 0x7
 
-    move-result-object p1
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object p1, p1, Leqf;->c:Liqf;
+    move-result-object v1
 
-    iget-object p1, p1, Liqf;->b:Ljqf;
+    const/4 v2, 0x4
 
-    iget p1, p1, Ljqf;->e:I
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-direct {p0, p1}, Li48;-><init>(I)V
+    move-result-object v3
 
-    return-object p0
+    const/4 v4, 0x5
 
-    :cond_0
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    move-result-object v4
 
-    throw p0
+    filled-new-array {v0, v1, v3, v4}, [Ljava/lang/Integer;
 
-    :cond_1
-    new-instance p0, Li48;
+    move-result-object v0
 
-    invoke-interface {p1}, Lzlb;->getText()Lrfg;
+    new-instance v1, Ly30;
 
-    move-result-object p1
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    iget p1, p1, Lrfg;->g:I
+    invoke-static {v1, v0}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
-    invoke-direct {p0, p1}, Li48;-><init>(I)V
-
-    return-object p0
-
-    :cond_2
-    new-instance p0, Li48;
-
-    invoke-interface {p1}, Lzlb;->getText()Lrfg;
-
-    move-result-object p1
-
-    iget p1, p1, Lrfg;->e:I
-
-    invoke-direct {p0, p1}, Li48;-><init>(I)V
-
-    return-object p0
-.end method
-
-.method private final setText(Ljava/lang/CharSequence;)V
-    .locals 1
-
-    iget-object v0, p0, Lj48;->a:Landroid/widget/TextView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    sput-object v1, Lj48;->a:Ly30;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final getTabItem()Lp4b;
+.method public static final a(Lpk5;Lnfe;)I
     .locals 2
 
-    sget-object v0, Lj48;->c:[Lz28;
+    invoke-virtual {p0}, Lpk5;->G0()V
 
-    const/4 v1, 0x0
+    iget p0, p0, Lpk5;->d:I
 
-    aget-object v0, v0, v1
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object v0, p0, Lj48;->b:Lpk;
+    move-result-object p0
 
-    iget-object v0, v0, Ld3;->b:Ljava/lang/Object;
+    sget-object v0, Lj48;->a:Ly30;
 
-    check-cast v0, Lp4b;
+    invoke-virtual {v0, p0}, Ljava/util/AbstractList;->indexOf(Ljava/lang/Object;)I
 
-    return-object v0
-.end method
+    move-result p0
 
-.method public final onThemeChanged(Lzlb;)V
-    .locals 1
+    if-ltz p0, :cond_2
 
-    invoke-virtual {p0}, Lj48;->getTabItem()Lp4b;
+    iget p1, p1, Lnfe;->a:I
 
-    move-result-object v0
+    const/4 v1, -0x1
 
-    iget v0, v0, Lp4b;->c:I
+    if-ne p1, v1, :cond_0
 
-    invoke-static {v0, p1}, Lj48;->b(ILzlb;)Li48;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lj48;->a:Landroid/widget/TextView;
-
-    iget p1, p1, Li48;->a:I
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    sget-object p1, Lpc3;->t0:Lkme;
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lkme;->n(Landroid/content/Context;)Lpc3;
-
-    move-result-object p1
-
-    invoke-static {p1, p0}, Lpc3;->g(Lpc3;Landroid/view/ViewGroup;)V
-
-    return-void
-.end method
-
-.method public setSelected(Z)V
-    .locals 4
-
-    invoke-virtual {p0}, Landroid/view/View;->isSelected()Z
-
-    move-result v0
-
-    if-eq p1, v0, :cond_1
-
-    invoke-virtual {p0}, Lj48;->getTabItem()Lp4b;
-
-    move-result-object v0
-
-    if-eqz p1, :cond_0
-
-    const/4 v1, 0x1
+    const/4 p1, 0x0
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x2
+    if-eq p1, v1, :cond_1
 
     :goto_0
-    const/16 v2, 0x3b
+    div-int/lit8 p1, p1, 0x5a
 
-    const/4 v3, 0x0
+    add-int/2addr p1, p0
 
-    invoke-static {v0, v3, v1, v3, v2}, Lp4b;->a(Lp4b;Ljava/lang/CharSequence;ILm4b;I)Lp4b;
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
+
+    move-result p0
+
+    rem-int/2addr p1, p0
+
+    invoke-virtual {v0, p1}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/Number;
+
+    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
+
+    move-result p0
+
+    return p0
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "Rotation is set to use EXIF"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_2
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "Only accepts inverted exif orientations"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static final b(Lpk5;Lnfe;)I
+    .locals 3
+
+    iget v0, p1, Lnfe;->a:I
+
+    const/4 v1, -0x2
+
+    const/4 v2, 0x0
+
+    if-eq v0, v1, :cond_3
+
+    invoke-virtual {p0}, Lpk5;->G0()V
+
+    iget v0, p0, Lpk5;->c:I
+
+    const/16 v1, 0x5a
+
+    if-eq v0, v1, :cond_0
+
+    const/16 v1, 0xb4
+
+    if-eq v0, v1, :cond_0
+
+    const/16 v1, 0x10e
+
+    if-eq v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Lpk5;->G0()V
+
+    iget v2, p0, Lpk5;->c:I
+
+    :goto_0
+    iget p0, p1, Lnfe;->a:I
+
+    const/4 p1, -0x1
+
+    if-ne p0, p1, :cond_1
+
+    return v2
+
+    :cond_1
+    if-eq p0, p1, :cond_2
+
+    add-int/2addr p0, v2
+
+    rem-int/lit16 p0, p0, 0x168
+
+    return p0
+
+    :cond_2
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "Rotation is set to use EXIF"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_3
+    return v2
+.end method
+
+.method public static final c(Lnfe;Le9e;Lpk5;Z)I
+    .locals 4
+
+    const/16 v0, 0x8
+
+    if-nez p3, :cond_0
+
+    goto/16 :goto_3
+
+    :cond_0
+    if-nez p1, :cond_1
+
+    goto/16 :goto_3
+
+    :cond_1
+    invoke-static {p2, p0}, Lj48;->b(Lpk5;Lnfe;)I
+
+    move-result p3
+
+    invoke-virtual {p2}, Lpk5;->G0()V
+
+    iget v1, p2, Lpk5;->d:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Lj48;->a:Ly30;
+
+    invoke-virtual {v2, v1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_2
+
+    invoke-static {p2, p0}, Lj48;->a(Lpk5;Lnfe;)I
+
+    move-result p0
+
+    goto :goto_0
+
+    :cond_2
+    move p0, v2
+
+    :goto_0
+    const/16 v1, 0x5a
+
+    const/4 v3, 0x1
+
+    if-eq p3, v1, :cond_3
+
+    const/16 v1, 0x10e
+
+    if-eq p3, v1, :cond_3
+
+    const/4 p3, 0x5
+
+    if-eq p0, p3, :cond_3
+
+    const/4 p3, 0x7
+
+    if-ne p0, p3, :cond_4
+
+    :cond_3
+    move v2, v3
+
+    :cond_4
+    if-eqz v2, :cond_5
+
+    invoke-virtual {p2}, Lpk5;->G0()V
+
+    iget p0, p2, Lpk5;->X:I
+
+    goto :goto_1
+
+    :cond_5
+    invoke-virtual {p2}, Lpk5;->G0()V
+
+    iget p0, p2, Lpk5;->o:I
+
+    :goto_1
+    if-eqz v2, :cond_6
+
+    invoke-virtual {p2}, Lpk5;->G0()V
+
+    iget p2, p2, Lpk5;->o:I
+
+    goto :goto_2
+
+    :cond_6
+    invoke-virtual {p2}, Lpk5;->G0()V
+
+    iget p2, p2, Lpk5;->X:I
+
+    :goto_2
+    iget p3, p1, Le9e;->a:I
+
+    int-to-float p3, p3
+
+    int-to-float p0, p0
+
+    div-float/2addr p3, p0
+
+    iget v1, p1, Le9e;->b:I
+
+    int-to-float v1, v1
+
+    int-to-float p2, p2
+
+    div-float/2addr v1, p2
+
+    invoke-static {p3, v1}, Ljava/lang/Math;->max(FF)F
+
+    move-result p3
+
+    mul-float v1, p0, p3
+
+    iget p1, p1, Le9e;->c:F
+
+    cmpl-float v1, v1, p1
+
+    if-lez v1, :cond_7
+
+    div-float p3, p1, p0
+
+    :cond_7
+    mul-float p0, p2, p3
+
+    cmpl-float p0, p0, p1
+
+    if-lez p0, :cond_8
+
+    div-float p3, p1, p2
+
+    :cond_8
+    int-to-float p0, v0
+
+    mul-float/2addr p3, p0
+
+    const p0, 0x3f2aaaab
+
+    add-float/2addr p3, p0
+
+    float-to-int p0, p3
+
+    if-le p0, v0, :cond_9
+
+    :goto_3
+    return v0
+
+    :cond_9
+    if-ge p0, v3, :cond_a
+
+    return v3
+
+    :cond_a
+    return p0
+.end method
+
+.method public static final d(Lpk5;Lnfe;)Landroid/graphics/Matrix;
+    .locals 3
+
+    invoke-virtual {p0}, Lpk5;->G0()V
+
+    iget v0, p0, Lpk5;->d:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lj48;->setTabItem(Lp4b;)V
+    sget-object v1, Lj48;->a:Ly30;
+
+    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-static {p0, p1}, Lj48;->a(Lpk5;Lnfe;)I
+
+    move-result p0
+
+    new-instance p1, Landroid/graphics/Matrix;
+
+    invoke-direct {p1}, Landroid/graphics/Matrix;-><init>()V
+
+    const/4 v0, 0x2
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    const/high16 v2, -0x40800000    # -1.0f
+
+    if-eq p0, v0, :cond_3
+
+    const/4 v0, 0x7
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x4
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x5
+
+    if-eq p0, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/high16 p0, 0x42b40000    # 90.0f
+
+    invoke-virtual {p1, p0}, Landroid/graphics/Matrix;->setRotate(F)V
+
+    invoke-virtual {p1, v2, v1}, Landroid/graphics/Matrix;->postScale(FF)Z
+
+    return-object p1
 
     :cond_1
-    invoke-super {p0, p1}, Landroid/view/View;->setSelected(Z)V
+    const/high16 p0, 0x43340000    # 180.0f
 
-    return-void
-.end method
+    invoke-virtual {p1, p0}, Landroid/graphics/Matrix;->setRotate(F)V
 
-.method public final setTabItem(Lp4b;)V
-    .locals 2
+    invoke-virtual {p1, v2, v1}, Landroid/graphics/Matrix;->postScale(FF)Z
 
-    sget-object v0, Lj48;->c:[Lz28;
+    return-object p1
 
-    const/4 v1, 0x0
+    :cond_2
+    const/high16 p0, -0x3d4c0000    # -90.0f
 
-    aget-object v0, v0, v1
+    invoke-virtual {p1, p0}, Landroid/graphics/Matrix;->setRotate(F)V
 
-    iget-object v1, p0, Lj48;->b:Lpk;
+    invoke-virtual {p1, v2, v1}, Landroid/graphics/Matrix;->postScale(FF)Z
 
-    invoke-virtual {v1, p0, v0, p1}, Ld3;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
+    return-object p1
 
-    return-void
+    :cond_3
+    invoke-virtual {p1, v2, v1}, Landroid/graphics/Matrix;->setScale(FF)V
+
+    return-object p1
+
+    :cond_4
+    invoke-static {p0, p1}, Lj48;->b(Lpk5;Lnfe;)I
+
+    move-result p0
+
+    if-eqz p0, :cond_5
+
+    new-instance p1, Landroid/graphics/Matrix;
+
+    invoke-direct {p1}, Landroid/graphics/Matrix;-><init>()V
+
+    int-to-float p0, p0
+
+    invoke-virtual {p1, p0}, Landroid/graphics/Matrix;->setRotate(F)V
+
+    return-object p1
+
+    :cond_5
+    :goto_0
+    const/4 p0, 0x0
+
+    return-object p0
 .end method

@@ -1,144 +1,252 @@
 .class public final Ls06;
-.super Ltff;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/app/Application$ActivityLifecycleCallbacks;
 
-# static fields
-.field public static final b:Ls06;
+
+# instance fields
+.field public final a:Ljava/util/ArrayDeque;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Ls06;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ltff;-><init>()V
+    new-instance v0, Ljava/util/ArrayDeque;
 
-    sput-object v0, Ls06;->b:Ls06;
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayDeque;-><init>(I)V
+
+    iput-object v0, p0, Ls06;->a:Ljava/util/ArrayDeque;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Lmm4;
+.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 4
 
-    new-instance v0, Lmm4;
-
-    new-instance v1, Lss5;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v1, v2}, Lss5;-><init>(I)V
-
-    new-instance v2, Lss5;
-
-    const/4 v3, 0x4
-
-    invoke-direct {v2, v3}, Lss5;-><init>(I)V
-
-    invoke-direct {v0, v1, v2}, Lmm4;-><init>(Llq6;Llq6;)V
-
-    return-object v0
-.end method
-
-.method public final d(Landroid/os/Bundle;)Lnm4;
-    .locals 13
-
-    const-string v0, "chat_id"
-
-    invoke-static {v0, p1}, Lomj;->k(Ljava/lang/String;Landroid/os/Bundle;)J
-
-    move-result-wide v3
-
-    const-string v0, "message_id"
-
-    invoke-static {v0, p1}, Lomj;->k(Ljava/lang/String;Landroid/os/Bundle;)J
-
-    move-result-wide v5
-
-    const-string v0, "attach_id"
-
-    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v7
-
-    const-string v0, "file_id"
-
-    invoke-static {v0, p1}, Lomj;->k(Ljava/lang/String;Landroid/os/Bundle;)J
-
-    move-result-wide v8
-
-    const-string v0, "file_name"
-
-    invoke-static {v0, p1}, Lomj;->m(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
-
-    move-result-object v10
-
-    const-string v0, "file_size"
-
-    invoke-static {v0, p1}, Lomj;->k(Ljava/lang/String;Landroid/os/Bundle;)J
-
-    move-result-wide v11
-
-    const-string v0, "file_url"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+    invoke-virtual {p1}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object p1
 
-    if-eqz p1, :cond_0
+    if-nez p1, :cond_0
 
-    move-object v2, p1
-
-    check-cast v2, Landroid/net/Uri;
-
-    new-instance v1, Lr06;
-
-    invoke-direct/range {v1 .. v12}, Lr06;-><init>(Landroid/net/Uri;JJLjava/lang/String;JLjava/lang/String;J)V
-
-    return-object v1
+    goto/16 :goto_5
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    const-string p2, "FirebaseMessaging"
 
-    const-string v0, "Required value was null."
+    iget-object v0, p0, Ls06;->a:Ljava/util/ArrayDeque;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    const/4 v1, 0x0
 
-    throw p1
-.end method
+    :try_start_0
+    invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
-.method public final e(Lsff;)V
-    .locals 5
+    move-result-object p1
 
-    const-string v0, "file_name"
+    if-eqz p1, :cond_4
 
-    const-string v1, "file_size"
+    const-string v2, "google.message_id"
 
-    const-string v2, "chat_id"
+    invoke-virtual {p1, v2}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    const-string v3, "message_id"
+    move-result-object v2
 
-    const-string v4, "file_id"
+    if-nez v2, :cond_1
 
-    filled-new-array {v2, v3, v4, v0, v1}, [Ljava/lang/String;
+    const-string v2, "message_id"
+
+    invoke-virtual {p1, v2}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    :cond_1
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayDeque;->contains(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    goto/16 :goto_5
+
+    :cond_2
+    invoke-virtual {v0, v2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_3
+    :goto_0
+    const-string v0, "gcm.n.analytics_data"
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v1
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_2
+
+    :goto_1
+    const-string v0, "Failed trying to get analytics data from Intent extras."
+
+    invoke-static {p2, v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_4
+    :goto_2
+    const-string p1, "1"
+
+    if-nez v1, :cond_5
+
+    const/4 v0, 0x0
+
+    goto :goto_3
+
+    :cond_5
+    const-string v0, "google.c.a.e"
+
+    invoke-virtual {v1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "file_url"
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {v1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+    move-result v0
 
-    move-result-object v1
+    :goto_3
+    if-eqz v0, :cond_b
 
-    const/16 v2, 0xc
+    if-nez v1, :cond_6
 
-    const-string v3, ":dialogs/file-download-warning"
+    goto :goto_4
 
-    invoke-static {p1, v3, v0, v1, v2}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    :cond_6
+    const-string v0, "google.c.a.tc"
+
+    invoke-virtual {v1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    const/4 v0, 0x3
+
+    if-eqz p1, :cond_9
+
+    invoke-static {}, La86;->b()La86;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, La86;->a()V
+
+    iget-object p1, p1, La86;->d:Lmq3;
+
+    const-class v2, Lze;
+
+    invoke-interface {p1, v2}, Ldq3;->a(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-nez p1, :cond_8
+
+    invoke-static {p2, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_7
+
+    const-string p1, "Received event with track-conversion=true. Setting user property and reengagement event"
+
+    invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_7
+    const-string p1, "Unable to set user property for conversion tracking:  analytics library is missing"
+
+    invoke-static {p2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_4
+
+    :cond_8
+    new-instance p1, Ljava/lang/ClassCastException;
+
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw p1
+
+    :cond_9
+    invoke-static {p2, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_a
+
+    const-string p1, "Received event with track-conversion=false. Do not set user property"
+
+    invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_a
+    :goto_4
+    const-string p1, "_no"
+
+    invoke-static {p1, v1}, Llfj;->d(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    :cond_b
+    :goto_5
+    return-void
+.end method
+
+.method public final onActivityDestroyed(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivityPaused(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivityResumed(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivityStarted(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivityStopped(Landroid/app/Activity;)V
+    .locals 0
 
     return-void
 .end method

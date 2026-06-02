@@ -1,11 +1,51 @@
 .class public final Lel;
-.super Ljava/lang/Object;
+.super Lz84;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:J
+.field public final synthetic X:Ljl;
 
-.field public b:Ljava/lang/String;
+.field public Y:I
 
-.field public c:Ljava/lang/String;
+.field public d:Levd;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Ljl;Lz84;)V
+    .locals 0
+
+    iput-object p1, p0, Lel;->X:Ljl;
+
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lel;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lel;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lel;->Y:I
+
+    iget-object p1, p0, Lel;->X:Ljl;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Ljl;->e(Levd;Lz84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

@@ -1,7 +1,14 @@
-.class public final Ltk7;
-.super Ljava/util/HashSet;
+.class public interface abstract Ltk7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:I
+# virtual methods
+.method public abstract getExtras()Ljava/util/Map;
+.end method
+
+.method public abstract getHeight()I
+.end method
+
+.method public abstract getWidth()I
+.end method

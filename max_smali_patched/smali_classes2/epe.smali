@@ -1,198 +1,333 @@
 .class public final Lepe;
-.super Ljava/lang/Object;
+.super Liig;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/hardware/SensorEventListener;
-
-
-# static fields
-.field public static final synthetic d:I
+.implements Lnt6;
 
 
 # instance fields
-.field public final a:Landroid/hardware/SensorManager;
+.field public A0:I
 
-.field public final b:Landroid/hardware/Sensor;
+.field public B0:I
 
-.field public final c:Ljava/util/Set;
+.field public C0:I
+
+.field public D0:J
+
+.field public E0:I
+
+.field public synthetic F0:Ljava/lang/Object;
+
+.field public final synthetic G0:Lf24;
+
+.field public X:[J
+
+.field public Y:I
+
+.field public Z:I
+
+.field public o:[J
+
+.field public z0:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.method public constructor <init>(Lf24;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lepe;->G0:Lf24;
 
-    new-instance v0, Ljava/util/LinkedHashSet;
+    const/4 p1, 0x2
 
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
-
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lepe;->c:Ljava/util/Set;
-
-    new-instance v0, Ljava/util/LinkedHashSet;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
-
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedSet(Ljava/util/Set;)Ljava/util/Set;
-
-    const-string v0, "sensor"
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/hardware/SensorManager;
-
-    iput-object p1, p0, Lepe;->a:Landroid/hardware/SensorManager;
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p1, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lepe;->b:Landroid/hardware/Sensor;
-
-    const/4 v0, 0x5
-
-    invoke-virtual {p1, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
+    invoke-direct {p0, p1, p2}, Liig;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAccuracyChanged(Landroid/hardware/Sensor;I)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    return-void
-.end method
+    check-cast p1, Lza6;
 
-.method public final onSensorChanged(Landroid/hardware/SensorEvent;)V
-    .locals 5
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lepe;->c:Ljava/util/Set;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
-
-    invoke-virtual {v1}, Landroid/hardware/Sensor;->getType()I
-
-    move-result v1
-
-    const/16 v2, 0x8
-
-    if-ne v1, v2, :cond_5
-
-    iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
-
-    const/4 v2, 0x0
-
-    aget v1, v1, v2
-
-    iget-object p1, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
-
-    invoke-virtual {p1}, Landroid/hardware/Sensor;->getMaximumRange()F
-
-    move-result p1
-
-    cmpg-float p1, v1, p1
-
-    if-gez p1, :cond_0
-
-    const/4 v2, 0x1
-
-    :cond_0
-    iget-object p1, p0, Lepe;->c:Ljava/util/Set;
-
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p0, p1, p2}, Lepe;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
+    check-cast p1, Lepe;
+
+    sget-object p2, Lyeh;->a:Lyeh;
+
+    invoke-virtual {p1, p2}, Lepe;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lepe;
+
+    iget-object v1, p0, Lepe;->G0:Lf24;
+
+    invoke-direct {v0, v1, p2}, Lepe;-><init>(Lf24;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lepe;->F0:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 21
+
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lepe;->F0:Ljava/lang/Object;
+
+    check-cast v1, Lza6;
+
+    iget v2, v0, Lepe;->E0:I
+
+    const/16 v3, 0x8
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    if-eqz v2, :cond_1
+
+    if-ne v2, v4, :cond_0
+
+    iget v2, v0, Lepe;->C0:I
+
+    iget v6, v0, Lepe;->B0:I
+
+    iget-wide v7, v0, Lepe;->D0:J
+
+    iget v9, v0, Lepe;->A0:I
+
+    iget v10, v0, Lepe;->z0:I
+
+    iget v11, v0, Lepe;->Z:I
+
+    iget v12, v0, Lepe;->Y:I
+
+    iget-object v13, v0, Lepe;->X:[J
+
+    iget-object v14, v0, Lepe;->o:[J
+
+    invoke-static/range {p1 .. p1}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    goto/16 :goto_2
+
+    :cond_0
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
     :cond_1
+    invoke-static/range {p1 .. p1}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    iget-object v2, v0, Lepe;->G0:Lf24;
+
+    iget-object v2, v2, Lf24;->a:Leia;
+
+    iget-object v6, v2, Leia;->b:[J
+
+    iget-object v2, v2, Leia;->a:[J
+
+    array-length v7, v2
+
+    add-int/lit8 v7, v7, -0x2
+
+    if-ltz v7, :cond_6
+
+    move v8, v5
+
+    move v9, v8
+
+    move v10, v9
+
     :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    aget-wide v11, v2, v8
 
-    move-result v1
+    not-long v13, v11
 
-    if-eqz v1, :cond_5
+    const/4 v15, 0x7
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    shl-long/2addr v13, v15
 
-    move-result-object v1
+    and-long/2addr v13, v11
 
-    check-cast v1, Lr30;
+    const-wide v15, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
 
-    if-eqz v2, :cond_4
+    and-long/2addr v13, v15
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    cmp-long v13, v13, v15
 
-    const-string v3, "r30"
+    if-eqz v13, :cond_5
 
-    const-string v4, "onDeviceNextToEar"
+    sub-int v13, v8, v7
 
-    invoke-static {v3, v4}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+    not-int v13, v13
 
-    iget-object v3, v1, Lr30;->c:Ljea;
+    ushr-int/lit8 v13, v13, 0x1f
 
-    iget-boolean v4, v3, Ljea;->J0:Z
+    rsub-int/lit8 v13, v13, 0x8
 
-    if-nez v4, :cond_2
+    move-object v14, v6
 
-    goto :goto_0
+    move v6, v13
+
+    move-object v13, v2
+
+    move v2, v5
+
+    move/from16 v19, v10
+
+    move v10, v7
+
+    move/from16 v20, v9
+
+    move v9, v8
+
+    move-wide v7, v11
+
+    move/from16 v12, v20
+
+    move/from16 v11, v19
+
+    :goto_1
+    if-ge v2, v6, :cond_4
+
+    const-wide/16 v15, 0xff
+
+    and-long/2addr v15, v7
+
+    const-wide/16 v17, 0x80
+
+    cmp-long v15, v15, v17
+
+    if-gez v15, :cond_2
+
+    shl-int/lit8 v15, v9, 0x3
+
+    add-int/2addr v15, v2
+
+    move/from16 v16, v3
+
+    aget-wide v3, v14, v15
+
+    new-instance v15, Ljava/lang/Long;
+
+    invoke-direct {v15, v3, v4}, Ljava/lang/Long;-><init>(J)V
+
+    iput-object v1, v0, Lepe;->F0:Ljava/lang/Object;
+
+    iput-object v14, v0, Lepe;->o:[J
+
+    iput-object v13, v0, Lepe;->X:[J
+
+    iput v12, v0, Lepe;->Y:I
+
+    iput v11, v0, Lepe;->Z:I
+
+    iput v10, v0, Lepe;->z0:I
+
+    iput v9, v0, Lepe;->A0:I
+
+    iput-wide v7, v0, Lepe;->D0:J
+
+    iput v6, v0, Lepe;->B0:I
+
+    iput v2, v0, Lepe;->C0:I
+
+    const/4 v3, 0x1
+
+    iput v3, v0, Lepe;->E0:I
+
+    invoke-interface {v1, v15, v0}, Lza6;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    sget-object v15, Lpc4;->a:Lpc4;
+
+    if-ne v4, v15, :cond_3
+
+    return-object v15
 
     :cond_2
-    invoke-virtual {v1}, Lr30;->k()Z
+    :goto_2
+    move/from16 v16, v3
 
-    move-result v4
-
-    if-nez v4, :cond_3
-
-    iget-object v1, v1, Lr30;->i:Ln8g;
-
-    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->acquire()V
+    move v3, v4
 
     :cond_3
-    iget-boolean v1, v3, Ljea;->J0:Z
+    shr-long v7, v7, v16
 
-    if-eqz v1, :cond_1
+    add-int/2addr v2, v3
 
-    invoke-virtual {v3}, Ljea;->k()Le49;
+    move v4, v3
 
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {v1}, Lr30;->n()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
+    move/from16 v3, v16
 
     goto :goto_1
 
+    :cond_4
+    move/from16 v19, v4
+
+    move v4, v3
+
+    move/from16 v3, v19
+
+    if-ne v6, v4, :cond_6
+
+    move v8, v9
+
+    move v7, v10
+
+    move v10, v11
+
+    move v9, v12
+
+    move-object v2, v13
+
+    move-object v6, v14
+
+    goto :goto_3
+
     :cond_5
-    monitor-exit v0
+    move/from16 v19, v4
 
-    return-void
+    move v4, v3
 
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move/from16 v3, v19
 
-    throw p1
+    :goto_3
+    if-eq v8, v7, :cond_6
+
+    add-int/lit8 v8, v8, 0x1
+
+    move/from16 v19, v4
+
+    move v4, v3
+
+    move/from16 v3, v19
+
+    goto/16 :goto_0
+
+    :cond_6
+    sget-object v1, Lyeh;->a:Lyeh;
+
+    return-object v1
 .end method

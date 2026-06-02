@@ -1,60 +1,26 @@
-.class public final synthetic Lja4;
+.class public interface abstract Lja4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llq6;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/ConversationFactory;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationFactory;I)V
+# virtual methods
+.method public H(Lia4;)V
     .locals 0
-
-    iput p2, p0, Lja4;->a:I
-
-    iput-object p1, p0, Lja4;->b:Lru/ok/android/externcalls/sdk/ConversationFactory;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method public Q(Lia4;)V
+    .locals 0
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 1
+    return-void
+.end method
 
-    iget v0, p0, Lja4;->a:I
+.method public abstract V(Lha4;Lha4;)Ljava/util/List;
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public c0()V
+    .locals 0
 
-    iget-object v0, p0, Lja4;->b:Lru/ok/android/externcalls/sdk/ConversationFactory;
-
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->l(Lru/ok/android/externcalls/sdk/ConversationFactory;)Lahd;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lja4;->b:Lru/ok/android/externcalls/sdk/ConversationFactory;
-
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->a(Lru/ok/android/externcalls/sdk/ConversationFactory;)Lahd;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

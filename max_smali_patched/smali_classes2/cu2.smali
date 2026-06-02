@@ -1,77 +1,131 @@
-.class public final Lcu2;
-.super Lkk0;
+.class public abstract synthetic Lcu2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Ljava/lang/String;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public final c:Ljava/util/List;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
-.field public final d:J
+.field public static final synthetic $EnumSwitchMapping$2:[I
 
-.field public final o:I
+.field public static final synthetic $EnumSwitchMapping$3:[I
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/util/List;JI)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0, p1, p2}, Lkk0;-><init>(J)V
-
-    iput-object p3, p0, Lcu2;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lcu2;->c:Ljava/util/List;
-
-    iput-wide p5, p0, Lcu2;->d:J
-
-    iput p7, p0, Lcu2;->o:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ChatMessageSearchResultEvent{query=\'"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcu2;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', results="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcu2;->c:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", marker="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lcu2;->d:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", total="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lcu2;->o:I
-
-    const/16 v2, 0x7d
-
-    invoke-static {v0, v1, v2}, Lhc0;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    invoke-static {}, Lga4;->values()[Lga4;
 
     move-result-object v0
 
-    return-object v0
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x2
+
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v3, 0x0
+
+    :try_start_1
+    aput v2, v0, v3
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    const/4 v4, 0x3
+
+    :try_start_2
+    aput v4, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    const/4 v5, 0x4
+
+    :try_start_3
+    aput v5, v0, v4
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    sput-object v0, Lcu2;->$EnumSwitchMapping$0:[I
+
+    invoke-static {}, Lr94;->values()[Lr94;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    :try_start_4
+    aput v1, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    :try_start_5
+    aput v2, v0, v2
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    sput-object v0, Lcu2;->$EnumSwitchMapping$1:[I
+
+    invoke-static {}, Lls9;->values()[Lls9;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    :try_start_6
+    aput v1, v0, v3
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    sput-object v0, Lcu2;->$EnumSwitchMapping$2:[I
+
+    invoke-static {}, Lgc2;->values()[Lgc2;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    :try_start_7
+    aput v1, v0, v3
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    :catch_7
+    :try_start_8
+    aput v2, v0, v1
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+
+    :catch_8
+    :try_start_9
+    aput v4, v0, v2
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
+
+    :catch_9
+    sput-object v0, Lcu2;->$EnumSwitchMapping$3:[I
+
+    return-void
 .end method

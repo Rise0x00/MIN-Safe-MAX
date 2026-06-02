@@ -1,111 +1,261 @@
-.class public final synthetic Lzg6;
-.super Ljava/lang/Object;
+.class public final Lzg6;
+.super Liig;
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Lnt6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+.field public final synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Ldh6;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Ldh6;I)V
     .locals 0
 
-    iput p2, p0, Lzg6;->a:I
+    iput p4, p0, Lzg6;->o:I
 
-    iput-object p1, p0, Lzg6;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+    iput-object p1, p0, Lzg6;->Y:Ljava/lang/Object;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Lzg6;->Z:Ldh6;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Liig;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lzg6;->a:I
+    iget v0, p0, Lzg6;->o:I
 
-    const/4 v1, 0x0
+    check-cast p1, Loc4;
 
-    iget-object v2, p0, Lzg6;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
     packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Z:[Lz28;
+    invoke-virtual {p0, p1, p2}, Lzg6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    new-instance v0, Lpab;
+    move-result-object p1
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    check-cast p1, Lzg6;
 
-    move-result-object v3
+    sget-object p2, Lyeh;->a:Lyeh;
 
-    invoke-direct {v0, v3}, Lpab;-><init>(Landroid/content/Context;)V
+    invoke-virtual {p1, p2}, Lzg6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setClipChildren(Z)V
+    move-result-object p1
 
-    sget v1, Lv5e;->T:I
-
-    invoke-virtual {v0, v1}, Lpab;->setIcon(I)V
-
-    sget v1, Lxbb;->p:I
-
-    new-instance v3, Llhg;
-
-    invoke-direct {v3, v1}, Llhg;-><init>(I)V
-
-    invoke-virtual {v0, v3}, Lpab;->setTitle(Lqhg;)V
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    sget v3, Lxbb;->m:I
-
-    invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v3, Lbh6;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v3, v2, v4}, Lbh6;-><init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
-
-    invoke-virtual {v0, v1, v3}, Lpab;->f(Ljava/lang/String;Landroid/view/View$OnClickListener;)V
-
-    return-object v0
+    return-object p1
 
     :pswitch_0
-    sget-object v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Z:[Lz28;
+    invoke-virtual {p0, p1, p2}, Lzg6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    new-instance v0, Loh6;
+    move-result-object p1
 
-    iget-object v3, v2, Lone/me/folders/pickerfolders/FoldersPickerScreen;->b:Lls;
+    check-cast p1, Lzg6;
 
-    sget-object v4, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Z:[Lz28;
+    sget-object p2, Lyeh;->a:Lyeh;
 
-    aget-object v1, v4, v1
+    invoke-virtual {p1, p2}, Lzg6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v3, v2}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v1
+    return-object p1
 
-    check-cast v1, Ljava/lang/Number;
+    nop
 
-    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result-wide v1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    invoke-direct {v0, v1, v2}, Loh6;-><init>(J)V
+    iget p1, p0, Lzg6;->o:I
 
-    return-object v0
+    packed-switch p1, :pswitch_data_0
+
+    new-instance p1, Lzg6;
+
+    iget-object v0, p0, Lzg6;->Z:Ldh6;
+
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Lzg6;->Y:Ljava/lang/Object;
+
+    invoke-direct {p1, v2, p2, v0, v1}, Lzg6;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Ldh6;I)V
+
+    return-object p1
+
+    :pswitch_0
+    new-instance p1, Lzg6;
+
+    iget-object v0, p0, Lzg6;->Z:Ldh6;
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lzg6;->Y:Ljava/lang/Object;
+
+    invoke-direct {p1, v2, p2, v0, v1}, Lzg6;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Ldh6;I)V
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iget v0, p0, Lzg6;->o:I
+
+    iget-object v1, p0, Lzg6;->Z:Ldh6;
+
+    iget-object v2, p0, Lzg6;->Y:Ljava/lang/Object;
+
+    const-string v3, "call to \'resume\' before \'invoke\' with coroutine"
+
+    sget-object v4, Lpc4;->a:Lpc4;
+
+    const/4 v5, 0x1
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lzg6;->X:I
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v5, :cond_0
+
+    invoke-static {p1}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    check-cast v2, Ljava/lang/Long;
+
+    sget-object p1, Ldh6;->U0:[Lb88;
+
+    iget-object p1, v1, Ldh6;->B0:Lia8;
+
+    invoke-interface {p1}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lva3;
+
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    iput v5, p0, Lzg6;->X:I
+
+    invoke-virtual {p1, v0, v1, p0}, Lva3;->j(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v4, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    check-cast p1, Lej2;
+
+    if-eqz p1, :cond_3
+
+    iget-wide v0, p1, Lej2;->a:J
+
+    new-instance v4, Ljava/lang/Long;
+
+    invoke-direct {v4, v0, v1}, Ljava/lang/Long;-><init>(J)V
+
+    goto :goto_1
+
+    :cond_3
+    const/4 v4, 0x0
+
+    :goto_1
+    return-object v4
+
+    :pswitch_0
+    iget v0, p0, Lzg6;->X:I
+
+    if-eqz v0, :cond_5
+
+    if-ne v0, v5, :cond_4
+
+    invoke-static {p1}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_5
+    invoke-static {p1}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    check-cast v2, Ljava/lang/Number;
+
+    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v2
+
+    sget-object p1, Ldh6;->U0:[Lb88;
+
+    iget-object p1, v1, Ldh6;->B0:Lia8;
+
+    invoke-interface {p1}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lva3;
+
+    iput v5, p0, Lzg6;->X:I
+
+    invoke-virtual {p1, v2, v3, p0}, Lva3;->j(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v4, :cond_6
+
+    move-object p1, v4
+
+    :cond_6
+    :goto_2
+    return-object p1
 
     nop
 

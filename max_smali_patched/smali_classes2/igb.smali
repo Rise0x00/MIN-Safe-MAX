@@ -1,67 +1,48 @@
-.class public abstract Ligb;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Ligb;
+.super Lz84;
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final synthetic X:Lfm8;
 
-.field public static final b:I
+.field public synthetic d:Ljava/lang/Object;
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lfm8;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget v0, Lh9d;->qrscanner_allow_permission:I
+    iput-object p1, p0, Ligb;->X:Lfm8;
 
-    sput v0, Ligb;->a:I
-
-    sget v0, Lh9d;->qrscanner_blackout_view:I
-
-    sput v0, Ligb;->b:I
-
-    sget v0, Lh9d;->qrscanner_camera_preview:I
-
-    sput v0, Ligb;->c:I
-
-    sget v0, Lh9d;->qrscanner_gallery_button_image:I
-
-    sput v0, Ligb;->d:I
-
-    sget v0, Lh9d;->qrscanner_hint_view:I
-
-    sput v0, Ligb;->e:I
-
-    sget v0, Lh9d;->qrscanner_not_allow_permission:I
-
-    sput v0, Ligb;->f:I
-
-    sget v0, Lh9d;->qrscanner_overlay_view:I
-
-    sput v0, Ligb;->g:I
-
-    sget v0, Lh9d;->qrscanner_toolbar:I
-
-    sput v0, Ligb;->h:I
-
-    sget v0, Lh9d;->qrscanner_torch_button_image:I
-
-    sput v0, Ligb;->i:I
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Ligb;->d:Ljava/lang/Object;
+
+    iget p1, p0, Ligb;->o:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Ligb;->o:I
+
+    iget-object p1, p0, Ligb;->X:Lfm8;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lfm8;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

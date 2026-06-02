@@ -1,70 +1,81 @@
-.class public final Lqvi;
+.class public final synthetic Lqvi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Llfg;
 
 
-# static fields
-.field public static final a:Lqvi;
+# instance fields
+.field public final synthetic a:Lvvi;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lvvi;)V
+    .locals 0
 
-    new-instance v0, Lqvi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lqvi;->a:Lqvi;
-
-    new-instance v0, Lbri;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
-
-    const-class v1, Lpri;
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    iput-object p1, p0, Lqvi;->a:Lvvi;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final get()Ljava/lang/Object;
+    .locals 4
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Lqvi;->a:Lvvi;
 
-    move-result-object p1
+    iget-object v0, v0, Lvvi;->e:Lft0;
 
-    throw p1
+    invoke-virtual {v0}, Lft0;->o()Ljava/lang/Object;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "getWorkManager: enable = "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "vvi"
+
+    invoke-static {v2, v1}, Lnm4;->y(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lft0;->o()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Boolean;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    new-instance v1, Lx1b;
+
+    invoke-direct {v1, v0}, Lx1b;-><init>(Ljava/lang/Object;)V
+
+    return-object v1
+
+    :cond_0
+    const-string v1, "waiting for enable ..."
+
+    invoke-static {v2, v1}, Lnm4;->y(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
 .end method

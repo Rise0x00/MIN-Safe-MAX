@@ -4,16 +4,22 @@
 
 
 # instance fields
-.field public final a:Ljava/util/LinkedHashSet;
+.field public final a:Lsia;
+
+.field public b:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/LinkedHashSet;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lua1;->a:Ljava/util/LinkedHashSet;
+    new-instance v0, Lsia;
+
+    invoke-direct {v0}, Lsia;-><init>()V
+
+    iput-object v0, p0, Lua1;->a:Lsia;
 
     return-void
 .end method

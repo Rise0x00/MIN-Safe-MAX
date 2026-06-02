@@ -1,58 +1,69 @@
 .class public final Lp5e;
-.super Ljava/lang/Object;
+.super Lm4;
 .source "SourceFile"
 
-# interfaces
-.implements Len1;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lp5e;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public final a:Landroid/os/Bundle;
+
+.field public b:Lwu;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ljnb;
+
+    const/16 v1, 0x1d
+
+    invoke-direct {v0, v1}, Ljnb;-><init>(I)V
+
+    sput-object v0, Lp5e;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Bundle;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Lp5e;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput-object p1, p0, Lp5e;->a:Landroid/os/Bundle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onRtcStats(Lchd;)V
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    iget-object v0, p0, Lp5e;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    const/16 p2, 0x4f45
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    invoke-static {p1, p2}, Luoj;->r(Landroid/os/Parcel;I)I
 
-    move-result-object v0
+    move-result p2
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    const/4 v0, 0x2
 
-    move-result v1
+    iget-object v1, p0, Lp5e;->a:Landroid/os/Bundle;
 
-    if-eqz v1, :cond_0
+    invoke-static {p1, v0, v1}, Luoj;->h(Landroid/os/Parcel;ILandroid/os/Bundle;)V
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {p1, p2}, Luoj;->s(Landroid/os/Parcel;I)V
 
-    move-result-object v1
-
-    check-cast v1, Len1;
-
-    invoke-interface {v1, p1}, Len1;->onRtcStats(Lchd;)V
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method

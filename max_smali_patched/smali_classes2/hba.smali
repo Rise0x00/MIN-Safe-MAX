@@ -1,105 +1,259 @@
 .class public final Lhba;
-.super Licg;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lnwe;
 
 
 # instance fields
-.field public c:Ljava/util/Map;
+.field public final a:[J
+
+.field public final b:[J
+
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Lpq9;)V
-    .locals 0
+.method public constructor <init>(J[J[J)V
+    .locals 2
 
-    invoke-direct {p0, p1}, Licg;-><init>(Lpq9;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object p1, p0, Lhba;->c:Ljava/util/Map;
+    iput-object p3, p0, Lhba;->a:[J
 
-    if-nez p1, :cond_0
+    iput-object p4, p0, Lhba;->b:[J
 
-    sget-object p1, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
-    iput-object p1, p0, Lhba;->c:Ljava/util/Map;
+    cmp-long p3, p1, v0
+
+    if-eqz p3, :cond_0
+
+    goto :goto_0
 
     :cond_0
+    array-length p1, p4
+
+    add-int/lit8 p1, p1, -0x1
+
+    aget-wide p1, p4, p1
+
+    invoke-static {p1, p2}, Lpnh;->U(J)J
+
+    move-result-wide p1
+
+    :goto_0
+    iput-wide p1, p0, Lhba;->c:J
+
     return-void
 .end method
 
+.method public static d(J[J[J)Landroid/util/Pair;
+    .locals 10
 
-# virtual methods
-.method public final d(Lpq9;Ljava/lang/String;)V
-    .locals 4
+    const/4 v0, 0x1
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {p2, p0, p1, v0}, Lpnh;->e([JJZ)I
 
-    const-string v0, "stats"
+    move-result v1
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    aget-wide v2, p2, v1
 
-    move-result p2
+    aget-wide v4, p3, v1
 
-    if-nez p2, :cond_0
+    add-int/2addr v1, v0
 
-    invoke-virtual {p1}, Lpq9;->B()V
+    array-length v0, p2
 
-    return-void
-
-    :cond_0
-    new-instance p2, Ljava/util/HashMap;
-
-    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p2, p0, Lhba;->c:Ljava/util/Map;
-
-    invoke-static {p1}, Lcti;->o(Lpq9;)I
-
-    move-result p2
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, p2, :cond_1
-
-    iget-object v1, p0, Lhba;->c:Ljava/util/Map;
-
-    invoke-virtual {p1}, Lpq9;->L0()J
-
-    move-result-wide v2
+    if-ne v1, v0, :cond_0
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v2
+    move-result-object p0
 
-    invoke-static {p1}, Leq9;->a(Lpq9;)Leq9;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v3
+    move-result-object p1
 
-    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0, p1}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
 
-    add-int/lit8 v0, v0, 0x1
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    aget-wide v6, p2, v1
+
+    aget-wide p2, p3, v1
+
+    cmp-long v0, v6, v2
+
+    if-nez v0, :cond_1
+
+    const-wide/16 v0, 0x0
 
     goto :goto_0
 
     :cond_1
-    return-void
+    long-to-double v0, p0
+
+    long-to-double v8, v2
+
+    sub-double/2addr v0, v8
+
+    sub-long/2addr v6, v2
+
+    long-to-double v2, v6
+
+    div-double/2addr v0, v2
+
+    :goto_0
+    sub-long/2addr p2, v4
+
+    long-to-double p2, p2
+
+    mul-double/2addr v0, p2
+
+    double-to-long p2, v0
+
+    add-long/2addr p2, v4
+
+    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p0
+
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
 
-    iget-object v0, p0, Lhba;->c:Ljava/util/Map;
+# virtual methods
+.method public final a()J
+    .locals 2
 
-    invoke-static {v0}, Lcth;->j(Ljava/util/Map;)I
+    const-wide/16 v0, -0x1
 
-    move-result v0
+    return-wide v0
+.end method
 
-    const-string v1, "{stats="
+.method public final b(J)J
+    .locals 2
 
-    const-string v2, "}"
+    iget-object v0, p0, Lhba;->a:[J
 
-    invoke-static {v0, v1, v2}, Lkz1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v1, p0, Lhba;->b:[J
 
-    move-result-object v0
+    invoke-static {p1, p2, v0, v1}, Lhba;->d(J[J[J)Landroid/util/Pair;
 
-    return-object v0
+    move-result-object p1
+
+    iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Long;
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide p1
+
+    invoke-static {p1, p2}, Lpnh;->U(J)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final c()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final e(J)Ldwe;
+    .locals 6
+
+    const-wide/16 v2, 0x0
+
+    iget-wide v4, p0, Lhba;->c:J
+
+    move-wide v0, p1
+
+    invoke-static/range {v0 .. v5}, Lpnh;->j(JJJ)J
+
+    move-result-wide p1
+
+    invoke-static {p1, p2}, Lpnh;->l0(J)J
+
+    move-result-wide p1
+
+    iget-object v0, p0, Lhba;->b:[J
+
+    iget-object v1, p0, Lhba;->a:[J
+
+    invoke-static {p1, p2, v0, v1}, Lhba;->d(J[J[J)Landroid/util/Pair;
+
+    move-result-object p1
+
+    iget-object p2, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    check-cast p2, Ljava/lang/Long;
+
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Lpnh;->U(J)J
+
+    move-result-wide v0
+
+    iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Long;
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide p1
+
+    new-instance v2, Ldwe;
+
+    new-instance v3, Ljwe;
+
+    invoke-direct {v3, v0, v1, p1, p2}, Ljwe;-><init>(JJ)V
+
+    invoke-direct {v2, v3, v3}, Ldwe;-><init>(Ljwe;Ljwe;)V
+
+    return-object v2
+.end method
+
+.method public final f()J
+    .locals 2
+
+    iget-wide v0, p0, Lhba;->c:J
+
+    return-wide v0
+.end method
+
+.method public final g()J
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public final h()I
+    .locals 1
+
+    const v0, -0x7fffffff
+
+    return v0
 .end method

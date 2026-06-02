@@ -1,52 +1,110 @@
-.class public final synthetic Lisf;
-.super Lt8;
+.class public final Lisf;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 # interfaces
-.implements Ldr6;
+.implements Lirf;
 
 
-# static fields
-.field public static final Z:Lisf;
+# instance fields
+.field public final a:Lk2b;
+
+.field public final b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lk2b;I)V
+    .locals 0
 
-    new-instance v0, Lisf;
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
+    iput-object p1, p0, Lisf;->a:Lk2b;
 
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const-class v4, Lktb;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lt8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lisf;->Z:Lisf;
+    iput p2, p0, Lisf;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a(Ljava/lang/Object;)V
+    .locals 4
+
+    iget-object v0, p0, Lisf;->a:Lk2b;
+
+    iget-object v1, v0, Lk2b;->b:Ljava/lang/Object;
+
+    check-cast v1, Lirf;
+
+    iget-object v2, v0, Lk2b;->o:Ljava/io/Serializable;
+
+    check-cast v2, [Ljava/lang/Object;
+
+    if-eqz v2, :cond_0
+
+    iget v3, p0, Lisf;->b:I
+
+    aput-object p1, v2, v3
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    :try_start_0
+    iget-object v3, v0, Lk2b;->c:Ljava/lang/Object;
+
+    check-cast v3, Lot6;
+
+    invoke-interface {v3, v2}, Lot6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    const-string v3, "The zipper returned a null value"
+
+    invoke-static {v2, v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iput-object p1, v0, Lk2b;->o:Ljava/io/Serializable;
+
+    invoke-interface {v1, v2}, Lirf;->a(Ljava/lang/Object;)V
+
+    return-void
+
+    :catchall_0
+    move-exception v2
+
+    invoke-static {v2}, Lmzj;->c(Ljava/lang/Throwable;)V
+
+    iput-object p1, v0, Lk2b;->o:Ljava/io/Serializable;
+
+    invoke-interface {v1, v2}, Lirf;->onError(Ljava/lang/Throwable;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final c(Ls45;)V
     .locals 0
 
-    check-cast p1, Lrsf;
+    invoke-static {p0, p1}, Lw45;->i(Ljava/util/concurrent/atomic/AtomicReference;Ls45;)Z
 
-    check-cast p2, Ljava/lang/Boolean;
+    return-void
+.end method
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 2
 
-    sget-object p3, Lnsf;->L0:[Lz28;
+    iget-object v0, p0, Lisf;->a:Lk2b;
 
-    new-instance p3, Lktb;
+    iget v1, p0, Lisf;->b:I
 
-    invoke-direct {p3, p1, p2}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, p1}, Lk2b;->a(ILjava/lang/Throwable;)V
 
-    return-object p3
+    return-void
 .end method

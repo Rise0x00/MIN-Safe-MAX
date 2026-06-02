@@ -1,238 +1,163 @@
-.class public final Llk1;
+.class public final synthetic Llk1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lkk1;
+.implements Lzs6;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public final synthetic a:I
+
+.field public final synthetic b:Z
+
+.field public final synthetic c:Ljava/lang/Object;
+
+.field public final synthetic d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public synthetic constructor <init>(Lmk1;Lqa1;Z)V
     .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    iput v0, p0, Llk1;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput-object p1, p0, Llk1;->c:Ljava/lang/Object;
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+    iput-object p2, p0, Llk1;->d:Ljava/lang/Object;
 
-    iput-object v0, p0, Llk1;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput-boolean p3, p0, Llk1;->b:Z
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(ZLhx1;Ljava/util/List;)V
+    .locals 1
+
+    .line 2
+    const/4 v0, 0x1
+
+    iput v0, p0, Llk1;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Llk1;->b:Z
+
+    iput-object p2, p0, Llk1;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Llk1;->d:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAdminInCallChanged()V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    iget-object v0, p0, Llk1;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget v0, p0, Llk1;->a:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Llk1;->c:Ljava/lang/Object;
+
+    check-cast v0, Lhx1;
+
+    iget-object v1, p0, Llk1;->d:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/List;
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-boolean p1, p0, Llk1;->b:Z
+
+    invoke-static {p1, v0, v1}, Lhx1;->A(ZLhx1;Ljava/util/List;)V
+
+    :goto_0
+    sget-object p1, Lyeh;->a:Lyeh;
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Llk1;->c:Ljava/lang/Object;
+
+    check-cast v0, Lmk1;
+
+    iget-object v1, p0, Llk1;->d:Ljava/lang/Object;
+
+    check-cast v1, Lqa1;
+
+    check-cast p1, Landroid/content/Intent;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, "action-accept-call"
+
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    iget-object v0, v1, Lqa1;->c:Ljava/lang/CharSequence;
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    goto :goto_1
 
-    move-result v1
+    :cond_0
+    move-object v0, v2
 
-    if-eqz v1, :cond_0
+    :goto_1
+    if-nez v0, :cond_1
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const-string v0, ""
 
-    move-result-object v1
+    :cond_1
+    const-string v3, "incoming_param_name"
 
-    check-cast v1, Lkk1;
+    invoke-virtual {p1, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-interface {v1}, Lkk1;->onAdminInCallChanged()V
+    iget-object v0, v1, Lqa1;->f:Ljava/lang/String;
+
+    if-eqz v0, :cond_2
+
+    invoke-static {v0}, Lj1k;->b(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    :cond_2
+    const-string v0, "incoming_param_avatar"
+
+    invoke-virtual {p1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v0, "incoming_param_chat_id"
+
+    invoke-virtual {v1}, Lqa1;->d()J
+
+    move-result-wide v1
+
+    invoke-virtual {p1, v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+
+    const-string v0, "incoming_param_is_video"
+
+    iget-boolean v1, p0, Llk1;->b:Z
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     goto :goto_0
 
-    :cond_0
-    return-void
-.end method
-
-.method public final onAnonJoinForbiddenChanged()V
-    .locals 2
-
-    iget-object v0, p0, Llk1;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lkk1;
-
-    invoke-interface {v1}, Lkk1;->onAnonJoinForbiddenChanged()V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onAsrOnlineAvailableChanged()V
-    .locals 2
-
-    iget-object v0, p0, Llk1;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lkk1;
-
-    invoke-interface {v1}, Lkk1;->onAsrOnlineAvailableChanged()V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onFeedbackEnabledChanged()V
-    .locals 2
-
-    iget-object v0, p0, Llk1;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lkk1;
-
-    invoke-interface {v1}, Lkk1;->onFeedbackEnabledChanged()V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onRecurringChanged()V
-    .locals 2
-
-    iget-object v0, p0, Llk1;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lkk1;
-
-    invoke-interface {v1}, Lkk1;->onRecurringChanged()V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onWaitForAdminChanged()V
-    .locals 2
-
-    iget-object v0, p0, Llk1;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lkk1;
-
-    invoke-interface {v1}, Lkk1;->onWaitForAdminChanged()V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onWaitingHallEnabledChanged()V
-    .locals 2
-
-    iget-object v0, p0, Llk1;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lkk1;
-
-    invoke-interface {v1}, Lkk1;->onWaitingHallEnabledChanged()V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

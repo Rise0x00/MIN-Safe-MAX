@@ -1,90 +1,56 @@
 .class public final Lub6;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.super Lz84;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public A0:I
 
-.field public final b:J
+.field public final synthetic X:Ley;
 
-.field public final c:Ljava/lang/Object;
+.field public Y:Ley;
+
+.field public Z:Lza6;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
+
+.field public z0:I
 
 
 # direct methods
-.method public constructor <init>(JLb1g;)V
-    .locals 1
+.method public constructor <init>(Ley;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lub6;->X:Ley;
 
-    iput v0, p0, Lub6;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p3, p0, Lub6;->c:Ljava/lang/Object;
-
-    .line 3
-    iput-wide p1, p0, Lub6;->b:J
-
-    return-void
-.end method
-
-.method public constructor <init>(JLyza;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lub6;->a:I
-
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    iput-wide p1, p0, Lub6;->b:J
-
-    .line 6
-    iput-object p3, p0, Lub6;->c:Ljava/lang/Object;
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lub6;->a:I
+    iput-object p1, p0, Lub6;->d:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lub6;->o:I
 
-    iget-object v0, p0, Lub6;->c:Ljava/lang/Object;
+    const/high16 v0, -0x80000000
 
-    iget-wide v1, p0, Lub6;->b:J
+    or-int/2addr p1, v0
 
-    invoke-interface {v0, v1, v2}, Lyza;->a(J)V
+    iput p1, p0, Lub6;->o:I
 
-    return-void
+    iget-object p1, p0, Lub6;->X:Ley;
 
-    :pswitch_0
-    iget-object v0, p0, Lub6;->c:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    check-cast v0, Lb1g;
+    invoke-virtual {p1, v0, p0}, Ley;->d(Lza6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget-wide v1, p0, Lub6;->b:J
+    move-result-object p1
 
-    invoke-interface {v0, v1, v2}, Lb1g;->f(J)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

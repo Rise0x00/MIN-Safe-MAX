@@ -1,195 +1,135 @@
 .class public final Lb92;
-.super Lrr5;
+.super Lc92;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ljava/nio/ByteBuffer;)V
-    .locals 6
+.method public constructor <init>(Ljava/lang/String;Ljava/util/List;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
+    iput-object p1, p0, Lb92;->a:Ljava/lang/String;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    iput-object p2, p0, Lb92;->b:Ljava/util/List;
 
-    iput-object v0, p0, Lb92;->a:Ljava/util/ArrayList;
-
-    sget-object v0, Ljng;->u0:Ljng;
-
-    iget-short v0, v0, Ljng;->a:S
-
-    const/4 v1, 0x2
-
-    invoke-virtual {p0, p1, v0, v1}, Lrr5;->b(Ljava/nio/ByteBuffer;II)I
-
-    move-result v0
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v2
-
-    add-int/lit8 v3, v2, 0x2
-
-    const-string v4, "inconsistent length fields"
-
-    if-ne v0, v3, :cond_4
-
-    :goto_0
-    if-lez v2, :cond_3
-
-    if-lt v2, v1, :cond_2
-
-    add-int/lit8 v2, v2, -0x2
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v0
-
-    const v3, 0xffff
-
-    and-int/2addr v0, v3
-
-    if-gt v0, v2, :cond_1
-
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v3
-
-    if-gt v0, v3, :cond_0
-
-    new-array v3, v0, [B
-
-    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
-
-    sub-int/2addr v2, v0
-
-    :try_start_0
-    iget-object v0, p0, Lb92;->a:Ljava/util/ArrayList;
-
-    new-instance v5, Ljavax/security/auth/x500/X500Principal;
-
-    invoke-direct {v5, v3}, Ljavax/security/auth/x500/X500Principal;-><init>([B)V
-
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    const-string v0, "authority not in DER format"
-
-    invoke-direct {p1, v0}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_0
-    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    invoke-direct {p1, v4}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    invoke-direct {p1, v4}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    invoke-direct {p1, v4}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_3
     return-void
-
-    :cond_4
-    new-instance p1, Ltech/kwik/agent15/alert/DecodeErrorException;
-
-    invoke-direct {p1, v4}, Ltech/kwik/agent15/alert/DecodeErrorException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final a()[B
+.method public final a()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lb92;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget-object v0, p0, Lb92;->a:Ljava/util/ArrayList;
+    const/4 v0, 0x1
 
-    invoke-interface {v0}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v1
+    return v0
 
-    new-instance v2, Lk0;
+    :cond_0
+    instance-of v1, p1, Lb92;
 
-    const/4 v3, 0x4
+    const/4 v2, 0x0
 
-    invoke-direct {v2, v3}, Lk0;-><init>(I)V
+    if-nez v1, :cond_1
 
-    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
+    return v2
 
-    move-result-object v1
+    :cond_1
+    check-cast p1, Lb92;
 
-    invoke-interface {v1}, Ljava/util/stream/IntStream;->sum()I
+    iget-object v1, p0, Lb92;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lb92;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    if-nez v1, :cond_2
 
-    move-result v2
+    return v2
 
-    mul-int/lit8 v2, v2, 0x2
+    :cond_2
+    iget-object v1, p0, Lb92;->b:Ljava/util/List;
 
-    add-int/2addr v2, v1
+    iget-object p1, p1, Lb92;->b:Ljava/util/List;
 
-    add-int/lit8 v1, v2, 0x6
+    invoke-static {v1, p1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+    move-result p1
 
-    move-result-object v1
+    if-nez p1, :cond_3
 
-    sget-object v3, Ljng;->u0:Ljng;
+    return v2
 
-    iget-short v3, v3, Ljng;->a:S
+    :cond_3
+    return v0
+.end method
 
-    invoke-virtual {v1, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+.method public final hashCode()I
+    .locals 2
 
-    add-int/lit8 v3, v2, 0x2
+    iget-object v0, p0, Lb92;->a:Ljava/lang/String;
 
-    int-to-short v3, v3
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    invoke-virtual {v1, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+    move-result v0
 
-    int-to-short v2, v2
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+    iget-object v1, p0, Lb92;->b:Ljava/util/List;
 
-    invoke-interface {v0}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    move-result-object v0
+    move-result v1
 
-    new-instance v2, Les;
+    add-int/2addr v1, v0
 
-    const/4 v3, 0x1
+    return v1
+.end method
 
-    invoke-direct {v2, v3, v1}, Les;-><init>(ILjava/nio/ByteBuffer;)V
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-interface {v0, v2}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
+    const-string v1, "Unknown(cameraId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lb92;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", cameraParameterList="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lb92;->b:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

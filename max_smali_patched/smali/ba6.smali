@@ -1,52 +1,64 @@
 .class public final Lba6;
-.super Lo84;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lb2f;
 
 
 # instance fields
-.field public final synthetic X:Lr83;
+.field public final synthetic a:I
 
-.field public Y:Lf76;
+.field public final b:Lzs6;
 
-.field public Z:Lbtd;
+.field public final c:Lzs6;
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lr83;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Lzs6;Lzs6;I)V
     .locals 0
 
-    iput-object p1, p0, Lba6;->X:Lr83;
+    iput p4, p0, Lba6;->a:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lba6;->d:Ljava/lang/Object;
+
+    iput-object p2, p0, Lba6;->b:Lzs6;
+
+    iput-object p3, p0, Lba6;->c:Lzs6;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final iterator()Ljava/util/Iterator;
     .locals 1
 
-    iput-object p1, p0, Lba6;->d:Ljava/lang/Object;
+    iget v0, p0, Lba6;->a:I
 
-    iget p1, p0, Lba6;->o:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    new-instance v0, Ll56;
 
-    or-int/2addr p1, v0
+    invoke-direct {v0, p0}, Ll56;-><init>(Lba6;)V
 
-    iput p1, p0, Lba6;->o:I
+    return-object v0
 
-    iget-object p1, p0, Lba6;->X:Lr83;
+    :pswitch_0
+    new-instance v0, Le76;
 
-    const/4 v0, 0x0
+    invoke-direct {v0, p0}, Le76;-><init>(Lba6;)V
 
-    invoke-virtual {p1, v0, p0}, Lr83;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return-object v0
 
-    move-result-object p1
+    nop
 
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

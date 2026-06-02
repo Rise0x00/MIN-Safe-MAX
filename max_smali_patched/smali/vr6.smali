@@ -1,48 +1,174 @@
 .class public final Lvr6;
-.super Ljava/lang/Object;
+.super Liig;
 .source "SourceFile"
 
 # interfaces
-.implements Li6;
+.implements Lnt6;
 
 
 # instance fields
-.field public final a:Lrz6;
+.field public synthetic X:Z
+
+.field public final synthetic Y:Landroid/content/Context;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Lrz6;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Lkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lvr6;->o:I
 
-    iput-object p1, p0, Lvr6;->a:Lrz6;
+    iput-object p1, p0, Lvr6;->Y:Landroid/content/Context;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Liig;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lvr6;->o:I
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0, p1, p2}, Lvr6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lvr6;
+
+    sget-object p2, Lyeh;->a:Lyeh;
+
+    invoke-virtual {p1, p2}, Lvr6;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+
+    :pswitch_0
+    invoke-virtual {p0, p1, p2}, Lvr6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lvr6;
+
+    sget-object p2, Lyeh;->a:Lyeh;
+
+    invoke-virtual {p1, p2}, Lvr6;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 3
 
-    iget-object v0, p0, Lvr6;->a:Lrz6;
+    iget v0, p0, Lvr6;->o:I
 
-    iget-object v0, v0, Lrz6;->b:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v0, Lxt7;
+    new-instance v0, Lvr6;
 
-    iget-object v1, v0, Lxt7;->d:Lcy0;
+    iget-object v1, p0, Lvr6;->Y:Landroid/content/Context;
 
-    invoke-virtual {v1, v0}, Lcy0;->f(Ljava/lang/Object;)V
+    const/4 v2, 0x1
 
-    iget-object v0, v0, Lxt7;->l:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {v0, v1, p2, v2}, Lvr6;-><init>(Landroid/content/Context;Lkotlin/coroutines/Continuation;I)V
 
-    const/4 v1, 0x1
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    iput-boolean p1, v0, Lvr6;->X:Z
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Lvr6;
+
+    iget-object v1, p0, Lvr6;->Y:Landroid/content/Context;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    invoke-direct {v0, v1, p2, v2}, Lvr6;-><init>(Landroid/content/Context;Lkotlin/coroutines/Continuation;I)V
 
-    return-void
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    iput-boolean p1, v0, Lvr6;->X:Z
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lvr6;->o:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-boolean v0, p0, Lvr6;->X:Z
+
+    invoke-static {p1}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    sget-object p1, Ltqf;->D0:Ltqf;
+
+    iget-object v1, p0, Lvr6;->Y:Landroid/content/Context;
+
+    invoke-interface {p1, v1, v0}, Lhq3;->h(Landroid/content/Context;Z)V
+
+    sput-boolean v0, Ltqf;->E0:Z
+
+    sget-object p1, Lyeh;->a:Lyeh;
+
+    return-object p1
+
+    :pswitch_0
+    iget-boolean v0, p0, Lvr6;->X:Z
+
+    invoke-static {p1}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    sget-object p1, Lwfa;->X:Lwfa;
+
+    iget-object v1, p0, Lvr6;->Y:Landroid/content/Context;
+
+    invoke-interface {p1, v1, v0}, Lhq3;->h(Landroid/content/Context;Z)V
+
+    sget-object p1, Lyeh;->a:Lyeh;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

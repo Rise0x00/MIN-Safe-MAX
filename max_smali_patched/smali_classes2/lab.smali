@@ -1,49 +1,31 @@
-.class public final Llab;
-.super Lo84;
+.class public abstract Llab;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:I
+# static fields
+.field public static final a:I
 
-.field public synthetic d:Ljava/lang/Object;
+.field public static final b:I
 
-.field public final synthetic o:Lnab;
+.field public static final c:I
 
 
 # direct methods
-.method public constructor <init>(Lnab;Lo84;)V
-    .locals 0
-
-    iput-object p1, p0, Llab;->o:Lnab;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Llab;->d:Ljava/lang/Object;
+    sget v0, Lpgd;->ic_camera_add_36:I
 
-    iget p1, p0, Llab;->X:I
+    sput v0, Llab;->a:I
 
-    const/high16 v0, -0x80000000
+    sget v0, Lpgd;->ic_snack_file_24:I
 
-    or-int/2addr p1, v0
+    sput v0, Llab;->b:I
 
-    iput p1, p0, Llab;->X:I
+    sget v0, Lpgd;->ic_snack_media_24:I
 
-    iget-object p1, p0, Llab;->o:Lnab;
+    sput v0, Llab;->c:I
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0, p0}, Lnab;->a(Landroid/content/Context;Le0a;Lo84;)V
-
-    sget-object p1, Lac4;->a:Lac4;
-
-    return-object p1
+    return-void
 .end method

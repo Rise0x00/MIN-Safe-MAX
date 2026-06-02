@@ -1,142 +1,104 @@
-.class public final Lrnd;
-.super Licg;
-.source "SourceFile"
+.class public abstract Lrnd;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public c:Ljava/lang/String;
+# static fields
+.field public static audio_record_click_to_cancel:I = 0x7f130088
 
-.field public d:Z
+.field public static audio_record_swipe_to_cancel:I = 0x7f130099
 
+.field public static chat_screen__remove_chat_action:I = 0x7f130379
 
-# direct methods
-.method public constructor <init>(Lpq9;)V
-    .locals 0
+.field public static chat_screen__remove_chat_title:I = 0x7f13037a
 
-    invoke-direct {p0, p1}, Licg;-><init>(Lpq9;)V
+.field public static chat_screen__search_result_down_button_accessibility:I = 0x7f13037b
 
-    const/4 p1, 0x1
+.field public static chat_screen__search_result_not_found:I = 0x7f13037c
 
-    iput-boolean p1, p0, Lrnd;->d:Z
+.field public static chat_screen__search_result_success:I = 0x7f13037d
 
-    return-void
-.end method
+.field public static chat_screen__search_result_up_button_accessibility:I = 0x7f13037e
 
+.field public static chat_screen__start_chat_with_bot:I = 0x7f13037f
 
-# virtual methods
-.method public final d(Lpq9;Ljava/lang/String;)V
-    .locals 1
+.field public static chat_screen_channel_search_hint:I = 0x7f13039a
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static chat_screen_error_restricted_send_message_action:I = 0x7f1303ab
 
-    const-string v0, "tls"
+.field public static chat_screen_error_restricted_send_message_cancel:I = 0x7f1303ac
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+.field public static chat_screen_error_restricted_send_message_desc:I = 0x7f1303ad
 
-    move-result v0
+.field public static chat_screen_error_restricted_send_message_title:I = 0x7f1303ae
 
-    if-nez v0, :cond_1
+.field public static chat_screen_file_too_big_caption:I = 0x7f1303af
 
-    const-string v0, "redirectHost"
+.field public static chat_screen_file_too_big_title:I = 0x7f1303b0
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+.field public static chat_screen_join_channel:I = 0x7f1303b7
 
-    move-result p2
+.field public static chat_screen_join_chat:I = 0x7f1303b8
 
-    if-nez p2, :cond_0
+.field public static chat_screen_leave_chat:I = 0x7f1303b9
 
-    invoke-virtual {p1}, Lpq9;->B()V
+.field public static chat_screen_remove_chat:I = 0x7f1303d5
 
-    return-void
+.field public static chat_screen_search_hint:I = 0x7f1303d8
 
-    :cond_0
-    invoke-static {p1}, Lcti;->q(Lpq9;)Ljava/lang/String;
+.field public static chat_screen_status_mute_chat:I = 0x7f1303db
 
-    move-result-object p1
+.field public static chat_screen_status_subscribe_chat:I = 0x7f1303dc
 
-    iput-object p1, p0, Lrnd;->c:Ljava/lang/String;
+.field public static chat_screen_status_unmute_chat:I = 0x7f1303dd
 
-    return-void
+.field public static chat_screen_unblock_contact:I = 0x7f1303df
 
-    :cond_1
-    invoke-virtual {p1}, Lpq9;->H0()Z
+.field public static media_bar_recent:I = 0x7f130680
 
-    move-result p1
+.field public static media_type_picker__close_dialog__accept:I = 0x7f1306cc
 
-    iput-boolean p1, p0, Lrnd;->d:Z
+.field public static media_type_picker__close_dialog__cancel:I = 0x7f1306cd
 
-    return-void
-.end method
+.field public static media_type_picker__close_dialog__title:I = 0x7f1306ce
 
-.method public final e()Ljava/lang/String;
-    .locals 3
+.field public static media_type_picker__contact:I = 0x7f1306cf
 
-    iget-object v0, p0, Lrnd;->c:Ljava/lang/String;
+.field public static media_type_picker__file:I = 0x7f1306d0
 
-    invoke-static {v0}, Lzsi;->e(Ljava/lang/CharSequence;)Z
+.field public static media_type_picker__file_dialog__cancel:I = 0x7f1306d1
 
-    move-result v0
+.field public static media_type_picker__file_dialog__from_file_manager:I = 0x7f1306d2
 
-    if-nez v0, :cond_0
+.field public static media_type_picker__file_dialog__from_gallery:I = 0x7f1306d3
 
-    iget-object v0, p0, Lrnd;->c:Ljava/lang/String;
+.field public static media_type_picker__file_dialog__title:I = 0x7f1306d4
 
-    const-string v1, ":"
+.field public static media_type_picker__gallery:I = 0x7f1306d5
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+.field public static media_type_picker__input_hint:I = 0x7f1306d6
 
-    move-result v0
+.field public static media_type_picker__money:I = 0x7f1306d7
 
-    if-lez v0, :cond_0
+.field public static media_type_picker__permissions_dialog__button:I = 0x7f1306d8
 
-    iget-object v1, p0, Lrnd;->c:Ljava/lang/String;
+.field public static media_type_picker__permissions_dialog__camera_permission:I = 0x7f1306d9
 
-    add-int/lit8 v0, v0, 0x1
+.field public static media_type_picker__permissions_dialog__gallery_camera_subtitle:I = 0x7f1306da
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+.field public static media_type_picker__permissions_dialog__gallery_camera_title:I = 0x7f1306db
 
-    move-result v2
+.field public static media_type_picker__permissions_dialog__gallery_subtitle:I = 0x7f1306dc
 
-    invoke-virtual {v1, v0, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+.field public static media_type_picker__permissions_dialog__gallery_title:I = 0x7f1306dd
 
-    move-result-object v0
+.field public static media_type_picker__permissions_dialog__subtitle:I = 0x7f1306de
 
-    return-object v0
+.field public static media_type_picker__permissions_dialog__title:I = 0x7f1306df
 
-    :cond_0
-    const/4 v0, 0x0
+.field public static media_type_picker__place:I = 0x7f1306e0
 
-    return-object v0
-.end method
+.field public static media_type_picker__poll:I = 0x7f1306e1
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.field public static media_type_picker__snack_file:I = 0x7f1306e2
 
-    iget-object v0, p0, Lrnd;->c:Ljava/lang/String;
-
-    iget-boolean v1, p0, Lrnd;->d:Z
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "{redirectHost=\'"
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "\', tls="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static media_type_picker__snack_media:I = 0x7f1306e3

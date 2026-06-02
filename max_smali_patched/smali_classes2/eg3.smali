@@ -1,523 +1,402 @@
 .class public final Leg3;
-.super Ljava/lang/Object;
+.super Lfxi;
 .source "SourceFile"
-
-# interfaces
-.implements Le94;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final l:J
 
-.field public final b:Ljava/lang/Object;
+.field public final m:J
+
+.field public final n:Z
+
+.field public final o:Z
+
+.field public final p:Z
+
+.field public final q:Z
+
+.field public final r:Ljava/util/ArrayList;
+
+.field public final s:Loxg;
+
+.field public t:Lcg3;
+
+.field public u:Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException;
+
+.field public v:J
+
+.field public w:J
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Lag3;)V
+    .locals 2
 
-    .line 1
-    iput p1, p0, Leg3;->a:I
+    iget-object v0, p1, Lag3;->a:Lwo0;
 
-    iput-object p2, p0, Leg3;->b:Ljava/lang/Object;
+    invoke-direct {p0, v0}, Lfxi;-><init>(Lwo0;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-wide v0, p1, Lag3;->b:J
 
-    return-void
-.end method
+    iput-wide v0, p0, Leg3;->l:J
 
-.method public constructor <init>(La94;)V
-    .locals 1
+    iget-wide v0, p1, Lag3;->c:J
 
-    const/4 v0, 0x0
+    iput-wide v0, p0, Leg3;->m:J
 
-    iput v0, p0, Leg3;->a:I
+    iget-boolean v0, p1, Lag3;->d:Z
 
-    .line 2
-    invoke-virtual {p1}, La94;->getInstanceId()Ljava/lang/String;
+    iput-boolean v0, p0, Leg3;->n:Z
 
-    move-result-object p1
+    iget-boolean v0, p1, Lag3;->e:Z
 
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-boolean v0, p0, Leg3;->o:Z
 
-    iput-object p1, p0, Leg3;->b:Ljava/lang/Object;
+    iget-boolean v0, p1, Lag3;->f:Z
 
-    return-void
-.end method
+    iput-boolean v0, p0, Leg3;->p:Z
 
-.method private final c(La94;La94;Z)V
-    .locals 0
+    iget-boolean p1, p1, Lag3;->g:Z
 
-    return-void
-.end method
+    iput-boolean p1, p0, Leg3;->q:Z
 
-.method private final d(La94;La94;Z)V
-    .locals 0
+    new-instance p1, Ljava/util/ArrayList;
 
-    return-void
-.end method
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-.method private final e(La94;La94;Z)V
-    .locals 0
+    iput-object p1, p0, Leg3;->r:Ljava/util/ArrayList;
 
-    return-void
-.end method
+    new-instance p1, Loxg;
 
-.method private final f(La94;La94;Z)V
-    .locals 0
+    invoke-direct {p1}, Loxg;-><init>()V
+
+    iput-object p1, p0, Leg3;->s:Loxg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(La94;La94;Z)V
-    .locals 6
+.method public final D(Lqxg;)V
+    .locals 1
 
-    iget p3, p0, Leg3;->a:I
+    iget-object v0, p0, Leg3;->u:Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException;
 
-    iget-object v0, p0, Leg3;->b:Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    packed-switch p3, :pswitch_data_0
-
-    check-cast v0, Lone/me/android/root/RootController;
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {v0}, Lone/me/android/root/RootController;->F0()Lw4e;
-
-    move-result-object p2
-
-    iget-object p2, p2, Lw4e;->a:Lch0;
-
-    iget-object p2, p2, Lch0;->a:Ljava/util/ArrayDeque;
-
-    invoke-virtual {p2}, Ljava/util/ArrayDeque;->size()I
-
-    move-result p2
-
-    if-lez p2, :cond_0
-
-    instance-of p2, p1, Lone/me/sdk/arch/Widget;
-
-    if-eqz p2, :cond_0
-
-    check-cast p1, Lone/me/sdk/arch/Widget;
-
-    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->isDialog()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    invoke-virtual {v0}, Lone/me/android/root/RootController;->F0()Lw4e;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lw4e;->C()Z
+    return-void
 
     :cond_0
-    return-void
-
-    :pswitch_0
-    check-cast v0, Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;
-
-    sget-object p1, Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;->z0:[Lz28;
-
-    iget-object p1, v0, Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;->w0:Ljld;
-
-    sget-object p2, Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;->z0:[Lz28;
-
-    const/4 p3, 0x4
-
-    aget-object p2, p2, p3
-
-    invoke-interface {p1, v0, p2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lz9;
-
-    invoke-virtual {p1}, Landroid/view/View;->clearFocus()V
+    invoke-virtual {p0, p1}, Leg3;->G(Lqxg;)V
 
     return-void
+.end method
 
-    :pswitch_1
-    check-cast v0, Lone/me/android/MainActivity;
+.method public final G(Lqxg;)V
+    .locals 16
 
-    iget-object p3, v0, Lone/me/android/MainActivity;->W0:Ljava/lang/Object;
-
-    iget-object v1, v0, Lone/me/android/MainActivity;->V0:Lrd1;
+    move-object/from16 v1, p0
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_1
+    iget-object v0, v1, Leg3;->s:Loxg;
 
-    invoke-virtual {v1}, Lrd1;->c()Z
+    move-object/from16 v4, p1
 
-    move-result v1
+    invoke-virtual {v4, v2, v0}, Lqxg;->n(ILoxg;)V
 
-    const/4 v3, 0x1
+    iget-wide v5, v0, Loxg;->p:J
 
-    if-ne v1, v3, :cond_1
+    iget-object v3, v1, Leg3;->t:Lcg3;
 
-    move v2, v3
+    iget-wide v7, v1, Leg3;->m:J
 
-    :cond_1
-    if-eqz p2, :cond_a
+    const-wide/high16 v9, -0x8000000000000000L
 
-    instance-of v1, p1, Lpde;
+    iget-object v11, v1, Leg3;->r:Ljava/util/ArrayList;
 
-    if-eqz v1, :cond_2
+    if-eqz v3, :cond_2
 
-    move-object v1, p1
+    invoke-virtual {v11}, Ljava/util/ArrayList;->isEmpty()Z
 
-    check-cast v1, Lpde;
+    move-result v3
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    if-nez v3, :cond_2
 
-    move-result-object v3
+    iget-boolean v3, v1, Leg3;->o:Z
 
-    invoke-interface {v1, v3}, Lpde;->c(Landroid/view/Window;)V
-
-    goto :goto_3
-
-    :cond_2
-    instance-of v1, p2, Lpde;
-
-    const/4 v3, 0x0
-
-    if-eqz v1, :cond_3
-
-    move-object v1, p2
-
-    check-cast v1, Lpde;
-
-    goto :goto_0
-
-    :cond_3
-    move-object v1, v3
-
-    :goto_0
-    if-eqz v1, :cond_4
-
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v4
-
-    invoke-interface {v1, v4}, Lpde;->m(Landroid/view/Window;)V
-
-    :cond_4
-    invoke-interface {p3}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lh41;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v4
-
-    iget-object v1, v1, Lh41;->a:Lmp8;
-
-    if-eqz v2, :cond_9
-
-    invoke-interface {v1}, Llq6;->invoke()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lc5e;
-
-    if-eqz v5, :cond_5
-
-    check-cast v5, Lone/me/android/root/RootController;
-
-    invoke-virtual {v5}, Lone/me/android/root/RootController;->I0()Lw4e;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Lw4e;->e()Ljava/util/ArrayList;
-
-    move-result-object v5
-
-    invoke-static {v5}, Lpi3;->N(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lz4e;
-
-    if-eqz v5, :cond_5
-
-    iget-object v5, v5, Lz4e;->a:La94;
-
-    goto :goto_1
-
-    :cond_5
-    move-object v5, v3
-
-    :goto_1
-    if-nez v5, :cond_7
-
-    invoke-interface {v1}, Llq6;->invoke()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lc5e;
-
-    if-eqz v1, :cond_6
-
-    invoke-interface {v1}, Lc5e;->y()La94;
-
-    move-result-object v1
-
-    move-object v5, v1
+    if-eqz v3, :cond_0
 
     goto :goto_2
 
-    :cond_6
-    move-object v5, v3
+    :cond_0
+    iget-wide v12, v1, Leg3;->v:J
 
-    :cond_7
+    sub-long/2addr v12, v5
+
+    cmp-long v0, v7, v9
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget-wide v7, v1, Leg3;->w:J
+
+    sub-long v9, v7, v5
+
+    :goto_0
+    move-wide v7, v9
+
+    :goto_1
+    move-wide v5, v12
+
+    goto :goto_6
+
+    :cond_2
     :goto_2
-    instance-of v1, v5, Lpde;
+    iget-boolean v3, v1, Leg3;->p:Z
 
-    if-eqz v1, :cond_8
+    iget-wide v12, v1, Leg3;->l:J
 
-    move-object v3, v5
+    if-eqz v3, :cond_3
 
-    check-cast v3, Lpde;
+    iget-wide v14, v0, Loxg;->l:J
 
-    :cond_8
-    if-eqz v3, :cond_9
+    add-long/2addr v12, v14
 
-    invoke-interface {v3, v4}, Lpde;->c(Landroid/view/Window;)V
+    add-long/2addr v14, v7
 
-    :cond_9
+    goto :goto_3
+
+    :cond_3
+    move-wide v14, v7
+
     :goto_3
-    if-nez p1, :cond_a
+    add-long v2, v5, v12
+
+    iput-wide v2, v1, Leg3;->v:J
+
+    cmp-long v0, v7, v9
+
+    if-nez v0, :cond_4
 
     goto :goto_4
 
-    :cond_a
-    invoke-interface {p3}, Lo58;->getValue()Ljava/lang/Object;
+    :cond_4
+    add-long v9, v5, v14
 
-    move-result-object p3
+    :goto_4
+    iput-wide v9, v1, Leg3;->w:J
 
-    check-cast p3, Lh41;
+    invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    move-result v0
+
+    const/4 v2, 0x0
+
+    :goto_5
+    if-ge v2, v0, :cond_5
+
+    invoke-virtual {v11, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lzf3;
+
+    iget-wide v5, v1, Leg3;->v:J
+
+    iget-wide v7, v1, Leg3;->w:J
+
+    iput-wide v5, v3, Lzf3;->o:J
+
+    iput-wide v7, v3, Lzf3;->X:J
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_5
+
+    :cond_5
+    move-wide v7, v14
+
+    goto :goto_1
+
+    :goto_6
+    :try_start_0
+    new-instance v3, Lcg3;
+
+    iget-boolean v9, v1, Leg3;->q:Z
+
+    invoke-direct/range {v3 .. v9}, Lcg3;-><init>(Lqxg;JJZ)V
+
+    iput-object v3, v1, Leg3;->t:Lcg3;
+    :try_end_0
+    .catch Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    invoke-virtual {v1, v3}, Lwo0;->p(Lqxg;)V
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    iput-object v0, v1, Leg3;->u:Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException;
+
+    const/4 v2, 0x0
+
+    :goto_7
+    invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-ge v2, v0, :cond_6
+
+    invoke-virtual {v11, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {p3, v0, p2, p1, v2}, Lh41;->a(Landroid/view/Window;La94;La94;Z)V
+    check-cast v0, Lzf3;
 
-    :goto_4
+    iget-object v3, v1, Leg3;->u:Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException;
+
+    iput-object v3, v0, Lzf3;->Y:Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException;
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_7
+
+    :cond_6
     return-void
-
-    :pswitch_2
-    check-cast v0, Lone/me/chatscreen/ChatScreen;
-
-    instance-of p2, p1, Lgja;
-
-    if-eqz p2, :cond_b
-
-    invoke-static {p1, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_b
-
-    iget-object p2, v0, Lone/me/chatscreen/ChatScreen;->o:Llja;
-
-    move-object p3, p1
-
-    check-cast p3, Lgja;
-
-    invoke-interface {p3}, Lgja;->o()Llce;
-
-    move-result-object p3
-
-    invoke-static {p2, p3}, Llja;->g(Llja;Llce;)V
-
-    :cond_b
-    invoke-static {p1, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_c
-
-    goto :goto_5
-
-    :cond_c
-    if-eqz p1, :cond_d
-
-    instance-of p1, p1, Lpna;
-
-    if-nez p1, :cond_d
-
-    sget-object p1, Lone/me/chatscreen/ChatScreen;->n1:[Lz28;
-
-    invoke-virtual {v0}, Lone/me/chatscreen/ChatScreen;->d1()Lkod;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lkod;->o:Lcm5;
-
-    sget-object p2, Lbod;->a:Lbod;
-
-    invoke-static {p1, p2}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
-
-    goto :goto_5
-
-    :cond_d
-    sget-object p1, Lone/me/chatscreen/ChatScreen;->n1:[Lz28;
-
-    invoke-virtual {v0}, Lone/me/chatscreen/ChatScreen;->d1()Lkod;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lkod;->o:Lcm5;
-
-    sget-object p2, Laod;->a:Laod;
-
-    invoke-static {p1, p2}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
-
-    :goto_5
-    :pswitch_3
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public final b(La94;La94;Z)V
-    .locals 2
+.method public final c(Ln99;)Z
+    .locals 3
 
-    iget v0, p0, Leg3;->a:I
+    iget-object v0, p0, Lfxi;->k:Lwo0;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Lwo0;->k()Ln99;
 
-    if-nez p3, :cond_1
+    move-result-object v1
+
+    iget-object v1, v1, Ln99;->e:Lv89;
+
+    iget-object v2, p1, Ln99;->e:Lv89;
+
+    invoke-virtual {v1, v2}, Lt89;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0, p1}, Lwo0;->c(Ln99;)Z
+
+    move-result p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 p1, 0x1
 
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_0
+    return p1
 
     :cond_0
     const/4 p1, 0x0
 
-    :goto_0
-    new-instance p2, Ljava/lang/StringBuilder;
+    return p1
+.end method
 
-    const-string p3, "pop to "
+.method public final e(Lki9;Lko4;J)Lqb9;
+    .locals 7
 
-    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    new-instance v0, Lzf3;
 
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lfxi;->k:Lwo0;
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1, p1, p2, p3, p4}, Lwo0;->e(Lki9;Lko4;J)Lqb9;
 
-    move-result-object p1
+    move-result-object v1
 
-    const-string p2, "RootController"
+    iget-wide v3, p0, Leg3;->v:J
 
-    invoke-static {p2, p1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+    iget-wide v5, p0, Leg3;->w:J
 
-    :cond_1
-    :pswitch_0
+    iget-boolean v2, p0, Leg3;->n:Z
+
+    invoke-direct/range {v0 .. v6}, Lzf3;-><init>(Lqb9;ZJJ)V
+
+    iget-object p1, p0, Leg3;->r:Ljava/util/ArrayList;
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-object v0
+.end method
+
+.method public final m()V
+    .locals 1
+
+    iget-object v0, p0, Leg3;->u:Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException;
+
+    if-nez v0, :cond_0
+
+    invoke-super {p0}, Lcr3;->m()V
+
     return-void
 
-    :pswitch_1
-    if-eqz p2, :cond_2
+    :cond_0
+    throw v0
+.end method
 
-    invoke-virtual {p2}, La94;->getInstanceId()Ljava/lang/String;
+.method public final q(Lqb9;)V
+    .locals 2
 
-    move-result-object p1
+    iget-object v0, p0, Leg3;->r:Ljava/util/ArrayList;
 
-    goto :goto_1
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    :cond_2
-    const/4 p1, 0x0
+    move-result v1
 
-    :goto_1
-    iget-object v0, p0, Leg3;->b:Ljava/lang/Object;
+    invoke-static {v1}, Lh43;->o(Z)V
 
-    check-cast v0, Ljava/lang/String;
+    check-cast p1, Lzf3;
 
-    invoke-static {p1, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object p1, p1, Lzf3;->a:Lqb9;
+
+    iget-object v1, p0, Lfxi;->k:Lwo0;
+
+    invoke-virtual {v1, p1}, Lwo0;->q(Lqb9;)V
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_0
 
-    if-eqz p3, :cond_3
+    iget-boolean p1, p0, Leg3;->o:Z
 
-    const-class p1, Leg3;
+    if-nez p1, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    iget-object p1, p0, Leg3;->t:Lcg3;
 
-    move-result-object p1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p1, p1, Lpo6;->e:Lqxg;
 
-    move-result-object p3
+    invoke-virtual {p0, p1}, Leg3;->G(Lqxg;)V
 
-    invoke-virtual {p3}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Close controller:"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p3, " after push new controller"
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-static {p1, p3}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p2}, La94;->getRouter()Lw4e;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p2}, Lw4e;->B(La94;)Z
-
-    invoke-virtual {p2}, La94;->getRouter()Lw4e;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p0}, Lw4e;->L(Le94;)V
-
-    :cond_3
+    :cond_0
     return-void
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
+.method public final s()V
+    .locals 1
+
+    invoke-super {p0}, Lcr3;->s()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Leg3;->u:Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException;
+
+    iput-object v0, p0, Leg3;->t:Lcg3;
+
+    return-void
 .end method

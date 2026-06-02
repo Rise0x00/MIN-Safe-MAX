@@ -1,29 +1,49 @@
-.class public abstract Lvra;
-.super Ljava/lang/Object;
+.class public final Lvra;
+.super Lq94;
 .source "SourceFile"
 
 
+# instance fields
+.field public final d:Z
+
+
 # direct methods
-.method public static a(Landroid/graphics/drawable/Icon;)Landroid/os/Parcelable;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public static b(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/app/Notification$Action$Builder;
+.method public constructor <init>()V
     .locals 1
 
-    new-instance v0, Landroid/app/Notification$Action$Builder;
+    invoke-direct {p0}, Lq94;-><init>()V
 
-    invoke-direct {v0, p0, p1, p2}, Landroid/app/Notification$Action$Builder;-><init>(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lvra;->d:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()Lq94;
+    .locals 1
+
+    new-instance v0, Lvra;
+
+    invoke-direct {v0}, Lvra;-><init>()V
 
     return-object v0
 .end method
 
-.method public static c(Landroid/app/Notification$Builder;Landroid/graphics/drawable/Icon;)V
+.method public final e()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lvra;->d:Z
+
+    return v0
+.end method
+
+.method public final g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLo94;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setLargeIcon(Landroid/graphics/drawable/Icon;)Landroid/app/Notification$Builder;
+    invoke-virtual {p5}, Lo94;->a()V
 
     return-void
 .end method

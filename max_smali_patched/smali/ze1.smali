@@ -3,62 +3,92 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ldf1;
+.implements La32;
 
 
 # static fields
-.field public static final a:Lze1;
+.field public static final d:Ltv7;
+
+.field public static final e:Ltv7;
+
+
+# instance fields
+.field public final a:Ls3b;
+
+.field public final b:Lia8;
+
+.field public final c:Lakg;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
-    new-instance v0, Lze1;
+    new-instance v0, Ltv7;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0x63
 
-    sput-object v0, Lze1;->a:Lze1;
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v2, v1, v2}, Lrv7;-><init>(III)V
+
+    sput-object v0, Lze1;->d:Ltv7;
+
+    new-instance v0, Ltv7;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v2, v1, v2}, Lrv7;-><init>(III)V
+
+    sput-object v0, Lze1;->e:Ltv7;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lia8;Lia8;Lia8;Ls3b;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p4, p0, Lze1;->a:Ls3b;
+
+    iput-object p10, p0, Lze1;->b:Lia8;
+
+    move-object p4, p5
+
+    move-object p5, p1
+
+    new-instance p1, Lve1;
+
+    move-object p10, p9
+
+    move-object p9, p2
+
+    move-object p2, p0
+
+    invoke-direct/range {p1 .. p10}, Lve1;-><init>(Lze1;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;)V
+
+    new-instance p3, Lakg;
+
+    invoke-direct {p3, p1}, Lakg;-><init>(Lxs6;)V
+
+    iput-object p3, p2, Lze1;->c:Lakg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final b()Lgjc;
     .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lze1;->b:Lia8;
 
-    if-ne p0, p1, :cond_0
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
 
-    return v0
+    move-result-object v0
 
-    :cond_0
-    instance-of p1, p1, Lze1;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x2fe4f2f9
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "OpenCallIncoming"
+    check-cast v0, Lgjc;
 
     return-object v0
 .end method

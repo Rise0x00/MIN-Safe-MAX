@@ -1,49 +1,49 @@
 .class public final Lh1e;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Ln1e;
+.field public final a:Lfhg;
 
-.field public Y:I
+.field public final b:Lfxg;
 
-.field public d:Ln1e;
+.field public final c:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public d:Z
+
+.field public e:I
+
+.field public f:Ljava/util/concurrent/ScheduledFuture;
+
+.field public final synthetic g:Lj1e;
 
 
 # direct methods
-.method public constructor <init>(Ln1e;Lo84;)V
-    .locals 0
-
-    iput-object p1, p0, Lh1e;->X:Ln1e;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Lj1e;Lfhg;Lfxg;ZI)V
     .locals 1
 
-    iput-object p1, p0, Lh1e;->o:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget p1, p0, Lh1e;->Y:I
+    iput-object p1, p0, Lh1e;->g:Lj1e;
 
-    const/high16 v0, -0x80000000
+    const/4 v0, 0x0
 
-    or-int/2addr p1, v0
+    iput-boolean v0, p0, Lh1e;->d:Z
 
-    iput p1, p0, Lh1e;->Y:I
+    iput v0, p0, Lh1e;->e:I
 
-    iget-object p1, p0, Lh1e;->X:Ln1e;
+    const/4 v0, 0x0
 
-    invoke-static {p1, p0}, Ln1e;->b(Ln1e;Lo84;)Ljava/lang/Object;
+    iput-object v0, p0, Lh1e;->f:Ljava/util/concurrent/ScheduledFuture;
 
-    move-result-object p1
+    iput-object p2, p0, Lh1e;->a:Lfhg;
 
-    return-object p1
+    iput-object p3, p0, Lh1e;->b:Lfxg;
+
+    iput-boolean p4, p1, Lj1e;->l0:Z
+
+    iput p5, p0, Lh1e;->c:I
+
+    return-void
 .end method

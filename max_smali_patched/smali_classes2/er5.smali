@@ -1,201 +1,211 @@
 .class public final Ler5;
-.super Landroid/view/TouchDelegate;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final d:Ljava/nio/charset/Charset;
+
+.field public static final e:[Ljava/lang/String;
+
+.field public static final f:[I
+
+
 # instance fields
-.field public a:Z
+.field public final a:I
 
-.field public final b:Landroid/graphics/Rect;
+.field public final b:I
 
-.field public final c:I
-
-.field public final d:Landroid/graphics/Rect;
-
-.field public final e:Landroid/view/View;
+.field public final c:[B
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/Rect;Landroid/view/View;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 15
 
-    invoke-direct {p0, p1, p2}, Landroid/view/TouchDelegate;-><init>(Landroid/graphics/Rect;Landroid/view/View;)V
+    sget-object v0, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
 
-    iput-object p1, p0, Ler5;->b:Landroid/graphics/Rect;
+    sput-object v0, Ler5;->d:Ljava/nio/charset/Charset;
 
-    iput-object p2, p0, Ler5;->e:Landroid/view/View;
+    const-string v13, "DOUBLE"
 
-    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
+    const-string v14, "IFD"
 
-    move-result-object p2
+    const-string v1, ""
 
-    invoke-static {p2}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+    const-string v2, "BYTE"
 
-    move-result-object p2
+    const-string v3, "STRING"
 
-    invoke-virtual {p2}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
+    const-string v4, "USHORT"
 
-    move-result p2
+    const-string v5, "ULONG"
 
-    iput p2, p0, Ler5;->c:I
+    const-string v6, "URATIONAL"
 
-    new-instance v0, Landroid/graphics/Rect;
+    const-string v7, "SBYTE"
 
-    invoke-direct {v0, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
+    const-string v8, "UNDEFINED"
 
-    iput-object v0, p0, Ler5;->d:Landroid/graphics/Rect;
+    const-string v9, "SSHORT"
 
-    neg-int p1, p2
+    const-string v10, "SLONG"
 
-    invoke-virtual {v0, p1, p1}, Landroid/graphics/Rect;->inset(II)V
+    const-string v11, "SRATIONAL"
+
+    const-string v12, "SINGLE"
+
+    filled-new-array/range {v1 .. v14}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ler5;->e:[Ljava/lang/String;
+
+    const/16 v0, 0xe
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_0
+
+    sput-object v0, Ler5;->f:[I
+
+    return-void
+
+    :array_0
+    .array-data 4
+        0x0
+        0x1
+        0x1
+        0x2
+        0x4
+        0x8
+        0x1
+        0x1
+        0x2
+        0x4
+        0x8
+        0x4
+        0x8
+        0x1
+    .end array-data
+.end method
+
+.method public constructor <init>(I[BI)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Ler5;->a:I
+
+    iput p3, p0, Ler5;->b:I
+
+    iput-object p2, p0, Ler5;->c:[B
 
     return-void
 .end method
 
+.method public static a(JLjava/nio/ByteOrder;)Ler5;
+    .locals 2
 
-# virtual methods
-.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 7
+    const/4 v0, 0x1
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+    new-array v0, v0, [J
 
-    move-result v0
+    const/4 v1, 0x0
 
-    float-to-int v0, v0
+    aput-wide p0, v0, v1
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+    invoke-static {v0, p2}, Ler5;->b([JLjava/nio/ByteOrder;)Ler5;
 
-    move-result v1
+    move-result-object p0
 
-    float-to-int v1, v1
+    return-object p0
+.end method
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
+.method public static b([JLjava/nio/ByteOrder;)Ler5;
+    .locals 5
 
-    move-result v2
+    sget-object v0, Ler5;->f:[I
 
-    const/4 v3, 0x2
+    const/4 v1, 0x4
 
-    const/4 v4, 0x0
+    aget v0, v0, v1
 
-    const/4 v5, 0x1
+    array-length v2, p0
 
-    if-eqz v2, :cond_3
+    mul-int/2addr v0, v2
 
-    if-eq v2, v5, :cond_1
+    new-array v0, v0, [B
 
-    if-eq v2, v3, :cond_1
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
-    const/4 v6, 0x3
+    move-result-object v0
 
-    if-eq v2, v6, :cond_0
+    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    const/4 v6, 0x5
+    array-length p1, p0
 
-    if-eq v2, v6, :cond_1
+    const/4 v2, 0x0
 
-    const/4 v6, 0x6
+    :goto_0
+    if-ge v2, p1, :cond_0
 
-    if-eq v2, v6, :cond_1
+    aget-wide v3, p0, v2
 
-    move v0, v4
+    long-to-int v3, v3
+
+    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_0
-    iget-boolean v0, p0, Ler5;->a:Z
+    new-instance p1, Ler5;
 
-    iput-boolean v4, p0, Ler5;->a:Z
+    array-length p0, p0
 
-    goto :goto_0
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
-    :cond_1
-    iget-boolean v2, p0, Ler5;->a:Z
+    move-result-object v0
 
-    if-eqz v2, :cond_2
+    invoke-direct {p1, v1, v0, p0}, Ler5;-><init>(I[BI)V
 
-    iget-object v6, p0, Ler5;->d:Landroid/graphics/Rect;
+    return-object p1
+.end method
 
-    invoke-virtual {v6, v0, v1}, Landroid/graphics/Rect;->contains(II)Z
 
-    move-result v0
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    if-nez v0, :cond_2
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move v0, v2
+    const-string v1, "("
 
-    move v5, v4
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    goto :goto_0
+    sget-object v1, Ler5;->e:[Ljava/lang/String;
 
-    :cond_2
-    move v0, v2
+    iget v2, p0, Ler5;->a:I
 
-    goto :goto_0
+    aget-object v1, v1, v2
 
-    :cond_3
-    iget-object v2, p0, Ler5;->b:Landroid/graphics/Rect;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v0, v1}, Landroid/graphics/Rect;->contains(II)Z
+    const-string v1, ", data length:"
 
-    move-result v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-boolean v0, p0, Ler5;->a:Z
+    iget-object v1, p0, Ler5;->c:[B
 
-    :goto_0
-    if-eqz v0, :cond_5
+    array-length v1, v1
 
-    iget-object v0, p0, Ler5;->e:Landroid/view/View;
+    const-string v2, ")"
 
-    if-eqz v5, :cond_4
+    invoke-static {v0, v1, v2}, Lsb6;->p(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+    move-result-object v0
 
-    move-result v1
-
-    div-int/2addr v1, v3
-
-    int-to-float v1, v1
-
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
-
-    move-result v2
-
-    div-int/2addr v2, v3
-
-    int-to-float v2, v2
-
-    invoke-virtual {p1, v1, v2}, Landroid/view/MotionEvent;->setLocation(FF)V
-
-    goto :goto_1
-
-    :cond_4
-    iget v1, p0, Ler5;->c:I
-
-    mul-int/2addr v1, v3
-
-    int-to-float v1, v1
-
-    neg-float v1, v1
-
-    invoke-virtual {p1, v1, v1}, Landroid/view/MotionEvent;->setLocation(FF)V
-
-    :goto_1
-    invoke-virtual {v0}, Landroid/view/View;->getTouchDelegate()Landroid/view/TouchDelegate;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setTouchDelegate(Landroid/view/TouchDelegate;)V
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTouchDelegate(Landroid/view/TouchDelegate;)V
-
-    return p1
-
-    :cond_5
-    return v4
+    return-object v0
 .end method

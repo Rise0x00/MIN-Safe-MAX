@@ -1,200 +1,181 @@
-.class public final synthetic Lhf3;
-.super Ljava/lang/Object;
+.class public final Lhf3;
+.super Luqc;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/Consumer;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Ljava/util/List;
 
+.field public b:Ljava/util/ArrayList;
 
-# direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    .line 1
-    iput p1, p0, Lhf3;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lyd7;)V
-    .locals 0
-
-    .line 2
-    const/4 p1, 0x2
-
-    iput p1, p0, Lhf3;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public c:I
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 2
+.method public final a()[B
+    .locals 6
 
-    iget v0, p0, Lhf3;->a:I
+    iget-object v0, p0, Lhf3;->a:Ljava/util/List;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
 
-    check-cast p1, Ld3d;
+    move-result-object v0
 
-    return-void
+    new-instance v1, Ln0;
 
-    :pswitch_0
-    check-cast p1, Ld3d;
+    const/4 v2, 0x7
 
-    iget-object v0, p1, Ld3d;->f:Ljyf;
+    invoke-direct {v1, v2}, Ln0;-><init>(I)V
 
-    invoke-virtual {v0}, Ljyf;->l()V
+    invoke-interface {v0, v1}, Ljava/util/stream/Stream;->mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
 
-    iget-object p1, p1, Ld3d;->e:Layf;
+    move-result-object v0
 
-    invoke-virtual {p1}, Layf;->l()V
+    invoke-interface {v0}, Ljava/util/stream/IntStream;->sum()I
 
-    return-void
+    move-result v0
 
-    :pswitch_1
-    check-cast p1, Ldv3;
+    iget-object v1, p0, Lhf3;->b:Ljava/util/ArrayList;
 
-    const/4 v0, 0x2
-
-    iput v0, p1, Ldv3;->c:I
-
-    return-void
-
-    :pswitch_2
-    check-cast p1, Ldv3;
-
-    const/4 v0, 0x3
-
-    iput v0, p1, Ldv3;->c:I
-
-    return-void
-
-    :pswitch_3
-    check-cast p1, Lhei;
-
-    sget-object p1, Ljava/lang/System;->err:Ljava/io/PrintStream;
-
-    const-string v0, "No handler set for incoming bidirectional stream."
-
-    invoke-virtual {p1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_4
-    check-cast p1, Lhei;
-
-    sget-object p1, Ljava/lang/System;->err:Ljava/io/PrintStream;
-
-    const-string v0, "No handler set for incoming unidirectional stream."
-
-    invoke-virtual {p1, v0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_5
-    check-cast p1, Lnd7;
-
-    const-wide/32 v0, 0x170d7b68
-
-    invoke-interface {p1, v0, v1}, Lnd7;->d(J)V
-
-    return-void
-
-    :pswitch_6
-    check-cast p1, Lnd7;
-
-    const-wide/32 v0, 0x170d7b68
-
-    invoke-interface {p1, v0, v1}, Lnd7;->e(J)V
-
-    return-void
-
-    :pswitch_7
-    check-cast p1, Lsoe;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Lsoe;->b(Z)V
-
-    return-void
-
-    :pswitch_8
-    check-cast p1, Lc3d;
-
-    return-void
-
-    :pswitch_9
-    check-cast p1, Ljava/lang/Runnable;
-
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
-
-    return-void
-
-    :pswitch_a
-    check-cast p1, Lb3d;
-
-    return-void
-
-    :pswitch_b
-    check-cast p1, Ljava/util/Map$Entry;
-
-    sget-object v0, Lyd7;->a:[Lxd7;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
 
     move-result-object v1
 
-    check-cast v1, Ljava/lang/String;
+    new-instance v2, Ln0;
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    const/16 v3, 0x8
 
-    move-result-object p1
+    invoke-direct {v2, v3}, Ln0;-><init>(I)V
 
-    check-cast p1, Ljava/lang/Integer;
+    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    move-result-object v1
 
-    move-result p1
+    invoke-interface {v1}, Ljava/util/stream/IntStream;->sum()I
 
-    invoke-static {v0, v1, p1}, Lyd7;->a([Lxd7;Ljava/lang/String;I)V
+    move-result v1
 
-    return-void
+    add-int/lit8 v2, v0, 0x4
 
-    :pswitch_c
-    check-cast p1, Lnd7;
+    add-int/2addr v2, v1
 
-    return-void
+    add-int/lit8 v3, v2, 0x4
 
-    :pswitch_d
-    check-cast p1, Lhei;
+    invoke-static {v3}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
-    return-void
+    move-result-object v3
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    sget-object v4, Lkzg;->X:Lkzg;
+
+    iget-short v4, v4, Lkzg;->a:S
+
+    invoke-virtual {v3, v4}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    int-to-short v2, v2
+
+    invoke-virtual {v3, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    int-to-short v0, v0
+
+    invoke-virtual {v3, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    iget-object v0, p0, Lhf3;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lgf3;
+
+    iget-object v4, v2, Lgf3;->a:[B
+
+    array-length v4, v4
+
+    int-to-short v4, v4
+
+    invoke-virtual {v3, v4}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    iget-object v4, v2, Lgf3;->a:[B
+
+    invoke-virtual {v3, v4}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    iget-wide v4, v2, Lgf3;->b:J
+
+    long-to-int v2, v4
+
+    invoke-virtual {v3, v2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3}, Ljava/nio/Buffer;->position()I
+
+    move-result v0
+
+    iput v0, p0, Lhf3;->c:I
+
+    int-to-short v0, v1
+
+    invoke-virtual {v3, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    iget-object v0, p0, Lhf3;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lff3;
+
+    iget-object v2, v1, Lff3;->a:[B
+
+    array-length v2, v2
+
+    int-to-byte v2, v2
+
+    invoke-virtual {v3, v2}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    iget-object v1, v1, Lff3;->a:[B
+
+    invoke-virtual {v3, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v3}, Ljava/nio/Buffer;->position()I
+
+    move-result v0
+
+    new-array v0, v0, [B
+
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v3, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
+
+    return-object v0
 .end method

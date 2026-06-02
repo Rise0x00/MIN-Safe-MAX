@@ -19,7 +19,7 @@
 
     if-nez p2, :cond_0
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -34,21 +34,21 @@
 
     if-eqz v1, :cond_1
 
-    new-instance p2, Lis;
+    new-instance p2, Lcu;
 
-    const/4 v0, 0x2
+    const/4 v0, 0x1
 
-    invoke-direct {p2, v0}, Lis;-><init>(I)V
+    invoke-direct {p2, v0}, Lcu;-><init>(I)V
 
-    new-instance v0, La4a;
+    new-instance v0, Leyf;
 
-    const/16 v1, 0x1b
+    const/16 v1, 0x10
 
-    invoke-direct {v0, v1, p0}, La4a;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Leyf;-><init>(ILjava/lang/Object;)V
 
     const/4 v1, 0x1
 
-    invoke-static {p1, p2, v0, v1}, Lvti;->f(Landroid/content/Context;Ljava/util/concurrent/Executor;Liqc;Z)V
+    invoke-static {p1, p2, v0, v1}, Lh43;->e0(Landroid/content/Context;Ljava/util/concurrent/Executor;Lp1d;Z)V
 
     return-void
 
@@ -59,11 +59,9 @@
 
     move-result v1
 
-    const-string v2, "ProfileInstaller"
+    const/16 v2, 0xa
 
-    const/16 v3, 0xa
-
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
     if-eqz v1, :cond_3
 
@@ -71,7 +69,7 @@
 
     move-result-object p2
 
-    if-eqz p2, :cond_9
+    if-eqz p2, :cond_7
 
     const-string v0, "EXTRA_SKIP_FILE_OPERATION"
 
@@ -87,11 +85,11 @@
 
     if-eqz v0, :cond_2
 
-    new-instance p2, La4a;
+    new-instance p2, Leyf;
 
-    const/16 v0, 0x1b
+    const/16 v0, 0x10
 
-    invoke-direct {p2, v0, p0}, La4a;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, v0, p0}, Leyf;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -105,10 +103,10 @@
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    const/4 v4, 0x0
 
     :try_start_0
-    invoke-virtual {v1, v0, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    invoke-virtual {v1, v0, v4}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object v0
     :try_end_0
@@ -118,20 +116,32 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lvti;->d(Landroid/content/pm/PackageInfo;Ljava/io/File;)V
+    invoke-static {v0, p1}, Lh43;->N(Landroid/content/pm/PackageInfo;Ljava/io/File;)V
 
-    invoke-virtual {p2, v3, v4}, La4a;->o(ILjava/lang/Object;)V
+    new-instance p1, Lw42;
 
-    goto/16 :goto_1
+    const/16 v0, 0xe
+
+    invoke-direct {p1, p2, v2, v3, v0}, Lw42;-><init>(Ljava/lang/Object;ILjava/lang/Object;I)V
+
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    goto/16 :goto_0
 
     :catch_0
     move-exception p1
 
-    const/4 v0, 0x7
+    new-instance v0, Lw42;
 
-    invoke-virtual {p2, v0, p1}, La4a;->o(ILjava/lang/Object;)V
+    const/16 v1, 0xe
 
-    goto/16 :goto_1
+    const/4 v2, 0x7
+
+    invoke-direct {v0, p2, v2, p1, v1}, Lw42;-><init>(Ljava/lang/Object;ILjava/lang/Object;I)V
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    goto/16 :goto_0
 
     :cond_2
     const-string v0, "DELETE_SKIP_FILE"
@@ -140,27 +150,35 @@
 
     move-result p2
 
-    if-eqz p2, :cond_9
+    if-eqz p2, :cond_7
+
+    new-instance p2, Leyf;
+
+    const/16 v0, 0x10
+
+    invoke-direct {p2, v0, p0}, Leyf;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
 
     move-result-object p1
 
-    new-instance p2, Ljava/io/File;
+    new-instance v0, Ljava/io/File;
 
-    const-string v0, "profileinstaller_profileWrittenFor_lastUpdateTime.dat"
+    const-string v1, "profileinstaller_profileWrittenFor_lastUpdateTime.dat"
 
-    invoke-direct {p2, p1, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    invoke-virtual {p2}, Ljava/io/File;->delete()Z
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    const-string p1, "RESULT_DELETE_SKIP_FILE_SUCCESS"
+    new-instance p1, Lw42;
 
-    invoke-static {v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const/16 v0, 0xe
 
-    const/16 p1, 0xb
+    const/16 v1, 0xb
 
-    invoke-virtual {p0, p1}, Landroid/content/BroadcastReceiver;->setResultCode(I)V
+    invoke-direct {p1, p2, v1, v3, v0}, Lw42;-><init>(Ljava/lang/Object;ILjava/lang/Object;I)V
+
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     return-void
 
@@ -171,7 +189,7 @@
 
     move-result v1
 
-    const/16 v5, 0xc
+    const/16 v4, 0xc
 
     if-eqz v1, :cond_4
 
@@ -179,13 +197,15 @@
 
     move-result p1
 
-    invoke-static {p1, v3}, Landroid/os/Process;->sendSignal(II)V
+    invoke-static {p1, v2}, Landroid/os/Process;->sendSignal(II)V
 
-    const-string p1, ""
+    const-string p1, "ProfileInstaller"
 
-    invoke-static {v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const-string p2, ""
 
-    invoke-virtual {p0, v5}, Landroid/content/BroadcastReceiver;->setResultCode(I)V
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p0, v4}, Landroid/content/BroadcastReceiver;->setResultCode(I)V
 
     return-void
 
@@ -196,13 +216,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_7
 
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object p2
 
-    if-eqz p2, :cond_9
+    if-eqz p2, :cond_7
 
     const-string v0, "EXTRA_BENCHMARK_OPERATION"
 
@@ -210,73 +230,32 @@
 
     move-result-object v0
 
-    new-instance v1, La4a;
+    new-instance v1, Leyf;
 
-    const/16 v2, 0x1b
+    const/16 v5, 0x10
 
-    invoke-direct {v1, v2, p0}, La4a;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v5, p0}, Leyf;-><init>(ILjava/lang/Object;)V
 
-    const-string v2, "DROP_SHADER_CACHE"
+    const-string v5, "DROP_SHADER_CACHE"
 
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v5
 
-    if-eqz v2, :cond_7
+    if-eqz v5, :cond_5
 
-    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-static {v1, p1}, Lbkj;->b(Leyf;Landroid/content/Context;)V
 
-    const/16 v0, 0x22
-
-    if-lt p2, v0, :cond_5
-
-    invoke-virtual {p1}, Landroid/content/Context;->createDeviceProtectedStorageContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
-
-    move-result-object p1
-
-    goto :goto_0
+    return-void
 
     :cond_5
-    invoke-virtual {p1}, Landroid/content/Context;->createDeviceProtectedStorageContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/Context;->getCodeCacheDir()Ljava/io/File;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-static {p1}, Lz8j;->c(Ljava/io/File;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    const/16 p1, 0xe
-
-    invoke-virtual {v1, p1, v4}, La4a;->o(ILjava/lang/Object;)V
-
-    return-void
-
-    :cond_6
-    const/16 p1, 0xf
-
-    invoke-virtual {v1, p1, v4}, La4a;->o(ILjava/lang/Object;)V
-
-    return-void
-
-    :cond_7
     const-string p1, "SAVE_PROFILE"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_8
+    if-eqz p1, :cond_6
 
     const-string p1, "EXTRA_PID"
 
@@ -288,18 +267,18 @@
 
     move-result p1
 
-    invoke-static {p1, v3}, Landroid/os/Process;->sendSignal(II)V
+    invoke-static {p1, v2}, Landroid/os/Process;->sendSignal(II)V
 
-    invoke-virtual {v1, v5, v4}, La4a;->o(ILjava/lang/Object;)V
+    invoke-virtual {v1, v4, v3}, Leyf;->e(ILjava/lang/Object;)V
 
     return-void
 
-    :cond_8
+    :cond_6
     const/16 p1, 0x10
 
-    invoke-virtual {v1, p1, v4}, La4a;->o(ILjava/lang/Object;)V
+    invoke-virtual {v1, p1, v3}, Leyf;->e(ILjava/lang/Object;)V
 
-    :cond_9
-    :goto_1
+    :cond_7
+    :goto_0
     return-void
 .end method

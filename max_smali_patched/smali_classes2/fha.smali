@@ -1,69 +1,149 @@
-.class public final synthetic Lfha;
+.class public final Lfha;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Louh;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Z
-
-.field public final synthetic c:Landroid/view/View;
+.field public final b:Lyth;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILandroid/view/View;Z)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput p1, p0, Lfha;->a:I
+    const/4 v0, 0x1
 
-    iput-boolean p3, p0, Lfha;->b:Z
+    iput v0, p0, Lfha;->a:I
 
-    iput-object p2, p0, Lfha;->c:Landroid/view/View;
-
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    new-instance v0, Lzgc;
+
+    .line 5
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    iput-object v0, p0, Lfha;->b:Lyth;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lyth;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lfha;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lfha;->b:Lyth;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final a(Landroid/content/Context;Lsj3;Lr41;Lpuh;Ljava/util/concurrent/Executor;JZ)Lquh;
+    .locals 10
 
     iget v0, p0, Lfha;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-boolean v0, p0, Lfha;->b:Z
+    :try_start_0
+    const-class v0, Landroidx/media3/effect/SingleInputVideoGraph$Factory;
 
-    if-nez v0, :cond_0
+    const-class v1, Lyth;
 
-    const/16 v0, 0x8
+    filled-new-array {v1}, [Ljava/lang/Class;
 
-    iget-object v1, p0, Lfha;->c:Landroid/view/View;
+    move-result-object v1
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
-    :cond_0
-    return-void
+    move-result-object v0
+
+    iget-object v1, p0, Lfha;->b:Lyth;
+
+    check-cast v1, Lzgc;
+
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    check-cast v1, Louh;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move-object v5, p4
+
+    move-object v6, p5
+
+    move-wide/from16 v7, p6
+
+    move/from16 v9, p8
+
+    invoke-interface/range {v1 .. v9}, Louh;->a(Landroid/content/Context;Lsj3;Lr41;Lpuh;Ljava/util/concurrent/Executor;JZ)Lquh;
+
+    move-result-object p1
+
+    return-object p1
+
+    :catch_0
+    move-exception v0
+
+    move-object p1, v0
+
+    new-instance p2, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p2
 
     :pswitch_0
-    iget-boolean v0, p0, Lfha;->b:Z
+    new-instance v0, Lgha;
 
-    if-eqz v0, :cond_1
+    iget-object v3, p0, Lfha;->b:Lyth;
 
-    const/4 v0, 0x0
+    move-object v5, p1
 
-    iget-object v1, p0, Lfha;->c:Landroid/view/View;
+    move-object v2, p2
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
+    move-object v1, p3
 
-    :cond_1
-    return-void
+    move-object v4, p4
+
+    move-object v6, p5
+
+    move/from16 v7, p8
+
+    invoke-direct/range {v0 .. v7}, Lgha;-><init>(Lr41;Lsj3;Lyth;Lpuh;Landroid/content/Context;Ljava/util/concurrent/Executor;Z)V
+
+    return-object v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

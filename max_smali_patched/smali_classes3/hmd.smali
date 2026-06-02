@@ -1,159 +1,72 @@
-.class public final Lhmd;
+.class public abstract Lhmd;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
-# interfaces
-.implements Lxxf;
 
+# static fields
+.field public static auth_call_code_hint:I = 0x7f110000
 
-# instance fields
-.field public final a:J
+.field public static auth_call_description:I = 0x7f110001
 
-.field public final b:[B
+.field public static call_dialog_participants:I = 0x7f110002
 
-.field public final c:Z
+.field public static call_dialog_participants_when_join:I = 0x7f110003
 
+.field public static call_history_dlg_delete:I = 0x7f110004
 
-# direct methods
-.method public constructor <init>(J[BZ)V
-    .locals 0
+.field public static dates_hours:I = 0x7f110011
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static delete_favorite_sticker_question:I = 0x7f110012
 
-    iput-wide p1, p0, Lhmd;->a:J
+.field public static delete_recent_sticker_question:I = 0x7f110013
 
-    iput-object p3, p0, Lhmd;->b:[B
+.field public static field_length_exceeded_error:I = 0x7f110016
 
-    iput-boolean p4, p0, Lhmd;->c:Z
+.field public static folder_filtered_title_bot_plural:I = 0x7f110017
 
-    return-void
-.end method
+.field public static folder_filtered_title_channel_plural:I = 0x7f110018
 
+.field public static folder_filtered_title_chat_plural:I = 0x7f110019
 
-# virtual methods
-.method public final c()J
-    .locals 4
+.field public static folder_filtered_title_contact_plural:I = 0x7f11001a
 
-    iget-object v0, p0, Lhmd;->b:[B
+.field public static folder_filtered_title_not_contact_plural:I = 0x7f11001b
 
-    array-length v0, v0
+.field public static inactive_ttl:I = 0x7f11001d
 
-    int-to-long v0, v0
+.field public static max_attach_count_error:I = 0x7f11001f
 
-    iget-wide v2, p0, Lhmd;->a:J
+.field public static max_favorite_sticker_sets_count_reached:I = 0x7f110020
 
-    add-long/2addr v2, v0
+.field public static max_favorite_stickers_count_reached:I = 0x7f110021
 
-    return-wide v2
-.end method
+.field public static max_message_length_error:I = 0x7f110022
 
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 4
+.field public static menu_copy_success:I = 0x7f110023
 
-    check-cast p1, Lxxf;
+.field public static message_compose_forward_or_share__forwarded_messages:I = 0x7f110024
 
-    invoke-interface {p1}, Lxxf;->getOffset()J
+.field public static mutual_friends:I = 0x7f110028
 
-    move-result-wide v0
+.field public static n_contacts:I = 0x7f110029
 
-    iget-wide v2, p0, Lhmd;->a:J
+.field public static phone_weight:I = 0x7f110038
 
-    cmp-long v0, v2, v0
+.field public static pin_lock_wrong_code_with_attempts:I = 0x7f110040
 
-    if-eqz v0, :cond_0
+.field public static question_delete_messages:I = 0x7f110049
 
-    invoke-interface {p1}, Lxxf;->getOffset()J
+.field public static results_more:I = 0x7f11004a
 
-    move-result-wide v0
+.field public static selected_messages:I = 0x7f11004b
 
-    invoke-static {v2, v3, v0, v1}, Ljava/lang/Long;->compare(JJ)I
+.field public static sticker_removed_from_favorites:I = 0x7f11004c
 
-    move-result p1
+.field public static sticker_removed_from_recents:I = 0x7f11004d
 
-    return p1
+.field public static sticker_set_description:I = 0x7f11004e
 
-    :cond_0
-    iget-object v0, p0, Lhmd;->b:[B
+.field public static sticker_set_description_with_author:I = 0x7f11004f
 
-    array-length v0, v0
+.field public static to_chats:I = 0x7f110050
 
-    invoke-interface {p1}, Lxxf;->getLength()I
-
-    move-result p1
-
-    invoke-static {v0, p1}, Ljava/lang/Integer;->compare(II)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getLength()I
-    .locals 1
-
-    iget-object v0, p0, Lhmd;->b:[B
-
-    array-length v0, v0
-
-    return v0
-.end method
-
-.method public final getOffset()J
-    .locals 2
-
-    iget-wide v0, p0, Lhmd;->a:J
-
-    return-wide v0
-.end method
-
-.method public final isFinal()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lhmd;->c:Z
-
-    return v0
-.end method
-
-.method public final j()[B
-    .locals 1
-
-    iget-object v0, p0, Lhmd;->b:[B
-
-    return-object v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 6
-
-    iget-object v0, p0, Lhmd;->b:[B
-
-    array-length v0, v0
-
-    int-to-long v0, v0
-
-    iget-wide v2, p0, Lhmd;->a:J
-
-    add-long/2addr v0, v2
-
-    const-wide/16 v4, 0x1
-
-    sub-long/2addr v0, v4
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v2, ".."
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static you_sent_messages:I = 0x7f110080

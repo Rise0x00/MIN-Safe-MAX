@@ -1,125 +1,295 @@
 .class public final Lbz3;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lez3;
+.field public a:[I
 
-.field public final synthetic Y:Ljava/lang/String;
+.field public b:[I
 
-.field public o:I
+.field public c:I
+
+.field public d:[I
+
+.field public e:[F
+
+.field public f:I
+
+.field public g:[I
+
+.field public h:[Ljava/lang/String;
+
+.field public i:I
+
+.field public j:[I
+
+.field public k:[Z
+
+.field public l:I
 
 
 # direct methods
-.method public constructor <init>(Lez3;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
-    iput-object p1, p0, Lbz3;->X:Lez3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lbz3;->Y:Ljava/lang/String;
+    const/16 v0, 0xa
 
-    const/4 p1, 0x2
+    new-array v1, v0, [I
 
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object v1, p0, Lbz3;->a:[I
+
+    new-array v1, v0, [I
+
+    iput-object v1, p0, Lbz3;->b:[I
+
+    const/4 v1, 0x0
+
+    iput v1, p0, Lbz3;->c:I
+
+    new-array v2, v0, [I
+
+    iput-object v2, p0, Lbz3;->d:[I
+
+    new-array v0, v0, [F
+
+    iput-object v0, p0, Lbz3;->e:[F
+
+    iput v1, p0, Lbz3;->f:I
+
+    const/4 v0, 0x5
+
+    new-array v2, v0, [I
+
+    iput-object v2, p0, Lbz3;->g:[I
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    iput-object v0, p0, Lbz3;->h:[Ljava/lang/String;
+
+    iput v1, p0, Lbz3;->i:I
+
+    const/4 v0, 0x4
+
+    new-array v2, v0, [I
+
+    iput-object v2, p0, Lbz3;->j:[I
+
+    new-array v0, v0, [Z
+
+    iput-object v0, p0, Lbz3;->k:[Z
+
+    iput v1, p0, Lbz3;->l:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(IF)V
+    .locals 3
 
-    check-cast p1, Lzb4;
+    iget v0, p0, Lbz3;->f:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lbz3;->d:[I
 
-    invoke-virtual {p0, p1, p2}, Lbz3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    array-length v2, v1
 
-    move-result-object p1
+    if-lt v0, v2, :cond_0
 
-    check-cast p1, Lbz3;
+    array-length v0, v1
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    mul-int/lit8 v0, v0, 0x2
 
-    invoke-virtual {p1, p2}, Lbz3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([II)[I
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
-.end method
+    iput-object v0, p0, Lbz3;->d:[I
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget-object v0, p0, Lbz3;->e:[F
 
-    new-instance p1, Lbz3;
+    array-length v1, v0
 
-    iget-object v0, p0, Lbz3;->X:Lez3;
+    mul-int/lit8 v1, v1, 0x2
 
-    iget-object v1, p0, Lbz3;->Y:Ljava/lang/String;
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([FI)[F
 
-    invoke-direct {p1, v0, v1, p2}, Lbz3;-><init>(Lez3;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lbz3;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    return-object p1
+    iput-object v0, p0, Lbz3;->e:[F
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object v0, p0, Lbz3;->d:[I
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    iget v1, p0, Lbz3;->f:I
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    aput p1, v0, v1
 
-    throw p1
+    iget-object p1, p0, Lbz3;->e:[F
 
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    add-int/lit8 v0, v1, 0x1
 
-    iget-object p1, p0, Lbz3;->X:Lez3;
+    iput v0, p0, Lbz3;->f:I
 
-    iget-object p1, p1, Lez3;->k:Ln8g;
+    aput p2, p1, v1
 
-    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object p1
+.method public final b(II)V
+    .locals 3
 
-    check-cast p1, Lgb3;
+    iget v0, p0, Lbz3;->c:I
 
-    iput v1, p0, Lbz3;->o:I
+    iget-object v1, p0, Lbz3;->a:[I
 
-    iget-object v0, p0, Lbz3;->Y:Ljava/lang/String;
+    array-length v2, v1
 
-    sget-object v1, Ljc8;->c:Ljc8;
+    if-lt v0, v2, :cond_0
 
-    invoke-virtual {p1, v0, v1, p0}, Lgb3;->a(Ljava/lang/String;Ljc8;Lo84;)Ljava/io/Serializable;
+    array-length v0, v1
 
-    move-result-object p1
+    mul-int/lit8 v0, v0, 0x2
 
-    sget-object v0, Lac4;->a:Lac4;
+    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([II)[I
 
-    if-ne p1, v0, :cond_2
+    move-result-object v0
 
-    return-object v0
+    iput-object v0, p0, Lbz3;->a:[I
 
-    :cond_2
-    return-object p1
+    iget-object v0, p0, Lbz3;->b:[I
+
+    array-length v1, v0
+
+    mul-int/lit8 v1, v1, 0x2
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([II)[I
+
+    move-result-object v0
+
+    iput-object v0, p0, Lbz3;->b:[I
+
+    :cond_0
+    iget-object v0, p0, Lbz3;->a:[I
+
+    iget v1, p0, Lbz3;->c:I
+
+    aput p1, v0, v1
+
+    iget-object p1, p0, Lbz3;->b:[I
+
+    add-int/lit8 v0, v1, 0x1
+
+    iput v0, p0, Lbz3;->c:I
+
+    aput p2, p1, v1
+
+    return-void
+.end method
+
+.method public final c(ILjava/lang/String;)V
+    .locals 3
+
+    iget v0, p0, Lbz3;->i:I
+
+    iget-object v1, p0, Lbz3;->g:[I
+
+    array-length v2, v1
+
+    if-lt v0, v2, :cond_0
+
+    array-length v0, v1
+
+    mul-int/lit8 v0, v0, 0x2
+
+    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([II)[I
+
+    move-result-object v0
+
+    iput-object v0, p0, Lbz3;->g:[I
+
+    iget-object v0, p0, Lbz3;->h:[Ljava/lang/String;
+
+    array-length v1, v0
+
+    mul-int/lit8 v1, v1, 0x2
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ljava/lang/String;
+
+    iput-object v0, p0, Lbz3;->h:[Ljava/lang/String;
+
+    :cond_0
+    iget-object v0, p0, Lbz3;->g:[I
+
+    iget v1, p0, Lbz3;->i:I
+
+    aput p1, v0, v1
+
+    iget-object p1, p0, Lbz3;->h:[Ljava/lang/String;
+
+    add-int/lit8 v0, v1, 0x1
+
+    iput v0, p0, Lbz3;->i:I
+
+    aput-object p2, p1, v1
+
+    return-void
+.end method
+
+.method public final d(IZ)V
+    .locals 3
+
+    iget v0, p0, Lbz3;->l:I
+
+    iget-object v1, p0, Lbz3;->j:[I
+
+    array-length v2, v1
+
+    if-lt v0, v2, :cond_0
+
+    array-length v0, v1
+
+    mul-int/lit8 v0, v0, 0x2
+
+    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([II)[I
+
+    move-result-object v0
+
+    iput-object v0, p0, Lbz3;->j:[I
+
+    iget-object v0, p0, Lbz3;->k:[Z
+
+    array-length v1, v0
+
+    mul-int/lit8 v1, v1, 0x2
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([ZI)[Z
+
+    move-result-object v0
+
+    iput-object v0, p0, Lbz3;->k:[Z
+
+    :cond_0
+    iget-object v0, p0, Lbz3;->j:[I
+
+    iget v1, p0, Lbz3;->l:I
+
+    aput p1, v0, v1
+
+    iget-object p1, p0, Lbz3;->k:[Z
+
+    add-int/lit8 v0, v1, 0x1
+
+    iput v0, p0, Lbz3;->l:I
+
+    aput-boolean p2, p1, v1
+
+    return-void
 .end method

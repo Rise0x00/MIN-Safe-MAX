@@ -1,195 +1,331 @@
 .class public final Lau4;
-.super Lldg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final e0:Lau4;
+# instance fields
+.field public final a:Lafe;
+
+.field public final b:I
+
+.field public final c:Lakg;
+
+.field public final d:Lakg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 41
+.method public constructor <init>(Lafe;I)V
+    .locals 0
 
-    new-instance v0, Lau4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v1, Lkj3;
+    iput-object p1, p0, Lau4;->a:Lafe;
 
-    const-wide v2, 0xff697cffL
+    iput p2, p0, Lau4;->b:I
 
-    long-to-int v2, v2
+    new-instance p1, Lx54;
 
-    const-wide v3, 0xffffffffL
+    const/16 p2, 0x9
 
-    long-to-int v3, v3
+    invoke-direct {p1, p2}, Lx54;-><init>(I)V
 
-    const-wide v4, 0xff000000L
+    new-instance p2, Lakg;
 
-    long-to-int v5, v4
+    invoke-direct {p2, p1}, Lakg;-><init>(Lxs6;)V
 
-    const-wide v6, 0xff6988e0L
+    iput-object p2, p0, Lau4;->c:Lakg;
 
-    long-to-int v6, v6
+    new-instance p1, Lx54;
 
-    const-wide v7, 0xff333344L
+    const/16 p2, 0xa
 
-    long-to-int v8, v7
+    invoke-direct {p1, p2}, Lx54;-><init>(I)V
 
-    const-wide v9, 0xff5b5b69L
+    new-instance p2, Lakg;
 
-    long-to-int v13, v9
+    invoke-direct {p2, p1}, Lakg;-><init>(Lxs6;)V
 
-    const-wide v9, 0xfff5f5f5L
-
-    long-to-int v15, v9
-
-    const-wide v9, 0xffff3f3fL
-
-    long-to-int v4, v9
-
-    const-wide v9, 0xfffbc03dL
-
-    long-to-int v7, v9
-
-    const-wide v9, 0xffecececL
-
-    long-to-int v9, v9
-
-    const-wide v10, 0xfff2f2f2L
-
-    long-to-int v10, v10
-
-    const-wide v11, 0xffd7f5bcL
-
-    long-to-int v11, v11
-
-    move-object/from16 v40, v0
-
-    move-object v12, v1
-
-    const-wide v0, 0xffbceb91L
-
-    long-to-int v0, v0
-
-    move/from16 v22, v0
-
-    const-wide v0, 0xff222222L
-
-    long-to-int v0, v0
-
-    move/from16 v23, v0
-
-    const-wide v0, 0xffe8e8e8L
-
-    long-to-int v0, v0
-
-    move/from16 v28, v0
-
-    const-wide v0, 0xffbdbfcdL
-
-    long-to-int v0, v0
-
-    move/from16 v29, v0
-
-    const-wide v0, 0xff999999L
-
-    long-to-int v0, v0
-
-    move/from16 v30, v0
-
-    const-wide v0, 0xff10bc07L
-
-    long-to-int v0, v0
-
-    move/from16 v32, v0
-
-    const-wide v0, 0xff9da4afL
-
-    long-to-int v0, v0
-
-    move/from16 v33, v0
-
-    const-wide v0, 0xff5b5b68L
-
-    long-to-int v0, v0
-
-    move/from16 v37, v0
-
-    const-wide v0, 0xff474757L
-
-    long-to-int v0, v0
-
-    const/16 v39, 0x3e0
-
-    move/from16 v16, v4
-
-    move v4, v3
-
-    move/from16 v17, v7
-
-    move v7, v3
-
-    move/from16 v18, v9
-
-    move v9, v3
-
-    move/from16 v20, v10
-
-    move v10, v8
-
-    move/from16 v21, v11
-
-    move v11, v3
-
-    move-object v1, v12
-
-    move v12, v5
-
-    move v14, v13
-
-    move/from16 v19, v3
-
-    move/from16 v24, v2
-
-    move/from16 v25, v15
-
-    move/from16 v26, v18
-
-    move/from16 v27, v13
-
-    move/from16 v31, v3
-
-    move/from16 v34, v3
-
-    move/from16 v35, v3
-
-    move/from16 v36, v8
-
-    move/from16 v38, v0
-
-    invoke-direct/range {v1 .. v39}, Lkj3;-><init>(IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII)V
-
-    sget-object v7, Lw7a;->Y:Lfv0;
-
-    sget-object v8, Lw7a;->X:Lfv0;
-
-    const/4 v4, 0x1
-
-    const-string v5, "DEFAULT"
-
-    move-object v6, v1
-
-    const-string v1, "TamTam Default"
-
-    const-string v2, "TamTam Team"
-
-    const/4 v3, 0x0
-
-    move-object/from16 v0, v40
-
-    invoke-direct/range {v0 .. v8}, Lldg;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;Lkj3;Lfv0;Lfv0;)V
-
-    sput-object v0, Lau4;->e0:Lau4;
+    iput-object p2, p0, Lau4;->d:Lakg;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/String;)Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lau4;->c:Lakg;
+
+    invoke-virtual {v0}, Lakg;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lu3e;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1, p1}, Lu3e;->d(Ljava/lang/String;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Lau4;->b:I
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-ne v2, v1, :cond_0
+
+    const-string v1, "webm_cache"
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    throw p1
+
+    :cond_1
+    const-string v1, "lottie_cache"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x5f
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v2
+
+    add-int/2addr v2, v1
+
+    const/16 v1, 0xdc
+
+    if-lt v2, v1, :cond_2
+
+    iget-object v1, p0, Lau4;->d:Lakg;
+
+    invoke-virtual {v1}, Lakg;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljha;
+
+    sget-object v2, Lbj2;->a:Ljava/nio/charset/Charset;
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljha;->a([B)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :goto_1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final b(Ljava/lang/String;)Lcma;
+    .locals 5
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    iget-object v1, p0, Lau4;->a:Lafe;
+
+    invoke-virtual {v1}, Lafe;->o()Ljava/io/File;
+
+    move-result-object v1
+
+    invoke-virtual {p0, p1}, Lau4;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v2, Lzt4;
+
+    invoke-direct {v2, p1}, Lzt4;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v2}, Ljava/io/File;->listFiles(Ljava/io/FileFilter;)[Ljava/io/File;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_3
+
+    array-length v2, v1
+
+    if-nez v2, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    const/4 v2, 0x0
+
+    aget-object v1, v1, v2
+
+    invoke-virtual {v1}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_2
+
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, "_origname_"
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v4, 0x6
+
+    invoke-static {v3, p1, v2, v2, v4}, Lebg;->s0(Ljava/lang/CharSequence;Ljava/lang/String;IZI)I
+
+    move-result v2
+
+    const/4 v4, -0x1
+
+    if-eq v2, v4, :cond_2
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    add-int/2addr v2, p1
+
+    invoke-virtual {v3, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    move-object p1, v0
+
+    :goto_1
+    new-instance v2, Lcma;
+
+    invoke-direct {v2, v1, p1}, Lcma;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v2
+
+    :catch_0
+    :cond_3
+    :goto_2
+    return-object v0
+.end method
+
+.method public final c(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+    .locals 3
+
+    new-instance v0, Ljava/io/File;
+
+    iget-object v1, p0, Lau4;->a:Lafe;
+
+    invoke-virtual {v1}, Lafe;->o()Ljava/io/File;
+
+    move-result-object v1
+
+    invoke-virtual {p0, p1}, Lau4;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    if-eqz p2, :cond_1
+
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    const-string v2, "_origname_"
+
+    :goto_0
+    invoke-virtual {v2, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    goto :goto_3
+
+    :cond_1
+    :goto_1
+    const/4 p2, 0x1
+
+    iget v2, p0, Lau4;->b:I
+
+    if-eq v2, p2, :cond_3
+
+    const/4 p2, 0x2
+
+    if-ne v2, p2, :cond_2
+
+    const-string p2, "webm"
+
+    goto :goto_2
+
+    :cond_2
+    const/4 p1, 0x0
+
+    throw p1
+
+    :cond_3
+    const-string p2, "json"
+
+    :goto_2
+    const-string v2, "."
+
+    goto :goto_0
+
+    :goto_3
+    invoke-static {p1, p2}, Lo52;->n(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, v1, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    return-object v0
 .end method

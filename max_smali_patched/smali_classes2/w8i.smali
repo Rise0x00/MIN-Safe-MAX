@@ -1,148 +1,188 @@
-.class public final Lw8i;
-.super Lp6g;
+.class public abstract Lw8i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
 
+# static fields
+.field public static final a:J
 
-# instance fields
-.field public final synthetic X:Lj9i;
+.field public static final b:Ljava/lang/Object;
 
-.field public o:I
+.field public static c:Lv8i;
 
 
 # direct methods
-.method public constructor <init>(Lj9i;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lw8i;->X:Lj9i;
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
-    const/4 p1, 0x2
+    const-wide/16 v1, 0x1
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v0
+
+    sput-wide v0, Lw8i;->a:J
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lw8i;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public static a(Landroid/content/Context;)V
+    .locals 2
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    sget-object v0, Lw8i;->c:Lv8i;
 
-    check-cast p1, Lzb4;
+    if-nez v0, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    new-instance v0, Lv8i;
 
-    invoke-virtual {p0, p1, p2}, Lw8i;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {v0, p0}, Lv8i;-><init>(Landroid/content/Context;)V
 
-    move-result-object p1
+    sput-object v0, Lw8i;->c:Lv8i;
 
-    check-cast p1, Lw8i;
+    iget-object p0, v0, Lv8i;->a:Ljava/lang/Object;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    monitor-enter p0
 
-    invoke-virtual {p1, p2}, Lw8i;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    move-result-object p1
+    :try_start_0
+    iput-boolean v1, v0, Lv8i;->g:Z
 
-    return-object p1
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+
+    :cond_0
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public static b(Landroid/content/Intent;)V
+    .locals 3
 
-    new-instance p1, Lw8i;
+    sget-object v0, Lw8i;->b:Ljava/lang/Object;
 
-    iget-object v0, p0, Lw8i;->X:Lj9i;
+    monitor-enter v0
 
-    invoke-direct {p1, v0, p2}, Lw8i;-><init>(Lj9i;Lkotlin/coroutines/Continuation;)V
+    :try_start_0
+    sget-object v1, Lw8i;->c:Lv8i;
 
-    return-object p1
+    if-eqz v1, :cond_0
+
+    const-string v1, "com.google.firebase.iid.WakeLockHolder.wakefulintent"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const-string v1, "com.google.firebase.iid.WakeLockHolder.wakefulintent"
+
+    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    sget-object p0, Lw8i;->c:Lv8i;
+
+    invoke-virtual {p0}, Lv8i;->c()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static c(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;
     .locals 4
 
-    iget-object v0, p0, Lw8i;->X:Lj9i;
+    sget-object v0, Lw8i;->b:Ljava/lang/Object;
 
-    iget-object v1, v0, Lj9i;->c1:Lcm5;
+    monitor-enter v0
 
-    iget v2, p0, Lw8i;->o:I
+    :try_start_0
+    invoke-static {p0}, Lw8i;->a(Landroid/content/Context;)V
+
+    const-string v1, "com.google.firebase.iid.WakeLockHolder.wakefulintent"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    const-string v2, "com.google.firebase.iid.WakeLockHolder.wakefulintent"
 
     const/4 v3, 0x1
 
-    if-eqz v2, :cond_1
+    invoke-virtual {p1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    if-ne v2, v3, :cond_0
+    invoke-virtual {p0, p1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    move-result-object p0
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    monitor-exit v0
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    if-nez v1, :cond_1
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    sget-object p1, Lw8i;->c:Lv8i;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    sget-wide v1, Lw8i;->a:J
 
-    throw p1
+    invoke-virtual {p1, v1, v2}, Lv8i;->a(J)V
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    monitor-exit v0
 
-    iget-object p1, v0, Lj9i;->O0:Lspf;
+    return-object p0
 
-    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    iget-object p1, v0, Lj9i;->R0:Lspf;
-
-    iput v3, p0, Lw8i;->o:I
-
-    invoke-static {p1, p0}, Lgu0;->q(Ld76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
     :goto_0
-    check-cast p1, Ljava/lang/String;
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    new-instance v0, Le8i;
-
-    invoke-direct {v0, p1}, Le8i;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_3
-    new-instance p1, Lv7i;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Lv7i;-><init>(Z)V
-
-    invoke-static {v1, p1}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
-
-    :goto_1
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    throw p0
 .end method

@@ -4,81 +4,149 @@
 
 
 # instance fields
-.field public final a:J
+.field public final a:Lw2h;
+
+.field public final b:I
+
+.field public final c:[J
+
+.field public final d:[I
+
+.field public final e:I
+
+.field public final f:[J
+
+.field public final g:[I
+
+.field public final h:J
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public constructor <init>(Lw2h;[J[II[J[IJ)V
+    .locals 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lm3h;->a:J
+    array-length v0, p3
 
+    array-length v1, p5
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    move v0, v3
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v2
+
+    :goto_0
+    invoke-static {v0}, Lh43;->j(Z)V
+
+    array-length v0, p2
+
+    array-length v1, p5
+
+    if-ne v0, v1, :cond_1
+
+    move v0, v3
+
+    goto :goto_1
+
+    :cond_1
+    move v0, v2
+
+    :goto_1
+    invoke-static {v0}, Lh43;->j(Z)V
+
+    array-length v0, p6
+
+    array-length v1, p5
+
+    if-ne v0, v1, :cond_2
+
+    move v2, v3
+
+    :cond_2
+    invoke-static {v2}, Lh43;->j(Z)V
+
+    iput-object p1, p0, Lm3h;->a:Lw2h;
+
+    iput-object p2, p0, Lm3h;->c:[J
+
+    iput-object p3, p0, Lm3h;->d:[I
+
+    iput p4, p0, Lm3h;->e:I
+
+    iput-object p5, p0, Lm3h;->f:[J
+
+    iput-object p6, p0, Lm3h;->g:[I
+
+    iput-wide p7, p0, Lm3h;->h:J
+
+    array-length p1, p2
+
+    iput p1, p0, Lm3h;->b:I
+
+    array-length p1, p6
+
+    if-lez p1, :cond_3
+
+    array-length p1, p6
+
+    sub-int/2addr p1, v3
+
+    aget p2, p6, p1
+
+    const/high16 p3, 0x20000000
+
+    or-int/2addr p2, p3
+
+    aput p2, p6, p1
+
+    :cond_3
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lm3h;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lm3h;
-
-    iget-wide v3, p0, Lm3h;->a:J
-
-    iget-wide v5, p1, Lm3h;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final a(J)I
     .locals 2
 
-    iget-wide v0, p0, Lm3h;->a:J
+    iget-object v0, p0, Lm3h;->f:[J
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    const/4 v1, 0x1
 
-    move-result v0
+    invoke-static {v0, p1, p2, v1}, Lpnh;->a([JJZ)I
 
-    return v0
-.end method
+    move-result p1
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    :goto_0
+    array-length p2, v0
 
-    const-string v0, "UnknownContactState(contactId="
+    if-ge p1, p2, :cond_1
 
-    const-string v1, ")"
+    iget-object p2, p0, Lm3h;->g:[I
 
-    iget-wide v2, p0, Lm3h;->a:J
+    aget p2, p2, p1
 
-    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    and-int/2addr p2, v1
 
-    move-result-object v0
+    if-eqz p2, :cond_0
 
-    return-object v0
+    return p1
+
+    :cond_0
+    add-int/lit8 p1, p1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, -0x1
+
+    return p1
 .end method

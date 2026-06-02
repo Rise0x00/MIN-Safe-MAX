@@ -4,16 +4,29 @@
 
 
 # virtual methods
-.method public final serializer()La38;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "La38;"
-        }
-    .end annotation
 
-    sget-object v0, Ldai;->a:Ldai;
+    instance-of v0, p1, Leai;
 
-    return-object v0
+    if-eqz v0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    invoke-static {p1}, Lo52;->i(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

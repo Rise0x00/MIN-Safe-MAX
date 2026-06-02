@@ -1,117 +1,138 @@
-.class public final Lmme;
-.super Lnth;
+.class public final synthetic Lmme;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/widget/PopupWindow$OnDismissListener;
 
 
 # instance fields
-.field public final b:Lspf;
+.field public final synthetic a:Lxs6;
 
-.field public final c:Lspf;
+.field public final synthetic b:Lone/me/sdk/arch/Widget;
 
-.field public final d:Ld76;
+.field public final synthetic c:Log3;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 6
+.method public synthetic constructor <init>(Lxs6;Lone/me/sdk/arch/Widget;Log3;)V
+    .locals 0
 
-    sget-object v0, Lj1c;->a:Lj1c;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    iput-object p1, p0, Lmme;->a:Lxs6;
 
-    move-result-object v0
+    iput-object p2, p0, Lmme;->b:Lone/me/sdk/arch/Widget;
 
-    const/16 v1, 0xc
+    iput-object p3, p0, Lmme;->c:Log3;
 
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object v0
 
-    check-cast v0, Lmbg;
+# virtual methods
+.method public final onDismiss()V
+    .locals 4
 
-    invoke-direct {p0}, Lnth;-><init>()V
+    iget-object v0, p0, Lmme;->a:Lxs6;
 
-    const-string v1, ""
+    if-eqz v0, :cond_0
 
-    invoke-static {v1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+    invoke-interface {v0}, Lxs6;->invoke()Ljava/lang/Object;
 
-    move-result-object v2
+    :cond_0
+    iget-object v0, p0, Lmme;->b:Lone/me/sdk/arch/Widget;
 
-    iput-object v2, p0, Lmme;->b:Lspf;
+    move-object v1, v0
 
-    invoke-static {p1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lmme;->c:Lspf;
-
-    new-instance v3, Lr83;
-
-    const/16 v4, 0x8
-
-    invoke-direct {v3, v2, v4}, Lr83;-><init>(Ld76;I)V
-
-    sget v2, Lta5;->d:I
-
-    const/16 v2, 0xc8
-
-    sget-object v4, Lza5;->c:Lza5;
-
-    invoke-static {v2, v4}, Laoj;->g(ILza5;)J
-
-    move-result-wide v4
-
-    invoke-static {v4, v5}, Lumj;->j(J)J
-
-    move-result-wide v4
-
-    invoke-static {v3, v4, v5}, Lgu0;->k(Ld76;J)Ld76;
+    :goto_0
+    invoke-virtual {v1}, Ll94;->getParentController()Ll94;
 
     move-result-object v2
 
-    new-instance v3, Lazb;
+    if-eqz v2, :cond_1
 
-    const/16 v4, 0xa
-
-    invoke-direct {v3, v2, v4}, Lazb;-><init>(Ld76;I)V
-
-    sget-object v2, Lx7f;->a:Lvof;
-
-    iget-object v4, p0, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v3, v4, v2, v1}, Lgu0;->E(Ld76;Lzb4;Ly7f;Ljava/lang/Object;)Lpld;
+    invoke-virtual {v1}, Ll94;->getParentController()Ll94;
 
     move-result-object v1
 
-    new-instance v2, Lz0a;
+    goto :goto_0
 
-    const/16 v3, 0x1a
+    :cond_1
+    instance-of v2, v1, Ltge;
 
-    const/4 v4, 0x3
+    const/4 v3, 0x0
 
-    const/4 v5, 0x0
+    if-eqz v2, :cond_2
 
-    invoke-direct {v2, v4, v5, v3}, Lz0a;-><init>(ILkotlin/coroutines/Continuation;I)V
+    check-cast v1, Ltge;
 
-    new-instance v3, Lu61;
+    goto :goto_1
 
-    invoke-direct {v3, p1, v1, v2, v4}, Lu61;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    :cond_2
+    move-object v1, v3
 
-    invoke-static {v3}, Lgu0;->m(Ld76;)Ld76;
+    :goto_1
+    if-eqz v1, :cond_3
 
-    move-result-object p1
+    check-cast v1, Lone/me/android/root/RootController;
 
-    check-cast v0, Lj9b;
+    invoke-virtual {v1}, Lone/me/android/root/RootController;->l1()Lmge;
 
-    invoke-virtual {v0}, Lj9b;->a()Lsb4;
+    move-result-object v1
+
+    goto :goto_2
+
+    :cond_3
+    move-object v1, v3
+
+    :goto_2
+    iget-object v2, p0, Lmme;->c:Log3;
+
+    if-eqz v1, :cond_4
+
+    invoke-virtual {v1, v2}, Lmge;->M(Lp94;)V
+
+    :cond_4
+    :goto_3
+    invoke-virtual {v0}, Ll94;->getParentController()Ll94;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_5
+
+    invoke-virtual {v0}, Ll94;->getParentController()Ll94;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lgu0;->v(Ld76;Lqb4;)Ld76;
+    goto :goto_3
 
-    move-result-object p1
+    :cond_5
+    instance-of v1, v0, Ltge;
 
-    iput-object p1, p0, Lmme;->d:Ld76;
+    if-eqz v1, :cond_6
 
+    check-cast v0, Ltge;
+
+    goto :goto_4
+
+    :cond_6
+    move-object v0, v3
+
+    :goto_4
+    if-eqz v0, :cond_7
+
+    check-cast v0, Lone/me/android/root/RootController;
+
+    invoke-virtual {v0}, Lone/me/android/root/RootController;->j1()Lmge;
+
+    move-result-object v3
+
+    :cond_7
+    if-eqz v3, :cond_8
+
+    invoke-virtual {v3, v2}, Lmge;->M(Lp94;)V
+
+    :cond_8
     return-void
 .end method

@@ -1,43 +1,31 @@
-.class public final Lr1;
+.class public abstract synthetic Lr1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lr1;
-
-
-# instance fields
-.field public volatile a:Ljava/lang/Thread;
-
-.field public volatile b:Lr1;
-
-
 # direct methods
-.method static constructor <clinit>()V
+.method public static synthetic a(Lsun/misc/Unsafe;Lx1;JLg1;Lg1;)Z
     .locals 1
 
-    new-instance v0, Lr1;
+    :cond_0
+    invoke-virtual/range {p0 .. p5}, Lsun/misc/Unsafe;->compareAndSwapObject(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result v0
 
-    sput-object v0, Lr1;->c:Lr1;
+    if-eqz v0, :cond_1
 
-    return-void
-.end method
+    const/4 p0, 0x1
 
-.method public constructor <init>()V
-    .locals 2
+    return p0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :cond_1
+    invoke-virtual {p0, p1, p2, p3}, Lsun/misc/Unsafe;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
 
-    sget-object v0, Lt1;->X:Lw2j;
+    move-result-object v0
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    if-eq v0, p4, :cond_0
 
-    move-result-object v1
+    const/4 p0, 0x0
 
-    invoke-virtual {v0, p0, v1}, Lw2j;->k(Lr1;Ljava/lang/Thread;)V
-
-    return-void
+    return p0
 .end method

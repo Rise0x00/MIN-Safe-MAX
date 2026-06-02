@@ -1,89 +1,148 @@
-.class public final Lez8;
+.class public abstract Lez8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Landroid/content/Context;
-
-.field public final b:Landroid/media/browse/MediaBrowser;
-
-.field public final c:Landroid/os/Bundle;
-
-.field public final d:Lcz8;
-
-.field public final e:Lys;
-
-.field public f:Ldgc;
-
-.field public g:Landroid/os/Messenger;
-
-.field public h:Lya9;
+# interfaces
+.implements Lyz8;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;Lbg8;Landroid/os/Bundle;)V
-    .locals 2
+.method public static c(Ljava/lang/Object;)Lrz8;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "item is null"
 
-    new-instance v0, Lcz8;
+    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-direct {v0, p0}, Lcz8;-><init>(Lez8;)V
+    new-instance v0, Lrz8;
 
-    iput-object v0, p0, Lez8;->d:Lcz8;
+    invoke-direct {v0, p0}, Lrz8;-><init>(Ljava/lang/Object;)V
 
-    new-instance v0, Lys;
+    return-object v0
+.end method
 
-    const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Ladf;-><init>(I)V
+# virtual methods
+.method public final a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iput-object v0, p0, Lez8;->e:Lys;
+    const-string v0, "defaultValue is null"
 
-    iput-object p1, p0, Lez8;->a:Landroid/content/Context;
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    new-instance v0, Landroid/os/Bundle;
-
-    if-eqz p4, :cond_0
-
-    invoke-direct {v0, p4}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    :goto_0
-    iput-object v0, p0, Lez8;->c:Landroid/os/Bundle;
-
-    const-string p4, "extra_client_version"
+    new-instance v0, Lfx0;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, p4, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    const-string p4, "extra_calling_pid"
+    invoke-virtual {p0, v0}, Lez8;->e(Luz8;)V
 
-    invoke-static {}, Landroid/os/Process;->myPid()I
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
 
-    move-result v1
+    move-result-wide v2
 
-    invoke-virtual {v0, p4, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    const-wide/16 v4, 0x0
 
-    iput-object p0, p3, Lbg8;->b:Ljava/lang/Object;
+    cmp-long v2, v2, v4
 
-    new-instance p4, Landroid/media/browse/MediaBrowser;
+    if-eqz v2, :cond_1
 
-    iget-object p3, p3, Lbg8;->a:Ljava/lang/Object;
+    :try_start_0
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    check-cast p3, Ldz8;
+    goto :goto_0
 
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :catch_0
+    move-exception p1
 
-    invoke-direct {p4, p1, p2, p3, v0}, Landroid/media/browse/MediaBrowser;-><init>(Landroid/content/Context;Landroid/content/ComponentName;Landroid/media/browse/MediaBrowser$ConnectionCallback;Landroid/os/Bundle;)V
+    iput-boolean v1, v0, Lfx0;->d:Z
 
-    iput-object p4, p0, Lez8;->b:Landroid/media/browse/MediaBrowser;
+    iget-object v0, v0, Lfx0;->c:Ls45;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Ls45;->dispose()V
+
+    :cond_0
+    invoke-static {p1}, Lbq5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    move-result-object p1
+
+    throw p1
+
+    :cond_1
+    :goto_0
+    iget-object v1, v0, Lfx0;->b:Ljava/lang/Throwable;
+
+    if-nez v1, :cond_3
+
+    iget-object v0, v0, Lfx0;->a:Ljava/lang/Object;
+
+    if-eqz v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object p1
+
+    :cond_3
+    invoke-static {v1}, Lbq5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    move-result-object p1
+
+    throw p1
+.end method
+
+.method public final d(Lqne;)Ltz8;
+    .locals 2
+
+    const-string v0, "scheduler is null"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    new-instance v0, Ltz8;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Ltz8;-><init>(Lez8;Ljava/lang/Object;I)V
+
+    return-object v0
+.end method
+
+.method public final e(Luz8;)V
+    .locals 2
+
+    :try_start_0
+    invoke-virtual {p0, p1}, Lez8;->f(Luz8;)V
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Lmzj;->c(Ljava/lang/Throwable;)V
+
+    new-instance v0, Ljava/lang/NullPointerException;
+
+    const-string v1, "subscribeActual failed"
+
+    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    throw v0
+
+    :catch_0
+    move-exception p1
+
+    throw p1
+.end method
+
+.method public abstract f(Luz8;)V
 .end method

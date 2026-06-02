@@ -1,163 +1,403 @@
 .class public final Ltt1;
-.super Lnth;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Lsq1;
+.field public final a:Lvi1;
 
-.field public final c:Lnx1;
-
-.field public final d:Lpld;
-
-.field public final o:Ld76;
+.field public final b:Lo22;
 
 
 # direct methods
-.method public constructor <init>(Lsq1;)V
-    .locals 8
+.method public constructor <init>(Lvi1;Lo22;)V
+    .locals 0
 
-    sget-object v0, Leo1;->a:Leo1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Leo1;->a()Lnx1;
+    iput-object p1, p0, Ltt1;->a:Lvi1;
+
+    iput-object p2, p0, Ltt1;->b:Lo22;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Z
+    .locals 2
+
+    iget-object v0, p0, Ltt1;->b:Lo22;
+
+    move-object v1, v0
+
+    check-cast v1, Lx22;
+
+    invoke-virtual {v1}, Lx22;->y()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lx22;
+
+    invoke-virtual {v0}, Lx22;->I()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final b(ZZ)V
+    .locals 2
+
+    invoke-virtual {p0}, Ltt1;->a()Z
+
+    move-result v0
+
+    iget-object v1, p0, Ltt1;->a:Lvi1;
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    invoke-virtual {v1, p1}, Lvi1;->i(Z)V
+
+    invoke-static {v1}, Lvi1;->h(Lvi1;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {v1, p2}, Lvi1;->m(Z)V
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v1}, Lvi1;->k()V
+
+    invoke-virtual {v1}, Lvi1;->l()V
+
+    return-void
+
+    :cond_1
+    invoke-static {v1}, Lvi1;->h(Lvi1;)V
+
+    return-void
+.end method
+
+.method public final c(ZZ)V
+    .locals 10
+
+    invoke-virtual {p0}, Ltt1;->a()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const-string v2, "RootController"
+
+    const-string v3, "PipAppController"
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x1
+
+    iget-object v6, p0, Ltt1;->a:Lvi1;
+
+    if-nez p1, :cond_a
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v6}, Lvi1;->k()V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {v6}, Lvi1;->c()Z
+
+    move-result p1
+
+    invoke-virtual {v6}, Lvi1;->d()Lmge;
 
     move-result-object v0
 
-    invoke-static {}, Ldo1;->e()Lo58;
-
-    move-result-object v1
-
-    invoke-direct {p0}, Lnth;-><init>()V
-
-    iput-object p1, p0, Ltt1;->b:Lsq1;
-
-    iput-object v0, p0, Ltt1;->c:Lnx1;
-
-    iget-object v2, p1, Lsq1;->E0:Lspf;
-
-    invoke-virtual {v0}, Lnx1;->f()Lspf;
-
-    move-result-object v3
-
-    new-instance v4, Lrt1;
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    invoke-direct {v4, p0, v6, v5}, Lrt1;-><init>(Lnth;Lkotlin/coroutines/Continuation;I)V
-
-    new-instance v5, Lu61;
-
-    const/4 v7, 0x3
-
-    invoke-direct {v5, v2, v3, v4, v7}, Lu61;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-static {v5}, Lgu0;->m(Ld76;)Ld76;
-
-    move-result-object v2
-
-    check-cast v1, Ln8g;
-
-    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lmbg;
-
-    check-cast v3, Lj9b;
-
-    invoke-virtual {v3}, Lj9b;->a()Lsb4;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lgu0;->v(Ld76;Lqb4;)Ld76;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Lnx1;->e()Lspf;
+    invoke-virtual {v0}, Lmge;->e()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    new-instance v3, Lji0;
-
-    const/16 v4, 0x15
-
-    invoke-direct {v3, v0, v4}, Lji0;-><init>(Ld76;I)V
-
-    invoke-static {v3}, Lgu0;->m(Ld76;)Ld76;
+    invoke-static {v0}, Lij3;->u1(Ljava/util/List;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+    check-cast v0, Lqge;
 
-    move-result-object v3
+    if-eqz v0, :cond_1
 
-    check-cast v3, Lmbg;
+    iget-object v0, v0, Lqge;->a:Ll94;
 
-    check-cast v3, Lj9b;
+    goto :goto_0
 
-    invoke-virtual {v3}, Lj9b;->a()Lsb4;
+    :cond_1
+    move-object v0, v4
 
-    move-result-object v3
+    :goto_0
+    instance-of v7, v0, Lpra;
 
-    invoke-static {v0, v3}, Lgu0;->v(Ld76;Lqb4;)Ld76;
+    if-nez v7, :cond_2
+
+    if-nez v0, :cond_3
+
+    :cond_2
+    move v1, v5
+
+    :cond_3
+    xor-int/lit8 v0, v1, 0x1
+
+    const-string v7, "try to show call indicator hasCall="
+
+    const-string v8, " canShow="
+
+    const-string v9, "."
+
+    invoke-static {v7, p1, v8, v0, v9}, Lo52;->s(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    const/4 v3, 0x0
+    invoke-static {v3, v0}, Lnm4;->y(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-nez v1, :cond_7
 
-    move-result-object v3
+    if-eqz p1, :cond_7
 
-    sget-object v4, Lx7f;->a:Lvof;
+    iget-object v0, v6, Lvi1;->J0:Lhyf;
 
-    iget-object v5, p0, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
+    if-eqz v0, :cond_4
 
-    invoke-static {v0, v5, v4, v3}, Lgu0;->E(Ld76;Lzb4;Ly7f;Ljava/lang/Object;)Lpld;
+    invoke-virtual {v0, v4}, Lz18;->cancel(Ljava/util/concurrent/CancellationException;)V
+
+    :cond_4
+    iput-object v4, v6, Lvi1;->J0:Lhyf;
+
+    invoke-virtual {v6}, Lvi1;->g()Ltge;
 
     move-result-object v0
 
-    iput-object v0, p0, Ltt1;->d:Lpld;
+    new-instance v1, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
 
-    iget-object p1, p1, Lsq1;->y0:Lpld;
+    invoke-direct {v1}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;-><init>()V
 
-    new-instance v0, Lmx;
+    check-cast v0, Lone/me/android/root/RootController;
 
-    const/4 v3, 0x3
+    if-eqz p2, :cond_5
 
-    const/4 v4, 0x6
+    move p2, v5
 
-    invoke-direct {v0, v3, v6, v4}, Lmx;-><init>(ILkotlin/coroutines/Continuation;I)V
+    goto :goto_1
 
-    new-instance v3, Lu61;
+    :cond_5
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    const/4 v4, 0x3
+    move-result-object p2
 
-    invoke-direct {v3, p1, v2, v0, v4}, Lu61;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-static {p2}, Lg84;->s0(Landroid/content/Context;)Ll15;
 
-    invoke-static {v3}, Lgu0;->m(Ld76;)Ld76;
+    move-result-object p2
+
+    invoke-virtual {p2}, Ll15;->a()Z
+
+    move-result p2
+
+    :goto_1
+    invoke-virtual {v0}, Lone/me/android/root/RootController;->m1()Lmge;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lmge;->o()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_6
+
+    invoke-virtual {v0}, Lone/me/android/root/RootController;->n1()Lnf2;
+
+    move-result-object v4
+
+    invoke-static {v0, v4}, Lone/me/android/root/RootController;->d1(Lone/me/android/root/RootController;Lnf2;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_6
+
+    invoke-static {v0, v5}, Lone/me/android/root/RootController;->e1(Lone/me/android/root/RootController;Z)V
+
+    const-string p2, "showWithScalingTopController call indicator already shown."
+
+    invoke-static {v2, p2}, Lnm4;->y(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :cond_6
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v7, "showWithScalingTopController show call indicator force="
+
+    invoke-direct {v4, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v2, v4}, Lnm4;->y(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v5, p2, v1}, Lone/me/android/root/RootController;->h1(ZZLone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
+
+    :cond_7
+    :goto_2
+    if-nez p1, :cond_9
+
+    iget-object p1, v6, Lvi1;->J0:Lhyf;
+
+    if-eqz p1, :cond_8
+
+    invoke-virtual {p1}, Lo0;->isActive()Z
+
+    move-result p1
+
+    if-ne p1, v5, :cond_8
+
+    goto :goto_3
+
+    :cond_8
+    const-string p1, "can\'t show indicator due to call is absent, try to force close indicator."
+
+    invoke-static {v3, p1}, Lnm4;->y(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v6, v5}, Lvi1;->i(Z)V
+
+    :cond_9
+    :goto_3
+    return-void
+
+    :cond_a
+    invoke-static {v6}, Lvi1;->h(Lvi1;)V
+
+    if-eqz v0, :cond_b
+
+    invoke-virtual {v6, v5}, Lvi1;->i(Z)V
+
+    return-void
+
+    :cond_b
+    invoke-virtual {v6}, Lvi1;->g()Ltge;
 
     move-result-object p1
 
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+    check-cast p1, Lone/me/android/root/RootController;
+
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lg84;->s0(Landroid/content/Context;)Ll15;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ll15;->a()Z
+
+    move-result p2
+
+    invoke-virtual {p1}, Lone/me/android/root/RootController;->m1()Lmge;
 
     move-result-object v0
 
-    check-cast v0, Lmbg;
+    invoke-virtual {v0}, Lmge;->o()Z
 
-    check-cast v0, Lj9b;
+    move-result v0
 
-    invoke-virtual {v0}, Lj9b;->a()Lsb4;
+    if-nez v0, :cond_c
+
+    const-string p1, "hideWithScalingTopController call indicator wasn\'t init"
+
+    invoke-static {v2, p1}, Lnm4;->y(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_4
+
+    :cond_c
+    invoke-virtual {p1}, Lone/me/android/root/RootController;->n1()Lnf2;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lgu0;->v(Ld76;Lqb4;)Ld76;
+    invoke-static {p1, v0}, Lone/me/android/root/RootController;->d1(Lone/me/android/root/RootController;Lnf2;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_d
+
+    invoke-static {p1, v1}, Lone/me/android/root/RootController;->e1(Lone/me/android/root/RootController;Z)V
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "hideWithScalingTopController call indicator already hidden force="
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Ltt1;->o:Ld76;
+    invoke-static {v2, p1}, Lnm4;->y(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_4
+
+    :cond_d
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v5, "hideWithScalingTopController hide call indicator force="
+
+    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lnm4;->y(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p1, v1, p2, v4}, Lone/me/android/root/RootController;->h1(ZZLone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
+
+    :goto_4
+    invoke-virtual {v6}, Lvi1;->c()Z
+
+    move-result p1
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string v0, "try to hide call indicator hasCall="
+
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v3, p1}, Lnm4;->y(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

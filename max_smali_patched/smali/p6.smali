@@ -1,69 +1,46 @@
-.class public final Lp6;
-.super Landroid/view/View;
+.class public final synthetic Lp6;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lz8i;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lone/me/android/initialization/AccountInitializer;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;I)V
+.method public synthetic constructor <init>(Lone/me/android/initialization/AccountInitializer;)V
     .locals 0
 
-    iput p2, p0, Lp6;->a:I
+    iput-object p1, p0, Lp6;->a:Lone/me/android/initialization/AccountInitializer;
 
-    invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getWindowSystemUiVisibility()I
-    .locals 1
+.method public now()J
+    .locals 2
 
-    iget v0, p0, Lp6;->a:I
+    iget-object v0, p0, Lp6;->a:Lone/me/android/initialization/AccountInitializer;
 
-    packed-switch v0, :pswitch_data_0
+    const/16 v1, 0x4e
 
-    invoke-super {p0}, Landroid/view/View;->getWindowSystemUiVisibility()I
+    invoke-static {v0, v1}, Lo52;->E(Lone/me/android/initialization/AccountInitializer;I)Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v0
 
-    return v0
+    check-cast v0, Lmf3;
 
-    :pswitch_0
-    const/4 v0, 0x0
+    check-cast v0, Lese;
 
-    return v0
+    invoke-virtual {v0}, Lese;->f()J
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    move-result-wide v0
 
-.method public onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 1
-
-    iget v0, p0, Lp6;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    return-wide v0
 .end method

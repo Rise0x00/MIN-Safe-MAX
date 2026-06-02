@@ -1,125 +1,112 @@
-.class public final enum Lfq9;
-.super Ljava/lang/Enum;
+.class public final Lfq9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/Iterator;
+.implements Lr78;
 
-# static fields
-.field public static final a:Ljava/util/HashMap;
 
-.field public static final enum b:Lfq9;
+# instance fields
+.field public final a:Ljava/util/Iterator;
 
-.field public static final enum c:Lfq9;
-
-.field public static final enum d:Lfq9;
-
-.field public static final synthetic o:[Lfq9;
+.field public final b:Ljava/util/Iterator;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lgq9;)V
+    .locals 1
 
-    new-instance v0, Lfq9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "UNKNOWN"
+    iget-object v0, p1, Lgq9;->a:Lcv;
 
-    const/4 v2, 0x0
+    iget-object v0, v0, Lcv;->b:Ljava/lang/Object;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    check-cast v0, Ljava/lang/Iterable;
 
-    sput-object v0, Lfq9;->b:Lfq9;
-
-    new-instance v1, Lfq9;
-
-    const-string v3, "EDITED"
-
-    const/4 v4, 0x1
-
-    invoke-direct {v1, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v3, Lfq9;
-
-    const-string v4, "REMOVED"
-
-    const/4 v5, 0x2
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lfq9;->c:Lfq9;
-
-    new-instance v4, Lfq9;
-
-    const-string v5, "DELAYED_FIRE_ERROR"
-
-    const/4 v6, 0x3
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lfq9;->d:Lfq9;
-
-    filled-new-array {v0, v1, v3, v4}, [Lfq9;
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    sput-object v0, Lfq9;->o:[Lfq9;
+    iput-object v0, p0, Lfq9;->a:Ljava/util/Iterator;
 
-    new-instance v0, Ljava/util/HashMap;
+    iget-object p1, p1, Lgq9;->b:Lcv;
 
-    const/4 v1, 0x4
+    iget-object p1, p1, Lcv;->b:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
+    check-cast p1, Ljava/lang/Iterable;
 
-    invoke-static {}, Lfq9;->values()[Lfq9;
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    move-result-object v1
+    move-result-object p1
 
-    array-length v3, v1
-
-    :goto_0
-    if-ge v2, v3, :cond_0
-
-    aget-object v4, v1, v2
-
-    invoke-virtual {v4}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v5, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    sput-object v0, Lfq9;->a:Ljava/util/HashMap;
+    iput-object p1, p0, Lfq9;->b:Ljava/util/Iterator;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lfq9;
+
+# virtual methods
+.method public final hasNext()Z
     .locals 1
 
-    const-class v0, Lfq9;
+    iget-object v0, p0, Lfq9;->a:Ljava/util/Iterator;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object p0
+    move-result v0
 
-    check-cast p0, Lfq9;
+    if-eqz v0, :cond_0
 
-    return-object p0
+    iget-object v0, p0, Lfq9;->b:Ljava/util/Iterator;
+
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
-.method public static values()[Lfq9;
-    .locals 1
+.method public final next()Ljava/lang/Object;
+    .locals 3
 
-    sget-object v0, Lfq9;->o:[Lfq9;
+    iget-object v0, p0, Lfq9;->a:Ljava/util/Iterator;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lfq9;
+    iget-object v1, p0, Lfq9;->b:Ljava/util/Iterator;
 
-    return-object v0
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    new-instance v2, Lgzb;
+
+    invoke-direct {v2, v0, v1}, Lgzb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object v2
+.end method
+
+.method public final remove()V
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

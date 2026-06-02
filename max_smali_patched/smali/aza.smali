@@ -1,56 +1,49 @@
 .class public final Laza;
-.super Lf3;
+.super Lz84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Lpbe;
+.field public X:I
 
-.field public final c:I
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lbza;
 
 
 # direct methods
-.method public constructor <init>(Ldxa;Lpbe;I)V
+.method public constructor <init>(Lbza;Lz84;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lf3;-><init>(Lsza;)V
+    iput-object p1, p0, Laza;->o:Lbza;
 
-    iput-object p2, p0, Laza;->b:Lpbe;
-
-    iput p3, p0, Laza;->c:I
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final k(Le0b;)V
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Laza;->b:Lpbe;
+    iput-object p1, p0, Laza;->d:Ljava/lang/Object;
 
-    instance-of v1, v0, Lqsg;
+    iget p1, p0, Laza;->X:I
 
-    iget-object v2, p0, Lf3;->a:Lsza;
+    const/high16 v0, -0x80000000
 
-    if-eqz v1, :cond_0
+    or-int/2addr p1, v0
 
-    invoke-interface {v2, p1}, Lsza;->a(Le0b;)V
+    iput p1, p0, Laza;->X:I
 
-    return-void
+    iget-object p1, p0, Laza;->o:Lbza;
 
-    :cond_0
-    invoke-virtual {v0}, Lpbe;->a()Lnbe;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    invoke-static {p1, v0, p0}, Lbza;->c(Lbza;Ljava/util/ArrayList;Lz84;)Ljava/lang/Object;
 
-    new-instance v1, Lzya;
+    move-result-object p1
 
-    iget v3, p0, Laza;->c:I
-
-    invoke-direct {v1, p1, v0, v3}, Lzya;-><init>(Le0b;Lnbe;I)V
-
-    invoke-interface {v2, v1}, Lsza;->a(Le0b;)V
-
-    return-void
+    return-object p1
 .end method

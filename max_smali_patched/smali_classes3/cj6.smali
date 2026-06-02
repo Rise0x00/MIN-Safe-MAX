@@ -1,47 +1,80 @@
 .class public final Lcj6;
-.super Lo84;
+.super Lp2;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:I
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Lru/ok/tamtam/upload/workers/ForegroundWorker;
+.field public final d:Lsia;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/ForegroundWorker;Lo84;)V
-    .locals 0
+.method public constructor <init>(Lsia;)V
+    .locals 2
 
-    iput-object p1, p0, Lcj6;->o:Lru/ok/tamtam/upload/workers/ForegroundWorker;
+    sget-object v0, Lptb;->B3:Lptb;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, v0}, Lp2;-><init>(Lptb;)V
+
+    iput-object p1, p0, Lcj6;->d:Lsia;
+
+    iget-object v0, p0, Lp2;->b:Ljava/lang/Object;
+
+    check-cast v0, Lwu;
+
+    const-string v1, "folderIds"
+
+    invoke-virtual {v0, v1, p1}, Lhpf;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lcj6;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lcj6;
+
+    iget-object v1, p0, Lcj6;->d:Lsia;
+
+    iget-object p1, p1, Lcj6;->d:Lsia;
+
+    invoke-static {v1, p1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    iput-object p1, p0, Lcj6;->d:Ljava/lang/Object;
+    iget-object v0, p0, Lcj6;->d:Lsia;
 
-    iget p1, p0, Lcj6;->X:I
+    invoke-virtual {v0}, Lsia;->hashCode()I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lcj6;->X:I
-
-    iget-object p1, p0, Lcj6;->o:Lru/ok/tamtam/upload/workers/ForegroundWorker;
-
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->g(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method

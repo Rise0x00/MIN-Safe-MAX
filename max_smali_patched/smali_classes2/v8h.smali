@@ -1,136 +1,242 @@
 .class public final Lv8h;
-.super Lhyb;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ldu0;
 
 
 # instance fields
-.field public final g:Ljava/lang/String;
+.field public final a:Lxxg;
+
+.field public final b:Lvzb;
+
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Lsxb;)V
+.method public constructor <init>(ILxxg;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lhyb;-><init>(Lsxb;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string p1, "upload"
+    iput p1, p0, Lv8h;->c:I
 
-    iput-object p1, p0, Lv8h;->g:Ljava/lang/String;
+    iput-object p2, p0, Lv8h;->a:Lxxg;
+
+    new-instance p1, Lvzb;
+
+    invoke-direct {p1}, Lvzb;-><init>()V
+
+    iput-object p1, p0, Lv8h;->b:Lvzb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final i()Ljava/lang/String;
-    .locals 1
+.method public final b(Ljw5;J)Lbu0;
+    .locals 18
 
-    iget-object v0, p0, Lv8h;->g:Ljava/lang/String;
+    move-object/from16 v0, p0
 
-    return-object v0
-.end method
+    invoke-interface/range {p1 .. p1}, Ljw5;->getPosition()J
 
-.method public final n()Ljfa;
-    .locals 4
+    move-result-wide v5
 
-    invoke-virtual {p0}, Lhyb;->j()Llyb;
+    const v1, 0x1b8a0
 
-    move-result-object v0
+    int-to-long v1, v1
 
-    iget-object v0, v0, Llyb;->a:Lo58;
+    invoke-interface/range {p1 .. p1}, Ljw5;->getLength()J
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    move-result-wide v3
 
-    move-result-object v0
+    sub-long/2addr v3, v5
 
-    check-cast v0, Lkz4;
+    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->min(JJ)J
 
-    iget-byte v0, v0, Lkz4;->a:B
+    move-result-wide v1
 
-    invoke-static {v0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+    long-to-int v1, v1
 
-    move-result-object v0
+    iget-object v2, v0, Lv8h;->b:Lvzb;
 
-    invoke-virtual {p0}, Lhyb;->j()Llyb;
+    invoke-virtual {v2, v1}, Lvzb;->G(I)V
 
-    move-result-object v1
+    iget-object v3, v2, Lvzb;->a:[B
 
-    invoke-virtual {v1}, Llyb;->a()I
+    const/4 v4, 0x0
 
-    move-result v1
+    move-object/from16 v7, p1
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-interface {v7, v4, v3, v1}, Ljw5;->i(I[BI)V
 
-    move-result-object v1
+    iget v1, v2, Lvzb;->c:I
 
-    new-instance v2, Ljfa;
+    const-wide/16 v3, -0x1
 
-    const/4 v3, 0x2
+    move-wide v9, v3
 
-    invoke-direct {v2, v3}, Ljfa;-><init>(I)V
+    const-wide v13, -0x7fffffffffffffffL    # -4.9E-324
 
-    const-string v3, "class"
+    :goto_0
+    invoke-virtual {v2}, Lvzb;->a()I
 
-    invoke-virtual {v2, v3, v0}, Ljfa;->i(Ljava/lang/Object;Ljava/lang/Object;)V
+    move-result v11
 
-    const-string v0, "connection_type"
+    const/16 v12, 0xbc
 
-    invoke-virtual {v2, v0, v1}, Ljfa;->i(Ljava/lang/Object;Ljava/lang/Object;)V
+    if-lt v11, v12, :cond_7
 
-    return-object v2
-.end method
+    iget-object v11, v2, Lvzb;->a:[B
 
-.method public final s(IJLjava/lang/String;Z)V
-    .locals 8
+    iget v12, v2, Lvzb;->b:I
 
-    sget-object v0, Leae;->a:[J
+    :goto_1
+    if-ge v12, v1, :cond_0
 
-    new-instance v6, Ljfa;
+    aget-byte v15, v11, v12
 
-    invoke-direct {v6}, Ljfa;-><init>()V
+    const-wide v16, -0x7fffffffffffffffL    # -4.9E-324
 
-    const-string v0, "upload_size"
+    const/16 v7, 0x47
 
-    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    if-eq v15, v7, :cond_1
 
-    move-result-object p2
+    add-int/lit8 v12, v12, 0x1
 
-    invoke-virtual {v6, v0, p2}, Ljfa;->i(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    const-string p2, "quality"
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {v6, p2, p1}, Ljfa;->i(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    if-eqz p5, :cond_0
-
-    const/4 p1, 0x1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    const-string p2, "warm_convert"
-
-    invoke-virtual {v6, p2, p1}, Ljfa;->i(Ljava/lang/Object;Ljava/lang/Object;)V
+    goto :goto_1
 
     :cond_0
-    const/16 v7, 0x18
+    const-wide v16, -0x7fffffffffffffffL    # -4.9E-324
 
-    const-string v2, "converted"
+    :cond_1
+    add-int/lit16 v7, v12, 0xbc
 
-    const/4 v3, 0x0
+    if-le v7, v1, :cond_2
 
-    const/4 v5, 0x0
+    goto :goto_2
 
-    move-object v1, p0
+    :cond_2
+    iget v3, v0, Lv8h;->c:I
 
-    move-object v4, p4
+    invoke-static {v2, v12, v3}, Lyzj;->b(Lvzb;II)J
 
-    invoke-static/range {v1 .. v7}, Lhyb;->c(Lhyb;Ljava/lang/String;ILjava/lang/String;Ljava/lang/Long;Ljfa;I)V
+    move-result-wide v3
+
+    cmp-long v8, v3, v16
+
+    if-eqz v8, :cond_6
+
+    iget-object v8, v0, Lv8h;->a:Lxxg;
+
+    invoke-virtual {v8, v3, v4}, Lxxg;->b(J)J
+
+    move-result-wide v3
+
+    cmp-long v8, v3, p2
+
+    if-lez v8, :cond_4
+
+    cmp-long v1, v13, v16
+
+    if-nez v1, :cond_3
+
+    new-instance v1, Lbu0;
+
+    const/4 v2, -0x1
+
+    invoke-direct/range {v1 .. v6}, Lbu0;-><init>(IJJ)V
+
+    return-object v1
+
+    :cond_3
+    add-long v15, v5, v9
+
+    new-instance v11, Lbu0;
+
+    const/4 v12, 0x0
+
+    const-wide v13, -0x7fffffffffffffffL    # -4.9E-324
+
+    invoke-direct/range {v11 .. v16}, Lbu0;-><init>(IJJ)V
+
+    return-object v11
+
+    :cond_4
+    const-wide/32 v8, 0x186a0
+
+    add-long/2addr v8, v3
+
+    cmp-long v8, v8, p2
+
+    if-lez v8, :cond_5
+
+    int-to-long v1, v12
+
+    add-long v11, v5, v1
+
+    new-instance v7, Lbu0;
+
+    const/4 v8, 0x0
+
+    const-wide v9, -0x7fffffffffffffffL    # -4.9E-324
+
+    invoke-direct/range {v7 .. v12}, Lbu0;-><init>(IJJ)V
+
+    return-object v7
+
+    :cond_5
+    int-to-long v8, v12
+
+    move-wide v13, v3
+
+    move-wide v9, v8
+
+    :cond_6
+    invoke-virtual {v2, v7}, Lvzb;->J(I)V
+
+    int-to-long v3, v7
+
+    goto :goto_0
+
+    :cond_7
+    const-wide v16, -0x7fffffffffffffffL    # -4.9E-324
+
+    :goto_2
+    cmp-long v1, v13, v16
+
+    if-eqz v1, :cond_8
+
+    add-long v15, v5, v3
+
+    new-instance v11, Lbu0;
+
+    const/4 v12, -0x2
+
+    invoke-direct/range {v11 .. v16}, Lbu0;-><init>(IJJ)V
+
+    return-object v11
+
+    :cond_8
+    sget-object v1, Lbu0;->e:Lbu0;
+
+    return-object v1
+.end method
+
+.method public final h()V
+    .locals 3
+
+    sget-object v0, Lpnh;->b:[B
+
+    iget-object v1, p0, Lv8h;->b:Lvzb;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    array-length v2, v0
+
+    invoke-virtual {v1, v2, v0}, Lvzb;->H(I[B)V
 
     return-void
 .end method

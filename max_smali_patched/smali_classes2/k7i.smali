@@ -1,134 +1,253 @@
 .class public final Lk7i;
-.super Lp6g;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Ly6h;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/webapp/rootscreen/WebAppRootScreen;
+.field public final a:Landroid/view/View;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:I
+
+.field public final c:Landroid/view/ViewGroup;
+
+.field public final d:Z
+
+.field public e:Z
+
+.field public f:Z
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;I)V
+    .locals 1
 
-    iput-object p2, p0, Lk7i;->X:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
-    const/4 p2, 0x2
+    const/4 v0, 0x0
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean v0, p0, Lk7i;->f:Z
+
+    iput-object p1, p0, Lk7i;->a:Landroid/view/View;
+
+    iput p2, p0, Lk7i;->b:I
+
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/ViewGroup;
+
+    iput-object p1, p0, Lk7i;->c:Landroid/view/ViewGroup;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lk7i;->d:Z
+
+    invoke-virtual {p0, p1}, Lk7i;->f(Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a(Lz6h;)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lk7i;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lk7i;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lk7i;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final b()V
     .locals 2
 
-    new-instance v0, Lk7i;
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Lk7i;->X:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    invoke-virtual {p0, v0}, Lk7i;->f(Z)V
 
-    invoke-direct {v0, p2, v1}, Lk7i;-><init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
+    iget-boolean v0, p0, Lk7i;->f:Z
 
-    iput-object p1, v0, Lk7i;->o:Ljava/lang/Object;
+    if-nez v0, :cond_0
 
-    return-object v0
-.end method
+    iget-object v0, p0, Lk7i;->a:Landroid/view/View;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    iget v1, p0, Lk7i;->b:I
 
-    iget-object v0, p0, Lk7i;->o:Ljava/lang/Object;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    check-cast v0, Lcah;
-
-    iget-object p1, p0, Lk7i;->X:Lone/me/webapp/rootscreen/WebAppRootScreen;
-
-    iget-object p1, p1, Lone/me/webapp/rootscreen/WebAppRootScreen;->u0:Ljava/lang/String;
-
-    sget-object v1, Lc5j;->a:Ledb;
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
+    invoke-static {v0, v1}, Lq6i;->e(Landroid/view/View;I)V
 
     :cond_0
-    sget-object v2, Lkk8;->d:Lkk8;
+    return-void
+.end method
 
-    invoke-virtual {v1, v2}, Ledb;->b(Lkk8;)Z
+.method public final c(Lz6h;)V
+    .locals 0
 
-    move-result v3
+    invoke-virtual {p1, p0}, Lz6h;->C(Ly6h;)Lz6h;
 
-    if-eqz v3, :cond_1
+    return-void
+.end method
 
-    iget-boolean v3, v0, Lcah;->b:Z
+.method public final e()V
+    .locals 2
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    const-string v5, "collect url state: "
+    invoke-virtual {p0, v0}, Lk7i;->f(Z)V
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-boolean v0, p0, Lk7i;->f:Z
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_0
 
-    const-string v5, " "
+    iget-object v0, p0, Lk7i;->a:Landroid/view/View;
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v1, 0x0
 
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Lq6i;->e(Landroid/view/View;I)V
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_0
+    return-void
+.end method
 
-    move-result-object v3
+.method public final f(Z)V
+    .locals 1
 
-    const/4 v4, 0x0
+    iget-boolean v0, p0, Lk7i;->d:Z
 
-    invoke-virtual {v1, v2, p1, v3, v4}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, p0, Lk7i;->e:Z
+
+    if-eq v0, p1, :cond_0
+
+    iget-object v0, p0, Lk7i;->c:Landroid/view/ViewGroup;
+
+    if-eqz v0, :cond_0
+
+    iput-boolean p1, p0, Lk7i;->e:Z
+
+    invoke-static {v0, p1}, Lw1k;->b(Landroid/view/ViewGroup;Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final g(Lz6h;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lk7i;->f:Z
+
+    return-void
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
+
+    .line 1
+    iget-boolean p1, p0, Lk7i;->f:Z
+
+    if-nez p1, :cond_0
+
+    .line 2
+    iget-object p1, p0, Lk7i;->a:Landroid/view/View;
+
+    iget v0, p0, Lk7i;->b:I
+
+    invoke-static {p1, v0}, Lq6i;->e(Landroid/view/View;I)V
+
+    .line 3
+    iget-object p1, p0, Lk7i;->c:Landroid/view/ViewGroup;
+
+    if-eqz p1, :cond_0
+
+    .line 4
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 5
+    invoke-virtual {p0, p1}, Lk7i;->f(Z)V
+
+    return-void
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;Z)V
+    .locals 0
+
+    if-nez p2, :cond_1
+
+    .line 6
+    iget-boolean p1, p0, Lk7i;->f:Z
+
+    if-nez p1, :cond_0
+
+    .line 7
+    iget-object p1, p0, Lk7i;->a:Landroid/view/View;
+
+    iget p2, p0, Lk7i;->b:I
+
+    invoke-static {p1, p2}, Lq6i;->e(Landroid/view/View;I)V
+
+    .line 8
+    iget-object p1, p0, Lk7i;->c:Landroid/view/ViewGroup;
+
+    if-eqz p1, :cond_0
+
+    .line 9
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 10
+    invoke-virtual {p0, p1}, Lk7i;->f(Z)V
 
     :cond_1
-    :goto_0
-    iget-boolean p1, v0, Lcah;->b:Z
+    return-void
+.end method
 
-    if-nez p1, :cond_2
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
 
-    iget-object p1, p0, Lk7i;->X:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    return-void
+.end method
 
-    invoke-virtual {p1}, Lone/me/webapp/rootscreen/WebAppRootScreen;->O0()Lyee;
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
 
-    move-result-object p1
+    .line 1
+    return-void
+.end method
 
-    iget-object v0, v0, Lcah;->a:Ljava/lang/String;
+.method public final onAnimationStart(Landroid/animation/Animator;Z)V
+    .locals 0
 
-    invoke-virtual {p1, v0}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+    if-eqz p2, :cond_0
 
-    :cond_2
-    sget-object p1, Lb3h;->a:Lb3h;
+    .line 2
+    iget-object p1, p0, Lk7i;->a:Landroid/view/View;
 
-    return-object p1
+    const/4 p2, 0x0
+
+    invoke-static {p1, p2}, Lq6i;->e(Landroid/view/View;I)V
+
+    .line 3
+    iget-object p1, p0, Lk7i;->c:Landroid/view/ViewGroup;
+
+    if-eqz p1, :cond_0
+
+    .line 4
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    :cond_0
+    return-void
 .end method

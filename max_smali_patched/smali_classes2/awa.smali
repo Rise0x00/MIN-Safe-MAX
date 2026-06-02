@@ -1,21 +1,15 @@
-.class public final Lawa;
-.super Lcwa;
+.class public abstract Lawa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final d:Ly95;
-
-
 # direct methods
-.method public constructor <init>(JJJLy95;)V
+.method public static a(Landroid/app/Notification$MessagingStyle;Landroid/app/Notification$MessagingStyle$Message;)Landroid/app/Notification$MessagingStyle;
     .locals 0
 
-    invoke-direct/range {p0 .. p6}, Lcwa;-><init>(JJJ)V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$MessagingStyle;->addHistoricMessage(Landroid/app/Notification$MessagingStyle$Message;)Landroid/app/Notification$MessagingStyle;
 
-    move-object p1, p0
+    move-result-object p0
 
-    iput-object p7, p1, Lawa;->d:Ly95;
-
-    return-void
+    return-object p0
 .end method

@@ -1,8 +1,11 @@
-.class public interface abstract Lsm;
+.class public final Lsm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract g(Lvl;)Lvl;
-.end method
+# instance fields
+.field public a:J
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;

@@ -1,83 +1,65 @@
 .class public final Ljc3;
-.super Lp6g;
+.super Lwxj;
 .source "SourceFile"
-
-# interfaces
-.implements Ldr6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Throwable;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lpc3;
-
-.field public final synthetic o:I
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lpc3;Lkotlin/coroutines/Continuation;I)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput p3, p0, Ljc3;->o:I
+    iput p1, p0, Ljc3;->a:I
 
-    iput-object p1, p0, Ljc3;->Y:Lpc3;
+    iput-object p2, p0, Ljc3;->b:Ljava/lang/Object;
 
-    const/4 p1, 0x3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    return-void
+.end method
+
+.method private final d(I)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final b(I)V
+    .locals 1
 
-    iget v0, p0, Ljc3;->o:I
+    iget p1, p0, Ljc3;->a:I
 
-    check-cast p1, Lf76;
+    packed-switch p1, :pswitch_data_0
 
-    check-cast p2, Ljava/lang/Throwable;
+    iget-object p1, p0, Ljc3;->b:Ljava/lang/Object;
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    check-cast p1, Lurg;
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v0, 0x1
 
-    new-instance p1, Ljc3;
+    iput-boolean v0, p1, Lurg;->e:Z
 
-    iget-object v0, p0, Ljc3;->Y:Lpc3;
+    iget-object p1, p1, Lurg;->f:Ljava/lang/ref/WeakReference;
 
-    const/4 v1, 0x1
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    invoke-direct {p1, v0, p3, v1}, Ljc3;-><init>(Lpc3;Lkotlin/coroutines/Continuation;I)V
+    move-result-object p1
 
-    iput-object p2, p1, Ljc3;->X:Ljava/lang/Throwable;
+    check-cast p1, Ltrg;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p1, p2}, Ljc3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1}, Ltrg;->a()V
 
-    return-object p2
-
+    :cond_0
     :pswitch_0
-    new-instance p1, Ljc3;
-
-    iget-object v0, p0, Ljc3;->Y:Lpc3;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v0, p3, v1}, Ljc3;-><init>(Lpc3;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Ljc3;->X:Ljava/lang/Throwable;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Ljc3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 p1, 0x0
-
-    throw p1
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
@@ -85,57 +67,70 @@
     .end packed-switch
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final c(Landroid/graphics/Typeface;Z)V
+    .locals 1
 
-    iget v0, p0, Ljc3;->o:I
+    iget p1, p0, Ljc3;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    packed-switch p1, :pswitch_data_0
 
-    iget-object v0, p0, Ljc3;->Y:Lpc3;
-
-    iget-object v0, v0, Lpc3;->Z:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    iget-object v1, p0, Ljc3;->X:Ljava/lang/Throwable;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    const-string p1, "big_flow: completion"
-
-    if-eqz v1, :cond_0
-
-    invoke-static {v0, p1, v1}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    if-eqz p2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v0, p1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object p1, p0, Ljc3;->b:Ljava/lang/Object;
 
+    check-cast p1, Lurg;
+
+    const/4 p2, 0x1
+
+    iput-boolean p2, p1, Lurg;->e:Z
+
+    iget-object p1, p1, Lurg;->f:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ltrg;
+
+    if-eqz p1, :cond_1
+
+    invoke-interface {p1}, Ltrg;->a()V
+
+    :cond_1
     :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Ljc3;->X:Ljava/lang/Throwable;
+    iget-object p1, p0, Ljc3;->b:Ljava/lang/Object;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    check-cast p1, Lcom/google/android/material/chip/Chip;
 
-    iget-object p1, p0, Ljc3;->Y:Lpc3;
+    iget-object p2, p1, Lcom/google/android/material/chip/Chip;->o:Lnc3;
 
-    iget-object p1, p1, Lpc3;->Z:Ljava/lang/Object;
+    iget-boolean v0, p2, Lnc3;->U1:Z
 
-    check-cast p1, Ljava/lang/String;
+    if-eqz v0, :cond_2
 
-    const-string v1, "big_flow: fail"
+    iget-object p2, p2, Lnc3;->W0:Ljava/lang/CharSequence;
 
-    invoke-static {p1, v1, v0}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    goto :goto_1
 
-    throw v0
+    :cond_2
+    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
-    nop
+    move-result-object p2
+
+    :goto_1
+    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0

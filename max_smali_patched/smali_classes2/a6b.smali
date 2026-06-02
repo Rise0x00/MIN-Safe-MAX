@@ -1,69 +1,133 @@
-.class public final enum La6b;
-.super Ljava/lang/Enum;
+.class public abstract La6b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum a:La6b;
+.field public static final a:I
 
-.field public static final synthetic b:[La6b;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 1
 
-    new-instance v0, La6b;
+    sget v0, Lfnd;->oneme_appearance_settings_dark_mode:I
 
-    const-string v1, "IDLE"
+    sput v0, La6b;->a:I
 
-    const/4 v2, 0x0
+    sget v0, Lfnd;->oneme_appearance_settings_font_size_reset:I
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput v0, La6b;->b:I
 
-    sput-object v0, La6b;->a:La6b;
+    sget v0, Lfnd;->oneme_appearance_settings_font_size_title:I
 
-    new-instance v1, La6b;
+    sput v0, La6b;->c:I
 
-    const-string v2, "LOADING"
+    sget v0, Lfnd;->oneme_appearance_settings_light_mode:I
 
-    const/4 v3, 0x1
+    sput v0, La6b;->d:I
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget v0, Lfnd;->oneme_appearance_settings_message_incoming_first:I
 
-    filled-new-array {v0, v1}, [La6b;
+    sput v0, La6b;->e:I
 
-    move-result-object v0
+    sget v0, Lfnd;->oneme_appearance_settings_message_incoming_second:I
 
-    sput-object v0, La6b;->b:[La6b;
+    sput v0, La6b;->f:I
+
+    sget v0, Lfnd;->oneme_appearance_settings_message_outgoing_new:I
+
+    sput v0, La6b;->g:I
+
+    sget v0, Lfnd;->oneme_appearance_settings_mode_title:I
+
+    sput v0, La6b;->h:I
+
+    sget v0, Lfnd;->oneme_appearance_settings_system_mode:I
+
+    sput v0, La6b;->i:I
+
+    sget v0, Lfnd;->oneme_appearance_settings_toolbar_title:I
+
+    sput v0, La6b;->j:I
+
+    sget v0, Lfnd;->oneme_appearance_theme_feb23:I
+
+    sput v0, La6b;->k:I
+
+    sget v0, Lfnd;->oneme_appearance_theme_lebedev_name:I
+
+    sput v0, La6b;->l:I
+
+    sget v0, Lfnd;->oneme_appearance_theme_mar08:I
+
+    sput v0, La6b;->m:I
+
+    sget v0, Lfnd;->oneme_appearance_theme_moscow_name:I
+
+    sput v0, La6b;->n:I
+
+    sget v0, Lfnd;->oneme_appearance_theme_nature_name:I
+
+    sput v0, La6b;->o:I
+
+    sget v0, Lfnd;->oneme_appearance_theme_neon_name:I
+
+    sput v0, La6b;->p:I
+
+    sget v0, Lfnd;->oneme_appearance_theme_ny_26_green:I
+
+    sput v0, La6b;->q:I
+
+    sget v0, Lfnd;->oneme_appearance_theme_ny_26_orange:I
+
+    sput v0, La6b;->r:I
+
+    sget v0, Lfnd;->oneme_appearance_theme_simple_name:I
+
+    sput v0, La6b;->s:I
+
+    sget v0, Lfnd;->oneme_appearance_theme_space_name:I
+
+    sput v0, La6b;->t:I
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)La6b;
-    .locals 1
-
-    const-class v0, La6b;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, La6b;
-
-    return-object p0
-.end method
-
-.method public static values()[La6b;
-    .locals 1
-
-    sget-object v0, La6b;->b:[La6b;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [La6b;
-
-    return-object v0
 .end method

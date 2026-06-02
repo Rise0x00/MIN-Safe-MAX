@@ -1,99 +1,91 @@
 .class public final Lto;
-.super Landroid/widget/RatingBar;
+.super Landroid/content/ContextWrapper;
 .source "SourceFile"
+
+# interfaces
+.implements Lui;
+.implements Lxug;
+
+
+# static fields
+.field public static c:Lto;
 
 
 # instance fields
-.field public final a:Lws8;
+.field public final a:Landroid/app/Application;
+
+.field public final b:Lakg;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 2
+.method public constructor <init>(Landroid/app/Application;Lia8;Lakg;)V
+    .locals 0
 
-    sget v0, Lh5d;->ratingBarStyle:I
+    invoke-direct {p0, p1}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0, p1, p2, v0}, Landroid/widget/RatingBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    iput-object p1, p0, Lto;->a:Landroid/app/Application;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iput-object p3, p0, Lto;->b:Lakg;
 
-    move-result-object p1
-
-    invoke-static {p0, p1}, Ljjg;->a(Landroid/view/View;Landroid/content/Context;)V
-
-    new-instance p1, Lws8;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, v1, p0}, Lws8;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lto;->a:Lws8;
-
-    invoke-virtual {p1, p2, v0}, Lws8;->z(Landroid/util/AttributeSet;I)V
+    sput-object p0, Lto;->c:Lto;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final declared-synchronized onMeasure(II)V
+.method public static a()Ljr3;
     .locals 1
 
-    monitor-enter p0
+    sget-object v0, Lto;->c:Lto;
 
-    :try_start_0
-    invoke-super {p0, p1, p2}, Landroid/widget/RatingBar;->onMeasure(II)V
+    iget-object v0, v0, Lto;->b:Lakg;
 
-    iget-object p2, p0, Lto;->a:Lws8;
+    invoke-virtual {v0}, Lakg;->getValue()Ljava/lang/Object;
 
-    iget-object p2, p2, Lws8;->c:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast p2, Landroid/graphics/Bitmap;
+    check-cast v0, Ljr3;
 
-    if-eqz p2, :cond_0
+    return-object v0
+.end method
 
-    invoke-virtual {p2}, Landroid/graphics/Bitmap;->getWidth()I
 
-    move-result p2
+# virtual methods
+.method public final f()Lapg;
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/widget/RatingBar;->getNumStars()I
+    invoke-static {}, Lto;->a()Ljr3;
 
-    move-result v0
+    move-result-object v0
 
-    mul-int/2addr p2, v0
+    check-cast v0, Lsab;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lz5;
 
-    invoke-static {p2, p1, v0}, Landroid/view/View;->resolveSizeAndState(III)I
+    move-result-object v0
 
-    move-result p1
+    const/16 v1, 0x3bc
 
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
+    invoke-virtual {v0, v1}, Lz5;->c(I)Ljava/lang/Object;
 
-    move-result p2
+    move-result-object v0
 
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    check-cast v0, Lbpg;
 
-    goto :goto_0
+    invoke-virtual {v0}, Lbpg;->c()Lapg;
 
-    :catchall_0
-    move-exception p1
+    move-result-object v0
 
-    goto :goto_1
+    return-object v0
+.end method
 
-    :cond_0
-    :goto_0
-    monitor-exit p0
+.method public final getBaseContext()Landroid/content/Context;
+    .locals 1
 
-    return-void
+    iget-object v0, p0, Lto;->a:Landroid/app/Application;
 
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-virtual {v0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
 
-    throw p1
+    move-result-object v0
+
+    return-object v0
 .end method

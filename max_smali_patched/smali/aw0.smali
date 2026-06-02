@@ -1,106 +1,49 @@
-.class public final synthetic Law0;
-.super Ljava/lang/Object;
+.class public final Law0;
+.super Lz84;
 .source "SourceFile"
-
-# interfaces
-.implements Lrw1;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Ljava/util/concurrent/atomic/AtomicReference;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lbw0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
+.method public constructor <init>(Lbw0;Lz84;)V
     .locals 0
 
-    iput p2, p0, Law0;->a:I
+    iput-object p1, p0, Law0;->o:Lbw0;
 
-    iput-object p1, p0, Law0;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final l(Lqw1;)Ljava/lang/String;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Law0;->a:I
+    iput-object p1, p0, Law0;->d:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Law0;->X:I
 
-    iget-object v0, p0, Law0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    or-int/2addr p1, v0
 
-    const-string p1, "Terminate InputBuffer"
+    iput p1, p0, Law0;->X:I
 
-    return-object p1
+    iget-object p1, p0, Law0;->o:Lbw0;
 
-    :pswitch_0
-    iget-object v0, p0, Law0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0, p0}, Lbw0;->b(Lzl7;Lz84;)Ljava/io/Serializable;
 
-    const-string p1, "mReleasedFuture"
-
-    return-object p1
-
-    :pswitch_1
-    iget-object v0, p0, Law0;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    const-string p1, "acquireInputBuffer"
+    move-result-object p1
 
     return-object p1
-
-    :pswitch_2
-    iget-object v0, p0, Law0;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    const-string p1, "Data closed"
-
-    return-object p1
-
-    :pswitch_3
-    new-instance v0, Lp12;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1, p1}, Lp12;-><init>(ILjava/lang/Object;)V
-
-    iget-object p1, p0, Law0;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    const-string p1, "OnScreenFlashUiApplied"
-
-    return-object p1
-
-    :pswitch_4
-    iget-object v0, p0, Law0;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    const-string p1, "Data closed"
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

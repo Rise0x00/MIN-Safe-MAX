@@ -1,100 +1,42 @@
-.class public final Lqyi;
+.class public final synthetic Lqyi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Lcom/my/tracker/core/utils/Consumer;
 
 
-# static fields
-.field public static final a:Lqyi;
+# instance fields
+.field public final synthetic a:Lcom/my/tracker/core/o/a;
+
+.field public final synthetic b:Lcom/my/tracker/core/utils/BiConsumer;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lcom/my/tracker/core/o/a;Lcom/my/tracker/core/utils/BiConsumer;)V
+    .locals 0
 
-    new-instance v0, Lqyi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lqyi;->a:Lcom/my/tracker/core/o/a;
 
-    sput-object v0, Lqyi;->a:Lqyi;
-
-    new-instance v0, Lbri;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
-
-    const-class v1, Lpri;
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x6
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    iput-object p2, p0, Lqyi;->b:Lcom/my/tracker/core/utils/BiConsumer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final accept(Ljava/lang/Object;)V
+    .locals 2
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Lqyi;->b:Lcom/my/tracker/core/utils/BiConsumer;
 
-    move-result-object p1
+    check-cast p1, Lcom/my/tracker/core/EngineCore;
 
-    throw p1
+    iget-object v1, p0, Lqyi;->a:Lcom/my/tracker/core/o/a;
+
+    invoke-static {v1, v0, p1}, Lcom/my/tracker/core/o/a;->d(Lcom/my/tracker/core/o/a;Lcom/my/tracker/core/utils/BiConsumer;Lcom/my/tracker/core/EngineCore;)V
+
+    return-void
 .end method

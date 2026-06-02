@@ -1,70 +1,59 @@
-.class public final Laxi;
+.class public abstract synthetic Laxi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvwa;
-
 
 # static fields
-.field public static final a:Laxi;
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Laxi;
+    invoke-static {}, Ltr5;->values()[Ltr5;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    sput-object v0, Laxi;->a:Laxi;
+    array-length v0, v0
 
-    new-instance v0, Lbri;
+    new-array v0, v0, [I
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+    const/4 v2, 0x0
 
-    const-class v1, Lpri;
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
+    :catch_0
     const/4 v2, 0x2
 
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    move-result-object v0
+    :catch_1
+    const/4 v1, 0x3
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+    :try_start_2
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    move-result-object v0
+    :catch_2
+    const/4 v2, 0x4
 
-    const/4 v2, 0x3
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    :catch_3
+    sput-object v0, Laxi;->$EnumSwitchMapping$0:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
-
-    move-result-object p1
-
-    throw p1
 .end method

@@ -3,26 +3,40 @@
 
 
 # static fields
-.field public static MarkdownItemView:[I = null
+.field public static mediarouter_chooser_list_item_padding_bottom:I = 0x7f070337
 
-.field public static MarkdownItemView_miv_highlight_title:I = 0x0
+.field public static mediarouter_chooser_list_item_padding_end:I = 0x7f070338
 
-.field public static MarkdownItemView_miv_title:I = 0x1
+.field public static mediarouter_chooser_list_item_padding_start:I = 0x7f070339
 
+.field public static mediarouter_chooser_list_item_padding_top:I = 0x7f07033a
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.field public static mr_cast_group_volume_seekbar_height:I = 0x7f07033f
 
-    const v0, 0x7f040671
+.field public static mr_cast_meta_art_size:I = 0x7f070340
 
-    const v1, 0x7f040672
+.field public static mr_cast_meta_subtitle_text_size:I = 0x7f070341
 
-    filled-new-array {v0, v1}, [I
+.field public static mr_cast_route_volume_seekbar_height:I = 0x7f070342
 
-    move-result-object v0
+.field public static mr_cast_seekbar_thumb_size:I = 0x7f070343
 
-    sput-object v0, Lfgd;->MarkdownItemView:[I
+.field public static mr_controller_volume_group_list_item_height:I = 0x7f070344
 
-    return-void
-.end method
+.field public static mr_controller_volume_group_list_item_icon_size:I = 0x7f070345
+
+.field public static mr_controller_volume_group_list_max_height:I = 0x7f070346
+
+.field public static mr_controller_volume_group_list_padding_top:I = 0x7f070347
+
+.field public static mr_dialog_fixed_width_major:I = 0x7f070348
+
+.field public static mr_dialog_fixed_width_minor:I = 0x7f070349
+
+.field public static mr_dynamic_dialog_header_text_size:I = 0x7f07034a
+
+.field public static mr_dynamic_dialog_route_text_size:I = 0x7f07034b
+
+.field public static mr_dynamic_dialog_row_height:I = 0x7f07034c
+
+.field public static mr_dynamic_volume_group_list_item_height:I = 0x7f07034d

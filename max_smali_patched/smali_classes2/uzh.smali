@@ -1,51 +1,58 @@
-.class public final Luzh;
-.super Lo84;
+.class public interface abstract Luzh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Li0i;
+# virtual methods
+.method public a()Lh0b;
+    .locals 1
 
-.field public Y:I
+    sget-object v0, Lny3;->b:Lny3;
 
-.field public d:Lnp0;
+    return-object v0
+.end method
 
-.field public synthetic o:Ljava/lang/Object;
+.method public abstract b(Lfhg;)V
+.end method
 
-
-# direct methods
-.method public constructor <init>(Li0i;Lkotlin/coroutines/Continuation;)V
+.method public c(I)V
     .locals 0
-
-    iput-object p1, p0, Luzh;->X:Li0i;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public d()Lh0b;
     .locals 1
 
-    iput-object p1, p0, Luzh;->o:Ljava/lang/Object;
+    sget-object v0, Lhh0;->f:Lny3;
 
-    iget p1, p0, Luzh;->Y:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public e()Lh0b;
+    .locals 2
 
-    or-int/2addr p1, v0
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    iput p1, p0, Luzh;->Y:I
+    new-instance v1, Lny3;
 
-    iget-object p1, p0, Luzh;->X:Li0i;
+    invoke-direct {v1, v0}, Lny3;-><init>(Ljava/lang/Object;)V
 
-    const/4 v0, 0x0
+    return-object v1
+.end method
 
-    invoke-virtual {p1, v0, v0, p0}, Li0i;->h(Lqp0;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public f(Lfhg;Lfxg;Z)V
+    .locals 0
 
-    move-result-object p1
+    invoke-interface {p0, p1}, Luzh;->b(Lfhg;)V
+
+    return-void
+.end method
+
+.method public g(Le92;I)Lsqh;
+    .locals 0
+
+    sget-object p1, Lsqh;->a:Lrqh;
 
     return-object p1
 .end method

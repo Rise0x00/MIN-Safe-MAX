@@ -1,51 +1,135 @@
 .class public final Lxdh;
-.super Ljava/lang/Object;
+.super Lduc;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+# static fields
+.field public static final c:Lxdh;
+
+
+# direct methods
+.method static constructor <clinit>()V
     .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Lxdh;
 
-    if-ne p0, p1, :cond_0
+    sget-object v1, Lydh;->a:Lydh;
 
-    return v0
+    invoke-direct {v0, v1}, Lduc;-><init>(Lc88;)V
 
-    :cond_0
-    instance-of v1, p1, Lxdh;
+    sput-object v0, Lxdh;->c:Lxdh;
 
-    if-nez v1, :cond_1
+    return-void
+.end method
 
-    const/4 p1, 0x0
+
+# virtual methods
+.method public final h(Ljava/lang/Object;)I
+    .locals 0
+
+    check-cast p1, Lvdh;
+
+    iget-object p1, p1, Lvdh;->a:[I
+
+    array-length p1, p1
 
     return p1
-
-    :cond_1
-    check-cast p1, Lxdh;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return v0
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final j(Lqq3;ILjava/lang/Object;)V
+    .locals 2
 
-    const/high16 v0, 0x1f000000
+    check-cast p3, Lwdh;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    iget-object v0, p0, Lduc;->b:Lcuc;
 
-    move-result v0
+    invoke-interface {p1, v0, p2}, Lqq3;->c(Lcuc;I)Lbn4;
 
-    return v0
+    move-result-object p1
+
+    invoke-interface {p1}, Lbn4;->m()I
+
+    move-result p1
+
+    invoke-static {p3}, Lbuc;->c(Lbuc;)V
+
+    iget-object p2, p3, Lwdh;->a:[I
+
+    iget v0, p3, Lwdh;->b:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p3, Lwdh;->b:I
+
+    aput p1, p2, v0
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final k(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const-string v0, "VfxButtonIconOverlayPlainElevation1Colors(color=520093696)"
+    check-cast p1, Lvdh;
+
+    iget-object p1, p1, Lvdh;->a:[I
+
+    new-instance v0, Lwdh;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, v0, Lwdh;->a:[I
+
+    array-length p1, p1
+
+    iput p1, v0, Lwdh;->b:I
+
+    const/16 p1, 0xa
+
+    invoke-virtual {v0, p1}, Lwdh;->b(I)V
 
     return-object v0
+.end method
+
+.method public final n()Ljava/lang/Object;
+    .locals 2
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [I
+
+    new-instance v1, Lvdh;
+
+    invoke-direct {v1, v0}, Lvdh;-><init>([I)V
+
+    return-object v1
+.end method
+
+.method public final o(Lsq3;Ljava/lang/Object;I)V
+    .locals 3
+
+    check-cast p2, Lvdh;
+
+    iget-object p2, p2, Lvdh;->a:[I
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, p3, :cond_0
+
+    iget-object v1, p0, Lduc;->b:Lcuc;
+
+    invoke-interface {p1, v1, v0}, Lsq3;->A(Lcuc;I)Lvk5;
+
+    move-result-object v1
+
+    aget v2, p2, v0
+
+    invoke-interface {v1, v2}, Lvk5;->w(I)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method

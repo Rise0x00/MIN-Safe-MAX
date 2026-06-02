@@ -1,115 +1,120 @@
 .class public final Lzgc;
-.super Licg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lyk8;
+.implements Lyth;
 
 
-# instance fields
-.field public final c:Ljava/lang/Object;
+# static fields
+.field public static final a:Lkfg;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lhs5;
 
-    iput-object p1, p0, Lzgc;->c:Ljava/lang/Object;
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lhs5;-><init>(I)V
+
+    invoke-static {v0}, Ltla;->G(Lkfg;)Lkfg;
+
+    move-result-object v0
+
+    sput-object v0, Lzgc;->a:Lkfg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(ZZ)Ljava/lang/String;
-    .locals 2
+.method public final a(Landroid/content/Context;Lr41;Lsj3;ZLva2;)Lauh;
+    .locals 7
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    :try_start_0
+    sget-object v0, Lzgc;->a:Lkfg;
 
-    const-string v1, "PRESET_AVATARS.Response(presets="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lzgc;->c:Ljava/lang/Object;
-
-    invoke-static {v1, p1, p2}, Lk5j;->d(Ljava/util/List;ZZ)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 p1, 0x29
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lzgc;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lzgc;
-
-    iget-object v0, p0, Lzgc;->c:Ljava/lang/Object;
-
-    iget-object p1, p1, Lzgc;->c:Ljava/lang/Object;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lzgc;->c:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0, v0}, Lzgc;->a(ZZ)Ljava/lang/String;
+    invoke-interface {v0}, Lkfg;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Ljava/lang/Class;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    const-string v3, "setEnableReplayableCache"
+
+    sget-object v4, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    filled-new-array {v4}, [Ljava/lang/Class;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v3
+
+    sget-object v4, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    filled-new-array {v4}, [Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v2, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "build"
+
+    invoke-virtual {v0, v3, v1}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-object v1, v0
+
+    check-cast v1, Lyth;
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move v5, p4
+
+    move-object v6, p5
+
+    invoke-interface/range {v1 .. v6}, Lyth;->a(Landroid/content/Context;Lr41;Lsj3;ZLva2;)Lauh;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception v0
+
+    move-object p1, v0
+
+    new-instance p2, Landroidx/media3/common/VideoFrameProcessingException;
+
+    invoke-direct {p2, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
+
+    throw p2
 .end method

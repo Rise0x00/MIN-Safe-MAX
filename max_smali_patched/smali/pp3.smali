@@ -1,123 +1,81 @@
-.class public final Lpp3;
-.super Lbu0;
+.class public Lpp3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+
 # instance fields
-.field public final c:Z
+.field private volatile synthetic _handled$volatile:I
+
+.field public final a:Ljava/lang/Throwable;
 
 
 # direct methods
-.method public constructor <init>(Lyi;Z)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    const-class v0, Lpp3;
+
+    const-string v1, "_handled$volatile"
+
+    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Lpp3;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Throwable;Z)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lbu0;-><init>(Lyi;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p2, p0, Lpp3;->c:Z
+    iput-object p1, p0, Lpp3;->a:Ljava/lang/Throwable;
+
+    iput p2, p0, Lpp3;->_handled$volatile:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final k(B)V
-    .locals 1
-
-    iget-boolean v0, p0, Lpp3;->c:Z
-
-    if-eqz v0, :cond_0
-
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lbu0;->w(Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lbu0;->t(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final q(I)V
-    .locals 1
-
-    iget-boolean v0, p0, Lpp3;->c:Z
-
-    invoke-static {p1}, Ljava/lang/Integer;->toUnsignedString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, p1}, Lbu0;->w(Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lbu0;->t(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final s(J)V
-    .locals 1
-
-    iget-boolean v0, p0, Lpp3;->c:Z
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->toUnsignedString(J)Ljava/lang/String;
-
-    move-result-object p1
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, p1}, Lbu0;->w(Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lbu0;->t(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final v(S)V
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget-boolean v0, p0, Lpp3;->c:Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const v1, 0xffff
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    and-int/2addr p1, v1
+    move-result-object v1
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v1
 
-    invoke-virtual {p0, p1}, Lbu0;->w(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    const/16 v1, 0x5b
 
-    :cond_0
-    and-int/2addr p1, v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    iget-object v1, p0, Lpp3;->a:Ljava/lang/Throwable;
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1}, Lbu0;->t(Ljava/lang/String;)V
+    const/16 v1, 0x5d
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

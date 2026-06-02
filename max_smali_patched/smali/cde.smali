@@ -1,48 +1,73 @@
 .class public final Lcde;
-.super Lo84;
+.super Lm01;
+.source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lg4a;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final synthetic b:Loz4;
 
 
 # direct methods
-.method public constructor <init>(Lg4a;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Loz4;I)V
     .locals 0
 
-    iput-object p1, p0, Lcde;->X:Lg4a;
+    iput-object p1, p0, Lcde;->b:Loz4;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lm01;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final i(Ljr6;)V
     .locals 1
 
-    iput-object p1, p0, Lcde;->d:Ljava/lang/Object;
+    new-instance v0, Lxfg;
 
-    iget p1, p0, Lcde;->o:I
+    invoke-direct {v0, p1}, Lxfg;-><init>(Lyfg;)V
 
-    const/high16 v0, -0x80000000
+    iget-object p1, p0, Lcde;->b:Loz4;
 
-    or-int/2addr p1, v0
+    invoke-virtual {p1, v0}, Loz4;->j(Lsie;)V
 
-    iput p1, p0, Lcde;->o:I
+    return-void
+.end method
 
-    iget-object p1, p0, Lcde;->X:Lg4a;
+.method public final l(Ljr6;II)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-virtual {p0, p1, p2, p3}, Lcde;->o(Ljr6;II)V
 
-    invoke-virtual {p1, v0, p0}, Lg4a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object p1
+.method public final n(Ljr6;)V
+    .locals 2
 
-    return-object p1
+    new-instance v0, Lxfg;
+
+    invoke-direct {v0, p1}, Lxfg;-><init>(Lyfg;)V
+
+    iget-object v1, p0, Lcde;->b:Loz4;
+
+    invoke-virtual {v1, v0}, Loz4;->l(Lsie;)V
+
+    iput-object p1, v1, Loz4;->h:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final o(Ljr6;II)V
+    .locals 1
+
+    new-instance v0, Lxfg;
+
+    invoke-direct {v0, p1}, Lxfg;-><init>(Lyfg;)V
+
+    iget-object p1, p0, Lcde;->b:Loz4;
+
+    invoke-virtual {p1, v0, p2, p3}, Loz4;->k(Lsie;II)V
+
+    return-void
 .end method

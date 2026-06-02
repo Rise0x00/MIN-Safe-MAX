@@ -1,48 +1,69 @@
-.class public interface abstract Lpg1;
-.super Ljava/lang/Object;
+.class public final Lpg1;
+.super Ldp0;
 .source "SourceFile"
 
-# interfaces
-.implements Lj0f;
+
+# static fields
+.field public static final X:Lyn4;
+
+.field public static final c:Lpg1;
+
+.field public static final d:Lyn4;
+
+.field public static final o:Lyn4;
 
 
-# virtual methods
-.method public b()Lqhg;
-    .locals 1
+# direct methods
+.method static constructor <clinit>()V
+    .locals 6
 
-    const/4 v0, 0x0
+    new-instance v0, Lpg1;
 
-    return-object v0
-.end method
+    const/4 v1, 0x3
 
-.method public c()Lyze;
-    .locals 1
+    invoke-direct {v0, v1}, Ldp0;-><init>(I)V
 
-    const/4 v0, 0x0
+    sput-object v0, Lpg1;->c:Lpg1;
 
-    return-object v0
-.end method
+    const/4 v1, 0x0
 
-.method public d()Lqhg;
-    .locals 1
+    new-array v2, v1, [Ljava/lang/String;
 
-    const/4 v0, 0x0
+    const-string v3, ":calls-history"
 
-    return-object v0
-.end method
+    const/4 v4, 0x0
 
-.method public e()Lg0f;
-    .locals 1
+    const/16 v5, 0xe
 
-    const/4 v0, 0x0
+    invoke-static {v0, v3, v2, v4, v5}, Ldp0;->A(Ldp0;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyn4;
 
-    return-object v0
-.end method
+    move-result-object v2
 
-.method public u()I
-    .locals 1
+    sput-object v2, Lpg1;->d:Lyn4;
 
-    const/4 v0, 0x4
+    const-string v2, ":call-history-info"
 
-    return v0
+    new-array v1, v1, [Ljava/lang/String;
+
+    invoke-static {v0, v2, v1, v4, v5}, Ldp0;->A(Ldp0;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyn4;
+
+    move-result-object v1
+
+    sput-object v1, Lpg1;->o:Lyn4;
+
+    const-string v1, "chat_id"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ":call-presettings"
+
+    invoke-static {v0, v2, v1, v4, v5}, Ldp0;->A(Ldp0;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyn4;
+
+    move-result-object v0
+
+    sput-object v0, Lpg1;->X:Lyn4;
+
+    return-void
 .end method

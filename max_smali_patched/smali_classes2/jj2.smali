@@ -1,353 +1,231 @@
-.class public final Ljj2;
-.super Lp6g;
+.class public abstract synthetic Ljj2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
 
-
-# instance fields
-.field public X:Lih2;
-
-.field public Y:I
-
-.field public final synthetic Z:Lvea;
-
-.field public o:Ljava/util/Iterator;
-
-.field public final synthetic t0:Lkj2;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Lvea;Lkj2;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput-object p1, p0, Ljj2;->Z:Lvea;
+    invoke-static {}, Lhj2;->values()[Lhj2;
 
-    iput-object p2, p0, Ljj2;->t0:Lkj2;
+    move-result-object v0
 
-    const/4 p1, 0x2
+    array-length v0, v0
 
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-array v0, v0, [I
 
-    return-void
-.end method
+    const/4 v1, 0x1
 
+    const/4 v2, 0x0
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ljj2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ljj2;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Ljj2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Ljj2;
-
-    iget-object v0, p0, Ljj2;->Z:Lvea;
-
-    iget-object v1, p0, Ljj2;->t0:Lkj2;
-
-    invoke-direct {p1, v0, v1, p2}, Ljj2;-><init>(Lvea;Lkj2;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 17
-
-    move-object/from16 v1, p0
-
-    iget-object v2, v1, Ljj2;->t0:Lkj2;
-
-    iget-object v3, v2, Lkj2;->d:Lo58;
-
-    iget-object v4, v2, Lkj2;->a:Ljava/lang/String;
-
-    iget v0, v1, Ljj2;->Y:I
-
-    sget-object v5, Lb3h;->a:Lb3h;
-
-    iget-object v6, v1, Ljj2;->Z:Lvea;
-
-    const/4 v7, 0x3
-
-    const/4 v8, 0x2
-
-    const/4 v9, 0x1
-
-    sget-object v10, Lac4;->a:Lac4;
-
-    if-eqz v0, :cond_3
-
-    if-eq v0, v9, :cond_2
-
-    if-eq v0, v8, :cond_1
-
-    if-ne v0, v7, :cond_0
-
-    iget-object v0, v1, Ljj2;->o:Ljava/util/Iterator;
-
-    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto/16 :goto_2
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    iget-object v0, v1, Ljj2;->X:Lih2;
-
-    iget-object v4, v1, Ljj2;->o:Ljava/util/Iterator;
-
-    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    move-object v15, v0
-
-    move-object v0, v4
-
-    move-object/from16 v4, p1
-
-    goto/16 :goto_3
-
-    :cond_2
     :try_start_0
-    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
+    aput v1, v0, v2
     :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-object/from16 v0, p1
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
     :catch_0
-    move-exception v0
+    const/4 v2, 0x2
 
-    goto/16 :goto_5
-
-    :cond_3
-    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    new-instance v0, Lhj2;
-
-    sget-object v11, Lwob;->p1:Lwob;
-
-    const/4 v12, 0x0
-
-    invoke-direct {v0, v11, v12}, Lhj2;-><init>(Lwob;I)V
-
-    invoke-virtual {v6}, Lvea;->j()Z
-
-    move-result v11
-
-    if-eqz v11, :cond_4
-
-    iget-object v11, v0, Lj2;->b:Ljava/lang/Object;
-
-    check-cast v11, Lys;
-
-    const-string v12, "chatIds"
-
-    invoke-virtual {v11, v12, v6}, Ladf;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_4
     :try_start_1
-    iget-object v11, v2, Lkj2;->b:Lo58;
-
-    invoke-interface {v11}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v11
-
-    check-cast v11, Lt2b;
-
-    iget-object v12, v2, Lkj2;->f:Lo58;
-
-    invoke-interface {v12}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v12
-
-    check-cast v12, Lym5;
-
-    iput v9, v1, Ljj2;->Y:I
-
-    invoke-static {v11, v0, v4, v12, v1}, Lmmj;->c(Lt2b;Lj2;Ljava/lang/String;Lym5;Lo84;)Ljava/lang/Object;
-
-    move-result-object v0
+    aput v2, v0, v1
     :try_end_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    if-ne v0, v10, :cond_5
+    :catch_1
+    const/4 v1, 0x3
 
-    goto :goto_4
+    :try_start_2
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    :goto_0
-    new-instance v9, Lszd;
+    :catch_2
+    const/4 v2, 0x4
 
-    invoke-direct {v9, v0}, Lszd;-><init>(Ljava/lang/Throwable;)V
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    move-object v0, v9
+    :catch_3
+    const/4 v1, 0x5
 
-    :cond_5
-    :goto_1
-    invoke-static {v0}, Luzd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+    :try_start_4
+    aput v1, v0, v2
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    move-result-object v9
+    :catch_4
+    const/4 v2, 0x6
 
-    if-eqz v9, :cond_6
+    :try_start_5
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    const-string v11, "Chats reactions settings weren\'t get because of error: "
+    :catch_5
+    const/4 v1, 0x7
 
-    invoke-static {v4, v11, v9}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_start_6
+    aput v1, v0, v2
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    :cond_6
-    invoke-static {v0}, Lpmj;->b(Ljava/lang/Object;)V
+    :catch_6
+    const/16 v2, 0x8
 
-    check-cast v0, Lij2;
+    :try_start_7
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
 
-    iget-object v0, v0, Lij2;->c:Ljava/util/ArrayList;
+    :catch_7
+    const/16 v1, 0x9
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    :try_start_8
+    aput v1, v0, v1
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
 
-    move-result-object v0
+    :catch_8
+    const/16 v1, 0xa
 
-    :cond_7
-    :goto_2
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    :try_start_9
+    aput v1, v0, v1
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
 
-    move-result v4
+    :catch_9
+    const/16 v1, 0xb
 
-    if-eqz v4, :cond_a
+    :try_start_a
+    aput v1, v0, v2
+    :try_end_a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :catch_a
+    const/16 v2, 0xc
 
-    move-result-object v4
+    const/16 v3, 0xe
 
-    check-cast v4, Lkw2;
+    :try_start_b
+    aput v2, v0, v3
+    :try_end_b
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
 
-    invoke-static {v4}, Los8;->g(Lkw2;)Lih2;
+    :catch_b
+    const/16 v4, 0xd
 
-    move-result-object v9
+    const/16 v5, 0xf
 
-    invoke-interface {v3}, Lo58;->getValue()Ljava/lang/Object;
+    :try_start_c
+    aput v4, v0, v5
+    :try_end_c
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_c} :catch_c
 
-    move-result-object v11
+    :catch_c
+    :try_start_d
+    aput v3, v0, v2
+    :try_end_d
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_d .. :try_end_d} :catch_d
 
-    check-cast v11, Lla3;
+    :catch_d
+    :try_start_e
+    aput v5, v0, v4
+    :try_end_e
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_e .. :try_end_e} :catch_e
 
-    iget-wide v12, v4, Lkw2;->a:J
+    :catch_e
+    const/16 v2, 0x10
 
-    iput-object v0, v1, Ljj2;->o:Ljava/util/Iterator;
+    :try_start_f
+    aput v2, v0, v1
+    :try_end_f
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_f .. :try_end_f} :catch_f
 
-    iput-object v9, v1, Ljj2;->X:Lih2;
+    :catch_f
+    const/16 v1, 0x11
 
-    iput v8, v1, Ljj2;->Y:I
+    :try_start_10
+    aput v1, v0, v2
+    :try_end_10
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_10 .. :try_end_10} :catch_10
 
-    invoke-virtual {v11, v12, v13, v1}, Lla3;->i(JLo84;)Ljava/lang/Object;
+    :catch_10
+    const/16 v2, 0x12
 
-    move-result-object v4
+    :try_start_11
+    aput v2, v0, v1
+    :try_end_11
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_11 .. :try_end_11} :catch_11
 
-    if-ne v4, v10, :cond_8
+    :catch_11
+    const/16 v1, 0x13
 
-    goto :goto_4
+    :try_start_12
+    aput v1, v0, v2
+    :try_end_12
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_12 .. :try_end_12} :catch_12
 
-    :cond_8
-    move-object v15, v9
+    :catch_12
+    const/16 v2, 0x14
 
-    :goto_3
-    check-cast v4, Lnd2;
+    :try_start_13
+    aput v2, v0, v1
+    :try_end_13
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_13 .. :try_end_13} :catch_13
 
-    if-eqz v4, :cond_9
+    :catch_13
+    const/16 v1, 0x15
 
-    iget-wide v13, v4, Lnd2;->a:J
+    :try_start_14
+    aput v1, v0, v2
+    :try_end_14
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_14 .. :try_end_14} :catch_14
 
-    invoke-interface {v3}, Lo58;->getValue()Ljava/lang/Object;
+    :catch_14
+    const/16 v2, 0x16
 
-    move-result-object v4
+    :try_start_15
+    aput v2, v0, v1
+    :try_end_15
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_15 .. :try_end_15} :catch_15
 
-    move-object v12, v4
+    :catch_15
+    const/16 v1, 0x17
 
-    check-cast v12, Lla3;
+    :try_start_16
+    aput v1, v0, v2
+    :try_end_16
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_16 .. :try_end_16} :catch_16
 
-    iput-object v0, v1, Ljj2;->o:Ljava/util/Iterator;
+    :catch_16
+    const/16 v1, 0x17
 
-    const/4 v4, 0x0
+    const/16 v2, 0x18
 
-    iput-object v4, v1, Ljj2;->X:Lih2;
+    :try_start_17
+    aput v2, v0, v1
+    :try_end_17
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_17 .. :try_end_17} :catch_17
 
-    iput v7, v1, Ljj2;->Y:I
+    :catch_17
+    const/16 v1, 0x18
 
-    invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/16 v2, 0x19
 
-    new-instance v11, Ldt0;
+    :try_start_18
+    aput v2, v0, v1
+    :try_end_18
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_18 .. :try_end_18} :catch_18
 
-    const/16 v16, 0x1
+    :catch_18
+    sput-object v0, Ljj2;->$EnumSwitchMapping$0:[I
 
-    invoke-direct/range {v11 .. v16}, Ldt0;-><init>(Ljava/lang/Object;JLjava/lang/Object;I)V
-
-    sget-object v4, Lxg5;->a:Lxg5;
-
-    invoke-static {v4, v11, v1}, Lc1j;->b(Lqb4;Llq6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    if-ne v4, v10, :cond_7
-
-    :goto_4
-    return-object v10
-
-    :cond_9
-    return-object v5
-
-    :cond_a
-    iget-object v0, v2, Lkj2;->c:Lo58;
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcy0;
-
-    new-instance v2, Lab3;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v6, v3}, Lab3;-><init>(Lvea;Z)V
-
-    invoke-virtual {v0, v2}, Lcy0;->c(Ljava/lang/Object;)V
-
-    return-object v5
-
-    :goto_5
-    throw v0
+    return-void
 .end method

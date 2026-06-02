@@ -338,7 +338,7 @@
 .end method
 
 .method private b(Lcom/my/tracker/core/UserInfoState;)V
-    .locals 8
+    .locals 7
 
     .line 2
     invoke-static {}, Lcom/my/tracker/core/utils/TimeUtils;->uptimeMillis()J
@@ -351,15 +351,13 @@
     move-result-wide v5
 
     .line 4
-    new-instance v0, Lzli;
-
-    const/4 v7, 0x1
+    new-instance v0, Lwyi;
 
     move-object v1, p0
 
     move-object v2, p1
 
-    invoke-direct/range {v0 .. v7}, Lzli;-><init>(Lcom/my/tracker/core/a;Ljava/lang/Object;JJI)V
+    invoke-direct/range {v0 .. v6}, Lwyi;-><init>(Lcom/my/tracker/core/a;Lcom/my/tracker/core/UserInfoState;JJ)V
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/core/a;->onEngineWorkerWithEngineCore(Lcom/my/tracker/core/utils/Consumer;)V
 
@@ -426,17 +424,17 @@
 
     move-result-object v0
 
-    new-instance v1, Lvli;
+    new-instance v1, Lpyi;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Lvli;-><init>(Lcom/my/tracker/core/a;I)V
+    invoke-direct {v1, p0, v2}, Lpyi;-><init>(Lcom/my/tracker/core/a;I)V
 
-    new-instance v2, Lvli;
+    new-instance v2, Lpyi;
 
     const/4 v3, 0x1
 
-    invoke-direct {v2, p0, v3}, Lvli;-><init>(Lcom/my/tracker/core/a;I)V
+    invoke-direct {v2, p0, v3}, Lpyi;-><init>(Lcom/my/tracker/core/a;I)V
 
     .line 3
     invoke-virtual {v0, v1, v2}, Lcom/my/tracker/MyTrackerParams;->a(Lcom/my/tracker/core/utils/Consumer;Lcom/my/tracker/core/utils/Consumer;)V
@@ -444,17 +442,17 @@
     .line 4
     iget-object v0, p0, Lcom/my/tracker/core/a;->b:Lcom/my/tracker/core/TrackerConfig;
 
-    new-instance v1, Lvli;
+    new-instance v1, Lpyi;
 
     const/4 v2, 0x2
 
-    invoke-direct {v1, p0, v2}, Lvli;-><init>(Lcom/my/tracker/core/a;I)V
+    invoke-direct {v1, p0, v2}, Lpyi;-><init>(Lcom/my/tracker/core/a;I)V
 
-    new-instance v2, Lvli;
+    new-instance v2, Lpyi;
 
     const/4 v3, 0x3
 
-    invoke-direct {v2, p0, v3}, Lvli;-><init>(Lcom/my/tracker/core/a;I)V
+    invoke-direct {v2, p0, v3}, Lpyi;-><init>(Lcom/my/tracker/core/a;I)V
 
     invoke-virtual {v0, v1, v2}, Lcom/my/tracker/core/TrackerConfig;->addKidModeChangeListener(Lcom/my/tracker/core/utils/Consumer;Lcom/my/tracker/core/utils/Consumer;)V
 
@@ -597,7 +595,7 @@
     move-result-wide v5
 
     .line 7
-    new-instance v0, Lzli;
+    new-instance v0, Lvyi;
 
     const/4 v7, 0x0
 
@@ -605,7 +603,7 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v0 .. v7}, Lzli;-><init>(Lcom/my/tracker/core/a;Ljava/lang/Object;JJI)V
+    invoke-direct/range {v0 .. v7}, Lvyi;-><init>(Lcom/my/tracker/core/a;Ljava/lang/Object;JJI)V
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/core/a;->onEngineWorkerWithEngineCore(Lcom/my/tracker/core/utils/Consumer;)V
 
@@ -653,11 +651,9 @@
 .end method
 
 .method public insertEventWithEngineCore(JIZZJLcom/my/tracker/core/EngineCore$EventPacker;)V
-    .locals 10
+    .locals 9
 
-    new-instance v0, Lyli;
-
-    const/4 v9, 0x0
+    new-instance v0, Luyi;
 
     move-wide v1, p1
 
@@ -667,11 +663,11 @@
 
     move v5, p5
 
-    move-wide/from16 v6, p6
+    move-wide v6, p6
 
     move-object/from16 v8, p8
 
-    invoke-direct/range {v0 .. v9}, Lyli;-><init>(JIZZJLcom/my/tracker/core/EngineCore$EventPacker;I)V
+    invoke-direct/range {v0 .. v8}, Luyi;-><init>(JIZZJLcom/my/tracker/core/EngineCore$EventPacker;)V
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/core/a;->onEngineWorkerWithEngineCore(Lcom/my/tracker/core/utils/Consumer;)V
 
@@ -699,15 +695,15 @@
 
     move-result-wide v5
 
-    new-instance v0, Lzli;
+    new-instance v0, Lvyi;
 
-    const/4 v7, 0x2
+    const/4 v7, 0x1
 
     move-object v1, p0
 
     move-object v2, p1
 
-    invoke-direct/range {v0 .. v7}, Lzli;-><init>(Lcom/my/tracker/core/a;Ljava/lang/Object;JJI)V
+    invoke-direct/range {v0 .. v7}, Lvyi;-><init>(Lcom/my/tracker/core/a;Ljava/lang/Object;JJI)V
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/core/a;->onEngineWorkerWithEngineCore(Lcom/my/tracker/core/utils/Consumer;)V
 

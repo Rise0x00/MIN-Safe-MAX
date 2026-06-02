@@ -1,251 +1,359 @@
 .class public final Lwk6;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lys;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chats/forward/ForwardPickerScreen;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Landroid/view/ViewGroup;
+.field public final synthetic b:Ljava/lang/Object;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chats/forward/ForwardPickerScreen;Landroid/view/ViewGroup;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lwk6;->X:Lone/me/chats/forward/ForwardPickerScreen;
+    iput p2, p0, Lwk6;->a:I
 
-    iput-object p2, p0, Lwk6;->Y:Landroid/view/ViewGroup;
+    iput-object p1, p0, Lwk6;->b:Ljava/lang/Object;
 
-    const/4 p1, 0x2
+    iput-object p3, p0, Lwk6;->c:Ljava/lang/Object;
 
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private final a(J)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final f(J)V
+    .locals 9
 
-    check-cast p1, Ldr9;
+    iget p1, p0, Lwk6;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lwk6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object p1, p0, Lwk6;->c:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast p1, Lzo8;
 
-    check-cast p1, Lwk6;
+    const-string p2, "background"
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    const/4 v0, 0x0
 
-    invoke-virtual {p1, p2}, Lwk6;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2, v0}, Lzo8;->i(Ljava/lang/String;Z)Z
 
-    return-object p2
-.end method
+    return-void
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    :pswitch_0
+    const-string p1, "Got result: "
 
-    new-instance v0, Lwk6;
+    const-string p2, "Stat is invalid="
 
-    iget-object v1, p0, Lwk6;->X:Lone/me/chats/forward/ForwardPickerScreen;
+    iget-object v0, p0, Lwk6;->b:Ljava/lang/Object;
 
-    iget-object v2, p0, Lwk6;->Y:Landroid/view/ViewGroup;
+    check-cast v0, Les6;
 
-    invoke-direct {v0, v1, v2, p2}, Lwk6;-><init>(Lone/me/chats/forward/ForwardPickerScreen;Landroid/view/ViewGroup;Lkotlin/coroutines/Continuation;)V
+    iget-object v0, v0, Les6;->c:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
-    iput-object p1, v0, Lwk6;->o:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
 
-    return-object v0
-.end method
+    move-result-object v1
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 14
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->lock()V
 
-    iget-object v0, p0, Lwk6;->o:Ljava/lang/Object;
+    :try_start_0
+    iget-object v0, p0, Lwk6;->b:Ljava/lang/Object;
 
-    check-cast v0, Ldr9;
+    check-cast v0, Les6;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iget-object v2, v0, Les6;->d:Lds6;
 
-    iget-object p1, p0, Lwk6;->X:Lone/me/chats/forward/ForwardPickerScreen;
+    iget-wide v3, v2, Lds6;->a:J
 
-    iget-object v1, p1, Lone/me/chats/forward/ForwardPickerScreen;->F0:Lw4e;
+    iget-wide v5, v2, Lds6;->b:J
 
-    if-nez v1, :cond_0
+    iget-wide v7, v2, Lds6;->c:J
 
-    goto/16 :goto_0
+    add-long/2addr v5, v7
 
-    :cond_0
-    iget v0, v0, Ldr9;->a:I
+    iget-wide v7, v2, Lds6;->d:J
 
-    invoke-static {v0}, Lt02;->t(I)I
+    add-long/2addr v5, v7
 
-    move-result v0
+    cmp-long v2, v3, v5
 
-    iget-object v2, p0, Lwk6;->Y:Landroid/view/ViewGroup;
+    const/4 v3, 0x0
 
-    const/4 v3, 0x1
+    if-nez v2, :cond_3
 
-    const/4 v4, 0x0
+    iget-object p2, v0, Les6;->a:Ljava/lang/String;
 
-    if-eqz v0, :cond_6
+    sget-object v0, Lnm4;->d:Lnfb;
 
-    if-eq v0, v3, :cond_3
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_1
-
-    goto/16 :goto_0
-
-    :cond_1
-    iget-object v0, p1, Lone/me/chats/forward/ForwardPickerScreen;->G0:Lxk6;
-
-    iget-object v0, v0, Lxk6;->b:Lone/me/sdk/arch/Widget;
-
-    check-cast v0, Lone/me/chats/forward/ForwardPickerScreen;
-
-    iget-object v0, v0, Lone/me/chats/forward/ForwardPickerScreen;->B0:Lro0;
-
-    invoke-virtual {v0}, Lro0;->e()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v0}, Lro0;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Leo9;
-
-    invoke-virtual {v0, v3}, Leo9;->e(Z)V
-
-    :cond_2
-    invoke-virtual {p1}, Lone/me/chats/forward/ForwardPickerScreen;->M0()Leo9;
-
-    move-result-object v0
-
-    sget v1, Lv5e;->c1:I
-
-    invoke-virtual {v0, v1}, Leo9;->setLeftIcon(I)V
-
-    sget-object v0, La48;->f:Lspf;
-
-    new-instance v1, Lr83;
-
-    const/16 v5, 0xf
-
-    invoke-direct {v1, v0, v5}, Lr83;-><init>(Ld76;I)V
-
-    new-instance v0, Lr83;
-
-    const/16 v5, 0x9
-
-    invoke-direct {v0, v1, v5}, Lr83;-><init>(Ld76;I)V
-
-    new-instance v1, Lzk6;
-
-    invoke-direct {v1, v2, v4}, Lzk6;-><init>(Landroid/view/ViewGroup;Lkotlin/coroutines/Continuation;)V
-
-    new-instance v2, Lm96;
-
-    invoke-direct {v2, v0, v1, v3}, Lm96;-><init>(Ld76;Lbr6;I)V
-
-    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
-
-    move-result-object p1
-
-    invoke-static {v2, p1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
+    if-nez v0, :cond_0
 
     goto :goto_0
 
-    :cond_3
-    invoke-virtual {v1}, Lw4e;->n()Z
+    :cond_0
+    sget-object v2, Lgp8;->d:Lgp8;
 
-    move-result v0
+    invoke-virtual {v0, v2}, Lnfb;->b(Lgp8;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    iget-object v4, p0, Lwk6;->b:Ljava/lang/Object;
+
+    check-cast v4, Les6;
+
+    iget-object v4, v4, Les6;->d:Lds6;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, v2, p2, p1, v3}, Lnfb;->c(Lgp8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    move-object p1, v0
+
+    goto :goto_3
+
+    :cond_1
+    :goto_0
+    iget-object p1, p0, Lwk6;->c:Ljava/lang/Object;
+
+    check-cast p1, Lia8;
+
+    invoke-interface {p1}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lv0g;
+
+    new-instance v2, Lu0g;
+
+    iget-object p2, p0, Lwk6;->b:Ljava/lang/Object;
+
+    check-cast p2, Les6;
+
+    iget-object p2, p2, Les6;->d:Lds6;
+
+    iget-wide v3, p2, Lds6;->a:J
+
+    iget-wide v5, p2, Lds6;->b:J
+
+    iget-wide v7, p2, Lds6;->d:J
+
+    invoke-direct/range {v2 .. v8}, Lu0g;-><init>(JJJ)V
+
+    check-cast p1, Ljob;
+
+    iget-object p2, p1, Ljob;->j:Lb90;
+
+    sget-object v0, Ljob;->l:[Lb88;
+
+    const/4 v3, 0x6
+
+    aget-object v0, v0, v3
+
+    invoke-virtual {p2, p1, v0, v2}, Lb90;->z(Ljava/lang/Object;Lb88;Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_2
+    :goto_1
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->unlock()V
+
+    goto :goto_2
+
+    :cond_3
+    :try_start_1
+    iget-object p1, v0, Les6;->a:Ljava/lang/String;
+
+    sget-object v0, Lnm4;->d:Lnfb;
 
     if-nez v0, :cond_4
 
-    new-instance v5, Lone/me/keyboardmedia/MediaKeyboardWidget;
-
-    iget-object v6, p1, Lone/me/chats/picker/AbstractPickerScreen;->b:Ljava/lang/String;
-
-    const/16 v12, 0x1a
-
-    const/4 v13, 0x0
-
-    const-wide/16 v7, 0x0
-
-    const/4 v9, 0x1
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    invoke-direct/range {v5 .. v13}, Lone/me/keyboardmedia/MediaKeyboardWidget;-><init>(Ljava/lang/String;JZZLjava/util/List;ILso4;)V
-
-    invoke-static {v5, v4, v4}, Lwmj;->a(La94;Lih;Lih;)Lz4e;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lw4e;->S(Lz4e;)V
+    goto :goto_1
 
     :cond_4
-    sget-object v0, Lxsh;->a:Ljava/util/WeakHashMap;
+    sget-object v2, Lgp8;->X:Lgp8;
 
-    invoke-static {v2, v4}, Llsh;->u(Landroid/view/View;Ll1b;)V
+    invoke-virtual {v0, v2}, Lnfb;->b(Lgp8;)Z
 
-    iget-object v0, p1, Lone/me/chats/forward/ForwardPickerScreen;->H0:Lu49;
+    move-result v4
 
-    if-eqz v0, :cond_5
+    if-eqz v4, :cond_2
 
-    invoke-virtual {v0}, Lu49;->f()V
+    iget-object v4, p0, Lwk6;->b:Ljava/lang/Object;
 
-    :cond_5
-    invoke-virtual {p1}, Lone/me/chats/forward/ForwardPickerScreen;->M0()Leo9;
+    check-cast v4, Les6;
+
+    iget-object v4, v4, Les6;->d:Lds6;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v0, v2, p1, p2, v3}, Lnfb;->c(Lgp8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_1
+
+    :goto_2
+    return-void
+
+    :goto_3
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->unlock()V
+
+    throw p1
+
+    :pswitch_1
+    iget-object p1, p0, Lwk6;->c:Ljava/lang/Object;
+
+    check-cast p1, Lwvc;
+
+    sget-object p2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-static {p1, p2}, Lg84;->C0(Lg1f;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final j(J)V
+    .locals 7
+
+    iget p1, p0, Lwk6;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lwk6;->b:Ljava/lang/Object;
+
+    check-cast p1, Lia8;
+
+    invoke-interface {p1}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lmf3;
+
+    check-cast p2, Lese;
+
+    iget-object v0, p2, Lese;->u:Lskg;
+
+    sget-object v1, Lese;->m0:[Lb88;
+
+    const/16 v2, 0x10
+
+    aget-object v3, v1, v2
+
+    invoke-virtual {v0, p2, v3}, Lskg;->y(Ljava/lang/Object;Lb88;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/Number;
+
+    invoke-virtual {p2}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v3
+
+    const-wide/16 v5, 0x0
+
+    cmp-long p2, v3, v5
+
+    if-nez p2, :cond_0
+
+    invoke-interface {p1}, Lia8;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    sget v0, Lv5e;->g1:I
+    check-cast p1, Lmf3;
 
-    invoke-virtual {p1, v0}, Leo9;->setLeftIcon(I)V
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    goto :goto_0
+    move-result-wide v3
 
-    :cond_6
-    iget-object v0, p1, Lone/me/chats/forward/ForwardPickerScreen;->H0:Lu49;
+    check-cast p1, Lese;
 
-    if-eqz v0, :cond_7
+    iget-object p2, p1, Lese;->u:Lskg;
 
-    sget-object v1, Lu49;->m:[Lz28;
+    aget-object v0, v1, v2
 
-    invoke-virtual {v0, v3}, Lu49;->e(Z)V
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    :cond_7
-    invoke-virtual {p1}, Lone/me/chats/forward/ForwardPickerScreen;->M0()Leo9;
+    move-result-object v1
 
-    move-result-object p1
+    invoke-virtual {p2, p1, v0, v1}, Lskg;->z(Ljava/lang/Object;Lb88;Ljava/lang/Object;)V
 
-    sget v0, Lv5e;->c1:I
+    :cond_0
+    :pswitch_0
+    return-void
 
-    invoke-virtual {p1, v0}, Leo9;->setLeftIcon(I)V
+    :pswitch_1
+    iget-object p1, p0, Lwk6;->b:Ljava/lang/Object;
 
-    sget-object p1, Lone/me/chats/forward/ForwardPickerScreen;->K0:Les7;
+    check-cast p1, Lm3e;
 
-    invoke-static {v2, p1, v4}, Lfui;->b(Landroid/view/View;Les7;Lnq6;)V
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    move-result-wide v0
 
-    return-object p1
+    iput-wide v0, p1, Lm3e;->a:J
+
+    iget-object p1, p0, Lwk6;->c:Ljava/lang/Object;
+
+    check-cast p1, Lwvc;
+
+    sget-object p2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-static {p1, p2}, Lg84;->C0(Lg1f;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

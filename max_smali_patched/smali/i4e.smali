@@ -1,85 +1,357 @@
-.class public abstract Li4e;
-.super Landroid/graphics/drawable/Drawable;
+.class public final Li4e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lza6;
 
-# static fields
-.field public static final a:D
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lza6;
+
+.field public final synthetic c:Ll4e;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lza6;Ll4e;I)V
+    .locals 0
 
-    const-wide v0, 0x4046800000000000L    # 45.0
+    iput p3, p0, Li4e;->a:I
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->toRadians(D)D
+    iput-object p1, p0, Li4e;->b:Lza6;
 
-    move-result-wide v0
+    iput-object p2, p0, Li4e;->c:Ll4e;
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v0
-
-    sput-wide v0, Li4e;->a:D
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(FFZ)F
+
+# virtual methods
+.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
     .locals 6
 
-    if-eqz p2, :cond_0
+    iget v0, p0, Li4e;->a:I
 
-    float-to-double v0, p0
+    packed-switch v0, :pswitch_data_0
 
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+    instance-of v0, p2, Lk4e;
 
-    sget-wide v4, Li4e;->a:D
+    if-eqz v0, :cond_0
 
-    sub-double/2addr v2, v4
+    move-object v0, p2
 
-    float-to-double p0, p1
+    check-cast v0, Lk4e;
 
-    mul-double/2addr v2, p0
+    iget v1, v0, Lk4e;->o:I
 
-    add-double/2addr v2, v0
+    const/high16 v2, -0x80000000
 
-    double-to-float p0, v2
+    and-int v3, v1, v2
 
-    :cond_0
-    return p0
-.end method
+    if-eqz v3, :cond_0
 
-.method public static b(FFZ)F
-    .locals 6
+    sub-int/2addr v1, v2
 
-    const/high16 v0, 0x3fc00000    # 1.5f
+    iput v1, v0, Lk4e;->o:I
 
-    if-eqz p2, :cond_0
-
-    mul-float/2addr p0, v0
-
-    float-to-double v0, p0
-
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
-
-    sget-wide v4, Li4e;->a:D
-
-    sub-double/2addr v2, v4
-
-    float-to-double p0, p1
-
-    mul-double/2addr v2, p0
-
-    add-double/2addr v2, v0
-
-    double-to-float p0, v2
-
-    return p0
+    goto :goto_0
 
     :cond_0
-    mul-float/2addr p0, v0
+    new-instance v0, Lk4e;
 
-    return p0
+    invoke-direct {v0, p0, p2}, Lk4e;-><init>(Li4e;Lkotlin/coroutines/Continuation;)V
+
+    :goto_0
+    iget-object p2, v0, Lk4e;->d:Ljava/lang/Object;
+
+    iget v1, v0, Lk4e;->o:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_2
+
+    if-ne v1, v2, :cond_1
+
+    invoke-static {p2}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    invoke-static {p2}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    check-cast p1, Ljava/util/List;
+
+    invoke-static {p1}, Lij3;->M1(Ljava/lang/Iterable;)Ljava/util/Set;
+
+    move-result-object p1
+
+    iget-object p2, p0, Li4e;->c:Ll4e;
+
+    iget-object p2, p2, Ll4e;->e:Lup5;
+
+    invoke-static {p1, p2}, Lij3;->C1(Ljava/lang/Iterable;Ljava/util/Comparator;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput v2, v0, Lk4e;->o:I
+
+    iget-object p2, p0, Li4e;->b:Lza6;
+
+    invoke-interface {p2, p1, v0}, Lza6;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lpc4;->a:Lpc4;
+
+    if-ne p1, p2, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    :goto_1
+    sget-object p2, Lyeh;->a:Lyeh;
+
+    :goto_2
+    return-object p2
+
+    :pswitch_0
+    instance-of v0, p2, Lj4e;
+
+    if-eqz v0, :cond_4
+
+    move-object v0, p2
+
+    check-cast v0, Lj4e;
+
+    iget v1, v0, Lj4e;->o:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_4
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Lj4e;->o:I
+
+    goto :goto_3
+
+    :cond_4
+    new-instance v0, Lj4e;
+
+    invoke-direct {v0, p0, p2}, Lj4e;-><init>(Li4e;Lkotlin/coroutines/Continuation;)V
+
+    :goto_3
+    iget-object p2, v0, Lj4e;->d:Ljava/lang/Object;
+
+    iget v1, v0, Lj4e;->o:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_6
+
+    if-ne v1, v2, :cond_5
+
+    invoke-static {p2}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    goto :goto_5
+
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_6
+    invoke-static {p2}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    check-cast p1, Ljava/util/List;
+
+    new-instance p2, Ljava/util/ArrayList;
+
+    const/16 v1, 0xa
+
+    invoke-static {p1, v1}, Lkj3;->S0(Ljava/lang/Iterable;I)I
+
+    move-result v1
+
+    invoke-direct {p2, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_4
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    iget-object v3, p0, Li4e;->c:Ll4e;
+
+    invoke-virtual {v3, v1}, Ll4e;->b(Ljava/lang/String;)Lccb;
+
+    move-result-object v1
+
+    invoke-virtual {p2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_4
+
+    :cond_7
+    iput v2, v0, Lj4e;->o:I
+
+    iget-object p1, p0, Li4e;->b:Lza6;
+
+    invoke-interface {p1, p2, v0}, Lza6;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lpc4;->a:Lpc4;
+
+    if-ne p1, p2, :cond_8
+
+    goto :goto_6
+
+    :cond_8
+    :goto_5
+    sget-object p2, Lyeh;->a:Lyeh;
+
+    :goto_6
+    return-object p2
+
+    :pswitch_1
+    instance-of v0, p2, Lh4e;
+
+    if-eqz v0, :cond_9
+
+    move-object v0, p2
+
+    check-cast v0, Lh4e;
+
+    iget v1, v0, Lh4e;->o:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_9
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Lh4e;->o:I
+
+    goto :goto_7
+
+    :cond_9
+    new-instance v0, Lh4e;
+
+    invoke-direct {v0, p0, p2}, Lh4e;-><init>(Li4e;Lkotlin/coroutines/Continuation;)V
+
+    :goto_7
+    iget-object p2, v0, Lh4e;->d:Ljava/lang/Object;
+
+    iget v1, v0, Lh4e;->o:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_b
+
+    if-ne v1, v2, :cond_a
+
+    invoke-static {p2}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    goto :goto_9
+
+    :cond_a
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_b
+    invoke-static {p2}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    check-cast p1, [Ljava/lang/String;
+
+    new-instance p2, Ljava/util/ArrayList;
+
+    array-length v1, p1
+
+    invoke-direct {p2, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    array-length v1, p1
+
+    const/4 v3, 0x0
+
+    :goto_8
+    if-ge v3, v1, :cond_c
+
+    aget-object v4, p1, v3
+
+    iget-object v5, p0, Li4e;->c:Ll4e;
+
+    invoke-virtual {v5, v4}, Ll4e;->b(Ljava/lang/String;)Lccb;
+
+    move-result-object v4
+
+    invoke-virtual {p2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_8
+
+    :cond_c
+    iput v2, v0, Lh4e;->o:I
+
+    iget-object p1, p0, Li4e;->b:Lza6;
+
+    invoke-interface {p1, p2, v0}, Lza6;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lpc4;->a:Lpc4;
+
+    if-ne p1, p2, :cond_d
+
+    goto :goto_a
+
+    :cond_d
+    :goto_9
+    sget-object p2, Lyeh;->a:Lyeh;
+
+    :goto_a
+    return-object p2
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,188 +1,133 @@
 .class public final Lwvg;
-.super Lt1;
+.super Lmy4;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/concurrent/RunnableFuture;
-.implements Lk1;
 
 
 # instance fields
-.field public volatile Z:Lvvg;
+.field public final synthetic c:Lxvg;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Callable;)V
-    .locals 1
+.method public constructor <init>(Lxvg;Lxn0;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lwvg;->c:Lxvg;
 
-    new-instance v0, Lvvg;
-
-    invoke-direct {v0, p0, p1}, Lvvg;-><init>(Lwvg;Ljava/util/concurrent/Callable;)V
-
-    iput-object v0, p0, Lwvg;->Z:Lvvg;
+    invoke-direct {p0, p2}, Lmy4;-><init>(Lxn0;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 6
+.method public final d()V
+    .locals 1
 
-    iget-object v0, p0, Lt1;->a:Ljava/lang/Object;
+    iget-object v0, p0, Lmy4;->b:Lxn0;
 
-    instance-of v1, v0, Ly0;
+    invoke-virtual {v0}, Lxn0;->c()V
 
-    if-eqz v1, :cond_1
+    invoke-virtual {p0}, Lwvg;->m()V
 
-    check-cast v0, Ly0;
+    return-void
+.end method
 
-    iget-boolean v0, v0, Ly0;->a:Z
+.method public final f(Ljava/lang/Throwable;)V
+    .locals 1
 
-    if-eqz v0, :cond_1
+    iget-object v0, p0, Lmy4;->b:Lxn0;
 
-    iget-object v0, p0, Lwvg;->Z:Lvvg;
+    invoke-virtual {v0, p1}, Lxn0;->e(Ljava/lang/Throwable;)V
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p0}, Lwvg;->m()V
 
-    sget-object v1, Lvvg;->d:Lh6;
+    return-void
+.end method
 
-    sget-object v2, Lvvg;->c:Lh6;
+.method public final h(ILjava/lang/Object;)V
+    .locals 1
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    iget-object v0, p0, Lmy4;->b:Lxn0;
 
-    move-result-object v3
+    invoke-virtual {v0, p1, p2}, Lxn0;->g(ILjava/lang/Object;)V
 
-    check-cast v3, Ljava/lang/Runnable;
+    invoke-static {p1}, Lxn0;->a(I)Z
 
-    instance-of v4, v3, Ljava/lang/Thread;
+    move-result p1
 
-    if-eqz v4, :cond_1
+    if-eqz p1, :cond_0
 
-    new-instance v4, Lcu7;
+    invoke-virtual {p0}, Lwvg;->m()V
 
-    invoke-direct {v4, v0}, Lcu7;-><init>(Lvvg;)V
+    :cond_0
+    return-void
+.end method
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+.method public final m()V
+    .locals 5
 
-    move-result-object v5
+    iget-object v0, p0, Lwvg;->c:Lxvg;
 
-    invoke-static {v4, v5}, Lcu7;->a(Lcu7;Ljava/lang/Thread;)V
-
-    invoke-virtual {v0, v3, v4}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
+    monitor-enter v0
 
     :try_start_0
-    move-object v4, v3
+    iget-object v1, p0, Lwvg;->c:Lxvg;
 
-    check-cast v4, Ljava/lang/Thread;
+    iget-object v1, v1, Lxvg;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    invoke-virtual {v4}, Ljava/lang/Thread;->interrupt()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
 
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object v0
+    check-cast v1, Landroid/util/Pair;
 
-    check-cast v0, Ljava/lang/Runnable;
+    if-nez v1, :cond_0
 
-    if-ne v0, v1, :cond_1
+    iget-object v2, p0, Lwvg;->c:Lxvg;
 
-    check-cast v3, Ljava/lang/Thread;
+    iget v3, v2, Lxvg;->b:I
 
-    invoke-static {v3}, Ljava/util/concurrent/locks/LockSupport;->unpark(Ljava/lang/Thread;)V
+    add-int/lit8 v3, v3, -0x1
+
+    iput v3, v2, Lxvg;->b:I
 
     goto :goto_0
 
     :catchall_0
-    move-exception v4
+    move-exception v1
 
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Runnable;
-
-    if-ne v0, v1, :cond_0
-
-    check-cast v3, Ljava/lang/Thread;
-
-    invoke-static {v3}, Ljava/util/concurrent/locks/LockSupport;->unpark(Ljava/lang/Thread;)V
+    goto :goto_1
 
     :cond_0
-    throw v4
+    :goto_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v1, :cond_1
+
+    iget-object v0, p0, Lwvg;->c:Lxvg;
+
+    iget-object v0, v0, Lxvg;->d:Ljava/util/concurrent/Executor;
+
+    new-instance v2, Lpu6;
+
+    const/16 v3, 0x1b
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, p0, v1, v4, v3}, Lpu6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    invoke-interface {v0, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     :cond_1
-    :goto_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lwvg;->Z:Lvvg;
-
     return-void
-.end method
 
-.method public final i()Ljava/lang/String;
-    .locals 3
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    iget-object v0, p0, Lwvg;->Z:Lvvg;
-
-    if-eqz v0, :cond_0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "task=["
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "]"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    invoke-super {p0}, Lt1;->i()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final isCancelled()Z
-    .locals 1
-
-    iget-object v0, p0, Lt1;->a:Ljava/lang/Object;
-
-    instance-of v0, v0, Ly0;
-
-    return v0
-.end method
-
-.method public final run()V
-    .locals 1
-
-    iget-object v0, p0, Lwvg;->Z:Lvvg;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lvvg;->run()V
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lwvg;->Z:Lvvg;
-
-    return-void
+    throw v1
 .end method

@@ -1,236 +1,444 @@
 .class public final Lb0h;
-.super Lp6g;
+.super La8j;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lh0h;
 
-.field public final synthetic Y:Lf0h;
+.field public final b:Landroid/view/Window$Callback;
 
-.field public o:I
+.field public final c:Lxy9;
+
+.field public d:Z
+
+.field public e:Z
+
+.field public f:Z
+
+.field public final g:Ljava/util/ArrayList;
+
+.field public final h:Lzy9;
 
 
 # direct methods
-.method public constructor <init>(Lf0h;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroidx/appcompat/widget/Toolbar;Ljava/lang/CharSequence;Laq;)V
+    .locals 3
 
-    iput-object p1, p0, Lb0h;->Y:Lf0h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lb0h;->g:Ljava/util/ArrayList;
+
+    new-instance v0, Lzy9;
+
+    const/16 v1, 0x13
+
+    invoke-direct {v0, v1, p0}, Lzy9;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p0, Lb0h;->h:Lzy9;
+
+    new-instance v0, Ld9a;
+
+    invoke-direct {v0, p0}, Ld9a;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lh0h;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p1, v2}, Lh0h;-><init>(Landroidx/appcompat/widget/Toolbar;Z)V
+
+    iput-object v1, p0, Lb0h;->a:Lh0h;
+
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p3, p0, Lb0h;->b:Landroid/view/Window$Callback;
+
+    iput-object p3, v1, Lh0h;->k:Landroid/view/Window$Callback;
+
+    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/Toolbar;->setOnMenuItemClickListener(La0h;)V
+
+    iget-boolean p3, v1, Lh0h;->g:Z
+
+    if-nez p3, :cond_0
+
+    iput-object p2, v1, Lh0h;->h:Ljava/lang/CharSequence;
+
+    iget p3, v1, Lh0h;->b:I
+
+    and-int/lit8 p3, p3, 0x8
+
+    if-eqz p3, :cond_0
+
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/Toolbar;->setTitle(Ljava/lang/CharSequence;)V
+
+    iget-boolean p3, v1, Lh0h;->g:Z
+
+    if-eqz p3, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/View;->getRootView()Landroid/view/View;
+
+    move-result-object p1
+
+    invoke-static {p1, p2}, Lj4i;->n(Landroid/view/View;Ljava/lang/CharSequence;)V
+
+    :cond_0
+    new-instance p1, Lxy9;
+
+    invoke-direct {p1, p0}, Lxy9;-><init>(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Lb0h;->c:Lxy9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Z
+    .locals 1
 
-    check-cast p1, Lzb4;
+    iget-object v0, p0, Lb0h;->a:Lh0h;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, v0, Lh0h;->a:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-virtual {p0, p1, p2}, Lb0h;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, v0, Landroidx/appcompat/widget/Toolbar;->a:Landroidx/appcompat/widget/ActionMenuView;
 
-    move-result-object p1
+    if-eqz v0, :cond_0
 
-    check-cast p1, Lb0h;
+    iget-object v0, v0, Landroidx/appcompat/widget/ActionMenuView;->o:Lo8;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1, p2}, Lb0h;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lo8;->g()Z
 
-    move-result-object p1
+    move-result v0
 
-    return-object p1
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final b()Z
     .locals 2
 
-    new-instance v0, Lb0h;
+    iget-object v0, p0, Lb0h;->a:Lh0h;
 
-    iget-object v1, p0, Lb0h;->Y:Lf0h;
+    iget-object v0, v0, Lh0h;->a:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-direct {v0, v1, p2}, Lb0h;-><init>(Lf0h;Lkotlin/coroutines/Continuation;)V
+    iget-object v0, v0, Landroidx/appcompat/widget/Toolbar;->g1:Lyzg;
 
-    iput-object p1, v0, Lb0h;->X:Ljava/lang/Object;
+    if-eqz v0, :cond_2
 
-    return-object v0
+    iget-object v1, v0, Lyzg;->b:Lzo9;
+
+    if-eqz v1, :cond_2
+
+    if-nez v0, :cond_0
+
+    const/4 v1, 0x0
+
+    :cond_0
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Lzo9;->collapseActionView()Z
+
+    :cond_1
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_2
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+.method public final c(Z)V
+    .locals 1
 
-    iget-object v1, p0, Lb0h;->Y:Lf0h;
+    iget-boolean v0, p0, Lb0h;->f:Z
 
-    iget-object v2, v1, Lf0h;->u0:Lcm5;
-
-    iget-object v0, p0, Lb0h;->X:Ljava/lang/Object;
-
-    check-cast v0, Lzb4;
-
-    iget v0, p0, Lb0h;->o:I
-
-    const/4 v3, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v3, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-ne p1, v0, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
-
-    move-object p1, v0
-
-    goto :goto_1
-
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iput-boolean p1, p0, Lb0h;->f:Z
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-object p1, p0, Lb0h;->g:Ljava/util/ArrayList;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
-    throw p1
+    move-result v0
+
+    if-gtz v0, :cond_1
+
+    :goto_0
+    return-void
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    :try_start_1
-    iget-object p1, v1, Lf0h;->d:Lo58;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lt2b;
-
-    new-instance v4, Li1b;
-
-    iget-object v5, v1, Lf0h;->b:Ljava/lang/String;
-
-    sget-object v0, Lnwg;->Y:Lnwg;
-
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v6
-
-    const/4 v8, 0x0
-
-    const/16 v9, 0xc
-
-    const/4 v7, 0x0
-
-    invoke-direct/range {v4 .. v9}, Li1b;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;I)V
-
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lb0h;->X:Ljava/lang/Object;
-
-    iput v3, p0, Lb0h;->o:I
-
-    invoke-virtual {p1, v4, p0}, Lt2b;->E(Lj2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    sget-object v0, Lac4;->a:Lac4;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-ne p1, v0, :cond_2
+    new-instance p1, Ljava/lang/ClassCastException;
+
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final d()I
+    .locals 1
+
+    iget-object v0, p0, Lb0h;->a:Lh0h;
+
+    iget v0, v0, Lh0h;->b:I
+
+    return v0
+.end method
+
+.method public final e()Landroid/content/Context;
+    .locals 1
+
+    iget-object v0, p0, Lb0h;->a:Lh0h;
+
+    iget-object v0, v0, Lh0h;->a:Landroidx/appcompat/widget/Toolbar;
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
 
     return-object v0
+.end method
 
-    :cond_2
+.method public final f()Z
+    .locals 3
+
+    iget-object v0, p0, Lb0h;->a:Lh0h;
+
+    iget-object v1, v0, Lh0h;->a:Landroidx/appcompat/widget/Toolbar;
+
+    iget-object v2, p0, Lb0h;->h:Lzy9;
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    iget-object v0, v0, Lh0h;->a:Landroidx/appcompat/widget/Toolbar;
+
+    sget-object v1, Lj4i;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->postOnAnimation(Ljava/lang/Runnable;)V
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final h()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final i()V
+    .locals 2
+
+    iget-object v0, p0, Lb0h;->a:Lh0h;
+
+    iget-object v0, v0, Lh0h;->a:Landroidx/appcompat/widget/Toolbar;
+
+    iget-object v1, p0, Lb0h;->h:Lzy9;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final j(ILandroid/view/KeyEvent;)Z
+    .locals 4
+
+    invoke-virtual {p0}, Lb0h;->r()Landroid/view/Menu;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p2}, Landroid/view/KeyEvent;->getDeviceId()I
+
+    move-result v2
+
+    invoke-static {v2}, Landroid/view/KeyCharacterMap;->load(I)Landroid/view/KeyCharacterMap;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/view/KeyCharacterMap;->getKeyboardType()I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    if-eq v2, v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v3, v1
+
     :goto_0
-    :try_start_2
-    check-cast p1, Licg;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    invoke-interface {v0, v3}, Landroid/view/Menu;->setQwertyMode(Z)V
 
-    goto :goto_2
+    invoke-interface {v0, p1, p2, v1}, Landroid/view/Menu;->performShortcut(ILandroid/view/KeyEvent;I)Z
 
-    :goto_1
-    new-instance v0, Lszd;
+    move-result p1
 
-    invoke-direct {v0, p1}, Lszd;-><init>(Ljava/lang/Throwable;)V
+    return p1
 
-    move-object p1, v0
+    :cond_1
+    return v1
+.end method
 
-    :goto_2
-    nop
+.method public final k(Landroid/view/KeyEvent;)Z
+    .locals 1
 
-    instance-of v0, p1, Lszd;
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
-    if-nez v0, :cond_3
+    move-result p1
 
-    move-object v0, p1
+    const/4 v0, 0x1
 
-    check-cast v0, Licg;
+    if-ne p1, v0, :cond_0
 
-    new-instance v0, Loxg;
+    invoke-virtual {p0}, Lb0h;->l()Z
 
-    sget v3, Lued;->oneme_settings_twofa_configuration_disable_success:I
+    :cond_0
+    return v0
+.end method
 
-    new-instance v4, Llhg;
+.method public final l()Z
+    .locals 1
 
-    invoke-direct {v4, v3}, Llhg;-><init>(I)V
+    iget-object v0, p0, Lb0h;->a:Lh0h;
 
-    sget v3, Lv5e;->D:I
+    iget-object v0, v0, Lh0h;->a:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-direct {v0, v3, v4}, Loxg;-><init>(ILqhg;)V
+    invoke-virtual {v0}, Landroidx/appcompat/widget/Toolbar;->w()Z
 
-    invoke-static {v2, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+    move-result v0
 
-    iget-object v0, v1, Lf0h;->t0:Lcm5;
+    return v0
+.end method
 
-    sget-object v1, Lbzg;->c:Lbzg;
+.method public final n(Z)V
+    .locals 0
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-void
+.end method
 
-    new-instance v1, Lfm4;
+.method public final o(Z)V
+    .locals 0
 
-    const-string v3, ":settings/privacy"
+    return-void
+.end method
 
-    invoke-direct {v1, v3}, Lfm4;-><init>(Ljava/lang/String;)V
+.method public final p(Ljava/lang/CharSequence;)V
+    .locals 3
 
-    invoke-static {v0, v1}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+    iget-object v0, p0, Lb0h;->a:Lh0h;
 
-    :cond_3
-    invoke-static {p1}, Luzd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+    iget-boolean v1, v0, Lh0h;->g:Z
 
-    move-result-object p1
+    if-nez v1, :cond_0
 
-    if-eqz p1, :cond_4
+    iget-object v1, v0, Lh0h;->a:Landroidx/appcompat/widget/Toolbar;
 
-    new-instance v0, Loxg;
+    iput-object p1, v0, Lh0h;->h:Ljava/lang/CharSequence;
 
-    invoke-static {p1}, Lw2j;->g(Ljava/lang/Throwable;)Lqhg;
+    iget v2, v0, Lh0h;->b:I
 
-    move-result-object p1
+    and-int/lit8 v2, v2, 0x8
 
-    sget v1, Lf6e;->c1:I
+    if-eqz v2, :cond_0
 
-    invoke-direct {v0, v1, p1}, Loxg;-><init>(ILqhg;)V
+    invoke-virtual {v1, p1}, Landroidx/appcompat/widget/Toolbar;->setTitle(Ljava/lang/CharSequence;)V
 
-    invoke-static {v2, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+    iget-boolean v0, v0, Lh0h;->g:Z
 
-    :cond_4
-    sget-object p1, Lb3h;->a:Lb3h;
+    if-eqz v0, :cond_0
 
-    return-object p1
+    invoke-virtual {v1}, Landroid/view/View;->getRootView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lj4i;->n(Landroid/view/View;Ljava/lang/CharSequence;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final r()Landroid/view/Menu;
+    .locals 4
+
+    iget-boolean v0, p0, Lb0h;->e:Z
+
+    iget-object v1, p0, Lb0h;->a:Lh0h;
+
+    if-nez v0, :cond_1
+
+    new-instance v0, Laz0;
+
+    const/16 v2, 0xf
+
+    invoke-direct {v0, v2, p0}, Laz0;-><init>(ILjava/lang/Object;)V
+
+    new-instance v2, Lu9f;
+
+    const/4 v3, 0x5
+
+    invoke-direct {v2, v3, p0}, Lu9f;-><init>(ILjava/lang/Object;)V
+
+    iget-object v3, v1, Lh0h;->a:Landroidx/appcompat/widget/Toolbar;
+
+    iput-object v0, v3, Landroidx/appcompat/widget/Toolbar;->h1:Laz0;
+
+    iput-object v2, v3, Landroidx/appcompat/widget/Toolbar;->i1:Lu9f;
+
+    iget-object v3, v3, Landroidx/appcompat/widget/Toolbar;->a:Landroidx/appcompat/widget/ActionMenuView;
+
+    if-eqz v3, :cond_0
+
+    iput-object v0, v3, Landroidx/appcompat/widget/ActionMenuView;->z0:Laz0;
+
+    iput-object v2, v3, Landroidx/appcompat/widget/ActionMenuView;->A0:Lto9;
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lb0h;->e:Z
+
+    :cond_1
+    iget-object v0, v1, Lh0h;->a:Landroidx/appcompat/widget/Toolbar;
+
+    invoke-virtual {v0}, Landroidx/appcompat/widget/Toolbar;->getMenu()Landroid/view/Menu;
+
+    move-result-object v0
+
+    return-object v0
 .end method

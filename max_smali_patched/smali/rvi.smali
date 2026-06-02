@@ -1,194 +1,127 @@
-.class public final Lrvi;
-.super Lx2;
+.class public final synthetic Lrvi;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final b:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public c:I
+.field public final synthetic b:Ljava/lang/Object;
 
-.field public final synthetic d:Lnm3;
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lnm3;I)V
-    .locals 2
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    .locals 0
 
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    invoke-direct {p0, v0, v1}, Lx2;-><init>(ZI)V
-
-    iput-object p1, p0, Lrvi;->d:Lnm3;
-
-    sget-object v0, Lnm3;->w0:Ljava/lang/Object;
-
-    invoke-virtual {p1}, Lnm3;->m()[Ljava/lang/Object;
-
-    move-result-object p1
-
-    aget-object p1, p1, p2
+    iput p2, p0, Lrvi;->a:I
 
     iput-object p1, p0, Lrvi;->b:Ljava/lang/Object;
 
-    iput p2, p0, Lrvi;->c:I
+    iput-object p3, p0, Lrvi;->c:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
-
-    iget v0, p0, Lrvi;->c:I
-
-    const/4 v1, -0x1
-
-    iget-object v2, p0, Lrvi;->b:Ljava/lang/Object;
-
-    iget-object v3, p0, Lrvi;->d:Lnm3;
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {v3}, Lnm3;->size()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_1
-
-    iget v0, p0, Lrvi;->c:I
-
-    invoke-virtual {v3}, Lnm3;->m()[Ljava/lang/Object;
-
-    move-result-object v1
-
-    aget-object v0, v1, v0
-
-    invoke-static {v2, v0}, Loaj;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :cond_1
-    :goto_0
-    sget-object v0, Lnm3;->w0:Ljava/lang/Object;
-
-    invoke-virtual {v3, v2}, Lnm3;->s(Ljava/lang/Object;)I
-
-    move-result v0
-
-    iput v0, p0, Lrvi;->c:I
-
-    return-void
-.end method
-
-.method public final getKey()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lrvi;->b:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final getValue()Ljava/lang/Object;
+.method public final run()V
     .locals 3
 
-    iget-object v0, p0, Lrvi;->d:Lnm3;
+    iget v0, p0, Lrvi;->a:I
 
-    invoke-virtual {v0}, Lnm3;->o()Ljava/util/Map;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
     iget-object v0, p0, Lrvi;->b:Ljava/lang/Object;
 
-    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v0, Lcom/my/tracker/core/o/h;
 
-    move-result-object v0
+    iget-object v1, p0, Lrvi;->c:Ljava/lang/Object;
 
-    return-object v0
+    check-cast v1, Lcom/my/tracker/core/utils/Consumer;
 
-    :cond_0
-    invoke-virtual {p0}, Lrvi;->a()V
+    invoke-static {v0, v1}, Lcom/my/tracker/core/o/h;->a(Lcom/my/tracker/core/o/h;Lcom/my/tracker/core/utils/Consumer;)V
 
-    iget v1, p0, Lrvi;->c:I
+    return-void
 
-    const/4 v2, -0x1
+    :pswitch_0
+    iget-object v0, p0, Lrvi;->b:Ljava/lang/Object;
 
-    if-ne v1, v2, :cond_1
+    check-cast v0, Lcom/my/tracker/applifecycle/o/a;
 
-    const/4 v0, 0x0
+    iget-object v1, p0, Lrvi;->c:Ljava/lang/Object;
 
-    return-object v0
+    check-cast v1, Lcom/android/installreferrer/api/ReferrerDetails;
 
-    :cond_1
-    invoke-virtual {v0}, Lnm3;->n()[Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/my/tracker/applifecycle/o/a;->b(Lcom/my/tracker/applifecycle/o/a;Lcom/android/installreferrer/api/ReferrerDetails;)V
 
-    move-result-object v0
+    return-void
 
-    aget-object v0, v0, v1
+    :pswitch_1
+    iget-object v0, p0, Lrvi;->b:Ljava/lang/Object;
 
-    return-object v0
-.end method
+    check-cast v0, Luwi;
 
-.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    iget-object v1, p0, Lrvi;->c:Ljava/lang/Object;
 
-    iget-object v0, p0, Lrvi;->d:Lnm3;
+    check-cast v1, Lyi8;
 
-    invoke-virtual {v0}, Lnm3;->o()Ljava/util/Map;
+    iget-object v0, v0, Luwi;->G0:Ld9f;
 
-    move-result-object v1
+    iget-object v0, v0, Ly1;->a:Ljava/lang/Object;
 
-    iget-object v2, p0, Lrvi;->b:Ljava/lang/Object;
+    instance-of v0, v0, Ld1;
 
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-interface {v1, v2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    move-result-object p1
-
-    return-object p1
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
     :cond_0
-    invoke-virtual {p0}, Lrvi;->a()V
+    return-void
 
-    iget v1, p0, Lrvi;->c:I
+    :pswitch_2
+    iget-object v0, p0, Lrvi;->b:Ljava/lang/Object;
 
-    const/4 v3, -0x1
+    check-cast v0, Lvvi;
 
-    if-ne v1, v3, :cond_1
+    iget-object v1, p0, Lrvi;->c:Ljava/lang/Object;
 
-    invoke-virtual {v0, v2, p1}, Lnm3;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v1, Lpwi;
 
-    const/4 p1, 0x0
+    const/4 v2, 0x0
 
-    return-object p1
+    invoke-virtual {v0, v1, v2}, Lvvi;->a(Lpwi;Z)V
 
-    :cond_1
-    invoke-virtual {v0}, Lnm3;->n()[Ljava/lang/Object;
+    return-void
 
-    move-result-object v2
+    :pswitch_3
+    iget-object v0, p0, Lrvi;->b:Ljava/lang/Object;
 
-    aget-object v1, v2, v1
+    check-cast v0, Lvvi;
 
-    iget v2, p0, Lrvi;->c:I
+    iget-object v1, p0, Lrvi;->c:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lnm3;->n()[Ljava/lang/Object;
+    check-cast v1, Lmvi;
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lvvi;->j(Lmvi;)V
 
-    aput-object p1, v0, v2
+    return-void
 
-    return-object v1
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

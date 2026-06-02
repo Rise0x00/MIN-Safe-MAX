@@ -1,200 +1,336 @@
 .class public final Le45;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
+
+# static fields
+.field public static final j:Ljava/security/SecureRandom;
 
 
 # instance fields
-.field public X:I
+.field public final a:Ljava/util/LinkedList;
 
-.field public final synthetic Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+.field public final b:Landroid/util/SparseIntArray;
 
-.field public final synthetic Z:Li20;
+.field public final c:Ljava/util/LinkedList;
 
-.field public o:Z
+.field public final d:I
+
+.field public e:I
+
+.field public final f:I
+
+.field public g:I
+
+.field public h:Z
+
+.field public final i:Lsg;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Li20;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Le45;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    new-instance v0, Ljava/security/SecureRandom;
 
-    iput-object p2, p0, Le45;->Z:Li20;
+    invoke-direct {v0}, Ljava/security/SecureRandom;-><init>()V
 
-    const/4 p1, 0x2
+    sput-object v0, Le45;->j:Ljava/security/SecureRandom;
 
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/LinkedList;
+
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+
+    iput-object v0, p0, Le45;->a:Ljava/util/LinkedList;
+
+    new-instance v0, Landroid/util/SparseIntArray;
+
+    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
+
+    iput-object v0, p0, Le45;->b:Landroid/util/SparseIntArray;
+
+    new-instance v0, Ljava/util/LinkedList;
+
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+
+    iput-object v0, p0, Le45;->c:Ljava/util/LinkedList;
+
+    new-instance v0, Lsg;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1, p0}, Lsg;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p0, Le45;->i:Lsg;
+
+    const/4 v0, 0x4
+
+    iput v0, p0, Le45;->d:I
+
+    sget-object v0, Le45;->j:Ljava/security/SecureRandom;
+
+    invoke-virtual {v0}, Ljava/util/Random;->nextInt()I
+
+    move-result v0
+
+    iput v0, p0, Le45;->f:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Lc45;
+    .locals 3
 
-    check-cast p1, Lzb4;
+    new-instance v0, Lc45;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1, p2}, Le45;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-string v2, "rlottie-pool-"
 
-    move-result-object p1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast p1, Le45;
+    iget v2, p0, Le45;->f:I
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, p2}, Le45;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v2, "-"
 
-    move-result-object p1
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p1
-.end method
+    sget-object v2, Le45;->j:Ljava/security/SecureRandom;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-virtual {v2}, Ljava/util/Random;->nextInt()I
 
-    new-instance p1, Le45;
+    move-result v2
 
-    iget-object v0, p0, Le45;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Le45;->Z:Li20;
-
-    invoke-direct {p1, v0, v1, p2}, Le45;-><init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Li20;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    iget v1, p0, Le45;->X:I
-
-    const/4 v2, 0x3
-
-    const/4 v3, 0x2
-
-    const/4 v4, 0x1
-
-    if-eqz v1, :cond_3
-
-    if-eq v1, v4, :cond_2
-
-    if-eq v1, v3, :cond_1
-
-    if-ne v1, v2, :cond_0
-
-    iget-boolean v0, p0, Le45;->o:Z
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_3
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_2
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_3
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Le45;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iget p1, p1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->R0:I
-
-    iget-object v1, p0, Le45;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    add-int/2addr p1, v4
-
-    iput p1, v1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->R0:I
-
-    iget-object p1, p0, Le45;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iput v4, p0, Le45;->X:I
-
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->q(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v0, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    :goto_0
-    iget-object p1, p0, Le45;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iget-object v1, p0, Le45;->Z:Li20;
-
-    iput v3, p0, Le45;->X:I
-
-    invoke-static {p1, v1, p0}, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->r(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Li20;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v0, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    :goto_1
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    iget-object v1, p0, Le45;->Y:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
-
-    iput-boolean p1, p0, Le45;->o:Z
-
-    iput v2, p0, Le45;->X:I
-
-    invoke-virtual {v1, p0}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->q(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    if-ne v1, v0, :cond_6
+    invoke-direct {v0, v1}, Lc45;-><init>(Ljava/lang/String;)V
 
-    :goto_2
+    const/16 v1, 0xa
+
+    invoke-virtual {v0, v1}, Ljava/lang/Thread;->setPriority(I)V
+
     return-object v0
+.end method
 
-    :cond_6
-    move v0, p1
+.method public final b(Ljava/lang/Runnable;)V
+    .locals 11
 
-    :goto_3
-    if-eqz v0, :cond_7
+    iget-object v0, p0, Le45;->c:Ljava/util/LinkedList;
 
-    new-instance p1, Lle8;
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
 
-    invoke-direct {p1}, Lle8;-><init>()V
+    move-result v1
 
-    return-object p1
+    iget v2, p0, Le45;->d:I
 
-    :cond_7
-    invoke-static {}, Lme8;->a()Lje8;
+    iget-object v3, p0, Le45;->a:Ljava/util/LinkedList;
 
-    move-result-object p1
+    const/4 v4, 0x1
 
-    return-object p1
+    if-nez v1, :cond_1
+
+    iget v1, p0, Le45;->g:I
+
+    div-int/lit8 v1, v1, 0x2
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
+
+    move-result v5
+
+    if-le v1, v5, :cond_0
+
+    invoke-virtual {v3}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget v1, p0, Le45;->e:I
+
+    if-lt v1, v2, :cond_1
+
+    :cond_0
+    :try_start_0
+    invoke-virtual {v0}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lc45;
+    :try_end_0
+    .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lxla;
+
+    move-result-object v5
+
+    invoke-interface {v5, v1}, Lxla;->i(Ljava/lang/Throwable;)V
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v3}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p0}, Le45;->a()Lc45;
+
+    move-result-object v1
+
+    iget v5, p0, Le45;->e:I
+
+    add-int/2addr v5, v4
+
+    iput v5, p0, Le45;->e:I
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v3}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lc45;
+
+    :goto_0
+    iget-boolean v5, p0, Le45;->h:Z
+
+    if-nez v5, :cond_3
+
+    iget-object v5, p0, Le45;->i:Lsg;
+
+    const-wide/16 v6, 0x7530
+
+    invoke-static {v5, v6, v7}, Lfg;->e(Ljava/lang/Runnable;J)V
+
+    iput-boolean v4, p0, Le45;->h:Z
+
+    :cond_3
+    if-nez v1, :cond_4
+
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lxla;
+
+    move-result-object v1
+
+    sget-object v5, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
+
+    move-result v5
+
+    iget v6, p0, Le45;->g:I
+
+    invoke-virtual {v3}, Ljava/util/LinkedList;->size()I
+
+    move-result v3
+
+    iget v7, p0, Le45;->e:I
+
+    const-string v8, ", totalTasksCount="
+
+    const-string v9, ", queues.size="
+
+    const-string v10, "DispatchQueuePool: queue is null \u2013 busyQueues.size="
+
+    invoke-static {v10, v5, v8, v6, v9}, Lo52;->x(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v6, ", createdCount="
+
+    const-string v8, ", maxCount="
+
+    invoke-static {v5, v3, v6, v7, v8}, Lo52;->D(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/IllegalStateException;
+
+    const-string v5, "queue is null"
+
+    invoke-direct {v3, v5}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    invoke-interface {v1, v2, v3}, Lxla;->d(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {p0}, Le45;->a()Lc45;
+
+    move-result-object v1
+
+    iget v2, p0, Le45;->e:I
+
+    add-int/2addr v2, v4
+
+    iput v2, p0, Le45;->e:I
+
+    :cond_4
+    iget v2, v1, Lc45;->d:I
+
+    iget v3, p0, Le45;->g:I
+
+    add-int/2addr v3, v4
+
+    iput v3, p0, Le45;->g:I
+
+    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+
+    const/4 v0, 0x0
+
+    iget-object v3, p0, Le45;->b:Landroid/util/SparseIntArray;
+
+    invoke-virtual {v3, v2, v0}, Landroid/util/SparseIntArray;->get(II)I
+
+    move-result v0
+
+    add-int/2addr v0, v4
+
+    invoke-virtual {v3, v2, v0}, Landroid/util/SparseIntArray;->put(II)V
+
+    invoke-virtual {v1}, Ljava/lang/Thread;->getPriority()I
+
+    move-result v0
+
+    const/16 v2, 0xa
+
+    if-eq v0, v2, :cond_5
+
+    invoke-virtual {v1, v2}, Ljava/lang/Thread;->setPriority(I)V
+
+    :cond_5
+    new-instance v0, Li0;
+
+    const/16 v2, 0x17
+
+    invoke-direct {v0, p0, p1, v1, v2}, Li0;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-virtual {v1, v0}, Lc45;->b(Ljava/lang/Runnable;)V
+
+    return-void
 .end method

@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ldu3;
-.implements Ly69;
+.implements Lhv3;
+.implements Lic9;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;",
         "Lone/me/sdk/arch/Widget;",
         "",
-        "Ldu3;",
-        "Ly69;",
+        "Lhv3;",
+        "Lic9;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
@@ -31,17 +31,17 @@
         "",
         "id",
         "(J)V",
-        "Lutd;",
+        "Lm4e;",
         "registrationData",
-        "Lahc;",
+        "Lhtc;",
         "presetAvatars",
-        "(Lutd;Lahc;)V",
+        "(Lm4e;Lhtc;)V",
         "login_release"
     }
     k = 0x1
     mv = {
         0x2,
-        0x2,
+        0x3,
         0x0
     }
     xi = 0x30
@@ -49,54 +49,56 @@
 
 
 # static fields
-.field public static final synthetic E0:[Lz28;
+.field public static final synthetic L0:[Lb88;
 
 
 # instance fields
-.field public final A0:Lls;
+.field public final A0:Luvd;
 
-.field public final B0:Lls;
+.field public final B0:Luvd;
 
-.field public final C0:Lo58;
+.field public final C0:Luvd;
 
-.field public final D0:Ln8g;
+.field public final D0:Luvd;
 
-.field public final X:Ljld;
+.field public final E0:Lia8;
 
-.field public final Y:Ljld;
+.field public final F0:Lia8;
 
-.field public final Z:Ljld;
+.field public final G0:Lfu;
 
-.field public final synthetic a:Lukf;
+.field public final H0:Lfu;
 
-.field public final b:Les7;
+.field public final I0:Lfu;
 
-.field public final c:Laji;
+.field public final J0:Lia8;
 
-.field public final d:Ljava/lang/String;
+.field public final K0:Lakg;
 
-.field public final o:Lo58;
+.field public final X:Lia8;
 
-.field public final t0:Ljld;
+.field public final Y:Luvd;
 
-.field public final u0:Ljld;
+.field public final Z:Luvd;
 
-.field public final v0:Ljld;
+.field public final synthetic a:Lzra;
 
-.field public final w0:Ljld;
+.field public final b:Ldv7;
 
-.field public final x0:Lo58;
+.field public final c:Lioe;
 
-.field public final y0:Lo58;
+.field public final d:Lyvi;
 
-.field public final z0:Lls;
+.field public final o:Lq32;
+
+.field public final z0:Luvd;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 14
 
-    new-instance v0, Liyc;
+    new-instance v0, Lk8d;
 
     const-class v1, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
 
@@ -106,85 +108,85 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lctd;->a:Ldtd;
+    sget-object v2, Lr3e;->a:Ls3e;
 
     const-string v3, "selectAvatarBtn"
 
     const-string v5, "getSelectAvatarBtn()Landroid/view/View;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lj27;->e(Ldtd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Liyc;
+    invoke-static {v2, v1, v3, v5, v4}, Lsb6;->d(Ls3e;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lk8d;
 
     move-result-object v2
 
-    new-instance v3, Liyc;
+    new-instance v3, Lk8d;
 
     const-string v5, "selectAvatarIcon"
 
     const-string v6, "getSelectAvatarIcon()Lone/me/sdk/uikit/common/avatar/OneMeAvatarView;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v5, Liyc;
+    new-instance v5, Lk8d;
 
     const-string v6, "continueBtn"
 
     const-string v7, "getContinueBtn()Lone/me/login/inputname/AnimatedOneMeButton;"
 
-    invoke-direct {v5, v1, v6, v7, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v5, v1, v6, v7, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v6, Liyc;
+    new-instance v6, Lk8d;
 
     const-string v7, "continueEnabledBtn"
 
     const-string v8, "getContinueEnabledBtn()Lone/me/sdk/uikit/common/button/OneMeButton;"
 
-    invoke-direct {v6, v1, v7, v8, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v6, v1, v7, v8, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v7, Liyc;
+    new-instance v7, Lk8d;
 
     const-string v8, "continueDisabledBtn"
 
     const-string v9, "getContinueDisabledBtn()Lone/me/sdk/uikit/common/button/OneMeButton;"
 
-    invoke-direct {v7, v1, v8, v9, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v7, v1, v8, v9, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v8, Liyc;
+    new-instance v8, Lk8d;
 
     const-string v9, "pickPhotoTextView"
 
     const-string v10, "getPickPhotoTextView()Landroid/widget/TextView;"
 
-    invoke-direct {v8, v1, v9, v10, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v8, v1, v9, v10, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v9, Liyc;
+    new-instance v9, Lk8d;
 
     const-string v10, "registrationData"
 
     const-string v11, "getRegistrationData()Lone/me/login/common/RegistrationData;"
 
-    invoke-direct {v9, v1, v10, v11, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v9, v1, v10, v11, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v10, Liyc;
+    new-instance v10, Lk8d;
 
     const-string v11, "contactId"
 
     const-string v12, "getContactId()Ljava/lang/Long;"
 
-    invoke-direct {v10, v1, v11, v12, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v10, v1, v11, v12, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v11, Liyc;
+    new-instance v11, Lk8d;
 
     const-string v12, "presetAvatars"
 
     const-string v13, "getPresetAvatars()Lone/me/login/common/avatars/PresetAvatarsModel;"
 
-    invoke-direct {v11, v1, v12, v13, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v11, v1, v12, v13, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/16 v1, 0xa
 
-    new-array v1, v1, [Lz28;
+    new-array v1, v1, [Lb88;
 
     aput-object v0, v1, v4
 
@@ -224,7 +226,7 @@
 
     aput-object v11, v1, v0
 
-    sput-object v1, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0:[Lz28;
+    sput-object v1, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->L0:[Lb88;
 
     return-void
 .end method
@@ -238,18 +240,18 @@
     move-result-object p1
 
     .line 41
-    new-instance p2, Lktb;
+    new-instance p2, Lgzb;
 
     const-string v0, "contact_id_args"
 
-    invoke-direct {p2, v0, p1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p2, v0, p1}, Lgzb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 42
-    filled-new-array {p2}, [Lktb;
+    filled-new-array {p2}, [Lgzb;
 
     move-result-object p1
 
-    invoke-static {p1}, Laaj;->c([Lktb;)Landroid/os/Bundle;
+    invoke-static {p1}, Lhk0;->k([Lgzb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -259,7 +261,7 @@
 .end method
 
 .method public constructor <init>(Landroid/os/Bundle;)V
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x0
 
@@ -268,258 +270,270 @@
     const/4 v2, 0x0
 
     .line 6
-    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILso4;)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILjq4;)V
 
     .line 7
-    new-instance p1, Lukf;
+    new-instance p1, Lzra;
+
+    const/16 v0, 0x14
 
     .line 8
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p1, v0}, Lzra;-><init>(I)V
 
     .line 9
-    iput-object p1, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->a:Lukf;
+    iput-object p1, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->a:Lzra;
 
     .line 10
-    new-instance p1, Les7;
+    new-instance p1, Ldv7;
 
     const/4 v0, 0x3
 
-    const/4 v1, 0x5
+    const/4 v3, 0x5
 
-    invoke-direct {p1, v0, v2, v1}, Les7;-><init>(ILzt0;I)V
+    invoke-direct {p1, v0, v2, v3}, Ldv7;-><init>(ILxy0;I)V
 
-    iput-object p1, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->b:Les7;
+    iput-object p1, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->b:Ldv7;
 
     .line 11
-    new-instance p1, Laji;
+    new-instance p1, Lioe;
+
+    const-string v0, "RegistrationNeuroAvatarsScreen"
+
+    invoke-direct {p1, v0, v2, v1}, Lioe;-><init>(Ljava/lang/String;Ljl8;I)V
+
+    iput-object p1, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->c:Lioe;
 
     .line 12
-    new-instance v0, Lwtd;
+    new-instance p1, Lo4e;
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    invoke-direct {v0, p0, v1}, Lwtd;-><init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
+    invoke-direct {p1, p0, v0}, Lo4e;-><init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
+
+    new-instance v0, Lo4e;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, p0, v1}, Lo4e;-><init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
+
+    invoke-static {p0, p1, v0}, Lhk0;->a(Lone/me/sdk/arch/Widget;Lxs6;Lxs6;)Lyvi;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->d:Lyvi;
 
     .line 13
-    new-instance v1, Lwtd;
+    new-instance p1, Lq32;
 
-    const/4 v2, 0x3
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getAccountScope-uqN4xOY()Lhoe;
 
-    invoke-direct {v1, p0, v2}, Lwtd;-><init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
-
-    const/4 v2, 0x4
+    move-result-object v0
 
     .line 14
-    invoke-direct {p1, v0, v1, v2}, Laji;-><init>(Llq6;Llq6;I)V
-
-    iput-object p1, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->c:Laji;
+    invoke-direct {p1, v0}, Lscout/Component;-><init>(Lhoe;)V
 
     .line 15
-    const-string p1, "RegistrationNeuroAvatarsScreen"
-
-    iput-object p1, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->d:Ljava/lang/String;
+    iput-object p1, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->o:Lq32;
 
     .line 16
-    sget-object p1, Lil8;->a:Lil8;
-
-    invoke-virtual {p1}, Lil8;->a()Lo58;
+    invoke-virtual {p1}, Lq32;->a()Lia8;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->o:Lo58;
+    iput-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->X:Lia8;
 
     .line 17
-    sget v0, Lw8d;->oneme_login_neuro_avatars_avatar:I
+    sget v0, Lyid;->oneme_login_neuro_avatars_avatar:I
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Luvd;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->X:Ljld;
+    iput-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->Y:Luvd;
 
     .line 18
-    sget v0, Lw8d;->oneme_login_neuro_avatars_pick_neuroavatar_button:I
+    sget v0, Lyid;->oneme_login_neuro_avatars_pick_neuroavatar_button:I
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Luvd;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->Y:Ljld;
+    iput-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->Z:Luvd;
 
     .line 19
-    sget v0, Lw8d;->oneme_login_neuro_avatars_pick_neuroavatar_icon:I
+    sget v0, Lyid;->oneme_login_neuro_avatars_pick_neuroavatar_icon:I
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Luvd;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->Z:Ljld;
+    iput-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->z0:Luvd;
 
     .line 20
-    sget v0, Lw8d;->oneme_login_neuro_avatars_continue_btn:I
+    sget v0, Lyid;->oneme_login_neuro_avatars_continue_btn:I
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Luvd;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->t0:Ljld;
+    iput-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->A0:Luvd;
 
     .line 21
-    sget v0, Lw8d;->oneme_login_neuro_avatars_continue_enabled_btn:I
+    sget v0, Lyid;->oneme_login_neuro_avatars_continue_enabled_btn:I
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Luvd;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->u0:Ljld;
+    iput-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0:Luvd;
 
     .line 22
-    sget v0, Lw8d;->oneme_login_neuro_avatars_continue_disabled_btn:I
+    sget v0, Lyid;->oneme_login_neuro_avatars_continue_disabled_btn:I
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Luvd;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->v0:Ljld;
+    iput-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->C0:Luvd;
 
     .line 23
-    sget v0, Lw8d;->oneme_login_neuro_avatars_pick_image_text:I
+    sget v0, Lyid;->oneme_login_neuro_avatars_pick_image_text:I
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Luvd;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->w0:Ljld;
+    iput-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->D0:Luvd;
 
     .line 24
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lz5;
 
     move-result-object v0
 
-    const/16 v1, 0xf
+    const/16 v1, 0x1a
 
-    invoke-virtual {v0, v1}, Lr5;->d(I)Ln8g;
+    invoke-virtual {v0, v1}, Lz5;->d(I)Lakg;
 
     move-result-object v0
 
     .line 25
-    iput-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->x0:Lo58;
+    iput-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0:Lia8;
 
     .line 26
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lz5;
 
     move-result-object p1
 
-    const/16 v0, 0x19b
+    const/16 v0, 0x1f2
 
-    invoke-virtual {p1, v0}, Lr5;->d(I)Ln8g;
+    invoke-virtual {p1, v0}, Lz5;->d(I)Lakg;
 
     move-result-object p1
 
     .line 27
-    iput-object p1, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->y0:Lo58;
+    iput-object p1, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->F0:Lia8;
 
     .line 28
-    new-instance p1, Lls;
+    new-instance p1, Lfu;
 
-    const-class v0, Lutd;
+    const-class v0, Lm4e;
 
     const-string v1, "registration_data_args"
 
-    invoke-direct {p1, v0, v1}, Lls;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {p1, v1, v0}, Lfu;-><init>(Ljava/lang/String;Ljava/lang/Class;)V
 
     .line 29
-    iput-object p1, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->z0:Lls;
+    iput-object p1, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->G0:Lfu;
 
     .line 30
-    new-instance p1, Lls;
+    new-instance p1, Lfu;
 
     const-class v0, Ljava/lang/Long;
 
     const-string v1, "contact_id_args"
 
-    invoke-direct {p1, v0, v1}, Lls;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {p1, v1, v0}, Lfu;-><init>(Ljava/lang/String;Ljava/lang/Class;)V
 
     .line 31
-    iput-object p1, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->A0:Lls;
+    iput-object p1, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->H0:Lfu;
 
     .line 32
-    new-instance p1, Lls;
+    new-instance p1, Lfu;
 
-    const-class v0, Lahc;
+    const-class v0, Lhtc;
 
     const-string v1, "avatars_args"
 
-    invoke-direct {p1, v0, v1}, Lls;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {p1, v1, v0}, Lfu;-><init>(Ljava/lang/String;Ljava/lang/Class;)V
 
     .line 33
-    iput-object p1, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0:Lls;
+    iput-object p1, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->I0:Lfu;
 
     .line 34
-    new-instance p1, Lwtd;
+    new-instance p1, Lo4e;
 
     const/4 v0, 0x4
 
-    invoke-direct {p1, p0, v0}, Lwtd;-><init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
+    invoke-direct {p1, p0, v0}, Lo4e;-><init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
 
     .line 35
-    new-instance v0, Lhlc;
+    new-instance v0, Lwbc;
 
-    const/16 v1, 0xe
+    const/16 v1, 0x1c
 
-    invoke-direct {v0, v1, p1}, Lhlc;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Lwbc;-><init>(ILjava/lang/Object;)V
 
-    const-class p1, Lqma;
+    const-class p1, Lkpa;
 
-    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Llq6;)Lo58;
+    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lxs6;)Lia8;
 
     move-result-object p1
 
     .line 36
-    iput-object p1, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->C0:Lo58;
+    iput-object p1, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->J0:Lia8;
 
     .line 37
-    new-instance p1, Lwtd;
+    new-instance p1, Lo4e;
 
     const/4 v0, 0x5
 
-    invoke-direct {p1, p0, v0}, Lwtd;-><init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
+    invoke-direct {p1, p0, v0}, Lo4e;-><init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
 
     .line 38
-    new-instance v0, Ln8g;
+    new-instance v0, Lakg;
 
-    invoke-direct {v0, p1}, Ln8g;-><init>(Llq6;)V
+    invoke-direct {v0, p1}, Lakg;-><init>(Lxs6;)V
 
     .line 39
-    iput-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->D0:Ln8g;
+    iput-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->K0:Lakg;
 
     return-void
 .end method
 
-.method public constructor <init>(Lutd;Lahc;)V
+.method public constructor <init>(Lm4e;Lhtc;)V
     .locals 2
 
     .line 1
-    new-instance v0, Lktb;
+    new-instance v0, Lgzb;
 
     const-string v1, "registration_data_args"
 
-    invoke-direct {v0, v1, p1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Lgzb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 2
-    new-instance p1, Lktb;
+    new-instance p1, Lgzb;
 
     const-string v1, "avatars_args"
 
-    invoke-direct {p1, v1, p2}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v1, p2}, Lgzb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 3
-    filled-new-array {v0, p1}, [Lktb;
+    filled-new-array {v0, p1}, [Lgzb;
 
     move-result-object p1
 
     .line 4
-    invoke-static {p1}, Laaj;->c([Lktb;)Landroid/os/Bundle;
+    invoke-static {p1}, Lhk0;->k([Lgzb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -529,107 +543,7 @@
     return-void
 .end method
 
-.method public static D0(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;Landroid/widget/LinearLayout;I)V
-    .locals 2
-
-    new-instance p0, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Landroid/view/View;-><init>(Landroid/content/Context;)V
-
-    new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
-
-    const/4 v1, -0x1
-
-    invoke-direct {v0, v1, p2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    const/4 p2, 0x0
-
-    iput p2, v0, Landroid/widget/LinearLayout$LayoutParams;->weight:F
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {p1, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public static E0(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;Landroid/widget/LinearLayout;Llhg;Lrhg;Lnq6;IIII)V
-    .locals 2
-
-    and-int/lit8 p0, p8, 0x8
-
-    if-eqz p0, :cond_0
-
-    const/4 p5, -0x1
-
-    :cond_0
-    and-int/lit8 p0, p8, 0x20
-
-    const/4 p8, 0x0
-
-    if-eqz p0, :cond_1
-
-    move p7, p8
-
-    :cond_1
-    new-instance p0, Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v0, v1}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    invoke-virtual {p0, p5}, Landroid/view/View;->setId(I)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p5
-
-    invoke-virtual {p2, p5}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object p2
-
-    invoke-virtual {p0, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    sget-object p2, Lr1h;->a:Lrhg;
-
-    invoke-static {p3, p0}, Lrhg;->d(Lrhg;Landroid/widget/TextView;)V
-
-    new-instance p2, Loqd;
-
-    const/4 p3, 0x1
-
-    invoke-direct {p2, p4, v1, p3}, Loqd;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    invoke-static {p2, p0}, Lp6j;->b(Ldr6;Landroid/view/View;)V
-
-    new-instance p2, Landroid/widget/LinearLayout$LayoutParams;
-
-    const/4 p3, -0x2
-
-    invoke-direct {p2, p3, p3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    const/16 p3, 0x11
-
-    iput p3, p2, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
-
-    invoke-virtual {p2, p8, p6, p8, p7}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
-
-    invoke-virtual {p0, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {p1, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public static final z0(Landroid/view/View;Lzlb;)V
+.method public static final d1(Landroid/view/View;Ldqb;)V
     .locals 4
 
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
@@ -674,15 +588,17 @@
 
     new-instance v0, Landroid/graphics/drawable/RippleDrawable;
 
-    invoke-interface {p1}, Lzlb;->c()Leqf;
+    invoke-interface {p1}, Ldqb;->o()Lcqb;
 
     move-result-object v2
 
-    iget-object v2, v2, Leqf;->a:Lcqf;
+    iget-object v2, v2, Lcqb;->b:Loqa;
 
-    iget-object v2, v2, Lcqf;->a:Lbqf;
+    iget-object v2, v2, Loqa;->b:Ljava/lang/Object;
 
-    iget v2, v2, Lbqf;->e:I
+    check-cast v2, Lypb;
+
+    iget v2, v2, Lypb;->c:I
 
     invoke-static {v2}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
@@ -694,17 +610,11 @@
 
     move-result-object v1
 
-    invoke-interface {p1}, Lzlb;->a()Ln13;
+    invoke-interface {p1}, Ldqb;->m()Ltpb;
 
     move-result-object p1
 
-    invoke-interface {p1}, Ln13;->C()Lkl3;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lkl3;->b:Lbk3;
-
-    iget p1, p1, Lbk3;->m:I
+    iget p1, p1, Ltpb;->i:I
 
     invoke-virtual {v1, p1}, Landroid/graphics/Paint;->setColor(I)V
 
@@ -713,58 +623,158 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public final A0()Lutd;
+.method public static h1(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;Landroid/widget/LinearLayout;I)V
     .locals 2
 
-    sget-object v0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0:[Lz28;
+    new-instance p0, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Landroid/view/View;-><init>(Landroid/content/Context;)V
+
+    new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
+
+    const/4 v1, -0x1
+
+    invoke-direct {v0, v1, p2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    const/4 p2, 0x0
+
+    iput p2, v0, Landroid/widget/LinearLayout$LayoutParams;->weight:F
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {p1, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public static i1(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;Landroid/widget/LinearLayout;Ldtg;Lktg;Lzs6;IIII)V
+    .locals 2
+
+    and-int/lit8 p0, p8, 0x8
+
+    if-eqz p0, :cond_0
+
+    const/4 p5, -0x1
+
+    :cond_0
+    and-int/lit8 p0, p8, 0x20
+
+    const/4 p8, 0x0
+
+    if-eqz p0, :cond_1
+
+    move p7, p8
+
+    :cond_1
+    new-instance p0, Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-direct {p0, v0, v1}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    invoke-virtual {p0, p5}, Landroid/view/View;->setId(I)V
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p5
+
+    invoke-virtual {p2, p5}, Litg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    sget-object p2, Lodh;->a:Lktg;
+
+    invoke-static {p3, p0}, Lktg;->d(Lktg;Landroid/widget/TextView;)V
+
+    new-instance p2, La6d;
+
+    const/4 p3, 0x3
+
+    invoke-direct {p2, p4, v1, p3}, La6d;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+
+    invoke-static {p2, p0}, Lg84;->t0(Lpt6;Landroid/view/View;)V
+
+    new-instance p2, Landroid/widget/LinearLayout$LayoutParams;
+
+    const/4 p3, -0x2
+
+    invoke-direct {p2, p3, p3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    const/16 p3, 0x11
+
+    iput p3, p2, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
+
+    invoke-virtual {p2, p8, p6, p8, p7}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
+
+    invoke-virtual {p0, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {p1, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final e1()Lm4e;
+    .locals 2
+
+    sget-object v0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->L0:[Lb88;
 
     const/4 v1, 0x7
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->z0:Lls;
+    iget-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->G0:Lfu;
 
-    invoke-virtual {v0, p0}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Lfu;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lutd;
+    check-cast v0, Lm4e;
 
     return-object v0
 .end method
 
-.method public final B0()Lqma;
+.method public final f1()Lkpa;
     .locals 1
 
-    iget-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->C0:Lo58;
+    iget-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->J0:Lia8;
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lqma;
+    check-cast v0, Lkpa;
 
     return-object v0
 .end method
 
-.method public final C0(Z)V
+.method public final g1(Z)V
     .locals 5
 
-    sget-object v0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0:[Lz28;
+    sget-object v0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->L0:[Lb88;
 
     const/4 v1, 0x4
 
     aget-object v2, v0, v1
 
-    iget-object v3, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->u0:Ljld;
+    iget-object v3, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0:Luvd;
 
-    invoke-interface {v3, p0, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-interface {v3, p0, v2}, Luvd;->y(Ljava/lang/Object;Lb88;)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lone/me/sdk/uikit/common/button/OneMeButton;
+    check-cast v2, Li8b;
 
     xor-int/lit8 v4, p1, 0x1
 
@@ -772,118 +782,120 @@
 
     aget-object v1, v0, v1
 
-    invoke-interface {v3, p0, v1}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-interface {v3, p0, v1}, Luvd;->y(Ljava/lang/Object;Lb88;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lone/me/sdk/uikit/common/button/OneMeButton;
+    check-cast v1, Li8b;
 
-    invoke-virtual {v1, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
+    invoke-virtual {v1, p1}, Li8b;->setProgressEnabled(Z)V
 
     const/4 v1, 0x5
 
     aget-object v2, v0, v1
 
-    iget-object v3, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->v0:Ljld;
+    iget-object v3, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->C0:Luvd;
 
-    invoke-interface {v3, p0, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-interface {v3, p0, v2}, Luvd;->y(Ljava/lang/Object;Lb88;)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lone/me/sdk/uikit/common/button/OneMeButton;
+    check-cast v2, Li8b;
 
     invoke-virtual {v2, v4}, Landroid/view/View;->setClickable(Z)V
 
     aget-object v0, v0, v1
 
-    invoke-interface {v3, p0, v0}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-interface {v3, p0, v0}, Luvd;->y(Ljava/lang/Object;Lb88;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
+    check-cast v0, Li8b;
 
-    invoke-virtual {v0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
+    invoke-virtual {v0, p1}, Li8b;->setProgressEnabled(Z)V
 
     return-void
 .end method
 
-.method public final g(ILandroid/os/Bundle;)V
+.method public final getInsetsConfig()Ldv7;
     .locals 1
 
-    sget p2, Lw8d;->oneme_login_neuro_avatars_load_from_gallery_action:I
+    iget-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->b:Ldv7;
+
+    return-object v0
+.end method
+
+.method public final getScopeId()Lioe;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->c:Lioe;
+
+    return-object v0
+.end method
+
+.method public final getScreenDelegate()Lroe;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->d:Lyvi;
+
+    return-object v0
+.end method
+
+.method public final i(ILandroid/os/Bundle;)V
+    .locals 2
+
+    sget p2, Lyid;->oneme_login_neuro_avatars_load_from_gallery_action:I
 
     if-ne p1, p2, :cond_0
 
-    sget-object p1, Lcm8;->c:Lcm8;
+    sget-object p1, Lyq8;->c:Lyq8;
 
-    invoke-virtual {p1}, Ld3;->p0()Ljm4;
+    invoke-virtual {p1}, Ldp0;->O()Lao4;
 
     move-result-object p1
 
     const/4 p2, 0x0
 
-    const-string v0, ":media-picker/select/photo"
+    const/4 v0, 0x6
 
-    invoke-virtual {p1, v0, p2}, Ljm4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    const-string v1, ":media-picker/select/photo"
+
+    invoke-static {p1, v1, p2, p2, v0}, Lao4;->b(Lao4;Ljava/lang/String;Landroid/os/Bundle;Ljl8;I)Z
 
     return-void
 
     :cond_0
-    sget p2, Lw8d;->oneme_login_neuro_avatars_take_photo_action:I
+    sget p2, Lyid;->oneme_login_neuro_avatars_take_photo_action:I
 
     if-ne p1, p2, :cond_1
 
-    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0()Lqma;
+    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->f1()Lkpa;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lqma;->z()V
+    invoke-virtual {p1}, Lkpa;->C()V
 
     return-void
 
     :cond_1
-    sget p2, Lw8d;->oneme_login_neuro_avatars_remove_photo_action:I
+    sget p2, Lyid;->oneme_login_neuro_avatars_remove_photo_action:I
 
     if-ne p1, p2, :cond_2
 
-    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0()Lqma;
+    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->f1()Lkpa;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lqma;->s()V
+    invoke-virtual {p1}, Lkpa;->u()V
 
     :cond_2
     return-void
 .end method
 
-.method public final getInsetsConfig()Les7;
-    .locals 1
-
-    iget-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->b:Les7;
-
-    return-object v0
-.end method
-
-.method public final getScopeId-IluPPks()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->d:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final getScreenDelegate()Lqce;
-    .locals 1
-
-    iget-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->c:Laji;
-
-    return-object v0
-.end method
-
 .method public final onActivityResult(IILandroid/content/Intent;)V
-    .locals 3
+    .locals 1
 
-    invoke-super {p0, p1, p2, p3}, La94;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Ll94;->onActivityResult(IILandroid/content/Intent;)V
 
     const/16 v0, 0x22b
 
@@ -893,49 +905,23 @@
 
     if-ne p2, p1, :cond_1
 
-    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0()Lqma;
+    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->f1()Lkpa;
 
     move-result-object p1
-
-    const/4 p2, 0x0
 
     if-eqz p3, :cond_0
 
     invoke-virtual {p3}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
-    move-result-object p3
+    move-result-object p2
 
     goto :goto_0
 
     :cond_0
-    move-object p3, p2
+    const/4 p2, 0x0
 
     :goto_0
-    iget-object v0, p1, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    iget-object p1, p1, Lqma;->b:Lzka;
-
-    iget-object v1, p1, Lzka;->g:Lo58;
-
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lmbg;
-
-    check-cast v1, Lj9b;
-
-    invoke-virtual {v1}, Lj9b;->b()Lsb4;
-
-    move-result-object v1
-
-    new-instance v2, Lvka;
-
-    invoke-direct {v2, p1, p3, p2}, Lvka;-><init>(Lzka;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {v0, v1, p2, v2, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+    invoke-virtual {p1, p2}, Lkpa;->v(Landroid/net/Uri;)V
 
     :cond_1
     return-void
@@ -946,43 +932,41 @@
 
     move-object/from16 v0, p0
 
-    sget-object v9, Lpc3;->t0:Lkme;
-
-    new-instance v10, Landroid/widget/FrameLayout;
+    new-instance v9, Landroid/widget/FrameLayout;
 
     invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v10, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {v9, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    sget v1, Lw8d;->oneme_login_neuro_avatars_root_container:I
+    sget v1, Lyid;->oneme_login_neuro_avatars_root_container:I
 
-    invoke-virtual {v10, v1}, Landroid/view/View;->setId(I)V
+    invoke-virtual {v9, v1}, Landroid/view/View;->setId(I)V
 
     new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
 
-    const/4 v11, -0x1
+    const/4 v10, -0x1
 
-    invoke-direct {v1, v11, v11}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+    invoke-direct {v1, v10, v10}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    invoke-virtual {v10, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v9, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance v1, Lcy2;
+    new-instance v1, Lwz2;
 
-    const/4 v2, 0x7
+    const/16 v2, 0x9
 
-    const/4 v12, 0x3
+    const/4 v11, 0x3
 
-    const/4 v13, 0x0
+    const/4 v12, 0x0
 
-    invoke-direct {v1, v12, v13, v2}, Lcy2;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {v1, v11, v12, v2}, Lwz2;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {v1, v10}, Lp6j;->b(Ldr6;Landroid/view/View;)V
+    invoke-static {v1, v9}, Lg84;->t0(Lpt6;Landroid/view/View;)V
 
     new-instance v1, Landroid/widget/LinearLayout;
 
-    invoke-virtual {v10}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {v9}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -1000,29 +984,29 @@
 
     const/4 v4, -0x2
 
-    invoke-direct {v3, v11, v4}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+    invoke-direct {v3, v10, v4}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {v0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0()Lqma;
+    invoke-virtual {v0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->f1()Lkpa;
 
     move-result-object v3
 
-    iget-object v3, v3, Lqma;->u0:Loig;
+    iget-object v3, v3, Lkpa;->A0:Lbug;
 
-    new-instance v5, Lg3b;
+    new-instance v5, Ldcd;
 
-    const/16 v6, 0x1a
+    const/4 v6, 0x3
 
-    invoke-direct {v5, v6, v0}, Lg3b;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v5, v6, v0}, Ldcd;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {v1, v3, v5}, Lv1j;->y(Landroid/view/ViewGroup;Loig;Lnq6;)V
+    invoke-static {v1, v3, v5}, Lke2;->s(Landroid/view/ViewGroup;Lbug;Lzs6;)V
 
     const/16 v3, 0x18
 
     int-to-float v3, v3
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -1034,25 +1018,25 @@
 
     mul-float/2addr v5, v3
 
-    invoke-static {v5}, Lq7j;->c(F)I
+    invoke-static {v5}, Lh43;->U(F)I
 
     move-result v5
 
-    invoke-static {v0, v1, v5}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->D0(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;Landroid/widget/LinearLayout;I)V
+    invoke-static {v0, v1, v5}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->h1(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;Landroid/widget/LinearLayout;I)V
 
-    invoke-virtual {v0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0()Lqma;
+    invoke-virtual {v0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->f1()Lkpa;
 
     move-result-object v5
 
-    iget-object v5, v5, Lqma;->u0:Loig;
+    iget-object v5, v5, Lkpa;->A0:Lbug;
 
-    invoke-static {v1, v5}, Lv1j;->w(Landroid/widget/LinearLayout;Loig;)V
+    invoke-static {v1, v5}, Lke2;->r(Landroid/widget/LinearLayout;Lbug;)V
 
     const/16 v5, 0x50
 
     int-to-float v6, v5
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -1064,147 +1048,149 @@
 
     mul-float/2addr v6, v7
 
-    invoke-static {v6}, Lq7j;->c(F)I
+    invoke-static {v6}, Lh43;->U(F)I
 
     move-result v6
 
-    invoke-static {v0, v1, v6}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->D0(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;Landroid/widget/LinearLayout;I)V
+    invoke-static {v0, v1, v6}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->h1(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;Landroid/widget/LinearLayout;I)V
 
-    iget-object v6, v0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->D0:Ln8g;
+    iget-object v6, v0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->K0:Lakg;
 
-    invoke-virtual {v6}, Ln8g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v6}, Lakg;->getValue()Ljava/lang/Object;
 
     move-result-object v7
 
-    move-object v15, v7
+    move-object v14, v7
 
-    check-cast v15, Lila;
+    check-cast v14, Lkoa;
 
-    new-instance v7, Lwtd;
+    new-instance v15, Lo4e;
 
-    const/4 v8, 0x6
+    const/4 v7, 0x6
 
-    invoke-direct {v7, v0, v8}, Lwtd;-><init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
+    invoke-direct {v15, v0, v7}, Lo4e;-><init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
 
-    new-instance v8, Lwtd;
+    new-instance v7, Lo4e;
 
-    const/4 v14, 0x1
+    const/4 v8, 0x1
 
-    invoke-direct {v8, v0, v14}, Lwtd;-><init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
+    invoke-direct {v7, v0, v8}, Lo4e;-><init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
 
-    const/16 v14, 0x78
+    const/16 v8, 0x78
 
-    int-to-float v14, v14
+    int-to-float v8, v8
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
-    move-result-object v16
+    move-result-object v13
 
-    invoke-virtual/range {v16 .. v16}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v13}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v2
+    move-result-object v13
 
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+    iget v13, v13, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v2, v14
+    mul-float/2addr v13, v8
 
-    invoke-static {v2}, Lq7j;->c(F)I
+    invoke-static {v13}, Lh43;->U(F)I
+
+    move-result v17
+
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
+
+    move-result-object v13
+
+    invoke-virtual {v13}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v13
+
+    iget v13, v13, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v8, v13
+
+    invoke-static {v8}, Lh43;->U(F)I
 
     move-result v18
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v14, v2
-
-    invoke-static {v14}, Lq7j;->c(F)I
-
-    move-result v19
+    const/16 v19, 0x0
 
     const/16 v20, 0x0
 
-    const/16 v21, 0x0
-
-    move-object v14, v1
+    move-object v13, v1
 
     move-object/from16 v16, v7
 
-    move-object/from16 v17, v8
-
-    invoke-static/range {v14 .. v21}, Lv1j;->u(Landroid/widget/LinearLayout;Landroid/graphics/drawable/Drawable;Llq6;Llq6;IILs1a;Ls1a;)Lj4b;
+    invoke-static/range {v13 .. v20}, Lke2;->p(Landroid/widget/LinearLayout;Landroid/graphics/drawable/Drawable;Lxs6;Lxs6;IILepa;Lepa;)Lt6b;
 
     move-result-object v1
 
-    new-instance v2, Ljava/lang/ref/WeakReference;
+    new-instance v7, Ljava/lang/ref/WeakReference;
 
-    invoke-direct {v2, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v7, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    new-instance v7, Ltf;
+    new-instance v8, Lph;
 
-    const/4 v8, 0x6
+    const/4 v14, 0x6
 
-    invoke-direct {v7, v8, v2}, Ltf;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v8, v14, v7}, Lph;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v1, v7}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {v1, v8}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    invoke-virtual {v6}, Ln8g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v6}, Lakg;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lila;
+    check-cast v1, Lkoa;
 
-    invoke-virtual {v1, v7}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+    invoke-virtual {v1, v8}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    sget v1, Ludd;->oneme_registration_neuro_avatars_choose_photo:I
+    sget v1, Leod;->oneme_registration_neuro_avatars_choose_photo:I
 
-    new-instance v2, Llhg;
+    move v6, v2
 
-    invoke-direct {v2, v1}, Llhg;-><init>(I)V
+    new-instance v2, Ldtg;
+
+    invoke-direct {v2, v1}, Ldtg;-><init>(I)V
 
     move v1, v3
 
-    sget-object v3, Lr1h;->g:Lrhg;
+    sget-object v3, Lodh;->h:Lktg;
 
-    const/16 v6, 0x10
+    const/16 v7, 0x10
 
-    int-to-float v6, v6
+    int-to-float v7, v7
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
-    move-result-object v7
+    move-result-object v8
 
-    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v8}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v7
+    move-result-object v8
 
-    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
+    iget v8, v8, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v6, v7
+    mul-float/2addr v7, v8
 
-    invoke-static {v6}, Lq7j;->c(F)I
+    invoke-static {v7}, Lh43;->U(F)I
 
-    move-result v6
+    move-result v7
 
-    move v7, v5
+    move v8, v5
 
-    sget v5, Lw8d;->oneme_login_neuro_avatars_pick_image_text:I
+    sget v5, Lyid;->oneme_login_neuro_avatars_pick_image_text:I
 
-    move v8, v4
+    move v14, v4
 
-    new-instance v4, Lxob;
+    new-instance v4, Lacc;
 
-    const/16 v15, 0x1a
+    const/16 v15, 0x1c
 
-    invoke-direct {v4, v15}, Lxob;-><init>(I)V
+    invoke-direct {v4, v15}, Lacc;-><init>(I)V
 
-    move v15, v7
+    move v15, v6
+
+    move v6, v7
 
     const/4 v7, 0x0
 
@@ -1212,33 +1198,29 @@
 
     const/16 v8, 0x20
 
-    move-object v11, v14
+    move-object/from16 v21, v13
 
-    move v14, v1
+    move v13, v1
 
-    move-object v1, v11
+    move-object/from16 v1, v21
 
-    move/from16 v11, v16
+    invoke-static/range {v0 .. v8}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->i1(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;Landroid/widget/LinearLayout;Ldtg;Lktg;Lzs6;IIII)V
 
-    const/16 v15, 0x11
+    sget v0, Leod;->oneme_registration_neuro_avatars_or:I
 
-    invoke-static/range {v0 .. v8}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;Landroid/widget/LinearLayout;Llhg;Lrhg;Lnq6;IIII)V
+    new-instance v2, Ldtg;
 
-    sget v0, Ludd;->oneme_registration_neuro_avatars_or:I
+    invoke-direct {v2, v0}, Ldtg;-><init>(I)V
 
-    new-instance v2, Llhg;
+    sget-object v3, Lodh;->e:Lktg;
 
-    invoke-direct {v2, v0}, Llhg;-><init>(I)V
+    new-instance v4, Lacc;
 
-    sget-object v3, Lr1h;->J:Lrhg;
+    const/16 v0, 0x1d
 
-    new-instance v4, Lxob;
+    invoke-direct {v4, v0}, Lacc;-><init>(I)V
 
-    const/16 v0, 0x1b
-
-    invoke-direct {v4, v0}, Lxob;-><init>(I)V
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -1248,13 +1230,13 @@
 
     iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v0, v14
+    mul-float/2addr v0, v13
 
-    invoke-static {v0}, Lq7j;->c(F)I
+    invoke-static {v0}, Lh43;->U(F)I
 
     move-result v6
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -1264,9 +1246,9 @@
 
     iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v0, v14
+    mul-float/2addr v0, v13
 
-    invoke-static {v0}, Lq7j;->c(F)I
+    invoke-static {v0}, Lh43;->U(F)I
 
     move-result v7
 
@@ -1276,7 +1258,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-static/range {v0 .. v8}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;Landroid/widget/LinearLayout;Llhg;Lrhg;Lnq6;IIII)V
+    invoke-static/range {v0 .. v8}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->i1(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;Landroid/widget/LinearLayout;Ldtg;Lktg;Lzs6;IIII)V
 
     new-instance v0, Landroid/widget/LinearLayout;
 
@@ -1286,7 +1268,7 @@
 
     invoke-direct {v0, v2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    sget v2, Lw8d;->oneme_login_neuro_avatars_pick_neuroavatar_button:I
+    sget v2, Lyid;->oneme_login_neuro_avatars_pick_neuroavatar_button:I
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
 
@@ -1294,7 +1276,7 @@
 
     int-to-float v2, v2
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -1306,11 +1288,11 @@
 
     mul-float/2addr v4, v2
 
-    invoke-static {v4}, Lq7j;->c(F)I
+    invoke-static {v4}, Lh43;->U(F)I
 
     move-result v4
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -1322,7 +1304,7 @@
 
     mul-float/2addr v5, v2
 
-    invoke-static {v5}, Lq7j;->c(F)I
+    invoke-static {v5}, Lh43;->U(F)I
 
     move-result v5
 
@@ -1330,7 +1312,7 @@
 
     int-to-float v6, v6
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -1342,11 +1324,11 @@
 
     mul-float/2addr v7, v6
 
-    invoke-static {v7}, Lq7j;->c(F)I
+    invoke-static {v7}, Lh43;->U(F)I
 
     move-result v7
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -1358,7 +1340,7 @@
 
     mul-float/2addr v2, v8
 
-    invoke-static {v2}, Lq7j;->c(F)I
+    invoke-static {v2}, Lh43;->U(F)I
 
     move-result v2
 
@@ -1370,7 +1352,7 @@
 
     new-instance v4, Landroid/view/ViewGroup$LayoutParams;
 
-    invoke-direct {v4, v11, v11}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+    invoke-direct {v4, v14, v14}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
     invoke-virtual {v0, v15}, Landroid/widget/LinearLayout;->setGravity(I)V
 
@@ -1380,6 +1362,8 @@
 
     move-result v4
 
+    sget-object v5, Lzc3;->A0:Lz66;
+
     if-eqz v4, :cond_0
 
     invoke-virtual {v0}, Landroid/view/View;->isLayoutRequested()Z
@@ -1388,117 +1372,109 @@
 
     if-nez v4, :cond_0
 
-    invoke-virtual {v9, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-static {v0, v4}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->z0(Landroid/view/View;Lzlb;)V
+    invoke-virtual {v5, v4}, Lz66;->d(Landroid/content/Context;)Lzc3;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lzc3;->m()Ldqb;
+
+    move-result-object v4
+
+    invoke-static {v0, v4}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->d1(Landroid/view/View;Ldqb;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance v4, Lrt0;
+    new-instance v4, Lfc0;
 
-    const/16 v5, 0xe
+    const/16 v7, 0x10
 
-    invoke-direct {v4, v5, v0}, Lrt0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v4, v7, v0}, Lfc0;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v0, v4}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
     :goto_0
-    new-instance v4, Lli1;
+    new-instance v4, Lpn1;
 
-    const/4 v5, 0x6
+    const/4 v7, 0x6
 
-    invoke-direct {v4, v12, v13, v5}, Lli1;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {v4, v11, v12, v7}, Lpn1;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {v4, v0}, Lp6j;->b(Ldr6;Landroid/view/View;)V
+    invoke-static {v4, v0}, Lg84;->t0(Lpt6;Landroid/view/View;)V
 
     new-instance v4, Landroid/widget/FrameLayout;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object v5
-
-    invoke-direct {v4, v5}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
-
-    new-instance v5, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    invoke-direct {v5, v11, v11}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
-
-    invoke-virtual {v4, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/4 v5, 0x2
-
-    int-to-float v5, v5
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
     move-result-object v7
 
-    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v7
-
-    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v5, v7
-
-    invoke-static {v5}, Lq7j;->c(F)I
-
-    move-result v5
-
-    invoke-virtual {v4, v5, v5, v5, v5}, Landroid/view/View;->setPadding(IIII)V
-
-    new-instance v5, Landroid/graphics/drawable/ShapeDrawable;
-
-    new-instance v7, Landroid/graphics/drawable/shapes/OvalShape;
-
-    invoke-direct {v7}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
-
-    invoke-direct {v5, v7}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
-
-    invoke-virtual {v4, v5}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    new-instance v5, Lcy2;
-
-    const/16 v7, 0x8
-
-    invoke-direct {v5, v12, v13, v7}, Lcy2;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    invoke-static {v5, v4}, Lp6j;->b(Ldr6;Landroid/view/View;)V
-
-    new-instance v5, Lj4b;
-
-    invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v7
-
-    invoke-direct {v5, v7}, Lj4b;-><init>(Landroid/content/Context;)V
+    invoke-direct {v4, v7}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     new-instance v7, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    const/16 v8, 0x20
+    invoke-direct {v7, v14, v14}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
-    int-to-float v8, v8
+    invoke-virtual {v4, v7}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    const/4 v7, 0x2
 
-    move-result-object v14
+    int-to-float v7, v7
 
-    invoke-virtual {v14}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
-    move-result-object v14
+    move-result-object v8
 
-    iget v14, v14, Landroid/util/DisplayMetrics;->density:F
+    invoke-virtual {v8}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    mul-float/2addr v14, v8
+    move-result-object v8
 
-    invoke-static {v14}, Lq7j;->c(F)I
+    iget v8, v8, Landroid/util/DisplayMetrics;->density:F
 
-    move-result v14
+    mul-float/2addr v7, v8
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {v7}, Lh43;->U(F)I
+
+    move-result v7
+
+    invoke-virtual {v4, v7, v7, v7, v7}, Landroid/view/View;->setPadding(IIII)V
+
+    new-instance v7, Landroid/graphics/drawable/ShapeDrawable;
+
+    new-instance v8, Landroid/graphics/drawable/shapes/OvalShape;
+
+    invoke-direct {v8}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
+
+    invoke-direct {v7, v8}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+
+    invoke-virtual {v4, v7}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    new-instance v7, Lwz2;
+
+    const/16 v8, 0xa
+
+    invoke-direct {v7, v11, v12, v8}, Lwz2;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    invoke-static {v7, v4}, Lg84;->t0(Lpt6;Landroid/view/View;)V
+
+    new-instance v7, Lt6b;
+
+    invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v8
+
+    invoke-direct {v7, v8}, Lt6b;-><init>(Landroid/content/Context;)V
+
+    new-instance v8, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    const/16 v13, 0x20
+
+    int-to-float v13, v13
+
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
     move-result-object v15
 
@@ -1508,45 +1484,61 @@
 
     iget v15, v15, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v8, v15
+    mul-float/2addr v15, v13
 
-    invoke-static {v8}, Lq7j;->c(F)I
+    invoke-static {v15}, Lh43;->U(F)I
 
-    move-result v8
+    move-result v15
 
-    invoke-direct {v7, v14, v8}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
-    invoke-virtual {v5, v7}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    move-result-object v16
 
-    sget v7, Lw8d;->oneme_login_neuro_avatars_pick_neuroavatar_icon:I
+    invoke-virtual/range {v16 .. v16}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-virtual {v5, v7}, Landroid/view/View;->setId(I)V
+    move-result-object v2
 
-    sget-object v7, Lz3b;->a:Lz3b;
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-virtual {v5, v7}, Lj4b;->setAvatarShape(Lc4b;)V
+    mul-float/2addr v13, v2
 
-    invoke-virtual {v4, v5}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-static {v13}, Lh43;->U(F)I
+
+    move-result v2
+
+    invoke-direct {v8, v15, v2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
+
+    invoke-virtual {v7, v8}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    sget v2, Lyid;->oneme_login_neuro_avatars_pick_neuroavatar_icon:I
+
+    invoke-virtual {v7, v2}, Landroid/view/View;->setId(I)V
+
+    sget-object v2, Lj6b;->a:Lj6b;
+
+    invoke-virtual {v7, v2}, Lt6b;->setAvatarShape(Lm6b;)V
+
+    invoke-virtual {v4, v7}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     invoke-virtual {v0, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance v4, Landroid/widget/TextView;
+    new-instance v2, Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-direct {v4, v5}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, v4}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    new-instance v5, Landroid/view/ViewGroup$MarginLayoutParams;
+    new-instance v4, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    invoke-direct {v5, v11, v11}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
+    invoke-direct {v4, v14, v14}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
     const/16 v7, 0x8
 
     int-to-float v7, v7
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -1558,33 +1550,33 @@
 
     mul-float/2addr v8, v7
 
-    invoke-static {v8}, Lq7j;->c(F)I
+    invoke-static {v8}, Lh43;->U(F)I
 
     move-result v8
 
-    iput v8, v5, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+    iput v8, v4, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    invoke-virtual {v4, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v2, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-static {v3, v4}, Lrhg;->d(Lrhg;Landroid/widget/TextView;)V
+    invoke-static {v3, v2}, Lktg;->d(Lktg;Landroid/widget/TextView;)V
 
-    sget v3, Ludd;->oneme_registration_neuro_avatars_choose_avatar:I
+    sget v3, Leod;->oneme_registration_neuro_avatars_choose_avatar:I
 
-    invoke-virtual {v4, v3}, Landroid/widget/TextView;->setText(I)V
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
-    sget v3, Lf6e;->i:I
+    sget v3, Lxhe;->c0:I
 
     invoke-virtual/range {p0 .. p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-static {v5, v3}, Lq74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v4, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
-    invoke-virtual {v4, v13, v13, v3, v13}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v2, v12, v12, v3, v12}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -1596,71 +1588,83 @@
 
     mul-float/2addr v7, v3
 
-    invoke-static {v7}, Lq7j;->c(F)I
+    invoke-static {v7}, Lh43;->U(F)I
 
     move-result v3
 
-    invoke-virtual {v4, v3}, Landroid/widget/TextView;->setCompoundDrawablePadding(I)V
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setCompoundDrawablePadding(I)V
 
-    new-instance v3, Ldf6;
+    new-instance v3, Lax5;
 
-    const/4 v5, 0x1
+    const/4 v4, 0x2
 
-    invoke-direct {v3, v12, v13, v5}, Ldf6;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {v3, v11, v12, v4}, Lax5;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {v3, v4}, Lp6j;->b(Ldr6;Landroid/view/View;)V
+    invoke-static {v3, v2}, Lg84;->t0(Lpt6;Landroid/view/View;)V
 
-    invoke-virtual {v0, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-virtual {v10, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {v9, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
-    const/4 v1, -0x1
+    invoke-direct {v0, v10, v14}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    invoke-direct {v0, v1, v11}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+    const/16 v8, 0x50
 
-    const/16 v15, 0x50
-
-    iput v15, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+    iput v8, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
     new-instance v1, Landroid/widget/FrameLayout;
 
-    invoke-virtual {v10}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {v9}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-direct {v1, v3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    sget v3, Lw8d;->oneme_login_neuro_avatars_button_background:I
+    sget v2, Lyid;->oneme_login_neuro_avatars_button_background:I
 
-    invoke-virtual {v1, v3}, Landroid/view/View;->setId(I)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->setId(I)V
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     new-instance v0, Landroid/graphics/drawable/GradientDrawable;
 
-    sget-object v3, Landroid/graphics/drawable/GradientDrawable$Orientation;->BOTTOM_TOP:Landroid/graphics/drawable/GradientDrawable$Orientation;
+    sget-object v2, Landroid/graphics/drawable/GradientDrawable$Orientation;->BOTTOM_TOP:Landroid/graphics/drawable/GradientDrawable$Orientation;
 
-    invoke-virtual {v9, v1}, Lkme;->p(Landroid/view/View;)Lzlb;
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-interface {v4}, Lzlb;->d()Ll17;
+    invoke-virtual {v5, v3}, Lz66;->d(Landroid/content/Context;)Lzc3;
 
-    move-result-object v4
+    move-result-object v3
 
-    iget-object v4, v4, Ll17;->c:Lm17;
+    invoke-virtual {v3}, Lzc3;->m()Ldqb;
 
-    iget-object v4, v4, Lm17;->a:[I
+    move-result-object v3
 
-    invoke-direct {v0, v3, v4}, Landroid/graphics/drawable/GradientDrawable;-><init>(Landroid/graphics/drawable/GradientDrawable$Orientation;[I)V
+    invoke-interface {v3}, Ldqb;->s()Lxpb;
+
+    move-result-object v3
+
+    iget-object v3, v3, Lxpb;->a:Lwx3;
+
+    iget-object v3, v3, Lwx3;->a:Ljava/lang/Object;
+
+    check-cast v3, Lc4;
+
+    iget-object v3, v3, Lc4;->b:Ljava/lang/Object;
+
+    check-cast v3, [I
+
+    invoke-direct {v0, v2, v3}, Landroid/graphics/drawable/GradientDrawable;-><init>(Landroid/graphics/drawable/GradientDrawable$Orientation;[I)V
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -1672,47 +1676,47 @@
 
     mul-float/2addr v0, v6
 
-    invoke-static {v0}, Lq7j;->c(F)I
+    invoke-static {v0}, Lh43;->U(F)I
 
     move-result v0
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v3
+    move-result-object v2
 
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v6, v3
+    mul-float/2addr v6, v2
 
-    invoke-static {v6}, Lq7j;->c(F)I
+    invoke-static {v6}, Lh43;->U(F)I
 
-    move-result v3
+    move-result v2
 
-    invoke-virtual {v1, v0, v2, v3, v2}, Landroid/view/View;->setPadding(IIII)V
+    const/4 v3, 0x0
 
-    invoke-static {v1}, Lfui;->a(Landroid/view/ViewGroup;)V
+    invoke-virtual {v1, v0, v3, v2, v3}, Landroid/view/View;->setPadding(IIII)V
 
-    new-instance v0, Lrf;
+    invoke-static {v1}, Lg84;->G(Landroid/view/ViewGroup;)V
+
+    new-instance v0, Lnh;
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-direct {v0, v2}, Lrf;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v2}, Lnh;-><init>(Landroid/content/Context;)V
 
-    sget v2, Lw8d;->oneme_login_neuro_avatars_continue_btn:I
+    sget v2, Lyid;->oneme_login_neuro_avatars_continue_btn:I
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
 
     new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
 
-    const/4 v3, -0x1
-
-    invoke-direct {v2, v3, v11}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+    invoke-direct {v2, v10, v14}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
     const/16 v3, 0x30
 
@@ -1720,35 +1724,35 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance v2, Lxob;
+    new-instance v2, Lp4e;
 
-    const/16 v3, 0x1c
+    const/4 v3, 0x0
 
-    invoke-direct {v2, v3}, Lxob;-><init>(I)V
+    invoke-direct {v2, v3}, Lp4e;-><init>(I)V
 
-    invoke-virtual {v0, v2}, Lrf;->setupDisabledButton(Lnq6;)V
+    invoke-virtual {v0, v2}, Lnh;->setupDisabledButton(Lzs6;)V
 
-    new-instance v2, Lxob;
+    new-instance v2, Lp4e;
 
-    const/16 v3, 0x1d
+    const/4 v3, 0x1
 
-    invoke-direct {v2, v3}, Lxob;-><init>(I)V
+    invoke-direct {v2, v3}, Lp4e;-><init>(I)V
 
-    invoke-virtual {v0, v2}, Lrf;->setupActiveButton(Lnq6;)V
+    invoke-virtual {v0, v2}, Lnh;->setupActiveButton(Lzs6;)V
 
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance v0, Lcy2;
+    new-instance v0, Lwz2;
 
-    const/4 v2, 0x5
+    const/4 v2, 0x6
 
-    invoke-direct {v0, v12, v13, v2}, Lcy2;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {v0, v11, v12, v2}, Lwz2;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {v0, v1}, Lp6j;->b(Ldr6;Landroid/view/View;)V
+    invoke-static {v0, v1}, Lg84;->t0(Lpt6;Landroid/view/View;)V
 
-    invoke-virtual {v10, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {v9, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    return-object v10
+    return-object v9
 .end method
 
 .method public final onRequestPermissionsResult(I[Ljava/lang/String;[I)V
@@ -1758,381 +1762,391 @@
 
     if-ne p1, p3, :cond_0
 
-    iget-object p1, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->x0:Lo58;
+    iget-object p1, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0:Lia8;
 
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lia8;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lyzb;
+    check-cast p1, La6c;
 
-    invoke-virtual {p1, p2}, Lyzb;->c([Ljava/lang/String;)Z
+    invoke-virtual {p1, p2}, La6c;->d([Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0()Lqma;
+    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->f1()Lkpa;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lqma;->z()V
+    invoke-virtual {p1}, Lkpa;->C()V
 
     :cond_0
     return-void
 .end method
 
 .method public final onViewCreated(Landroid/view/View;)V
-    .locals 11
+    .locals 12
 
-    sget-object p1, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0:[Lz28;
+    sget-object p1, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->L0:[Lb88;
 
     const/4 v0, 0x0
 
     aget-object v1, p1, v0
 
-    iget-object v2, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->X:Ljld;
+    iget-object v2, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->Y:Luvd;
 
-    invoke-interface {v2, p0, v1}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-interface {v2, p0, v1}, Luvd;->y(Ljava/lang/Object;Lb88;)Ljava/lang/Object;
 
     move-result-object v1
 
     move-object v4, v1
 
-    check-cast v4, Lj4b;
+    check-cast v4, Lt6b;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj88;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lad8;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0()Lqma;
+    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->f1()Lkpa;
 
     move-result-object v3
 
-    iget-object v3, v3, Lqma;->v0:Lpld;
+    iget-object v3, v3, Lkpa;->B0:Lbwd;
 
-    iget-object v5, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->D0:Ln8g;
+    iget-object v5, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->K0:Lakg;
 
-    invoke-virtual {v5}, Ln8g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v5}, Lakg;->getValue()Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lila;
+    check-cast v5, Lkoa;
 
-    invoke-interface {v1}, Lj88;->p()Ll88;
+    invoke-interface {v1}, Lad8;->q()Lcd8;
 
     move-result-object v6
 
-    sget-object v9, Lo78;->d:Lo78;
+    sget-object v10, Lhc8;->d:Lhc8;
 
-    invoke-static {v3, v6, v9}, Lmt0;->b(Ld76;Ll88;Lo78;)Lpw1;
+    invoke-static {v3, v6, v10}, Lf90;->T(Lxa6;Lcd8;Lhc8;)Ln12;
 
-    move-result-object v10
+    move-result-object v11
 
-    new-instance v3, Lhma;
+    new-instance v3, Lqo7;
 
     const/4 v8, 0x0
+
+    const/4 v9, 0x1
 
     const/4 v6, 0x0
 
     const/4 v7, 0x0
 
-    invoke-direct/range {v3 .. v8}, Lhma;-><init>(Lj4b;Landroid/graphics/drawable/Drawable;Lnq6;Lnq6;Lkotlin/coroutines/Continuation;)V
+    invoke-direct/range {v3 .. v9}, Lqo7;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
 
-    new-instance v4, Lm96;
+    new-instance v4, Lad6;
 
     const/4 v5, 0x1
 
-    invoke-direct {v4, v10, v3, v5}, Lm96;-><init>(Ld76;Lbr6;I)V
+    invoke-direct {v4, v11, v3, v5}, Lad6;-><init>(Lxa6;Lnt6;I)V
 
-    invoke-interface {v1}, Lj88;->p()Ll88;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ld4j;->c(Ll88;)Ly78;
+    invoke-interface {v1}, Lad8;->q()Lcd8;
 
     move-result-object v1
 
-    invoke-static {v4, v1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
-
-    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0()Lqma;
+    invoke-static {v1}, Lg84;->e0(Lcd8;)Lqc8;
 
     move-result-object v1
 
-    iget-object v1, v1, Lqma;->t0:Le7f;
+    invoke-static {v4, v1}, Lhk0;->Z(Lxa6;Loc4;)Lhyf;
+
+    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->f1()Lkpa;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lkpa;->z0:Loif;
 
     const/4 v3, 0x0
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj88;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lad8;
 
     move-result-object v4
 
-    invoke-interface {v4}, Lj88;->p()Ll88;
+    invoke-interface {v4}, Lad8;->q()Lcd8;
 
     move-result-object v4
 
-    invoke-static {v1, v4, v9}, Lmt0;->b(Ld76;Ll88;Lo78;)Lpw1;
+    invoke-static {v1, v4, v10}, Lf90;->T(Lxa6;Lcd8;Lhc8;)Ln12;
 
     move-result-object v1
 
-    new-instance v4, Lbud;
+    new-instance v4, Lr4e;
 
-    invoke-direct {v4, v3, p0}, Lbud;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;)V
+    const/4 v5, 0x3
 
-    new-instance v5, Lm96;
+    invoke-direct {v4, v3, p0, v5}, Lr4e;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
+
+    new-instance v5, Lad6;
 
     const/4 v6, 0x1
 
-    invoke-direct {v5, v1, v4, v6}, Lm96;-><init>(Ld76;Lbr6;I)V
+    invoke-direct {v5, v1, v4, v6}, Lad6;-><init>(Lxa6;Lnt6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lpc8;
 
     move-result-object v1
 
-    invoke-static {v5, v1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
+    invoke-static {v5, v1}, Lhk0;->Z(Lxa6;Loc4;)Lhyf;
 
     :cond_0
-    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0()Lqma;
+    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->f1()Lkpa;
 
     move-result-object v1
 
-    iget-object v1, v1, Lqma;->Z:Lcm5;
+    iget-object v1, v1, Lkpa;->Z:Lzo5;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj88;
-
-    move-result-object v4
-
-    invoke-interface {v4}, Lj88;->p()Ll88;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lad8;
 
     move-result-object v4
 
-    invoke-static {v1, v4, v9}, Lmt0;->b(Ld76;Ll88;Lo78;)Lpw1;
+    invoke-interface {v4}, Lad8;->q()Lcd8;
+
+    move-result-object v4
+
+    invoke-static {v1, v4, v10}, Lf90;->T(Lxa6;Lcd8;Lhc8;)Ln12;
 
     move-result-object v1
 
-    new-instance v4, Lcud;
+    new-instance v4, Lr4e;
 
-    invoke-direct {v4, v3, p0}, Lcud;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;)V
+    const/4 v5, 0x4
 
-    new-instance v5, Lm96;
+    invoke-direct {v4, v3, p0, v5}, Lr4e;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
+
+    new-instance v5, Lad6;
 
     const/4 v6, 0x1
 
-    invoke-direct {v5, v1, v4, v6}, Lm96;-><init>(Ld76;Lbr6;I)V
+    invoke-direct {v5, v1, v4, v6}, Lad6;-><init>(Lxa6;Lnt6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
-
-    move-result-object v1
-
-    invoke-static {v5, v1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
-
-    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0()Lqma;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lpc8;
 
     move-result-object v1
 
-    iget-object v1, v1, Lqma;->b:Lzka;
+    invoke-static {v5, v1}, Lhk0;->Z(Lxa6;Loc4;)Lhyf;
 
-    iget-object v1, v1, Lzka;->i:Lold;
+    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->f1()Lkpa;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj88;
+    move-result-object v1
+
+    iget-object v1, v1, Lkpa;->b:Lcoa;
+
+    iget-object v1, v1, Lcoa;->i:Lawd;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lad8;
 
     move-result-object v4
 
-    invoke-interface {v4}, Lj88;->p()Ll88;
+    invoke-interface {v4}, Lad8;->q()Lcd8;
 
     move-result-object v4
 
-    invoke-static {v1, v4, v9}, Lmt0;->b(Ld76;Ll88;Lo78;)Lpw1;
+    invoke-static {v1, v4, v10}, Lf90;->T(Lxa6;Lcd8;Lhc8;)Ln12;
 
     move-result-object v1
 
-    new-instance v4, Laud;
+    new-instance v4, Lr4e;
 
-    invoke-direct {v4, v3, p0}, Laud;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;)V
+    const/4 v5, 0x2
 
-    new-instance v5, Lm96;
+    invoke-direct {v4, v3, p0, v5}, Lr4e;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
 
-    invoke-direct {v5, v1, v4, v6}, Lm96;-><init>(Ld76;Lbr6;I)V
+    new-instance v5, Lad6;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
+    invoke-direct {v5, v1, v4, v6}, Lad6;-><init>(Lxa6;Lnt6;I)V
 
-    move-result-object v1
-
-    invoke-static {v5, v1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
-
-    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0()Lqma;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lpc8;
 
     move-result-object v1
 
-    iget-object v1, v1, Lqma;->y0:Lu61;
+    invoke-static {v5, v1}, Lhk0;->Z(Lxa6;Loc4;)Lhyf;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj88;
+    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->f1()Lkpa;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lkpa;->E0:Lsd6;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lad8;
 
     move-result-object v4
 
-    invoke-interface {v4}, Lj88;->p()Ll88;
+    invoke-interface {v4}, Lad8;->q()Lcd8;
 
     move-result-object v4
 
-    invoke-static {v1, v4, v9}, Lmt0;->b(Ld76;Ll88;Lo78;)Lpw1;
+    invoke-static {v1, v4, v10}, Lf90;->T(Lxa6;Lcd8;Lhc8;)Ln12;
 
     move-result-object v1
 
-    new-instance v4, Lytd;
+    new-instance v4, Lr4e;
 
-    invoke-direct {v4, v3, p0}, Lytd;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;)V
+    const/4 v5, 0x0
 
-    new-instance v5, Lm96;
+    invoke-direct {v4, v3, p0, v5}, Lr4e;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
 
-    invoke-direct {v5, v1, v4, v6}, Lm96;-><init>(Ld76;Lbr6;I)V
+    new-instance v5, Lad6;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
+    invoke-direct {v5, v1, v4, v6}, Lad6;-><init>(Lxa6;Lnt6;I)V
 
-    move-result-object v1
-
-    invoke-static {v5, v1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
-
-    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0()Lqma;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lpc8;
 
     move-result-object v1
 
-    iget-object v1, v1, Lqma;->v0:Lpld;
+    invoke-static {v5, v1}, Lhk0;->Z(Lxa6;Loc4;)Lhyf;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj88;
+    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->f1()Lkpa;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lkpa;->B0:Lbwd;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lad8;
 
     move-result-object v4
 
-    invoke-interface {v4}, Lj88;->p()Ll88;
+    invoke-interface {v4}, Lad8;->q()Lcd8;
 
     move-result-object v4
 
-    invoke-static {v1, v4, v9}, Lmt0;->b(Ld76;Ll88;Lo78;)Lpw1;
+    invoke-static {v1, v4, v10}, Lf90;->T(Lxa6;Lcd8;Lhc8;)Ln12;
 
     move-result-object v1
 
-    new-instance v4, Lztd;
-
-    invoke-direct {v4, v3, p0}, Lztd;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;)V
-
-    new-instance v3, Lm96;
+    new-instance v4, Lr4e;
 
     const/4 v5, 0x1
 
-    invoke-direct {v3, v1, v4, v5}, Lm96;-><init>(Ld76;Lbr6;I)V
+    invoke-direct {v4, v3, p0, v5}, Lr4e;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
+    new-instance v3, Lad6;
+
+    invoke-direct {v3, v1, v4, v5}, Lad6;-><init>(Lxa6;Lnt6;I)V
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lpc8;
 
     move-result-object v1
 
-    invoke-static {v3, v1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
+    invoke-static {v3, v1}, Lhk0;->Z(Lxa6;Loc4;)Lhyf;
 
     const/4 v1, 0x4
 
     aget-object v1, p1, v1
 
-    iget-object v3, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->u0:Ljld;
+    iget-object v3, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0:Luvd;
 
-    invoke-interface {v3, p0, v1}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-interface {v3, p0, v1}, Luvd;->y(Ljava/lang/Object;Lb88;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lone/me/sdk/uikit/common/button/OneMeButton;
+    check-cast v1, Li8b;
 
-    new-instance v3, Lxtd;
+    new-instance v3, Lq4e;
 
     const/4 v4, 0x0
 
-    invoke-direct {v3, p0, v4}, Lxtd;-><init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
+    invoke-direct {v3, p0, v4}, Lq4e;-><init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
 
-    invoke-static {v1, v3}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {v1, v3}, Ls5b;->H(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     const/4 v1, 0x5
 
     aget-object v1, p1, v1
 
-    iget-object v3, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->v0:Ljld;
+    iget-object v3, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->C0:Luvd;
 
-    invoke-interface {v3, p0, v1}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-interface {v3, p0, v1}, Luvd;->y(Ljava/lang/Object;Lb88;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lone/me/sdk/uikit/common/button/OneMeButton;
+    check-cast v1, Li8b;
 
-    new-instance v3, Lxtd;
+    new-instance v3, Lq4e;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, p0, v4}, Lxtd;-><init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
+    invoke-direct {v3, p0, v4}, Lq4e;-><init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
 
-    invoke-static {v1, v3}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {v1, v3}, Ls5b;->H(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     aget-object v0, p1, v0
 
-    invoke-interface {v2, p0, v0}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-interface {v2, p0, v0}, Luvd;->y(Ljava/lang/Object;Lb88;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lj4b;
+    check-cast v0, Lt6b;
 
-    new-instance v1, Lxtd;
+    new-instance v1, Lq4e;
 
     const/4 v2, 0x2
 
-    invoke-direct {v1, p0, v2}, Lxtd;-><init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
+    invoke-direct {v1, p0, v2}, Lq4e;-><init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
 
-    invoke-static {v0, v1}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {v0, v1}, Ls5b;->H(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     const/4 v0, 0x1
 
     aget-object p1, p1, v0
 
-    iget-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->Y:Ljld;
+    iget-object v0, p0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->Z:Luvd;
 
-    invoke-interface {v0, p0, p1}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-interface {v0, p0, p1}, Luvd;->y(Ljava/lang/Object;Lb88;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/view/View;
 
-    new-instance v0, Lxtd;
+    new-instance v0, Lq4e;
 
     const/4 v1, 0x3
 
-    invoke-direct {v0, p0, v1}, Lxtd;-><init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
+    invoke-direct {v0, p0, v1}, Lq4e;-><init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     return-void
 .end method
 
-.method public final r(Ljava/lang/String;Landroid/graphics/RectF;Landroid/graphics/Rect;)V
+.method public final x(Ljava/lang/String;Landroid/graphics/RectF;Landroid/graphics/Rect;)V
     .locals 9
 
-    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0()Lqma;
+    invoke-virtual {p0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->f1()Lkpa;
 
     move-result-object v0
 
-    iget-object v1, v0, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
+    iget-object v1, v0, Lw4i;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget-object v4, v0, Lqma;->b:Lzka;
+    iget-object v4, v0, Lkpa;->b:Lcoa;
 
-    iget-object v0, v4, Lzka;->g:Lo58;
+    iget-object v0, v4, Lcoa;->g:Lia8;
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lmbg;
-
-    check-cast v0, Lj9b;
-
-    invoke-virtual {v0}, Lj9b;->b()Lsb4;
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v2, Lwka;
+    check-cast v0, Ldng;
+
+    check-cast v0, Lsbb;
+
+    invoke-virtual {v0}, Lsbb;->b()Lhc4;
+
+    move-result-object v0
+
+    new-instance v2, Lboa;
 
     const/4 v8, 0x0
 
@@ -2144,13 +2158,13 @@
 
     move-object v7, p3
 
-    invoke-direct/range {v2 .. v8}, Lwka;-><init>(Ljava/lang/String;Lzka;Landroid/graphics/RectF;ILandroid/graphics/Rect;Lkotlin/coroutines/Continuation;)V
+    invoke-direct/range {v2 .. v8}, Lboa;-><init>(Ljava/lang/String;Lcoa;Landroid/graphics/RectF;ILandroid/graphics/Rect;Lkotlin/coroutines/Continuation;)V
 
     const/4 p1, 0x2
 
     const/4 p2, 0x0
 
-    invoke-static {v1, v0, p2, v2, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+    invoke-static {v1, v0, p2, v2, p1}, Ly6j;->L(Loc4;Lfc4;Lrc4;Lnt6;I)Lhyf;
 
     return-void
 .end method

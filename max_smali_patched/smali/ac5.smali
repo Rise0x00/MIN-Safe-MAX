@@ -1,14 +1,21 @@
-.class public interface abstract Lac5;
-.super Ljava/lang/Object;
+.class public final Lac5;
+.super Ltla;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Ljava/util/Set;
-.end method
+# static fields
+.field public static final Y:Lac5;
 
-.method public abstract b()Landroid/hardware/camera2/params/DynamicRangeProfiles;
-.end method
 
-.method public abstract c(Lwb5;)Ljava/util/Set;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lac5;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lac5;->Y:Lac5;
+
+    return-void
 .end method

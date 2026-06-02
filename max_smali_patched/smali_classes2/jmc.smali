@@ -1,19 +1,25 @@
 .class public final Ljmc;
-.super Ljava/lang/Object;
+.super Lw4i;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljhg;
+.field public final b:Lzo5;
 
 
 # direct methods
-.method public constructor <init>(Ljhg;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lw4i;-><init>()V
 
-    iput-object p1, p0, Ljmc;->a:Ljhg;
+    new-instance v0, Lzo5;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lzo5;-><init>(Ljava/lang/String;)V
+
+    iput-object v0, p0, Ljmc;->b:Lzo5;
 
     return-void
 .end method

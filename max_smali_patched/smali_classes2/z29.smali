@@ -1,170 +1,436 @@
 .class public final Lz29;
-.super Ljava/lang/Object;
+.super Landroid/service/media/MediaBrowserService;
 .source "SourceFile"
-
-# interfaces
-.implements Lsi4;
 
 
 # instance fields
-.field public final a:Lcp4;
+.field public final synthetic a:Llo0;
 
-.field public final b:J
+.field public final synthetic b:La39;
 
-.field public c:Lkq4;
+.field public final synthetic c:La39;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/net/Uri;)V
-    .locals 17
+.method public constructor <init>(La39;Landroid/content/Context;)V
+    .locals 0
 
-    move-object/from16 v0, p0
+    iput-object p1, p0, Lz29;->c:La39;
 
-    new-instance v1, Lcp4;
+    iput-object p1, p0, Lz29;->b:La39;
 
-    new-instance v2, Lza9;
+    iput-object p1, p0, Lz29;->a:Llo0;
 
-    const/16 v3, 0x17
+    invoke-direct {p0}, Landroid/service/media/MediaBrowserService;-><init>()V
 
-    invoke-direct {v2, v3}, Lza9;-><init>(I)V
-
-    new-instance v3, Lgr4;
-
-    const/4 v4, 0x0
-
-    const/16 v5, 0x1f40
-
-    invoke-direct {v3, v4, v5, v5, v2}, Lgr4;-><init>(Ljava/lang/String;IILza9;)V
-
-    move-object/from16 v2, p1
-
-    invoke-direct {v1, v2, v3}, Lcp4;-><init>(Landroid/content/Context;Lsi4;)V
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v1, v0, Lz29;->a:Lcp4;
-
-    sget-object v10, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
-
-    new-instance v4, Laj4;
-
-    const-wide/16 v6, 0x0
-
-    const/4 v8, 0x1
-
-    const/4 v9, 0x0
-
-    const-wide/16 v11, 0x0
-
-    const-wide/16 v13, -0x1
-
-    const/4 v15, 0x0
-
-    const/16 v16, 0x0
-
-    move-object/from16 v5, p2
-
-    invoke-direct/range {v4 .. v16}, Laj4;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;I)V
-
-    invoke-virtual {v0, v4}, Lz29;->G(Laj4;)J
-
-    move-result-wide v1
-
-    iput-wide v1, v0, Lz29;->b:J
+    invoke-virtual {p0, p2}, Landroid/content/ContextWrapper;->attachBaseContext(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final G(Laj4;)J
-    .locals 10
+.method public final onGetRoot(Ljava/lang/String;ILandroid/os/Bundle;)Landroid/service/media/MediaBrowserService$BrowserRoot;
+    .locals 20
 
-    iget-object v0, p0, Lz29;->a:Lcp4;
+    move-object/from16 v0, p3
 
-    invoke-virtual {v0, p1}, Lcp4;->G(Laj4;)J
+    invoke-static {v0}, Lkg9;->n(Landroid/os/Bundle;)V
 
-    move-result-wide v0
+    move-object/from16 v1, p0
 
-    const-wide/16 v2, -0x1
+    iget-object v2, v1, Lz29;->a:Llo0;
 
-    cmp-long v2, v0, v2
+    iget-object v3, v2, Llo0;->d:Ljava/lang/Object;
 
-    if-eqz v2, :cond_0
+    move-object v5, v3
 
-    iget-wide v2, p1, Laj4;->f:J
+    check-cast v5, Lph9;
 
-    add-long/2addr v2, v0
+    const/4 v3, 0x0
 
-    move-wide v8, v2
+    if-nez v0, :cond_0
+
+    move-object v0, v3
 
     goto :goto_0
 
     :cond_0
-    move-wide v8, v0
+    new-instance v4, Landroid/os/Bundle;
+
+    invoke-direct {v4, v0}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
+
+    move-object v0, v4
 
     :goto_0
-    new-instance v4, Lkq4;
+    const/4 v10, 0x0
 
-    iget-wide v6, p1, Laj4;->f:J
+    const/4 v4, -0x1
 
-    move-object v5, p0
+    if-eqz v0, :cond_3
 
-    invoke-direct/range {v4 .. v9}, Lkq4;-><init>(Lki4;JJ)V
+    const-string v6, "extra_client_version"
 
-    iput-object v4, v5, Lz29;->c:Lkq4;
+    invoke-virtual {v0, v6, v10}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
 
-    return-wide v0
-.end method
+    move-result v7
 
-.method public final H(Lysg;)V
-    .locals 1
+    if-eqz v7, :cond_3
 
-    iget-object v0, p0, Lz29;->a:Lcp4;
+    invoke-virtual {v0, v6}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcp4;->H(Lysg;)V
+    new-instance v6, Landroid/os/Messenger;
 
-    return-void
-.end method
+    iget-object v7, v5, Lph9;->Y:Lk20;
 
-.method public final close()V
-    .locals 1
+    invoke-direct {v6, v7}, Landroid/os/Messenger;-><init>(Landroid/os/Handler;)V
 
-    const/4 v0, 0x0
+    iput-object v6, v2, Llo0;->c:Ljava/lang/Object;
 
-    iput-object v0, p0, Lz29;->c:Lkq4;
+    const-string v6, "extra_service_version"
+
+    const/4 v7, 0x2
+
+    invoke-static {v7, v6}, Lop7;->g(ILjava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v6
+
+    iget-object v7, v2, Llo0;->c:Ljava/lang/Object;
+
+    check-cast v7, Landroid/os/Messenger;
+
+    invoke-virtual {v7}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
+
+    move-result-object v7
+
+    const-string v8, "extra_messenger"
+
+    invoke-virtual {v6, v8, v7}, Landroid/os/Bundle;->putBinder(Ljava/lang/String;Landroid/os/IBinder;)V
+
+    iget-object v7, v5, Lph9;->Z:Ljg9;
+
+    if-eqz v7, :cond_2
+
+    invoke-virtual {v7}, Ljg9;->a()Ldh7;
+
+    move-result-object v7
+
+    if-nez v7, :cond_1
+
+    move-object v7, v3
+
+    goto :goto_1
+
+    :cond_1
+    invoke-interface {v7}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
+
+    move-result-object v7
+
+    :goto_1
+    const-string v8, "extra_session_binder"
+
+    invoke-virtual {v6, v8, v7}, Landroid/os/Bundle;->putBinder(Ljava/lang/String;Landroid/os/IBinder;)V
+
+    goto :goto_2
+
+    :cond_2
+    iget-object v7, v2, Llo0;->a:Ljava/lang/Object;
+
+    check-cast v7, Ljava/util/ArrayList;
+
+    invoke-virtual {v7, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_2
+    const-string v7, "extra_calling_pid"
+
+    invoke-virtual {v0, v7, v4}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+
+    move-result v4
+
+    invoke-virtual {v0, v7}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
+
+    move-object v11, v6
+
+    :goto_3
+    move v7, v4
+
+    goto :goto_4
+
+    :cond_3
+    move-object v11, v3
+
+    goto :goto_3
+
+    :goto_4
+    new-instance v4, Ly29;
+
+    const/4 v9, 0x0
+
+    move-object/from16 v6, p1
+
+    move/from16 v8, p2
+
+    invoke-direct/range {v4 .. v9}, Ly29;-><init>(Lph9;Ljava/lang/String;IILf39;)V
+
+    move-object v12, v4
+
+    iput-object v12, v5, Lph9;->X:Ly29;
+
+    iget-object v4, v5, Lph9;->a:La39;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v4}, Llo0;->j()Lfh9;
+
+    move-result-object v14
+
+    if-eqz v0, :cond_4
+
+    goto :goto_5
+
+    :cond_4
+    sget-object v0, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
+
+    :goto_5
+    new-instance v13, Lvf9;
+
+    iget-object v4, v5, Lph9;->z0:Ljh9;
+
+    invoke-virtual {v4, v14}, Ljh9;->b(Lfh9;)Z
+
+    move-result v17
+
+    sget-object v4, Lkb8;->a:Lpn7;
+
+    const-string v4, "androidx.media.utils.MediaBrowserCompat.extras.CUSTOM_BROWSER_ACTION_LIMIT"
+
+    invoke-virtual {v0, v4, v10}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+
+    move-result v4
+
+    invoke-static {v10, v4}, Ljava/lang/Math;->max(II)I
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x0
+
+    const/16 v18, 0x0
+
+    move-object/from16 v19, v0
+
+    invoke-direct/range {v13 .. v19}, Lvf9;-><init>(Lfh9;IIZLuf9;Landroid/os/Bundle;)V
+
+    new-instance v6, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {v6}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    new-instance v8, Lns3;
+
+    invoke-direct {v8}, Lns3;-><init>()V
+
+    iget-object v0, v5, Lph9;->A0:Lsg9;
+
+    iget-object v0, v0, Lsg9;->l:Landroid/os/Handler;
+
+    new-instance v4, Ll72;
+
+    const/4 v9, 0x7
+
+    move-object v7, v13
+
+    invoke-direct/range {v4 .. v9}, Ll72;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-static {v0, v4}, Lpnh;->a0(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
     :try_start_0
-    iget-object v0, p0, Lz29;->a:Lcp4;
-
-    invoke-virtual {v0}, Lcp4;->close()V
+    invoke-virtual {v8}, Lns3;->a()V
     :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :catch_0
-    return-void
-.end method
-
-.method public final getUri()Landroid/net/Uri;
-    .locals 1
-
-    iget-object v0, p0, Lz29;->a:Lcp4;
-
-    invoke-virtual {v0}, Lcp4;->getUri()Landroid/net/Uri;
+    invoke-virtual {v6}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Ltf9;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v4, v5, Lph9;->B0:Lskg;
+
+    iget-object v6, v0, Ltf9;->a:Lr6f;
+
+    iget-object v0, v0, Ltf9;->b:Ldhc;
+
+    invoke-virtual {v4, v14, v13, v6, v0}, Lskg;->a(Ljava/lang/Object;Lvf9;Lr6f;Ldhc;)V
+
+    sget-object v0, Ljde;->b:Lr5e;
+
+    goto :goto_6
+
+    :catch_0
+    move-exception v0
+
+    const-string v4, "MSSLegacyStub"
+
+    const-string v6, "Couldn\'t get a result from onConnect"
+
+    invoke-static {v4, v6, v0}, Lq98;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    move-object v0, v3
+
+    :goto_6
+    iput-object v3, v5, Lph9;->X:Ly29;
+
+    if-nez v0, :cond_5
+
+    move-object v0, v3
+
+    goto :goto_8
+
+    :cond_5
+    iget-object v2, v2, Llo0;->c:Ljava/lang/Object;
+
+    check-cast v2, Landroid/os/Messenger;
+
+    if-eqz v2, :cond_6
+
+    iget-object v2, v5, Lph9;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_6
+    iget-object v0, v0, Lr5e;->a:Ljava/lang/Object;
+
+    check-cast v0, Landroid/os/Bundle;
+
+    if-nez v11, :cond_7
+
+    move-object v11, v0
+
+    goto :goto_7
+
+    :cond_7
+    if-eqz v0, :cond_8
+
+    invoke-virtual {v11, v0}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
+
+    :cond_8
+    :goto_7
+    new-instance v0, Lr5e;
+
+    invoke-direct {v0, v11}, Lr5e;-><init>(Ljava/lang/Object;)V
+
+    :goto_8
+    if-nez v0, :cond_9
+
+    goto :goto_9
+
+    :cond_9
+    new-instance v3, Landroid/service/media/MediaBrowserService$BrowserRoot;
+
+    iget-object v0, v0, Lr5e;->a:Ljava/lang/Object;
+
+    check-cast v0, Landroid/os/Bundle;
+
+    const-string v2, "androidx.media3.session.MediaLibraryService"
+
+    invoke-direct {v3, v2, v0}, Landroid/service/media/MediaBrowserService$BrowserRoot;-><init>(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    :goto_9
+    return-object v3
 .end method
 
-.method public final read([BII)I
+.method public final onLoadChildren(Ljava/lang/String;Landroid/service/media/MediaBrowserService$Result;)V
     .locals 1
 
-    iget-object v0, p0, Lz29;->a:Lcp4;
+    .line 1
+    new-instance p1, Lnr;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcp4;->read([BII)I
+    const/16 v0, 0x19
 
-    move-result p1
+    invoke-direct {p1, v0, p2}, Lnr;-><init>(ILjava/lang/Object;)V
 
-    return p1
+    .line 2
+    iget-object p2, p0, Lz29;->a:Llo0;
+
+    iget-object p2, p2, Llo0;->d:Ljava/lang/Object;
+
+    check-cast p2, Lph9;
+
+    iget-object v0, p2, Lph9;->c:Ly29;
+
+    iput-object v0, p2, Lph9;->X:Ly29;
+
+    const/4 v0, 0x0
+
+    .line 3
+    invoke-virtual {p1, v0}, Lnr;->C(Ljava/lang/Object;)V
+
+    .line 4
+    iput-object v0, p2, Lph9;->X:Ly29;
+
+    return-void
+.end method
+
+.method public final onLoadChildren(Ljava/lang/String;Landroid/service/media/MediaBrowserService$Result;Landroid/os/Bundle;)V
+    .locals 2
+
+    .line 5
+    invoke-static {p3}, Lkg9;->n(Landroid/os/Bundle;)V
+
+    .line 6
+    iget-object p1, p0, Lz29;->c:La39;
+
+    iget-object p1, p1, La39;->f:Lph9;
+
+    iget-object p3, p1, Lph9;->c:Ly29;
+
+    .line 7
+    new-instance v0, Lnr;
+
+    const/16 v1, 0x19
+
+    invoke-direct {v0, v1, p2}, Lnr;-><init>(ILjava/lang/Object;)V
+
+    .line 8
+    iput-object p3, p1, Lph9;->X:Ly29;
+
+    const/4 p2, 0x0
+
+    .line 9
+    invoke-virtual {v0, p2}, Lnr;->C(Ljava/lang/Object;)V
+
+    .line 10
+    iput-object p2, p1, Lph9;->X:Ly29;
+
+    .line 11
+    iput-object p2, p1, Lph9;->X:Ly29;
+
+    return-void
+.end method
+
+.method public final onLoadItem(Ljava/lang/String;Landroid/service/media/MediaBrowserService$Result;)V
+    .locals 1
+
+    new-instance p1, Lnr;
+
+    const/16 v0, 0x19
+
+    invoke-direct {p1, v0, p2}, Lnr;-><init>(ILjava/lang/Object;)V
+
+    iget-object p2, p0, Lz29;->b:La39;
+
+    iget-object p2, p2, La39;->e:Lph9;
+
+    iget-object v0, p2, Lph9;->c:Ly29;
+
+    iput-object v0, p2, Lph9;->X:Ly29;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lnr;->C(Ljava/lang/Object;)V
+
+    iput-object v0, p2, Lph9;->X:Ly29;
+
+    return-void
 .end method

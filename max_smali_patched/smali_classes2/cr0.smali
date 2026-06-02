@@ -1,191 +1,258 @@
 .class public final Lcr0;
-.super Ljava/lang/Object;
+.super Ljde;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public b:J
-
-.field public c:J
+.field public final i:Ls8h;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    const/4 v0, 0x6
-
-    iput v0, p0, Lcr0;->a:I
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    .line 4
-    iput-wide v0, p0, Lcr0;->b:J
-
-    .line 5
-    iput-wide v0, p0, Lcr0;->c:J
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Ls8h;)V
     .locals 0
 
-    .line 1
-    iput p1, p0, Lcr0;->a:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method public synthetic constructor <init>(IJJ)V
-    .locals 0
-
-    .line 2
-    iput p1, p0, Lcr0;->a:I
-
-    iput-wide p2, p0, Lcr0;->b:J
-
-    iput-wide p4, p0, Lcr0;->c:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public constructor <init>(JJJ)V
-    .locals 0
-
-    const/4 p1, 0x3
-
-    iput p1, p0, Lcr0;->a:I
-
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 7
-    iput-wide p3, p0, Lcr0;->b:J
-
-    .line 8
-    iput-wide p5, p0, Lcr0;->c:J
+    iput-object p1, p0, Lcr0;->i:Ls8h;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(JJ)D
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-wide v0, p0, Lcr0;->b:J
+    const/4 v0, 0x1
 
-    sub-long v0, p1, v0
+    if-ne p1, p0, :cond_0
 
-    const-wide/16 v2, 0x0
-
-    cmp-long v4, v0, v2
-
-    if-gez v4, :cond_0
-
-    move-wide v0, v2
+    return v0
 
     :cond_0
-    iget-wide v4, p0, Lcr0;->c:J
+    instance-of v1, p1, Lcr0;
 
-    cmp-long v2, v4, v2
+    if-eqz v1, :cond_1
 
-    if-nez v2, :cond_1
+    check-cast p1, Lcr0;
 
-    const-wide/high16 v0, 0x7ff8000000000000L    # Double.NaN
+    iget-object p1, p1, Lcr0;->i:Ls8h;
+
+    iget-object v1, p0, Lcr0;->i:Ls8h;
+
+    invoke-static {p1, v1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    return v0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lcr0;->i:Ls8h;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final p(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    .locals 7
+
+    new-instance p1, Ljava/util/ArrayDeque;
+
+    invoke-direct {p1, p2}, Ljava/util/ArrayDeque;-><init>(Ljava/util/Collection;)V
+
+    new-instance p2, Ljava/util/ArrayList;
+
+    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-virtual {p1}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    const/16 v2, 0x9
+
+    if-ge v0, v2, :cond_7
+
+    const/4 v2, 0x1
+
+    invoke-static {v2, p2}, Lx82;->g(ILjava/util/ArrayList;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/security/cert/X509Certificate;
+
+    iget-object v4, p0, Lcr0;->i:Ls8h;
+
+    invoke-interface {v4, v3}, Ls8h;->a(Ljava/security/cert/X509Certificate;)Ljava/security/cert/X509Certificate;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_3
+
+    invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    if-gt v1, v2, :cond_0
+
+    invoke-virtual {v3, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    :cond_0
+    invoke-virtual {p2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_1
+    invoke-virtual {v4}, Ljava/security/cert/X509Certificate;->getIssuerDN()Ljava/security/Principal;
+
+    move-result-object v1
+
+    invoke-virtual {v4}, Ljava/security/cert/X509Certificate;->getSubjectDN()Ljava/security/Principal;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    :try_start_0
+    invoke-virtual {v4}, Ljava/security/cert/Certificate;->getPublicKey()Ljava/security/PublicKey;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1}, Ljava/security/cert/Certificate;->verify(Ljava/security/PublicKey;)V
+    :try_end_0
+    .catch Ljava/security/GeneralSecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_4
+
+    :catch_0
+    :goto_1
+    move v1, v2
+
+    goto :goto_3
+
+    :cond_3
+    invoke-virtual {p1}, Ljava/util/ArrayDeque;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :catch_1
+    :goto_2
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_5
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/security/cert/X509Certificate;
+
+    invoke-virtual {v3}, Ljava/security/cert/X509Certificate;->getIssuerDN()Ljava/security/Principal;
+
+    move-result-object v5
+
+    invoke-virtual {v4}, Ljava/security/cert/X509Certificate;->getSubjectDN()Ljava/security/Principal;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    :try_start_1
+    invoke-virtual {v4}, Ljava/security/cert/Certificate;->getPublicKey()Ljava/security/PublicKey;
+
+    move-result-object v5
+
+    invoke-virtual {v3, v5}, Ljava/security/cert/Certificate;->verify(Ljava/security/PublicKey;)V
+    :try_end_1
+    .catch Ljava/security/GeneralSecurityException; {:try_start_1 .. :try_end_1} :catch_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->remove()V
+
+    invoke-virtual {p2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_3
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    :cond_1
-    sub-long v2, p3, v4
+    :cond_5
+    if-eqz v1, :cond_6
 
-    const-wide/16 v4, 0x1
+    :goto_4
+    return-object p2
 
-    cmp-long v6, v2, v4
+    :cond_6
+    new-instance p1, Ljavax/net/ssl/SSLPeerUnverifiedException;
 
-    if-gez v6, :cond_2
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    move-wide v2, v4
+    const-string v0, "Failed to find a trusted cert that signed "
 
-    :cond_2
-    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v6, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    invoke-virtual {p2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-wide v4
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    mul-long/2addr v4, v0
+    move-result-object p2
 
-    long-to-double v0, v4
+    invoke-direct {p1, p2}, Ljavax/net/ssl/SSLPeerUnverifiedException;-><init>(Ljava/lang/String;)V
 
-    long-to-double v2, v2
+    throw p1
 
-    div-double/2addr v0, v2
+    :cond_7
+    new-instance p1, Ljavax/net/ssl/SSLPeerUnverifiedException;
 
-    :goto_0
-    iput-wide p1, p0, Lcr0;->b:J
-
-    iput-wide p3, p0, Lcr0;->c:J
-
-    const/16 p1, 0x8
-
-    int-to-double p1, p1
-
-    mul-double/2addr v0, p1
-
-    return-wide v0
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 3
-
-    iget v0, p0, Lcr0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v1, "Certificate chain too long: "
 
-    iget-wide v1, p0, Lcr0;->b:J
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, "/"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lcr0;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p2
 
-    return-object v0
+    invoke-direct {p1, p2}, Ljavax/net/ssl/SSLPeerUnverifiedException;-><init>(Ljava/lang/String;)V
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

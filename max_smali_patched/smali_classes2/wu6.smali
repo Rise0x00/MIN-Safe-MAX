@@ -1,194 +1,284 @@
 .class public final Lwu6;
-.super Lp6g;
+.super Lvu6;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Ldt6;
+.field public final e:I
 
-.field public final synthetic Y:Lbv6;
+.field public final f:I
 
-.field public final synthetic Z:Ldt6;
-
-.field public o:I
+.field public final g:I
 
 
 # direct methods
-.method public constructor <init>(Ldt6;Lbv6;Ldt6;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lie5;Lsu6;)V
+    .locals 2
 
-    iput-object p1, p0, Lwu6;->X:Ldt6;
+    .line 1
+    const-string v0, "sTexture"
 
-    iput-object p2, p0, Lwu6;->Y:Lbv6;
+    invoke-virtual {p1}, Lie5;->a()Z
 
-    iput-object p3, p0, Lwu6;->Z:Ldt6;
+    move-result p1
 
-    const/4 p1, 0x2
+    if-eqz p1, :cond_0
 
-    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    sget-object p1, Lxu6;->d:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Lxu6;->c:Ljava/lang/String;
+
+    .line 2
+    :goto_0
+    const-string v1, "vTextureCoord"
+
+    .line 3
+    :try_start_0
+    iget p2, p2, Lsu6;->a:I
+
+    packed-switch p2, :pswitch_data_0
+
+    .line 4
+    sget-object p2, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string p2, "#version 300 es\n#extension GL_EXT_YUV_target : require\nprecision mediump float;\nuniform __samplerExternal2DY2YEXT sTexture;\nuniform float uAlphaScale;\nin vec2 vTextureCoord;\nout vec4 outColor;\n\nvec3 yuvToRgb(vec3 yuv) {\n  const vec3 yuvOffset = vec3(0.0625, 0.5, 0.5);\n  const mat3 yuvToRgbColorMat = mat3(\n    1.1689f, 1.1689f, 1.1689f,\n    0.0000f, -0.1881f, 2.1502f,\n    1.6853f, -0.6530f, 0.0000f\n  );\n  return clamp(yuvToRgbColorMat * (yuv - yuvOffset), 0.0, 1.0);\n}\n\nvoid main() {\n  vec3 srcYuv = texture(sTexture, vTextureCoord).xyz;\n  vec3 srcRgb = yuvToRgb(srcYuv);\n  outColor = vec4(srcRgb, uAlphaScale);\n}"
+
+    goto :goto_1
+
+    .line 5
+    :pswitch_0
+    sget-object p2, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string p2, "#version 300 es\n#extension GL_OES_EGL_image_external_essl3 : require\nprecision mediump float;\nuniform samplerExternalOES sTexture;\nuniform float uAlphaScale;\nin vec2 vTextureCoord;\nout vec4 outColor;\n\nvoid main() {\n  vec4 src = texture(sTexture, vTextureCoord);\n  outColor = vec4(src.rgb, src.a * uAlphaScale);\n}"
+
+    goto :goto_1
+
+    .line 6
+    :pswitch_1
+    sget-object p2, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string p2, "#extension GL_OES_EGL_image_external : require\nprecision mediump float;\nvarying vec2 vTextureCoord;\nuniform samplerExternalOES sTexture;\nuniform float uAlphaScale;\nvoid main() {\n    vec4 src = texture2D(sTexture, vTextureCoord);\n    gl_FragColor = vec4(src.rgb, src.a * uAlphaScale);\n}\n"
+
+    .line 7
+    :goto_1
+    invoke-virtual {p2, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v1, :cond_1
+
+    .line 8
+    invoke-direct {p0, p1, p2}, Lvu6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 p1, -0x1
+
+    .line 9
+    iput p1, p0, Lwu6;->e:I
+
+    .line 10
+    iput p1, p0, Lwu6;->f:I
+
+    .line 11
+    iput p1, p0, Lwu6;->g:I
+
+    .line 12
+    invoke-virtual {p0}, Lvu6;->a()V
+
+    .line 13
+    iget p1, p0, Lvu6;->a:I
+
+    invoke-static {p1, v0}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
+
+    move-result p2
+
+    iput p2, p0, Lwu6;->e:I
+
+    .line 14
+    invoke-static {p2, v0}, Lxu6;->e(ILjava/lang/String;)V
+
+    .line 15
+    const-string p2, "aTextureCoord"
+
+    invoke-static {p1, p2}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
+
+    move-result v0
+
+    iput v0, p0, Lwu6;->g:I
+
+    .line 16
+    invoke-static {v0, p2}, Lxu6;->e(ILjava/lang/String;)V
+
+    .line 17
+    const-string p2, "uTexMatrix"
+
+    invoke-static {p1, p2}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
+
+    move-result p1
+
+    iput p1, p0, Lwu6;->f:I
+
+    .line 18
+    invoke-static {p1, p2}, Lxu6;->e(ILjava/lang/String;)V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    .line 19
+    :cond_1
+    :try_start_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Invalid fragment shader"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 20
+    :goto_2
+    instance-of p2, p1, Ljava/lang/IllegalArgumentException;
+
+    if-eqz p2, :cond_2
+
+    .line 21
+    throw p1
+
+    .line 22
+    :cond_2
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Unable retrieve fragment shader source"
+
+    invoke-direct {p2, v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public constructor <init>(Lie5;Luu6;)V
+    .locals 3
+
+    .line 23
+    invoke-virtual {p1}, Lie5;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 24
+    sget-object v0, Luu6;->a:Luu6;
+
+    if-eq p2, v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "No default sampler shader available for"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lvfa;->h(Ljava/lang/String;Z)V
+
+    .line 25
+    sget-object v0, Luu6;->c:Luu6;
+
+    if-ne p2, v0, :cond_1
+
+    .line 26
+    sget-object p2, Lxu6;->g:Lsu6;
+
+    goto :goto_1
+
+    .line 27
+    :cond_1
+    sget-object p2, Lxu6;->f:Lsu6;
+
+    goto :goto_1
+
+    .line 28
+    :cond_2
+    sget-object p2, Lxu6;->e:Lsu6;
+
+    .line 29
+    :goto_1
+    invoke-direct {p0, p1, p2}, Lwu6;-><init>(Lie5;Lsu6;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lwu6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lwu6;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lwu6;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance p1, Lwu6;
-
-    iget-object v0, p0, Lwu6;->Y:Lbv6;
-
-    iget-object v1, p0, Lwu6;->Z:Ldt6;
-
-    iget-object v2, p0, Lwu6;->X:Ldt6;
-
-    invoke-direct {p1, v2, v0, v1, p2}, Lwu6;-><init>(Ldt6;Lbv6;Ldt6;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b()V
     .locals 7
 
-    iget v0, p0, Lwu6;->o:I
+    invoke-super {p0}, Lvu6;->b()V
 
-    sget-object v1, Lb3h;->a:Lb3h;
+    iget v0, p0, Lwu6;->e:I
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    iget-object v3, p0, Lwu6;->Y:Lbv6;
+    invoke-static {v0, v1}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    const/4 v4, 0x1
+    iget v0, p0, Lwu6;->g:I
 
-    if-eqz v0, :cond_1
+    invoke-static {v0}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    if-ne v0, v4, :cond_0
+    const-string v0, "glEnableVertexAttribArray"
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-static {v0}, Lxu6;->b(Ljava/lang/String;)V
 
-    goto :goto_1
+    const/4 v4, 0x0
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    sget-object v6, Lxu6;->i:Ljava/nio/FloatBuffer;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lwu6;->X:Ldt6;
-
-    if-eqz p1, :cond_3
-
-    iget-object v0, v3, Lbv6;->o:Lei8;
-
-    iget-object p1, p1, Ldt6;->a:Lct6;
-
-    iget-object v5, v3, Lbv6;->y0:Lyt6;
-
-    iget v5, v5, Lyt6;->b:I
-
-    iput v4, p0, Lwu6;->o:I
-
-    check-cast v0, Lmm7;
-
-    iget-object v4, v0, Lmm7;->c:Lmbg;
-
-    check-cast v4, Lj9b;
-
-    invoke-virtual {v4}, Lj9b;->b()Lsb4;
-
-    move-result-object v4
-
-    iget-object v6, v0, Lmm7;->b:Ltb4;
-
-    invoke-virtual {v4, v6}, Lm0;->plus(Lqb4;)Lqb4;
-
-    move-result-object v4
-
-    new-instance v6, Llm7;
-
-    invoke-direct {v6, v0, p1, v5, v2}, Llm7;-><init>(Lmm7;Lct6;ILkotlin/coroutines/Continuation;)V
-
-    invoke-static {v4, v6, p0}, Ls9j;->k(Lqb4;Lbr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move-object p1, v1
-
-    :goto_0
-    if-ne p1, v0, :cond_3
-
-    return-object v0
-
-    :cond_3
-    :goto_1
-    invoke-virtual {v3}, Lbv6;->u()Lmbg;
-
-    move-result-object p1
-
-    check-cast p1, Lj9b;
-
-    invoke-virtual {p1}, Lj9b;->f()Lsb4;
-
-    move-result-object p1
-
-    iget-object v0, v3, Lbv6;->d:Ltb4;
-
-    invoke-virtual {p1, v0}, Lm0;->plus(Lqb4;)Lqb4;
-
-    move-result-object p1
-
-    new-instance v0, Liu6;
-
-    iget-object v4, p0, Lwu6;->Z:Ldt6;
-
-    invoke-direct {v0, v3, v4, v2}, Liu6;-><init>(Lbv6;Ldt6;Lkotlin/coroutines/Continuation;)V
+    iget v1, p0, Lwu6;->g:I
 
     const/4 v2, 0x2
 
-    invoke-static {v3, p1, v0, v2}, Lnth;->n(Lnth;Lqb4;Lbr6;I)Lmmf;
+    const/16 v3, 0x1406
 
-    move-result-object p1
+    const/4 v5, 0x0
 
-    iput-object p1, v3, Lbv6;->H0:Lmmf;
+    invoke-static/range {v1 .. v6}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
-    return-object v1
+    const-string v0, "glVertexAttribPointer"
+
+    invoke-static {v0}, Lxu6;->b(Ljava/lang/String;)V
+
+    return-void
 .end method

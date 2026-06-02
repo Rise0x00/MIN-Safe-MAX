@@ -1,110 +1,44 @@
-.class public final Lsyi;
+.class public final synthetic Lsyi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Lcom/my/tracker/core/utils/BiConsumer;
 
 
-# static fields
-.field public static final a:Lsyi;
+# instance fields
+.field public final synthetic a:Landroid/app/Activity;
+
+.field public final synthetic b:Lcom/my/tracker/core/utils/TimePoint;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Landroid/app/Activity;Lcom/my/tracker/core/utils/TimePoint;)V
+    .locals 0
 
-    new-instance v0, Lsyi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lsyi;->a:Landroid/app/Activity;
 
-    sput-object v0, Lsyi;->a:Lsyi;
-
-    new-instance v0, Lbri;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
-
-    const-class v1, Lpri;
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x6
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x7
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    iput-object p2, p0, Lsyi;->b:Lcom/my/tracker/core/utils/TimePoint;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 2
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    check-cast p1, Lcom/my/tracker/core/EngineCore;
 
-    move-result-object p1
+    check-cast p2, Lcom/my/tracker/core/handlers/MyTrackerActivityHandler;
 
-    throw p1
+    iget-object v0, p0, Lsyi;->a:Landroid/app/Activity;
+
+    iget-object v1, p0, Lsyi;->b:Lcom/my/tracker/core/utils/TimePoint;
+
+    invoke-static {v0, v1, p1, p2}, Lcom/my/tracker/core/o/a;->e(Landroid/app/Activity;Lcom/my/tracker/core/utils/TimePoint;Lcom/my/tracker/core/EngineCore;Lcom/my/tracker/core/handlers/MyTrackerActivityHandler;)V
+
+    return-void
 .end method

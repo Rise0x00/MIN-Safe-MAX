@@ -1,112 +1,99 @@
 .class public final Lyd3;
-.super La2e;
+.super Lmp0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lyd3;
-
-
 # instance fields
-.field public final synthetic a:I
+.field public h:I
+
+.field public i:I
+
+.field public j:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 9
 
-    new-instance v0, Lyd3;
+    sget v3, Lmfd;->circularProgressIndicatorStyle:I
 
-    const/4 v1, 0x0
+    sget v4, Lxd3;->G0:I
 
-    invoke-direct {v0, v1}, Lyd3;-><init>(I)V
+    invoke-direct {p0, v3, v4, p1}, Lmp0;-><init>(IILandroid/content/Context;)V
 
-    sput-object v0, Lyd3;->b:Lyd3;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    iput p1, p0, Lyd3;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lw4g;)V
-    .locals 5
-
-    iget v0, p0, Lyd3;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-interface {p1}, Lw4g;->m0()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "PRAGMA synchronous = NORMAL"
-
-    invoke-interface {p1, v0}, Lw4g;->z(Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    invoke-interface {p1}, Lw4g;->u()V
-
-    :try_start_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "DELETE FROM workspec WHERE state IN (2, 3, 5) AND (last_enqueue_time + minimum_retention_duration) < "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v1
-
-    sget-wide v3, Liii;->a:J
-
-    sub-long/2addr v1, v3
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, " AND (SELECT COUNT(*)=0 FROM dependency WHERE     prerequisite_id=id AND     work_spec_id NOT IN         (SELECT id FROM workspec WHERE state IN (2, 3, 5)))"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lw4g;->z(Ljava/lang/String;)V
+    sget v1, Lhgd;->mtrl_progress_circular_size_medium:I
 
-    invoke-interface {p1}, Lw4g;->N()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    invoke-interface {p1}, Lw4g;->b0()V
+    move-result v6
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lhgd;->mtrl_progress_circular_inset_medium:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v7
+
+    sget-object v2, Lrqd;->CircularProgressIndicator:[I
+
+    const/4 v8, 0x0
+
+    new-array v5, v8, [I
+
+    const/4 v1, 0x0
+
+    invoke-static {p1, v1, v3, v4}, Lrug;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    move-object v0, p1
+
+    invoke-static/range {v0 .. v5}, Lrug;->b(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)V
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    sget v1, Lrqd;->CircularProgressIndicator_indicatorSize:I
+
+    invoke-static {v0, p1, v1, v6}, Lf90;->Z(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
+
+    move-result v1
+
+    iget v2, p0, Lmp0;->a:I
+
+    mul-int/lit8 v2, v2, 0x2
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v1
+
+    iput v1, p0, Lyd3;->h:I
+
+    sget v1, Lrqd;->CircularProgressIndicator_indicatorInset:I
+
+    invoke-static {v0, p1, v1, v7}, Lf90;->Z(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
+
+    move-result v0
+
+    iput v0, p0, Lyd3;->i:I
+
+    sget v0, Lrqd;->CircularProgressIndicator_indicatorDirectionCircular:I
+
+    invoke-virtual {p1, v0, v8}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v0
+
+    iput v0, p0, Lyd3;->j:I
+
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    invoke-virtual {p0}, Lmp0;->a()V
 
     return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-interface {p1}, Lw4g;->b0()V
-
-    throw v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

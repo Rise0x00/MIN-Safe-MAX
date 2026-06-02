@@ -1,72 +1,137 @@
 .class public final Lzp2;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic o:Ljq2;
+.field public final a:J
+
+.field public final b:Ldia;
 
 
 # direct methods
-.method public constructor <init>(Ljq2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JLdia;)V
     .locals 0
 
-    iput-object p1, p0, Lzp2;->o:Ljq2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-wide p1, p0, Lzp2;->a:J
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lzp2;->b:Ldia;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()J
+    .locals 2
 
-    check-cast p1, Lzb4;
+    iget-wide v0, p0, Lzp2;->a:J
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    return-wide v0
+.end method
 
-    invoke-virtual {p0, p1, p2}, Lzp2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    move-result-object p1
+    if-ne p0, p1, :cond_0
 
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lzp2;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
     check-cast p1, Lzp2;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget-wide v0, p0, Lzp2;->a:J
 
-    invoke-virtual {p1, p2}, Lzp2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v2, p1, Lzp2;->a:J
 
-    return-object p2
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lzp2;->b:Ldia;
+
+    iget-object p1, p1, Lzp2;->b:Ldia;
+
+    invoke-virtual {v0, p1}, Ldia;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    new-instance p1, Lzp2;
+    iget-wide v0, p0, Lzp2;->a:J
 
-    iget-object v0, p0, Lzp2;->o:Ljq2;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-direct {p1, v0, p2}, Lzp2;-><init>(Ljq2;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    return-object p1
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lzp2;->b:Ldia;
+
+    invoke-virtual {v1}, Ldia;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lzp2;->o:Ljq2;
+    const-string v1, "TypingCacheKey(chatId="
 
-    invoke-static {p1}, Ljq2;->u(Ljq2;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    iget-wide v1, p0, Lzp2;->a:J
 
-    return-object p1
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", notifs="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzp2;->b:Ldia;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

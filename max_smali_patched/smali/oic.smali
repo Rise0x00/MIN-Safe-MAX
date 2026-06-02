@@ -1,124 +1,149 @@
 .class public final Loic;
-.super Lwg5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Loic;
+
+
 # instance fields
-.field final synthetic this$0:Lpic;
+.field public final a:J
+
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lpic;)V
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Loic;
+
+    const-wide/16 v1, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v1, v2, v3}, Loic;-><init>(JLjava/lang/String;)V
+
+    sput-object v0, Loic;->c:Loic;
+
+    return-void
+.end method
+
+.method public constructor <init>(JLjava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Loic;->this$0:Lpic;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Loic;->a:J
+
+    iput-object p3, p0, Loic;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 1
-
-    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v0, 0x1d
-
-    if-ge p2, v0, :cond_0
-
-    sget p2, Lywd;->b:I
-
-    invoke-virtual {p1}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
-
-    move-result-object p1
-
-    const-string p2, "androidx.lifecycle.LifecycleDispatcher.report_fragment_tag"
-
-    invoke-virtual {p1, p2}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
-
-    move-result-object p1
-
-    check-cast p1, Lywd;
-
-    iget-object p2, p0, Loic;->this$0:Lpic;
-
-    iget-object p2, p2, Lpic;->Z:Lkp8;
-
-    iput-object p2, p1, Lywd;->a:Lkp8;
-
-    :cond_0
-    return-void
-.end method
-
-.method public onActivityPaused(Landroid/app/Activity;)V
-    .locals 3
-
-    iget-object p1, p0, Loic;->this$0:Lpic;
-
-    iget v0, p1, Lpic;->b:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p1, Lpic;->b:I
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p1, Lpic;->o:Landroid/os/Handler;
-
-    iget-object p1, p1, Lpic;->Y:Lk9b;
-
-    const-wide/16 v1, 0x2bc
-
-    invoke-virtual {v0, p1, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public onActivityPreCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 1
-
-    new-instance p2, Loic$a;
-
-    iget-object v0, p0, Loic;->this$0:Lpic;
-
-    invoke-direct {p2, v0}, Loic$a;-><init>(Lpic;)V
-
-    invoke-static {p1, p2}, Lnic;->a(Landroid/app/Activity;Landroid/app/Application$ActivityLifecycleCallbacks;)V
-
-    return-void
-.end method
-
-.method public onActivityStopped(Landroid/app/Activity;)V
-    .locals 2
-
-    iget-object p1, p0, Loic;->this$0:Lpic;
-
-    iget v0, p1, Lpic;->a:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p1, Lpic;->a:I
-
-    if-nez v0, :cond_0
-
-    iget-boolean v0, p1, Lpic;->c:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p1, Lpic;->X:Ll88;
-
-    sget-object v1, Ln78;->ON_STOP:Ln78;
-
-    invoke-virtual {v0, v1}, Ll88;->d(Ln78;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p1, Lpic;->d:Z
+    if-ne p0, p1, :cond_0
+
+    return v0
 
     :cond_0
-    return-void
+    instance-of v1, p1, Loic;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Loic;
+
+    iget-wide v3, p0, Loic;->a:J
+
+    iget-wide v5, p1, Loic;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Loic;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Loic;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Loic;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Loic;->b:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "CurrentItem(messageId="
+
+    const-string v1, ", attachId="
+
+    iget-wide v2, p0, Loic;->a:J
+
+    iget-object v4, p0, Loic;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v1, v4}, Lsb6;->t(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

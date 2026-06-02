@@ -1,70 +1,241 @@
 .class public final Lupf;
-.super Lj4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public f:[F
+
+.field public g:[F
+
+.field public final h:I
+
+.field public i:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
+    .locals 6
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    const v0, 0x8b31
 
-    const/4 v1, 0x0
+    const-string v1, "precision mediump float;\nuniform mat4 mvpMatrix;\nuniform mat4 texMatrix;\nattribute vec4 aVertexCoord;\nattribute vec4 aTextureCoord;\nvarying vec2 vTextureCoord;\nvoid main() {\n    gl_Position = mvpMatrix * aVertexCoord;\n    vTextureCoord = (texMatrix * aTextureCoord).xy;\n}\n"
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Ltf3;->q(ILjava/lang/String;)I
 
-    iput-object v0, p0, Lupf;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    move-result v0
+
+    const v1, 0x8b30
+
+    const-string v2, "#extension GL_OES_EGL_image_external : require\nprecision mediump float;\nvarying vec2 vTextureCoord;\nuniform samplerExternalOES sTexture;\nvoid main() {\n   gl_FragColor = texture2D(sTexture, vTextureCoord);\n}\n"
+
+    invoke-static {v1, v2}, Ltf3;->q(ILjava/lang/String;)I
+
+    move-result v1
+
+    invoke-static {}, Landroid/opengl/GLES20;->glCreateProgram()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    new-array v4, v3, [I
+
+    const-string v5, "glCreateProgram"
+
+    invoke-static {v5, v4}, Ltf3;->m(Ljava/lang/String;[I)V
+
+    iput v2, p0, Lupf;->a:I
+
+    invoke-static {v2, v0}, Landroid/opengl/GLES20;->glAttachShader(II)V
+
+    new-array v4, v3, [I
+
+    const-string v5, "glAttachShader"
+
+    invoke-static {v5, v4}, Ltf3;->m(Ljava/lang/String;[I)V
+
+    invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteShader(I)V
+
+    new-array v0, v3, [I
+
+    const-string v4, "glDeleteShader"
+
+    invoke-static {v4, v0}, Ltf3;->m(Ljava/lang/String;[I)V
+
+    invoke-static {v2, v1}, Landroid/opengl/GLES20;->glAttachShader(II)V
+
+    new-array v0, v3, [I
+
+    invoke-static {v5, v0}, Ltf3;->m(Ljava/lang/String;[I)V
+
+    invoke-static {v1}, Landroid/opengl/GLES20;->glDeleteShader(I)V
+
+    new-array v0, v3, [I
+
+    invoke-static {v4, v0}, Ltf3;->m(Ljava/lang/String;[I)V
+
+    invoke-static {v2}, Landroid/opengl/GLES20;->glLinkProgram(I)V
+
+    const/4 v0, 0x1
+
+    new-array v1, v0, [I
+
+    const v4, 0x8b82
+
+    invoke-static {v2, v4, v1, v3}, Landroid/opengl/GLES20;->glGetProgramiv(II[II)V
+
+    aget v1, v1, v3
+
+    const-string v3, "GLESUtils"
+
+    if-ne v1, v0, :cond_2
+
+    const-string v0, "aVertexCoord"
+
+    invoke-static {v2, v0}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_1
+
+    iput v0, p0, Lupf;->b:I
+
+    const-string v0, "aTextureCoord"
+
+    invoke-static {v2, v0}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    iput v0, p0, Lupf;->c:I
+
+    const-string v0, "mvpMatrix"
+
+    invoke-virtual {p0, v0}, Lupf;->a(Ljava/lang/String;)I
+
+    move-result v0
+
+    iput v0, p0, Lupf;->d:I
+
+    const-string v0, "texMatrix"
+
+    invoke-virtual {p0, v0}, Lupf;->a(Ljava/lang/String;)I
+
+    move-result v0
+
+    iput v0, p0, Lupf;->e:I
+
+    const-string v0, "sTexture"
+
+    invoke-virtual {p0, v0}, Lupf;->a(Ljava/lang/String;)I
+
+    move-result v0
+
+    iput v0, p0, Lupf;->h:I
 
     return-void
+
+    :cond_0
+    const-string v0, "Unable to locate \'aTextureCoord\' in program"
+
+    invoke-static {v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    const-string v0, "Unable to locate \'aVertexCoord\' in program"
+
+    invoke-static {v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_2
+    invoke-static {v2}, Landroid/opengl/GLES20;->glGetProgramInfoLog(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Could not link program: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v1
 .end method
 
 
 # virtual methods
-.method public final a(Li4;)Z
-    .locals 1
+.method public final a(Ljava/lang/String;)I
+    .locals 2
 
-    check-cast p1, Lspf;
+    iget v0, p0, Lupf;->a:I
 
-    iget-object p1, p0, Lupf;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-static {v0, p1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
-    invoke-static {p1}, Lkotlinx/coroutines/internal/Concurrent_commonKt;->getValue(Ljava/util/concurrent/atomic/AtomicReference;)Ljava/lang/Object;
+    move-result v0
 
-    move-result-object v0
+    if-ltz v0, :cond_0
 
-    if-eqz v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
+    return v0
 
     :cond_0
-    sget-object v0, Ltpf;->a:Lkotlinx/coroutines/internal/Symbol;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {p1, v0}, Lkotlinx/coroutines/internal/Concurrent_commonKt;->setValue(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/Object;)V
+    const-string v1, "Unable to locate \'"
 
-    const/4 p1, 0x1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return p1
-.end method
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final b(Li4;)[Lkotlin/coroutines/Continuation;
-    .locals 1
+    const-string p1, "\' in program"
 
-    check-cast p1, Lspf;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lupf;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/4 v0, 0x0
+    move-result-object p1
 
-    invoke-static {p1, v0}, Lkotlinx/coroutines/internal/Concurrent_commonKt;->setValue(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/Object;)V
+    const-string v0, "GLESUtils"
 
-    sget-object p1, Lw40;->b:[Lkotlin/coroutines/Continuation;
+    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    return-object p1
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

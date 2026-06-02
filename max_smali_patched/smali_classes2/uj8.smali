@@ -1,347 +1,167 @@
-.class public final Luj8;
-.super Lvm;
+.class public abstract Luj8;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lb0c;
-.implements Ledg;
 
 
 # instance fields
-.field public final X:Ljava/lang/String;
+.field public final a:Lc3b;
 
-.field public final d:J
+.field public b:Z
 
-.field public final o:J
+.field public c:I
+
+.field public final synthetic d:Lvj8;
 
 
 # direct methods
-.method public constructor <init>(JJJ)V
+.method public constructor <init>(Lvj8;Lc3b;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lvm;-><init>(J)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p3, p0, Luj8;->d:J
+    iput-object p1, p0, Luj8;->d:Lvj8;
 
-    iput-wide p5, p0, Luj8;->o:J
+    const/4 p1, -0x1
 
-    const-class p1, Luj8;
+    iput p1, p0, Luj8;->c:I
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Luj8;->X:Ljava/lang/String;
+    iput-object p2, p0, Luj8;->a:Lc3b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()I
-    .locals 6
+.method public final a(Z)V
+    .locals 5
 
-    const-string v0, "onPreExecute: serverChatId = "
+    iget-boolean v0, p0, Luj8;->b:Z
 
-    const-string v1, ", serverMessageId = "
+    if-ne p1, v0, :cond_0
 
-    iget-wide v2, p0, Luj8;->d:J
-
-    invoke-static {v2, v3, v0, v1}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-wide v4, p0, Luj8;->o:J
-
-    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Luj8;->X:Ljava/lang/String;
-
-    invoke-static {v1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lvm;->l()Lxg2;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2, v3}, Lxg2;->K(J)Lnd2;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
+    goto :goto_6
 
     :cond_0
-    invoke-virtual {p0}, Lvm;->n()Lhm9;
+    iput-boolean p1, p0, Luj8;->b:Z
 
-    move-result-object v1
-
-    iget-wide v2, v0, Lnd2;->a:J
-
-    invoke-virtual {v1, v2, v3, v4, v5}, Lhm9;->h(JJ)Ljm9;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    iget v0, v0, Ljm9;->S0:I
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
     const/4 v0, 0x1
 
-    return v0
+    if-eqz p1, :cond_1
 
-    :cond_2
-    :goto_0
-    const/4 v0, 0x3
+    move p1, v0
 
-    return v0
-.end method
-
-.method public final d()V
-    .locals 7
-
-    iget-object v2, p0, Luj8;->X:Ljava/lang/String;
-
-    sget-object v0, Lc5j;->a:Ledb;
-
-    if-eqz v0, :cond_0
-
-    sget-object v1, Lkk8;->Y:Lkk8;
-
-    const/4 v5, 0x0
-
-    const/16 v6, 0x8
-
-    const-string v3, "onMaxFailCount"
-
-    const/4 v4, 0x0
-
-    invoke-static/range {v0 .. v6}, Ledb;->f(Ledb;Lkk8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
-
-    :cond_0
-    invoke-virtual {p0}, Lvm;->r()Lteg;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lvm;->a:J
-
-    invoke-virtual {v0, v1, v2}, Lteg;->d(J)V
-
-    return-void
-.end method
-
-.method public final e()[B
-    .locals 3
-
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$LocationStop;
-
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$LocationStop;-><init>()V
-
-    iget-wide v1, p0, Lvm;->a:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$LocationStop;->requestId:J
-
-    iget-wide v1, p0, Luj8;->d:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$LocationStop;->chatId:J
-
-    iget-wide v1, p0, Luj8;->o:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$LocationStop;->messageId:J
-
-    invoke-static {v0}, Lbp9;->toByteArray(Lbp9;)[B
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final f()I
-    .locals 1
-
-    const v0, 0xf4240
-
-    return v0
-.end method
-
-.method public final g(Licg;)V
-    .locals 13
-
-    check-cast p1, Lvj8;
-
-    invoke-virtual {p0}, Lvm;->l()Lxg2;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Luj8;->d:J
-
-    invoke-virtual {v0, v1, v2}, Lxg2;->K(J)Lnd2;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Lvm;->n()Lhm9;
-
-    move-result-object v1
-
-    iget-wide v2, v0, Lnd2;->a:J
-
-    iget-object v6, p1, Lvj8;->c:Lxk9;
-
-    invoke-virtual {p0}, Lvm;->p()Llgc;
-
-    move-result-object v4
-
-    iget-object v4, v4, Llgc;->a:Lqi8;
-
-    invoke-virtual {v4}, Lyfe;->s()J
-
-    move-result-wide v4
-
-    invoke-virtual/range {v1 .. v6}, Lhm9;->f(JJLxk9;)J
-
-    move-result-wide v10
-
-    const-wide/16 v1, 0x0
-
-    cmp-long v1, v10, v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p0}, Lvm;->j()Lcy0;
-
-    move-result-object p1
-
-    new-instance v7, Le6h;
-
-    iget-wide v8, v0, Lnd2;->a:J
-
-    const/4 v12, 0x0
-
-    invoke-direct/range {v7 .. v12}, Le6h;-><init>(JJZ)V
-
-    invoke-virtual {p1, v7}, Lcy0;->c(Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_0
-    iget-object v2, p0, Luj8;->X:Ljava/lang/String;
-
-    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
-
-    const/4 v1, 0x1
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-static {p1, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string v1, "Can\'t insert message: response = %s"
-
-    invoke-static {v0, v1, p1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    sget-object v0, Lc5j;->a:Ledb;
-
-    if-eqz v0, :cond_1
-
-    sget-object v1, Lkk8;->Y:Lkk8;
-
-    const/4 v5, 0x0
-
-    const/16 v6, 0x8
-
-    const/4 v4, 0x0
-
-    invoke-static/range {v0 .. v6}, Ledb;->f(Ledb;Lkk8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
+    goto :goto_0
 
     :cond_1
+    const/4 p1, -0x1
+
+    :goto_0
+    iget-object v1, p0, Luj8;->d:Lvj8;
+
+    iget v2, v1, Lvj8;->c:I
+
+    add-int/2addr p1, v2
+
+    iput p1, v1, Lvj8;->c:I
+
+    iget-boolean p1, v1, Lvj8;->d:Z
+
+    if-eqz p1, :cond_2
+
+    goto :goto_5
+
+    :cond_2
+    iput-boolean v0, v1, Lvj8;->d:Z
+
+    :goto_1
+    const/4 p1, 0x0
+
+    :try_start_0
+    iget v3, v1, Lvj8;->c:I
+
+    if-eq v2, v3, :cond_7
+
+    if-nez v2, :cond_3
+
+    if-lez v3, :cond_3
+
+    move v4, v0
+
+    goto :goto_2
+
+    :cond_3
+    move v4, p1
+
+    :goto_2
+    if-lez v2, :cond_4
+
+    if-nez v3, :cond_4
+
+    move v2, v0
+
+    goto :goto_3
+
+    :cond_4
+    move v2, p1
+
+    :goto_3
+    if-eqz v4, :cond_5
+
+    invoke-virtual {v1}, Lvj8;->g()V
+
+    goto :goto_4
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_7
+
+    :cond_5
+    if-eqz v2, :cond_6
+
+    invoke-virtual {v1}, Lvj8;->h()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_6
+    :goto_4
+    move v2, v3
+
+    goto :goto_1
+
+    :cond_7
+    iput-boolean p1, v1, Lvj8;->d:Z
+
+    :goto_5
+    iget-boolean p1, p0, Luj8;->b:Z
+
+    if-eqz p1, :cond_8
+
+    invoke-virtual {v1, p0}, Lvj8;->c(Luj8;)V
+
+    :cond_8
+    :goto_6
+    return-void
+
+    :goto_7
+    iput-boolean p1, v1, Lvj8;->d:Z
+
+    throw v0
+.end method
+
+.method public b()V
+    .locals 0
+
     return-void
 .end method
 
-.method public final getId()J
-    .locals 2
+.method public c(Lad8;)Z
+    .locals 0
 
-    iget-wide v0, p0, Lvm;->a:J
+    const/4 p1, 0x0
 
-    return-wide v0
+    return p1
 .end method
 
-.method public final getType()Lc0c;
-    .locals 1
-
-    sget-object v0, Lc0c;->P0:Lc0c;
-
-    return-object v0
-.end method
-
-.method public final h()Lj2;
-    .locals 4
-
-    new-instance v0, Lk06;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, v2}, Lk06;-><init>(Lwob;I)V
-
-    const-string v1, "chatId"
-
-    iget-wide v2, p0, Luj8;->d:J
-
-    invoke-virtual {v0, v2, v3, v1}, Lj2;->y(JLjava/lang/String;)V
-
-    const-string v1, "messageId"
-
-    iget-wide v2, p0, Luj8;->o:J
-
-    invoke-virtual {v0, v2, v3, v1}, Lj2;->y(JLjava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public final k(Lnbg;)V
-    .locals 4
-
-    invoke-virtual {p0}, Lvm;->j()Lcy0;
-
-    move-result-object v0
-
-    new-instance v1, Ljk0;
-
-    iget-wide v2, p0, Lvm;->a:J
-
-    invoke-direct {v1, v2, v3, p1}, Ljk0;-><init>(JLnbg;)V
-
-    invoke-virtual {v0, v1}, Lcy0;->c(Ljava/lang/Object;)V
-
-    iget-object p1, p1, Lnbg;->b:Ljava/lang/String;
-
-    invoke-static {p1}, Lwoj;->a(Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    invoke-virtual {p0}, Luj8;->d()V
-
-    :cond_0
-    return-void
+.method public abstract e()Z
 .end method

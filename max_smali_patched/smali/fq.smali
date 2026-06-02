@@ -1,13 +1,37 @@
-.class public abstract Lfq;
+.class public final Lfq;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a()I
-    .locals 1
+# instance fields
+.field public a:I
 
-    const/16 v0, 0x200
+.field public b:I
 
-    return v0
-.end method
+.field public c:I
+
+.field public d:I
+
+.field public e:Leq;
+
+.field public f:Landroid/view/View;
+
+.field public g:Landroid/view/View;
+
+.field public h:Lvo9;
+
+.field public i:Lni8;
+
+.field public j:Lv84;
+
+.field public k:Z
+
+.field public l:Z
+
+.field public m:Z
+
+.field public n:Z
+
+.field public o:Z
+
+.field public p:Landroid/os/Bundle;

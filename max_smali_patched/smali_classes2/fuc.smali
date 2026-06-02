@@ -1,135 +1,63 @@
 .class public final Lfuc;
-.super Lp6g;
+.super Lguc;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
 
+# static fields
+.field public static final f:Lfuc;
 
-# instance fields
-.field public final synthetic X:Ld76;
+.field public static final g:Lfuc;
 
-.field public final synthetic Y:Lz9;
+.field public static final h:Lfuc;
 
-.field public final synthetic Z:Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;
+.field public static final i:Lfuc;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final j:Lfuc;
+
+.field public static final k:Lfuc;
 
 
 # direct methods
-.method public constructor <init>(Ld76;Lkotlin/coroutines/Continuation;Lz9;Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;)V
-    .locals 0
-
-    iput-object p1, p0, Lfuc;->X:Ld76;
-
-    iput-object p3, p0, Lfuc;->Y:Lz9;
-
-    iput-object p4, p0, Lfuc;->Z:Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lyl5;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lfuc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lfuc;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lfuc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
+.method static synthetic constructor <clinit>()V
+    .locals 2
 
     new-instance v0, Lfuc;
 
-    iget-object v1, p0, Lfuc;->Y:Lz9;
+    const/16 v1, 0x15
 
-    iget-object v2, p0, Lfuc;->Z:Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;
+    invoke-direct {v0, v1}, Lis6;-><init>(I)V
 
-    iget-object v3, p0, Lfuc;->X:Ld76;
+    sput-object v0, Lfuc;->f:Lfuc;
 
-    invoke-direct {v0, v3, p2, v1, v2}, Lfuc;-><init>(Ld76;Lkotlin/coroutines/Continuation;Lz9;Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;)V
+    new-instance v0, Lfuc;
 
-    iput-object p1, v0, Lfuc;->o:Ljava/lang/Object;
+    invoke-direct {v0, v1}, Lis6;-><init>(I)V
 
-    return-object v0
-.end method
+    sput-object v0, Lfuc;->g:Lfuc;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    new-instance v0, Lfuc;
 
-    iget-object v0, p0, Lfuc;->o:Ljava/lang/Object;
+    invoke-direct {v0, v1}, Lis6;-><init>(I)V
 
-    check-cast v0, Lyl5;
+    sput-object v0, Lfuc;->h:Lfuc;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    new-instance v0, Lfuc;
 
-    invoke-virtual {v0}, Lyl5;->a()Ljava/lang/Object;
+    invoke-direct {v0, v1}, Lis6;-><init>(I)V
 
-    move-result-object p1
+    sput-object v0, Lfuc;->i:Lfuc;
 
-    invoke-static {p1}, Luzd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+    new-instance v0, Lfuc;
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lis6;-><init>(I)V
 
-    sget-object v1, Lb3h;->a:Lb3h;
+    sput-object v0, Lfuc;->j:Lfuc;
 
-    if-nez v0, :cond_1
+    new-instance v0, Lfuc;
 
-    :try_start_0
-    check-cast p1, Lb3h;
+    invoke-direct {v0, v1}, Lis6;-><init>(I)V
 
-    iget-object p1, p0, Lfuc;->Y:Lz9;
+    sput-object v0, Lfuc;->k:Lfuc;
 
-    invoke-virtual {p1}, Landroid/view/View;->clearFocus()V
-
-    iget-object p1, p0, Lfuc;->Z:Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;
-
-    iget-object p1, p1, Lone/me/profileedit/screens/reactions/ProfileReactionsSettingsScreen;->t0:Lu49;
-
-    if-eqz p1, :cond_0
-
-    sget-object v0, Lu49;->m:[Lz28;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Lu49;->e(Z)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_0
-    move-object v0, v1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    new-instance v0, Lszd;
-
-    invoke-direct {v0, p1}, Lszd;-><init>(Ljava/lang/Throwable;)V
-
-    :goto_0
-    invoke-static {v0}, Lpmj;->b(Ljava/lang/Object;)V
-
-    :cond_1
-    return-object v1
+    return-void
 .end method

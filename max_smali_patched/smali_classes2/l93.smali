@@ -1,56 +1,55 @@
-.class public final Ll93;
+.class public abstract Ll93;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lud8;
-
 
 # static fields
-.field public static final a:Ll93;
+.field public static final a:Landroid/view/animation/PathInterpolator;
 
-.field public static final b:I
-
-.field public static final c:J
+.field public static final b:Landroid/view/animation/PathInterpolator;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 5
 
-    new-instance v0, Ll93;
+    new-instance v0, Landroid/view/animation/PathInterpolator;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const v1, 0x3ea8f5c3    # 0.33f
 
-    sput-object v0, Ll93;->a:Ll93;
+    const/4 v2, 0x0
 
-    sget v0, Lg8d;->oneme_chat_list_loading_view_type:I
+    const v3, 0x3f2b851f    # 0.67f
 
-    sput v0, Ll93;->b:I
+    const/high16 v4, 0x3f800000    # 1.0f
 
-    sget v0, Lg8d;->oneme_chat_list_loading_id:I
+    invoke-direct {v0, v1, v2, v3, v4}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
-    int-to-long v0, v0
+    sput-object v0, Ll93;->a:Landroid/view/animation/PathInterpolator;
 
-    sput-wide v0, Ll93;->c:J
+    new-instance v0, Landroid/view/animation/PathInterpolator;
+
+    const v1, 0x3ecccccd    # 0.4f
+
+    invoke-direct {v0, v1, v2, v2, v4}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+
+    sput-object v0, Ll93;->b:Landroid/view/animation/PathInterpolator;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final getItemId()J
-    .locals 2
-
-    sget-wide v0, Ll93;->c:J
-
-    return-wide v0
-.end method
-
-.method public final m()I
+.method public static a()Landroid/view/animation/PathInterpolator;
     .locals 1
 
-    sget v0, Ll93;->b:I
+    sget-object v0, Ll93;->a:Landroid/view/animation/PathInterpolator;
 
-    return v0
+    return-object v0
+.end method
+
+.method public static b()Landroid/view/animation/PathInterpolator;
+    .locals 1
+
+    sget-object v0, Ll93;->b:Landroid/view/animation/PathInterpolator;
+
+    return-object v0
 .end method

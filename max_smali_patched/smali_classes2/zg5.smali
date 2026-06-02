@@ -1,81 +1,90 @@
 .class public final Lzg5;
-.super Landroid/graphics/drawable/Drawable;
+.super Lfpf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/graphics/Rect;
+.field public final X:Z
+
+.field public Y:Ldqb;
+
+.field public final o:Lhfe;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Lhfe;Z)V
+    .locals 0
 
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+    invoke-direct {p0, p1}, Lfpf;-><init>(Ljava/util/concurrent/Executor;)V
 
-    new-instance v0, Landroid/graphics/Rect;
+    iput-object p2, p0, Lzg5;->o:Lhfe;
 
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
-
-    iput-object v0, p0, Lzg5;->a:Landroid/graphics/Rect;
+    iput-boolean p3, p0, Lzg5;->X:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
+.method public final o(I)I
     .locals 0
 
-    return-void
+    invoke-virtual {p0, p1}, Lci8;->G(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lki8;
+
+    invoke-interface {p1}, Lki8;->i()I
+
+    move-result p1
+
+    return p1
 .end method
 
-.method public final getIntrinsicWidth()I
-    .locals 1
+.method public final x(Landroid/view/ViewGroup;I)Lb3e;
+    .locals 2
 
-    const/4 v0, 0x0
+    sget v0, Lbfb;->r:I
 
-    return v0
-.end method
+    if-ne p2, v0, :cond_0
 
-.method public final getOpacity()I
-    .locals 1
+    new-instance p2, Lhd2;
 
-    const/4 v0, -0x2
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    return v0
-.end method
+    move-result-object p1
 
-.method public final invalidateSelf()V
-    .locals 0
+    new-instance v0, Ldjc;
 
-    return-void
-.end method
+    const/16 v1, 0xd
 
-.method public final setAlpha(I)V
-    .locals 0
+    invoke-direct {v0, v1}, Ldjc;-><init>(I)V
 
-    return-void
-.end method
+    invoke-direct {p2, p1, v0}, Lhd2;-><init>(Landroid/content/Context;Lxs6;)V
 
-.method public final setBounds(Landroid/graphics/Rect;)V
-    .locals 1
+    iget-object p1, p0, Lzg5;->Y:Ldqb;
 
-    iget-object v0, p0, Lzg5;->a:Landroid/graphics/Rect;
+    iput-object p1, p2, Lhd2;->M0:Ldqb;
 
-    invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    return-object p2
 
-    const/4 p1, 0x0
+    :cond_0
+    new-instance p2, Lyg5;
 
-    iput p1, v0, Landroid/graphics/Rect;->right:I
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-super {p0, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+    move-result-object p1
 
-    return-void
-.end method
+    iget-object v0, p0, Lzg5;->o:Lhfe;
 
-.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
-    .locals 0
+    iget-boolean v1, p0, Lzg5;->X:Z
 
-    return-void
+    invoke-direct {p2, p1, v0, v1}, Lyg5;-><init>(Landroid/content/Context;Lhfe;Z)V
+
+    iget-object p1, p0, Lzg5;->Y:Ldqb;
+
+    iput-object p1, p2, Lyg5;->L0:Ldqb;
+
+    return-object p2
 .end method

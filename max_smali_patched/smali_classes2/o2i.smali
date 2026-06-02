@@ -1,65 +1,120 @@
-.class public final Lo2i;
-.super Ls2i;
+.class public final synthetic Lo2i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final c:Lo2i;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lmof;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lmof;I)V
+    .locals 0
 
-    new-instance v0, Lo2i;
+    iput p2, p0, Lo2i;->a:I
 
-    const-string v1, "permission_denied"
+    iput-object p1, p0, Lo2i;->b:Lmof;
 
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, v2}, Ls2i;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lo2i;->c:Lo2i;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final run()V
+    .locals 4
 
-    const/4 v0, 0x1
+    iget v0, p0, Lo2i;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lo2i;->b:Lmof;
+
+    iget-object v0, v0, Lmof;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
+    move-result v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "incrementUsage: mVideoUsage = "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "VideoUsageControl"
+
+    invoke-static {v1, v0}, Lw8g;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lo2i;->b:Lmof;
+
+    iget-object v0, v0, Lmof;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    move-result v0
+
+    const-string v1, "decrementUsage: mVideoUsage = "
+
+    const-string v2, "VideoUsageControl"
+
+    if-gez v0, :cond_0
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ", which is less than 0!"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lw8g;->l(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Lo2i;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    if-nez p1, :cond_1
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 p1, 0x0
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return p1
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_1
-    return v0
-.end method
+    move-result-object v0
 
-.method public final hashCode()I
-    .locals 1
+    invoke-static {v2, v0}, Lw8g;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v0, -0x5a2e4a44
+    :goto_0
+    return-void
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "CameraPermissionDeny"
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

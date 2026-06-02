@@ -1,48 +1,169 @@
-.class public final Lrh9;
-.super Lo84;
+.class public final synthetic Lrh9;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lci9;
+.implements Ldi9;
 
 
 # instance fields
-.field public final synthetic X:Ldr7;
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final synthetic b:Lfi9;
 
-.field public o:I
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(Ldr7;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lfi9;II)V
     .locals 0
 
-    iput-object p1, p0, Lrh9;->X:Ldr7;
+    iput p3, p0, Lrh9;->a:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lrh9;->b:Lfi9;
+
+    iput p2, p0, Lrh9;->c:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public a(Lmic;Lvf9;Ljava/util/List;)V
+    .locals 4
 
-    iput-object p1, p0, Lrh9;->d:Ljava/lang/Object;
+    iget v0, p0, Lrh9;->a:I
 
-    iget p1, p0, Lrh9;->o:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lrh9;->b:Lfi9;
 
-    or-int/2addr p1, v0
+    iget v1, p0, Lrh9;->c:I
 
-    iput p1, p0, Lrh9;->o:I
+    invoke-virtual {v0, p2, p1, v1}, Lfi9;->V(Lvf9;Lmic;I)I
 
-    iget-object p1, p0, Lrh9;->X:Ldr7;
+    move-result p2
+
+    invoke-virtual {p1, p2, p3}, Lmic;->c(ILjava/util/List;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lrh9;->b:Lfi9;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-interface {p3}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    iget v2, p0, Lrh9;->c:I
+
+    const/4 v3, 0x1
+
+    if-ne v1, v3, :cond_0
+
+    invoke-virtual {v0, p2, p1, v2}, Lfi9;->V(Lvf9;Lmic;I)I
+
+    move-result p2
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Ldr7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-interface {p3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p3
 
-    return-object p1
+    check-cast p3, Ln99;
+
+    invoke-virtual {p1}, Lmic;->m0()V
+
+    iget-object p1, p1, Lmic;->a:Ljt5;
+
+    add-int/lit8 v0, p2, 0x1
+
+    invoke-static {p3}, Len7;->m(Ljava/lang/Object;)Lv4e;
+
+    move-result-object p3
+
+    invoke-virtual {p1, p3, p2, v0}, Ljt5;->F0(Ljava/util/List;II)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0, p2, p1, v2}, Lfi9;->V(Lvf9;Lmic;I)I
+
+    move-result v1
+
+    add-int/2addr v2, v3
+
+    invoke-virtual {v0, p2, p1, v2}, Lfi9;->V(Lvf9;Lmic;I)I
+
+    move-result p2
+
+    invoke-virtual {p1, p3, v1, p2}, Lmic;->V(Ljava/util/List;II)V
+
+    :goto_0
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lrh9;->b:Lfi9;
+
+    iget v1, p0, Lrh9;->c:I
+
+    invoke-virtual {v0, p2, p1, v1}, Lfi9;->V(Lvf9;Lmic;I)I
+
+    move-result p2
+
+    invoke-virtual {p1, p2, p3}, Lmic;->c(ILjava/util/List;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public b(Lmic;Lvf9;)V
+    .locals 2
+
+    iget v0, p0, Lrh9;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lrh9;->b:Lfi9;
+
+    iget v1, p0, Lrh9;->c:I
+
+    invoke-virtual {v0, p2, p1, v1}, Lfi9;->V(Lvf9;Lmic;I)I
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Lmic;->U(I)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lrh9;->b:Lfi9;
+
+    iget v1, p0, Lrh9;->c:I
+
+    invoke-virtual {v0, p2, p1, v1}, Lfi9;->V(Lvf9;Lmic;I)I
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Lmic;->Z(I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

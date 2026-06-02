@@ -1,156 +1,243 @@
-.class public final Lv9e;
+.class public abstract Lv9e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lw9e;
+.implements Ljava/io/Closeable;
 
 
-# instance fields
-.field public final a:Lw9e;
+# virtual methods
+.method public abstract G()J
+.end method
 
-.field public final b:Lw9e;
+.method public abstract J()Llk9;
+.end method
 
-.field public final c:Landroid/graphics/Rect;
+.method public final close()V
+    .locals 1
 
-.field public final d:Landroid/graphics/Rect;
+    invoke-virtual {p0}, Lv9e;->g0()Lw11;
 
-.field public final e:[F
+    move-result-object v0
 
-.field public final f:[F
-
-.field public final g:[F
-
-.field public h:F
-
-
-# direct methods
-.method public constructor <init>(Lwnj;Lwnj;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/16 v0, 0x9
-
-    new-array v1, v0, [F
-
-    iput-object v1, p0, Lv9e;->e:[F
-
-    new-array v1, v0, [F
-
-    iput-object v1, p0, Lv9e;->f:[F
-
-    new-array v0, v0, [F
-
-    iput-object v0, p0, Lv9e;->g:[F
-
-    iput-object p1, p0, Lv9e;->a:Lw9e;
-
-    iput-object p2, p0, Lv9e;->b:Lw9e;
-
-    iput-object p3, p0, Lv9e;->c:Landroid/graphics/Rect;
-
-    iput-object p4, p0, Lv9e;->d:Landroid/graphics/Rect;
+    invoke-static {v0}, Lonh;->c(Ljava/io/Closeable;)V
 
     return-void
 .end method
 
+.method public abstract g0()Lw11;
+.end method
 
-# virtual methods
-.method public final a(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFF)Landroid/graphics/Matrix;
+.method public final h0()Ljava/lang/String;
     .locals 8
 
-    iget-object v0, p0, Lv9e;->a:Lw9e;
+    invoke-virtual {p0}, Lv9e;->g0()Lw11;
 
-    iget-object v2, p0, Lv9e;->c:Landroid/graphics/Rect;
+    move-result-object v0
 
-    move-object v1, p1
+    :try_start_0
+    invoke-virtual {p0}, Lv9e;->J()Llk9;
 
-    move v3, p3
+    move-result-object v1
 
-    move v4, p4
+    if-eqz v1, :cond_3
 
-    move v5, p5
+    sget-object v2, Lbj2;->a:Ljava/nio/charset/Charset;
 
-    move v6, p6
+    const-string v3, "charset"
 
-    invoke-interface/range {v0 .. v6}, Lw9e;->a(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFF)Landroid/graphics/Matrix;
+    iget-object v1, v1, Llk9;->b:[Ljava/lang/String;
 
-    iget-object v7, p0, Lv9e;->e:[F
+    array-length v4, v1
 
-    invoke-virtual {p1, v7}, Landroid/graphics/Matrix;->getValues([F)V
+    add-int/lit8 v4, v4, -0x1
 
-    iget-object v0, p0, Lv9e;->b:Lw9e;
+    const/4 v5, 0x2
 
-    iget-object v2, p0, Lv9e;->d:Landroid/graphics/Rect;
+    const/4 v6, 0x0
 
-    invoke-interface/range {v0 .. v6}, Lw9e;->a(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFF)Landroid/graphics/Matrix;
+    invoke-static {v6, v4, v5}, Lhk0;->W(III)I
 
-    iget-object v0, p0, Lv9e;->f:[F
+    move-result v4
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Matrix;->getValues([F)V
-
-    const/4 v2, 0x0
+    if-ltz v4, :cond_1
 
     :goto_0
-    const/16 v3, 0x9
+    aget-object v5, v1, v6
 
-    iget-object v4, p0, Lv9e;->g:[F
+    const/4 v7, 0x1
 
-    if-ge v2, v3, :cond_0
+    invoke-static {v5, v3, v7}, Lmbg;->d0(Ljava/lang/String;Ljava/lang/String;Z)Z
 
-    aget v3, v7, v2
+    move-result v5
 
-    iget v5, p0, Lv9e;->h:F
+    if-eqz v5, :cond_0
 
-    const/high16 v6, 0x3f800000    # 1.0f
+    add-int/2addr v6, v7
 
-    sub-float/2addr v6, v5
+    aget-object v1, v1, v6
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    mul-float/2addr v6, v3
+    goto :goto_1
 
-    aget v3, v0, v2
+    :cond_0
+    if-eq v6, v4, :cond_1
 
-    mul-float/2addr v3, v5
+    add-int/lit8 v6, v6, 0x2
 
-    add-float/2addr v3, v6
+    goto :goto_0
 
-    aput v3, v4, v2
+    :cond_1
+    const/4 v1, 0x0
 
-    add-int/lit8 v2, v2, 0x1
+    :goto_1
+    if-nez v1, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    :try_start_1
+    invoke-static {v1}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
+    move-result-object v2
+    :try_end_1
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :catch_0
+    :goto_2
+    if-nez v2, :cond_4
+
+    :cond_3
+    :try_start_2
+    sget-object v2, Lbj2;->a:Ljava/nio/charset/Charset;
+
+    :cond_4
+    invoke-static {v0, v2}, Lonh;->r(Lw11;Ljava/nio/charset/Charset;)Ljava/nio/charset/Charset;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lw11;->c0(Ljava/nio/charset/Charset;)Ljava/lang/String;
+
+    move-result-object v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-interface {v0}, Ljava/io/Closeable;->close()V
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_3
+    throw v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :catchall_1
+    move-exception v2
+
+    invoke-static {v0, v1}, Lddh;->i(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw v2
+.end method
+
+.method public final l()[B
+    .locals 6
+
+    invoke-virtual {p0}, Lv9e;->G()J
+
+    move-result-wide v0
+
+    const-wide/32 v2, 0x7fffffff
+
+    cmp-long v2, v0, v2
+
+    if-gtz v2, :cond_2
+
+    invoke-virtual {p0}, Lv9e;->g0()Lw11;
+
+    move-result-object v2
+
+    :try_start_0
+    invoke-interface {v2}, Lw11;->E()[B
+
+    move-result-object v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-interface {v2}, Ljava/io/Closeable;->close()V
+
+    array-length v2, v3
+
+    const-wide/16 v4, -0x1
+
+    cmp-long v4, v0, v4
+
+    if-eqz v4, :cond_1
+
+    int-to-long v4, v2
+
+    cmp-long v4, v0, v4
+
+    if-nez v4, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1, v4}, Landroid/graphics/Matrix;->setValues([F)V
+    new-instance v3, Ljava/io/IOException;
 
-    return-object p1
-.end method
+    const-string v4, "Content-Length ("
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    const-string v5, ") and stream length ("
 
-    iget-object v0, p0, Lv9e;->a:Lw9e;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v2, v0, v1, v4, v5}, Lrtc;->v(IJLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget-object v1, p0, Lv9e;->b:Lw9e;
+    const-string v1, ") disagree"
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    const-string v2, " (null) -> "
-
-    const-string v3, " (null))"
-
-    const-string v4, "InterpolatingScaleType("
-
-    invoke-static {v4, v0, v2, v1, v3}, Lkz1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    invoke-direct {v3, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v3
+
+    :cond_1
+    :goto_0
+    return-object v3
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    throw v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :catchall_1
+    move-exception v1
+
+    invoke-static {v2, v0}, Lddh;->i(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :cond_2
+    new-instance v2, Ljava/io/IOException;
+
+    const-string v3, "Cannot buffer entire body for content length: "
+
+    invoke-static {v0, v1, v3}, Lx82;->h(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v2
 .end method

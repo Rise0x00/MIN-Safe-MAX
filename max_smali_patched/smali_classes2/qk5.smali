@@ -1,150 +1,142 @@
 .class public final Lqk5;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
+.field public final a:Lul5;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:[B
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;)V
+.method public constructor <init>(Lul5;[B)V
     .locals 0
 
-    iput-object p2, p0, Lqk5;->X:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    if-eqz p1, :cond_1
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    if-eqz p2, :cond_0
+
+    iput-object p1, p0, Lqk5;->a:Lul5;
+
+    iput-object p2, p0, Lqk5;->b:[B
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "bytes is null"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "encoding is null"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lqk5;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 p1, 0x1
 
-    move-result-object p1
-
-    check-cast p1, Lqk5;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lqk5;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lqk5;
-
-    iget-object v1, p0, Lqk5;->X:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
-
-    invoke-direct {v0, p2, v1}, Lqk5;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;)V
-
-    iput-object p1, v0, Lqk5;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget-object v0, p0, Lqk5;->o:Ljava/lang/Object;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    check-cast v0, Lb3h;
-
-    sget-object p1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->C0:[Lz28;
-
-    new-instance v1, Lone/me/settings/privacy/ui/ForgotPinCodeDialog;
-
-    invoke-direct {v1}, Lone/me/settings/privacy/ui/ForgotPinCodeDialog;-><init>()V
-
-    iget-object p1, p0, Lqk5;->X:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
-
-    invoke-virtual {v1, p1}, Lone/me/sdk/arch/Widget;->setTargetController(La94;)V
-
-    :goto_0
-    invoke-virtual {p1}, La94;->getParentController()La94;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, La94;->getParentController()La94;
-
-    move-result-object p1
-
-    goto :goto_0
+    return p1
 
     :cond_0
-    instance-of v0, p1, Lc5e;
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Lc5e;
-
-    goto :goto_1
-
-    :cond_1
-    move-object p1, v2
-
-    :goto_1
-    if-eqz p1, :cond_2
-
-    check-cast p1, Lone/me/android/root/RootController;
-
-    invoke-virtual {p1}, Lone/me/android/root/RootController;->F0()Lw4e;
-
-    move-result-object v2
-
-    :cond_2
-    move-object p1, v2
-
-    if-eqz p1, :cond_3
-
-    new-instance v0, Lz4e;
-
-    const/4 v5, 0x0
-
-    const/4 v6, -0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v6}, Lz4e;-><init>(La94;Ljava/lang/String;Lf94;Lf94;ZI)V
+    instance-of v0, p1, Lqk5;
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x1
+    if-nez v0, :cond_1
 
-    const-string v3, "forgot-pin"
+    return v1
 
-    invoke-static {v1, v0, v2, v3}, Lt02;->s(ZLz4e;ZLjava/lang/String;)V
+    :cond_1
+    check-cast p1, Lqk5;
 
-    invoke-virtual {p1, v0}, Lw4e;->H(Lz4e;)V
+    iget-object v0, p0, Lqk5;->a:Lul5;
 
-    :cond_3
-    sget-object p1, Lb3h;->a:Lb3h;
+    iget-object v2, p1, Lqk5;->a:Lul5;
 
-    return-object p1
+    invoke-virtual {v0, v2}, Lul5;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    return v1
+
+    :cond_2
+    iget-object v0, p0, Lqk5;->b:[B
+
+    iget-object p1, p1, Lqk5;->b:[B
+
+    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lqk5;->a:Lul5;
+
+    invoke-virtual {v0}, Lul5;->hashCode()I
+
+    move-result v0
+
+    const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lqk5;->b:[B
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
+
+    move-result v1
+
+    xor-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "EncodedPayload{encoding="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lqk5;->a:Lul5;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", bytes=[...]}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

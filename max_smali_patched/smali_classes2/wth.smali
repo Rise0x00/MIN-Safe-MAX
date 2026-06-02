@@ -4,8 +4,5 @@
 
 
 # virtual methods
-.method public abstract a()V
-.end method
-
-.method public abstract b()V
+.method public abstract run()V
 .end method

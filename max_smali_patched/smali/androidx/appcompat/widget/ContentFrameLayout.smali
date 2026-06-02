@@ -4,6 +4,10 @@
 
 
 # instance fields
+.field public final A0:Landroid/graphics/Rect;
+
+.field public B0:Lp74;
+
 .field public a:Landroid/util/TypedValue;
 
 .field public b:Landroid/util/TypedValue;
@@ -14,11 +18,7 @@
 
 .field public o:Landroid/util/TypedValue;
 
-.field public t0:Landroid/util/TypedValue;
-
-.field public final u0:Landroid/graphics/Rect;
-
-.field public v0:Lb74;
+.field public z0:Landroid/util/TypedValue;
 
 
 # direct methods
@@ -33,7 +33,7 @@
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object p1, p0, Landroidx/appcompat/widget/ContentFrameLayout;->u0:Landroid/graphics/Rect;
+    iput-object p1, p0, Landroidx/appcompat/widget/ContentFrameLayout;->A0:Landroid/graphics/Rect;
 
     return-void
 .end method
@@ -62,7 +62,7 @@
 .method public getFixedHeightMinor()Landroid/util/TypedValue;
     .locals 1
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->t0:Landroid/util/TypedValue;
+    iget-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->z0:Landroid/util/TypedValue;
 
     if-nez v0, :cond_0
 
@@ -70,10 +70,10 @@
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
-    iput-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->t0:Landroid/util/TypedValue;
+    iput-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->z0:Landroid/util/TypedValue;
 
     :cond_0
-    iget-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->t0:Landroid/util/TypedValue;
+    iget-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->z0:Landroid/util/TypedValue;
 
     return-object v0
 .end method
@@ -159,7 +159,7 @@
 
     invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->v0:Lb74;
+    iget-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->B0:Lp74;
 
     if-eqz v0, :cond_0
 
@@ -174,70 +174,40 @@
 
     invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->v0:Lb74;
+    iget-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->B0:Lp74;
 
     if-eqz v0, :cond_4
 
-    check-cast v0, Lig5;
+    check-cast v0, Lc4;
 
-    iget-object v0, v0, Lig5;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lc4;->b:Ljava/lang/Object;
 
-    check-cast v0, Lko;
+    check-cast v0, Lgq;
 
-    iget-object v1, v0, Lko;->C0:Lvl4;
+    iget-object v1, v0, Lgq;->I0:Lnn4;
 
     if-eqz v1, :cond_0
 
     check-cast v1, Landroidx/appcompat/widget/ActionBarOverlayLayout;
 
-    invoke-virtual {v1}, Landroidx/appcompat/widget/ActionBarOverlayLayout;->e()V
-
-    iget-object v1, v1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->o:Lwl4;
-
-    check-cast v1, Leog;
-
-    iget-object v1, v1, Leog;->a:Landroidx/appcompat/widget/Toolbar;
-
-    iget-object v1, v1, Landroidx/appcompat/widget/Toolbar;->a:Landroidx/appcompat/widget/ActionMenuView;
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, v1, Landroidx/appcompat/widget/ActionMenuView;->o:Lz6;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Lz6;->h()Z
-
-    iget-object v1, v1, Lz6;->E0:Lw6;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Lyj9;->b()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    iget-object v1, v1, Lyj9;->i:Lwj9;
-
-    invoke-interface {v1}, Labf;->dismiss()V
+    invoke-virtual {v1}, Landroidx/appcompat/widget/ActionBarOverlayLayout;->c()V
 
     :cond_0
-    iget-object v1, v0, Lko;->H0:Landroid/widget/PopupWindow;
+    iget-object v1, v0, Lgq;->N0:Landroid/widget/PopupWindow;
 
     if-eqz v1, :cond_2
 
-    iget-object v1, v0, Lko;->w0:Landroid/view/Window;
+    iget-object v1, v0, Lgq;->C0:Landroid/view/Window;
 
     invoke-virtual {v1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
     move-result-object v1
 
-    iget-object v2, v0, Lko;->I0:Lyn;
+    iget-object v2, v0, Lgq;->O0:Lsg;
 
     invoke-virtual {v1, v2}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    iget-object v1, v0, Lko;->H0:Landroid/widget/PopupWindow;
+    iget-object v1, v0, Lgq;->N0:Landroid/widget/PopupWindow;
 
     invoke-virtual {v1}, Landroid/widget/PopupWindow;->isShowing()Z
 
@@ -246,7 +216,7 @@
     if-eqz v1, :cond_1
 
     :try_start_0
-    iget-object v1, v0, Lko;->H0:Landroid/widget/PopupWindow;
+    iget-object v1, v0, Lgq;->N0:Landroid/widget/PopupWindow;
 
     invoke-virtual {v1}, Landroid/widget/PopupWindow;->dismiss()V
     :try_end_0
@@ -256,29 +226,27 @@
     :cond_1
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lko;->H0:Landroid/widget/PopupWindow;
+    iput-object v1, v0, Lgq;->N0:Landroid/widget/PopupWindow;
 
     :cond_2
-    iget-object v1, v0, Lko;->J0:Ltuh;
+    iget-object v1, v0, Lgq;->P0:Lc6i;
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {v1}, Ltuh;->b()V
+    invoke-virtual {v1}, Lc6i;->b()V
 
     :cond_3
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lko;->z(I)Ljo;
+    invoke-virtual {v0, v1}, Lgq;->C(I)Lfq;
 
     move-result-object v0
 
-    iget-object v0, v0, Ljo;->h:Lnj9;
+    iget-object v0, v0, Lfq;->h:Lvo9;
 
     if-eqz v0, :cond_4
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lnj9;->c(Z)V
+    invoke-virtual {v0}, Lvo9;->close()V
 
     :cond_4
     return-void
@@ -327,7 +295,7 @@
 
     move-result v6
 
-    iget-object v7, v0, Landroidx/appcompat/widget/ContentFrameLayout;->u0:Landroid/graphics/Rect;
+    iget-object v7, v0, Landroidx/appcompat/widget/ContentFrameLayout;->A0:Landroid/graphics/Rect;
 
     const/4 v8, 0x6
 
@@ -426,7 +394,7 @@
     goto :goto_5
 
     :cond_5
-    iget-object v6, v0, Landroidx/appcompat/widget/ContentFrameLayout;->t0:Landroid/util/TypedValue;
+    iget-object v6, v0, Landroidx/appcompat/widget/ContentFrameLayout;->z0:Landroid/util/TypedValue;
 
     :goto_5
     if-eqz v6, :cond_8
@@ -584,10 +552,10 @@
     return-void
 .end method
 
-.method public setAttachListener(Lb74;)V
+.method public setAttachListener(Lp74;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/appcompat/widget/ContentFrameLayout;->v0:Lb74;
+    iput-object p1, p0, Landroidx/appcompat/widget/ContentFrameLayout;->B0:Lp74;
 
     return-void
 .end method

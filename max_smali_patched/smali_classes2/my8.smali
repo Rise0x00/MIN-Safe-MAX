@@ -1,84 +1,170 @@
 .class public final Lmy8;
-.super Lp6g;
+.super Lpq;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
+
+# static fields
+.field public static final A0:I
+
+.field public static final B0:[[I
 
 
 # instance fields
-.field public final synthetic o:Lone/me/chatscreen/mediabar/MediaBarWidget;
+.field public o:Landroid/content/res/ColorStateList;
+
+.field public z0:Z
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p2, p0, Lmy8;->o:Lone/me/chatscreen/mediabar/MediaBarWidget;
+    sget v0, Lgqd;->Widget_MaterialComponents_CompoundButton_RadioButton:I
 
-    const/4 p2, 0x2
+    sput v0, Lmy8;->A0:I
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    const v0, 0x101009e
+
+    const v1, 0x10100a0
+
+    filled-new-array {v0, v1}, [I
+
+    move-result-object v2
+
+    const v3, -0x10100a0
+
+    filled-new-array {v0, v3}, [I
+
+    move-result-object v0
+
+    const v4, -0x101009e
+
+    filled-new-array {v4, v1}, [I
+
+    move-result-object v1
+
+    filled-new-array {v4, v3}, [I
+
+    move-result-object v3
+
+    filled-new-array {v2, v0, v1, v3}, [[I
+
+    move-result-object v0
+
+    sput-object v0, Lmy8;->B0:[[I
 
     return-void
 .end method
 
+.method private getMaterialThemeColorsTintList()Landroid/content/res/ColorStateList;
+    .locals 6
+
+    iget-object v0, p0, Lmy8;->o:Landroid/content/res/ColorStateList;
+
+    if-nez v0, :cond_0
+
+    sget v0, Lmfd;->colorControlActivated:I
+
+    invoke-static {p0, v0}, Lg84;->b0(Landroid/view/View;I)I
+
+    move-result v0
+
+    sget v1, Lmfd;->colorOnSurface:I
+
+    invoke-static {p0, v1}, Lg84;->b0(Landroid/view/View;I)I
+
+    move-result v1
+
+    sget v2, Lmfd;->colorSurface:I
+
+    invoke-static {p0, v2}, Lg84;->b0(Landroid/view/View;I)I
+
+    move-result v2
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    invoke-static {v2, v3, v0}, Lg84;->p0(IFI)I
+
+    move-result v0
+
+    const v3, 0x3f0a3d71    # 0.54f
+
+    invoke-static {v2, v3, v1}, Lg84;->p0(IFI)I
+
+    move-result v3
+
+    const v4, 0x3ec28f5c    # 0.38f
+
+    invoke-static {v2, v4, v1}, Lg84;->p0(IFI)I
+
+    move-result v5
+
+    invoke-static {v2, v4, v1}, Lg84;->p0(IFI)I
+
+    move-result v1
+
+    filled-new-array {v0, v3, v5, v1}, [I
+
+    move-result-object v0
+
+    new-instance v1, Landroid/content/res/ColorStateList;
+
+    sget-object v2, Lmy8;->B0:[[I
+
+    invoke-direct {v1, v2, v0}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
+
+    iput-object v1, p0, Lmy8;->o:Landroid/content/res/ColorStateList;
+
+    :cond_0
+    iget-object v0, p0, Lmy8;->o:Landroid/content/res/ColorStateList;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lmy8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lmy8;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lmy8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final onAttachedToWindow()V
     .locals 1
 
-    new-instance p1, Lmy8;
+    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
 
-    iget-object v0, p0, Lmy8;->o:Lone/me/chatscreen/mediabar/MediaBarWidget;
+    iget-boolean v0, p0, Lmy8;->z0:Z
 
-    invoke-direct {p1, p2, v0}, Lmy8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
+    if-eqz v0, :cond_0
 
-    return-object p1
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getButtonTintList()Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lmy8;->setUseMaterialThemeColors(Z)V
+
+    :cond_0
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public setUseMaterialThemeColors(Z)V
+    .locals 0
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iput-boolean p1, p0, Lmy8;->z0:Z
 
-    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->e1:[Lz28;
+    if-eqz p1, :cond_0
 
-    iget-object p1, p0, Lmy8;->o:Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    invoke-virtual {p1}, Lone/me/chatscreen/mediabar/MediaBarWidget;->E0()Landroid/widget/LinearLayout;
+    invoke-direct {p0}, Lmy8;->getMaterialThemeColorsTintList()Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
-    sget-object v0, Lone/me/chatscreen/mediabar/MediaBarWidget;->f1:Les7;
+    invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setButtonTintList(Landroid/content/res/ColorStateList;)V
 
-    const/4 v1, 0x0
+    return-void
 
-    invoke-static {p1, v0, v1}, Lfui;->b(Landroid/view/View;Les7;Lnq6;)V
+    :cond_0
+    const/4 p1, 0x0
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setButtonTintList(Landroid/content/res/ColorStateList;)V
 
-    return-object p1
+    return-void
 .end method

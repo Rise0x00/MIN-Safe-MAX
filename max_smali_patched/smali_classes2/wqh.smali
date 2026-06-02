@@ -1,20 +1,16 @@
-.class public interface abstract Lwqh;
+.class public final synthetic Lwqh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Luzh;
+
 
 # virtual methods
-.method public abstract A()I
-.end method
+.method public final b(Lfhg;)V
+    .locals 0
 
-.method public abstract C()I
-.end method
+    invoke-virtual {p1}, Lfhg;->e()Z
 
-.method public abstract J(Landroid/view/Surface;)V
-.end method
-
-.method public abstract M()I
-.end method
-
-.method public abstract m()I
+    return-void
 .end method

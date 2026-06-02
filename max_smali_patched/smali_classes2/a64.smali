@@ -1,112 +1,124 @@
-.class public final La64;
-.super Lp6g;
+.class public final synthetic La64;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/sdk/uikit/common/button/OneMeButton;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lv54;
+
+.field public final synthetic c:Z
+
+.field public final synthetic d:Lb3e;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lb3e;Lv54;ZI)V
     .locals 0
 
-    iput-object p1, p0, La64;->X:Lone/me/sdk/uikit/common/button/OneMeButton;
+    iput p4, p0, La64;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, La64;->d:Lb3e;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, La64;->b:Lv54;
+
+    iput-boolean p3, p0, La64;->c:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/util/Set;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, La64;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, La64;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, La64;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, La64;
-
-    iget-object v1, p0, La64;->X:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    invoke-direct {v0, v1, p2}, La64;-><init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, La64;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onClick(Landroid/view/View;)V
     .locals 3
 
-    iget-object v0, p0, La64;->o:Ljava/lang/Object;
+    iget p1, p0, La64;->a:I
 
-    check-cast v0, Ljava/util/Set;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iget-object p1, p0, La64;->d:Lb3e;
 
-    invoke-interface {v0}, Ljava/util/Set;->size()I
+    check-cast p1, Lq64;
 
-    move-result p1
+    iget-object v0, p1, Lq64;->L0:Lt54;
 
-    const/4 v0, 0x1
+    iget-object v1, p0, La64;->b:Lv54;
 
-    iget-object v1, p0, La64;->X:Lone/me/sdk/uikit/common/button/OneMeButton;
+    iget v1, v1, Lv54;->a:I
 
-    if-nez p1, :cond_0
+    invoke-interface {v0, v1}, Lt54;->J(I)V
 
-    const/16 p1, 0x8
+    iget-object p1, p1, Lq64;->M0:Lbn0;
 
-    invoke-virtual {v1, p1}, Landroid/view/View;->setVisibility(I)V
+    invoke-static {v1}, Luqj;->e(I)I
 
-    const/4 p1, 0x0
+    move-result v0
 
-    invoke-virtual {v1, p1, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->c(Ljava/lang/Integer;Z)V
+    iget-boolean v1, p0, La64;->c:Z
+
+    const/4 v2, 0x2
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
-
-    sget v2, La8b;->J:I
-
-    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
-
-    new-instance v2, Ljava/lang/Integer;
-
-    invoke-direct {v2, p1}, Ljava/lang/Integer;-><init>(I)V
-
-    invoke-virtual {v1, v2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->c(Ljava/lang/Integer;Z)V
+    move v1, v2
 
     :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-virtual {p1, v0, v2, v1}, Lbn0;->a(III)V
 
-    return-object p1
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, La64;->d:Lb3e;
+
+    check-cast p1, Lb64;
+
+    iget-object v0, p1, Lb64;->L0:Lt54;
+
+    iget-object v1, p0, La64;->b:Lv54;
+
+    iget v1, v1, Lv54;->a:I
+
+    invoke-interface {v0, v1}, Lt54;->J(I)V
+
+    iget-object p1, p1, Lb64;->M0:Lbn0;
+
+    invoke-static {v1}, Luqj;->e(I)I
+
+    move-result v0
+
+    iget-boolean v1, p0, La64;->c:Z
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
+    move v1, v2
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v1, 0x2
+
+    :goto_1
+    invoke-virtual {p1, v0, v2, v1}, Lbn0;->a(III)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

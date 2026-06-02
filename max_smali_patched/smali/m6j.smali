@@ -1,70 +1,298 @@
-.class public final Lm6j;
+.class public abstract Lm6j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Ljava/util/concurrent/ExecutorService;
+.implements Ljava/lang/AutoCloseable;
 
 
-# static fields
-.field public static final a:Lm6j;
+# virtual methods
+.method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+    .locals 1
 
+    move-object v0, p0
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
+    check-cast v0, Ldba;
 
-    new-instance v0, Lm6j;
+    iget-object v0, v0, Ldba;->a:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/ThreadPoolExecutor;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
 
-    sput-object v0, Lm6j;->a:Lm6j;
+    move-result p1
 
-    new-instance v0, Lvzi;
+    return p1
+.end method
+
+.method public final synthetic close()V
+    .locals 5
+
+    invoke-static {}, Ljava/util/concurrent/ForkJoinPool;->commonPool()Ljava/util/concurrent/ForkJoinPool;
+
+    move-result-object v0
+
+    if-ne p0, v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {p0}, Lm6j;->isTerminated()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    invoke-virtual {p0}, Lm6j;->shutdown()V
+
+    const/4 v1, 0x0
+
+    :cond_1
+    :goto_0
+    if-nez v0, :cond_2
+
+    :try_start_0
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v3, 0x1
+
+    invoke-virtual {p0, v3, v4, v2}, Lm6j;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+
+    move-result v0
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    if-nez v1, :cond_1
+
+    invoke-virtual {p0}, Lm6j;->shutdownNow()Ljava/util/List;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lvzi;-><init>(I)V
+    goto :goto_0
 
-    const-class v1, Ln0j;
+    :cond_2
+    if-eqz v1, :cond_3
 
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
-    move-result-object v0
+    :cond_3
+    :goto_1
+    return-void
+.end method
 
-    const/4 v2, 0x3
+.method public final invokeAll(Ljava/util/Collection;)Ljava/util/List;
+    .locals 1
 
-    invoke-static {v0, v2}, Lcbh;->q(Ljava/util/HashMap;I)Lvzi;
+    .line 1
+    move-object v0, p0
 
-    move-result-object v0
+    check-cast v0, Ldba;
 
-    invoke-static {v1, v0}, Lcbh;->o(Ljava/lang/Class;Lvzi;)Ljava/util/HashMap;
+    .line 2
+    iget-object v0, v0, Ldba;->a:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    move-result-object v0
+    .line 3
+    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->invokeAll(Ljava/util/Collection;)Ljava/util/List;
 
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
+    .locals 1
+
+    .line 4
+    move-object v0, p0
+
+    check-cast v0, Ldba;
+
+    .line 5
+    iget-object v0, v0, Ldba;->a:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    .line 6
+    invoke-interface {v0, p1, p2, p3, p4}, Ljava/util/concurrent/ExecutorService;->invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    move-object v0, p0
+
+    check-cast v0, Ldba;
+
+    .line 2
+    iget-object v0, v0, Ldba;->a:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    .line 3
+    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 1
+
+    .line 4
+    move-object v0, p0
+
+    check-cast v0, Ldba;
+
+    .line 5
+    iget-object v0, v0, Ldba;->a:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    .line 6
+    invoke-interface {v0, p1, p2, p3, p4}, Ljava/util/concurrent/ExecutorService;->invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final isShutdown()Z
+    .locals 1
+
+    move-object v0, p0
+
+    check-cast v0, Ldba;
+
+    iget-object v0, v0, Ldba;->a:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->isShutdown()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final isTerminated()Z
+    .locals 1
+
+    move-object v0, p0
+
+    check-cast v0, Ldba;
+
+    iget-object v0, v0, Ldba;->a:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->isTerminated()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final shutdown()V
+    .locals 1
+
+    move-object v0, p0
+
+    check-cast v0, Ldba;
+
+    iget-object v0, v0, Ldba;->a:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
 
     return-void
 .end method
 
+.method public final shutdownNow()Ljava/util/List;
+    .locals 1
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    move-object v0, p0
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    check-cast v0, Ldba;
+
+    iget-object v0, v0, Ldba;->a:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdownNow()Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+    .locals 1
+
+    .line 1
+    move-object v0, p0
+
+    check-cast v0, Ldba;
+
+    .line 2
+    iget-object v0, v0, Ldba;->a:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    .line 3
+    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
     move-result-object p1
 
-    throw p1
+    return-object p1
+.end method
+
+.method public final submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
+    .locals 1
+
+    .line 4
+    move-object v0, p0
+
+    check-cast v0, Ldba;
+
+    .line 5
+    iget-object v0, v0, Ldba;->a:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    .line 6
+    invoke-interface {v0, p1, p2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+    .locals 1
+
+    .line 7
+    move-object v0, p0
+
+    check-cast v0, Ldba;
+
+    .line 8
+    iget-object v0, v0, Ldba;->a:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    .line 9
+    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    move-object v0, p0
+
+    check-cast v0, Ldba;
+
+    iget-object v0, v0, Ldba;->a:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

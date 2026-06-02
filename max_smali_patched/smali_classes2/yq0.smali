@@ -1,3 +1,3 @@
 .class public final Lyq0;
-.super Ljava/lang/Object;
+.super Lq25;
 .source "SourceFile"

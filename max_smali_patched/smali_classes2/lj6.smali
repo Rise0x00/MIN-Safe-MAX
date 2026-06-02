@@ -1,91 +1,183 @@
 .class public final Llj6;
-.super Ljava/lang/Object;
+.super Lw4i;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic H0:[Lb88;
+
+
 # instance fields
-.field public final a:Ljava/util/concurrent/ConcurrentSkipListSet;
+.field public final A0:Lbwd;
 
-.field public final b:Lkj6;
+.field public final B0:Lzo5;
 
-.field public final c:Ljava/util/ArrayList;
+.field public C0:Ljava/lang/String;
+
+.field public D0:Lumh;
+
+.field public final E0:Lafe;
+
+.field public final F0:Lafe;
+
+.field public final G0:Lafe;
+
+.field public final X:Lfi6;
+
+.field public final Y:Leg6;
+
+.field public final Z:Lia8;
+
+.field public final b:Luf4;
+
+.field public final c:Ldng;
+
+.field public final d:Lia8;
+
+.field public final o:Lag6;
+
+.field public final z0:Lb1g;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lpia;
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentSkipListSet;
+    const-string v1, "createRecommendedFolderJob"
 
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentSkipListSet;-><init>()V
+    const-string v2, "getCreateRecommendedFolderJob()Lkotlinx/coroutines/Job;"
 
-    iput-object v0, p0, Llj6;->a:Ljava/util/concurrent/ConcurrentSkipListSet;
+    const-class v3, Llj6;
 
-    new-instance v0, Lkj6;
+    invoke-direct {v0, v3, v1, v2}, Lpia;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {v0, p0}, Lkj6;-><init>(Llj6;)V
+    sget-object v1, Lr3e;->a:Ls3e;
 
-    iput-object v0, p0, Llj6;->b:Lkj6;
+    const-string v2, "deleteFolderJob"
 
-    new-instance v0, Ljava/util/ArrayList;
+    const-string v4, "getDeleteFolderJob()Lkotlinx/coroutines/Job;"
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-static {v1, v3, v2, v4}, Lsb6;->c(Ls3e;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lpia;
 
-    iput-object v0, p0, Llj6;->c:Ljava/util/ArrayList;
+    move-result-object v1
+
+    new-instance v2, Lpia;
+
+    const-string v4, "moveFolderJob"
+
+    const-string v5, "getMoveFolderJob()Lkotlinx/coroutines/Job;"
+
+    invoke-direct {v2, v3, v4, v5}, Lpia;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v3, 0x3
+
+    new-array v3, v3, [Lb88;
+
+    const/4 v4, 0x0
+
+    aput-object v0, v3, v4
+
+    const/4 v0, 0x1
+
+    aput-object v1, v3, v0
+
+    const/4 v0, 0x2
+
+    aput-object v2, v3, v0
+
+    sput-object v3, Llj6;->H0:[Lb88;
 
     return-void
 .end method
 
-.method public static synthetic b(Llj6;Ljava/lang/String;Llq6;)Lij6;
-    .locals 1
+.method public constructor <init>(Luf4;Ldng;Lia8;Lag6;Lfi6;Leg6;Lia8;)V
+    .locals 0
 
-    sget-object v0, Ldh5;->a:Ldh5;
+    invoke-direct {p0}, Lw4i;-><init>()V
 
-    invoke-virtual {p0, p1, v0, p2}, Llj6;->a(Ljava/lang/String;Ljava/lang/Iterable;Llq6;)Lij6;
+    iput-object p1, p0, Llj6;->b:Luf4;
 
-    move-result-object p0
+    iput-object p2, p0, Llj6;->c:Ldng;
 
-    return-object p0
-.end method
+    iput-object p3, p0, Llj6;->d:Lia8;
 
+    iput-object p4, p0, Llj6;->o:Lag6;
 
-# virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/Iterable;Llq6;)Lij6;
-    .locals 7
+    iput-object p5, p0, Llj6;->X:Lfi6;
 
-    new-instance v0, Lij6;
+    iput-object p6, p0, Llj6;->Y:Leg6;
 
-    new-instance v1, Ln22;
+    iput-object p7, p0, Llj6;->Z:Lia8;
 
-    const/4 v6, 0x5
+    sget-object p3, Lpj5;->a:Lpj5;
 
-    move-object v4, p0
+    invoke-static {p3}, Lc1g;->a(Ljava/lang/Object;)Lb1g;
 
-    move-object v5, p1
+    move-result-object p3
 
-    move-object v2, p2
+    iput-object p3, p0, Llj6;->z0:Lb1g;
 
-    move-object v3, p3
+    new-instance p4, Lbwd;
 
-    invoke-direct/range {v1 .. v6}, Ln22;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {p4, p3}, Lbwd;-><init>(Lvia;)V
 
-    invoke-direct {v0, v5, v1}, Lij6;-><init>(Ljava/lang/String;Ln22;)V
+    iput-object p4, p0, Llj6;->A0:Lbwd;
 
-    iget-object p1, v4, Llj6;->c:Ljava/util/ArrayList;
+    new-instance p3, Lzo5;
 
-    const/4 p2, 0x0
+    const/4 p4, 0x0
 
-    iget-object p3, v0, Lij6;->b:Ljj6;
+    invoke-direct {p3, p4}, Lzo5;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, p2, p3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+    iput-object p3, p0, Llj6;->B0:Lzo5;
 
-    invoke-static {}, Ljava/util/concurrent/ForkJoinPool;->commonPool()Ljava/util/concurrent/ForkJoinPool;
+    invoke-static {}, Lnm4;->Z()Lafe;
+
+    move-result-object p3
+
+    iput-object p3, p0, Llj6;->E0:Lafe;
+
+    invoke-static {}, Lnm4;->Z()Lafe;
+
+    move-result-object p3
+
+    iput-object p3, p0, Llj6;->F0:Lafe;
+
+    invoke-static {}, Lnm4;->Z()Lafe;
+
+    move-result-object p3
+
+    iput-object p3, p0, Llj6;->G0:Lafe;
+
+    iget-object p1, p1, Luf4;->E0:Lbwd;
+
+    new-instance p3, Ldg6;
+
+    const/4 p5, 0x4
+
+    invoke-direct {p3, p0, p4, p5}, Ldg6;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+
+    new-instance p4, Lad6;
+
+    const/4 p5, 0x1
+
+    invoke-direct {p4, p1, p3, p5}, Lad6;-><init>(Lxa6;Lnt6;I)V
+
+    check-cast p2, Lsbb;
+
+    invoke-virtual {p2}, Lsbb;->a()Lhc4;
 
     move-result-object p1
 
-    invoke-virtual {p1, p3}, Ljava/util/concurrent/ForkJoinPool;->execute(Ljava/util/concurrent/ForkJoinTask;)V
+    invoke-static {p4, p1}, Lhk0;->O(Lxa6;Lfc4;)Lxa6;
 
-    return-object v0
+    move-result-object p1
+
+    iget-object p2, p0, Lw4i;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {p1, p2}, Lhk0;->Z(Lxa6;Loc4;)Lhyf;
+
+    return-void
 .end method

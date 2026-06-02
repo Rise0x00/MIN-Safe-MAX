@@ -1,48 +1,50 @@
-.class public final Lr63;
-.super Lo84;
+.class public final synthetic Lr63;
+.super Lbu6;
+.source "SourceFile"
+
+# interfaces
+.implements Lzs6;
 
 
-# instance fields
-.field public final synthetic X:Ls63;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+# static fields
+.field public static final a:Lr63;
 
 
 # direct methods
-.method public constructor <init>(Ls63;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput-object p1, p0, Lr63;->X:Ls63;
+    new-instance v0, Lr63;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v4, "<init>(Ljava/lang/Throwable;)V"
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x1
+
+    const-class v2, Lo63;
+
+    const-string v3, "<init>"
+
+    invoke-direct/range {v0 .. v5}, Lbu6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lr63;->a:Lr63;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Lr63;->d:Ljava/lang/Object;
+    check-cast p1, Ljava/lang/Throwable;
 
-    iget p1, p0, Lr63;->o:I
+    new-instance v0, Lo63;
 
-    const/high16 v0, -0x80000000
+    const-string v1, "\u041d\u0435\u043e\u0431\u0440\u0430\u0431\u043e\u0442\u0430\u043d\u043d\u043e\u0435 \u0438\u0441\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435"
 
-    or-int/2addr p1, v0
+    invoke-direct {v0, v1, p1}, Lo63;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iput p1, p0, Lr63;->o:I
-
-    iget-object p1, p0, Lr63;->X:Ls63;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ls63;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

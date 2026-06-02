@@ -1,23 +1,23 @@
 .class public final Lpwe;
-.super Ld3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lpwe;
+# instance fields
+.field public final a:J
+
+.field public final b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(JI)V
+    .locals 0
 
-    new-instance v0, Lpwe;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0xc
+    iput-wide p1, p0, Lpwe;->a:J
 
-    invoke-direct {v0, v1}, Ld3;-><init>(I)V
-
-    sput-object v0, Lpwe;->c:Lpwe;
+    iput p3, p0, Lpwe;->b:I
 
     return-void
 .end method

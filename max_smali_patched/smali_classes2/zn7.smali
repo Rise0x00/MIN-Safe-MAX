@@ -1,182 +1,193 @@
-.class public final Lzn7;
-.super Lp6g;
+.class public final enum Lzn7;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
+
+# static fields
+.field public static final synthetic A0:[Lzn7;
+
+.field public static final synthetic B0:Lmn5;
+
+.field public static final enum X:Lzn7;
+
+.field public static final enum Y:Lzn7;
+
+.field public static final enum Z:Lzn7;
+
+.field public static final enum b:Lzn7;
+
+.field public static final enum c:Lzn7;
+
+.field public static final enum d:Lzn7;
+
+.field public static final enum o:Lzn7;
+
+.field public static final enum z0:Lzn7;
 
 
 # instance fields
-.field public final synthetic X:Lfo7;
-
-.field public final synthetic Y:J
-
-.field public final synthetic Z:Llpf;
-
-.field public o:I
-
-.field public final synthetic t0:Ljava/lang/String;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lfo7;JLlpf;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 11
 
-    iput-object p1, p0, Lzn7;->X:Lfo7;
+    new-instance v0, Lzn7;
 
-    iput-wide p2, p0, Lzn7;->Y:J
+    const/4 v1, 0x0
 
-    iput-object p4, p0, Lzn7;->Z:Llpf;
+    const-string v2, "messageSent"
 
-    iput-object p5, p0, Lzn7;->t0:Ljava/lang/String;
+    const-string v3, "SEND_5_MESSAGES"
 
-    const/4 p1, 0x2
+    invoke-direct {v0, v3, v1, v2}, Lzn7;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    invoke-direct {p0, p1, p6}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lzn7;->b:Lzn7;
+
+    new-instance v1, Lzn7;
+
+    const/4 v2, 0x1
+
+    const-string v3, "folderCreated"
+
+    const-string v4, "CREATE_FOLDER"
+
+    invoke-direct {v1, v4, v2, v3}, Lzn7;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lzn7;->c:Lzn7;
+
+    new-instance v2, Lzn7;
+
+    const/4 v3, 0x2
+
+    const-string v4, "voiceMessageSent"
+
+    const-string v5, "SEND_AUDIO_MESSAGE"
+
+    invoke-direct {v2, v5, v3, v4}, Lzn7;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lzn7;->d:Lzn7;
+
+    new-instance v3, Lzn7;
+
+    const/4 v4, 0x3
+
+    const-string v5, "reactionSet"
+
+    const-string v6, "ADD_2_REACTIONS"
+
+    invoke-direct {v3, v6, v4, v5}, Lzn7;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Lzn7;->o:Lzn7;
+
+    new-instance v4, Lzn7;
+
+    const/4 v5, 0x4
+
+    const-string v6, "stickerSent"
+
+    const-string v7, "SEND_3_STICKERS"
+
+    invoke-direct {v4, v7, v5, v6}, Lzn7;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Lzn7;->X:Lzn7;
+
+    new-instance v5, Lzn7;
+
+    const/4 v6, 0x5
+
+    const-string v7, "groupChatCreated"
+
+    const-string v8, "CREATE_2_GROUP_CHATS"
+
+    invoke-direct {v5, v8, v6, v7}, Lzn7;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v5, Lzn7;->Y:Lzn7;
+
+    new-instance v6, Lzn7;
+
+    const/4 v7, 0x6
+
+    const-string v8, "pinMade"
+
+    const-string v9, "MADE_2_PIN"
+
+    invoke-direct {v6, v9, v7, v8}, Lzn7;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v6, Lzn7;->Z:Lzn7;
+
+    new-instance v7, Lzn7;
+
+    const/4 v8, 0x7
+
+    const-string v9, "callMade"
+
+    const-string v10, "PARTICIPATED_IN_CALL"
+
+    invoke-direct {v7, v10, v8, v9}, Lzn7;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v7, Lzn7;->z0:Lzn7;
+
+    filled-new-array/range {v0 .. v7}, [Lzn7;
+
+    move-result-object v0
+
+    sput-object v0, Lzn7;->A0:[Lzn7;
+
+    new-instance v1, Lmn5;
+
+    invoke-direct {v1, v0}, Lmn5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lzn7;->B0:Lmn5;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    check-cast p1, Lzb4;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iput-object p3, p0, Lzn7;->a:Ljava/lang/String;
 
-    invoke-virtual {p0, p1, p2}, Lzn7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lzn7;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lzn7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 7
+.method public static valueOf(Ljava/lang/String;)Lzn7;
+    .locals 1
 
-    new-instance v0, Lzn7;
+    const-class v0, Lzn7;
 
-    iget-object v4, p0, Lzn7;->Z:Llpf;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object v5, p0, Lzn7;->t0:Ljava/lang/String;
+    move-result-object p0
 
-    iget-object v1, p0, Lzn7;->X:Lfo7;
+    check-cast p0, Lzn7;
 
-    iget-wide v2, p0, Lzn7;->Y:J
+    return-object p0
+.end method
 
-    move-object v6, p2
+.method public static values()[Lzn7;
+    .locals 1
 
-    invoke-direct/range {v0 .. v6}, Lzn7;-><init>(Lfo7;JLlpf;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    sget-object v0, Lzn7;->A0:[Lzn7;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lzn7;
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
 
-    iget v0, p0, Lzn7;->o:I
+# virtual methods
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-    iget-object v1, p0, Lzn7;->X:Lfo7;
+    iget-object v0, p0, Lzn7;->a:Ljava/lang/String;
 
-    const/4 v2, 0x2
-
-    const/4 v3, 0x1
-
-    sget-object v4, Lac4;->a:Lac4;
-
-    if-eqz v0, :cond_2
-
-    if-eq v0, v3, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_2
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_2
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, v1, Lfo7;->c:Ltj;
-
-    iget-wide v5, p0, Lzn7;->Y:J
-
-    invoke-static {v5, v6}, Leo8;->b(J)Lvea;
-
-    move-result-object v0
-
-    iput v3, p0, Lzn7;->o:I
-
-    invoke-virtual {p1, v0, p0}, Ltj;->e(Lvea;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v4, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    :goto_0
-    new-instance p1, Lr83;
-
-    const/16 v0, 0xc
-
-    iget-object v3, p0, Lzn7;->Z:Llpf;
-
-    invoke-direct {p1, v3, v0}, Lr83;-><init>(Ld76;I)V
-
-    new-instance v0, Lr83;
-
-    const/16 v3, 0x9
-
-    invoke-direct {v0, p1, v3}, Lr83;-><init>(Ld76;I)V
-
-    new-instance p1, Lr3;
-
-    iget-object v3, p0, Lzn7;->t0:Ljava/lang/String;
-
-    const/16 v5, 0x1d
-
-    invoke-direct {p1, v1, v5, v3}, Lr3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iput v2, p0, Lzn7;->o:I
-
-    invoke-virtual {v0, p1, p0}, Lr83;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v4, :cond_4
-
-    :goto_1
-    return-object v4
-
-    :cond_4
-    :goto_2
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-object v0
 .end method

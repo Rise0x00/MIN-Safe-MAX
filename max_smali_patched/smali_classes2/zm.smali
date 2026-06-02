@@ -3,100 +3,165 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Landroid/net/Uri;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Landroid/media/EncoderProfiles;)Lqf0;
+    .locals 17
 
-    const-string v0, "https://api.ok.ru"
+    invoke-virtual/range {p0 .. p0}, Landroid/media/EncoderProfiles;->getDefaultDurationSeconds()I
 
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    move-result v0
 
-    move-result-object v0
-
-    sput-object v0, Lzm;->a:Landroid/net/Uri;
-
-    return-void
-.end method
-
-.method public static final a(Ljava/lang/String;)Landroid/net/Uri;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ok://api/api/"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const/16 v1, 0x2f
-
-    const/4 v2, 0x0
-
-    const/16 v3, 0x2e
-
-    invoke-static {p0, v3, v1, v2}, Lzzf;->r(Ljava/lang/String;CCZ)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static final b(Landroid/net/Uri;)Ljava/lang/String;
-    .locals 3
-
-    invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "ok://api/api/"
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Lzzf;->t(Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-virtual/range {p0 .. p0}, Landroid/media/EncoderProfiles;->getRecommendedFileFormat()I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    invoke-virtual/range {p0 .. p0}, Landroid/media/EncoderProfiles;->getAudioProfiles()Ljava/util/List;
 
-    const/16 p0, 0xd
+    move-result-object v2
 
-    invoke-virtual {v0, p0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    new-instance v3, Ljava/util/ArrayList;
 
-    move-result-object p0
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    const/16 v0, 0x2f
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    const/16 v1, 0x2e
+    move-result-object v2
 
-    invoke-static {p0, v0, v1, v2}, Lzzf;->r(Ljava/lang/String;CCZ)Ljava/lang/String;
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/media/EncoderProfiles$AudioProfile;
+
+    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getCodec()I
+
+    move-result v6
+
+    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getMediaType()Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getBitrate()I
+
+    move-result v7
+
+    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getSampleRate()I
+
+    move-result v8
+
+    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getChannels()I
+
+    move-result v9
+
+    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getProfile()I
+
+    move-result v10
+
+    new-instance v5, Lpf0;
+
+    invoke-direct/range {v5 .. v11}, Lpf0;-><init>(IIIIILjava/lang/String;)V
+
+    invoke-virtual {v3, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual/range {p0 .. p0}, Landroid/media/EncoderProfiles;->getVideoProfiles()Ljava/util/List;
+
+    move-result-object v2
+
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/media/EncoderProfiles$VideoProfile;
+
+    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getCodec()I
+
+    move-result v7
+
+    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getMediaType()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getBitrate()I
+
+    move-result v9
+
+    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getFrameRate()I
+
+    move-result v10
+
+    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getWidth()I
+
+    move-result v11
+
+    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getHeight()I
+
+    move-result v12
+
+    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getProfile()I
+
+    move-result v13
+
+    new-instance v6, Lrf0;
+
+    const/16 v14, 0x8
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x0
+
+    invoke-direct/range {v6 .. v16}, Lrf0;-><init>(ILjava/lang/String;IIIIIIII)V
+
+    invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :cond_1
+    invoke-static {v0, v1, v3, v4}, Lqf0;->e(IILjava/util/List;Ljava/util/List;)Lqf0;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static b(ILjava/lang/String;)Landroid/media/EncoderProfiles;
+    .locals 0
+
+    invoke-static {p1, p0}, Landroid/media/CamcorderProfile;->getAll(Ljava/lang/String;I)Landroid/media/EncoderProfiles;
 
     move-result-object p0
 
     return-object p0
+.end method
 
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+.method public static c(Landroid/media/AudioRecord$Builder;Landroid/content/Context;)V
+    .locals 0
 
-    const-string v1, "Unknown uri "
+    invoke-virtual {p0, p1}, Landroid/media/AudioRecord$Builder;->setContext(Landroid/content/Context;)Landroid/media/AudioRecord$Builder;
 
-    invoke-static {p0, v1}, Lmrf;->i(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-void
 .end method

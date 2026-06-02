@@ -1,97 +1,61 @@
-.class public final enum Ln79;
-.super Ljava/lang/Enum;
+.class public final Ln79;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxa6;
 
-# static fields
-.field public static final enum a:Ln79;
 
-.field public static final enum b:Ln79;
+# instance fields
+.field public final synthetic a:Ls75;
 
-.field public static final enum c:Ln79;
+.field public final synthetic b:Lv79;
 
-.field public static final enum d:Ln79;
-
-.field public static final synthetic o:[Ln79;
+.field public final synthetic c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Ls75;Lv79;J)V
+    .locals 0
 
-    new-instance v0, Ln79;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "GIF"
+    iput-object p1, p0, Ln79;->a:Ls75;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Ln79;->b:Lv79;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ln79;->a:Ln79;
-
-    new-instance v1, Ln79;
-
-    const-string v2, "STICKER"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Ln79;->b:Ln79;
-
-    new-instance v2, Ln79;
-
-    const-string v3, "VIDEO"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Ln79;->c:Ln79;
-
-    new-instance v3, Ln79;
-
-    const-string v4, "PIP"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Ln79;->d:Ln79;
-
-    filled-new-array {v0, v1, v2, v3}, [Ln79;
-
-    move-result-object v0
-
-    sput-object v0, Ln79;->o:[Ln79;
+    iput-wide p3, p0, Ln79;->c:J
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ln79;
-    .locals 1
 
-    const-class v0, Ln79;
+# virtual methods
+.method public final d(Lza6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 4
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    new-instance v0, Lm79;
 
-    move-result-object p0
+    iget-object v1, p0, Ln79;->b:Lv79;
 
-    check-cast p0, Ln79;
+    iget-wide v2, p0, Ln79;->c:J
 
-    return-object p0
-.end method
+    invoke-direct {v0, p1, v1, v2, v3}, Lm79;-><init>(Lza6;Lv79;J)V
 
-.method public static values()[Ln79;
-    .locals 1
+    iget-object p1, p0, Ln79;->a:Ls75;
 
-    sget-object v0, Ln79;->o:[Ln79;
+    invoke-virtual {p1, v0, p2}, Ls75;->d(Lza6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, [Ln79;->clone()Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v0
+    sget-object p2, Lpc4;->a:Lpc4;
 
-    check-cast v0, [Ln79;
+    if-ne p1, p2, :cond_0
 
-    return-object v0
+    return-object p1
+
+    :cond_0
+    sget-object p1, Lyeh;->a:Lyeh;
+
+    return-object p1
 .end method

@@ -4,106 +4,74 @@
 
 
 # instance fields
-.field public final a:Landroid/net/Uri;
-
-.field public final b:Z
+.field public final a:Lb1g;
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;Z)V
-    .locals 0
+.method public constructor <init>(Ldng;Li8f;)V
+    .locals 9
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lux3;->a:Landroid/net/Uri;
+    check-cast p1, Lsbb;
 
-    iput-boolean p2, p0, Lux3;->b:Z
+    invoke-virtual {p1}, Lsbb;->a()Lhc4;
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    move-result-object p1
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    const-string v1, "conn-events"
 
-    return v0
+    invoke-virtual {p1, v0, v1}, Lhc4;->limitedParallelism(ILjava/lang/String;)Lhc4;
 
-    :cond_0
-    if-eqz p1, :cond_1
+    move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {p1}, Lsr6;->a(Lfc4;)Lkotlinx/coroutines/internal/ContextScope;
 
-    move-result-object v1
+    move-result-object p1
 
-    goto :goto_0
+    iget v0, p2, Li8f;->r:I
 
-    :cond_1
-    const/4 v1, 0x0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    :goto_0
-    const-class v2, Lux3;
+    move-result-object v0
 
-    invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0}, Lc1g;->a(Ljava/lang/Object;)Lb1g;
 
-    move-result v1
+    move-result-object v3
 
-    const/4 v2, 0x0
+    iput-object v3, p0, Lux3;->a:Lb1g;
 
-    if-nez v1, :cond_2
+    iget-object p2, p2, Li8f;->m:Lft0;
 
-    return v2
+    invoke-static {p2}, Lhp7;->e(Lg0b;)Ln12;
 
-    :cond_2
-    check-cast p1, Lux3;
+    move-result-object p2
 
-    iget-object v1, p0, Lux3;->a:Landroid/net/Uri;
+    new-instance v1, Ljy;
 
-    iget-object v3, p1, Lux3;->a:Landroid/net/Uri;
+    const/4 v7, 0x0
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v8, 0x5
 
-    move-result v1
+    const/4 v2, 0x2
 
-    if-nez v1, :cond_3
+    const-class v4, Lvia;
 
-    return v2
+    const-string v5, "emit"
 
-    :cond_3
-    iget-boolean v1, p0, Lux3;->b:Z
+    const-string v6, "emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;"
 
-    iget-boolean p1, p1, Lux3;->b:Z
+    invoke-direct/range {v1 .. v8}, Ljy;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    if-eq v1, p1, :cond_4
+    new-instance v0, Lad6;
 
-    return v2
+    const/4 v2, 0x1
 
-    :cond_4
-    return v0
-.end method
+    invoke-direct {v0, p2, v1, v2}, Lad6;-><init>(Lxa6;Lnt6;I)V
 
-.method public final hashCode()I
-    .locals 2
+    invoke-static {v0, p1}, Lhk0;->Z(Lxa6;Loc4;)Lhyf;
 
-    iget-object v0, p0, Lux3;->a:Landroid/net/Uri;
-
-    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lux3;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-void
 .end method

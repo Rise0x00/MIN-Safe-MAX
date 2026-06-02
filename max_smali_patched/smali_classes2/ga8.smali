@@ -2,88 +2,84 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxa8;
-.implements Lva8;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lga8;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public a:Z
 
-.field public final b:Ljava/lang/String;
+.field public b:I
 
+.field public c:I
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.field public d:I
 
-    new-instance v0, Lj58;
+.field public e:I
 
-    const/16 v1, 0x8
+.field public f:I
 
-    invoke-direct {v0, v1}, Lj58;-><init>(I)V
+.field public g:I
 
-    sput-object v0, Lga8;->CREATOR:Landroid/os/Parcelable$Creator;
+.field public h:Z
 
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/net/Uri;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lga8;->a:Landroid/net/Uri;
-
-    iput-object p2, p0, Lga8;->b:Ljava/lang/String;
-
-    return-void
-.end method
+.field public i:Z
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return v0
-.end method
+    const-string v1, "LayoutState{mAvailable="
 
-.method public final n()Ljava/lang/String;
-    .locals 1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lga8;->b:Ljava/lang/String;
+    iget v1, p0, Lga8;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mCurrentPosition="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lga8;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mItemDirection="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lga8;->d:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mLayoutDirection="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lga8;->e:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mStartLine="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lga8;->f:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mEndLine="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lga8;->g:I
+
+    const/16 v2, 0x7d
+
+    invoke-static {v0, v1, v2}, Lo52;->t(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
-
-    new-instance v0, Lpm4;
-
-    iget-object v1, p0, Lga8;->a:Landroid/net/Uri;
-
-    invoke-direct {v0, v1}, Lpm4;-><init>(Landroid/net/Uri;)V
-
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
-
-    iget-object p2, p0, Lga8;->b:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    return-void
 .end method

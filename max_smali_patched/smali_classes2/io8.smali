@@ -1,79 +1,107 @@
-.class public final Lio8;
+.class public final synthetic Lio8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lfo4;
+.implements Lbz;
+
 
 # instance fields
-.field public a:J
+.field public final synthetic a:I
 
-.field public b:J
+.field public final synthetic b:I
 
-.field public c:J
+.field public final synthetic c:J
 
-.field public d:J
+
+# direct methods
+.method public synthetic constructor <init>(IIJ)V
+    .locals 0
+
+    .line 1
+    iput p2, p0, Lio8;->a:I
+
+    iput-wide p3, p0, Lio8;->c:J
+
+    iput p1, p0, Lio8;->b:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(IJ)V
+    .locals 1
+
+    .line 2
+    const/4 v0, 0x1
+
+    iput v0, p0, Lio8;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lio8;->b:I
+
+    iput-wide p2, p0, Lio8;->c:J
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(JJ)D
-    .locals 7
+.method public apply(Ljava/lang/Object;)Lyi8;
+    .locals 4
 
-    iget-wide v0, p0, Lio8;->a:J
+    check-cast p1, Ljava/util/List;
 
-    sub-long v0, p1, v0
+    new-instance v0, Lwf9;
 
-    const-wide/16 v2, 0x0
+    iget v1, p0, Lio8;->b:I
 
-    cmp-long v4, v0, v2
+    iget-wide v2, p0, Lio8;->c:J
 
-    if-gez v4, :cond_0
+    invoke-direct {v0, v1, v2, v3, p1}, Lwf9;-><init>(IJLjava/util/List;)V
 
-    move-wide v0, v2
+    invoke-static {v0}, Ljde;->T(Ljava/lang/Object;)Ljm7;
 
-    :cond_0
-    iput-wide v0, p0, Lio8;->c:J
+    move-result-object p1
 
-    iget-wide v4, p0, Lio8;->b:J
+    return-object p1
+.end method
 
-    sub-long v4, p3, v4
+.method public o()Ljava/lang/Object;
+    .locals 4
 
-    cmp-long v6, v4, v2
+    iget v0, p0, Lio8;->a:I
 
-    if-gez v6, :cond_1
+    packed-switch v0, :pswitch_data_0
 
-    move-wide v4, v2
+    new-instance v0, Lone/me/polls/screens/create/PollCreateScreen;
 
-    :cond_1
-    iput-wide v4, p0, Lio8;->d:J
+    iget-wide v1, p0, Lio8;->c:J
 
-    cmp-long v6, v4, v2
+    iget v3, p0, Lio8;->b:I
 
-    if-nez v6, :cond_3
+    invoke-direct {v0, v1, v2, v3}, Lone/me/polls/screens/create/PollCreateScreen;-><init>(JI)V
 
-    cmp-long v2, v0, v2
+    return-object v0
 
-    if-eqz v2, :cond_2
+    :pswitch_0
+    new-instance v0, Lone/me/location/map/pick/PickLocationScreen;
 
-    goto :goto_0
+    iget-wide v1, p0, Lio8;->c:J
 
-    :cond_2
-    const-wide/16 v0, 0x0
+    iget v3, p0, Lio8;->b:I
 
-    goto :goto_1
+    invoke-direct {v0, v1, v2, v3}, Lone/me/location/map/pick/PickLocationScreen;-><init>(JI)V
 
-    :cond_3
-    :goto_0
-    long-to-double v2, v0
+    return-object v0
 
-    add-long/2addr v4, v0
+    nop
 
-    long-to-double v0, v4
-
-    div-double v0, v2, v0
-
-    :goto_1
-    iput-wide p1, p0, Lio8;->a:J
-
-    iput-wide p3, p0, Lio8;->b:J
-
-    return-wide v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

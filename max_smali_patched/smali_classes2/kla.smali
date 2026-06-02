@@ -1,95 +1,67 @@
 .class public final Lkla;
-.super Ljef;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final D(Ldla;)V
-    .locals 5
+# instance fields
+.field public final a:I
 
-    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
+.field public final b:I
 
-    check-cast v0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+.field public final c:I
 
-    iget-wide v1, p1, Ldla;->a:J
+.field public final d:I
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+.field public final e:I
 
-    move-result v1
+.field public final f:I
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+.field public final g:F
 
-    iget-object p1, p1, Ldla;->b:Ljava/lang/String;
+.field public final h:Z
 
-    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+.field public final i:Z
 
-    move-result-object p1
+.field public final j:I
 
-    invoke-static {p1}, Ldj7;->d(Landroid/net/Uri;)Ldj7;
+.field public final k:I
 
-    move-result-object p1
+.field public final l:I
 
-    new-instance v1, Liyd;
+.field public final m:Z
 
-    const/16 v2, 0x40
 
-    int-to-float v2, v2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v2
-
-    invoke-static {v3}, Lq7j;->c(F)I
-
-    move-result v3
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v4
-
-    invoke-static {v2}, Lq7j;->c(F)I
-
-    move-result v2
-
-    invoke-direct {v1, v3, v2}, Liyd;-><init>(II)V
-
-    iput-object v1, p1, Ldj7;->d:Liyd;
-
-    invoke-virtual {p1}, Ldj7;->a()Lcj7;
-
-    move-result-object p1
-
-    sget v1, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->C0:I
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, v1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->j(Lcj7;Lcj7;)V
-
-    return-void
-.end method
-
-.method public final bridge synthetic y(Lud8;)V
+# direct methods
+.method public constructor <init>(IIIIIIFZZIIIZ)V
     .locals 0
 
-    check-cast p1, Ldla;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, p1}, Lkla;->D(Ldla;)V
+    iput p1, p0, Lkla;->a:I
+
+    iput p2, p0, Lkla;->b:I
+
+    iput p3, p0, Lkla;->c:I
+
+    iput p4, p0, Lkla;->d:I
+
+    iput p5, p0, Lkla;->e:I
+
+    iput p6, p0, Lkla;->f:I
+
+    iput p7, p0, Lkla;->g:F
+
+    iput-boolean p8, p0, Lkla;->h:Z
+
+    iput-boolean p9, p0, Lkla;->i:Z
+
+    iput p10, p0, Lkla;->j:I
+
+    iput p11, p0, Lkla;->k:I
+
+    iput p12, p0, Lkla;->l:I
+
+    iput-boolean p13, p0, Lkla;->m:Z
 
     return-void
 .end method

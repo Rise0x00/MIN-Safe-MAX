@@ -1,32 +1,55 @@
 .class public final Lgo3;
-.super Lvy7;
+.super Lxng;
 .source "SourceFile"
 
-# interfaces
-.implements Lfo3;
+
+# instance fields
+.field public final c:J
+
+.field public final d:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(JLjava/util/List;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lvy7;-><init>(Z)V
+    iput-wide p1, p0, Lgo3;->c:J
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lvy7;->initParentJob(Lsx7;)V
+    iput-object p3, p0, Lgo3;->d:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getOnCancelComplete$kotlinx_coroutines_core()Z
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lgo3;->d:Ljava/util/List;
 
-    return v0
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const-string v1, "Response(complainSync="
+
+    const-string v2, ",complainsSize:"
+
+    iget-wide v3, p0, Lgo3;->c:J
+
+    invoke-static {v0, v3, v4, v1, v2}, Lrtc;->v(IJLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

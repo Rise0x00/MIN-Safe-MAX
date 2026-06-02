@@ -2,99 +2,113 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxa8;
 
+# instance fields
+.field public final a:Ljava/util/TreeSet;
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lwa8;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final a:Lwa8;
+.field public b:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 3
 
-    new-instance v0, Lwa8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/TreeSet;
 
-    sput-object v0, Lwa8;->a:Lwa8;
+    new-instance v1, Lzp0;
 
-    new-instance v0, Lj58;
+    const/16 v2, 0x1d
 
-    const/16 v1, 0x17
+    invoke-direct {v1, v2}, Lzp0;-><init>(I)V
 
-    invoke-direct {v0, v1}, Lj58;-><init>(I)V
+    invoke-direct {v0, v1}, Ljava/util/TreeSet;-><init>(Ljava/util/Comparator;)V
 
-    sput-object v0, Lwa8;->CREATOR:Landroid/os/Parcelable$Creator;
+    iput-object v0, p0, Lwa8;->a:Ljava/util/TreeSet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final a(Lc41;J)V
+    .locals 4
 
-    const/4 v0, 0x0
+    :goto_0
+    iget-wide v0, p0, Lwa8;->b:J
 
-    return v0
-.end method
+    add-long/2addr v0, p2
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    const-wide/32 v2, 0x6400000
 
-    const/4 v0, 0x1
+    cmp-long v0, v0, v2
 
-    if-ne p0, p1, :cond_0
+    if-lez v0, :cond_0
 
-    return v0
+    iget-object v0, p0, Lwa8;->a:Ljava/util/TreeSet;
+
+    invoke-virtual {v0}, Ljava/util/TreeSet;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lwa8;->a:Ljava/util/TreeSet;
+
+    invoke-virtual {v0}, Ljava/util/TreeSet;->first()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ls41;
+
+    move-object v1, p1
+
+    check-cast v1, Ljpf;
+
+    monitor-enter v1
+
+    :try_start_0
+    invoke-virtual {v1, v0}, Ljpf;->k(Ls41;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 
     :cond_0
-    instance-of p1, p1, Lwa8;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final b(Ljpf;Lmpf;)V
+    .locals 4
 
-    const v0, -0x3800957b
+    iget-object v0, p0, Lwa8;->a:Ljava/util/TreeSet;
 
-    return v0
-.end method
+    invoke-virtual {v0, p2}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    iget-wide v0, p0, Lwa8;->b:J
 
-    const-string v0, "UnknownFolderError"
+    iget-wide v2, p2, Ls41;->c:J
 
-    return-object v0
-.end method
+    add-long/2addr v0, v2
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    iput-wide v0, p0, Lwa8;->b:J
 
-    const/4 p2, 0x1
+    const-wide/16 v0, 0x0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p0, p1, v0, v1}, Lwa8;->a(Lc41;J)V
 
     return-void
 .end method

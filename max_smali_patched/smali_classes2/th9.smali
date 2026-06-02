@@ -3,22 +3,60 @@
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Lsz3;
+.implements Lei9;
+.implements Ldi9;
+.implements Ljt6;
+.implements Lht7;
+.implements Ltz3;
+.implements Lot6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/members/list/MembersListWidget;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/members/list/MembersListWidget;I)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
+    .line 1
+    iput p1, p0, Lth9;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
+
+    .line 2
+    iput p1, p0, Lth9;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    .locals 0
+
+    .line 3
     iput p2, p0, Lth9;->a:I
 
-    iput-object p1, p0, Lth9;->b:Lone/me/members/list/MembersListWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/String;IILna9;)V
+    .locals 0
+
+    .line 4
+    const/16 p1, 0xe
+
+    iput p1, p0, Lth9;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,300 +65,379 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 15
+.method public a(Lmic;Lvf9;Ljava/util/List;)V
+    .locals 0
+
+    iget p2, p0, Lth9;->a:I
+
+    packed-switch p2, :pswitch_data_0
+
+    invoke-virtual {p1, p3}, Lmic;->d(Ljava/util/List;)V
+
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p1, p3}, Lmic;->d(Ljava/util/List;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0xb
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public accept(Ljava/lang/Object;)V
+    .locals 3
 
     iget v0, p0, Lth9;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lth9;->b:Lone/me/members/list/MembersListWidget;
-
-    sget-object v1, Lone/me/members/list/MembersListWidget;->D0:[Lz28;
-
-    invoke-virtual {v0}, Lone/me/members/list/MembersListWidget;->B0()Ljh9;
-
-    move-result-object v0
-
-    iget-object v0, v0, Ljh9;->c:Lfs4;
-
-    return-object v0
-
     :pswitch_0
-    iget-object v0, p0, Lth9;->b:Lone/me/members/list/MembersListWidget;
+    check-cast p1, Lf60;
 
-    sget-object v1, Lone/me/members/list/MembersListWidget;->D0:[Lz28;
+    const/4 v0, 0x0
 
-    sget-object v1, Lbh9;->a:Lbh9;
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v2
-
-    const/16 v3, 0xc
-
-    invoke-virtual {v2, v3}, Lr5;->d(I)Ln8g;
-
-    move-result-object v2
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v3
-
-    const/16 v4, 0x85
-
-    invoke-virtual {v3, v4}, Lr5;->d(I)Ln8g;
-
-    move-result-object v11
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v3
-
-    const/16 v4, 0x77
-
-    invoke-virtual {v3, v4}, Lr5;->d(I)Ln8g;
-
-    move-result-object v10
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v3
-
-    const/16 v4, 0x15f
-
-    invoke-virtual {v3, v4}, Lr5;->d(I)Ln8g;
-
-    move-result-object v12
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v3
-
-    const/16 v4, 0x74
-
-    invoke-virtual {v3, v4}, Lr5;->d(I)Ln8g;
-
-    move-result-object v3
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v4
-
-    const/16 v5, 0x33
-
-    invoke-virtual {v4, v5}, Lr5;->d(I)Ln8g;
-
-    move-result-object v4
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v1
-
-    const/16 v5, 0x9f
-
-    invoke-virtual {v1, v5}, Lr5;->d(I)Ln8g;
-
-    move-result-object v13
-
-    iget-wide v6, v0, Lone/me/members/list/MembersListWidget;->b:J
-
-    iget-object v8, v0, Lone/me/members/list/MembersListWidget;->c:Lzs2;
-
-    invoke-virtual {v10}, Ln8g;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lla3;
-
-    invoke-virtual {v0, v6, v7}, Lla3;->k(J)Lpld;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lpld;->a:Llpf;
-
-    invoke-interface {v0}, Llpf;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lnd2;
-
-    if-nez v0, :cond_2
-
-    const-class v0, Ldi9;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v10
-
-    const-string v0, "We\'re trying to create members loader for chat(#"
-
-    const-string v1, ") without the chat in cache"
-
-    invoke-static {v6, v7, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sget-object v8, Lc5j;->a:Ledb;
-
-    if-eqz v8, :cond_1
-
-    sget-object v9, Lkk8;->Y:Lkk8;
-
-    if-nez v0, :cond_0
-
-    const-string v0, ""
-
-    :cond_0
-    move-object v11, v0
-
-    const/4 v13, 0x0
-
-    const/16 v14, 0x8
-
-    const/4 v12, 0x0
-
-    invoke-static/range {v8 .. v14}, Ledb;->f(Ledb;Lkk8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
-
-    :cond_1
-    new-instance v0, Lbi9;
-
-    invoke-direct {v0}, Lbi9;-><init>()V
-
-    goto :goto_2
-
-    :cond_2
-    iget-object v1, v0, Lnd2;->b:Luh2;
-
-    invoke-virtual {v1}, Luh2;->c()I
+    :goto_0
+    invoke-virtual {p1}, Lf60;->b()I
 
     move-result v1
 
-    const/16 v5, 0x63
+    if-ge v0, v1, :cond_0
 
-    if-gt v1, v5, :cond_4
-
-    invoke-virtual {v0}, Lnd2;->P()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    new-instance v5, Lmhf;
-
-    invoke-virtual {v4}, Ln8g;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v9, v0
-
-    check-cast v9, Lef3;
-
-    invoke-virtual {v2}, Ln8g;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lmbg;
-
-    move-object v12, v3
-
-    move-object v14, v13
-
-    move-object v13, v0
-
-    invoke-direct/range {v5 .. v14}, Lmhf;-><init>(JLzs2;Lef3;Lo58;Lo58;Lo58;Lmbg;Lo58;)V
-
-    :goto_0
-    move-object v0, v5
-
-    goto :goto_2
-
-    :cond_4
-    :goto_1
-    invoke-virtual {v2}, Ln8g;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v9, v0
-
-    check-cast v9, Lmbg;
-
-    new-instance v5, Lyn0;
-
-    invoke-direct/range {v5 .. v13}, Lyn0;-><init>(JLzs2;Lmbg;Lo58;Lo58;Lo58;Lo58;)V
-
-    goto :goto_0
-
-    :goto_2
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lth9;->b:Lone/me/members/list/MembersListWidget;
-
-    iget-wide v2, v0, Lone/me/members/list/MembersListWidget;->b:J
-
-    iget-object v4, v0, Lone/me/members/list/MembersListWidget;->c:Lzs2;
-
-    iget-object v6, v0, Lone/me/members/list/MembersListWidget;->d:Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Lone/me/members/list/MembersListWidget;->B0()Ljh9;
+    invoke-virtual {p1, v0}, Lf60;->d(I)Le60;
 
     move-result-object v1
 
-    iget-object v8, v1, Ljh9;->d:Llq6;
+    invoke-virtual {v1}, Le60;->h()Lc50;
 
-    new-instance v1, Lth9;
+    move-result-object v1
 
-    const/4 v5, 0x2
+    sget-object v2, Lu50;->a:Lu50;
 
-    invoke-direct {v1, v0, v5}, Lth9;-><init>(Lone/me/members/list/MembersListWidget;I)V
+    iput-object v2, v1, Lc50;->i:Lu50;
 
-    new-instance v5, Ln8g;
+    const/4 v2, 0x0
 
-    invoke-direct {v5, v1}, Ln8g;-><init>(Llq6;)V
+    iput v2, v1, Lc50;->k:F
 
-    new-instance v1, Lsh9;
+    invoke-virtual {v1}, Lc50;->a()Le60;
 
-    new-instance v7, Lth9;
+    move-result-object v1
 
-    const/4 v9, 0x3
+    invoke-virtual {p1, v0, v1}, Lf60;->e(ILe60;)V
 
-    invoke-direct {v7, v0, v9}, Lth9;-><init>(Lone/me/members/list/MembersListWidget;I)V
+    add-int/lit8 v0, v0, 0x1
 
-    invoke-direct/range {v1 .. v8}, Lsh9;-><init>(JLzs2;Ln8g;Ljava/lang/Integer;Lth9;Llq6;)V
+    goto :goto_0
 
-    return-object v1
+    :cond_0
+    return-void
+
+    :pswitch_1
+    check-cast p1, Lmic;
+
+    invoke-virtual {p1}, Lmic;->m0()V
+
+    iget-object p1, p1, Lmic;->a:Ljt5;
+
+    invoke-virtual {p1}, Ldp0;->B()V
+
+    return-void
 
     :pswitch_2
-    iget-object v0, p0, Lth9;->b:Lone/me/members/list/MembersListWidget;
+    check-cast p1, Lmic;
 
-    sget-object v1, Lone/me/members/list/MembersListWidget;->D0:[Lz28;
+    invoke-virtual {p1}, Lmic;->l()V
 
-    invoke-virtual {v0}, Lone/me/members/list/MembersListWidget;->A0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    return-void
 
-    move-result-object v0
+    :pswitch_3
+    check-cast p1, Lmic;
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p1}, Lmic;->prepare()V
 
-    move-result-object v0
+    return-void
 
-    const/4 v1, 0x6
+    :pswitch_4
+    check-cast p1, Lmic;
 
-    invoke-static {v0, v1}, Lfca;->j(Landroid/content/Context;I)Lwpf;
+    invoke-virtual {p1}, Lmic;->l0()V
 
-    move-result-object v0
+    return-void
 
-    return-object v0
+    :pswitch_5
+    check-cast p1, Lmic;
+
+    invoke-virtual {p1}, Lmic;->z()V
+
+    return-void
+
+    :pswitch_6
+    check-cast p1, Lmic;
+
+    invoke-virtual {p1}, Lmic;->a0()V
+
+    return-void
+
+    :pswitch_7
+    check-cast p1, Lmic;
+
+    invoke-virtual {p1}, Lmic;->X()V
+
+    return-void
+
+    :pswitch_8
+    check-cast p1, Lmic;
+
+    invoke-virtual {p1}, Lmic;->d0()V
+
+    return-void
+
+    :pswitch_9
+    check-cast p1, Lmic;
+
+    invoke-virtual {p1}, Lmic;->c0()V
+
+    return-void
+
+    :pswitch_a
+    check-cast p1, Lmic;
+
+    invoke-virtual {p1}, Lmic;->W()V
+
+    return-void
+
+    :pswitch_b
+    check-cast p1, Lmic;
+
+    invoke-virtual {p1}, Lmic;->N()V
+
+    return-void
+
+    :pswitch_c
+    check-cast p1, Lmic;
+
+    invoke-virtual {p1}, Lmic;->b0()V
+
+    return-void
+
+    :pswitch_d
+    check-cast p1, Lmic;
+
+    invoke-virtual {p1}, Lmic;->T()V
+
+    return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_0
+        :pswitch_9
+        :pswitch_8
+        :pswitch_0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_0
+        :pswitch_0
+        :pswitch_5
+        :pswitch_0
+        :pswitch_0
+        :pswitch_4
+        :pswitch_0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lth9;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Long;
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_1
+    check-cast p1, Lqb9;
+
+    invoke-interface {p1}, Lqb9;->l()Lf3h;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lf3h;->b:Lv4e;
+
+    new-instance v0, Lssg;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1}, Lssg;-><init>(I)V
+
+    invoke-static {v0, p1}, Leub;->h(Ljt6;Ljava/util/List;)Ljava/util/AbstractList;
+
+    move-result-object p1
+
+    invoke-static {p1}, Len7;->j(Ljava/util/Collection;)Len7;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_2
+    check-cast p1, Lkg4;
+
+    iget-wide v0, p1, Lkg4;->c:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_3
+    check-cast p1, Lkg4;
+
+    iget-wide v0, p1, Lkg4;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_4
+    check-cast p1, Landroid/os/Bundle;
+
+    invoke-static {p1}, Ln99;->b(Landroid/os/Bundle;)Ln99;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x16
+        :pswitch_4
+        :pswitch_0
+        :pswitch_3
         :pswitch_2
         :pswitch_1
-        :pswitch_0
     .end packed-switch
+.end method
+
+.method public b(Ls7a;ILandroid/os/Bundle;)Z
+    .locals 0
+
+    sget p1, Lru/ok/messages/messages/widgets/MessageComposeEditText;->C0:I
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public j(Lsg9;Lvf9;I)Ljava/lang/Object;
+    .locals 0
+
+    iget p3, p0, Lth9;->a:I
+
+    sparse-switch p3, :sswitch_data_0
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p1, Ljava/lang/ClassCastException;
+
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw p1
+
+    :sswitch_0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p1, Ljava/lang/ClassCastException;
+
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw p1
+
+    :sswitch_1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p1, Ljava/lang/ClassCastException;
+
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw p1
+
+    :sswitch_2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p1, Ljava/lang/ClassCastException;
+
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw p1
+
+    :sswitch_3
+    iget-object p3, p1, Lsg9;->e:Lwx3;
+
+    invoke-virtual {p1, p2}, Lsg9;->t(Lvf9;)Lvf9;
+
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p1, Lo7f;
+
+    const/4 p2, -0x6
+
+    invoke-direct {p1, p2}, Lo7f;-><init>(I)V
+
+    invoke-static {p1}, Ljde;->T(Ljava/lang/Object;)Ljm7;
+
+    move-result-object p1
+
+    return-object p1
+
+    :sswitch_4
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p1, Ljava/lang/ClassCastException;
+
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw p1
+
+    :sswitch_5
+    invoke-virtual {p1, p2}, Lsg9;->n(Lvf9;)Ljm7;
+
+    move-result-object p1
+
+    return-object p1
+
+    :sswitch_data_0
+    .sparse-switch
+        0x4 -> :sswitch_5
+        0x7 -> :sswitch_4
+        0xa -> :sswitch_3
+        0xe -> :sswitch_2
+        0x10 -> :sswitch_1
+        0x13 -> :sswitch_0
+    .end sparse-switch
 .end method

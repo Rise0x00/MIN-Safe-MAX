@@ -2,128 +2,176 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lb3b;
+.implements Ls45;
+
 
 # instance fields
-.field public final a:Lam;
+.field public final a:Lb3b;
 
-.field public final b:Lvl;
+.field public final b:Z
+
+.field public c:Ls45;
+
+.field public d:J
+
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(Lam;Lvl;)V
+.method public constructor <init>(Lb3b;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lz0b;->a:Lam;
+    iput-object p1, p0, Lz0b;->a:Lb3b;
 
-    iput-object p2, p0, Lz0b;->b:Lvl;
+    iput-boolean p2, p0, Lz0b;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final b()V
+    .locals 2
+
+    iget-boolean v0, p0, Lz0b;->o:Z
+
+    if-nez v0, :cond_1
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    iput-boolean v0, p0, Lz0b;->o:Z
 
-    return v0
+    iget-boolean v0, p0, Lz0b;->b:Z
+
+    iget-object v1, p0, Lz0b;->a:Lb3b;
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    invoke-interface {v1, v0}, Lb3b;->onError(Ljava/lang/Throwable;)V
+
+    return-void
 
     :cond_0
-    instance-of v1, p1, Lz0b;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
+    invoke-interface {v1}, Lb3b;->b()V
 
     :cond_1
-    check-cast p1, Lz0b;
-
-    iget-object v1, p0, Lz0b;->a:Lam;
-
-    iget-object v3, p1, Lz0b;->a:Lam;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lz0b;->b:Lvl;
-
-    iget-object p1, p1, Lz0b;->b:Lvl;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final c(Ls45;)V
+    .locals 1
 
-    iget-object v0, p0, Lz0b;->a:Lam;
+    iget-object v0, p0, Lz0b;->c:Ls45;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v0, p1}, Lw45;->l(Ls45;Ls45;)Z
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lz0b;->b:Lvl;
+    iput-object p1, p0, Lz0b;->c:Ls45;
 
-    invoke-virtual {v1}, Lvl;->hashCode()I
+    iget-object p1, p0, Lz0b;->a:Lb3b;
 
-    move-result v1
+    invoke-interface {p1, p0}, Lb3b;->c(Ls45;)V
 
-    add-int/2addr v1, v0
-
-    return v1
+    :cond_0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final dispose()V
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lz0b;->c:Ls45;
 
-    const-string v1, "OkApiRequest(request="
+    invoke-interface {v0}, Ls45;->dispose()V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-void
+.end method
 
-    iget-object v1, p0, Lz0b;->a:Lam;
+.method public final e(Ljava/lang/Object;)V
+    .locals 4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-boolean v0, p0, Lz0b;->o:Z
 
-    const-string v1, ", config="
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
-    iget-object v1, p0, Lz0b;->b:Lvl;
+    :cond_0
+    iget-wide v0, p0, Lz0b;->d:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-wide/16 v2, 0x0
 
-    const-string v1, ")"
+    cmp-long v2, v0, v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v2, :cond_1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    iput-boolean v0, p0, Lz0b;->o:Z
 
-    return-object v0
+    iget-object v0, p0, Lz0b;->c:Ls45;
+
+    invoke-interface {v0}, Ls45;->dispose()V
+
+    iget-object v0, p0, Lz0b;->a:Lb3b;
+
+    invoke-interface {v0, p1}, Lb3b;->e(Ljava/lang/Object;)V
+
+    invoke-interface {v0}, Lb3b;->b()V
+
+    return-void
+
+    :cond_1
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lz0b;->d:J
+
+    return-void
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    iget-object v0, p0, Lz0b;->c:Ls45;
+
+    invoke-interface {v0}, Ls45;->f()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-boolean v0, p0, Lz0b;->o:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Lq98;->J(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lz0b;->o:Z
+
+    iget-object v0, p0, Lz0b;->a:Lb3b;
+
+    invoke-interface {v0, p1}, Lb3b;->onError(Ljava/lang/Throwable;)V
+
+    return-void
 .end method

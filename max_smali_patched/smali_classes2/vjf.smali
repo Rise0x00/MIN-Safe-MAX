@@ -3,87 +3,111 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljp3;
-.implements Lhtg;
+.implements Lki8;
+
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:J
 
 
 # direct methods
-.method public static a(FFFF)Landroid/graphics/Path;
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 2
 
-    new-instance v0, Landroid/graphics/Path;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
+    iput p1, p0, Lvjf;->a:I
 
-    invoke-virtual {v0, p0, p1}, Landroid/graphics/Path;->moveTo(FF)V
+    sget v0, Legb;->d:I
 
-    invoke-virtual {v0, p2, p3}, Landroid/graphics/Path;->lineTo(FF)V
+    iput v0, p0, Lvjf;->b:I
 
-    return-object v0
-.end method
+    int-to-long v0, p1
 
-.method public static b(Ljava/lang/CharSequence;)Lwjf;
-    .locals 1
+    iput-wide v0, p0, Lvjf;->c:J
 
-    :try_start_0
-    new-instance v0, Landroid/text/SpannableString;
-
-    invoke-direct {v0, p0}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
-
-    invoke-static {v0}, Ly6j;->a(Landroid/text/Spannable;)V
-    :try_end_0
-    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    instance-of v0, p0, Landroid/text/Spannable;
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p0
-
-    check-cast v0, Landroid/text/Spannable;
-
-    invoke-static {v0}, Ly6j;->a(Landroid/text/Spannable;)V
-
-    :cond_0
-    new-instance v0, Landroid/text/SpannableString;
-
-    invoke-direct {v0, p0}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
-
-    :goto_0
-    new-instance p0, Lwjf;
-
-    invoke-direct {p0, v0}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
-
-    return-object p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, [B
+    const/4 v0, 0x1
 
-    return-object p1
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lvjf;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lvjf;
+
+    iget v1, p0, Lvjf;->a:I
+
+    iget p1, p1, Lvjf;->a:I
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public j(Law4;)Ljava/lang/Object;
+.method public final getItemId()J
     .locals 2
 
-    new-instance v0, Lb6j;
+    iget-wide v0, p0, Lvjf;->c:J
 
-    const-class v1, Lp7a;
+    return-wide v0
+.end method
 
-    invoke-virtual {p1, v1}, Law4;->a(Ljava/lang/Class;)Ljava/lang/Object;
+.method public final hashCode()I
+    .locals 1
 
-    move-result-object p1
+    iget v0, p0, Lvjf;->a:I
 
-    check-cast p1, Lp7a;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    invoke-direct {v0, p1}, Lb6j;-><init>(Lp7a;)V
+    move-result v0
+
+    return v0
+.end method
+
+.method public final i()I
+    .locals 1
+
+    iget v0, p0, Lvjf;->b:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "ShimmerMemberListItem(pos="
+
+    const-string v1, ")"
+
+    iget v2, p0, Lvjf;->a:I
+
+    invoke-static {v2, v0, v1}, Lsb6;->h(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

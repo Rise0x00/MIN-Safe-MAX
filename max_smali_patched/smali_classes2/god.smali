@@ -1,64 +1,36 @@
-.class public final Lgod;
+.class public abstract Lgod;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljod;
 
 
 # static fields
-.field public static final a:Lgod;
+.field public static media_picker_aspect_ratios_bottom_sheet_album_header:I = 0x7f130695
 
+.field public static media_picker_aspect_ratios_bottom_sheet_portrait_header:I = 0x7f130696
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static media_picker_aspect_ratios_bottom_sheet_square_ratio:I = 0x7f130697
 
-    new-instance v0, Lgod;
+.field public static media_picker_aspect_ratios_bottom_sheet_title:I = 0x7f130698
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static media_picker_default_toolbar_title:I = 0x7f130699
 
-    sput-object v0, Lgod;->a:Lgod;
+.field public static media_picker_default_toolbar_title_only_photo:I = 0x7f13069a
 
-    return-void
-.end method
+.field public static media_picker_empty_media_data:I = 0x7f13069b
 
+.field public static media_picker_story_toolbar_title:I = 0x7f13069c
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.field public static media_type_picker__permissions_dialog__button:I = 0x7f1306d8
 
-    const/4 v0, 0x1
+.field public static media_type_picker__permissions_dialog__camera_permission:I = 0x7f1306d9
 
-    if-ne p0, p1, :cond_0
+.field public static media_type_picker__permissions_dialog__gallery_camera_subtitle:I = 0x7f1306da
 
-    return v0
+.field public static media_type_picker__permissions_dialog__gallery_camera_title:I = 0x7f1306db
 
-    :cond_0
-    instance-of p1, p1, Lgod;
+.field public static media_type_picker__permissions_dialog__gallery_subtitle:I = 0x7f1306dc
 
-    if-nez p1, :cond_1
+.field public static media_type_picker__permissions_dialog__gallery_title:I = 0x7f1306dd
 
-    const/4 p1, 0x0
+.field public static media_type_picker__permissions_dialog__subtitle:I = 0x7f1306de
 
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x3c2612a4
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "PopUp"
-
-    return-object v0
-.end method
+.field public static media_type_picker__permissions_dialog__title:I = 0x7f1306df

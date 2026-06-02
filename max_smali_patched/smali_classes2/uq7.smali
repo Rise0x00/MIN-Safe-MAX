@@ -1,48 +1,76 @@
-.class public final Luq7;
-.super Lo84;
+.class public final synthetic Luq7;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic X:Lvq7;
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final synthetic b:Lwq7;
 
 
 # direct methods
-.method public constructor <init>(Lvq7;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lwq7;I)V
     .locals 0
 
-    iput-object p1, p0, Luq7;->X:Lvq7;
+    iput p2, p0, Luq7;->a:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Luq7;->b:Lwq7;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    iput-object p1, p0, Luq7;->d:Ljava/lang/Object;
+    iget p1, p0, Luq7;->a:I
 
-    iget p1, p0, Luq7;->o:I
+    packed-switch p1, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object p1, p0, Luq7;->b:Lwq7;
 
-    or-int/2addr p1, v0
+    iget-object p1, p1, Lwq7;->F0:Lsif;
 
-    iput p1, p0, Luq7;->o:I
+    sget-object v0, Lca4;->a:Lca4;
 
-    iget-object p1, p0, Luq7;->X:Lvq7;
+    invoke-virtual {p1, v0}, Lsif;->h(Ljava/lang/Object;)Z
 
-    const/4 v0, 0x0
+    return-void
 
-    invoke-virtual {p1, v0, p0}, Lvq7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :pswitch_0
+    iget-object p1, p0, Luq7;->b:Lwq7;
 
-    move-result-object p1
+    iget-object p1, p1, Lwq7;->F0:Lsif;
 
-    return-object p1
+    sget-object v0, Laa4;->a:Laa4;
+
+    invoke-virtual {p1, v0}, Lsif;->h(Ljava/lang/Object;)Z
+
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Luq7;->b:Lwq7;
+
+    iget-object p1, p1, Lwq7;->F0:Lsif;
+
+    sget-object v0, Lz94;->a:Lz94;
+
+    invoke-virtual {p1, v0}, Lsif;->h(Ljava/lang/Object;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

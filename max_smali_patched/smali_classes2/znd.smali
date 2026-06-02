@@ -1,64 +1,76 @@
-.class public final Lznd;
+.class public abstract Lznd;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lcod;
 
 
 # static fields
-.field public static final a:Lznd;
+.field public static oneme_fodlers_delete_folder_bottom_sheet_title:I = 0x7f1308a8
 
+.field public static oneme_folder_list_recommended_folders_section_title:I = 0x7f1308a9
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static oneme_folder_list_toolbar_title:I = 0x7f1308aa
 
-    new-instance v0, Lznd;
+.field public static oneme_folders_delete_folder_bottom_sheet_cancel_delete_button:I = 0x7f1308ab
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_folders_delete_folder_bottom_sheet_delete_button:I = 0x7f1308ac
 
-    sput-object v0, Lznd;->a:Lznd;
+.field public static oneme_folders_delete_folder_bottom_sheet_description:I = 0x7f1308ad
 
-    return-void
-.end method
+.field public static oneme_folders_edit_add_chats_button:I = 0x7f1308ae
 
+.field public static oneme_folders_edit_collapse:I = 0x7f1308af
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.field public static oneme_folders_edit_create_button:I = 0x7f1308b0
 
-    const/4 v0, 0x1
+.field public static oneme_folders_edit_delete_button:I = 0x7f1308b1
 
-    if-ne p0, p1, :cond_0
+.field public static oneme_folders_edit_expand:I = 0x7f1308b2
 
-    return v0
+.field public static oneme_folders_edit_filter_section:I = 0x7f1308b3
 
-    :cond_0
-    instance-of p1, p1, Lznd;
+.field public static oneme_folders_edit_filter_unmute:I = 0x7f1308b4
 
-    if-nez p1, :cond_1
+.field public static oneme_folders_edit_filter_unread:I = 0x7f1308b5
 
-    const/4 p1, 0x0
+.field public static oneme_folders_edit_members_description:I = 0x7f1308b6
 
-    return p1
+.field public static oneme_folders_edit_members_section:I = 0x7f1308b7
 
-    :cond_1
-    return v0
-.end method
+.field public static oneme_folders_edit_name_hint:I = 0x7f1308b8
 
-.method public final hashCode()I
-    .locals 1
+.field public static oneme_folders_edit_name_section:I = 0x7f1308b9
 
-    const v0, 0x1297a4a1
+.field public static oneme_folders_edit_toolbar_title:I = 0x7f1308ba
 
-    return v0
-.end method
+.field public static oneme_folders_error_max_count:I = 0x7f1308bb
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.field public static oneme_folders_list_create_folder:I = 0x7f1308bc
 
-    const-string v0, "CloseLockedControls"
+.field public static oneme_folders_list_menu_action_change:I = 0x7f1308bd
 
-    return-object v0
-.end method
+.field public static oneme_folders_list_menu_action_delete_folder:I = 0x7f1308be
+
+.field public static oneme_folders_picker_empty_title:I = 0x7f1308bf
+
+.field public static oneme_folders_picker_entity_search_hint:I = 0x7f1308c0
+
+.field public static oneme_folders_picker_entity_toolbar_title:I = 0x7f1308c1
+
+.field public static oneme_folders_picker_snackbar_add_bot_to_many_folders:I = 0x7f1308c2
+
+.field public static oneme_folders_picker_snackbar_add_bot_to_single_folder:I = 0x7f1308c3
+
+.field public static oneme_folders_picker_snackbar_add_bots_to_many_folders:I = 0x7f1308c4
+
+.field public static oneme_folders_picker_snackbar_add_channel_to_many_folders:I = 0x7f1308c5
+
+.field public static oneme_folders_picker_snackbar_add_channel_to_single_folder:I = 0x7f1308c6
+
+.field public static oneme_folders_picker_snackbar_add_chat_to_many_folders:I = 0x7f1308c7
+
+.field public static oneme_folders_picker_snackbar_add_chats_to_many_folders:I = 0x7f1308c8
+
+.field public static oneme_folders_picker_snackbar_add_many_chats_to_folder:I = 0x7f1308c9
+
+.field public static oneme_folders_picker_snackbar_add_single_chat_to_folder:I = 0x7f1308ca
+
+.field public static oneme_folders_picker_toolbar_title:I = 0x7f1308cb

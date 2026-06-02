@@ -1,86 +1,105 @@
-.class public final synthetic Lq32;
-.super Ljava/lang/Object;
+.class public final Lq32;
+.super Lb6;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lq02;
-
-.field public final synthetic c:Landroid/hardware/camera2/CameraDevice;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lq02;Landroid/hardware/camera2/CameraDevice;I)V
-    .locals 0
-
-    iput p3, p0, Lq32;->a:I
-
-    iput-object p1, p0, Lq32;->b:Lq02;
-
-    iput-object p2, p0, Lq32;->c:Landroid/hardware/camera2/CameraDevice;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final run()V
+.method public a()Lia8;
     .locals 2
 
-    iget v0, p0, Lq32;->a:I
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz5;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    iget-object v0, p0, Lq32;->b:Lq02;
+    const/16 v1, 0x2b3
 
-    iget-object v0, v0, Lq02;->b:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lz5;->d(I)Lakg;
 
-    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
+    move-result-object v0
 
-    iget-object v1, p0, Lq32;->c:Landroid/hardware/camera2/CameraDevice;
+    return-object v0
+.end method
 
-    invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onOpened(Landroid/hardware/camera2/CameraDevice;)V
+.method public b()Lia8;
+    .locals 2
 
-    return-void
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz5;
 
-    :pswitch_0
-    iget-object v0, p0, Lq32;->b:Lq02;
+    move-result-object v0
 
-    iget-object v0, v0, Lq02;->b:Ljava/lang/Object;
+    const/16 v1, 0x31
 
-    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
+    invoke-virtual {v0, v1}, Lz5;->d(I)Lakg;
 
-    iget-object v1, p0, Lq32;->c:Landroid/hardware/camera2/CameraDevice;
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onDisconnected(Landroid/hardware/camera2/CameraDevice;)V
+    return-object v0
+.end method
 
-    return-void
+.method public c()Lidb;
+    .locals 2
 
-    :pswitch_1
-    iget-object v0, p0, Lq32;->b:Lq02;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz5;
 
-    iget-object v0, v0, Lq02;->b:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
+    const/16 v1, 0x1e
 
-    iget-object v1, p0, Lq32;->c:Landroid/hardware/camera2/CameraDevice;
+    invoke-virtual {v0, v1}, Lz5;->c(I)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onClosed(Landroid/hardware/camera2/CameraDevice;)V
+    move-result-object v0
 
-    return-void
+    check-cast v0, Lidb;
 
-    nop
+    return-object v0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public d()Lia8;
+    .locals 2
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz5;
+
+    move-result-object v0
+
+    const/16 v1, 0x1a
+
+    invoke-virtual {v0, v1}, Lz5;->d(I)Lakg;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public e()Lia8;
+    .locals 2
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz5;
+
+    move-result-object v0
+
+    const/16 v1, 0x17
+
+    invoke-virtual {v0, v1}, Lz5;->d(I)Lakg;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public f()Lcsc;
+    .locals 2
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz5;
+
+    move-result-object v0
+
+    const/16 v1, 0x41
+
+    invoke-virtual {v0, v1}, Lz5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcsc;
+
+    return-object v0
 .end method

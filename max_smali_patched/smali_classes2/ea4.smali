@@ -1,60 +1,85 @@
-.class public final synthetic Lea4;
+.class public final Lea4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lby3;
+.implements Lfa4;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/factory/StartCallParams;
+.field public final a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/factory/StartCallParams;I)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput p2, p0, Lea4;->a:I
-
-    iput-object p1, p0, Lea4;->b:Lru/ok/android/externcalls/sdk/factory/StartCallParams;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lea4;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lea4;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lea4;
+
+    iget v1, p0, Lea4;->a:I
+
+    iget p1, p1, Lea4;->a:I
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
     iget v0, p0, Lea4;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    iget-object v0, p0, Lea4;->b:Lru/ok/android/externcalls/sdk/factory/StartCallParams;
+    move-result v0
 
-    check-cast p1, Ljava/lang/Throwable;
+    return v0
+.end method
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->c(Lru/ok/android/externcalls/sdk/factory/StartCallParams;Ljava/lang/Throwable;)V
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    return-void
+    const-string v0, "StopSeekPlayerProgress(progress="
 
-    :pswitch_0
-    iget-object v0, p0, Lea4;->b:Lru/ok/android/externcalls/sdk/factory/StartCallParams;
+    const-string v1, ")"
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/Conversation;
+    iget v2, p0, Lea4;->a:I
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->i(Lru/ok/android/externcalls/sdk/factory/StartCallParams;Lru/ok/android/externcalls/sdk/Conversation;)V
+    invoke-static {v2, v0, v1}, Lsb6;->h(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    return-void
+    move-result-object v0
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

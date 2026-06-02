@@ -1,153 +1,93 @@
 .class public final Lzf0;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Landroid/content/Context;
-
-.field public final synthetic Y:Llch;
-
-.field public final synthetic o:Lag0;
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lag0;Landroid/content/Context;Llch;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lzf0;->o:Lag0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lzf0;->X:Landroid/content/Context;
-
-    iput-object p3, p0, Lzf0;->Y:Llch;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lzf0;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Lzb4;
+    if-ne p1, p0, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 p1, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lzf0;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return p1
 
-    move-result-object p1
+    :cond_0
+    instance-of v0, p1, Lzf0;
+
+    if-eqz v0, :cond_1
 
     check-cast p1, Lzf0;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget-object v0, p0, Lzf0;->a:Ljava/lang/Object;
 
-    invoke-virtual {p1, p2}, Lzf0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p1, Lzf0;->a:Ljava/lang/Object;
 
-    move-result-object p1
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    return-object p1
+    move-result p1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+.method public final hashCode()I
+    .locals 2
 
-    new-instance p1, Lzf0;
+    iget-object v0, p0, Lzf0;->a:Ljava/lang/Object;
 
-    iget-object v0, p0, Lzf0;->X:Landroid/content/Context;
-
-    iget-object v1, p0, Lzf0;->Y:Llch;
-
-    iget-object v2, p0, Lzf0;->o:Lag0;
-
-    invoke-direct {p1, v2, v0, v1, p2}, Lzf0;-><init>(Lag0;Landroid/content/Context;Llch;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lzf0;->o:Lag0;
-
-    iget-object v0, p1, Lag0;->b:Lo58;
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkz4;
-
-    invoke-virtual {v0}, Lkz4;->a()Z
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    const/4 v1, 0x0
+    const v1, 0xf4243
 
-    if-eqz v0, :cond_0
+    xor-int/2addr v0, v1
 
-    return-object v1
+    return v0
+.end method
 
-    :cond_0
-    iget-object v0, p0, Lzf0;->X:Landroid/content/Context;
-
-    iget-object v2, p0, Lzf0;->Y:Llch;
-
-    iget-object v3, v2, Llch;->a:Ljava/lang/String;
-
-    :try_start_0
-    invoke-virtual {v0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->available()I
-
-    move-result v3
-
-    new-array v3, v3, [B
-
-    invoke-virtual {v0, v3}, Ljava/io/InputStream;->read([B)I
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
-
-    invoke-static {p1, v3, v2}, Lag0;->a(Lag0;[BLlch;)Lh7g;
-
-    move-result-object p1
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p1
-
-    :catch_0
-    move-exception p1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v2, "load assets failed: "
+    const-string v1, "Identifier{value="
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lzf0;->a:Ljava/lang/Object;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    const-string v0, "BackgroundDataLoader"
-
-    invoke-static {v0, p1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v1
+    return-object v0
 .end method

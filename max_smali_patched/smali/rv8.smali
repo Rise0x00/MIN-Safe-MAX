@@ -4,14 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(Ljava/lang/Object;)V
-.end method
-
-.method public abstract b()V
-.end method
-
-.method public abstract c(Lo25;)V
-.end method
-
-.method public abstract onError(Ljava/lang/Throwable;)V
+.method public abstract c(Ln7c;)Ljava/lang/Object;
 .end method

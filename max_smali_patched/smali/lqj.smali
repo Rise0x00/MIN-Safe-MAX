@@ -2,119 +2,87 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqxj;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Ljava/util/concurrent/Executor;
 
-.field public final b:I
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Ly4b;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+.method public constructor <init>(Ljava/util/concurrent/Executor;Ly4b;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Llqj;->a:Ljava/lang/String;
+    new-instance v0, Ljava/lang/Object;
 
-    iput p2, p0, Llqj;->b:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Llqj;->b:Ljava/lang/Object;
+
+    iput-object p1, p0, Llqj;->a:Ljava/util/concurrent/Executor;
+
+    iput-object p2, p0, Llqj;->c:Ly4b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p1, p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Llqj;
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Llqj;
-
-    iget-object v0, p0, Llqj;->a:Ljava/lang/String;
-
-    iget-object v1, p1, Llqj;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget v0, p0, Llqj;->b:I
-
-    iget p1, p1, Llqj;->b:I
-
-    if-ne v0, p1, :cond_1
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Llqj;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const v1, 0xf4243
-
-    xor-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    xor-int/lit16 v0, v0, 0x4cf
-
-    mul-int/2addr v0, v1
-
-    iget v1, p0, Llqj;->b:I
-
-    xor-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final b(Lcom/google/android/gms/tasks/Task;)V
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->h()Z
 
-    const-string v1, "MLKitLoggingOptions{libraryName="
+    move-result v0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-nez v0, :cond_0
 
-    iget-object v1, p0, Llqj;->a:Ljava/lang/String;
+    move-object v0, p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v0, Le4k;
 
-    const-string v1, ", enableFirelog=true, firelogEventType="
+    iget-boolean v0, v0, Le4k;->d:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_0
 
-    iget v1, p0, Llqj;->b:I
+    iget-object v0, p0, Llqj;->b:Ljava/lang/Object;
 
-    const-string v2, "}"
+    monitor-enter v0
 
-    invoke-static {v0, v1, v2}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    :try_start_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v0
+    iget-object v0, p0, Llqj;->a:Ljava/util/concurrent/Executor;
 
-    return-object v0
+    new-instance v1, Lr0;
+
+    const/16 v2, 0xd
+
+    invoke-direct {v1, p0, v2, p1}, Lr0;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+
+    :cond_0
+    return-void
 .end method

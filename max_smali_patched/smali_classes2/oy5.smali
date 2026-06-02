@@ -1,186 +1,317 @@
 .class public final Loy5;
-.super Ljava/lang/Object;
+.super Ltm5;
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Lgug;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Ljava/lang/Object;
 
-.field public final synthetic b:Lpy5;
+.field public final Y:Ljava/lang/Object;
 
-.field public final synthetic c:Lru/ok/tamtam/android/prefs/PmsKey;
+.field public final Z:Ljava/lang/Object;
+
+.field public final d:I
+
+.field public o:Landroid/animation/AnimatorSet;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lpy5;Lru/ok/tamtam/android/prefs/PmsKey;I)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 2
 
-    iput p3, p0, Loy5;->a:I
+    new-instance v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
-    iput-object p1, p0, Loy5;->b:Lpy5;
+    sget v1, Lcab;->a:I
 
-    iput-object p2, p0, Loy5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
+    invoke-direct {v0, p1, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;-><init>(Landroid/content/Context;I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Ltm5;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
+
+    iput p2, p0, Loy5;->d:I
+
+    new-instance p1, Lx54;
+
+    const/16 p2, 0x12
+
+    invoke-direct {p1, p2}, Lx54;-><init>(I)V
+
+    const/4 p2, 0x3
+
+    invoke-static {p2, p1}, Ltf3;->M(ILxs6;)Lia8;
+
+    move-result-object p1
+
+    iput-object p1, p0, Loy5;->X:Ljava/lang/Object;
+
+    new-instance p1, Lqg;
+
+    const/4 v1, 0x3
+
+    invoke-direct {p1, v0, v1}, Lqg;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;I)V
+
+    invoke-static {p2, p1}, Ltf3;->M(ILxs6;)Lia8;
+
+    move-result-object p1
+
+    iput-object p1, p0, Loy5;->Y:Ljava/lang/Object;
+
+    new-instance p1, Lqg;
+
+    const/4 v1, 0x4
+
+    invoke-direct {p1, v0, v1}, Lqg;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;I)V
+
+    invoke-static {p2, p1}, Ltf3;->M(ILxs6;)Lia8;
+
+    move-result-object p1
+
+    iput-object p1, p0, Loy5;->Z:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
+.method public final a()V
+    .locals 1
 
-    iget v0, p0, Loy5;->a:I
+    iget-object v0, p0, Loy5;->o:Landroid/animation/AnimatorSet;
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    invoke-virtual {v0}, Landroid/animation/Animator;->end()V
 
-    iget-object v1, p0, Loy5;->b:Lpy5;
+    :cond_0
+    return-void
+.end method
 
-    iget-object v2, p0, Loy5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
+.method public final b()V
+    .locals 1
 
-    invoke-virtual {v1, v2}, Lege;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
+    iget-object v0, p0, Loy5;->o:Landroid/animation/AnimatorSet;
 
-    move-result v3
+    if-eqz v0, :cond_0
 
-    const-class v4, Ljava/lang/Boolean;
+    invoke-virtual {v0}, Landroid/animation/Animator;->start()V
 
-    if-eqz v3, :cond_0
+    :cond_0
+    return-void
+.end method
 
-    iget-object v1, v1, Lx3;->g:Lr58;
+.method public final c(Lone/me/sdk/richvector/VectorPath;IIF)Landroid/animation/ValueAnimator;
+    .locals 8
 
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    if-eqz p1, :cond_0
 
-    move-result-object v2
-
-    invoke-static {v4}, Lctd;->a(Ljava/lang/Class;)Lrd3;
-
-    move-result-object v3
-
-    invoke-static {v1, v2, v0, v3}, Lppj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lrd3;)Ljava/lang/Object;
+    filled-new-array {p2, p3}, [I
 
     move-result-object v0
+
+    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofArgb([I)Landroid/animation/ValueAnimator;
+
+    move-result-object v0
+
+    const-wide/16 v1, 0x1f4
+
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    const/4 v1, -0x1
+
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setRepeatCount(I)V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setRepeatMode(I)V
+
+    iget-object v1, p0, Loy5;->X:Ljava/lang/Object;
+
+    invoke-interface {v1}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/animation/PathInterpolator;
+
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    new-instance v4, Landroid/animation/ArgbEvaluator;
+
+    invoke-direct {v4}, Landroid/animation/ArgbEvaluator;-><init>()V
+
+    new-instance v2, Lny5;
+
+    move-object v7, p1
+
+    move v5, p2
+
+    move v6, p3
+
+    move v3, p4
+
+    invoke-direct/range {v2 .. v7}, Lny5;-><init>(FLandroid/animation/ArgbEvaluator;IILone/me/sdk/richvector/VectorPath;)V
+
+    invoke-virtual {v0, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    return-object v0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Required value was null."
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final onThemeChanged(Ldqb;)V
+    .locals 12
+
+    iget-object p1, p0, Ltm5;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    const-string v0, "_R_G_L_2_G_D_0_P_0"
+
+    iget v1, p0, Loy5;->d:I
+
+    invoke-static {p1, v0, v1}, Lg84;->w0(Lbph;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_0_G_D_0_P_0"
+
+    invoke-static {p1, v0, v1}, Lg84;->w0(Lbph;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_1_G_D_0_P_0"
+
+    invoke-static {p1, v0, v1}, Lg84;->w0(Lbph;Ljava/lang/String;I)V
+
+    shr-int/lit8 p1, v1, 0x18
+
+    and-int/lit16 p1, p1, 0xff
+
+    int-to-float p1, p1
+
+    const/high16 v0, 0x437f0000    # 255.0f
+
+    div-float/2addr p1, v0
+
+    iget-object v0, p0, Loy5;->o:Landroid/animation/AnimatorSet;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/animation/Animator;->isRunning()Z
+
+    move-result v0
+
+    if-ne v0, v3, :cond_0
+
+    move v0, v3
 
     goto :goto_0
 
     :cond_0
-    iget-object v1, v1, Lege;->h:Lidc;
+    move v0, v2
 
-    iget-object v3, v1, Lidc;->h:Lgr5;
+    :goto_0
+    iget-object v4, p0, Loy5;->o:Landroid/animation/AnimatorSet;
 
-    iget-object v3, v3, Lx3;->g:Lr58;
+    if-eqz v4, :cond_1
 
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    invoke-virtual {v4}, Landroid/animation/Animator;->cancel()V
+
+    :cond_1
+    new-instance v4, Landroid/animation/AnimatorSet;
+
+    invoke-direct {v4}, Landroid/animation/AnimatorSet;-><init>()V
+
+    iget-object v5, p0, Loy5;->Y:Ljava/lang/Object;
+
+    invoke-interface {v5}, Lia8;->getValue()Ljava/lang/Object;
 
     move-result-object v5
 
-    invoke-virtual {v3, v5}, Lr58;->contains(Ljava/lang/String;)Z
+    check-cast v5, Lone/me/sdk/richvector/VectorPath;
 
-    move-result v3
+    const/high16 v6, 0x3f800000    # 1.0f
 
-    if-eqz v3, :cond_1
+    cmpl-float v7, v6, p1
 
-    iget-object v1, v1, Lidc;->h:Lgr5;
+    if-lez v7, :cond_2
 
-    :cond_1
-    iget-object v1, v1, Lx3;->g:Lr58;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v4}, Lctd;->a(Ljava/lang/Class;)Lrd3;
-
-    move-result-object v3
-
-    invoke-static {v1, v2, v0, v3}, Lppj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lrd3;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :pswitch_0
-    const-wide/16 v0, 0x0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    iget-object v1, p0, Loy5;->b:Lpy5;
-
-    iget-object v2, p0, Loy5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    invoke-virtual {v1, v2}, Lege;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
-
-    move-result v3
-
-    const-class v4, Ljava/lang/Long;
-
-    if-eqz v3, :cond_2
-
-    iget-object v1, v1, Lx3;->g:Lr58;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v4}, Lctd;->a(Ljava/lang/Class;)Lrd3;
-
-    move-result-object v3
-
-    invoke-static {v1, v2, v0, v3}, Lppj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lrd3;)Ljava/lang/Object;
-
-    move-result-object v0
+    move v8, p1
 
     goto :goto_1
 
     :cond_2
-    iget-object v1, v1, Lege;->h:Lidc;
+    move v8, v6
 
-    iget-object v3, v1, Lidc;->h:Lgr5;
+    :goto_1
+    invoke-static {v1, v8}, Lhk0;->y0(IF)I
 
-    iget-object v3, v3, Lx3;->g:Lr58;
+    move-result v8
 
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    const/4 v9, 0x0
+
+    invoke-static {v1, v9}, Lhk0;->y0(IF)I
+
+    move-result v10
+
+    const v11, 0x3f2a7efa    # 0.666f
+
+    invoke-virtual {p0, v5, v8, v10, v11}, Loy5;->c(Lone/me/sdk/richvector/VectorPath;IIF)Landroid/animation/ValueAnimator;
 
     move-result-object v5
 
-    invoke-virtual {v3, v5}, Lr58;->contains(Ljava/lang/String;)Z
+    iget-object v8, p0, Loy5;->Z:Ljava/lang/Object;
 
-    move-result v3
+    invoke-interface {v8}, Lia8;->getValue()Ljava/lang/Object;
 
-    if-eqz v3, :cond_3
+    move-result-object v8
 
-    iget-object v1, v1, Lidc;->h:Lgr5;
+    check-cast v8, Lone/me/sdk/richvector/VectorPath;
+
+    invoke-static {v1, v9}, Lhk0;->y0(IF)I
+
+    move-result v9
+
+    if-lez v7, :cond_3
+
+    goto :goto_2
 
     :cond_3
-    iget-object v1, v1, Lx3;->g:Lr58;
+    move p1, v6
 
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    :goto_2
+    invoke-static {v1, p1}, Lhk0;->y0(IF)I
 
-    move-result-object v2
+    move-result p1
 
-    invoke-static {v4}, Lctd;->a(Ljava/lang/Class;)Lrd3;
+    const v1, 0x3ea66666    # 0.325f
 
-    move-result-object v3
+    invoke-virtual {p0, v8, v9, p1, v1}, Loy5;->c(Lone/me/sdk/richvector/VectorPath;IIF)Landroid/animation/ValueAnimator;
 
-    invoke-static {v1, v2, v0, v3}, Lppj;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lrd3;)Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v0
+    const/4 v1, 0x2
 
-    :goto_1
-    return-object v0
+    new-array v1, v1, [Landroid/animation/Animator;
 
-    nop
+    aput-object v5, v1, v2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    aput-object p1, v1, v3
+
+    invoke-virtual {v4, v1}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
+
+    iput-object v4, p0, Loy5;->o:Landroid/animation/AnimatorSet;
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {v4}, Landroid/animation/Animator;->start()V
+
+    :cond_4
+    return-void
 .end method

@@ -1,117 +1,62 @@
-.class public final Lyfg;
+.class public interface abstract Lyfg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Ljava/util/regex/Pattern;
-
-.field public static final e:Lsk7;
-
-.field public static final f:Lsk7;
-
-.field public static final g:Lsk7;
-
-.field public static final h:Lsk7;
+# interfaces
+.implements Ljava/io/Closeable;
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    const-string v0, "\\s+"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lyfg;->d:Ljava/util/regex/Pattern;
-
-    const-string v0, "auto"
-
-    const-string v1, "none"
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const/4 v1, 0x2
-
-    invoke-static {v1, v0}, Lsk7;->i(I[Ljava/lang/Object;)Lsk7;
-
-    move-result-object v0
-
-    sput-object v0, Lyfg;->e:Lsk7;
-
-    const-string v0, "dot"
-
-    const-string v2, "sesame"
-
-    const-string v3, "circle"
-
-    filled-new-array {v0, v2, v3}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v2, v0}, Lsk7;->i(I[Ljava/lang/Object;)Lsk7;
-
-    move-result-object v0
-
-    sput-object v0, Lyfg;->f:Lsk7;
-
-    const-string v0, "filled"
-
-    const-string v3, "open"
-
-    filled-new-array {v0, v3}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lsk7;->i(I[Ljava/lang/Object;)Lsk7;
-
-    move-result-object v0
-
-    sput-object v0, Lyfg;->g:Lsk7;
-
-    const-string v0, "before"
-
-    const-string v1, "outside"
-
-    const-string v3, "after"
-
-    filled-new-array {v3, v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Lsk7;->i(I[Ljava/lang/Object;)Lsk7;
-
-    move-result-object v0
-
-    sput-object v0, Lyfg;->h:Lsk7;
-
-    return-void
+# virtual methods
+.method public abstract A(Ljava/lang/String;)V
 .end method
 
-.method public constructor <init>(III)V
-    .locals 0
+.method public abstract D(Ljava/lang/String;)Lpr6;
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract F()V
+.end method
 
-    iput p1, p0, Lyfg;->a:I
+.method public abstract M()Z
+.end method
 
-    iput p2, p0, Lyfg;->b:I
+.method public abstract P()V
+.end method
 
-    iput p3, p0, Lyfg;->c:I
+.method public abstract Q(Ljava/lang/String;[Ljava/lang/Object;)V
+.end method
 
-    return-void
+.method public abstract T()V
+.end method
+
+.method public abstract U(Ljava/lang/String;ILandroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/Object;)I
+.end method
+
+.method public abstract a0(Ljava/lang/String;)Landroid/database/Cursor;
+.end method
+
+.method public abstract d0()V
+.end method
+
+.method public abstract i0(Ljava/lang/String;[Ljava/lang/Object;)I
+.end method
+
+.method public abstract isOpen()Z
+.end method
+
+.method public abstract p()Z
+.end method
+
+.method public abstract q0()Z
+.end method
+
+.method public abstract u()V
+.end method
+
+.method public abstract w(Ldgg;)Landroid/database/Cursor;
+.end method
+
+.method public abstract x(Ljava/lang/String;[Ljava/lang/Object;)Landroid/database/Cursor;
+.end method
+
+.method public abstract z()V
 .end method

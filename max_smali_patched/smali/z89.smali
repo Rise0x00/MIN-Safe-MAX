@@ -3,19 +3,37 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lz89;
+# instance fields
+.field public a:J
+
+.field public b:J
+
+.field public c:J
+
+.field public d:F
+
+.field public e:F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Lz89;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
-    sput-object v0, Lz89;->a:Lz89;
+    iput-wide v0, p0, Lz89;->a:J
+
+    iput-wide v0, p0, Lz89;->b:J
+
+    iput-wide v0, p0, Lz89;->c:J
+
+    const v0, -0x800001
+
+    iput v0, p0, Lz89;->d:F
+
+    iput v0, p0, Lz89;->e:F
 
     return-void
 .end method

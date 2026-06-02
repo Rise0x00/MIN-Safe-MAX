@@ -1,19 +1,32 @@
-.class public final Lgq5;
+.class public interface abstract Lgq5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lqq5;
+# virtual methods
+.method public abstract a(Lj80;)V
+.end method
 
+.method public abstract b(Lt9e;)Lcvf;
+.end method
 
-# direct methods
-.method public constructor <init>(Lqq5;)V
-    .locals 0
+.method public abstract c()V
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract cancel()V
+.end method
 
-    iput-object p1, p0, Lgq5;->a:Lqq5;
+.method public abstract d(Lt9e;)J
+.end method
 
-    return-void
+.method public abstract e(Z)Ls9e;
+.end method
+
+.method public abstract f()Lmwd;
+.end method
+
+.method public abstract g()V
+.end method
+
+.method public abstract h(Lj80;J)Lksf;
 .end method

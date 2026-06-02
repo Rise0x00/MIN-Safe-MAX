@@ -1,72 +1,154 @@
 .class public final Lq77;
-.super Ls77;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Lq77;
+
+
 # instance fields
-.field public final a:Ljava/lang/CharSequence;
+.field public final a:Z
+
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lq77;
+
+    invoke-direct {v0}, Lq77;-><init>()V
+
+    sput-object v0, Lq77;->c:Lq77;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lq77;->a:Ljava/lang/CharSequence;
+    const/4 v0, 0x1
 
+    iput-boolean v0, p0, Lq77;->a:Z
+
+    iput-boolean v0, p0, Lq77;->b:Z
+
+    const-string v0, "  "
+
+    invoke-static {v0}, Lsr6;->d(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, ""
+
+    invoke-static {v0}, Lsr6;->d(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-static {v0}, Lsr6;->d(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-static {v0}, Lsr6;->d(Ljava/lang/String;)Z
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final a(Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    .locals 4
 
-    const/4 v0, 0x1
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-ne p0, p1, :cond_0
+    const-string v0, "bytesPerLine = "
 
-    return v0
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    instance-of v1, p1, Lq77;
+    const v0, 0x7fffffff
 
-    const/4 v2, 0x0
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    if-nez v1, :cond_1
+    const-string v1, ","
 
-    return v2
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    check-cast p1, Lq77;
+    const/16 v2, 0xa
 
-    iget-object v1, p0, Lq77;->a:Ljava/lang/CharSequence;
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-object p1, p1, Lq77;->a:Ljava/lang/CharSequence;
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-string v3, "bytesPerGroup = "
 
-    move-result p1
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-nez p1, :cond_2
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return v2
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_2
-    return v0
-.end method
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-.method public final hashCode()I
-    .locals 1
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lq77;->a:Ljava/lang/CharSequence;
+    const-string v0, "groupSeparator = \""
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v0
+    const-string v0, "  "
 
-    return v0
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\","
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "byteSeparator = \""
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ""
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    const-string v3, "bytePrefix = \""
+
+    invoke-static {p1, p2, v3, v1, v0}, Lrtc;->B(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, "byteSuffix = \""
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, "\""
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    return-void
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -74,13 +156,19 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Name(name="
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v1, "BytesHexFormat(\n"
 
-    iget-object v1, p0, Lq77;->a:Ljava/lang/CharSequence;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v1, "    "
+
+    invoke-virtual {p0, v0, v1}, Lq77;->a(Ljava/lang/StringBuilder;Ljava/lang/String;)V
+
+    const/16 v1, 0xa
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 

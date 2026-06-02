@@ -1,79 +1,45 @@
-.class public final Lwvf;
-.super Llm4;
+.class public abstract Lwvf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final b:Lwvf;
-
-.field public static final c:Lhm4;
-
-.field public static final d:Lhm4;
-
-.field public static final e:Lhm4;
-
-.field public static final f:Lhm4;
+.field public static final a:Ljava/util/regex/Pattern;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 1
 
-    new-instance v0, Lwvf;
+    const-string v0, "(&#13;)?&#10;"
 
-    invoke-direct {v0}, Llm4;-><init>()V
-
-    sput-object v0, Lwvf;->b:Lwvf;
-
-    const/4 v1, 0x0
-
-    new-array v2, v1, [Ljava/lang/String;
-
-    const-string v3, ":stickers/settings"
-
-    const/4 v4, 0x0
-
-    const/16 v5, 0xe
-
-    invoke-static {v0, v3, v2, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
-
-    move-result-object v2
-
-    sput-object v2, Lwvf;->c:Lhm4;
-
-    const-string v2, ":stickers/recent"
-
-    new-array v3, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
-
-    move-result-object v2
-
-    sput-object v2, Lwvf;->d:Lhm4;
-
-    const-string v2, ":stickers/favorite"
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v1, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
-
-    move-result-object v1
-
-    sput-object v1, Lwvf;->e:Lhm4;
-
-    const-string v1, "set_id"
-
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, ":stickers/set"
-
-    invoke-static {v0, v2, v1, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
-    sput-object v0, Lwvf;->f:Lhm4;
+    sput-object v0, Lwvf;->a:Ljava/util/regex/Pattern;
 
     return-void
+.end method
+
+.method public static a(Ljava/lang/CharSequence;)Ljava/lang/String;
+    .locals 1
+
+    invoke-static {p0}, Landroid/text/Html;->escapeHtml(Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object p0
+
+    sget-object v0, Lwvf;->a:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object p0
+
+    const-string v0, "<br>"
+
+    invoke-virtual {p0, v0}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

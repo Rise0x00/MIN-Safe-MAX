@@ -1,55 +1,113 @@
 .class public final Ly54;
-.super Ld3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Ly54;
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:Lzp0;
+
+.field public final c:Lx54;
+
+.field public final d:Lzs6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(I)V
+    .locals 1
 
-    new-instance v0, Ly54;
+    iput p1, p0, Ly54;->a:I
 
-    const/16 v1, 0xc
+    packed-switch p1, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ld3;-><init>(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Ly54;->c:Ly54;
+    new-instance p1, Lzp0;
 
-    return-void
-.end method
+    const/16 v0, 0x8
 
+    invoke-direct {p1, v0}, Lzp0;-><init>(I)V
 
-# virtual methods
-.method public final L0(JZ)V
-    .locals 3
+    iput-object p1, p0, Ly54;->b:Lzp0;
 
-    invoke-virtual {p0}, Ld3;->p0()Ljm4;
+    new-instance p1, Lbp1;
 
-    move-result-object v0
+    const/16 v0, 0x1a
 
-    const-string v1, ":call-user?opponent_id="
+    invoke-direct {p1, v0}, Lbp1;-><init>(I)V
 
-    const-string v2, "&video_enabled="
+    iput-object p1, p0, Ly54;->d:Lzs6;
 
-    invoke-static {p1, p2, v1, v2, p3}, Lhc0;->k(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    new-instance p1, Lx54;
 
-    move-result-object p1
+    const/4 v0, 0x0
 
-    const-string p2, "&microphone_enabled=true"
+    invoke-direct {p1, v0}, Lx54;-><init>(I)V
 
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    invoke-virtual {v0, p1, p2}, Ljm4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    iput-object p1, p0, Ly54;->c:Lx54;
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p1, Lzp0;
+
+    const/16 v0, 0x8
+
+    invoke-direct {p1, v0}, Lzp0;-><init>(I)V
+
+    iput-object p1, p0, Ly54;->b:Lzp0;
+
+    new-instance p1, Lepa;
+
+    const/4 v0, 0x5
+
+    invoke-direct {p1, v0}, Lepa;-><init>(I)V
+
+    iput-object p1, p0, Ly54;->d:Lzs6;
+
+    new-instance p1, Lx54;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Lx54;-><init>(I)V
+
+    iput-object p1, p0, Ly54;->c:Lx54;
+
+    return-void
+
+    :pswitch_1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p1, Lzp0;
+
+    const/16 v0, 0x8
+
+    invoke-direct {p1, v0}, Lzp0;-><init>(I)V
+
+    iput-object p1, p0, Ly54;->b:Lzp0;
+
+    new-instance p1, Li74;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Li74;-><init>(I)V
+
+    iput-object p1, p0, Ly54;->d:Lzs6;
+
+    new-instance p1, Lx54;
+
+    invoke-direct {p1, v0}, Lx54;-><init>(I)V
+
+    iput-object p1, p0, Ly54;->c:Lx54;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

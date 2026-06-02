@@ -1,157 +1,219 @@
 .class public final Lyz7;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public final synthetic X:Lv1i;
+.field public final a:F
 
-.field public o:I
+.field public final b:F
+
+.field public final c:F
+
+.field public final d:F
+
+.field public final e:Lb3e;
+
+.field public final f:I
+
+.field public final g:Landroid/animation/ValueAnimator;
+
+.field public h:Z
+
+.field public i:F
+
+.field public j:F
+
+.field public k:Z
+
+.field public l:Z
+
+.field public m:F
+
+.field public final synthetic n:I
+
+.field public final synthetic o:Lb3e;
+
+.field public final synthetic p:Lc08;
 
 
 # direct methods
-.method public constructor <init>(Lv1i;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lc08;Lb3e;IFFFFILb3e;)V
     .locals 0
 
-    iput-object p1, p0, Lyz7;->X:Lv1i;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lyz7;->p:Lc08;
+
+    iput p8, p0, Lyz7;->n:I
+
+    iput-object p9, p0, Lyz7;->o:Lb3e;
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lyz7;->k:Z
+
+    iput-boolean p1, p0, Lyz7;->l:Z
+
+    iput p3, p0, Lyz7;->f:I
+
+    iput-object p2, p0, Lyz7;->e:Lb3e;
+
+    iput p4, p0, Lyz7;->a:F
+
+    iput p5, p0, Lyz7;->b:F
+
+    iput p6, p0, Lyz7;->c:F
+
+    iput p7, p0, Lyz7;->d:F
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-array p1, p1, [F
+
+    fill-array-data p1, :array_0
+
+    invoke-static {p1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lyz7;->g:Landroid/animation/ValueAnimator;
+
+    new-instance p3, Ltp0;
+
+    const/4 p4, 0x5
+
+    invoke-direct {p3, p4, p0}, Ltp0;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, p3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    iget-object p2, p2, Lb3e;->a:Landroid/view/View;
+
+    invoke-virtual {p1, p2}, Landroid/animation/Animator;->setTarget(Ljava/lang/Object;)V
+
+    invoke-virtual {p1, p0}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lyz7;->m:F
 
     return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lyz7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lyz7;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lyz7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a(Landroid/animation/Animator;)V
     .locals 1
 
-    new-instance p1, Lyz7;
+    iget-boolean p1, p0, Lyz7;->l:Z
 
-    iget-object v0, p0, Lyz7;->X:Lv1i;
+    const/4 v0, 0x1
 
-    invoke-direct {p1, v0, p2}, Lyz7;-><init>(Lv1i;Lkotlin/coroutines/Continuation;)V
+    if-nez p1, :cond_0
 
-    return-object p1
+    iget-object p1, p0, Lyz7;->e:Lb3e;
+
+    invoke-virtual {p1, v0}, Lb3e;->A(Z)V
+
+    :cond_0
+    iput-boolean v0, p0, Lyz7;->l:Z
+
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
+
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    iput p1, p0, Lyz7;->m:F
+
+    return-void
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 4
 
-    iget v0, p0, Lyz7;->o:I
+    invoke-virtual {p0, p1}, Lyz7;->a(Landroid/animation/Animator;)V
 
-    const/4 v1, 0x1
+    iget-boolean p1, p0, Lyz7;->k:Z
 
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    if-eqz p1, :cond_0
 
     goto :goto_1
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget p1, p0, Lyz7;->n:I
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-object v0, p0, Lyz7;->o:Lb3e;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, Lyz7;->p:Lc08;
 
-    throw p1
+    if-gtz p1, :cond_1
 
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iget-object p1, v1, Lc08;->D0:Lb08;
 
-    iget-object p1, p0, Lyz7;->X:Lv1i;
+    iget-object v2, v1, Lc08;->I0:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object p1, p1, Lv1i;->c:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :cond_2
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    const-string v2, "WebAppBackButtonPressed"
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v3, v0
-
-    check-cast v3, Ld08;
-
-    invoke-interface {v3}, Ld08;->c()Ljava/util/Set;
-
-    move-result-object v3
-
-    invoke-interface {v3, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
+    invoke-virtual {p1, v2, v0}, Lb08;->b(Landroidx/recyclerview/widget/RecyclerView;Lb3e;)V
 
     goto :goto_0
 
-    :cond_3
-    const/4 v0, 0x0
+    :cond_1
+    iget-object v2, v1, Lc08;->a:Ljava/util/ArrayList;
 
+    iget-object v3, v0, Lb3e;->a:Landroid/view/View;
+
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, p0, Lyz7;->h:Z
+
+    if-lez p1, :cond_2
+
+    iget-object v2, v1, Lc08;->I0:Landroidx/recyclerview/widget/RecyclerView;
+
+    new-instance v3, Lpu6;
+
+    invoke-direct {v3, v1, p0, p1}, Lpu6;-><init>(Lc08;Lyz7;I)V
+
+    invoke-virtual {v2, v3}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    :cond_2
     :goto_0
-    check-cast v0, Ld08;
+    iget-object p1, v1, Lc08;->N0:Landroid/view/View;
 
-    if-eqz v0, :cond_4
+    iget-object v0, v0, Lb3e;->a:Landroid/view/View;
 
-    iput v1, p0, Lyz7;->o:I
+    if-ne p1, v0, :cond_3
 
-    const-string p1, "{}"
+    invoke-virtual {v1, v0}, Lc08;->s(Landroid/view/View;)V
 
-    invoke-interface {v0, v2, p1, p0}, Ld08;->a(Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_4
-
-    return-object v0
-
-    :cond_4
+    :cond_3
     :goto_1
-    sget-object p1, Lb3h;->a:Lb3h;
+    return-void
+.end method
 
-    return-object p1
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
 .end method

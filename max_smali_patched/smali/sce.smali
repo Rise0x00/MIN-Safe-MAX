@@ -1,86 +1,59 @@
 .class public final Lsce;
-.super Ljava/lang/Object;
+.super Lz84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lrce;
+.field public A0:I
 
-.field public final b:Lnh7;
+.field public X:Ljava/util/Set;
+
+.field public Y:Z
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public d:Lwce;
+
+.field public o:Ljava/util/ArrayList;
+
+.field public final synthetic z0:Lwce;
 
 
 # direct methods
-.method public constructor <init>(Lrce;Lnh7;)V
+.method public constructor <init>(Lwce;Lz84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lsce;->z0:Lwce;
 
-    iput-object p1, p0, Lsce;->a:Lrce;
-
-    iput-object p2, p0, Lsce;->b:Lnh7;
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lsce;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lsce;
-
-    iget-object v1, p0, Lsce;->a:Lrce;
-
-    iget-object v3, p1, Lsce;->a:Lrce;
-
-    if-ne v1, v3, :cond_2
-
-    iget-object v1, p0, Lsce;->b:Lnh7;
-
-    iget-object p1, p1, Lsce;->b:Lnh7;
-
-    invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget-object v0, p0, Lsce;->a:Lrce;
+    iput-object p1, p0, Lsce;->Z:Ljava/lang/Object;
 
-    iget-object v1, p0, Lsce;->b:Lnh7;
+    iget p1, p0, Lsce;->A0:I
 
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    const/high16 v0, -0x80000000
 
-    move-result-object v0
+    or-int/2addr p1, v0
 
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    iput p1, p0, Lsce;->A0:I
 
-    move-result v0
+    const/4 p1, 0x0
 
-    return v0
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lsce;->z0:Lwce;
+
+    invoke-static {v1, p1, v0, p0}, Lwce;->f(Lwce;Ljava/util/Map;ZLz84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

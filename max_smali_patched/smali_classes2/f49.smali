@@ -1,61 +1,107 @@
-.class public final Lf49;
-.super Lm49;
+.class public final synthetic Lf49;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lk49;
 
-# static fields
-.field public static final a:Lf49;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lgm6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(ILgm6;)V
+    .locals 0
 
-    new-instance v0, Lf49;
+    iput p1, p0, Lf49;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lf49;->b:Lgm6;
 
-    sput-object v0, Lf49;->a:Lf49;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(Ljava/lang/Object;)I
+    .locals 4
 
-    const/4 v0, 0x1
+    iget v0, p0, Lf49;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lf49;->b:Lgm6;
 
-    :cond_0
-    instance-of p1, p1, Lf49;
+    check-cast p1, Ly39;
 
-    if-nez p1, :cond_1
+    :try_start_0
+    invoke-virtual {p1, v0}, Ly39;->e(Lgm6;)Z
 
-    const/4 p1, 0x0
+    move-result p1
+    :try_end_0
+    .catch Landroidx/media3/exoplayer/mediacodec/MediaCodecUtil$DecoderQueryException; {:try_start_0 .. :try_end_0} :catch_0
 
+    goto :goto_0
+
+    :catch_0
+    const/4 p1, -0x1
+
+    :goto_0
     return p1
 
+    :pswitch_0
+    check-cast p1, Ly39;
+
+    iget-object v0, p1, Ly39;->b:Ljava/lang/String;
+
+    iget-object v1, p0, Lf49;->b:Lgm6;
+
+    iget-object v2, v1, Lgm6;->n:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_0
+
+    invoke-static {v1}, Lm49;->b(Lgm6;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    invoke-virtual {p1, v1, v3}, Ly39;->c(Lgm6;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1, v1}, Ly39;->d(Lgm6;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/4 v3, 0x1
+
     :cond_1
-    return v0
-.end method
+    return v3
 
-.method public final hashCode()I
-    .locals 1
+    nop
 
-    const v0, -0x47a05548
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "DeleteText"
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

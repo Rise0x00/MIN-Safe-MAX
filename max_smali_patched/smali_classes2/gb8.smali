@@ -1,53 +1,40 @@
 .class public final Lgb8;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lnfg;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Ltb8;
-
-.field public Z:I
-
-.field public d:Lfjc;
-
-.field public o:Lad8;
+.field public final synthetic a:Lz5;
 
 
 # direct methods
-.method public constructor <init>(Ltb8;Lo84;)V
+.method public constructor <init>(Lz5;)V
     .locals 0
 
-    iput-object p1, p0, Lgb8;->Y:Ltb8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lgb8;->a:Lz5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final get()Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Lgb8;->X:Ljava/lang/Object;
+    iget-object v0, p0, Lgb8;->a:Lz5;
 
-    iget p1, p0, Lgb8;->Z:I
+    const/16 v1, 0x56
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {v0, v1}, Lz5;->c(I)Ljava/lang/Object;
 
-    or-int/2addr p1, v0
+    move-result-object v0
 
-    iput p1, p0, Lgb8;->Z:I
+    check-cast v0, Lzo8;
 
-    iget-object p1, p0, Lgb8;->Y:Ltb8;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0, p0}, Ltb8;->i(Lfjc;Lad8;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

@@ -1,35 +1,21 @@
 .class public final Leda;
-.super Ljava/lang/Object;
+.super Lu20;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroidx/recyclerview/widget/RecyclerView;
-
-.field public final b:Lnf6;
-
-.field public final c:Lxca;
-
-.field public final d:Lwne;
-
-.field public e:Lo14;
-
-.field public f:Lxl4;
+.field public final c:Lvzb;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView;Lnf6;Lxca;Lymb;)V
-    .locals 0
+.method public constructor <init>(ILvzb;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x3
 
-    iput-object p1, p0, Leda;->a:Landroidx/recyclerview/widget/RecyclerView;
+    invoke-direct {p0, p1, v0}, Lu20;-><init>(II)V
 
-    iput-object p2, p0, Leda;->b:Lnf6;
-
-    iput-object p3, p0, Leda;->c:Lxca;
-
-    iput-object p4, p0, Leda;->d:Lwne;
+    iput-object p2, p0, Leda;->c:Lvzb;
 
     return-void
 .end method

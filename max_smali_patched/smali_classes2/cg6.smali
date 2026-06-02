@@ -1,54 +1,70 @@
-.class public final Lcg6;
+.class public final synthetic Lcg6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lwf6;
+.implements Lfo4;
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final synthetic b:[J
 
-.field public final c:J
+.field public final synthetic c:Ljl8;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;)V
-    .locals 2
+.method public synthetic constructor <init>([JLjl8;I)V
+    .locals 0
+
+    iput p3, p0, Lcg6;->a:I
+
+    iput-object p1, p0, Lcg6;->b:[J
+
+    iput-object p2, p0, Lcg6;->c:Ljl8;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcg6;->a:Ljava/util/ArrayList;
-
-    sget p1, Lg8d;->oneme_folder_widget_section_view_type:I
-
-    iput p1, p0, Lcg6;->b:I
-
-    sget p1, Lg8d;->oneme_folder_widget_section_id:I
-
-    int-to-long v0, p1
-
-    iput-wide v0, p0, Lcg6;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getItemId()J
-    .locals 2
+.method public final o()Ljava/lang/Object;
+    .locals 4
 
-    iget-wide v0, p0, Lcg6;->c:J
+    iget v0, p0, Lcg6;->a:I
 
-    return-wide v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final m()I
-    .locals 1
+    new-instance v0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
 
-    iget v0, p0, Lcg6;->b:I
+    sget-object v1, Lbzf;->b:Lbzf;
 
-    return v0
+    iget-object v2, p0, Lcg6;->b:[J
+
+    iget-object v3, p0, Lcg6;->c:Ljl8;
+
+    invoke-direct {v0, v2, v1, v3}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;-><init>([JLbzf;Ljl8;)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Lone/me/folders/edit/FolderEditScreen;
+
+    iget-object v1, p0, Lcg6;->b:[J
+
+    iget-object v2, p0, Lcg6;->c:Ljl8;
+
+    invoke-direct {v0, v1, v2}, Lone/me/folders/edit/FolderEditScreen;-><init>([JLjl8;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,11 +1,17 @@
-.class public interface abstract Lob4;
+.class public interface abstract annotation Lob4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqb4;
+.implements Ljava/lang/annotation/Annotation;
+
+
+# annotations
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
+.end annotation
 
 
 # virtual methods
-.method public abstract getKey()Lpb4;
+.method public abstract value()Ljava/lang/Class;
 .end method

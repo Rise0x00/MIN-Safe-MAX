@@ -2,25 +2,21 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Luh5;
-
-
-# instance fields
-.field public final a:Lqhg;
-
-.field public final b:Lqhg;
-
 
 # direct methods
-.method public constructor <init>(Llhg;Lqhg;)V
-    .locals 0
+.method public static a()Ljava/util/Set;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Set<",
+            "[I>;"
+        }
+    .end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Lzyj;->a()Ljava/util/Set;
 
-    iput-object p2, p0, Lrh5;->a:Lqhg;
+    move-result-object v0
 
-    iput-object p1, p0, Lrh5;->b:Lqhg;
-
-    return-void
+    return-object v0
 .end method

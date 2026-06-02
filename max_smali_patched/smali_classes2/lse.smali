@@ -1,47 +1,103 @@
-.class public Llse;
-.super Lnse;
+.class public final synthetic Llse;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lzs6;
 
 
 # instance fields
-.field public final h:Ljava/util/List;
+.field public final synthetic a:I
 
-.field public i:Ljava/lang/String;
-
-.field public j:Ljava/util/List;
-
-.field public k:Z
+.field public final synthetic b:Lnse;
 
 
 # direct methods
-.method public constructor <init>(JLjava/util/List;)V
+.method public synthetic constructor <init>(Lnse;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lnse;-><init>(J)V
+    iput p2, p0, Llse;->a:I
 
-    iput-object p3, p0, Llse;->h:Ljava/util/List;
+    iput-object p1, p0, Llse;->b:Lnse;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic a()Lose;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0}, Llse;->c()Lmse;
+    iget v0, p0, Llse;->a:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    return-object v0
-.end method
+    check-cast p1, Lgte;
 
-.method public c()Lmse;
-    .locals 1
+    iget-object v0, p0, Llse;->b:Lnse;
 
-    new-instance v0, Lmse;
+    iget-object v0, v0, Lnse;->Y:Lone/me/chats/search/ChatsListSearchScreen;
 
-    invoke-direct {v0, p0}, Lmse;-><init>(Llse;)V
+    invoke-virtual {v0, p1}, Lone/me/chats/search/ChatsListSearchScreen;->h1(Lgte;)V
 
-    return-object v0
+    :goto_0
+    sget-object p1, Lyeh;->a:Lyeh;
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Lgte;
+
+    iget-object v0, p0, Llse;->b:Lnse;
+
+    iget-object v0, v0, Lnse;->Y:Lone/me/chats/search/ChatsListSearchScreen;
+
+    invoke-virtual {v0, p1}, Lone/me/chats/search/ChatsListSearchScreen;->h1(Lgte;)V
+
+    goto :goto_0
+
+    :pswitch_1
+    check-cast p1, Lgte;
+
+    iget-object v0, p0, Llse;->b:Lnse;
+
+    iget-object v0, v0, Lnse;->Y:Lone/me/chats/search/ChatsListSearchScreen;
+
+    invoke-virtual {v0, p1}, Lone/me/chats/search/ChatsListSearchScreen;->h1(Lgte;)V
+
+    goto :goto_0
+
+    :pswitch_2
+    check-cast p1, Lgte;
+
+    iget-object v0, p0, Llse;->b:Lnse;
+
+    iget-object v0, v0, Lnse;->Y:Lone/me/chats/search/ChatsListSearchScreen;
+
+    invoke-virtual {v0, p1}, Lone/me/chats/search/ChatsListSearchScreen;->h1(Lgte;)V
+
+    goto :goto_0
+
+    :pswitch_3
+    check-cast p1, Ldmf;
+
+    iget-object v0, p0, Llse;->b:Lnse;
+
+    iget-object v0, v0, Lnse;->Y:Lone/me/chats/search/ChatsListSearchScreen;
+
+    invoke-virtual {v0, p1}, Lone/me/chats/search/ChatsListSearchScreen;->h1(Lgte;)V
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

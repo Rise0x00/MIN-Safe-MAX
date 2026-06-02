@@ -1,122 +1,108 @@
-.class public final synthetic Liy8;
-.super Ljava/lang/Object;
+.class public final Liy8;
+.super Landroid/view/View$BaseSavedState;
 .source "SourceFile"
 
-# interfaces
-.implements Lnq6;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Liy8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/chatscreen/mediabar/MediaBarWidget;
+.field public a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/chatscreen/mediabar/MediaBarWidget;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Liy8;->a:I
+    new-instance v0, Lkm8;
 
-    iput-object p1, p0, Liy8;->b:Lone/me/chatscreen/mediabar/MediaBarWidget;
+    const/4 v1, 0x3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Lkm8;-><init>(I)V
+
+    sput-object v0, Liy8;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget v0, p0, Liy8;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x1
+    const-string v1, "MaterialCheckBox.SavedState{"
 
-    sget-object v2, Lb3h;->a:Lb3h;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Liy8;->b:Lone/me/chatscreen/mediabar/MediaBarWidget;
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
-    packed-switch v0, :pswitch_data_0
+    move-result v1
 
-    check-cast p1, Landroid/view/View;
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
-    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->e1:[Lz28;
+    move-result-object v1
 
-    invoke-virtual {v3}, Lone/me/chatscreen/mediabar/MediaBarWidget;->K0()Lxec;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v1, " CheckedState="
 
-    invoke-virtual {p1, v1}, Lxec;->j(Z)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object v2
+    iget v1, p0, Liy8;->a:I
 
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
+    const/4 v2, 0x1
 
-    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->e1:[Lz28;
+    if-eq v1, v2, :cond_1
 
-    invoke-virtual {v3}, Lone/me/chatscreen/mediabar/MediaBarWidget;->O0()Lfy8;
+    const/4 v2, 0x2
 
-    move-result-object p1
+    if-eq v1, v2, :cond_0
 
-    iget-object v0, p1, Lfy8;->y0:Lspf;
+    const-string v1, "unchecked"
+
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Lspf;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    move-object v3, p1
-
-    check-cast v3, Lx00;
-
-    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    if-ne v3, v1, :cond_1
-
-    sget-object v3, Lx00;->a:Lx00;
+    const-string v1, "indeterminate"
 
     goto :goto_0
 
     :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_2
-    sget-object v3, Lx00;->b:Lx00;
+    const-string v1, "checked"
 
     :goto_0
-    invoke-virtual {v0, p1, v3}, Lspf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-string v2, "}"
 
-    move-result p1
+    invoke-static {v0, v1, v2}, Lsb6;->q(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    if-eqz p1, :cond_0
+    move-result-object v0
 
-    return-object v2
+    return-object v0
+.end method
 
-    :pswitch_1
-    check-cast p1, Ljava/lang/CharSequence;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    iget-object v0, v3, Lone/me/chatscreen/mediabar/MediaBarWidget;->o:Lth8;
+    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget-object v0, v0, Lth8;->f:Lgne;
+    iget p2, p0, Liy8;->a:I
 
-    iput-object p1, v0, Lgne;->j:Ljava/lang/CharSequence;
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    return-object v2
+    move-result-object p2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
+
+    return-void
 .end method

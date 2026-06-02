@@ -1,49 +1,45 @@
-.class public final Lqva;
-.super Lo84;
+.class public abstract Lqva;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Lyva;
-
-
 # direct methods
-.method public constructor <init>(Lyva;Lo84;)V
+.method public static a(Landroid/media/AudioAttributes$Builder;)Landroid/media/AudioAttributes;
     .locals 0
 
-    iput-object p1, p0, Lqva;->o:Lyva;
+    invoke-virtual {p0}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    move-result-object p0
 
-    return-void
+    return-object p0
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static b()Landroid/media/AudioAttributes$Builder;
     .locals 1
 
-    iput-object p1, p0, Lqva;->d:Ljava/lang/Object;
+    new-instance v0, Landroid/media/AudioAttributes$Builder;
 
-    iget p1, p0, Lqva;->X:I
+    invoke-direct {v0}, Landroid/media/AudioAttributes$Builder;-><init>()V
 
-    const/high16 v0, -0x80000000
+    return-object v0
+.end method
 
-    or-int/2addr p1, v0
+.method public static c(Landroid/media/AudioAttributes$Builder;I)Landroid/media/AudioAttributes$Builder;
+    .locals 0
 
-    iput p1, p0, Lqva;->X:I
+    invoke-virtual {p0, p1}, Landroid/media/AudioAttributes$Builder;->setContentType(I)Landroid/media/AudioAttributes$Builder;
 
-    iget-object p1, p0, Lqva;->o:Lyva;
+    move-result-object p0
 
-    const/4 v0, 0x0
+    return-object p0
+.end method
 
-    invoke-static {p1, v0, p0}, Lyva;->a(Lyva;Ljava/util/List;Lo84;)Ljava/lang/Object;
+.method public static d(Landroid/media/AudioAttributes$Builder;I)Landroid/media/AudioAttributes$Builder;
+    .locals 0
 
-    move-result-object p1
+    invoke-virtual {p0, p1}, Landroid/media/AudioAttributes$Builder;->setUsage(I)Landroid/media/AudioAttributes$Builder;
 
-    return-object p1
+    move-result-object p0
+
+    return-object p0
 .end method

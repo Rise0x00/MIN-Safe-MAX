@@ -4,6 +4,24 @@
 
 
 # static fields
+.field public static final A:I
+
+.field public static final B:I
+
+.field public static final C:I
+
+.field public static final D:I
+
+.field public static final E:I
+
+.field public static final F:I
+
+.field public static final G:I
+
+.field public static final H:I
+
+.field public static final I:I
+
 .field public static final a:I
 
 .field public static final b:I
@@ -34,70 +52,172 @@
 
 .field public static final o:I
 
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lq6d;->contact_icon_corner:I
+    sget v0, Lznd;->oneme_fodlers_delete_folder_bottom_sheet_title:I
 
     sput v0, Lbeb;->a:I
 
-    sget v0, Lq6d;->geo_icon_corner:I
+    sget v0, Lznd;->oneme_folder_list_recommended_folders_section_title:I
 
     sput v0, Lbeb;->b:I
 
-    sget v0, Lq6d;->ic_call_incoming_audio_24:I
+    sget v0, Lznd;->oneme_folder_list_toolbar_title:I
 
     sput v0, Lbeb;->c:I
 
-    sget v0, Lq6d;->ic_call_incoming_audio_missed_24:I
+    sget v0, Lznd;->oneme_folders_delete_folder_bottom_sheet_cancel_delete_button:I
 
     sput v0, Lbeb;->d:I
 
-    sget v0, Lq6d;->ic_call_incoming_video_missed_24:I
+    sget v0, Lznd;->oneme_folders_delete_folder_bottom_sheet_description:I
 
     sput v0, Lbeb;->e:I
 
-    sget v0, Lq6d;->ic_call_incomnig_video_24:I
+    sget v0, Lznd;->oneme_folders_edit_add_chats_button:I
 
     sput v0, Lbeb;->f:I
 
-    sget v0, Lq6d;->ic_call_outgoing_audio_24:I
+    sget v0, Lznd;->oneme_folders_edit_collapse:I
 
     sput v0, Lbeb;->g:I
 
-    sget v0, Lq6d;->ic_call_outgoing_video_24:I
+    sget v0, Lznd;->oneme_folders_edit_create_button:I
 
     sput v0, Lbeb;->h:I
 
-    sget v0, Lq6d;->ic_chat_16:I
+    sget v0, Lznd;->oneme_folders_edit_delete_button:I
 
     sput v0, Lbeb;->i:I
 
-    sget v0, Lq6d;->ic_contact_16:I
+    sget v0, Lznd;->oneme_folders_edit_expand:I
 
     sput v0, Lbeb;->j:I
 
-    sget v0, Lq6d;->ic_geolocation_filled_28:I
+    sget v0, Lznd;->oneme_folders_edit_filter_section:I
 
     sput v0, Lbeb;->k:I
 
-    sget v0, Lq6d;->ic_scheduled_empty_72:I
+    sget v0, Lznd;->oneme_folders_edit_filter_unmute:I
 
     sput v0, Lbeb;->l:I
 
-    sget v0, Lq6d;->ic_scheduled_empty_dark_72:I
+    sget v0, Lznd;->oneme_folders_edit_filter_unread:I
 
     sput v0, Lbeb;->m:I
 
-    sget v0, Lq6d;->link_icon_corner:I
+    sget v0, Lznd;->oneme_folders_edit_members_description:I
 
     sput v0, Lbeb;->n:I
 
-    sget v0, Lq6d;->miniapp_icon_corner:I
+    sget v0, Lznd;->oneme_folders_edit_members_section:I
 
     sput v0, Lbeb;->o:I
+
+    sget v0, Lznd;->oneme_folders_edit_name_hint:I
+
+    sput v0, Lbeb;->p:I
+
+    sget v0, Lznd;->oneme_folders_edit_name_section:I
+
+    sput v0, Lbeb;->q:I
+
+    sget v0, Lznd;->oneme_folders_edit_toolbar_title:I
+
+    sput v0, Lbeb;->r:I
+
+    sget v0, Lznd;->oneme_folders_error_max_count:I
+
+    sput v0, Lbeb;->s:I
+
+    sget v0, Lznd;->oneme_folders_list_create_folder:I
+
+    sput v0, Lbeb;->t:I
+
+    sget v0, Lznd;->oneme_folders_list_menu_action_change:I
+
+    sput v0, Lbeb;->u:I
+
+    sget v0, Lznd;->oneme_folders_list_menu_action_delete_folder:I
+
+    sput v0, Lbeb;->v:I
+
+    sget v0, Lznd;->oneme_folders_picker_empty_title:I
+
+    sput v0, Lbeb;->w:I
+
+    sget v0, Lznd;->oneme_folders_picker_entity_search_hint:I
+
+    sput v0, Lbeb;->x:I
+
+    sget v0, Lznd;->oneme_folders_picker_entity_toolbar_title:I
+
+    sput v0, Lbeb;->y:I
+
+    sget v0, Lznd;->oneme_folders_picker_snackbar_add_bot_to_many_folders:I
+
+    sput v0, Lbeb;->z:I
+
+    sget v0, Lznd;->oneme_folders_picker_snackbar_add_bot_to_single_folder:I
+
+    sput v0, Lbeb;->A:I
+
+    sget v0, Lznd;->oneme_folders_picker_snackbar_add_bots_to_many_folders:I
+
+    sput v0, Lbeb;->B:I
+
+    sget v0, Lznd;->oneme_folders_picker_snackbar_add_channel_to_many_folders:I
+
+    sput v0, Lbeb;->C:I
+
+    sget v0, Lznd;->oneme_folders_picker_snackbar_add_channel_to_single_folder:I
+
+    sput v0, Lbeb;->D:I
+
+    sget v0, Lznd;->oneme_folders_picker_snackbar_add_chat_to_many_folders:I
+
+    sput v0, Lbeb;->E:I
+
+    sget v0, Lznd;->oneme_folders_picker_snackbar_add_chats_to_many_folders:I
+
+    sput v0, Lbeb;->F:I
+
+    sget v0, Lznd;->oneme_folders_picker_snackbar_add_many_chats_to_folder:I
+
+    sput v0, Lbeb;->G:I
+
+    sget v0, Lznd;->oneme_folders_picker_snackbar_add_single_chat_to_folder:I
+
+    sput v0, Lbeb;->H:I
+
+    sget v0, Lznd;->oneme_folders_picker_toolbar_title:I
+
+    sput v0, Lbeb;->I:I
 
     return-void
 .end method

@@ -1,51 +1,78 @@
-.class public final synthetic Lfu6;
-.super Ljava/lang/Object;
+.class public final enum Lfu6;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/Comparator;
 
-# instance fields
-.field public final synthetic a:Lbv6;
+
+# static fields
+.field public static final enum a:Lfu6;
+
+.field public static final synthetic b:[Lfu6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbv6;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lfu6;
 
-    iput-object p1, p0, Lfu6;->a:Lbv6;
+    const-string v1, "INSTANCE"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lfu6;->a:Lfu6;
+
+    filled-new-array {v0}, [Lfu6;
+
+    move-result-object v0
+
+    sput-object v0, Lfu6;->b:[Lfu6;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lfu6;
+    .locals 1
 
-# virtual methods
-.method public final a(Lfne;)V
-    .locals 2
+    const-class v0, Lfu6;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const-string v1, "got toggle state "
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast p0, Lfu6;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-object p0
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.method public static values()[Lfu6;
+    .locals 1
+
+    sget-object v0, Lfu6;->b:[Lfu6;
+
+    invoke-virtual {v0}, [Lfu6;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, "bv6"
+    check-cast v0, [Lfu6;
 
-    invoke-static {v1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+    return-object v0
+.end method
 
-    iget-object v0, p0, Lfu6;->a:Lbv6;
 
-    iget-object v0, v0, Lbv6;->O0:Lspf;
+# virtual methods
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 0
 
-    const/4 v1, 0x0
+    check-cast p1, Ljava/lang/Comparable;
 
-    invoke-virtual {v0, v1, p1}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-interface {p1, p2}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
 
-    return-void
+    move-result p1
+
+    return p1
 .end method

@@ -1,27 +1,31 @@
-.class public interface abstract Lqrg;
-.super Ljava/lang/Object;
+.class public final Lqrg;
+.super Ldp0;
 .source "SourceFile"
 
 
+# instance fields
+.field public final c:Z
+
+
+# direct methods
+.method public constructor <init>(Lprg;Z)V
+    .locals 1
+
+    const/16 v0, 0x8
+
+    invoke-direct {p0, v0, p1}, Ldp0;-><init>(ILjava/lang/Object;)V
+
+    iput-boolean p2, p0, Lqrg;->c:Z
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract a(Lji4;IZ)I
-.end method
+.method public final J()Z
+    .locals 1
 
-.method public abstract b(JIIILorg;)V
-.end method
+    iget-boolean v0, p0, Lqrg;->c:Z
 
-.method public abstract c(ILdch;)V
-.end method
-
-.method public abstract d(Loj6;)V
-.end method
-
-.method public e(Lji4;IZ)I
-    .locals 0
-
-    invoke-interface {p0, p1, p2, p3}, Lqrg;->a(Lji4;IZ)I
-
-    move-result p1
-
-    return p1
+    return v0
 .end method

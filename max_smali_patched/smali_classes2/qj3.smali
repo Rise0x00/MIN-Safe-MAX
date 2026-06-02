@@ -4,117 +4,38 @@
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public a:I
 
+.field public b:I
 
-# direct methods
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 0
+.field public c:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public d:[B
 
-    iput-object p1, p0, Lqj3;->a:Ljava/util/List;
+.field public e:I
 
-    return-void
-.end method
+.field public f:I
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;)Ljava/lang/String;
-    .locals 6
+.method public final a()Lsj3;
+    .locals 7
 
-    new-instance v4, Lwe0;
+    new-instance v0, Lsj3;
 
-    const/4 v0, 0x2
+    iget v1, p0, Lqj3;->a:I
 
-    invoke-direct {v4, p1, v0}, Lwe0;-><init>(Landroid/content/Context;I)V
+    iget v2, p0, Lqj3;->b:I
 
-    const/16 v5, 0x1e
+    iget v3, p0, Lqj3;->c:I
 
-    iget-object v0, p0, Lqj3;->a:Ljava/util/List;
+    iget-object v6, p0, Lqj3;->d:[B
 
-    const-string v1, "\n"
+    iget v4, p0, Lqj3;->e:I
 
-    const/4 v2, 0x0
+    iget v5, p0, Lqj3;->f:I
 
-    const/4 v3, 0x0
-
-    invoke-static/range {v0 .. v5}, Lpi3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnq6;I)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lqj3;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lqj3;
-
-    iget-object v1, p0, Lqj3;->a:Ljava/util/List;
-
-    iget-object p1, p1, Lqj3;->a:Ljava/util/List;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lqj3;->a:Ljava/util/List;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CombinedError(errors="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lqj3;->a:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct/range {v0 .. v6}, Lsj3;-><init>(IIIII[B)V
 
     return-object v0
 .end method

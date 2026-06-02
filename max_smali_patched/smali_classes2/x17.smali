@@ -4,122 +4,179 @@
 
 
 # instance fields
-.field public final a:[I
+.field public final synthetic a:I
 
-.field public final b:[I
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>([I[I)V
-    .locals 0
+.method public constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    iput p1, p0, Lx17;->a:I
+
+    packed-switch p1, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lx17;->a:[I
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
 
-    iput-object p2, p0, Lx17;->b:[I
+    move-result p1
+
+    const/16 v0, 0x17
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    filled-new-array {p2, v1}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-gt p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    if-eqz p1, :cond_3
+
+    iput-object p2, p0, Lx17;->b:Ljava/lang/String;
+
+    const/4 p1, 0x0
+
+    if-eqz p3, :cond_1
+
+    invoke-virtual {p3}, Ljava/lang/String;->length()I
+
+    move-result p2
+
+    if-gtz p2, :cond_2
+
+    :cond_1
+    move-object p3, p1
+
+    :cond_2
+    iput-object p3, p0, Lx17;->c:Ljava/lang/String;
 
     return-void
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "tag \"%s\" is longer than the %d character maximum"
+
+    invoke-static {p2, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lx17;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lx17;->c:Ljava/lang/String;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lx17;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lx17;
-
-    iget-object v1, p0, Lx17;->a:[I
-
-    iget-object v3, p1, Lx17;->a:[I
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lx17;->b:[I
-
-    iget-object p1, p1, Lx17;->b:[I
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
     .locals 2
 
-    iget-object v0, p0, Lx17;->a:[I
+    const/4 v0, 0x6
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
+    iget-object v1, p0, Lx17;->b:Ljava/lang/String;
+
+    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lx17;->b:[I
+    invoke-virtual {p0, p2}, Lx17;->b(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
+    move-result-object p2
 
-    move-result v1
+    invoke-static {p1, p2, p3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    add-int/2addr v1, v0
-
-    return v1
+    :cond_0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public b(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
 
-    iget-object v0, p0, Lx17;->a:[I
+    iget-object v0, p0, Lx17;->c:Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    move-result-object v0
+    return-object p1
 
-    iget-object v1, p0, Lx17;->b:[I
+    :cond_0
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v1
+    return-object p1
+.end method
 
-    const-string v2, ", surfacePrimaryGradient="
+.method public toString()Ljava/lang/String;
+    .locals 2
 
-    const-string v3, ")"
+    iget v0, p0, Lx17;->a:I
 
-    const-string v4, "GradientsOverlayColors(surfaceGroundGradient="
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v4, v0, v2, v1, v3}, Lkz1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lx17;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lx17;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

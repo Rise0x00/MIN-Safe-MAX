@@ -9,16 +9,16 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lugg;
+.field public final synthetic b:Lpx4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lugg;I)V
+.method public synthetic constructor <init>(Lpx4;I)V
     .locals 0
 
     iput p2, p0, Ltgg;->a:I
 
-    iput-object p1, p0, Ltgg;->b:Lugg;
+    iput-object p1, p0, Ltgg;->b:Lpx4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,28 +34,16 @@
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Ltgg;->b:Lugg;
+    iget-object v0, p0, Ltgg;->b:Lpx4;
 
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->performClick()Z
+    invoke-virtual {v0}, Lpx4;->b()V
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Ltgg;->b:Lugg;
+    iget-object v0, p0, Ltgg;->b:Lpx4;
 
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->performClick()Z
+    invoke-virtual {v0}, Lpx4;->a()V
 
     return-void
 

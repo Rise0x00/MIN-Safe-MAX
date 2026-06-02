@@ -1,195 +1,98 @@
-.class public final synthetic Ldnd;
+.class public abstract Ldnd;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
-# interfaces
-.implements Lxfc;
-.implements Lcr6;
 
+# static fields
+.field public static app_host:I = 0x7f130065
 
-# instance fields
-.field public final synthetic a:I
+.field public static app_host_1:I = 0x7f130066
 
-.field public final synthetic b:Lend;
+.field public static app_host_2:I = 0x7f130067
 
+.field public static app_host_3:I = 0x7f130068
 
-# direct methods
-.method public synthetic constructor <init>(Lend;I)V
-    .locals 0
+.field public static app_host_prod:I = 0x7f130069
 
-    iput p2, p0, Ldnd;->a:I
+.field public static app_host_prod_port:I = 0x7f13006a
 
-    iput-object p1, p0, Ldnd;->b:Lend;
+.field public static app_host_redirects:I = 0x7f13006b
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static app_package_name:I = 0x7f13006e
 
-    return-void
-.end method
+.field public static app_scheme:I = 0x7f13006f
 
+.field public static auth_path:I = 0x7f1300ab
 
-# virtual methods
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.field public static folder_path:I = 0x7f130573
 
-    iget v0, p0, Ldnd;->a:I
+.field public static gcm_defaultSenderId:I = 0x7f1305bd
 
-    packed-switch v0, :pswitch_data_0
+.field public static google_api_key:I = 0x7f1305c8
 
-    check-cast p1, Lnd2;
+.field public static google_app_id:I = 0x7f1305c9
 
-    iget-object v0, p0, Ldnd;->b:Lend;
+.field public static google_crash_reporting_api_key:I = 0x7f1305ca
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static google_storage_bucket:I = 0x7f1305cb
 
-    new-instance v1, Lfnd;
+.field public static join_chat_application_note:I = 0x7f1305e5
 
-    const/4 v2, 0x0
+.field public static join_chat_apply_button:I = 0x7f1305e6
 
-    invoke-direct {v1, v0, p1, v2}, Lfnd;-><init>(Lend;Lnd2;Lkotlin/coroutines/Continuation;)V
+.field public static join_chat_confirm_channel_button:I = 0x7f1305e7
 
-    sget-object p1, Lxg5;->a:Lxg5;
+.field public static join_chat_confirm_chat_button:I = 0x7f1305e8
 
-    invoke-static {p1, v1}, Linj;->f(Lqb4;Lbr6;)Leo3;
+.field public static join_chat_title_channel:I = 0x7f1305ea
 
-    move-result-object p1
+.field public static join_chat_title_chat:I = 0x7f1305eb
 
-    return-object p1
+.field public static link_call_join_path:I = 0x7f130608
 
-    :pswitch_0
-    check-cast p1, Ley3;
+.field public static link_chat_join_path:I = 0x7f130609
 
-    iget-object v0, p0, Ldnd;->b:Lend;
+.field public static link_chat_path:I = 0x7f13060a
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static link_host_api:I = 0x7f130615
 
-    new-instance v1, Lrv5;
+.field public static link_private_channel_path:I = 0x7f13061d
 
-    const/4 v2, 0x6
+.field public static link_private_contact_path:I = 0x7f13061e
 
-    invoke-direct {v1, v0, v2, p1}, Lrv5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.field public static link_startwebapp_path:I = 0x7f130621
 
-    new-instance p1, Leo3;
+.field public static link_stickerset_path:I = 0x7f130622
 
-    const/4 v0, 0x2
+.field public static oneme_app_name:I = 0x7f130819
 
-    invoke-direct {p1, v0, v1}, Leo3;-><init>(ILjava/lang/Object;)V
+.field public static oneme_contact_saved_snackbar_title:I = 0x7f130887
 
-    return-object p1
+.field public static project_id:I = 0x7f130d87
 
-    nop
+.field public static snackbar_contact_removed:I = 0x7f130e5a
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static snackbar_content_level_error_title:I = 0x7f130e5b
 
-.method public test(Ljava/lang/Object;)Z
-    .locals 4
+.field public static snackbar_folder_link_error_caption:I = 0x7f130e5c
 
-    iget v0, p0, Ldnd;->a:I
+.field public static snackbar_folder_link_error_title:I = 0x7f130e5d
 
-    packed-switch v0, :pswitch_data_0
+.field public static snackbar_join_chat_restricted_error_title:I = 0x7f130e5e
 
-    check-cast p1, Ley3;
+.field public static snackbar_join_request_submitted_caption:I = 0x7f130e5f
 
-    iget-object v0, p0, Ldnd;->b:Lend;
+.field public static snackbar_join_request_submitted_title:I = 0x7f130e60
 
-    iget-object v0, v0, Lend;->a:Lxg2;
+.field public static snackbar_link_info_error:I = 0x7f130e61
 
-    invoke-virtual {p1}, Ley3;->r()J
+.field public static snackbar_self_contact_open:I = 0x7f130e63
 
-    move-result-wide v1
+.field public static snackbar_text_button_why:I = 0x7f130e65
 
-    invoke-virtual {v0, v1, v2}, Lxg2;->Q(J)Lnd2;
+.field public static tracer_app_token:I = 0x7f130e99
 
-    move-result-object p1
+.field public static tracer_environment:I = 0x7f130e9a
 
-    if-eqz p1, :cond_1
+.field public static tracer_mapping_uuid:I = 0x7f130e9b
 
-    iget-object p1, p1, Lnd2;->b:Luh2;
-
-    iget-wide v0, p1, Luh2;->Z:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    :goto_1
-    return p1
-
-    :pswitch_0
-    check-cast p1, Lnd2;
-
-    iget-object v0, p0, Ldnd;->b:Lend;
-
-    iget-object v0, v0, Lend;->a:Lxg2;
-
-    invoke-virtual {v0, p1}, Lxg2;->X(Lnd2;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    iget-object v0, p1, Lnd2;->b:Luh2;
-
-    iget-wide v0, v0, Luh2;->a0:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p1}, Lnd2;->T()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p1}, Lnd2;->o()Ley3;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Ley3;->x()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    const/4 p1, 0x1
-
-    goto :goto_3
-
-    :cond_3
-    :goto_2
-    const/4 p1, 0x0
-
-    :goto_3
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static web_scheme:I = 0x7f130fde

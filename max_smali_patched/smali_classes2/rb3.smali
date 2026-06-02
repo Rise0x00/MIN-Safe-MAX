@@ -1,58 +1,43 @@
 .class public final Lrb3;
-.super Ljava/lang/Object;
+.super Landroidx/appcompat/widget/AppCompatCheckBox;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lw4e;
-
-
-# direct methods
-.method public constructor <init>(Lw4e;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lrb3;->a:Lw4e;
-
-    return-void
-.end method
+.field public o:I
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public getCompoundPaddingLeft()I
+    .locals 2
 
-    sget-object v0, Ldh5;->a:Ldh5;
+    invoke-super {p0}, Landroid/widget/TextView;->getCompoundPaddingLeft()I
 
-    const/4 v1, 0x0
+    move-result v0
 
-    iget-object v2, p0, Lrb3;->a:Lw4e;
+    iget v1, p0, Lrb3;->o:I
 
-    invoke-virtual {v2, v0, v1}, Lw4e;->Q(Ljava/util/List;Lf94;)V
+    add-int/2addr v0, v1
 
-    return-void
+    return v0
 .end method
 
-.method public final b()Ljava/lang/String;
+.method public final getPaddingBetweenCheckbox()I
     .locals 1
 
-    iget-object v0, p0, Lrb3;->a:Lw4e;
+    iget v0, p0, Lrb3;->o:I
 
-    iget-object v0, v0, Lw4e;->a:Lch0;
+    return v0
+.end method
 
-    invoke-virtual {v0}, Lch0;->a()Lz4e;
+.method public final setPaddingBetweenCheckbox(I)V
+    .locals 0
 
-    move-result-object v0
+    iput p1, p0, Lrb3;->o:I
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
-    iget-object v0, v0, Lz4e;->b:Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return-object v0
+    return-void
 .end method

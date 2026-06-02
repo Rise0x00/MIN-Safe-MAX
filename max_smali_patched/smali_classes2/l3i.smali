@@ -1,35 +1,31 @@
-.class public abstract synthetic Ll3i;
-.super Ljava/lang/Object;
+.class public final Ll3i;
+.super Lyig;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
-
-
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final dispatchApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
     .locals 3
 
-    invoke-static {}, Lk3i;->values()[Lk3i;
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    move-result-object v0
+    move-result v0
 
-    array-length v0, v0
+    const/4 v1, 0x0
 
-    new-array v0, v0, [I
+    :goto_0
+    if-ge v1, v0, :cond_0
 
-    const/4 v1, 0x1
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    const/4 v2, 0x0
+    move-result-object v2
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v2, p1}, Landroid/view/View;->dispatchApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
 
-    :catch_0
-    sput-object v0, Ll3i;->$EnumSwitchMapping$0:[I
+    add-int/lit8 v1, v1, 0x1
 
-    return-void
+    goto :goto_0
+
+    :cond_0
+    return-object p1
 .end method

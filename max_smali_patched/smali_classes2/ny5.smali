@@ -1,48 +1,87 @@
-.class public final Lny5;
-.super Lo84;
+.class public final synthetic Lny5;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic X:Lr3;
+.field public final synthetic a:F
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final synthetic b:Landroid/animation/ArgbEvaluator;
 
-.field public o:I
+.field public final synthetic c:I
+
+.field public final synthetic d:I
+
+.field public final synthetic o:Lone/me/sdk/richvector/VectorPath;
 
 
 # direct methods
-.method public constructor <init>(Lr3;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(FLandroid/animation/ArgbEvaluator;IILone/me/sdk/richvector/VectorPath;)V
     .locals 0
 
-    iput-object p1, p0, Lny5;->X:Lr3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lny5;->a:F
+
+    iput-object p2, p0, Lny5;->b:Landroid/animation/ArgbEvaluator;
+
+    iput p3, p0, Lny5;->c:I
+
+    iput p4, p0, Lny5;->d:I
+
+    iput-object p5, p0, Lny5;->o:Lone/me/sdk/richvector/VectorPath;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 3
 
-    iput-object p1, p0, Lny5;->d:Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
-    iget p1, p0, Lny5;->o:I
+    move-result p1
 
-    const/high16 v0, -0x80000000
+    iget v0, p0, Lny5;->a:F
 
-    or-int/2addr p1, v0
+    cmpg-float v1, p1, v0
 
-    iput p1, p0, Lny5;->o:I
+    iget v2, p0, Lny5;->d:I
 
-    iget-object p1, p0, Lny5;->X:Lr3;
+    if-gtz v1, :cond_0
 
-    const/4 v0, 0x0
+    div-float/2addr p1, v0
 
-    invoke-virtual {p1, v0, p0}, Lr3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget v0, p0, Lny5;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lny5;->b:Landroid/animation/ArgbEvaluator;
+
+    invoke-virtual {v2, p1, v0, v1}, Landroid/animation/ArgbEvaluator;->evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    :cond_0
+    iget-object p1, p0, Lny5;->o:Lone/me/sdk/richvector/VectorPath;
+
+    invoke-interface {p1, v2}, Lone/me/sdk/richvector/VectorPath;->setFillColor(I)V
+
+    return-void
 .end method

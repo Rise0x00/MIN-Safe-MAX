@@ -1,143 +1,324 @@
 .class public final Lubg;
-.super Lp6g;
+.super Lvo9;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Landroid/view/SubMenu;
 
 
 # instance fields
-.field public final synthetic X:Lvbg;
+.field public final Q0:Lvo9;
 
-.field public final synthetic Y:D
-
-.field public final synthetic Z:D
-
-.field public o:I
-
-.field public final synthetic t0:D
-
-.field public final synthetic u0:D
+.field public final R0:Lzo9;
 
 
 # direct methods
-.method public constructor <init>(Lvbg;DDDDLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Landroid/content/Context;Lvo9;Lzo9;)V
     .locals 0
 
-    iput-object p1, p0, Lubg;->X:Lvbg;
+    invoke-direct {p0, p1}, Lvo9;-><init>(Landroid/content/Context;)V
 
-    iput-wide p2, p0, Lubg;->Y:D
+    iput-object p2, p0, Lubg;->Q0:Lvo9;
 
-    iput-wide p4, p0, Lubg;->Z:D
-
-    iput-wide p6, p0, Lubg;->t0:D
-
-    iput-wide p8, p0, Lubg;->u0:D
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p10}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lubg;->R0:Lzo9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final e(Lzo9;)Z
+    .locals 1
 
-    check-cast p1, Lzb4;
+    iget-object v0, p0, Lubg;->Q0:Lvo9;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0, p1}, Lvo9;->e(Lzo9;)Z
 
-    invoke-virtual {p0, p1, p2}, Lubg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result p1
 
-    move-result-object p1
-
-    check-cast p1, Lubg;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lubg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return p1
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 11
+.method public final f(Lvo9;Landroid/view/MenuItem;)Z
+    .locals 1
 
-    new-instance v0, Lubg;
+    invoke-super {p0, p1, p2}, Lvo9;->f(Lvo9;Landroid/view/MenuItem;)Z
 
-    iget-wide v6, p0, Lubg;->t0:D
+    move-result v0
 
-    iget-wide v8, p0, Lubg;->u0:D
+    if-nez v0, :cond_1
 
-    iget-object v1, p0, Lubg;->X:Lvbg;
+    iget-object v0, p0, Lubg;->Q0:Lvo9;
 
-    iget-wide v2, p0, Lubg;->Y:D
+    invoke-virtual {v0, p1, p2}, Lvo9;->f(Lvo9;Landroid/view/MenuItem;)Z
 
-    iget-wide v4, p0, Lubg;->Z:D
+    move-result p1
 
-    move-object v10, p2
+    if-eqz p1, :cond_0
 
-    invoke-direct/range {v0 .. v10}, Lubg;-><init>(Lvbg;DDDDLkotlin/coroutines/Continuation;)V
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
-
-    iget v0, p0, Lubg;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    return-object p1
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 p1, 0x0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return p1
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    :goto_0
+    const/4 p1, 0x1
 
-    iput v1, p0, Lubg;->o:I
+    return p1
+.end method
 
-    iget-object v1, p0, Lubg;->X:Lvbg;
+.method public final g(Lzo9;)Z
+    .locals 1
 
-    iget-wide v2, p0, Lubg;->Y:D
+    iget-object v0, p0, Lubg;->Q0:Lvo9;
 
-    iget-wide v4, p0, Lubg;->Z:D
+    invoke-virtual {v0, p1}, Lvo9;->g(Lzo9;)Z
 
-    iget-wide v6, p0, Lubg;->t0:D
+    move-result p1
 
-    iget-wide v8, p0, Lubg;->u0:D
+    return p1
+.end method
 
-    move-object v10, p0
+.method public final getItem()Landroid/view/MenuItem;
+    .locals 1
 
-    invoke-interface/range {v1 .. v10}, Lvbg;->b(DDDDLo84;)Ljava/lang/Object;
+    iget-object v0, p0, Lubg;->R0:Lzo9;
 
-    move-result-object p1
+    return-object v0
+.end method
 
-    sget-object v0, Lac4;->a:Lac4;
+.method public final k()Ljava/lang/String;
+    .locals 2
 
-    if-ne p1, v0, :cond_2
+    iget-object v0, p0, Lubg;->R0:Lzo9;
+
+    if-eqz v0, :cond_0
+
+    iget v0, v0, Lzo9;->a:I
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x0
 
     return-object v0
 
-    :cond_2
-    return-object p1
+    :cond_1
+    const-string v1, "android:menu:actionviewstates:"
+
+    invoke-static {v0, v1}, Lsb6;->g(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final l()Lvo9;
+    .locals 1
+
+    iget-object v0, p0, Lubg;->Q0:Lvo9;
+
+    invoke-virtual {v0}, Lvo9;->l()Lvo9;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final n()Z
+    .locals 1
+
+    iget-object v0, p0, Lubg;->Q0:Lvo9;
+
+    invoke-virtual {v0}, Lvo9;->n()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final o()Z
+    .locals 1
+
+    iget-object v0, p0, Lubg;->Q0:Lvo9;
+
+    invoke-virtual {v0}, Lvo9;->o()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final p()Z
+    .locals 1
+
+    iget-object v0, p0, Lubg;->Q0:Lvo9;
+
+    invoke-virtual {v0}, Lvo9;->p()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final setGroupDividerEnabled(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lubg;->Q0:Lvo9;
+
+    invoke-virtual {v0, p1}, Lvo9;->setGroupDividerEnabled(Z)V
+
+    return-void
+.end method
+
+.method public final setHeaderIcon(I)Landroid/view/SubMenu;
+    .locals 6
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    move-object v0, p0
+
+    move v3, p1
+
+    .line 2
+    invoke-virtual/range {v0 .. v5}, Lvo9;->w(ILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Landroid/view/View;)V
+
+    return-object v0
+.end method
+
+.method public final setHeaderIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/SubMenu;
+    .locals 6
+
+    const/4 v3, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    move-object v0, p0
+
+    move-object v4, p1
+
+    .line 1
+    invoke-virtual/range {v0 .. v5}, Lvo9;->w(ILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Landroid/view/View;)V
+
+    return-object v0
+.end method
+
+.method public final setHeaderTitle(I)Landroid/view/SubMenu;
+    .locals 6
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move-object v0, p0
+
+    move v1, p1
+
+    .line 2
+    invoke-virtual/range {v0 .. v5}, Lvo9;->w(ILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Landroid/view/View;)V
+
+    return-object v0
+.end method
+
+.method public final setHeaderTitle(Ljava/lang/CharSequence;)Landroid/view/SubMenu;
+    .locals 6
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v3, 0x0
+
+    move-object v0, p0
+
+    move-object v2, p1
+
+    .line 1
+    invoke-virtual/range {v0 .. v5}, Lvo9;->w(ILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Landroid/view/View;)V
+
+    return-object v0
+.end method
+
+.method public final setHeaderView(Landroid/view/View;)Landroid/view/SubMenu;
+    .locals 6
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    move-object v0, p0
+
+    move-object v5, p1
+
+    invoke-virtual/range {v0 .. v5}, Lvo9;->w(ILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Landroid/view/View;)V
+
+    return-object v0
+.end method
+
+.method public final setIcon(I)Landroid/view/SubMenu;
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Lubg;->R0:Lzo9;
+
+    invoke-virtual {v0, p1}, Lzo9;->setIcon(I)Landroid/view/MenuItem;
+
+    return-object p0
+.end method
+
+.method public final setIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/SubMenu;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lubg;->R0:Lzo9;
+
+    invoke-virtual {v0, p1}, Lzo9;->setIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/MenuItem;
+
+    return-object p0
+.end method
+
+.method public final setQwertyMode(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lubg;->Q0:Lvo9;
+
+    invoke-virtual {v0, p1}, Lvo9;->setQwertyMode(Z)V
+
+    return-void
+.end method
+
+.method public final v(Lto9;)V
+    .locals 0
+
+    const/4 p0, 0x0
+
+    throw p0
 .end method

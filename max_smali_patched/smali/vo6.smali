@@ -1,52 +1,27 @@
-.class public final synthetic Lvo6;
+.class public final Lvo6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfr6;
-
 
 # instance fields
-.field public final synthetic a:La5g;
+.field public a:Z
 
+.field public b:I
 
-# direct methods
-.method public synthetic constructor <init>(La5g;)V
-    .locals 0
+.field public c:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public d:I
 
-    iput-object p1, p0, Lvo6;->a:La5g;
+.field public e:I
 
-    return-void
-.end method
+.field public f:I
 
+.field public g:Ljava/lang/Object;
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.field public h:Ljava/lang/Object;
 
-    check-cast p1, Landroid/database/sqlite/SQLiteDatabase;
+.field public i:Ljava/lang/Object;
 
-    check-cast p2, Landroid/database/sqlite/SQLiteCursorDriver;
+.field public j:F
 
-    check-cast p3, Ljava/lang/String;
-
-    check-cast p4, Landroid/database/sqlite/SQLiteQuery;
-
-    new-instance p1, Lcp6;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, p4, v0}, Lcp6;-><init>(Ljava/io/Closeable;I)V
-
-    iget-object v0, p0, Lvo6;->a:La5g;
-
-    invoke-interface {v0, p1}, La5g;->E(Lz4g;)V
-
-    new-instance p1, Landroid/database/sqlite/SQLiteCursor;
-
-    invoke-direct {p1, p2, p3, p4}, Landroid/database/sqlite/SQLiteCursor;-><init>(Landroid/database/sqlite/SQLiteCursorDriver;Ljava/lang/String;Landroid/database/sqlite/SQLiteQuery;)V
-
-    return-object p1
-.end method
+.field public k:Landroid/view/View;

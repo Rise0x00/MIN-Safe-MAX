@@ -1,43 +1,97 @@
-.class public abstract Lfcb;
+.class public final Lfcb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqn4;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
+# instance fields
+.field public final a:Lqge;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lqge;)V
+    .locals 0
 
-    sget v0, Lqdd;->oneme_in_app_review_close:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lfcb;->a:I
-
-    sget v0, Lqdd;->oneme_in_app_review_not_now:I
-
-    sput v0, Lfcb;->b:I
-
-    sget v0, Lqdd;->oneme_in_app_review_send:I
-
-    sput v0, Lfcb;->c:I
-
-    sget v0, Lqdd;->oneme_in_app_review_subtitle:I
-
-    sput v0, Lfcb;->d:I
-
-    sget v0, Lqdd;->oneme_in_app_review_thanks:I
-
-    sput v0, Lfcb;->e:I
+    iput-object p1, p0, Lfcb;->a:Lqge;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()Landroid/os/Bundle;
+    .locals 2
+
+    iget-object v0, p0, Lfcb;->a:Lqge;
+
+    invoke-virtual {v0}, Lqge;->d()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    const-string v1, "RouterTransaction.controller.bundle"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const-string v1, "Controller.args"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final b()Ljl8;
+    .locals 2
+
+    invoke-virtual {p0}, Lfcb;->a()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const-string v1, "arg_account_id_override"
+
+    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    new-instance v1, Ljl8;
+
+    invoke-direct {v1, v0}, Ljl8;-><init>(I)V
+
+    return-object v1
+
+    :cond_0
+    sget-object v0, Ljl8;->b:Ljl8;
+
+    return-object v0
+.end method
+
+.method public final c()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lfcb;->a:Lqge;
+
+    iget-object v0, v0, Lqge;->b:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const-string v0, ""
+
+    :cond_0
+    return-object v0
 .end method

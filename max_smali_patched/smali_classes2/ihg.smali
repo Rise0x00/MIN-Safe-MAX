@@ -1,44 +1,60 @@
-.class public final Lihg;
+.class public final synthetic Lihg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable$Creator;
+.implements Landroid/view/PixelCopy$OnPixelCopyFinishedListener;
+
+
+# instance fields
+.field public final synthetic a:Ljava/util/concurrent/Semaphore;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ljava/util/concurrent/Semaphore;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lihg;->a:Ljava/util/concurrent/Semaphore;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 4
+.method public final onPixelCopyFinished(I)V
+    .locals 3
 
-    new-instance v0, Ljhg;
+    const-string v0, "SurfaceViewImpl"
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    if-nez p1, :cond_0
 
-    move-result v1
+    const-string p1, "PreviewView.SurfaceViewImplementation.getBitmap() succeeded"
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    invoke-static {v0, p1}, Lw8g;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result v2
+    goto :goto_0
 
-    const-class v3, Ljava/lang/Object;
+    :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    const-string v2, "PreviewView.SurfaceViewImplementation.getBitmap() failed with error "
 
-    move-result-object v3
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, v3}, Landroid/os/Parcel;->readArrayList(Ljava/lang/ClassLoader;)Ljava/util/ArrayList;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {v0, p1, v1, v2}, Ljhg;-><init>(Ljava/util/List;II)V
+    invoke-static {v0, p1}, Lw8g;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object v0
-.end method
+    :goto_0
+    iget-object p1, p0, Lihg;->a:Ljava/util/concurrent/Semaphore;
 
-.method public final newArray(I)[Ljava/lang/Object;
-    .locals 0
+    invoke-virtual {p1}, Ljava/util/concurrent/Semaphore;->release()V
 
-    new-array p1, p1, [Ljhg;
-
-    return-object p1
+    return-void
 .end method

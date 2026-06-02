@@ -17,7 +17,7 @@
         "createNewSegment",
         "Lkotlinx/coroutines/internal/SegmentOrClosed;",
         "findSegmentInternal",
-        "(Lkotlinx/coroutines/internal/Segment;JLbr6;)Ljava/lang/Object;",
+        "(Lkotlinx/coroutines/internal/Segment;JLnt6;)Ljava/lang/Object;",
         "Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;",
         "N",
         "close",
@@ -29,7 +29,7 @@
         "",
         "condition",
         "addConditionally",
-        "(Lkotlinx/atomicfu/AtomicInt;ILnq6;)Z",
+        "(Lkotlinx/atomicfu/AtomicInt;ILzs6;)Z",
         "POINTERS_SHIFT",
         "I",
         "Lkotlinx/coroutines/internal/Symbol;",
@@ -76,14 +76,14 @@
     return-object v0
 .end method
 
-.method private static final synthetic addConditionally$atomicfu$ATOMIC_ARRAY$Int(Ljava/util/concurrent/atomic/AtomicIntegerArray;IILnq6;)Z
+.method private static final synthetic addConditionally$atomicfu$ATOMIC_ARRAY$Int(Ljava/util/concurrent/atomic/AtomicIntegerArray;IILzs6;)Z
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/concurrent/atomic/AtomicIntegerArray;",
             "II",
-            "Lnq6;",
+            "Lzs6;",
             ")Z"
         }
     .end annotation
@@ -97,7 +97,7 @@
 
     move-result-object v1
 
-    invoke-interface {p3, v1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v1}, Lzs6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -127,7 +127,7 @@
     return p0
 .end method
 
-.method private static final synthetic addConditionally$atomicfu$ATOMIC_FIELD_UPDATER$Int(Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;Ljava/lang/Object;ILnq6;)Z
+.method private static final synthetic addConditionally$atomicfu$ATOMIC_FIELD_UPDATER$Int(Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;Ljava/lang/Object;ILzs6;)Z
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -135,7 +135,7 @@
             "Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;",
             "Ljava/lang/Object;",
             "I",
-            "Lnq6;",
+            "Lzs6;",
             ")Z"
         }
     .end annotation
@@ -149,7 +149,7 @@
 
     move-result-object v1
 
-    invoke-interface {p3, v1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v1}, Lzs6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -179,14 +179,14 @@
     return p0
 .end method
 
-.method private static final synthetic addConditionally$atomicfu$BOXED_ATOMIC$Int(Ljava/util/concurrent/atomic/AtomicInteger;ILnq6;)Z
+.method private static final synthetic addConditionally$atomicfu$BOXED_ATOMIC$Int(Ljava/util/concurrent/atomic/AtomicInteger;ILzs6;)Z
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/concurrent/atomic/AtomicInteger;",
             "I",
-            "Lnq6;",
+            "Lzs6;",
             ")Z"
         }
     .end annotation
@@ -200,7 +200,7 @@
 
     move-result-object v1
 
-    invoke-interface {p2, v1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v1}, Lzs6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -273,7 +273,7 @@
     goto :goto_0
 .end method
 
-.method public static final synthetic findSegmentAndMoveForward$atomicfu$ATOMIC_ARRAY$Any(Ljava/util/concurrent/atomic/AtomicReferenceArray;IJLkotlinx/coroutines/internal/Segment;Lbr6;)Ljava/lang/Object;
+.method public static final synthetic findSegmentAndMoveForward$atomicfu$ATOMIC_ARRAY$Any(Ljava/util/concurrent/atomic/AtomicReferenceArray;IJLkotlinx/coroutines/internal/Segment;Lnt6;)Ljava/lang/Object;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -282,14 +282,14 @@
             "TS;>;>(",
             "Ljava/util/concurrent/atomic/AtomicReferenceArray;",
             "IJTS;",
-            "Lbr6;",
+            "Lnt6;",
             ")",
             "Ljava/lang/Object;"
         }
     .end annotation
 
     :goto_0
-    invoke-static {p4, p2, p3, p5}, Lkotlinx/coroutines/internal/ConcurrentLinkedListKt;->findSegmentInternal(Lkotlinx/coroutines/internal/Segment;JLbr6;)Ljava/lang/Object;
+    invoke-static {p4, p2, p3, p5}, Lkotlinx/coroutines/internal/ConcurrentLinkedListKt;->findSegmentInternal(Lkotlinx/coroutines/internal/Segment;JLnt6;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -297,7 +297,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_5
+    if-nez v1, :cond_4
 
     invoke-static {v0}, Lkotlinx/coroutines/internal/SegmentOrClosed;->getSegment-impl(Ljava/lang/Object;)Lkotlinx/coroutines/internal/Segment;
 
@@ -319,7 +319,7 @@
 
     if-ltz v3, :cond_1
 
-    return-object v0
+    goto :goto_2
 
     :cond_1
     invoke-virtual {v1}, Lkotlinx/coroutines/internal/Segment;->tryIncPointers$kotlinx_coroutines_core()Z
@@ -331,30 +331,23 @@
     goto :goto_0
 
     :cond_2
-    invoke-virtual {p0, p1, v2, v1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->compareAndSet(ILjava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1, v2, v1}, Lgj2;->g(Ljava/util/concurrent/atomic/AtomicReferenceArray;ILkotlinx/coroutines/internal/Segment;Lkotlinx/coroutines/internal/Segment;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_4
+    if-eqz v3, :cond_3
 
     invoke-virtual {v2}, Lkotlinx/coroutines/internal/Segment;->decPointers$kotlinx_coroutines_core()Z
 
     move-result p0
 
-    if-eqz p0, :cond_3
+    if-eqz p0, :cond_4
 
     invoke-virtual {v2}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->remove()V
 
-    :cond_3
     return-object v0
 
-    :cond_4
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-eq v3, v2, :cond_2
-
+    :cond_3
     invoke-virtual {v1}, Lkotlinx/coroutines/internal/Segment;->decPointers$kotlinx_coroutines_core()Z
 
     move-result v2
@@ -365,11 +358,12 @@
 
     goto :goto_1
 
-    :cond_5
+    :cond_4
+    :goto_2
     return-object v0
 .end method
 
-.method public static final synthetic findSegmentAndMoveForward$atomicfu$ATOMIC_FIELD_UPDATER$Any(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/lang/Object;JLkotlinx/coroutines/internal/Segment;Lbr6;)Ljava/lang/Object;
+.method public static final synthetic findSegmentAndMoveForward$atomicfu$ATOMIC_FIELD_UPDATER$Any(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/lang/Object;JLkotlinx/coroutines/internal/Segment;Lnt6;)Ljava/lang/Object;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -379,14 +373,14 @@
             "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;",
             "Ljava/lang/Object;",
             "JTS;",
-            "Lbr6;",
+            "Lnt6;",
             ")",
             "Ljava/lang/Object;"
         }
     .end annotation
 
     :goto_0
-    invoke-static {p4, p2, p3, p5}, Lkotlinx/coroutines/internal/ConcurrentLinkedListKt;->findSegmentInternal(Lkotlinx/coroutines/internal/Segment;JLbr6;)Ljava/lang/Object;
+    invoke-static {p4, p2, p3, p5}, Lkotlinx/coroutines/internal/ConcurrentLinkedListKt;->findSegmentInternal(Lkotlinx/coroutines/internal/Segment;JLnt6;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -394,7 +388,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_5
+    if-nez v1, :cond_4
 
     invoke-static {v0}, Lkotlinx/coroutines/internal/SegmentOrClosed;->getSegment-impl(Ljava/lang/Object;)Lkotlinx/coroutines/internal/Segment;
 
@@ -416,7 +410,7 @@
 
     if-ltz v3, :cond_1
 
-    return-object v0
+    goto :goto_2
 
     :cond_1
     invoke-virtual {v1}, Lkotlinx/coroutines/internal/Segment;->tryIncPointers$kotlinx_coroutines_core()Z
@@ -428,30 +422,23 @@
     goto :goto_0
 
     :cond_2
-    invoke-virtual {p0, p1, v2, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1, v2, v1}, Lgj2;->i(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/lang/Object;Lkotlinx/coroutines/internal/Segment;Lkotlinx/coroutines/internal/Segment;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_4
+    if-eqz v3, :cond_3
 
     invoke-virtual {v2}, Lkotlinx/coroutines/internal/Segment;->decPointers$kotlinx_coroutines_core()Z
 
     move-result p0
 
-    if-eqz p0, :cond_3
+    if-eqz p0, :cond_4
 
     invoke-virtual {v2}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->remove()V
 
-    :cond_3
     return-object v0
 
-    :cond_4
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-eq v3, v2, :cond_2
-
+    :cond_3
     invoke-virtual {v1}, Lkotlinx/coroutines/internal/Segment;->decPointers$kotlinx_coroutines_core()Z
 
     move-result v2
@@ -462,11 +449,12 @@
 
     goto :goto_1
 
-    :cond_5
+    :cond_4
+    :goto_2
     return-object v0
 .end method
 
-.method public static final synthetic findSegmentAndMoveForward$atomicfu$BOXED_ATOMIC$Any(Ljava/util/concurrent/atomic/AtomicReference;JLkotlinx/coroutines/internal/Segment;Lbr6;)Ljava/lang/Object;
+.method public static final synthetic findSegmentAndMoveForward$atomicfu$BOXED_ATOMIC$Any(Ljava/util/concurrent/atomic/AtomicReference;JLkotlinx/coroutines/internal/Segment;Lnt6;)Ljava/lang/Object;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -475,14 +463,14 @@
             "TS;>;>(",
             "Ljava/util/concurrent/atomic/AtomicReference;",
             "JTS;",
-            "Lbr6;",
+            "Lnt6;",
             ")",
             "Ljava/lang/Object;"
         }
     .end annotation
 
     :goto_0
-    invoke-static {p3, p1, p2, p4}, Lkotlinx/coroutines/internal/ConcurrentLinkedListKt;->findSegmentInternal(Lkotlinx/coroutines/internal/Segment;JLbr6;)Ljava/lang/Object;
+    invoke-static {p3, p1, p2, p4}, Lkotlinx/coroutines/internal/ConcurrentLinkedListKt;->findSegmentInternal(Lkotlinx/coroutines/internal/Segment;JLnt6;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -490,7 +478,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_5
+    if-nez v1, :cond_4
 
     invoke-static {v0}, Lkotlinx/coroutines/internal/SegmentOrClosed;->getSegment-impl(Ljava/lang/Object;)Lkotlinx/coroutines/internal/Segment;
 
@@ -512,7 +500,7 @@
 
     if-ltz v3, :cond_1
 
-    return-object v0
+    goto :goto_2
 
     :cond_1
     invoke-virtual {v1}, Lkotlinx/coroutines/internal/Segment;->tryIncPointers$kotlinx_coroutines_core()Z
@@ -524,30 +512,23 @@
     goto :goto_0
 
     :cond_2
-    invoke-virtual {p0, v2, v1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, v2, v1}, Lgj2;->f(Ljava/util/concurrent/atomic/AtomicReference;Lkotlinx/coroutines/internal/Segment;Lkotlinx/coroutines/internal/Segment;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_4
+    if-eqz v3, :cond_3
 
     invoke-virtual {v2}, Lkotlinx/coroutines/internal/Segment;->decPointers$kotlinx_coroutines_core()Z
 
     move-result p0
 
-    if-eqz p0, :cond_3
+    if-eqz p0, :cond_4
 
     invoke-virtual {v2}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->remove()V
 
-    :cond_3
     return-object v0
 
-    :cond_4
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-eq v3, v2, :cond_2
-
+    :cond_3
     invoke-virtual {v1}, Lkotlinx/coroutines/internal/Segment;->decPointers$kotlinx_coroutines_core()Z
 
     move-result v2
@@ -558,18 +539,19 @@
 
     goto :goto_1
 
-    :cond_5
+    :cond_4
+    :goto_2
     return-object v0
 .end method
 
-.method public static final findSegmentInternal(Lkotlinx/coroutines/internal/Segment;JLbr6;)Ljava/lang/Object;
+.method public static final findSegmentInternal(Lkotlinx/coroutines/internal/Segment;JLnt6;)Ljava/lang/Object;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<S:",
             "Lkotlinx/coroutines/internal/Segment<",
             "TS;>;>(TS;J",
-            "Lbr6;",
+            "Lnt6;",
             ")",
             "Ljava/lang/Object;"
         }
@@ -642,7 +624,7 @@
 
     move-result-object v0
 
-    invoke-interface {p3, v0, p0}, Lbr6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v0, p0}, Lnt6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -665,14 +647,14 @@
     goto :goto_2
 .end method
 
-.method private static final synthetic loop$atomicfu$ATOMIC_ARRAY$Any(Ljava/util/concurrent/atomic/AtomicReferenceArray;ILnq6;)V
+.method private static final synthetic loop$atomicfu$ATOMIC_ARRAY$Any(Ljava/util/concurrent/atomic/AtomicReferenceArray;ILzs6;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/concurrent/atomic/AtomicReferenceArray;",
             "I",
-            "Lnq6;",
+            "Lzs6;",
             ")V"
         }
     .end annotation
@@ -682,19 +664,19 @@
 
     move-result-object v0
 
-    invoke-interface {p2, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v0}, Lzs6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method
 
-.method private static final synthetic loop$atomicfu$ATOMIC_FIELD_UPDATER$Any(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/lang/Object;Lnq6;)V
+.method private static final synthetic loop$atomicfu$ATOMIC_FIELD_UPDATER$Any(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/lang/Object;Lzs6;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;",
             "Ljava/lang/Object;",
-            "Lnq6;",
+            "Lzs6;",
             ")V"
         }
     .end annotation
@@ -704,18 +686,18 @@
 
     move-result-object v0
 
-    invoke-interface {p2, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v0}, Lzs6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method
 
-.method private static final synthetic loop$atomicfu$BOXED_ATOMIC$Any(Ljava/util/concurrent/atomic/AtomicReference;Lnq6;)V
+.method private static final synthetic loop$atomicfu$BOXED_ATOMIC$Any(Ljava/util/concurrent/atomic/AtomicReference;Lzs6;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/concurrent/atomic/AtomicReference;",
-            "Lnq6;",
+            "Lzs6;",
             ")V"
         }
     .end annotation
@@ -725,7 +707,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lzs6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method
@@ -760,7 +742,7 @@
 
     if-ltz v1, :cond_1
 
-    return v2
+    goto :goto_1
 
     :cond_1
     invoke-virtual {p2}, Lkotlinx/coroutines/internal/Segment;->tryIncPointers$kotlinx_coroutines_core()Z
@@ -774,7 +756,7 @@
     return p0
 
     :cond_2
-    invoke-virtual {p0, p1, v0, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->compareAndSet(ILjava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1, v0, p2}, Lgj2;->g(Ljava/util/concurrent/atomic/AtomicReferenceArray;ILkotlinx/coroutines/internal/Segment;Lkotlinx/coroutines/internal/Segment;)Z
 
     move-result v1
 
@@ -789,15 +771,10 @@
     invoke-virtual {v0}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->remove()V
 
     :cond_3
+    :goto_1
     return v2
 
     :cond_4
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-eq v1, v0, :cond_2
-
     invoke-virtual {p2}, Lkotlinx/coroutines/internal/Segment;->decPointers$kotlinx_coroutines_core()Z
 
     move-result v0
@@ -840,7 +817,7 @@
 
     if-ltz v1, :cond_1
 
-    return v2
+    goto :goto_1
 
     :cond_1
     invoke-virtual {p2}, Lkotlinx/coroutines/internal/Segment;->tryIncPointers$kotlinx_coroutines_core()Z
@@ -854,7 +831,7 @@
     return p0
 
     :cond_2
-    invoke-virtual {p0, p1, v0, p2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1, v0, p2}, Lgj2;->i(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/lang/Object;Lkotlinx/coroutines/internal/Segment;Lkotlinx/coroutines/internal/Segment;)Z
 
     move-result v1
 
@@ -869,15 +846,10 @@
     invoke-virtual {v0}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->remove()V
 
     :cond_3
+    :goto_1
     return v2
 
     :cond_4
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-eq v1, v0, :cond_2
-
     invoke-virtual {p2}, Lkotlinx/coroutines/internal/Segment;->decPointers$kotlinx_coroutines_core()Z
 
     move-result v0
@@ -919,7 +891,7 @@
 
     if-ltz v1, :cond_1
 
-    return v2
+    goto :goto_1
 
     :cond_1
     invoke-virtual {p1}, Lkotlinx/coroutines/internal/Segment;->tryIncPointers$kotlinx_coroutines_core()Z
@@ -933,7 +905,7 @@
     return p0
 
     :cond_2
-    invoke-virtual {p0, v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, v0, p1}, Lgj2;->f(Ljava/util/concurrent/atomic/AtomicReference;Lkotlinx/coroutines/internal/Segment;Lkotlinx/coroutines/internal/Segment;)Z
 
     move-result v1
 
@@ -948,15 +920,10 @@
     invoke-virtual {v0}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->remove()V
 
     :cond_3
+    :goto_1
     return v2
 
     :cond_4
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-eq v1, v0, :cond_2
-
     invoke-virtual {p1}, Lkotlinx/coroutines/internal/Segment;->decPointers$kotlinx_coroutines_core()Z
 
     move-result v0

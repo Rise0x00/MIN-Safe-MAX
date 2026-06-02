@@ -1,218 +1,86 @@
-.class public final Lu6;
-.super Lyl6;
+.class public final synthetic Lu6;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lxs6;
 
 
 # instance fields
-.field public final synthetic u0:I
+.field public final synthetic a:I
 
-.field public final synthetic v0:Landroid/view/View;
+.field public final synthetic b:Lgjc;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/view/menu/ActionMenuItemView;)V
-    .locals 1
+.method public synthetic constructor <init>(Lgjc;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p2, p0, Lu6;->a:I
 
-    iput v0, p0, Lu6;->u0:I
+    iput-object p1, p0, Lu6;->b:Lgjc;
 
-    .line 1
-    iput-object p1, p0, Lu6;->v0:Landroid/view/View;
-
-    .line 2
-    invoke-direct {p0, p1}, Lyl6;-><init>(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ly6;Ly6;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lu6;->u0:I
-
-    .line 3
-    iput-object p1, p0, Lu6;->v0:Landroid/view/View;
-
-    invoke-direct {p0, p2}, Lyl6;-><init>(Landroid/view/View;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Labf;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    iget v0, p0, Lu6;->u0:I
+    iget v0, p0, Lu6;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lu6;->v0:Landroid/view/View;
+    new-instance v0, Lhjc;
 
-    check-cast v0, Ly6;
+    iget-object v1, p0, Lu6;->b:Lgjc;
 
-    iget-object v0, v0, Ly6;->d:Lz6;
+    invoke-direct {v0, v1}, Lhjc;-><init>(Lgjc;)V
 
-    iget-object v0, v0, Lz6;->D0:Lw6;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Lyj9;->a()Lwj9;
-
-    move-result-object v0
-
-    :goto_0
     return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lu6;->v0:Landroid/view/View;
+    new-instance v0, Lijc;
 
-    check-cast v0, Landroidx/appcompat/view/menu/ActionMenuItemView;
+    iget-object v1, p0, Lu6;->b:Lgjc;
 
-    iget-object v0, v0, Landroidx/appcompat/view/menu/ActionMenuItemView;->A0:Lv6;
+    invoke-direct {v0, v1}, Lijc;-><init>(Lgjc;)V
 
-    if-eqz v0, :cond_1
+    return-object v0
 
-    check-cast v0, Lx6;
+    :pswitch_1
+    iget-object v0, p0, Lu6;->b:Lgjc;
 
-    iget-object v0, v0, Lx6;->a:Lz6;
+    iget-object v0, v0, Lgjc;->e0:Lejc;
 
-    iget-object v0, v0, Lz6;->E0:Lw6;
+    sget-object v1, Lgjc;->x5:[Lb88;
 
-    if-eqz v0, :cond_1
+    const/16 v2, 0x36
 
-    invoke-virtual {v0}, Lyj9;->a()Lwj9;
+    aget-object v1, v1, v2
+
+    invoke-virtual {v0, v1}, Lejc;->a(Lb88;)Lkjc;
 
     move-result-object v0
 
-    goto :goto_1
+    invoke-virtual {v0}, Lkjc;->i()Ljava/lang/Object;
 
-    :cond_1
-    const/4 v0, 0x0
+    move-result-object v0
 
-    :goto_1
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
     return-object v0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c()Z
-    .locals 2
-
-    iget v0, p0, Lu6;->u0:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lu6;->v0:Landroid/view/View;
-
-    check-cast v0, Ly6;
-
-    iget-object v0, v0, Ly6;->d:Lz6;
-
-    invoke-virtual {v0}, Lz6;->l()Z
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :pswitch_0
-    iget-object v0, p0, Lu6;->v0:Landroid/view/View;
-
-    check-cast v0, Landroidx/appcompat/view/menu/ActionMenuItemView;
-
-    iget-object v1, v0, Landroidx/appcompat/view/menu/ActionMenuItemView;->y0:Lmj9;
-
-    if-eqz v1, :cond_0
-
-    iget-object v0, v0, Landroidx/appcompat/view/menu/ActionMenuItemView;->v0:Lrj9;
-
-    invoke-interface {v1, v0}, Lmj9;->a(Lrj9;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lu6;->b()Labf;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Labf;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public d()Z
-    .locals 2
-
-    iget v0, p0, Lu6;->u0:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Lyl6;->d()Z
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    iget-object v0, p0, Lu6;->v0:Landroid/view/View;
-
-    check-cast v0, Ly6;
-
-    iget-object v0, v0, Ly6;->d:Lz6;
-
-    iget-object v1, v0, Lz6;->F0:Lis6;
-
-    if-eqz v1, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Lz6;->h()Z
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

@@ -1,118 +1,275 @@
 .class public final Lgwe;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
+
+# static fields
+.field public static final c:Lgwe;
 
 
 # instance fields
-.field public final synthetic X:Lowe;
+.field public final a:J
 
-.field public o:I
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Lowe;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput-object p1, p0, Lgwe;->X:Lowe;
+    new-instance v0, Lgwe;
 
-    const/4 p1, 0x2
+    const-wide/16 v1, 0x0
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, v2, v1, v2}, Lgwe;-><init>(JJ)V
+
+    new-instance v3, Lgwe;
+
+    const-wide v4, 0x7fffffffffffffffL
+
+    invoke-direct {v3, v4, v5, v4, v5}, Lgwe;-><init>(JJ)V
+
+    new-instance v3, Lgwe;
+
+    invoke-direct {v3, v4, v5, v1, v2}, Lgwe;-><init>(JJ)V
+
+    new-instance v3, Lgwe;
+
+    invoke-direct {v3, v1, v2, v4, v5}, Lgwe;-><init>(JJ)V
+
+    sput-object v0, Lgwe;->c:Lgwe;
+
+    return-void
+.end method
+
+.method public constructor <init>(JJ)V
+    .locals 5
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v2, p1, v0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    if-ltz v2, :cond_0
+
+    move v2, v4
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v3
+
+    :goto_0
+    invoke-static {v2}, Lmhj;->b(Z)V
+
+    cmp-long v0, p3, v0
+
+    if-ltz v0, :cond_1
+
+    move v3, v4
+
+    :cond_1
+    invoke-static {v3}, Lmhj;->b(Z)V
+
+    iput-wide p1, p0, Lgwe;->a:J
+
+    iput-wide p3, p0, Lgwe;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(JJJ)J
+    .locals 11
 
-    check-cast p1, Lzb4;
+    iget-wide v0, p0, Lgwe;->a:J
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {p0, p1, p2}, Lgwe;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    cmp-long v4, v0, v2
 
-    move-result-object p1
+    iget-wide v5, p0, Lgwe;->b:J
 
-    check-cast p1, Lgwe;
+    if-nez v4, :cond_0
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    cmp-long v4, v5, v2
 
-    invoke-virtual {p1, p2}, Lgwe;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    if-nez v4, :cond_0
 
-    move-result-object p1
+    return-wide p1
 
-    return-object p1
-.end method
+    :cond_0
+    sget v4, Lnnh;->a:I
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    sub-long v7, p1, v0
 
-    new-instance p1, Lgwe;
+    xor-long/2addr v0, p1
 
-    iget-object v0, p0, Lgwe;->X:Lowe;
+    xor-long v9, p1, v7
 
-    invoke-direct {p1, v0, p2}, Lgwe;-><init>(Lowe;Lkotlin/coroutines/Continuation;)V
+    and-long/2addr v0, v9
 
-    return-object p1
-.end method
+    cmp-long v0, v0, v2
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    if-gez v0, :cond_1
 
-    iget v0, p0, Lgwe;->o:I
+    const-wide/high16 v7, -0x8000000000000000L
 
-    iget-object v1, p0, Lgwe;->X:Lowe;
+    :cond_1
+    add-long v0, p1, v5
 
-    const/4 v2, 0x1
+    xor-long v9, p1, v0
 
-    if-eqz v0, :cond_1
+    xor-long v4, v5, v0
 
-    if-ne v0, v2, :cond_0
+    and-long/2addr v4, v9
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    cmp-long v2, v4, v2
+
+    if-gez v2, :cond_2
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    :cond_2
+    cmp-long v2, v7, p3
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    if-gtz v2, :cond_3
+
+    cmp-long v2, p3, v0
+
+    if-gtz v2, :cond_3
+
+    move v2, v4
 
     goto :goto_0
 
+    :cond_3
+    move v2, v3
+
+    :goto_0
+    cmp-long v5, v7, p5
+
+    if-gtz v5, :cond_4
+
+    cmp-long v0, p5, v0
+
+    if-gtz v0, :cond_4
+
+    move v3, v4
+
+    :cond_4
+    if-eqz v2, :cond_5
+
+    if-eqz v3, :cond_5
+
+    sub-long v0, p3, p1
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->abs(J)J
+
+    move-result-wide v0
+
+    sub-long p1, p5, p1
+
+    invoke-static {p1, p2}, Ljava/lang/Math;->abs(J)J
+
+    move-result-wide p1
+
+    cmp-long p1, v0, p1
+
+    if-gtz p1, :cond_7
+
+    goto :goto_1
+
+    :cond_5
+    if-eqz v2, :cond_6
+
+    :goto_1
+    return-wide p3
+
+    :cond_6
+    if-eqz v3, :cond_8
+
+    :cond_7
+    return-wide p5
+
+    :cond_8
+    return-wide v7
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 v1, 0x0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    if-eqz p1, :cond_2
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const-class v2, Lgwe;
 
-    throw p1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    check-cast p1, Lgwe;
 
-    iget-object p1, v1, Lowe;->b:Lvw6;
+    iget-wide v2, p0, Lgwe;->a:J
 
-    iput v2, p0, Lgwe;->o:I
+    iget-wide v4, p1, Lgwe;->a:J
 
-    invoke-virtual {p1, p0}, Lvw6;->d(Lo84;)Ljava/lang/Object;
+    cmp-long v2, v2, v4
 
-    move-result-object p1
+    if-nez v2, :cond_2
 
-    sget-object v0, Lac4;->a:Lac4;
+    iget-wide v2, p0, Lgwe;->b:J
 
-    if-ne p1, v0, :cond_2
+    iget-wide v4, p1, Lgwe;->b:J
 
-    return-object v0
+    cmp-long p1, v2, v4
+
+    if-nez p1, :cond_2
+
+    return v0
 
     :cond_2
     :goto_0
-    check-cast p1, Lg3f;
+    return v1
+.end method
 
-    iget-object v0, v1, Lowe;->E0:Lspf;
+.method public final hashCode()I
+    .locals 3
 
-    invoke-virtual {v0, p1}, Lspf;->setValue(Ljava/lang/Object;)V
+    iget-wide v0, p0, Lgwe;->a:J
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    long-to-int v0, v0
 
-    return-object p1
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lgwe;->b:J
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method

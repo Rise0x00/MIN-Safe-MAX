@@ -1,70 +1,131 @@
-.class public final Ljxi;
-.super Ljava/lang/Object;
+.class public final enum Ljxi;
+.super Ljava/lang/Enum;
 .source "SourceFile"
-
-# interfaces
-.implements Lvwa;
 
 
 # static fields
-.field public static final a:Ljxi;
+.field public static final enum X:Ljxi;
+
+.field public static final synthetic Y:[Ljxi;
+
+.field public static final synthetic Z:Lmn5;
+
+.field public static final enum c:Ljxi;
+
+.field public static final enum d:Ljxi;
+
+.field public static final enum o:Ljxi;
+
+
+# instance fields
+.field public final a:C
+
+.field public final b:C
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 9
 
     new-instance v0, Ljxi;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "OBJ"
 
-    sput-object v0, Ljxi;->a:Ljxi;
+    const/4 v2, 0x0
 
-    new-instance v0, Lbri;
+    const/16 v3, 0x7b
 
-    const/4 v1, 0x1
+    const/16 v4, 0x7d
 
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Ljxi;-><init>(Ljava/lang/String;ICC)V
 
-    const-class v1, Lpri;
+    sput-object v0, Ljxi;->c:Ljxi;
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+    new-instance v1, Ljxi;
+
+    const-string v2, "LIST"
+
+    const/4 v5, 0x1
+
+    const/16 v6, 0x5b
+
+    const/16 v7, 0x5d
+
+    invoke-direct {v1, v2, v5, v6, v7}, Ljxi;-><init>(Ljava/lang/String;ICC)V
+
+    sput-object v1, Ljxi;->d:Ljxi;
+
+    new-instance v2, Ljxi;
+
+    const-string v5, "MAP"
+
+    const/4 v8, 0x2
+
+    invoke-direct {v2, v5, v8, v3, v4}, Ljxi;-><init>(Ljava/lang/String;ICC)V
+
+    sput-object v2, Ljxi;->o:Ljxi;
+
+    new-instance v3, Ljxi;
+
+    const-string v4, "POLY_OBJ"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5, v6, v7}, Ljxi;-><init>(Ljava/lang/String;ICC)V
+
+    sput-object v3, Ljxi;->X:Ljxi;
+
+    filled-new-array {v0, v1, v2, v3}, [Ljxi;
 
     move-result-object v0
 
-    const/4 v2, 0x2
+    sput-object v0, Ljxi;->Y:[Ljxi;
 
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+    new-instance v1, Lmn5;
 
-    move-result-object v0
+    invoke-direct {v1, v0}, Lmn5;-><init>([Ljava/lang/Enum;)V
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    sput-object v1, Ljxi;->Z:Lmn5;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public constructor <init>(Ljava/lang/String;ICC)V
     .locals 0
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result-object p1
+    iput-char p3, p0, Ljxi;->a:C
 
-    throw p1
+    iput-char p4, p0, Ljxi;->b:C
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Ljxi;
+    .locals 1
+
+    const-class v0, Ljxi;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ljxi;
+
+    return-object p0
+.end method
+
+.method public static values()[Ljxi;
+    .locals 1
+
+    sget-object v0, Ljxi;->Y:[Ljxi;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ljxi;
+
+    return-object v0
 .end method

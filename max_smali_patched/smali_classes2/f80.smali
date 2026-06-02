@@ -1,52 +1,173 @@
 .class public final Lf80;
-.super Lj2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Landroid/media/AudioManager;
+
+.field public final b:Le80;
+
+.field public final c:Lct5;
+
+.field public d:I
+
+.field public e:F
+
+
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;Lct5;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    iput v0, p0, Lf80;->e:F
+
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    const-string v0, "audio"
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/media/AudioManager;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Lf80;->a:Landroid/media/AudioManager;
+
+    iput-object p3, p0, Lf80;->c:Lct5;
+
+    new-instance p1, Le80;
+
+    invoke-direct {p1, p0, p2}, Le80;-><init>(Lf80;Landroid/os/Handler;)V
+
+    iput-object p1, p0, Lf80;->b:Le80;
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lf80;->d:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
     .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Lf80;->d:I
 
-    if-eq p1, v0, :cond_1
+    if-nez v0, :cond_0
 
-    const/4 v0, 0x2
+    return-void
 
-    if-ne p1, v0, :cond_0
+    :cond_0
+    sget v0, Lnnh;->a:I
+
+    const/16 v1, 0x1a
+
+    if-lt v0, v1, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    const/4 p1, 0x0
-
-    throw p1
-
     :cond_1
+    iget-object v0, p0, Lf80;->b:Le80;
+
+    iget-object v1, p0, Lf80;->a:Landroid/media/AudioManager;
+
+    invoke-virtual {v1, v0}, Landroid/media/AudioManager;->abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I
+
     :goto_0
-    invoke-static {v0}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+    const/4 v0, 0x0
 
-    move-result-object p1
+    invoke-virtual {p0, v0}, Lf80;->b(I)V
 
-    new-instance v0, Lktb;
+    return-void
+.end method
 
-    const-string v1, "reason"
+.method public final b(I)V
+    .locals 3
 
-    invoke-direct {v0, v1, p1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    iget v0, p0, Lf80;->d:I
 
-    filled-new-array {v0}, [Lktb;
+    if-ne v0, p1, :cond_0
 
-    move-result-object p1
+    goto :goto_1
 
-    invoke-static {p1}, Leae;->c([Lktb;)Ljfa;
-
-    move-result-object p1
+    :cond_0
+    iput p1, p0, Lf80;->d:I
 
     const/4 v0, 0x3
 
-    const-string v1, "registration_failed"
+    if-ne p1, v0, :cond_1
 
-    invoke-direct {p0, v1, v0, p1}, Lj2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    const p1, 0x3e4ccccd    # 0.2f
 
+    goto :goto_0
+
+    :cond_1
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    :goto_0
+    iget v0, p0, Lf80;->e:F
+
+    cmpl-float v0, v0, p1
+
+    if-nez v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    iput p1, p0, Lf80;->e:F
+
+    iget-object p1, p0, Lf80;->c:Lct5;
+
+    if-eqz p1, :cond_3
+
+    iget-object p1, p1, Lct5;->a:Lit5;
+
+    iget v0, p1, Lit5;->j1:F
+
+    iget-object v1, p1, Lit5;->N0:Lf80;
+
+    iget v1, v1, Lf80;->e:F
+
+    mul-float/2addr v0, v1
+
+    const/4 v1, 0x2
+
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p1, v2, v1, v0}, Lit5;->c0(IILjava/lang/Object;)V
+
+    :cond_3
+    :goto_1
     return-void
+.end method
+
+.method public final c(IZ)I
+    .locals 0
+
+    invoke-virtual {p0}, Lf80;->a()V
+
+    if-eqz p2, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, -0x1
+
+    return p1
 .end method

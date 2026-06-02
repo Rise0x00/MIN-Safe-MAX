@@ -1,63 +1,161 @@
 .class public final Lag3;
-.super Lhja;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lag3;
+# instance fields
+.field public final a:Lwo0;
+
+.field public b:J
+
+.field public c:J
+
+.field public d:Z
+
+.field public e:Z
+
+.field public f:Z
+
+.field public g:Z
+
+.field public h:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lwo0;)V
     .locals 2
 
-    new-instance v0, Lag3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v1, Lb3h;->a:Lb3h;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {v0, v1}, Lhja;-><init>(Ljava/lang/Object;)V
+    iput-object p1, p0, Lag3;->a:Lwo0;
 
-    sput-object v0, Lag3;->b:Lag3;
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lag3;->d:Z
+
+    const-wide/high16 v0, -0x8000000000000000L
+
+    iput-wide v0, p0, Lag3;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()Leg3;
     .locals 1
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    iput-boolean v0, p0, Lag3;->h:Z
 
-    return v0
+    new-instance v0, Leg3;
 
-    :cond_0
-    instance-of p1, p1, Lag3;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x1193edd2
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Close"
+    invoke-direct {v0, p0}, Leg3;-><init>(Lag3;)V
 
     return-object v0
+.end method
+
+.method public final b(Z)V
+    .locals 1
+
+    iget-boolean v0, p0, Lag3;->h:Z
+
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-static {v0}, Lh43;->o(Z)V
+
+    iput-boolean p1, p0, Lag3;->e:Z
+
+    return-void
+.end method
+
+.method public final c(Z)V
+    .locals 1
+
+    iget-boolean v0, p0, Lag3;->h:Z
+
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-static {v0}, Lh43;->o(Z)V
+
+    iput-boolean p1, p0, Lag3;->g:Z
+
+    return-void
+.end method
+
+.method public final d(Z)V
+    .locals 1
+
+    iget-boolean v0, p0, Lag3;->h:Z
+
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-static {v0}, Lh43;->o(Z)V
+
+    iput-boolean p1, p0, Lag3;->d:Z
+
+    return-void
+.end method
+
+.method public final e(J)V
+    .locals 1
+
+    iget-boolean v0, p0, Lag3;->h:Z
+
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-static {v0}, Lh43;->o(Z)V
+
+    iput-wide p1, p0, Lag3;->c:J
+
+    return-void
+.end method
+
+.method public final f(Z)V
+    .locals 1
+
+    iget-boolean v0, p0, Lag3;->h:Z
+
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-static {v0}, Lh43;->o(Z)V
+
+    iput-boolean p1, p0, Lag3;->f:Z
+
+    return-void
+.end method
+
+.method public final g(J)V
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p1, v0
+
+    const/4 v1, 0x1
+
+    if-ltz v0, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-static {v0}, Lh43;->j(Z)V
+
+    iget-boolean v0, p0, Lag3;->h:Z
+
+    xor-int/2addr v0, v1
+
+    invoke-static {v0}, Lh43;->o(Z)V
+
+    iput-wide p1, p0, Lag3;->b:J
+
+    return-void
 .end method

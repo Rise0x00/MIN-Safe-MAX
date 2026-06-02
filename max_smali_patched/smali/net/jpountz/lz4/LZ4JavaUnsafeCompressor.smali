@@ -93,17 +93,16 @@
 
     .line 34
     :cond_0
-    invoke-virtual {v0, v8}, Ljava/nio/ByteBuffer;->getInt(I)I
+    invoke-static {v8, v0}, Lm31;->g(ILjava/nio/ByteBuffer;)I
 
     move-result v14
 
-    .line 35
     invoke-static {v14}, Lnet/jpountz/lz4/LZ4Utils;->hash64k(I)I
 
     move-result v14
 
-    .line 36
-    invoke-static {v2, v14}, Ls4h;->f([SI)I
+    .line 35
+    invoke-static {v2, v14}, Lhgh;->g([SI)I
 
     move-result v15
 
@@ -113,17 +112,17 @@
 
     sub-int v4, v8, v1
 
-    .line 37
-    invoke-static {v2, v14, v4}, Ls4h;->o([SII)V
+    .line 36
+    invoke-static {v2, v14, v4}, Lhgh;->q([SII)V
 
-    .line 38
+    .line 37
     invoke-static {v0, v15, v8}, Lnet/jpountz/lz4/LZ4ByteBufferUtils;->readIntEquals(Ljava/nio/ByteBuffer;II)Z
 
     move-result v4
 
     if-eqz v4, :cond_7
 
-    .line 39
+    .line 38
     invoke-static {v0, v15, v8, v1, v9}, Lnet/jpountz/lz4/LZ4ByteBufferUtils;->commonBytesBackward(Ljava/nio/ByteBuffer;IIII)I
 
     move-result v4
@@ -144,7 +143,7 @@
 
     add-int/2addr v12, v13
 
-    .line 40
+    .line 39
     const-string v13, "maxDestLen is too small"
 
     if-gt v12, v5, :cond_6
@@ -155,14 +154,12 @@
 
     const/16 v14, 0xf0
 
-    int-to-byte v14, v14
-
-    .line 41
-    invoke-virtual {v3, v10, v14}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
+    .line 40
+    invoke-static {v3, v10, v14}, Lm31;->l(Ljava/nio/ByteBuffer;II)V
 
     add-int/lit8 v14, v4, -0xf
 
-    .line 42
+    .line 41
     invoke-static {v14, v3, v11}, Lnet/jpountz/lz4/LZ4ByteBufferUtils;->writeLen(ILjava/nio/ByteBuffer;I)I
 
     move-result v11
@@ -172,12 +169,10 @@
     :cond_1
     shl-int/lit8 v14, v4, 0x4
 
-    int-to-byte v14, v14
+    .line 42
+    invoke-static {v3, v10, v14}, Lm31;->l(Ljava/nio/ByteBuffer;II)V
 
     .line 43
-    invoke-virtual {v3, v10, v14}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
-
-    .line 44
     :goto_3
     invoke-static {v0, v9, v3, v11, v4}, Lnet/jpountz/lz4/LZ4ByteBufferUtils;->wildArraycopy(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;II)V
 
@@ -188,8 +183,8 @@
 
     int-to-short v4, v4
 
-    .line 45
-    invoke-static {v3, v11, v4}, Lyy0;->f(Ljava/nio/ByteBuffer;II)V
+    .line 44
+    invoke-static {v3, v11, v4}, Lm31;->m(Ljava/nio/ByteBuffer;II)V
 
     add-int/lit8 v4, v11, 0x2
 
@@ -197,7 +192,7 @@
 
     add-int/lit8 v15, v15, 0x4
 
-    .line 46
+    .line 45
     invoke-static {v0, v15, v8, v6}, Lnet/jpountz/lz4/LZ4ByteBufferUtils;->commonBytes(Ljava/nio/ByteBuffer;III)I
 
     move-result v9
@@ -214,21 +209,18 @@
 
     if-lt v9, v12, :cond_2
 
-    .line 47
-    invoke-virtual {v3, v10}, Ljava/nio/ByteBuffer;->get(I)B
+    .line 46
+    invoke-static {v10, v3}, Lm31;->f(ILjava/nio/ByteBuffer;)B
 
     move-result v11
 
     or-int/2addr v11, v12
 
-    int-to-byte v11, v11
-
-    .line 48
-    invoke-virtual {v3, v10, v11}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
+    invoke-static {v3, v10, v11}, Lm31;->l(Ljava/nio/ByteBuffer;II)V
 
     add-int/lit8 v9, v9, -0xf
 
-    .line 49
+    .line 47
     invoke-static {v9, v3, v4}, Lnet/jpountz/lz4/LZ4ByteBufferUtils;->writeLen(ILjava/nio/ByteBuffer;I)I
 
     move-result v4
@@ -238,18 +230,15 @@
 
     goto :goto_6
 
-    .line 50
+    .line 48
     :cond_2
-    invoke-virtual {v3, v10}, Ljava/nio/ByteBuffer;->get(I)B
+    invoke-static {v10, v3}, Lm31;->f(ILjava/nio/ByteBuffer;)B
 
     move-result v11
 
     or-int/2addr v9, v11
 
-    int-to-byte v9, v9
-
-    .line 51
-    invoke-virtual {v3, v10, v9}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
+    invoke-static {v3, v10, v9}, Lm31;->l(Ljava/nio/ByteBuffer;II)V
 
     goto :goto_5
 
@@ -263,32 +252,30 @@
     :cond_3
     add-int/lit8 v4, v8, -0x2
 
-    .line 52
-    invoke-virtual {v0, v4}, Ljava/nio/ByteBuffer;->getInt(I)I
+    .line 49
+    invoke-static {v4, v0}, Lm31;->g(ILjava/nio/ByteBuffer;)I
 
     move-result v9
 
-    .line 53
     invoke-static {v9}, Lnet/jpountz/lz4/LZ4Utils;->hash64k(I)I
 
     move-result v9
 
     sub-int/2addr v4, v1
 
-    invoke-static {v2, v9, v4}, Ls4h;->o([SII)V
+    invoke-static {v2, v9, v4}, Lhgh;->q([SII)V
 
-    .line 54
-    invoke-virtual {v0, v8}, Ljava/nio/ByteBuffer;->getInt(I)I
+    .line 50
+    invoke-static {v8, v0}, Lm31;->g(ILjava/nio/ByteBuffer;)I
 
     move-result v4
 
-    .line 55
     invoke-static {v4}, Lnet/jpountz/lz4/LZ4Utils;->hash64k(I)I
 
     move-result v4
 
-    .line 56
-    invoke-static {v2, v4}, Ls4h;->f([SI)I
+    .line 51
+    invoke-static {v2, v4}, Lhgh;->g([SI)I
 
     move-result v9
 
@@ -296,10 +283,10 @@
 
     sub-int v9, v8, v1
 
-    .line 57
-    invoke-static {v2, v4, v9}, Ls4h;->o([SII)V
+    .line 52
+    invoke-static {v2, v4, v9}, Lhgh;->q([SII)V
 
-    .line 58
+    .line 53
     invoke-static {v0, v8, v15}, Lnet/jpountz/lz4/LZ4ByteBufferUtils;->readIntEquals(Ljava/nio/ByteBuffer;II)Z
 
     move-result v4
@@ -321,14 +308,12 @@
 
     const/4 v4, 0x0
 
-    int-to-byte v4, v4
-
-    .line 59
-    invoke-virtual {v3, v10, v4}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
+    .line 54
+    invoke-static {v3, v10, v4}, Lm31;->l(Ljava/nio/ByteBuffer;II)V
 
     goto :goto_4
 
-    .line 60
+    .line 55
     :cond_5
     new-instance v0, Lnet/jpountz/lz4/LZ4Exception;
 
@@ -336,7 +321,7 @@
 
     throw v0
 
-    .line 61
+    .line 56
     :cond_6
     new-instance v0, Lnet/jpountz/lz4/LZ4Exception;
 
@@ -363,7 +348,7 @@
     :goto_7
     sub-int v2, v16, v1
 
-    .line 62
+    .line 57
     invoke-static/range {v0 .. v5}, Lnet/jpountz/lz4/LZ4ByteBufferUtils;->lastLiterals(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I
 
     move-result v0
@@ -438,7 +423,7 @@
 
     .line 4
     :cond_0
-    invoke-static {v8, v0}, Ls4h;->b(I[B)I
+    invoke-static {v8, v0}, Lhgh;->c(I[B)I
 
     move-result v14
 
@@ -447,7 +432,7 @@
     move-result v14
 
     .line 5
-    invoke-static {v2, v14}, Ls4h;->f([SI)I
+    invoke-static {v2, v14}, Lhgh;->g([SI)I
 
     move-result v15
 
@@ -458,7 +443,7 @@
     sub-int v4, v8, v1
 
     .line 6
-    invoke-static {v2, v14, v4}, Ls4h;->o([SII)V
+    invoke-static {v2, v14, v4}, Lhgh;->q([SII)V
 
     .line 7
     invoke-static {v0, v15, v8}, Lnet/jpountz/lz4/LZ4UnsafeUtils;->readIntEquals([BII)Z
@@ -502,7 +487,7 @@
     int-to-byte v14, v14
 
     .line 10
-    invoke-static {v3, v10, v14}, Ls4h;->h([BIB)V
+    invoke-static {v3, v10, v14}, Lhgh;->l([BIB)V
 
     add-int/lit8 v14, v4, -0xf
 
@@ -519,7 +504,7 @@
     int-to-byte v14, v14
 
     .line 12
-    invoke-static {v3, v10, v14}, Ls4h;->h([BIB)V
+    invoke-static {v3, v10, v14}, Lhgh;->l([BIB)V
 
     .line 13
     :goto_3
@@ -535,7 +520,7 @@
     int-to-byte v9, v4
 
     .line 14
-    invoke-static {v3, v11, v9}, Ls4h;->h([BIB)V
+    invoke-static {v3, v11, v9}, Lhgh;->l([BIB)V
 
     add-int/lit8 v9, v11, 0x1
 
@@ -544,7 +529,7 @@
     int-to-byte v4, v4
 
     .line 15
-    invoke-static {v3, v9, v4}, Ls4h;->h([BIB)V
+    invoke-static {v3, v9, v4}, Lhgh;->l([BIB)V
 
     add-int/lit8 v4, v11, 0x2
 
@@ -570,7 +555,7 @@
     if-lt v9, v12, :cond_2
 
     .line 17
-    invoke-static {v10, v3}, Ls4h;->a(I[B)B
+    invoke-static {v10, v3}, Lhgh;->a(I[B)B
 
     move-result v11
 
@@ -579,7 +564,7 @@
     int-to-byte v11, v11
 
     .line 18
-    invoke-static {v3, v10, v11}, Ls4h;->h([BIB)V
+    invoke-static {v3, v10, v11}, Lhgh;->l([BIB)V
 
     add-int/lit8 v9, v9, -0xf
 
@@ -595,7 +580,7 @@
 
     .line 20
     :cond_2
-    invoke-static {v10, v3}, Ls4h;->a(I[B)B
+    invoke-static {v10, v3}, Lhgh;->a(I[B)B
 
     move-result v11
 
@@ -604,7 +589,7 @@
     int-to-byte v9, v9
 
     .line 21
-    invoke-static {v3, v10, v9}, Ls4h;->h([BIB)V
+    invoke-static {v3, v10, v9}, Lhgh;->l([BIB)V
 
     goto :goto_5
 
@@ -619,7 +604,7 @@
     add-int/lit8 v4, v8, -0x2
 
     .line 22
-    invoke-static {v4, v0}, Ls4h;->b(I[B)I
+    invoke-static {v4, v0}, Lhgh;->c(I[B)I
 
     move-result v9
 
@@ -629,10 +614,10 @@
 
     sub-int/2addr v4, v1
 
-    invoke-static {v2, v9, v4}, Ls4h;->o([SII)V
+    invoke-static {v2, v9, v4}, Lhgh;->q([SII)V
 
     .line 23
-    invoke-static {v8, v0}, Ls4h;->b(I[B)I
+    invoke-static {v8, v0}, Lhgh;->c(I[B)I
 
     move-result v4
 
@@ -641,7 +626,7 @@
     move-result v4
 
     .line 24
-    invoke-static {v2, v4}, Ls4h;->f([SI)I
+    invoke-static {v2, v4}, Lhgh;->g([SI)I
 
     move-result v9
 
@@ -650,7 +635,7 @@
     sub-int v9, v8, v1
 
     .line 25
-    invoke-static {v2, v4, v9}, Ls4h;->o([SII)V
+    invoke-static {v2, v4, v9}, Lhgh;->q([SII)V
 
     .line 26
     invoke-static {v0, v8, v15}, Lnet/jpountz/lz4/LZ4UnsafeUtils;->readIntEquals([BII)Z
@@ -677,7 +662,7 @@
     int-to-byte v4, v4
 
     .line 27
-    invoke-static {v3, v10, v4}, Ls4h;->h([BIB)V
+    invoke-static {v3, v10, v4}, Lhgh;->l([BIB)V
 
     goto :goto_4
 
@@ -791,20 +776,20 @@
     move/from16 v6, p6
 
     .line 38
-    invoke-static/range {p1 .. p1}, Lyy0;->d(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    invoke-static/range {p1 .. p1}, Lm31;->d(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
     .line 39
-    invoke-static/range {p4 .. p4}, Lyy0;->d(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    invoke-static/range {p4 .. p4}, Lm31;->d(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     move-result-object v4
 
     .line 40
-    invoke-static {v1, v0, v2}, Lyy0;->b(Ljava/nio/ByteBuffer;II)V
+    invoke-static {v1, v0, v2}, Lm31;->c(Ljava/nio/ByteBuffer;II)V
 
     .line 41
-    invoke-static {v4, v3, v6}, Lyy0;->b(Ljava/nio/ByteBuffer;II)V
+    invoke-static {v4, v3, v6}, Lm31;->c(Ljava/nio/ByteBuffer;II)V
 
     add-int v5, v3, v6
 
@@ -893,17 +878,16 @@
 
     .line 47
     :cond_2
-    invoke-virtual {v0, v10}, Ljava/nio/ByteBuffer;->getInt(I)I
+    invoke-static {v10, v0}, Lm31;->g(ILjava/nio/ByteBuffer;)I
 
     move-result v14
 
-    .line 48
     invoke-static {v14}, Lnet/jpountz/lz4/LZ4Utils;->hash(I)I
 
     move-result v14
 
-    .line 49
-    invoke-static {v14, v8}, Ls4h;->d(I[I)I
+    .line 48
+    invoke-static {v14, v8}, Lhgh;->d(I[I)I
 
     move-result v15
 
@@ -911,21 +895,21 @@
 
     sub-int v2, v10, v15
 
-    .line 50
-    invoke-static {v14, v10, v8}, Ls4h;->k(II[I)V
+    .line 49
+    invoke-static {v14, v10, v8}, Lhgh;->m(II[I)V
 
     const/high16 v14, 0x10000
 
     if-ge v2, v14, :cond_a
 
-    .line 51
+    .line 50
     invoke-static {v0, v15, v10}, Lnet/jpountz/lz4/LZ4ByteBufferUtils;->readIntEquals(Ljava/nio/ByteBuffer;II)Z
 
     move-result v16
 
     if-eqz v16, :cond_a
 
-    .line 52
+    .line 51
     invoke-static {v0, v15, v10, v1, v7}, Lnet/jpountz/lz4/LZ4ByteBufferUtils;->commonBytesBackward(Ljava/nio/ByteBuffer;IIII)I
 
     move-result v11
@@ -946,7 +930,7 @@
 
     add-int v13, v13, v16
 
-    .line 53
+    .line 52
     const-string v14, "maxDestLen is too small"
 
     if-gt v13, v5, :cond_9
@@ -957,14 +941,12 @@
 
     const/16 v13, 0xf0
 
-    int-to-byte v13, v13
-
-    .line 54
-    invoke-virtual {v3, v9, v13}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
+    .line 53
+    invoke-static {v3, v9, v13}, Lm31;->l(Ljava/nio/ByteBuffer;II)V
 
     add-int/lit8 v13, v11, -0xf
 
-    .line 55
+    .line 54
     invoke-static {v13, v3, v12}, Lnet/jpountz/lz4/LZ4ByteBufferUtils;->writeLen(ILjava/nio/ByteBuffer;I)I
 
     move-result v12
@@ -974,20 +956,18 @@
     :cond_3
     shl-int/lit8 v13, v11, 0x4
 
-    int-to-byte v13, v13
+    .line 55
+    invoke-static {v3, v9, v13}, Lm31;->l(Ljava/nio/ByteBuffer;II)V
 
     .line 56
-    invoke-virtual {v3, v9, v13}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
-
-    .line 57
     :goto_3
     invoke-static {v0, v7, v3, v12, v11}, Lnet/jpountz/lz4/LZ4ByteBufferUtils;->wildArraycopy(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;II)V
 
     add-int/2addr v12, v11
 
-    .line 58
+    .line 57
     :goto_4
-    invoke-static {v3, v12, v2}, Lyy0;->f(Ljava/nio/ByteBuffer;II)V
+    invoke-static {v3, v12, v2}, Lm31;->m(Ljava/nio/ByteBuffer;II)V
 
     add-int/lit8 v2, v12, 0x2
 
@@ -995,7 +975,7 @@
 
     add-int/lit8 v15, v15, 0x4
 
-    .line 59
+    .line 58
     invoke-static {v0, v15, v10, v4}, Lnet/jpountz/lz4/LZ4ByteBufferUtils;->commonBytes(Ljava/nio/ByteBuffer;III)I
 
     move-result v7
@@ -1014,21 +994,18 @@
 
     if-lt v7, v11, :cond_4
 
-    .line 60
-    invoke-virtual {v3, v9}, Ljava/nio/ByteBuffer;->get(I)B
+    .line 59
+    invoke-static {v9, v3}, Lm31;->f(ILjava/nio/ByteBuffer;)B
 
     move-result v12
 
     or-int/2addr v12, v11
 
-    int-to-byte v12, v12
-
-    .line 61
-    invoke-virtual {v3, v9, v12}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
+    invoke-static {v3, v9, v12}, Lm31;->l(Ljava/nio/ByteBuffer;II)V
 
     add-int/lit8 v7, v7, -0xf
 
-    .line 62
+    .line 60
     invoke-static {v7, v3, v2}, Lnet/jpountz/lz4/LZ4ByteBufferUtils;->writeLen(ILjava/nio/ByteBuffer;I)I
 
     move-result v2
@@ -1038,18 +1015,15 @@
 
     goto :goto_6
 
-    .line 63
+    .line 61
     :cond_4
-    invoke-virtual {v3, v9}, Ljava/nio/ByteBuffer;->get(I)B
+    invoke-static {v9, v3}, Lm31;->f(ILjava/nio/ByteBuffer;)B
 
     move-result v12
 
     or-int/2addr v7, v12
 
-    int-to-byte v7, v7
-
-    .line 64
-    invoke-virtual {v3, v9, v7}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
+    invoke-static {v3, v9, v7}, Lm31;->l(Ljava/nio/ByteBuffer;II)V
 
     goto :goto_5
 
@@ -1063,7 +1037,7 @@
     :goto_7
     sub-int v2, p1, v1
 
-    .line 65
+    .line 62
     invoke-static/range {v0 .. v5}, Lnet/jpountz/lz4/LZ4ByteBufferUtils;->lastLiterals(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I
 
     move-result v0
@@ -1075,35 +1049,33 @@
     :cond_5
     add-int/lit8 v2, v10, -0x2
 
-    .line 66
-    invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->getInt(I)I
+    .line 63
+    invoke-static {v2, v0}, Lm31;->g(ILjava/nio/ByteBuffer;)I
 
     move-result v7
 
-    .line 67
     invoke-static {v7}, Lnet/jpountz/lz4/LZ4Utils;->hash(I)I
 
     move-result v7
 
-    invoke-static {v7, v2, v8}, Ls4h;->k(II[I)V
+    invoke-static {v7, v2, v8}, Lhgh;->m(II[I)V
 
-    .line 68
-    invoke-virtual {v0, v10}, Ljava/nio/ByteBuffer;->getInt(I)I
+    .line 64
+    invoke-static {v10, v0}, Lm31;->g(ILjava/nio/ByteBuffer;)I
 
     move-result v2
 
-    .line 69
     invoke-static {v2}, Lnet/jpountz/lz4/LZ4Utils;->hash(I)I
 
     move-result v2
 
-    .line 70
-    invoke-static {v2, v8}, Ls4h;->d(I[I)I
+    .line 65
+    invoke-static {v2, v8}, Lhgh;->d(I[I)I
 
     move-result v15
 
-    .line 71
-    invoke-static {v2, v10, v8}, Ls4h;->k(II[I)V
+    .line 66
+    invoke-static {v2, v10, v8}, Lhgh;->m(II[I)V
 
     sub-int v2, v10, v15
 
@@ -1111,7 +1083,7 @@
 
     if-ge v2, v7, :cond_7
 
-    .line 72
+    .line 67
     invoke-static {v0, v15, v10}, Lnet/jpountz/lz4/LZ4ByteBufferUtils;->readIntEquals(Ljava/nio/ByteBuffer;II)Z
 
     move-result v12
@@ -1125,10 +1097,8 @@
 
     const/4 v13, 0x0
 
-    int-to-byte v13, v13
-
-    .line 73
-    invoke-virtual {v3, v9, v13}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
+    .line 68
+    invoke-static {v3, v9, v13}, Lm31;->l(Ljava/nio/ByteBuffer;II)V
 
     goto :goto_4
 
@@ -1144,7 +1114,7 @@
 
     goto/16 :goto_0
 
-    .line 74
+    .line 69
     :cond_8
     new-instance v0, Lnet/jpountz/lz4/LZ4Exception;
 
@@ -1152,7 +1122,7 @@
 
     throw v0
 
-    .line 75
+    .line 70
     :cond_9
     new-instance v0, Lnet/jpountz/lz4/LZ4Exception;
 
@@ -1188,13 +1158,13 @@
     move/from16 v5, p6
 
     .line 1
-    sget-object v6, Ls4h;->a:Lsun/misc/Unsafe;
+    sget-object v6, Lhgh;->a:Lsun/misc/Unsafe;
 
     .line 2
-    invoke-static {v1, v0, v2}, Lc8e;->b(I[BI)V
+    invoke-static {v1, v0, v2}, Loje;->c(I[BI)V
 
     .line 3
-    invoke-static {v4, v3, v5}, Lc8e;->b(I[BI)V
+    invoke-static {v4, v3, v5}, Loje;->c(I[BI)V
 
     add-int/2addr v5, v4
 
@@ -1263,7 +1233,7 @@
 
     .line 9
     :cond_1
-    invoke-static {v10, v0}, Ls4h;->b(I[B)I
+    invoke-static {v10, v0}, Lhgh;->c(I[B)I
 
     move-result v14
 
@@ -1272,7 +1242,7 @@
     move-result v14
 
     .line 10
-    invoke-static {v14, v8}, Ls4h;->d(I[I)I
+    invoke-static {v14, v8}, Lhgh;->d(I[I)I
 
     move-result v15
 
@@ -1281,7 +1251,7 @@
     sub-int v2, v10, v15
 
     .line 11
-    invoke-static {v14, v10, v8}, Ls4h;->k(II[I)V
+    invoke-static {v14, v10, v8}, Lhgh;->m(II[I)V
 
     const/high16 v14, 0x10000
 
@@ -1329,7 +1299,7 @@
     int-to-byte v13, v13
 
     .line 15
-    invoke-static {v3, v9, v13}, Ls4h;->h([BIB)V
+    invoke-static {v3, v9, v13}, Lhgh;->l([BIB)V
 
     add-int/lit8 v13, v11, -0xf
 
@@ -1346,7 +1316,7 @@
     int-to-byte v13, v13
 
     .line 17
-    invoke-static {v3, v9, v13}, Ls4h;->h([BIB)V
+    invoke-static {v3, v9, v13}, Lhgh;->l([BIB)V
 
     .line 18
     :goto_3
@@ -1358,7 +1328,7 @@
     int-to-byte v7, v2
 
     .line 19
-    invoke-static {v3, v12, v7}, Ls4h;->h([BIB)V
+    invoke-static {v3, v12, v7}, Lhgh;->l([BIB)V
 
     add-int/lit8 v7, v12, 0x1
 
@@ -1367,7 +1337,7 @@
     int-to-byte v2, v2
 
     .line 20
-    invoke-static {v3, v7, v2}, Ls4h;->h([BIB)V
+    invoke-static {v3, v7, v2}, Lhgh;->l([BIB)V
 
     add-int/lit8 v2, v12, 0x2
 
@@ -1395,7 +1365,7 @@
     if-lt v7, v11, :cond_3
 
     .line 22
-    invoke-static {v9, v3}, Ls4h;->a(I[B)B
+    invoke-static {v9, v3}, Lhgh;->a(I[B)B
 
     move-result v12
 
@@ -1404,7 +1374,7 @@
     int-to-byte v12, v12
 
     .line 23
-    invoke-static {v3, v9, v12}, Ls4h;->h([BIB)V
+    invoke-static {v3, v9, v12}, Lhgh;->l([BIB)V
 
     add-int/lit8 v7, v7, -0xf
 
@@ -1420,7 +1390,7 @@
 
     .line 25
     :cond_3
-    invoke-static {v9, v3}, Ls4h;->a(I[B)B
+    invoke-static {v9, v3}, Lhgh;->a(I[B)B
 
     move-result v12
 
@@ -1429,7 +1399,7 @@
     int-to-byte v7, v7
 
     .line 26
-    invoke-static {v3, v9, v7}, Ls4h;->h([BIB)V
+    invoke-static {v3, v9, v7}, Lhgh;->l([BIB)V
 
     goto :goto_5
 
@@ -1456,7 +1426,7 @@
     add-int/lit8 v2, v10, -0x2
 
     .line 28
-    invoke-static {v2, v0}, Ls4h;->b(I[B)I
+    invoke-static {v2, v0}, Lhgh;->c(I[B)I
 
     move-result v7
 
@@ -1464,10 +1434,10 @@
 
     move-result v7
 
-    invoke-static {v7, v2, v8}, Ls4h;->k(II[I)V
+    invoke-static {v7, v2, v8}, Lhgh;->m(II[I)V
 
     .line 29
-    invoke-static {v10, v0}, Ls4h;->b(I[B)I
+    invoke-static {v10, v0}, Lhgh;->c(I[B)I
 
     move-result v2
 
@@ -1476,12 +1446,12 @@
     move-result v2
 
     .line 30
-    invoke-static {v2, v8}, Ls4h;->d(I[I)I
+    invoke-static {v2, v8}, Lhgh;->d(I[I)I
 
     move-result v15
 
     .line 31
-    invoke-static {v2, v10, v8}, Ls4h;->k(II[I)V
+    invoke-static {v2, v10, v8}, Lhgh;->m(II[I)V
 
     sub-int v2, v10, v15
 
@@ -1506,7 +1476,7 @@
     int-to-byte v13, v13
 
     .line 33
-    invoke-static {v3, v9, v13}, Ls4h;->h([BIB)V
+    invoke-static {v3, v9, v13}, Lhgh;->l([BIB)V
 
     goto :goto_4
 

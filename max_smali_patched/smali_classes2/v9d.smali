@@ -1,46 +1,47 @@
-.class public abstract Lv9d;
+.class public final Lv9d;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_section_avatar:I = 0x7f0a0762
+# instance fields
+.field public final a:Lpg5;
 
-.field public static oneme_section_description:I = 0x7f0a0763
+.field public final b:Lwxg;
 
-.field public static oneme_section_end_arrow:I = 0x7f0a0764
+.field public final c:Lyd2;
 
-.field public static oneme_section_end_checkbox:I = 0x7f0a0765
+.field public d:Z
 
-.field public static oneme_section_end_container:I = 0x7f0a0766
+.field public e:Z
 
-.field public static oneme_section_end_custom_icon:I = 0x7f0a0767
+.field public f:Z
 
-.field public static oneme_section_end_text:I = 0x7f0a0768
+.field public g:J
 
-.field public static oneme_section_name_viewtype:I = 0x7f0a0769
 
-.field public static oneme_section_start_icon:I = 0x7f0a076a
+# direct methods
+.method public constructor <init>(Lpg5;Lwxg;)V
+    .locals 3
 
-.field public static oneme_section_title:I = 0x7f0a076b
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_section_upper_text:I = 0x7f0a076c
+    iput-object p1, p0, Lv9d;->a:Lpg5;
 
-.field public static oneme_settings_itemcontent_container:I = 0x7f0a0775
+    iput-object p2, p0, Lv9d;->b:Lwxg;
 
-.field public static oneme_settings_itemcontent_counter:I = 0x7f0a0776
+    new-instance p1, Lyd2;
 
-.field public static oneme_settings_itemcontent_end_custom_icon:I = 0x7f0a0777
+    const/16 p2, 0x40
 
-.field public static oneme_settings_itemcontent_end_icon:I = 0x7f0a0778
+    new-array v0, p2, [B
 
-.field public static oneme_settings_itemcontent_end_radio:I = 0x7f0a0779
+    const/4 v1, 0x2
 
-.field public static oneme_settings_itemcontent_end_switch:I = 0x7f0a077a
+    const/4 v2, 0x0
 
-.field public static oneme_settings_itemcontent_end_text:I = 0x7f0a077b
+    invoke-direct {p1, v0, p2, v1, v2}, Lyd2;-><init>([BIIB)V
 
-.field public static oneme_settings_sectionname_iconview:I = 0x7f0a07ea
+    iput-object p1, p0, Lv9d;->c:Lyd2;
 
-.field public static oneme_settings_sectionname_textview:I = 0x7f0a07eb
-
-.field public static oneme_settingslist_rv:I = 0x7f0a083b
+    return-void
+.end method

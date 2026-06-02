@@ -1,124 +1,168 @@
 .class public final Lir0;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Ls8h;
 
 
 # instance fields
-.field public final synthetic X:Llr0;
-
-.field public final synthetic Y:Lu64;
-
-.field public o:I
+.field public final a:Ljava/util/LinkedHashMap;
 
 
 # direct methods
-.method public constructor <init>(Llr0;Lu64;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public varargs constructor <init>([Ljava/security/cert/X509Certificate;)V
+    .locals 6
 
-    iput-object p1, p0, Lir0;->X:Llr0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lir0;->Y:Lu64;
+    new-instance v0, Ljava/util/LinkedHashMap;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    array-length v1, p1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    aget-object v3, p1, v2
+
+    invoke-virtual {v3}, Ljava/security/cert/X509Certificate;->getSubjectX500Principal()Ljavax/security/auth/x500/X500Principal;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    if-nez v5, :cond_0
+
+    new-instance v5, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v5}, Ljava/util/LinkedHashSet;-><init>()V
+
+    invoke-interface {v0, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    check-cast v5, Ljava/util/Set;
+
+    invoke-interface {v5, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    iput-object v0, p0, Lir0;->a:Ljava/util/LinkedHashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Ljava/security/cert/X509Certificate;)Ljava/security/cert/X509Certificate;
+    .locals 4
 
-    check-cast p1, Lzb4;
+    invoke-virtual {p1}, Ljava/security/cert/X509Certificate;->getIssuerX500Principal()Ljavax/security/auth/x500/X500Principal;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    invoke-virtual {p0, p1, p2}, Lir0;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lir0;->a:Ljava/util/LinkedHashMap;
 
-    move-result-object p1
+    invoke-virtual {v1, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Set;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return-object v1
+
+    :cond_0
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :catch_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v3, v2
+
+    check-cast v3, Ljava/security/cert/X509Certificate;
+
+    :try_start_0
+    invoke-virtual {v3}, Ljava/security/cert/Certificate;->getPublicKey()Ljava/security/PublicKey;
+
+    move-result-object v3
+
+    invoke-virtual {p1, v3}, Ljava/security/cert/Certificate;->verify(Ljava/security/PublicKey;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v1, v2
+
+    :cond_1
+    check-cast v1, Ljava/security/cert/X509Certificate;
+
+    return-object v1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-eq p1, p0, :cond_1
+
+    instance-of v0, p1, Lir0;
+
+    if-eqz v0, :cond_0
 
     check-cast p1, Lir0;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget-object p1, p1, Lir0;->a:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {p1, p2}, Lir0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Lir0;->a:Ljava/util/LinkedHashMap;
 
-    move-result-object p1
+    invoke-static {p1, v0}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-object p1
-.end method
+    move-result p1
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lir0;
-
-    iget-object v0, p0, Lir0;->X:Llr0;
-
-    iget-object v1, p0, Lir0;->Y:Lu64;
-
-    invoke-direct {p1, v0, v1, p2}, Lir0;-><init>(Llr0;Lu64;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lir0;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    if-eqz p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 p1, 0x0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return p1
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lir0;->X:Llr0;
-
-    iget-object p1, p1, Llr0;->b:Li7f;
-
-    new-instance v0, Lfr0;
-
-    iget-object v2, p0, Lir0;->Y:Lu64;
-
-    invoke-direct {v0, v2}, Lfr0;-><init>(Lu64;)V
-
-    iput v1, p0, Lir0;->o:I
-
-    invoke-virtual {p1, v0, p0}, Li7f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
     :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    const/4 p1, 0x1
 
-    return-object p1
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lir0;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

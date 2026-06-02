@@ -4,32 +4,69 @@
 
 
 # instance fields
-.field public final a:Lo58;
+.field public final a:Lcd8;
 
-.field public final b:Ljava/lang/Object;
+.field public final b:Ld45;
+
+.field public final c:Lwp3;
 
 
 # direct methods
-.method public constructor <init>(Lo58;)V
-    .locals 1
+.method public constructor <init>(Lcd8;Ld45;Lz08;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Loc8;->a:Lo58;
+    iput-object p1, p0, Loc8;->a:Lcd8;
 
-    new-instance p1, Lw08;
+    iput-object p2, p0, Loc8;->b:Ld45;
 
-    const/4 v0, 0x6
+    new-instance p2, Lwp3;
 
-    invoke-direct {p1, v0}, Lw08;-><init>(I)V
+    const/4 v0, 0x1
 
-    const/4 v0, 0x3
+    invoke-direct {p2, p0, v0, p3}, Lwp3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-static {v0, p1}, Le8;->b(ILlq6;)Lo58;
+    iput-object p2, p0, Loc8;->c:Lwp3;
 
-    move-result-object p1
+    iget-object v0, p1, Lcd8;->d:Lhc8;
 
-    iput-object p1, p0, Loc8;->b:Ljava/lang/Object;
+    sget-object v1, Lhc8;->a:Lhc8;
+
+    if-ne v0, v1, :cond_0
+
+    const/4 p1, 0x0
+
+    invoke-interface {p3, p1}, Lz08;->cancel(Ljava/util/concurrent/CancellationException;)V
+
+    invoke-virtual {p0}, Loc8;->a()V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1, p2}, Lcd8;->a(Lxc8;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .locals 2
+
+    iget-object v0, p0, Loc8;->a:Lcd8;
+
+    iget-object v1, p0, Loc8;->c:Lwp3;
+
+    invoke-virtual {v0, v1}, Lcd8;->f(Lxc8;)V
+
+    const/4 v0, 0x1
+
+    iget-object v1, p0, Loc8;->b:Ld45;
+
+    iput-boolean v0, v1, Ld45;->b:Z
+
+    invoke-virtual {v1}, Ld45;->a()V
 
     return-void
 .end method

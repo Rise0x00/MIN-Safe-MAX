@@ -1,176 +1,90 @@
-.class public final Lws5;
+.class public final synthetic Lws5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhj8;
+.implements Lsz3;
+
 
 # instance fields
-.field public final a:Lcy0;
+.field public final synthetic a:I
 
-.field public final b:Li7f;
+.field public final synthetic b:I
 
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public final d:Ljava/lang/Long;
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(Lmbg;Lcy0;JLwh2;Lo58;)V
-    .locals 2
+.method public synthetic constructor <init>(III)V
+    .locals 0
+
+    iput p3, p0, Lws5;->a:I
+
+    iput p1, p0, Lws5;->b:I
+
+    iput p2, p0, Lws5;->c:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lws5;->a:Lcy0;
-
-    const/4 v0, 0x7
-
-    const/4 v1, 0x0
-
-    invoke-static {v1, v1, v0}, Lj7f;->b(III)Li7f;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lws5;->b:Li7f;
-
-    check-cast p1, Lj9b;
-
-    invoke-virtual {p1}, Lj9b;->c()Lzp8;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lws5;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p2, p0}, Lcy0;->d(Ljava/lang/Object;)V
-
-    invoke-virtual {p5}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    const/4 p2, 0x1
-
-    if-eqz p1, :cond_1
-
-    if-ne p1, p2, :cond_0
-
-    const/4 p1, 0x2
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_1
-    move p1, p2
-
-    :goto_0
-    invoke-interface {p6}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p5
-
-    check-cast p5, Lla3;
-
-    invoke-virtual {p5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Lt02;->t(I)I
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    if-ne p1, p2, :cond_2
-
-    invoke-virtual {p5, p3, p4}, Lla3;->l(J)Lpld;
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_2
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_3
-    invoke-virtual {p5, p3, p4}, Lla3;->k(J)Lpld;
-
-    move-result-object p1
-
-    :goto_1
-    iget-object p1, p1, Lpld;->a:Llpf;
-
-    invoke-interface {p1}, Llpf;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnd2;
-
-    if-eqz p1, :cond_4
-
-    iget-wide p1, p1, Lnd2;->a:J
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    goto :goto_2
-
-    :cond_4
-    const/4 p1, 0x0
-
-    :goto_2
-    iput-object p1, p0, Lws5;->d:Ljava/lang/Long;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Ldvd;)V
-    .locals 4
-    .annotation runtime Lu0g;
-    .end annotation
+.method public accept(Ljava/lang/Object;)V
+    .locals 3
 
-    iget-wide v0, p1, Ldvd;->b:J
+    iget v0, p0, Lws5;->a:I
 
-    iget-object p1, p0, Lws5;->d:Ljava/lang/Long;
+    packed-switch v0, :pswitch_data_0
 
-    if-nez p1, :cond_0
+    check-cast p1, Lmic;
 
-    goto :goto_0
+    invoke-virtual {p1}, Lmic;->m0()V
+
+    iget-object p1, p1, Lmic;->a:Ljt5;
+
+    iget v0, p0, Lws5;->b:I
+
+    iget v1, p0, Lws5;->c:I
+
+    if-eq v0, v1, :cond_0
+
+    add-int/lit8 v2, v0, 0x1
+
+    invoke-virtual {p1, v0, v2, v1}, Ljt5;->A0(III)V
 
     :cond_0
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    cmp-long p1, v0, v2
-
-    if-eqz p1, :cond_1
-
-    :goto_0
     return-void
 
-    :cond_1
-    new-instance p1, Lvs5;
+    :pswitch_0
+    iget v0, p0, Lws5;->c:I
 
-    const/4 v0, 0x0
+    check-cast p1, Lmic;
 
-    invoke-direct {p1, p0, v0}, Lvs5;-><init>(Lws5;Lkotlin/coroutines/Continuation;)V
+    iget v1, p0, Lws5;->b:I
 
-    const/4 v1, 0x3
+    invoke-virtual {p1, v1, v0}, Lmic;->h0(II)V
 
-    iget-object v2, p0, Lws5;->c:Lkotlinx/coroutines/internal/ContextScope;
+    return-void
 
-    invoke-static {v2, v0, v0, p1, v1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public invoke(Ljava/lang/Object;)V
+    .locals 2
+
+    iget v0, p0, Lws5;->c:I
+
+    check-cast p1, Lfhc;
+
+    iget v1, p0, Lws5;->b:I
+
+    invoke-interface {p1, v1, v0}, Lfhc;->p(II)V
 
     return-void
 .end method

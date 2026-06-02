@@ -1,81 +1,87 @@
-.class public final Lttc;
-.super Lo84;
+.class public final enum Lttc;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final enum b:Lttc;
+
+.field public static final enum c:Lttc;
+
+.field public static final synthetic d:[Lttc;
+
+
 # instance fields
-.field public final synthetic A0:Lxtc;
-
-.field public B0:I
-
-.field public X:Lsmc;
-
-.field public Y:Lumc;
-
-.field public Z:Ljava/lang/Long;
-
-.field public d:Ley3;
-
-.field public o:Lnd2;
-
-.field public t0:Ljava/util/List;
-
-.field public u0:Ljava/util/List;
-
-.field public v0:Lmgc;
-
-.field public w0:Ljava/lang/String;
-
-.field public x0:Lqhg;
-
-.field public y0:I
-
-.field public synthetic z0:Ljava/lang/Object;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lxtc;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Lttc;->A0:Lxtc;
+    new-instance v0, Lttc;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "PERFORMANCE"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v2}, Lttc;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Lttc;->b:Lttc;
+
+    new-instance v1, Lttc;
+
+    const-string v2, "COMPATIBLE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v3}, Lttc;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lttc;->c:Lttc;
+
+    filled-new-array {v0, v1}, [Lttc;
+
+    move-result-object v0
+
+    sput-object v0, Lttc;->d:[Lttc;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p1, p0, Lttc;->z0:Ljava/lang/Object;
+    iput p3, p0, Lttc;->a:I
 
-    iget p1, p0, Lttc;->B0:I
+    return-void
+.end method
 
-    const/high16 v0, -0x80000000
+.method public static valueOf(Ljava/lang/String;)Lttc;
+    .locals 1
 
-    or-int/2addr p1, v0
+    const-class v0, Lttc;
 
-    iput p1, p0, Lttc;->B0:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/4 v4, 0x0
+    move-result-object p0
 
-    const/4 v5, 0x0
+    check-cast p0, Lttc;
 
-    iget-object v0, p0, Lttc;->A0:Lxtc;
+    return-object p0
+.end method
 
-    const/4 v1, 0x0
+.method public static values()[Lttc;
+    .locals 1
 
-    const/4 v2, 0x0
+    sget-object v0, Lttc;->d:[Lttc;
 
-    const/4 v3, 0x0
+    invoke-virtual {v0}, [Lttc;->clone()Ljava/lang/Object;
 
-    move-object v6, p0
+    move-result-object v0
 
-    invoke-virtual/range {v0 .. v6}, Lxtc;->f(Ley3;Lnd2;Lsmc;Lumc;Ljava/lang/Long;Lo84;)Ljava/io/Serializable;
+    check-cast v0, [Lttc;
 
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

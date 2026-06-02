@@ -1,63 +1,97 @@
-.class public abstract Lyse;
+.class public final Lyse;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzse;
+
+
+# instance fields
+.field public final a:Llw2;
+
 
 # direct methods
-.method public static a([B)Lzse;
-    .locals 7
+.method public constructor <init>(Llw2;)V
+    .locals 0
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;-><init>()V
+    iput-object p1, p0, Lyse;->a:Llw2;
 
-    :try_start_0
-    invoke-static {v0, p0}, Lbp9;->mergeFrom(Lbp9;[B)Lbp9;
+    return-void
+.end method
 
-    move-result-object p0
 
-    check-cast p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    new-instance v0, Lzse;
+    const/4 v0, 0x1
 
-    iget-wide v1, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->taskId:J
+    if-ne p0, p1, :cond_0
 
-    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->chatId:J
+    return v0
 
-    iget v5, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->count:I
+    :cond_0
+    instance-of v1, p1, Lyse;
 
-    sget-object v6, Lmw4;->d:Lwna;
+    const/4 v2, 0x0
 
-    iget p0, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->itemTypeId:I
+    if-nez v1, :cond_1
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return v2
 
-    move-result-object p0
+    :cond_1
+    check-cast p1, Lyse;
 
-    invoke-static {v6, p0}, Lwna;->A(Lwna;Ljava/lang/Number;)Lmw4;
+    iget-object v1, p0, Lyse;->a:Llw2;
 
-    move-result-object v6
+    iget-object p1, p1, Lyse;->a:Llw2;
 
-    invoke-direct/range {v0 .. v6}, Lzse;-><init>(JJILmw4;)V
+    invoke-static {v1, p1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object p0, v0, Lzse;->X:Ljava/lang/String;
+    move-result p1
 
-    const-string v1, "parseFrom"
+    if-nez p1, :cond_2
 
-    invoke-static {p0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lyse;->a:Llw2;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SearchResult(result="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lyse;->a:Llw2;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
-
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
 .end method

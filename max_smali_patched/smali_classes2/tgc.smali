@@ -1,221 +1,253 @@
 .class public final Ltgc;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ltgc;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Lugc;
+.field public final b:Ljava/lang/CharSequence;
 
-.field public o:I
+.field public final c:I
+
+.field public final d:Landroid/os/Bundle;
+
+.field public o:Landroid/media/session/PlaybackState$CustomAction;
 
 
 # direct methods
-.method public constructor <init>(Lugc;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Ltgc;->Y:Lugc;
+    new-instance v0, Ljnb;
 
-    const/4 p1, 0x2
+    const/16 v1, 0x10
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Ljnb;-><init>(I)V
+
+    sput-object v0, Ltgc;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p1, Lzb4;
+    .line 7
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    invoke-virtual {p0, p1, p2}, Ltgc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .line 8
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 9
+    iput-object v0, p0, Ltgc;->a:Ljava/lang/String;
+
+    .line 10
+    sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/CharSequence;
+
+    .line 11
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 12
+    check-cast v0, Ljava/lang/CharSequence;
+
+    iput-object v0, p0, Ltgc;->b:Ljava/lang/CharSequence;
+
+    .line 13
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Ltgc;->c:I
+
+    .line 14
+    const-class v0, Lkg9;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readBundle(Ljava/lang/ClassLoader;)Landroid/os/Bundle;
 
     move-result-object p1
 
-    check-cast p1, Ltgc;
+    iput-object p1, p0, Ltgc;->d:Landroid/os/Bundle;
 
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Ltgc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/CharSequence;ILandroid/os/Bundle;)V
+    .locals 0
 
-    new-instance v0, Ltgc;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v1, p0, Ltgc;->Y:Lugc;
+    .line 2
+    iput-object p1, p0, Ltgc;->a:Ljava/lang/String;
 
-    invoke-direct {v0, v1, p2}, Ltgc;-><init>(Lugc;Lkotlin/coroutines/Continuation;)V
+    .line 3
+    iput-object p2, p0, Ltgc;->b:Ljava/lang/CharSequence;
 
-    iput-object p1, v0, Ltgc;->X:Ljava/lang/Object;
+    .line 4
+    iput p3, p0, Ltgc;->c:I
+
+    .line 5
+    iput-object p4, p0, Ltgc;->d:Landroid/os/Bundle;
+
+    return-void
+.end method
+
+.method public static a(Landroid/media/session/PlaybackState$CustomAction;)Ltgc;
+    .locals 5
+
+    invoke-virtual {p0}, Landroid/media/session/PlaybackState$CustomAction;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lkg9;->n(Landroid/os/Bundle;)V
+
+    new-instance v1, Ltgc;
+
+    invoke-virtual {p0}, Landroid/media/session/PlaybackState$CustomAction;->getAction()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Landroid/media/session/PlaybackState$CustomAction;->getName()Ljava/lang/CharSequence;
+
+    move-result-object v3
+
+    invoke-virtual {p0}, Landroid/media/session/PlaybackState$CustomAction;->getIcon()I
+
+    move-result v4
+
+    invoke-direct {v1, v2, v3, v4, v0}, Ltgc;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;ILandroid/os/Bundle;)V
+
+    iput-object p0, v1, Ltgc;->o:Landroid/media/session/PlaybackState$CustomAction;
+
+    return-object v1
+.end method
+
+
+# virtual methods
+.method public final b()Landroid/media/session/PlaybackState$CustomAction;
+    .locals 4
+
+    iget-object v0, p0, Ltgc;->o:Landroid/media/session/PlaybackState$CustomAction;
+
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Landroid/media/session/PlaybackState$CustomAction$Builder;
+
+    iget-object v1, p0, Ltgc;->b:Ljava/lang/CharSequence;
+
+    iget v2, p0, Ltgc;->c:I
+
+    iget-object v3, p0, Ltgc;->a:Ljava/lang/String;
+
+    invoke-direct {v0, v3, v1, v2}, Landroid/media/session/PlaybackState$CustomAction$Builder;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
+
+    iget-object v1, p0, Ltgc;->d:Landroid/os/Bundle;
+
+    invoke-virtual {v0, v1}, Landroid/media/session/PlaybackState$CustomAction$Builder;->setExtras(Landroid/os/Bundle;)Landroid/media/session/PlaybackState$CustomAction$Builder;
+
+    invoke-virtual {v0}, Landroid/media/session/PlaybackState$CustomAction$Builder;->build()Landroid/media/session/PlaybackState$CustomAction;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget-object v0, p0, Ltgc;->X:Ljava/lang/Object;
-
-    check-cast v0, Lzb4;
-
-    iget v0, p0, Ltgc;->o:I
-
-    const/4 v1, 0x1
-
-    iget-object v2, p0, Ltgc;->Y:Lugc;
-
-    sget-object v3, Lb3h;->a:Lb3h;
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, v2, Lugc;->v0:Ljava/util/concurrent/atomic/AtomicReference;
+.method public final describeContents()I
+    .locals 1
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    check-cast p1, Luea;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-nez p1, :cond_2
+    const-string v1, "Action:mName=\'"
 
-    goto :goto_4
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_2
-    invoke-virtual {p1}, Luea;->f()Z
+    iget-object v1, p0, Ltgc;->b:Ljava/lang/CharSequence;
 
-    move-result v4
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    if-eqz v4, :cond_3
+    const-string v1, ", mIcon="
 
-    goto :goto_4
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_3
-    :try_start_1
-    iget-object v4, v2, Lugc;->X:Lo58;
+    iget v1, p0, Ltgc;->c:I
 
-    invoke-interface {v4}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v4
+    const-string v1, ", mExtras="
 
-    check-cast v4, Lx1e;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object v0, p0, Ltgc;->X:Ljava/lang/Object;
+    iget-object v1, p0, Ltgc;->d:Landroid/os/Bundle;
 
-    iput v1, p0, Ltgc;->o:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p1}, Luea;->f()Z
+    move-result-object v0
 
-    move-result v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    return-object v0
+.end method
 
-    sget-object v5, Lac4;->a:Lac4;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
 
-    if-eqz v1, :cond_5
+    iget-object v0, p0, Ltgc;->a:Ljava/lang/String;
 
-    :cond_4
-    move-object p1, v3
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    goto :goto_0
+    iget-object v0, p0, Ltgc;->b:Ljava/lang/CharSequence;
 
-    :cond_5
-    :try_start_2
-    iget-object v1, v4, Lx1e;->a:Llgb;
+    invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    invoke-virtual {v1}, Llgb;->l()Lb2e;
+    iget p2, p0, Ltgc;->c:I
 
-    move-result-object v1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    new-instance v6, Lw1e;
+    iget-object p2, p0, Ltgc;->d:Landroid/os/Bundle;
 
-    invoke-direct {v6, p1, v4, v0}, Lw1e;-><init>(Luea;Lx1e;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    new-instance p1, Lig4;
-
-    invoke-direct {p1, v6, v1, v0}, Lig4;-><init>(Lnq6;Lb2e;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {p1, v1, p0}, Lsmj;->c(Lnq6;Lb2e;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    if-ne p1, v5, :cond_4
-
-    :goto_0
-    if-ne p1, v5, :cond_6
-
-    return-object v5
-
-    :cond_6
-    :goto_1
-    move-object v0, v3
-
-    goto :goto_3
-
-    :goto_2
-    new-instance v0, Lszd;
-
-    invoke-direct {v0, p1}, Lszd;-><init>(Ljava/lang/Throwable;)V
-
-    :goto_3
-    invoke-static {v0}, Luzd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_7
-
-    iget-object v0, v2, Lugc;->w0:Ljava/lang/String;
-
-    const-string v1, "updatePresence failure!"
-
-    invoke-static {v0, v1, p1}, Lc5j;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_7
-    :goto_4
-    return-object v3
+    return-void
 .end method

@@ -2,164 +2,189 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static volatile A0:Ljava/util/concurrent/ThreadPoolExecutor;
+
+.field public static final Z:Ljava/util/concurrent/ThreadPoolExecutor;
+
+.field public static z0:Lmba;
+
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Ljava/util/concurrent/CountDownLatch;
 
-.field public b:F
+.field public final synthetic Y:Llaj;
 
-.field public c:F
+.field public final a:Lf57;
 
-.field public d:F
+.field public final b:Lkba;
 
-.field public e:F
+.field public volatile c:I
+
+.field public final d:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public final o:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 8
 
-    .line 1
-    const/4 v0, 0x1
+    new-instance v7, Lt70;
 
-    iput v0, p0, Lz10;->a:I
+    const/4 v0, 0x3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v7, v0}, Lt70;-><init>(I)V
+
+    new-instance v6, Ljava/util/concurrent/LinkedBlockingQueue;
+
+    const/16 v0, 0xa
+
+    invoke-direct {v6, v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>(I)V
+
+    new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    const-wide/16 v3, 0x1
+
+    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const/4 v1, 0x5
+
+    const/16 v2, 0x80
+
+    invoke-direct/range {v0 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
+
+    sput-object v0, Lz10;->Z:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    sput-object v0, Lz10;->A0:Ljava/util/concurrent/ThreadPoolExecutor;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(FFFFI)V
-    .locals 0
-
-    .line 2
-    iput p5, p0, Lz10;->a:I
-
-    iput p1, p0, Lz10;->b:F
-
-    iput p2, p0, Lz10;->c:F
-
-    iput p3, p0, Lz10;->d:F
-
-    iput p4, p0, Lz10;->e:F
+.method public constructor <init>(Llaj;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lz10;->Y:Llaj;
+
+    const/4 p1, 0x1
+
+    iput p1, p0, Lz10;->c:I
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+
+    iput-object v0, p0, Lz10;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+
+    iput-object v0, p0, Lz10;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    new-instance v0, Lf57;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1, p0}, Lf57;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p0, Lz10;->a:Lf57;
+
+    new-instance v1, Lkba;
+
+    invoke-direct {v1, p0, v0}, Lkba;-><init>(Lz10;Lf57;)V
+
+    iput-object v1, p0, Lz10;->b:Lkba;
+
+    new-instance v0, Ljava/util/concurrent/CountDownLatch;
+
+    invoke-direct {v0, p1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+
+    iput-object v0, p0, Lz10;->X:Ljava/util/concurrent/CountDownLatch;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Ljava/util/HashMap;
-    .locals 3
+.method public final a(Ljava/lang/Object;)V
+    .locals 4
 
-    new-instance v0, Ljava/util/HashMap;
+    const-class v0, Lz10;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    monitor-enter v0
 
-    iget v1, p0, Lz10;->b:F
+    :try_start_0
+    sget-object v1, Lz10;->z0:Lmba;
 
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    if-nez v1, :cond_0
 
-    move-result-object v1
+    new-instance v1, Lmba;
 
-    const-string v2, "x1"
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v2
 
-    iget v1, p0, Lz10;->c:F
+    const/4 v3, 0x0
 
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-direct {v1, v2, v3}, Lmba;-><init>(Landroid/os/Looper;I)V
 
-    move-result-object v1
+    sput-object v1, Lz10;->z0:Lmba;
 
-    const-string v2, "y1"
+    goto :goto_0
 
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :catchall_0
+    move-exception p1
 
-    iget v1, p0, Lz10;->d:F
+    goto :goto_1
 
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    :cond_0
+    :goto_0
+    sget-object v1, Lz10;->z0:Lmba;
 
-    move-result-object v1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const-string v2, "x2"
+    new-instance v0, Llba;
 
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    filled-new-array {p1}, [Ljava/lang/Object;
 
-    iget v1, p0, Lz10;->e:F
+    move-result-object p1
 
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-direct {v0, p0, p1}, Llba;-><init>(Lz10;[Ljava/lang/Object;)V
 
-    move-result-object v1
+    const/4 p1, 0x1
 
-    const-string v2, "y2"
+    invoke-virtual {v1, p1, v0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object p1
 
-    return-object v0
+    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
+
+    return-void
+
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method
 
-.method public toString()Ljava/lang/String;
-    .locals 6
+.method public final run()V
+    .locals 1
 
-    iget v0, p0, Lz10;->a:I
+    iget-object v0, p0, Lz10;->Y:Llaj;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Llaj;->b()V
 
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget v0, p0, Lz10;->b:F
-
-    iget v1, p0, Lz10;->c:F
-
-    iget v2, p0, Lz10;->d:F
-
-    iget v3, p0, Lz10;->e:F
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "{x1="
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, ", y1="
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, ", x2="
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, ", y2="
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

@@ -1,44 +1,53 @@
-.class public abstract Lvg5;
+.class public interface abstract Lvg5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/app/Application$ActivityLifecycleCallbacks;
+
+# direct methods
+.method public static synthetic c(Lvg5;Lktg;)V
+    .locals 1
+
+    sget-object v0, Lge5;->b:Lge5;
+
+    invoke-interface {p0, p1, v0}, Lvg5;->d(Lktg;Lge5;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
+.method public abstract b()Z
 .end method
 
-.method public onActivityDestroyed(Landroid/app/Activity;)V
-    .locals 0
-
-    return-void
+.method public abstract d(Lktg;Lge5;)V
 .end method
 
-.method public final onActivityPaused(Landroid/app/Activity;)V
-    .locals 0
-
-    return-void
+.method public abstract e()Landroid/graphics/Rect;
 .end method
 
-.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
+.method public abstract f(Ldqb;)V
 .end method
 
-.method public onActivityStarted(Landroid/app/Activity;)V
-    .locals 0
-
-    return-void
+.method public abstract g(Ljava/lang/String;)F
 .end method
 
-.method public onActivityStopped(Landroid/app/Activity;)V
-    .locals 0
+.method public abstract getAsView()Landroid/view/View;
+.end method
 
-    return-void
+.method public abstract getLineHeight()I
+.end method
+
+.method public abstract getMaxLinesValue()I
+.end method
+
+.method public abstract getSpannableText()Ljava/lang/CharSequence;
+.end method
+
+.method public abstract getTextValue()Ljava/lang/CharSequence;
+.end method
+
+.method public abstract setTextColor(I)V
+.end method
+
+.method public abstract setTextValue(Ljava/lang/CharSequence;)V
 .end method

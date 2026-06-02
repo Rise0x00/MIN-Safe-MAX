@@ -3,113 +3,197 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lodi;
+.implements Lewe;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/webapp/settings/WebAppSettingsScreen;
+.field public final a:Lu9i;
+
+.field public final b:I
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:J
 
 
 # direct methods
-.method public constructor <init>(Lone/me/webapp/settings/WebAppSettingsScreen;)V
-    .locals 0
+.method public constructor <init>(Lu9i;IJJ)V
+    .locals 6
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lv9i;->a:Lone/me/webapp/settings/WebAppSettingsScreen;
+    iput-object p1, p0, Lv9i;->a:Lu9i;
+
+    iput p2, p0, Lv9i;->b:I
+
+    iput-wide p3, p0, Lv9i;->c:J
+
+    sub-long/2addr p5, p3
+
+    iget p3, p1, Lu9i;->c:I
+
+    int-to-long p3, p3
+
+    div-long/2addr p5, p3
+
+    iput-wide p5, p0, Lv9i;->d:J
+
+    int-to-long p2, p2
+
+    mul-long v0, p5, p2
+
+    iget p1, p1, Lu9i;->b:I
+
+    int-to-long v4, p1
+
+    const-wide/32 v2, 0xf4240
+
+    invoke-static/range {v0 .. v5}, Lnnh;->H(JJJ)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lv9i;->e:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lndi;)V
-    .locals 2
+.method public final c()Z
+    .locals 1
 
-    sget-object v0, Lone/me/webapp/settings/WebAppSettingsScreen;->Z:[Lz28;
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lv9i;->a:Lone/me/webapp/settings/WebAppSettingsScreen;
-
-    invoke-virtual {v0}, Lone/me/webapp/settings/WebAppSettingsScreen;->z0()Lcai;
-
-    move-result-object v0
-
-    instance-of v1, p1, Lmdi;
-
-    if-eqz v1, :cond_0
-
-    iget-object v0, v0, Lcai;->x0:Lcm5;
-
-    new-instance v1, Lx9i;
-
-    check-cast p1, Lmdi;
-
-    iget-object p1, p1, Lmdi;->b:Lfm4;
-
-    invoke-direct {v1, p1}, Lx9i;-><init>(Lfm4;)V
-
-    invoke-static {v0, v1}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
+    return v0
 .end method
 
-.method public final b(Lldi;Z)V
-    .locals 4
+.method public final e(J)Lcwe;
+    .locals 23
 
-    sget-object p1, Lone/me/webapp/settings/WebAppSettingsScreen;->Z:[Lz28;
+    move-object/from16 v0, p0
 
-    iget-object p1, p0, Lv9i;->a:Lone/me/webapp/settings/WebAppSettingsScreen;
+    iget-object v1, v0, Lv9i;->a:Lu9i;
 
-    invoke-virtual {p1}, Lone/me/webapp/settings/WebAppSettingsScreen;->z0()Lcai;
+    iget v2, v1, Lu9i;->b:I
 
-    move-result-object p1
+    int-to-long v2, v2
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    mul-long v2, v2, p1
 
-    iget-object v0, p1, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
+    iget v4, v0, Lv9i;->b:I
 
-    iget-object v1, p1, Lcai;->Z:Lo58;
+    int-to-long v5, v4
 
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+    const-wide/32 v7, 0xf4240
 
-    move-result-object v1
+    mul-long/2addr v5, v7
 
-    check-cast v1, Lmbg;
+    div-long v7, v2, v5
 
-    check-cast v1, Lj9b;
+    iget-wide v2, v0, Lv9i;->d:J
 
-    invoke-virtual {v1}, Lj9b;->b()Lsb4;
+    const-wide/16 v5, 0x1
 
-    move-result-object v1
+    sub-long v11, v2, v5
 
-    new-instance v2, Lbai;
+    const-wide/16 v9, 0x0
 
-    const/4 v3, 0x0
+    invoke-static/range {v7 .. v12}, Lnnh;->j(JJJ)J
 
-    invoke-direct {v2, p2, p1, v3}, Lbai;-><init>(ZLcai;Lkotlin/coroutines/Continuation;)V
+    move-result-wide v2
 
-    sget-object p2, Lcc4;->b:Lcc4;
+    iget v7, v1, Lu9i;->c:I
 
-    invoke-static {v0, v1, p2, v2}, Ls9j;->f(Lzb4;Lqb4;Lcc4;Lbr6;)Lmmf;
+    int-to-long v8, v7
 
-    move-result-object p2
+    mul-long/2addr v8, v2
 
-    iget-object v0, p1, Lcai;->y0:Lx07;
+    iget-wide v13, v0, Lv9i;->c:J
 
-    sget-object v1, Lcai;->A0:[Lz28;
+    add-long/2addr v8, v13
 
-    const/4 v2, 0x0
+    move-wide v15, v5
 
-    aget-object v1, v1, v2
+    int-to-long v5, v4
 
-    invoke-virtual {v0, p1, v1, p2}, Lx07;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
+    mul-long v17, v2, v5
 
-    invoke-virtual {p1}, Lcai;->s()V
+    iget v5, v1, Lu9i;->b:I
 
-    return-void
+    int-to-long v5, v5
+
+    const-wide/32 v19, 0xf4240
+
+    move-wide/from16 v21, v5
+
+    invoke-static/range {v17 .. v22}, Lnnh;->H(JJJ)J
+
+    move-result-wide v5
+
+    new-instance v10, Liwe;
+
+    invoke-direct {v10, v5, v6, v8, v9}, Liwe;-><init>(JJ)V
+
+    cmp-long v5, v5, p1
+
+    if-gez v5, :cond_1
+
+    cmp-long v5, v2, v11
+
+    if-nez v5, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    add-long/2addr v2, v15
+
+    int-to-long v5, v7
+
+    mul-long/2addr v5, v2
+
+    add-long/2addr v5, v13
+
+    int-to-long v7, v4
+
+    mul-long v11, v2, v7
+
+    iget v1, v1, Lu9i;->b:I
+
+    int-to-long v1, v1
+
+    const-wide/32 v13, 0xf4240
+
+    move-wide v15, v1
+
+    invoke-static/range {v11 .. v16}, Lnnh;->H(JJJ)J
+
+    move-result-wide v1
+
+    new-instance v3, Liwe;
+
+    invoke-direct {v3, v1, v2, v5, v6}, Liwe;-><init>(JJ)V
+
+    new-instance v1, Lcwe;
+
+    invoke-direct {v1, v10, v3}, Lcwe;-><init>(Liwe;Liwe;)V
+
+    return-object v1
+
+    :cond_1
+    :goto_0
+    new-instance v1, Lcwe;
+
+    invoke-direct {v1, v10, v10}, Lcwe;-><init>(Liwe;Liwe;)V
+
+    return-object v1
+.end method
+
+.method public final f()J
+    .locals 2
+
+    iget-wide v0, p0, Lv9i;->e:J
+
+    return-wide v0
 .end method

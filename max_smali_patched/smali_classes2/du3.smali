@@ -1,20 +1,64 @@
-.class public interface abstract Ldu3;
+.class public final Ldu3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ldv3;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ldv3;Ldv3;I)V
+    .locals 0
+
+    iput p3, p0, Ldu3;->a:I
+
+    iput-object p2, p0, Ldu3;->b:Ldv3;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public I(Landroid/os/Bundle;)V
-    .locals 0
+.method public final run()V
+    .locals 1
+
+    iget v0, p0, Ldu3;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ldu3;->b:Ldv3;
+
+    invoke-virtual {v0}, Ldv3;->L0()V
 
     return-void
-.end method
 
-.method public K()V
-    .locals 0
+    :pswitch_0
+    iget-object v0, p0, Ldu3;->b:Ldv3;
+
+    invoke-virtual {v0}, Ldv3;->L0()V
 
     return-void
-.end method
 
-.method public abstract g(ILandroid/os/Bundle;)V
+    :pswitch_1
+    iget-object v0, p0, Ldu3;->b:Ldv3;
+
+    invoke-virtual {v0}, Ldv3;->L0()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

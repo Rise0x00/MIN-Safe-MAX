@@ -3,146 +3,261 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Z
+# static fields
+.field public static final d:Lhh0;
 
-.field public final b:Z
+.field public static final e:Ljava/util/Set;
+
+.field public static final f:Lny3;
+
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:Lph0;
 
 
 # direct methods
-.method public constructor <init>(ZZ)V
+.method static constructor <clinit>()V
+    .locals 5
+
+    new-instance v0, Lhh0;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v1, v2, v3}, Lhh0;-><init>(IILph0;)V
+
+    sput-object v0, Lhh0;->d:Lhh0;
+
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const/4 v4, -0x1
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    filled-new-array {v2, v4}, [Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+
+    move-result-object v0
+
+    sput-object v0, Lhh0;->e:Ljava/util/Set;
+
+    new-instance v0, Lhh0;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2, v3}, Lhh0;-><init>(IILph0;)V
+
+    new-instance v1, Lny3;
+
+    invoke-direct {v1, v0}, Lny3;-><init>(Ljava/lang/Object;)V
+
+    sput-object v1, Lhh0;->f:Lny3;
+
+    return-void
+.end method
+
+.method public constructor <init>(IILph0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lhh0;->a:Z
+    iput p1, p0, Lhh0;->a:I
 
-    iput-boolean p2, p0, Lhh0;->b:Z
+    if-eqz p2, :cond_0
+
+    iput p2, p0, Lhh0;->b:I
+
+    iput-object p3, p0, Lhh0;->c:Lph0;
 
     return-void
-.end method
-
-.method public static a(ZLahd;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    if-eqz p0, :cond_0
-
-    const-string p0, "["
-
-    const-string v0, "]: "
-
-    invoke-static {p0, p2, v0, p3}, Lkz1;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string p2, "BadNetworkIndicatorConfig"
-
-    invoke-interface {p1, p2, p0}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
-    return-void
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null streamState"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final b(Lahd;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lhh0;->a:Z
-
-    invoke-static {v0, p1, p2, p3}, Lhh0;->a(ZLahd;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final c(Lahd;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lhh0;->b:Z
-
-    invoke-static {v0, p1, p2, p3}, Lhh0;->a(ZLahd;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 3
 
-    const/4 v0, 0x1
+    if-ne p1, p0, :cond_0
 
-    if-ne p0, p1, :cond_0
-
-    return v0
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lhh0;
+    instance-of v0, p1, Lhh0;
 
-    const/4 v2, 0x0
+    if-eqz v0, :cond_2
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lhh0;
 
-    iget-boolean v1, p0, Lhh0;->a:Z
+    iget-object v0, p1, Lhh0;->c:Lph0;
 
-    iget-boolean v3, p1, Lhh0;->a:Z
+    iget v1, p0, Lhh0;->a:I
 
-    if-eq v1, v3, :cond_2
+    iget v2, p1, Lhh0;->a:I
 
-    return v2
+    if-ne v1, v2, :cond_2
+
+    iget v1, p0, Lhh0;->b:I
+
+    iget p1, p1, Lhh0;->b:I
+
+    invoke-static {v1, p1}, Lo52;->e(II)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, p0, Lhh0;->c:Lph0;
+
+    if-nez p1, :cond_1
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p1, v0}, Lph0;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_2
-    iget-boolean v1, p0, Lhh0;->b:Z
+    const/4 p1, 0x0
 
-    iget-boolean p1, p1, Lhh0;->b:Z
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget-boolean v0, p0, Lhh0;->a:Z
+    iget v0, p0, Lhh0;->a:I
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    const v1, 0xf4243
 
-    move-result v0
+    xor-int/2addr v0, v1
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-int/2addr v0, v1
 
-    iget-boolean v1, p0, Lhh0;->b:Z
+    iget v2, p0, Lhh0;->b:I
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-static {v2}, Lo52;->F(I)I
+
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lhh0;->c:Lph0;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Lph0;->hashCode()I
 
     move-result v1
 
-    add-int/2addr v1, v0
+    :goto_0
+    xor-int/2addr v0, v1
 
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 3
 
-    const-string v0, ", debugVerboseLogging="
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, ")"
+    const-string v1, "StreamInfo{id="
 
-    const-string v2, "DebugLoggingConfig(debugLogging="
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-boolean v3, p0, Lhh0;->a:Z
+    iget v1, p0, Lhh0;->a:I
 
-    iget-boolean v4, p0, Lhh0;->b:Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lhc0;->h(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    const-string v1, ", streamState="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Lhh0;->b:I
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "INACTIVE"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "ACTIVE"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", inProgressTransformationInfo="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lhh0;->c:Lph0;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

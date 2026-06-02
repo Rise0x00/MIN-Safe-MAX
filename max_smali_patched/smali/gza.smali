@@ -1,63 +1,35 @@
 .class public final Lgza;
-.super Ljava/util/concurrent/atomic/AtomicInteger;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lo25;
 
 
 # instance fields
-.field public final a:Ljza;
+.field public final a:J
 
-.field public final b:Le0b;
+.field public final b:J
 
-.field public c:Ljava/io/Serializable;
+.field public final c:J
 
-.field public volatile d:Z
+.field public final d:Ljava/lang/Boolean;
+
+.field public final e:Ldc5;
 
 
 # direct methods
-.method public constructor <init>(Ljza;Le0b;)V
+.method public constructor <init>(JJJLjava/lang/Boolean;Ldc5;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgza;->a:Ljza;
+    iput-wide p1, p0, Lgza;->a:J
 
-    iput-object p2, p0, Lgza;->b:Le0b;
+    iput-wide p3, p0, Lgza;->b:J
+
+    iput-wide p5, p0, Lgza;->c:J
+
+    iput-object p7, p0, Lgza;->d:Ljava/lang/Boolean;
+
+    iput-object p8, p0, Lgza;->e:Ldc5;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final dispose()V
-    .locals 1
-
-    iget-boolean v0, p0, Lgza;->d:Z
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lgza;->d:Z
-
-    iget-object v0, p0, Lgza;->a:Ljza;
-
-    invoke-virtual {v0, p0}, Ljza;->a(Lgza;)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lgza;->c:Ljava/io/Serializable;
-
-    :cond_0
-    return-void
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lgza;->d:Z
-
-    return v0
 .end method

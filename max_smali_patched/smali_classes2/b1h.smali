@@ -1,196 +1,519 @@
-.class public final synthetic Lb1h;
+.class public final Lb1h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final X:Ljava/lang/Object;
+
+.field public static Y:Ljava/lang/Boolean;
+
+.field public static Z:Ljava/lang/Boolean;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic b:Landroid/content/Context;
+.field public final b:Leg7;
 
-.field public final synthetic c:Ld1h;
+.field public final c:Landroid/os/PowerManager$WakeLock;
+
+.field public final d:Lz0h;
+
+.field public final o:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Ld1h;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p3, p0, Lb1h;->a:I
+    new-instance v0, Ljava/lang/Object;
 
-    iput-object p1, p0, Lb1h;->b:Landroid/content/Context;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lb1h;->c:Ld1h;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lb1h;->X:Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public constructor <init>(Lz0h;Landroid/content/Context;Leg7;J)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lb1h;->d:Lz0h;
+
+    iput-object p2, p0, Lb1h;->a:Landroid/content/Context;
+
+    iput-wide p4, p0, Lb1h;->o:J
+
+    iput-object p3, p0, Lb1h;->b:Leg7;
+
+    const-string p1, "power"
+
+    invoke-virtual {p2, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/os/PowerManager;
+
+    const/4 p2, 0x1
+
+    const-string p3, "wake:com.google.firebase.messaging"
+
+    invoke-virtual {p1, p2, p3}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lb1h;->c:Landroid/os/PowerManager$WakeLock;
+
+    return-void
+.end method
+
+.method public static a(Landroid/content/Context;)Z
+    .locals 3
+
+    sget-object v0, Lb1h;->X:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lb1h;->Z:Ljava/lang/Boolean;
+
+    if-nez v1, :cond_0
+
+    const-string v2, "android.permission.ACCESS_NETWORK_STATE"
+
+    invoke-static {p0, v2, v1}, Lb1h;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Boolean;)Z
+
+    move-result p0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p0
+
+    :goto_0
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    sput-object p0, Lb1h;->Z:Ljava/lang/Boolean;
+
+    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p0
+
+    monitor-exit v0
+
+    return p0
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public static b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Boolean;)Z
+    .locals 2
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    invoke-virtual {p0, p1}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    :goto_0
+    if-nez p0, :cond_2
+
+    const/4 p2, 0x3
+
+    const-string v0, "FirebaseMessaging"
+
+    invoke-static {v0, p2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string v1, "Missing Permission: "
+
+    invoke-direct {p2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, ". This permission should normally be included by the manifest merger, but may needed to be manually added to your manifest"
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    return p0
+.end method
+
+.method public static c(Landroid/content/Context;)Z
+    .locals 3
+
+    sget-object v0, Lb1h;->X:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lb1h;->Y:Ljava/lang/Boolean;
+
+    if-nez v1, :cond_0
+
+    const-string v2, "android.permission.WAKE_LOCK"
+
+    invoke-static {p0, v2, v1}, Lb1h;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Boolean;)Z
+
+    move-result p0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p0
+
+    :goto_0
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    sput-object p0, Lb1h;->Y:Ljava/lang/Boolean;
+
+    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p0
+
+    monitor-exit v0
+
+    return p0
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final declared-synchronized d()Z
+    .locals 2
 
-    iget v0, p0, Lb1h;->a:I
+    monitor-enter p0
 
-    packed-switch v0, :pswitch_data_0
+    :try_start_0
+    iget-object v0, p0, Lb1h;->a:Landroid/content/Context;
 
-    new-instance v0, Lzt3;
+    const-string v1, "connectivity"
 
-    const/4 v1, 0x0
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    iget-object v2, p0, Lb1h;->b:Landroid/content/Context;
+    move-result-object v0
 
-    invoke-direct {v0, v2, v1}, Lzt3;-><init>(Landroid/content/Context;I)V
+    check-cast v0, Landroid/net/ConnectivityManager;
 
-    iget-object v1, p0, Lb1h;->c:Ld1h;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Lzt3;->setListener(Lvt3;)V
+    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
-    new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
+    move-result-object v0
 
-    const/4 v3, -0x2
+    goto :goto_0
 
-    invoke-direct {v2, v3, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+    :catchall_0
+    move-exception v0
 
-    const/16 v3, 0x18
+    goto :goto_2
 
-    int-to-float v3, v3
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    :goto_0
+    if-eqz v0, :cond_1
 
-    move-result-object v4
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v4
+    if-eqz v0, :cond_1
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+    const/4 v0, 0x1
 
-    mul-float/2addr v3, v4
+    goto :goto_1
 
-    invoke-static {v3}, Lq7j;->c(F)I
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_1
+    monitor-exit p0
+
+    return v0
+
+    :goto_2
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final run()V
+    .locals 10
+
+    const-string v0, "TopicsSyncTask\'s wakelock was already released due to timeout."
+
+    const-string v1, "FirebaseMessaging"
+
+    iget-object v2, p0, Lb1h;->d:Lz0h;
+
+    const-string v3, "Failed to sync topics. Won\'t retry sync. "
+
+    iget-object v4, p0, Lb1h;->a:Landroid/content/Context;
+
+    invoke-static {v4}, Lb1h;->c(Landroid/content/Context;)Z
+
+    move-result v5
+
+    iget-object v6, p0, Lb1h;->c:Landroid/os/PowerManager$WakeLock;
+
+    if-eqz v5, :cond_0
+
+    sget-wide v7, Lpy3;->a:J
+
+    invoke-virtual {v6, v7, v8}, Landroid/os/PowerManager$WakeLock;->acquire(J)V
+
+    :cond_0
+    const/4 v5, 0x1
+
+    const/4 v7, 0x0
+
+    :try_start_0
+    invoke-virtual {v2, v5}, Lz0h;->e(Z)V
+
+    iget-object v5, p0, Lb1h;->b:Leg7;
+
+    invoke-virtual {v5}, Leg7;->i()Z
+
+    move-result v5
+
+    if-nez v5, :cond_1
+
+    invoke-virtual {v2, v7}, Lz0h;->e(Z)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {v4}, Lb1h;->c(Landroid/content/Context;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    :try_start_1
+    invoke-virtual {v6}, Landroid/os/PowerManager$WakeLock;->release()V
+    :try_end_1
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
+
+    return-void
+
+    :catch_0
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :catchall_0
+    move-exception v2
+
+    goto :goto_3
+
+    :catch_1
+    move-exception v5
+
+    goto :goto_1
+
+    :cond_1
+    :try_start_2
+    invoke-static {v4}, Lb1h;->a(Landroid/content/Context;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    invoke-virtual {p0}, Lb1h;->d()Z
+
+    move-result v5
+
+    if-nez v5, :cond_2
+
+    new-instance v5, La1h;
+
+    invoke-direct {v5, p0, p0}, La1h;-><init>(Lb1h;Lb1h;)V
+
+    invoke-virtual {v5}, La1h;->a()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-static {v4}, Lb1h;->c(Landroid/content/Context;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    :try_start_3
+    invoke-virtual {v6}, Landroid/os/PowerManager$WakeLock;->release()V
+    :try_end_3
+    .catch Ljava/lang/RuntimeException; {:try_start_3 .. :try_end_3} :catch_2
+
+    return-void
+
+    :catch_2
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_2
+    :try_start_4
+    invoke-virtual {v2}, Lz0h;->f()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    invoke-virtual {v2, v7}, Lz0h;->e(Z)V
+
+    goto :goto_0
+
+    :cond_3
+    iget-wide v8, p0, Lb1h;->o:J
+
+    invoke-virtual {v2, v8, v9}, Lz0h;->g(J)V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :goto_0
+    invoke-static {v4}, Lb1h;->c(Landroid/content/Context;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    :try_start_5
+    invoke-virtual {v6}, Landroid/os/PowerManager$WakeLock;->release()V
+    :try_end_5
+    .catch Ljava/lang/RuntimeException; {:try_start_5 .. :try_end_5} :catch_3
+
+    return-void
+
+    :catch_3
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_2
+
+    :goto_1
+    :try_start_6
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {v2, v7}, Lz0h;->e(Z)V
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+
+    invoke-static {v4}, Lb1h;->c(Landroid/content/Context;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    :try_start_7
+    invoke-virtual {v6}, Landroid/os/PowerManager$WakeLock;->release()V
+    :try_end_7
+    .catch Ljava/lang/RuntimeException; {:try_start_7 .. :try_end_7} :catch_3
+
+    :cond_4
+    :goto_2
+    return-void
+
+    :goto_3
+    invoke-static {v4}, Lb1h;->c(Landroid/content/Context;)Z
 
     move-result v3
 
-    iput v3, v2, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+    if-eqz v3, :cond_5
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    :try_start_8
+    invoke-virtual {v6}, Landroid/os/PowerManager$WakeLock;->release()V
+    :try_end_8
+    .catch Ljava/lang/RuntimeException; {:try_start_8 .. :try_end_8} :catch_4
 
-    new-instance v2, Lus3;
+    goto :goto_4
 
-    const/4 v3, 0x2
+    :catch_4
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-direct {v2, v0, v0, v3}, Lus3;-><init>(Lzt3;Lzt3;I)V
-
-    invoke-static {v0, v2}, Lmnb;->a(Landroid/view/View;Ljava/lang/Runnable;)Lmnb;
-
-    new-instance v2, Lmnf;
-
-    const/16 v3, 0x1a
-
-    invoke-direct {v2, v3}, Lmnf;-><init>(I)V
-
-    invoke-virtual {v0, v2}, Lzt3;->setKeyboardOpen(Llq6;)V
-
-    const/16 v2, 0x11
-
-    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setGravity(I)V
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lwlb;
-
-    iget-object v1, p0, Lb1h;->b:Landroid/content/Context;
-
-    invoke-direct {v0, v1}, Lwlb;-><init>(Landroid/content/Context;)V
-
-    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
-
-    const/4 v2, -0x1
-
-    const/4 v3, -0x2
-
-    invoke-direct {v1, v2, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    const/16 v2, 0x8
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Lq7j;->c(F)I
-
-    move-result v2
-
-    iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
-
-    const/16 v2, 0xc
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Lq7j;->c(F)I
-
-    move-result v2
-
-    iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget v1, Lugb;->M:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lwlb;->setBackgroundColorAttr(Ljava/lang/Integer;)V
-
-    sget-object v1, Lulb;->b:Lulb;
-
-    invoke-virtual {v0, v1}, Lwlb;->setTypingMode(Lulb;)V
-
-    new-instance v1, La1h;
-
-    const/4 v2, 0x1
-
-    iget-object v3, p0, Lb1h;->c:Ld1h;
-
-    invoke-direct {v1, v3, v2}, La1h;-><init>(Ld1h;I)V
-
-    invoke-virtual {v0, v1}, Lwlb;->f(Lnq6;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_5
+    :goto_4
+    throw v2
 .end method

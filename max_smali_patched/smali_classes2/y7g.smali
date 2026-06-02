@@ -1,57 +1,23 @@
 .class public final Ly7g;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:J
 
-.field public final synthetic Y:Lc8g;
-
-.field public Z:I
-
-.field public d:J
-
-.field public o:J
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Lc8g;Lo84;)V
+.method public constructor <init>(JJ)V
     .locals 0
 
-    iput-object p1, p0, Ly7g;->Y:Lc8g;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Ly7g;->a:J
+
+    iput-wide p3, p0, Ly7g;->b:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iput-object p1, p0, Ly7g;->X:Ljava/lang/Object;
-
-    iget p1, p0, Ly7g;->Z:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ly7g;->Z:I
-
-    const-wide/16 v1, 0x0
-
-    const-wide/16 v3, 0x0
-
-    iget-object v0, p0, Ly7g;->Y:Lc8g;
-
-    move-object v5, p0
-
-    invoke-virtual/range {v0 .. v5}, Lc8g;->a(JJLo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

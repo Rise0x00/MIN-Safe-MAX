@@ -4,43 +4,21 @@
 
 
 # instance fields
-.field public final a:Landroid/graphics/PointF;
+.field public a:F
 
-.field public final b:Landroid/graphics/RectF;
+.field public b:F
 
-.field public c:I
+.field public c:F
 
-.field public d:I
+.field public d:F
 
-.field public e:I
+.field public e:F
 
-.field public f:I
+.field public f:F
 
-.field public g:I
+.field public final g:Ljava/util/ArrayList;
 
-.field public h:I
-
-.field public i:F
-
-.field public j:F
-
-.field public k:F
-
-.field public l:F
-
-.field public m:F
-
-.field public n:F
-
-.field public o:F
-
-.field public p:I
-
-.field public final q:Lmea;
-
-.field public final r:Landroid/graphics/RectF;
-
-.field public s:F
+.field public final h:Ljava/util/ArrayList;
 
 
 # direct methods
@@ -49,395 +27,196 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Landroid/graphics/PointF;
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lugf;->a:Landroid/graphics/PointF;
+    iput-object v0, p0, Lugf;->g:Ljava/util/ArrayList;
 
-    new-instance v0, Landroid/graphics/RectF;
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lugf;->b:Landroid/graphics/RectF;
+    iput-object v0, p0, Lugf;->h:Ljava/util/ArrayList;
 
-    new-instance v0, Lmea;
+    const/4 v0, 0x0
 
-    const/16 v1, 0x10
+    const/high16 v1, 0x43870000    # 270.0f
 
-    invoke-direct {v0, v1}, Lmea;-><init>(I)V
-
-    iput-object v0, p0, Lugf;->q:Lmea;
-
-    new-instance v0, Landroid/graphics/RectF;
-
-    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
-
-    iput-object v0, p0, Lugf;->r:Landroid/graphics/RectF;
+    invoke-virtual {p0, v0, v0, v1, v0}, Lugf;->d(FFFF)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(F)F
-    .locals 9
-
-    iget v0, p0, Lugf;->p:I
-
-    iget-object v1, p0, Lugf;->r:Landroid/graphics/RectF;
-
-    const/4 v2, 0x1
-
-    if-gt v0, v2, :cond_0
-
-    iget p1, v1, Landroid/graphics/RectF;->left:F
-
-    return p1
-
-    :cond_0
-    iget-object v0, p0, Lugf;->q:Lmea;
-
-    invoke-virtual {v0, v2}, Lmea;->b(I)F
-
-    move-result v3
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v0, v4}, Lmea;->b(I)F
-
-    move-result v5
-
-    sub-float/2addr v3, v5
-
-    const/high16 v5, 0x40000000    # 2.0f
-
-    div-float/2addr v3, v5
-
-    iget v5, v0, Lmea;->b:I
-
-    sub-int/2addr v5, v2
-
-    iget v1, v1, Landroid/graphics/RectF;->left:F
-
-    :goto_0
-    if-gt v4, v5, :cond_4
-
-    add-int v2, v4, v5
-
-    div-int/lit8 v2, v2, 0x2
-
-    invoke-virtual {v0, v2}, Lmea;->b(I)F
-
-    move-result v6
-
-    sub-float v7, v6, p1
-
-    invoke-static {v7}, Ljava/lang/Math;->abs(F)F
-
-    move-result v8
-
-    cmpg-float v8, v8, v3
-
-    if-gtz v8, :cond_1
-
-    return v6
-
-    :cond_1
-    invoke-static {v7}, Ljava/lang/Math;->abs(F)F
-
-    move-result v7
-
-    sub-float v8, v1, p1
-
-    invoke-static {v8}, Ljava/lang/Math;->abs(F)F
-
-    move-result v8
-
-    cmpg-float v7, v7, v8
-
-    if-gez v7, :cond_2
-
-    move v1, v6
-
-    :cond_2
-    cmpg-float v6, v6, p1
-
-    if-gez v6, :cond_3
-
-    add-int/lit8 v4, v2, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    add-int/lit8 v5, v2, -0x1
-
-    goto :goto_0
-
-    :cond_4
-    return v1
-.end method
-
-.method public final b(I)V
-    .locals 7
-
-    iput p1, p0, Lugf;->p:I
-
-    iget-object p1, p0, Lugf;->r:Landroid/graphics/RectF;
-
-    invoke-virtual {p1}, Landroid/graphics/RectF;->width()F
-
-    move-result v0
-
-    invoke-static {v0}, Lq7j;->c(F)I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    iget v1, p0, Lugf;->p:I
-
-    const/4 v2, 0x1
-
-    sub-int/2addr v1, v2
-
-    if-ge v1, v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v2, v1
-
-    :goto_0
-    int-to-float v1, v2
-
-    div-float/2addr v0, v1
-
-    const/16 v1, 0xc
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Lq7j;->c(F)I
-
-    move-result v1
-
-    iget v2, p0, Lugf;->f:I
-
-    int-to-float v3, v2
-
-    iget v4, p0, Lugf;->d:I
-
-    sub-int/2addr v4, v2
-
-    iget v2, p0, Lugf;->h:I
-
-    sub-int/2addr v4, v2
-
-    int-to-float v2, v4
-
-    const/high16 v4, 0x40000000    # 2.0f
-
-    div-float/2addr v2, v4
-
-    add-float/2addr v2, v3
-
-    int-to-float v1, v1
-
-    div-float/2addr v1, v4
-
-    sub-float v3, v2, v1
-
-    iput v3, p0, Lugf;->n:F
-
-    add-float/2addr v2, v1
-
-    iput v2, p0, Lugf;->o:F
-
-    iget p1, p1, Landroid/graphics/RectF;->left:F
-
-    iget v1, p0, Lugf;->p:I
-
-    iget-object v2, p0, Lugf;->q:Lmea;
-
-    iget-object v3, v2, Lmea;->a:[F
-
-    array-length v4, v3
-
-    if-ge v4, v1, :cond_1
-
-    array-length v4, v3
-
-    mul-int/lit8 v4, v4, 0x3
-
-    div-int/lit8 v4, v4, 0x2
-
-    invoke-static {v1, v4}, Ljava/lang/Math;->max(II)I
-
-    move-result v1
-
-    invoke-static {v3, v1}, Ljava/util/Arrays;->copyOf([FI)[F
-
-    move-result-object v1
-
-    iput-object v1, v2, Lmea;->a:[F
-
-    :cond_1
-    iget v1, p0, Lugf;->p:I
-
-    const/4 v3, 0x0
-
-    :goto_1
-    if-ge v3, v1, :cond_4
-
-    int-to-float v4, v3
-
-    mul-float/2addr v4, v0
-
-    add-float/2addr v4, p1
-
-    iget v5, v2, Lmea;->b:I
-
-    if-gt v5, v3, :cond_2
-
-    invoke-virtual {v2, v4}, Lmea;->a(F)V
-
-    goto :goto_2
-
-    :cond_2
-    if-ltz v3, :cond_3
-
-    if-ge v3, v5, :cond_3
-
-    iget-object v5, v2, Lmea;->a:[F
-
-    aget v6, v5, v3
-
-    aput v4, v5, v3
-
-    :goto_2
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    const-string p1, "Index must be between 0 and size"
-
-    invoke-static {p1}, Lbnj;->c(Ljava/lang/String;)V
-
-    const/4 p1, 0x0
-
-    throw p1
-
-    :cond_4
-    return-void
-.end method
-
-.method public final c(F)V
-    .locals 2
-
-    iget-object v0, p0, Lugf;->r:Landroid/graphics/RectF;
-
-    iget v1, v0, Landroid/graphics/RectF;->left:F
-
-    iget v0, v0, Landroid/graphics/RectF;->right:F
-
-    invoke-static {p1, v1, v0}, Lamj;->c(FFF)F
-
-    move-result p1
-
-    iput p1, p0, Lugf;->s:F
-
-    return-void
-.end method
-
-.method public final d()V
+.method public final a(F)V
     .locals 4
 
-    iget v0, p0, Lugf;->f:I
+    iget v0, p0, Lugf;->e:F
 
-    int-to-float v1, v0
+    cmpl-float v1, v0, p1
 
-    iget v2, p0, Lugf;->d:I
+    if-nez v1, :cond_0
 
-    sub-int/2addr v2, v0
+    goto :goto_0
 
-    iget v0, p0, Lugf;->h:I
+    :cond_0
+    sub-float v0, p1, v0
 
-    sub-int/2addr v2, v0
-
-    int-to-float v0, v2
-
-    const/high16 v2, 0x40000000    # 2.0f
-
-    div-float/2addr v0, v2
+    const/high16 v1, 0x43b40000    # 360.0f
 
     add-float/2addr v0, v1
 
-    iget-object v1, p0, Lugf;->r:Landroid/graphics/RectF;
+    rem-float/2addr v0, v1
 
-    iput v0, v1, Landroid/graphics/RectF;->top:F
+    const/high16 v1, 0x43340000    # 180.0f
 
-    iput v0, v1, Landroid/graphics/RectF;->bottom:F
+    cmpl-float v1, v0, v1
 
-    iget v0, p0, Lugf;->e:I
+    if-lez v1, :cond_1
 
-    int-to-float v0, v0
+    :goto_0
+    return-void
 
-    iget v2, p0, Lugf;->i:F
+    :cond_1
+    new-instance v1, Lqgf;
 
-    add-float/2addr v0, v2
+    iget v2, p0, Lugf;->c:F
+
+    iget v3, p0, Lugf;->d:F
+
+    invoke-direct {v1, v2, v3, v2, v3}, Lqgf;-><init>(FFFF)V
+
+    iget v2, p0, Lugf;->e:F
+
+    iput v2, v1, Lqgf;->f:F
+
+    iput v0, v1, Lqgf;->g:F
+
+    new-instance v0, Logf;
+
+    invoke-direct {v0, v1}, Logf;-><init>(Lqgf;)V
+
+    iget-object v1, p0, Lugf;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iput p1, p0, Lugf;->e:F
+
+    return-void
+.end method
+
+.method public final b(Landroid/graphics/Matrix;Landroid/graphics/Path;)V
+    .locals 4
+
+    iget-object v0, p0, Lugf;->g:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
 
     const/4 v2, 0x0
 
-    cmpg-float v3, v0, v2
+    :goto_0
+    if-ge v2, v1, :cond_0
 
-    if-gez v3, :cond_0
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move v0, v2
+    move-result-object v3
+
+    check-cast v3, Lsgf;
+
+    invoke-virtual {v3, p1, p2}, Lsgf;->a(Landroid/graphics/Matrix;Landroid/graphics/Path;)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
 
     :cond_0
-    iput v0, v1, Landroid/graphics/RectF;->left:F
+    return-void
+.end method
 
-    iget v2, p0, Lugf;->c:I
+.method public final c(FF)V
+    .locals 4
 
-    iget v3, p0, Lugf;->g:I
+    new-instance v0, Lrgf;
 
-    sub-int/2addr v2, v3
+    invoke-direct {v0}, Lsgf;-><init>()V
 
-    int-to-float v2, v2
+    iput p1, v0, Lrgf;->b:F
 
-    iget v3, p0, Lugf;->k:F
+    iput p2, v0, Lrgf;->c:F
 
-    sub-float/2addr v2, v3
+    iget-object v1, p0, Lugf;->g:Ljava/util/ArrayList;
 
-    cmpg-float v3, v2, v0
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    if-gez v3, :cond_1
+    new-instance v1, Lpgf;
 
-    move v2, v0
+    iget v2, p0, Lugf;->c:F
 
-    :cond_1
-    iput v2, v1, Landroid/graphics/RectF;->right:F
+    iget v3, p0, Lugf;->d:F
 
-    iget v1, p0, Lugf;->s:F
+    invoke-direct {v1, v0, v2, v3}, Lpgf;-><init>(Lrgf;FF)V
 
-    invoke-static {v1, v0, v2}, Lamj;->c(FFF)F
+    invoke-virtual {v1}, Lpgf;->c()F
 
     move-result v0
 
-    iput v0, p0, Lugf;->s:F
+    const/high16 v2, 0x43870000    # 270.0f
+
+    add-float/2addr v0, v2
+
+    invoke-virtual {v1}, Lpgf;->c()F
+
+    move-result v3
+
+    add-float/2addr v3, v2
+
+    invoke-virtual {p0, v0}, Lugf;->a(F)V
+
+    iget-object v0, p0, Lugf;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iput v3, p0, Lugf;->e:F
+
+    iput p1, p0, Lugf;->c:F
+
+    iput p2, p0, Lugf;->d:F
+
+    return-void
+.end method
+
+.method public final d(FFFF)V
+    .locals 0
+
+    iput p1, p0, Lugf;->a:F
+
+    iput p2, p0, Lugf;->b:F
+
+    iput p1, p0, Lugf;->c:F
+
+    iput p2, p0, Lugf;->d:F
+
+    iput p3, p0, Lugf;->e:F
+
+    add-float/2addr p3, p4
+
+    const/high16 p1, 0x43b40000    # 360.0f
+
+    rem-float/2addr p3, p1
+
+    iput p3, p0, Lugf;->f:F
+
+    iget-object p1, p0, Lugf;->g:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
+
+    iget-object p1, p0, Lugf;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
     return-void
 .end method

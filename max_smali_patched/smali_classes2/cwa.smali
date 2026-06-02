@@ -3,25 +3,23 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
-
-.field public final b:J
-
-.field public final c:J
-
-
 # direct methods
-.method public constructor <init>(JJJ)V
+.method public static a(Ljava/lang/CharSequence;JLjava/lang/CharSequence;)Landroid/app/Notification$MessagingStyle$Message;
+    .locals 1
+
+    new-instance v0, Landroid/app/Notification$MessagingStyle$Message;
+
+    invoke-direct {v0, p0, p1, p2, p3}, Landroid/app/Notification$MessagingStyle$Message;-><init>(Ljava/lang/CharSequence;JLjava/lang/CharSequence;)V
+
+    return-object v0
+.end method
+
+.method public static b(Landroid/app/Notification$MessagingStyle$Message;Ljava/lang/String;Landroid/net/Uri;)Landroid/app/Notification$MessagingStyle$Message;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, p1, p2}, Landroid/app/Notification$MessagingStyle$Message;->setData(Ljava/lang/String;Landroid/net/Uri;)Landroid/app/Notification$MessagingStyle$Message;
 
-    iput-wide p1, p0, Lcwa;->a:J
+    move-result-object p0
 
-    iput-wide p3, p0, Lcwa;->b:J
-
-    iput-wide p5, p0, Lcwa;->c:J
-
-    return-void
+    return-object p0
 .end method

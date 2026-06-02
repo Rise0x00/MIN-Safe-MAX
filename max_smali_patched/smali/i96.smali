@@ -2,130 +2,202 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lf76;
-
 
 # instance fields
-.field public final synthetic a:Lp6g;
+.field public a:J
 
-.field public final synthetic b:Lf76;
+.field public b:J
+
+.field public c:J
+
+.field public d:J
+
+.field public e:J
+
+.field public f:J
+
+.field public final g:[Z
+
+.field public h:I
 
 
 # direct methods
-.method public constructor <init>(Ldr6;Lf76;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p1, Lp6g;
+    const/16 v0, 0xf
 
-    iput-object p1, p0, Li96;->a:Lp6g;
+    new-array v0, v0, [Z
 
-    iput-object p2, p0, Li96;->b:Lf76;
+    iput-object v0, p0, Li96;->g:[Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final a()Z
     .locals 4
 
-    instance-of v0, p2, Lh96;
+    iget-wide v0, p0, Li96;->d:J
 
-    if-eqz v0, :cond_0
+    const-wide/16 v2, 0xf
 
-    move-object v0, p2
+    cmp-long v0, v0, v2
 
-    check-cast v0, Lh96;
+    if-lez v0, :cond_0
 
-    iget v1, v0, Lh96;->X:I
+    iget v0, p0, Li96;->h:I
 
-    const/high16 v2, -0x80000000
+    if-nez v0, :cond_0
 
-    and-int v3, v1, v2
+    const/4 v0, 0x1
 
-    if-eqz v3, :cond_0
+    return v0
 
-    sub-int/2addr v1, v2
+    :cond_0
+    const/4 v0, 0x0
 
-    iput v1, v0, Lh96;->X:I
+    return v0
+.end method
+
+.method public final b(J)V
+    .locals 10
+
+    iget-wide v0, p0, Li96;->d:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v2, v0, v2
+
+    const-wide/16 v3, 0x1
+
+    if-nez v2, :cond_0
+
+    iput-wide p1, p0, Li96;->a:J
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lh96;
+    cmp-long v2, v0, v3
 
-    invoke-direct {v0, p0, p2}, Lh96;-><init>(Li96;Lkotlin/coroutines/Continuation;)V
+    if-nez v2, :cond_1
 
-    :goto_0
-    iget-object p2, v0, Lh96;->o:Ljava/lang/Object;
+    iget-wide v0, p0, Li96;->a:J
 
-    iget v1, v0, Lh96;->X:I
+    sub-long v0, p1, v0
 
-    const/4 v2, 0x1
+    iput-wide v0, p0, Li96;->b:J
 
-    if-eqz v1, :cond_2
+    iput-wide v0, p0, Li96;->f:J
 
-    if-ne v1, v2, :cond_1
+    iput-wide v3, p0, Li96;->e:J
 
-    iget-object p1, v0, Lh96;->d:Li96;
-
-    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-wide v5, p0, Li96;->c:J
 
-    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+    sub-long v5, p1, v5
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const-wide/16 v7, 0xf
 
-    throw p1
+    rem-long/2addr v0, v7
+
+    long-to-int v0, v0
+
+    iget-wide v1, p0, Li96;->b:J
+
+    sub-long v1, v5, v1
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->abs(J)J
+
+    move-result-wide v1
+
+    const-wide/32 v7, 0xf4240
+
+    cmp-long v1, v1, v7
+
+    iget-object v2, p0, Li96;->g:[Z
+
+    const/4 v7, 0x1
+
+    if-gtz v1, :cond_2
+
+    iget-wide v8, p0, Li96;->e:J
+
+    add-long/2addr v8, v3
+
+    iput-wide v8, p0, Li96;->e:J
+
+    iget-wide v8, p0, Li96;->f:J
+
+    add-long/2addr v8, v5
+
+    iput-wide v8, p0, Li96;->f:J
+
+    aget-boolean v1, v2, v0
+
+    if-eqz v1, :cond_3
+
+    const/4 v1, 0x0
+
+    aput-boolean v1, v2, v0
+
+    iget v0, p0, Li96;->h:I
+
+    sub-int/2addr v0, v7
+
+    iput v0, p0, Li96;->h:I
+
+    goto :goto_0
 
     :cond_2
-    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
+    aget-boolean v1, v2, v0
 
-    iput-object p0, v0, Lh96;->d:Li96;
+    if-nez v1, :cond_3
 
-    iput v2, v0, Lh96;->X:I
+    aput-boolean v7, v2, v0
 
-    iget-object p2, p0, Li96;->a:Lp6g;
+    iget v0, p0, Li96;->h:I
 
-    iget-object v1, p0, Li96;->b:Lf76;
+    add-int/2addr v0, v7
 
-    invoke-interface {p2, v1, p1, v0}, Ldr6;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    sget-object p1, Lac4;->a:Lac4;
-
-    if-ne p2, p1, :cond_3
-
-    return-object p1
+    iput v0, p0, Li96;->h:I
 
     :cond_3
-    move-object p1, p0
+    :goto_0
+    iget-wide v0, p0, Li96;->d:J
 
-    :goto_1
-    check-cast p2, Ljava/lang/Boolean;
+    add-long/2addr v0, v3
 
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+    iput-wide v0, p0, Li96;->d:J
 
-    move-result p2
+    iput-wide p1, p0, Li96;->c:J
 
-    if-eqz p2, :cond_4
+    return-void
+.end method
 
-    sget-object p1, Lb3h;->a:Lb3h;
+.method public final c()V
+    .locals 2
 
-    return-object p1
+    const-wide/16 v0, 0x0
 
-    :cond_4
-    new-instance p2, Lkotlinx/coroutines/flow/internal/AbortFlowException;
+    iput-wide v0, p0, Li96;->d:J
 
-    invoke-direct {p2, p1}, Lkotlinx/coroutines/flow/internal/AbortFlowException;-><init>(Ljava/lang/Object;)V
+    iput-wide v0, p0, Li96;->e:J
 
-    throw p2
+    iput-wide v0, p0, Li96;->f:J
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Li96;->h:I
+
+    iget-object v1, p0, Li96;->g:[Z
+
+    invoke-static {v1, v0}, Ljava/util/Arrays;->fill([ZZ)V
+
+    return-void
 .end method

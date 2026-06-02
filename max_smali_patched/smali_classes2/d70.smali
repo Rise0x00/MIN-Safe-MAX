@@ -1,195 +1,211 @@
-.class public abstract Ld70;
+.class public final Ld70;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ljava/util/List;
+.field public static final c:Ld70;
 
-.field public static final b:Ljava/util/List;
+.field public static final d:Ld70;
 
-.field public static final c:Ljava/util/List;
+.field public static final e:[I
+
+
+# instance fields
+.field public final a:[I
+
+.field public final b:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 22
+    .locals 5
 
-    new-instance v0, Lf38;
+    new-instance v0, Ld70;
 
-    const/4 v6, 0x0
+    const/4 v1, 0x2
 
-    const/high16 v7, 0x3f000000    # 0.5f
+    filled-new-array {v1}, [I
 
-    const v1, 0x3e8a3d71    # 0.27f
+    move-result-object v2
 
-    const v2, 0x3f3ae148    # 0.73f
+    const/16 v3, 0x8
 
-    invoke-direct {v0, v6, v7, v1, v2}, Lf38;-><init>(FFFF)V
+    invoke-direct {v0, v3, v2}, Ld70;-><init>(I[I)V
 
-    new-instance v3, Lf38;
+    sput-object v0, Ld70;->c:Ld70;
 
-    const/high16 v8, 0x43c80000    # 400.0f
+    new-instance v0, Ld70;
 
-    const/high16 v9, 0x3e800000    # 0.25f
+    const/4 v2, 0x5
 
-    const v10, 0x3efd70a4    # 0.495f
+    const/4 v4, 0x6
 
-    invoke-direct {v3, v8, v9, v10, v7}, Lf38;-><init>(FFFF)V
+    filled-new-array {v1, v2, v4}, [I
 
-    new-instance v4, Lf38;
+    move-result-object v1
 
-    const/high16 v11, 0x44480000    # 800.0f
+    invoke-direct {v0, v3, v1}, Ld70;-><init>(I[I)V
 
-    invoke-direct {v4, v11, v9, v10, v7}, Lf38;-><init>(FFFF)V
+    sput-object v0, Ld70;->d:Ld70;
 
-    move-object v5, v3
+    const/4 v0, 0x7
 
-    new-instance v3, Lf38;
+    new-array v0, v0, [I
 
-    const v12, 0x3e8bc6a8    # 0.273f
+    fill-array-data v0, :array_0
 
-    const/high16 v13, 0x44960000    # 1200.0f
-
-    invoke-direct {v3, v13, v7, v12, v2}, Lf38;-><init>(FFFF)V
-
-    move-object v12, v4
-
-    new-instance v4, Lf38;
-
-    const/high16 v14, 0x44c80000    # 1600.0f
-
-    invoke-direct {v4, v14, v9, v10, v7}, Lf38;-><init>(FFFF)V
-
-    move-object v15, v5
-
-    new-instance v5, Lf38;
-
-    const/high16 v14, 0x44fa0000    # 2000.0f
-
-    invoke-direct {v5, v14, v7, v1, v2}, Lf38;-><init>(FFFF)V
-
-    move-object v2, v12
-
-    move-object v1, v15
-
-    filled-new-array/range {v0 .. v5}, [Lf38;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Ld70;->a:Ljava/util/List;
-
-    new-instance v0, Lf38;
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    invoke-direct {v0, v6, v1, v6, v1}, Lf38;-><init>(FFFF)V
-
-    new-instance v2, Lf38;
-
-    const v3, 0x3f3f7cee    # 0.748f
-
-    invoke-direct {v2, v8, v7, v9, v3}, Lf38;-><init>(FFFF)V
-
-    new-instance v4, Lf38;
-
-    invoke-direct {v4, v11, v9, v10, v7}, Lf38;-><init>(FFFF)V
-
-    new-instance v5, Lf38;
-
-    invoke-direct {v5, v13, v9, v10, v7}, Lf38;-><init>(FFFF)V
-
-    new-instance v12, Lf38;
-
-    const v15, 0x3e7be76d    # 0.246f
-
-    const v13, 0x3f408312    # 0.752f
-
-    const/high16 v3, 0x44c80000    # 1600.0f
-
-    invoke-direct {v12, v3, v7, v15, v13}, Lf38;-><init>(FFFF)V
-
-    new-instance v3, Lf38;
-
-    invoke-direct {v3, v14, v1, v6, v1}, Lf38;-><init>(FFFF)V
-
-    move-object/from16 v16, v0
-
-    move-object/from16 v17, v2
-
-    move-object/from16 v21, v3
-
-    move-object/from16 v18, v4
-
-    move-object/from16 v19, v5
-
-    move-object/from16 v20, v12
-
-    filled-new-array/range {v16 .. v21}, [Lf38;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Ld70;->b:Ljava/util/List;
-
-    new-instance v0, Lf38;
-
-    invoke-direct {v0, v6, v9, v10, v7}, Lf38;-><init>(FFFF)V
-
-    new-instance v2, Lf38;
-
-    invoke-direct {v2, v8, v1, v6, v1}, Lf38;-><init>(FFFF)V
-
-    new-instance v3, Lf38;
-
-    const v4, 0x3f3f7cee    # 0.748f
-
-    invoke-direct {v3, v11, v7, v9, v4}, Lf38;-><init>(FFFF)V
-
-    new-instance v4, Lf38;
-
-    const/high16 v5, 0x44960000    # 1200.0f
-
-    invoke-direct {v4, v5, v9, v10, v7}, Lf38;-><init>(FFFF)V
-
-    new-instance v5, Lf38;
-
-    const/high16 v8, 0x44c80000    # 1600.0f
-
-    invoke-direct {v5, v8, v1, v6, v1}, Lf38;-><init>(FFFF)V
-
-    new-instance v1, Lf38;
-
-    invoke-direct {v1, v14, v9, v10, v7}, Lf38;-><init>(FFFF)V
-
-    move-object/from16 v16, v0
-
-    move-object/from16 v21, v1
-
-    move-object/from16 v17, v2
-
-    move-object/from16 v18, v3
-
-    move-object/from16 v19, v4
-
-    move-object/from16 v20, v5
-
-    filled-new-array/range {v16 .. v21}, [Lf38;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Ld70;->c:Ljava/util/List;
+    sput-object v0, Ld70;->e:[I
 
     return-void
+
+    :array_0
+    .array-data 4
+        0x5
+        0x6
+        0x12
+        0x11
+        0xe
+        0x7
+        0x8
+    .end array-data
+.end method
+
+.method public constructor <init>(I[I)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    if-eqz p2, :cond_0
+
+    array-length v0, p2
+
+    invoke-static {p2, v0}, Ljava/util/Arrays;->copyOf([II)[I
+
+    move-result-object p2
+
+    iput-object p2, p0, Ld70;->a:[I
+
+    invoke-static {p2}, Ljava/util/Arrays;->sort([I)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    new-array p2, p2, [I
+
+    iput-object p2, p0, Ld70;->a:[I
+
+    :goto_0
+    iput p1, p0, Ld70;->b:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ld70;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ld70;
+
+    iget-object v1, p0, Ld70;->a:[I
+
+    iget-object v3, p1, Ld70;->a:[I
+
+    invoke-static {v1, v3}, Ljava/util/Arrays;->equals([I[I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget v1, p0, Ld70;->b:I
+
+    iget p1, p1, Ld70;->b:I
+
+    if-ne v1, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Ld70;->a:[I
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Ld70;->b:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Ld70;->a:[I
+
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/16 v1, 0x43
+
+    invoke-static {v1, v0}, Ls54;->d(ILjava/lang/String;)I
+
+    move-result v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v1, "AudioCapabilities[maxChannelCount="
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ld70;->b:I
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", supportedEncodings="
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "]"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

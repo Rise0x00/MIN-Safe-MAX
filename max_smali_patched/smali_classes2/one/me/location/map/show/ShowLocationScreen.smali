@@ -3,21 +3,21 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb2b;
-.implements Ldu3;
+.implements La5b;
+.implements Lhv3;
 
 
 # annotations
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u00004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\t\n\u0002\u0008\u0003\n\u0002\u0010\u0006\n\u0002\u0008\u0002\n\u0002\u0010\u0007\n\u0002\u0008\u0003\u0018\u00002\u00020\u00012\u00060\u0002j\u0002`\u00032\u00020\u0004B\u000f\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u00a2\u0006\u0004\u0008\u0007\u0010\u0008BA\u0008\u0016\u0012\u0008\u0010\n\u001a\u0004\u0018\u00010\t\u0012\u0008\u0010\u000b\u001a\u0004\u0018\u00010\t\u0012\u0008\u0010\u000c\u001a\u0004\u0018\u00010\t\u0012\u0006\u0010\u000e\u001a\u00020\r\u0012\u0006\u0010\u000f\u001a\u00020\r\u0012\u0008\u0010\u0011\u001a\u0004\u0018\u00010\u0010\u00a2\u0006\u0004\u0008\u0007\u0010\u0012\u00a8\u0006\u0013"
+        "\u0000:\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\t\n\u0002\u0008\u0003\n\u0002\u0010\u0006\n\u0002\u0008\u0002\n\u0002\u0010\u0007\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0004\u0018\u00002\u00020\u00012\u00060\u0002j\u0002`\u00032\u00020\u0004B\u000f\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u00a2\u0006\u0004\u0008\u0007\u0010\u0008BQ\u0008\u0016\u0012\u0008\u0010\n\u001a\u0004\u0018\u00010\t\u0012\u0008\u0010\u000b\u001a\u0004\u0018\u00010\t\u0012\u0008\u0010\u000c\u001a\u0004\u0018\u00010\t\u0012\u0006\u0010\u000e\u001a\u00020\r\u0012\u0006\u0010\u000f\u001a\u00020\r\u0012\u0008\u0010\u0011\u001a\u0004\u0018\u00010\u0010\u0012\u0006\u0010\u0013\u001a\u00020\u0012\u0012\u0006\u0010\u0014\u001a\u00020\t\u00a2\u0006\u0004\u0008\u0007\u0010\u0015\u00a8\u0006\u0016"
     }
     d2 = {
         "Lone/me/location/map/show/ShowLocationScreen;",
         "Lone/me/sdk/arch/Widget;",
-        "Lb2b;",
+        "La5b;",
         "Lone/me/geo/native/NativeOnMapReadyCallback;",
-        "Ldu3;",
+        "Lhv3;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
@@ -31,13 +31,16 @@
         "lon",
         "",
         "zoom",
-        "(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;DDLjava/lang/Float;)V",
+        "",
+        "sourceTypeId",
+        "sourceId",
+        "(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;DDLjava/lang/Float;IJ)V",
         "location-map_release"
     }
     k = 0x1
     mv = {
         0x2,
-        0x2,
+        0x3,
         0x0
     }
     xi = 0x30
@@ -45,52 +48,60 @@
 
 
 # static fields
-.field public static final synthetic C0:[Lz28;
+.field public static final synthetic M0:[Lb88;
 
-.field public static final D0:Les7;
+.field public static final N0:Ldv7;
 
 
 # instance fields
-.field public final A0:Lo58;
+.field public final A0:Lakg;
 
-.field public final B0:Lo58;
+.field public final B0:Lg;
 
-.field public final X:Lls;
+.field public final C0:Lia8;
 
-.field public final Y:Lls;
+.field public final D0:Lia8;
 
-.field public final Z:Ln8g;
+.field public final E0:Luvd;
 
-.field public final a:Laji;
+.field public F0:Ljx8;
 
-.field public final b:Lls;
+.field public final G0:Luvd;
 
-.field public final c:Lls;
+.field public final H0:Luvd;
 
-.field public final d:Lls;
+.field public I0:Ll27;
 
-.field public final o:Lls;
+.field public final J0:Ljava/util/LinkedHashMap;
 
-.field public final t0:Lo58;
+.field public final K0:Lia8;
 
-.field public final u0:Ljld;
+.field public final L0:Lia8;
 
-.field public v0:Lft8;
+.field public final X:Lfu;
 
-.field public final w0:Ljld;
+.field public final Y:Lfu;
 
-.field public final x0:Ljld;
+.field public final Z:Lfu;
 
-.field public y0:Lq07;
+.field public final a:Lyvi;
 
-.field public final z0:Ljava/util/LinkedHashMap;
+.field public final b:Lfu;
+
+.field public final c:Lfu;
+
+.field public final d:Lfu;
+
+.field public final o:Lfu;
+
+.field public final z0:Lfu;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 13
+    .locals 15
 
-    new-instance v0, Liyc;
+    new-instance v0, Lk8d;
 
     const-class v1, Lone/me/location/map/show/ShowLocationScreen;
 
@@ -100,77 +111,93 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lctd;->a:Ldtd;
+    sget-object v2, Lr3e;->a:Ls3e;
 
     const-string v3, "lon"
 
     const-string v5, "getLon()D"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lj27;->e(Ldtd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Liyc;
+    invoke-static {v2, v1, v3, v5, v4}, Lsb6;->d(Ls3e;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lk8d;
 
     move-result-object v2
 
-    new-instance v3, Liyc;
+    new-instance v3, Lk8d;
 
     const-string v5, "zoom"
 
     const-string v6, "getZoom()F"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v5, Liyc;
+    new-instance v5, Lk8d;
 
     const-string v6, "chatId"
 
     const-string v7, "getChatId()Ljava/lang/Long;"
 
-    invoke-direct {v5, v1, v6, v7, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v5, v1, v6, v7, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v6, Liyc;
+    new-instance v6, Lk8d;
 
     const-string v7, "senderId"
 
     const-string v8, "getSenderId()Ljava/lang/Long;"
 
-    invoke-direct {v6, v1, v7, v8, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v6, v1, v7, v8, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v7, Liyc;
+    new-instance v7, Lk8d;
 
     const-string v8, "messageId"
 
     const-string v9, "getMessageId()Ljava/lang/Long;"
 
-    invoke-direct {v7, v1, v8, v9, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v7, v1, v8, v9, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v8, Liyc;
+    new-instance v8, Lk8d;
 
-    const-string v9, "mapView"
+    const-string v9, "sourceTypeId"
 
-    const-string v10, "getMapView()Lone/me/geo/view/OneMeMapView;"
+    const-string v10, "getSourceTypeId()I"
 
-    invoke-direct {v8, v1, v9, v10, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v8, v1, v9, v10, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v9, Liyc;
+    new-instance v9, Lk8d;
 
-    const-string v10, "buttonCurrentLocation"
+    const-string v10, "sourceId"
 
-    const-string v11, "getButtonCurrentLocation()Lone/me/sdk/uikit/common/buttontool/OneMeButtonTool;"
+    const-string v11, "getSourceId()J"
 
-    invoke-direct {v9, v1, v10, v11, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v9, v1, v10, v11, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v10, Liyc;
+    new-instance v10, Lk8d;
 
-    const-string v11, "locationInfoLayout"
+    const-string v11, "mapView"
 
-    const-string v12, "getLocationInfoLayout()Lone/me/location/map/show/view/LocationInfoLayout;"
+    const-string v12, "getMapView()Lone/me/geo/view/OneMeMapView;"
 
-    invoke-direct {v10, v1, v11, v12, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v10, v1, v11, v12, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    const/16 v1, 0x9
+    new-instance v11, Lk8d;
 
-    new-array v1, v1, [Lz28;
+    const-string v12, "buttonCurrentLocation"
+
+    const-string v13, "getButtonCurrentLocation()Lone/me/sdk/uikit/common/buttontool/OneMeButtonTool;"
+
+    invoke-direct {v11, v1, v12, v13, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v12, Lk8d;
+
+    const-string v13, "locationInfoLayout"
+
+    const-string v14, "getLocationInfoLayout()Lone/me/location/map/show/view/LocationInfoLayout;"
+
+    invoke-direct {v12, v1, v13, v14, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    const/16 v1, 0xb
+
+    new-array v1, v1, [Lb88;
 
     aput-object v0, v1, v4
 
@@ -206,23 +233,31 @@
 
     aput-object v10, v1, v2
 
-    sput-object v1, Lone/me/location/map/show/ShowLocationScreen;->C0:[Lz28;
+    const/16 v2, 0x9
 
-    new-instance v1, Les7;
+    aput-object v11, v1, v2
+
+    const/16 v2, 0xa
+
+    aput-object v12, v1, v2
+
+    sput-object v1, Lone/me/location/map/show/ShowLocationScreen;->M0:[Lb88;
+
+    new-instance v1, Ldv7;
 
     const/4 v2, 0x0
 
     const/16 v3, 0xd
 
-    invoke-direct {v1, v0, v2, v3}, Les7;-><init>(ILzt0;I)V
+    invoke-direct {v1, v0, v2, v3}, Ldv7;-><init>(ILxy0;I)V
 
-    sput-object v1, Lone/me/location/map/show/ShowLocationScreen;->D0:Les7;
+    sput-object v1, Lone/me/location/map/show/ShowLocationScreen;->N0:Ldv7;
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/os/Bundle;)V
-    .locals 4
+    .locals 5
 
     const/4 v0, 0x0
 
@@ -230,234 +265,292 @@
 
     const/4 v2, 0x0
 
-    .line 12
-    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILso4;)V
+    .line 16
+    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILjq4;)V
 
-    .line 13
-    new-instance p1, Laji;
+    .line 17
+    sget-object p1, Lmoe;->f1:Lmoe;
 
-    sget-object v0, Llce;->X0:Llce;
-
-    invoke-direct {p1, v0}, Laji;-><init>(Llce;)V
-
-    iput-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->a:Laji;
-
-    const-wide/16 v0, 0x0
-
-    .line 14
-    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-static {p0, p1}, Lhk0;->b(Lone/me/sdk/arch/Widget;Lmoe;)Lyvi;
 
     move-result-object p1
 
-    .line 15
-    new-instance v0, Lls;
+    iput-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->a:Lyvi;
 
-    const-class v1, Ljava/lang/Double;
-
-    const-string v3, "ShowLocationScreen.lat"
-
-    invoke-direct {v0, v1, p1, v3}, Lls;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 16
-    iput-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->b:Lls;
-
-    .line 17
-    new-instance v0, Lls;
-
-    const-string v3, "ShowLocationScreen.lon"
-
-    invoke-direct {v0, v1, p1, v3}, Lls;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    const-wide/16 v3, 0x0
 
     .line 18
-    iput-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->c:Lls;
+    invoke-static {v3, v4}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object p1
+
+    .line 19
+    new-instance v1, Lfu;
+
+    const-class v3, Ljava/lang/Double;
+
+    const-string v4, "ShowLocationScreen.lat"
+
+    invoke-direct {v1, v3, p1, v4}, Lfu;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 20
+    iput-object v1, p0, Lone/me/location/map/show/ShowLocationScreen;->b:Lfu;
+
+    .line 21
+    new-instance v1, Lfu;
+
+    const-string v4, "ShowLocationScreen.lon"
+
+    invoke-direct {v1, v3, p1, v4}, Lfu;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 22
+    iput-object v1, p0, Lone/me/location/map/show/ShowLocationScreen;->c:Lfu;
 
     const/high16 p1, 0x41600000    # 14.0f
 
-    .line 19
+    .line 23
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object p1
 
-    .line 20
-    new-instance v0, Lls;
-
-    const-class v1, Ljava/lang/Float;
-
-    const-string v3, "ShowLocationScreen.zoom"
-
-    invoke-direct {v0, v1, p1, v3}, Lls;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 21
-    iput-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->d:Lls;
-
-    .line 22
-    new-instance p1, Lls;
-
-    const-class v0, Ljava/lang/Long;
-
-    const-string v1, "ShowLocationScreen.chatId"
-
-    invoke-direct {p1, v0, v2, v1}, Lls;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 23
-    iput-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->o:Lls;
-
     .line 24
-    new-instance p1, Lls;
+    new-instance v1, Lfu;
 
-    const-string v1, "ShowLocationScreen.senderId"
+    const-class v3, Ljava/lang/Float;
 
-    invoke-direct {p1, v0, v2, v1}, Lls;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    const-string v4, "ShowLocationScreen.zoom"
+
+    invoke-direct {v1, v3, p1, v4}, Lfu;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 25
-    iput-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->X:Lls;
+    iput-object v1, p0, Lone/me/location/map/show/ShowLocationScreen;->d:Lfu;
 
     .line 26
-    new-instance p1, Lls;
+    new-instance p1, Lfu;
 
-    const-string v1, "ShowLocationScreen.msgId"
+    const-class v1, Ljava/lang/Long;
 
-    invoke-direct {p1, v0, v2, v1}, Lls;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    const-string v3, "ShowLocationScreen.chatId"
+
+    invoke-direct {p1, v1, v2, v3}, Lfu;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 27
-    iput-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->Y:Lls;
+    iput-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->o:Lfu;
 
     .line 28
-    new-instance p1, Lz9f;
+    new-instance p1, Lfu;
 
-    const/4 v0, 0x0
+    const-string v3, "ShowLocationScreen.senderId"
 
-    invoke-direct {p1, p0, v0}, Lz9f;-><init>(Lone/me/location/map/show/ShowLocationScreen;I)V
+    invoke-direct {p1, v1, v2, v3}, Lfu;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 29
-    new-instance v0, Ln8g;
-
-    invoke-direct {v0, p1}, Ln8g;-><init>(Llq6;)V
+    iput-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->X:Lfu;
 
     .line 30
-    iput-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->Z:Ln8g;
+    new-instance p1, Lfu;
+
+    const-string v3, "ShowLocationScreen.msgId"
+
+    invoke-direct {p1, v1, v2, v3}, Lfu;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 31
-    new-instance p1, Lz9f;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p1, p0, v0}, Lz9f;-><init>(Lone/me/location/map/show/ShowLocationScreen;I)V
+    iput-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->Y:Lfu;
 
     .line 32
-    new-instance v0, Lhlc;
-
-    const/16 v1, 0x1d
-
-    invoke-direct {v0, v1, p1}, Lhlc;-><init>(ILjava/lang/Object;)V
-
-    const-class p1, Llaf;
-
-    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Llq6;)Lo58;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
     .line 33
-    iput-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->t0:Lo58;
+    new-instance v0, Lfu;
+
+    const-class v2, Ljava/lang/Integer;
+
+    const-string v3, "ShowLocationScreen.sourceTypeId"
+
+    invoke-direct {v0, v2, p1, v3}, Lfu;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 34
-    sget p1, Lv8d;->oneme_location_map_view:I
+    iput-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->Z:Lfu;
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->u0:Ljld;
+    const-wide/16 v2, 0x0
 
     .line 35
-    sget p1, Lv8d;->oneme_location_map_button_current_location:I
-
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
-
-    iput-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->w0:Ljld;
 
     .line 36
-    sget p1, Lv8d;->oneme_location_map_location_info:I
+    new-instance v0, Lfu;
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
+    const-string v2, "ShowLocationScreen.sourceId"
 
-    move-result-object p1
-
-    iput-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->x0:Ljld;
+    invoke-direct {v0, v1, p1, v2}, Lfu;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 37
-    new-instance p1, Ljava/util/LinkedHashMap;
-
-    invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->z0:Ljava/util/LinkedHashMap;
+    iput-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->z0:Lfu;
 
     .line 38
-    sget-object p1, Lfj8;->a:Lfj8;
+    new-instance p1, Lslf;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p0, v0}, Lslf;-><init>(Lone/me/location/map/show/ShowLocationScreen;I)V
 
     .line 39
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
+    new-instance v0, Lakg;
 
-    move-result-object v0
-
-    const/16 v1, 0xf
+    invoke-direct {v0, p1}, Lakg;-><init>(Lxs6;)V
 
     .line 40
-    invoke-virtual {v0, v1}, Lr5;->d(I)Ln8g;
+    iput-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->A0:Lakg;
+
+    .line 41
+    new-instance p1, Lg;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getAccountScope-uqN4xOY()Lhoe;
 
     move-result-object v0
 
-    .line 41
-    iput-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->A0:Lo58;
-
     .line 42
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object p1
-
-    const/16 v0, 0x34
-
-    invoke-virtual {p1, v0}, Lr5;->d(I)Ln8g;
-
-    move-result-object p1
+    invoke-direct {p1, v0}, Lscout/Component;-><init>(Lhoe;)V
 
     .line 43
-    iput-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->B0:Lo58;
+    iput-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->B0:Lg;
+
+    .line 44
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lz5;
+
+    move-result-object v0
+
+    const/16 v1, 0x202
+
+    .line 45
+    invoke-virtual {v0, v1}, Lz5;->d(I)Lakg;
+
+    move-result-object v0
+
+    .line 46
+    iput-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->C0:Lia8;
+
+    .line 47
+    new-instance v0, Lslf;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, v1}, Lslf;-><init>(Lone/me/location/map/show/ShowLocationScreen;I)V
+
+    .line 48
+    new-instance v1, Lene;
+
+    const/16 v2, 0x11
+
+    invoke-direct {v1, v2, v0}, Lene;-><init>(ILjava/lang/Object;)V
+
+    const-class v0, Lamf;
+
+    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lxs6;)Lia8;
+
+    move-result-object v0
+
+    .line 49
+    iput-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->D0:Lia8;
+
+    .line 50
+    sget v0, Lxid;->oneme_location_map_view:I
+
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Luvd;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->E0:Luvd;
+
+    .line 51
+    sget v0, Lxid;->oneme_location_map_button_current_location:I
+
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Luvd;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->G0:Luvd;
+
+    .line 52
+    sget v0, Lxid;->oneme_location_map_location_info:I
+
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Luvd;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->H0:Luvd;
+
+    .line 53
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    iput-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->J0:Ljava/util/LinkedHashMap;
+
+    .line 54
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lz5;
+
+    move-result-object v0
+
+    const/16 v1, 0x1a
+
+    invoke-virtual {v0, v1}, Lz5;->d(I)Lakg;
+
+    move-result-object v0
+
+    .line 55
+    iput-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->K0:Lia8;
+
+    .line 56
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lz5;
+
+    move-result-object p1
+
+    const/16 v0, 0x39
+
+    invoke-virtual {p1, v0}, Lz5;->d(I)Lakg;
+
+    move-result-object p1
+
+    .line 57
+    iput-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->L0:Lia8;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;DDLjava/lang/Float;)V
+.method public constructor <init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;DDLjava/lang/Float;IJ)V
     .locals 2
 
     move-object v0, p1
 
     .line 1
-    new-instance p1, Lktb;
+    new-instance p1, Lgzb;
 
     const-string v1, "ShowLocationScreen.chatId"
 
-    invoke-direct {p1, v1, v0}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v1, v0}, Lgzb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     move-object v0, p2
 
     .line 2
-    new-instance p2, Lktb;
+    new-instance p2, Lgzb;
 
     const-string v1, "ShowLocationScreen.senderId"
 
-    invoke-direct {p2, v1, v0}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p2, v1, v0}, Lgzb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     move-object v0, p3
 
     .line 3
-    new-instance p3, Lktb;
+    new-instance p3, Lgzb;
 
     const-string v1, "ShowLocationScreen.msgId"
 
-    invoke-direct {p3, v1, v0}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p3, v1, v0}, Lgzb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 4
     invoke-static {p4, p5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
@@ -467,11 +560,11 @@
     move-object p5, p4
 
     .line 5
-    new-instance p4, Lktb;
+    new-instance p4, Lgzb;
 
     const-string v0, "ShowLocationScreen.lat"
 
-    invoke-direct {p4, v0, p5}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p4, v0, p5}, Lgzb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 6
     invoke-static {p6, p7}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
@@ -481,30 +574,58 @@
     move-object p6, p5
 
     .line 7
-    new-instance p5, Lktb;
+    new-instance p5, Lgzb;
 
     const-string p7, "ShowLocationScreen.lon"
 
-    invoke-direct {p5, p7, p6}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p5, p7, p6}, Lgzb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 8
-    new-instance p6, Lktb;
+    new-instance p6, Lgzb;
 
     const-string p7, "ShowLocationScreen.zoom"
 
-    invoke-direct {p6, p7, p8}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p6, p7, p8}, Lgzb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 9
-    filled-new-array/range {p1 .. p6}, [Lktb;
+    invoke-static {p9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p1
+    move-result-object p7
+
+    move-object p8, p7
 
     .line 10
-    invoke-static {p1}, Laaj;->c([Lktb;)Landroid/os/Bundle;
+    new-instance p7, Lgzb;
+
+    const-string p9, "ShowLocationScreen.sourceTypeId"
+
+    invoke-direct {p7, p9, p8}, Lgzb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 11
+    invoke-static {p10, p11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p8
+
+    move-object p9, p8
+
+    .line 12
+    new-instance p8, Lgzb;
+
+    const-string p10, "ShowLocationScreen.sourceId"
+
+    invoke-direct {p8, p10, p9}, Lgzb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 13
+    filled-new-array/range {p1 .. p8}, [Lgzb;
 
     move-result-object p1
 
-    .line 11
+    .line 14
+    invoke-static {p1}, Lhk0;->k([Lgzb;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    .line 15
     invoke-direct {p0, p1}, Lone/me/location/map/show/ShowLocationScreen;-><init>(Landroid/os/Bundle;)V
 
     return-void
@@ -512,34 +633,54 @@
 
 
 # virtual methods
-.method public final A0()Llaf;
-    .locals 1
+.method public final d1()Lsfb;
+    .locals 2
 
-    iget-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->t0:Lo58;
+    sget-object v0, Lone/me/location/map/show/ShowLocationScreen;->M0:[Lb88;
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    const/16 v1, 0x8
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lone/me/location/map/show/ShowLocationScreen;->E0:Luvd;
+
+    invoke-interface {v1, p0, v0}, Luvd;->y(Ljava/lang/Object;Lb88;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Llaf;
+    check-cast v0, Lsfb;
 
     return-object v0
 .end method
 
-.method public final B0(Lzlb;Lq07;)V
-    .locals 2
+.method public final e1()Lamf;
+    .locals 1
 
-    iget-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->B0:Lo58;
+    iget-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->D0:Lia8;
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lgre;
+    check-cast v0, Lamf;
 
-    check-cast v0, Lidc;
+    return-object v0
+.end method
 
-    invoke-virtual {v0}, Lidc;->n()Lxx6;
+.method public final f1(Ldqb;Ll27;)V
+    .locals 2
+
+    iget-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->L0:Lia8;
+
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lc4f;
+
+    check-cast v0, Lijc;
+
+    invoke-virtual {v0}, Lijc;->f()Lbw8;
 
     move-result-object v0
 
@@ -547,9 +688,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lxx6;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
+    iget-object v0, v0, Lbw8;->a:Ljava/lang/String;
 
     goto :goto_0
 
@@ -559,7 +698,7 @@
     :goto_0
     if-nez v0, :cond_4
 
-    invoke-interface {p1}, Lzlb;->h()Lcj3;
+    invoke-interface {p1}, Ldqb;->w()Lxj3;
 
     move-result-object p1
 
@@ -591,19 +730,19 @@
 
     move-result-object p1
 
-    sget v0, Llcd;->google_map_night_style:I
+    sget v0, Ltmd;->google_map_night_style:I
 
-    invoke-static {p1, v0}, Lcs8;->b(Landroid/content/Context;I)Lcs8;
+    invoke-static {p1, v0}, Lhw8;->b(Landroid/content/Context;I)Lhw8;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lq07;->j(Lcs8;)V
+    invoke-virtual {p2, p1}, Ll27;->e(Lhw8;)V
 
     return-void
 
     :cond_3
     :goto_1
-    invoke-virtual {p2, v1}, Lq07;->j(Lcs8;)V
+    invoke-virtual {p2, v1}, Ll27;->e(Lhw8;)V
 
     return-void
 
@@ -612,45 +751,53 @@
 
     move-result-object p1
 
-    sget v0, Llcd;->google_universal_map_style:I
+    sget v0, Ltmd;->google_universal_map_style:I
 
-    invoke-static {p1, v0}, Lcs8;->b(Landroid/content/Context;I)Lcs8;
+    invoke-static {p1, v0}, Lhw8;->b(Landroid/content/Context;I)Lhw8;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lq07;->j(Lcs8;)V
+    invoke-virtual {p2, p1}, Ll27;->e(Lhw8;)V
 
     return-void
 .end method
 
-.method public final U(Lq07;)V
+.method public final getScreenDelegate()Lroe;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->a:Lyvi;
+
+    return-object v0
+.end method
+
+.method public final h0(Ll27;)V
     .locals 2
 
-    iput-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->y0:Lq07;
+    iput-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->I0:Ll27;
 
-    sget-object v0, Lpc3;->t0:Lkme;
+    sget-object v0, Lzc3;->A0:Lz66;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lkme;->n(Landroid/content/Context;)Lpc3;
+    invoke-virtual {v0, v1}, Lz66;->d(Landroid/content/Context;)Lzc3;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lpc3;->j()Lzlb;
+    invoke-virtual {v0}, Lzc3;->m()Ldqb;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0, p1}, Lone/me/location/map/show/ShowLocationScreen;->B0(Lzlb;Lq07;)V
+    invoke-virtual {p0, v0, p1}, Lone/me/location/map/show/ShowLocationScreen;->f1(Ldqb;Ll27;)V
 
     return-void
 .end method
 
-.method public final g(ILandroid/os/Bundle;)V
-    .locals 0
+.method public final i(ILandroid/os/Bundle;)V
+    .locals 5
 
-    iget-object p2, p0, Lone/me/location/map/show/ShowLocationScreen;->z0:Ljava/util/LinkedHashMap;
+    iget-object p2, p0, Lone/me/location/map/show/ShowLocationScreen;->J0:Ljava/util/LinkedHashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -664,6 +811,100 @@
 
     if-eqz p1, :cond_0
 
+    iget-object p2, p0, Lone/me/location/map/show/ShowLocationScreen;->C0:Lia8;
+
+    invoke-interface {p2}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lxx6;
+
+    const/4 v0, 0x7
+
+    sget-object v1, Lone/me/location/map/show/ShowLocationScreen;->M0:[Lb88;
+
+    aget-object v0, v1, v0
+
+    iget-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->z0:Lfu;
+
+    invoke-virtual {v0, p0}, Lfu;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v2
+
+    const/4 v0, 0x6
+
+    aget-object v0, v1, v0
+
+    iget-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->Z:Lfu;
+
+    invoke-virtual {v0, p0}, Lfu;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lwv8;
+
+    invoke-direct {v1}, Lwv8;-><init>()V
+
+    const-string v4, "source_id"
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v4, v2}, Lwv8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v2, "source_type"
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v2, v0}, Lwv8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v1}, Lwv8;->b()Lwv8;
+
+    move-result-object v0
+
+    iget-object p2, p2, Lxx6;->a:Lia8;
+
+    invoke-interface {p2}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lzo8;
+
+    new-instance v1, Lgzb;
+
+    const-string v2, "source_meta"
+
+    invoke-direct {v1, v2, v0}, Lgzb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v1}, [Lgzb;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ly6j;->d([Lgzb;)Lwu;
+
+    move-result-object v0
+
+    const-string v1, "geolocation_send_click"
+
+    invoke-virtual {p2, v1, v0}, Lzo8;->f(Ljava/lang/String;Ljava/util/Map;)V
+
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object p2
@@ -674,74 +915,74 @@
     return-void
 .end method
 
-.method public final getScreenDelegate()Lqce;
-    .locals 1
-
-    iget-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->a:Laji;
-
-    return-object v0
-.end method
-
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 10
 
-    new-instance v1, Lymb;
+    new-instance v1, Lirb;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
-    const/4 p3, 0x6
+    invoke-direct {v1, p2}, Lirb;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {v1, p2, p3}, Lymb;-><init>(Landroid/content/Context;I)V
-
-    sget p2, Lv8d;->oneme_location_map_toolbar_close:I
+    sget p2, Lxid;->oneme_location_map_toolbar_close:I
 
     invoke-virtual {v1, p2}, Landroid/view/View;->setId(I)V
 
-    sget-object p2, Lone/me/location/map/show/ShowLocationScreen;->D0:Les7;
+    sget-object p2, Lone/me/location/map/show/ShowLocationScreen;->N0:Ldv7;
 
-    const/4 v0, 0x0
+    const/4 p3, 0x0
 
-    invoke-static {v1, p2, v0}, Lfui;->b(Landroid/view/View;Les7;Lnq6;)V
+    invoke-static {v1, p2, p3}, Lg84;->H(Landroid/view/View;Ldv7;Lzs6;)V
 
-    sget-object p2, Lqmb;->b:Lqmb;
+    sget-object p2, Lxqb;->b:Lxqb;
 
-    invoke-virtual {v1, p2}, Lymb;->setForm(Lqmb;)V
+    invoke-virtual {v1, p2}, Lirb;->setForm(Lxqb;)V
 
-    new-instance p2, Lhmb;
+    new-instance p2, Loqb;
 
-    new-instance v0, Li2e;
+    new-instance p3, Ldcd;
 
-    const/16 v2, 0xc
+    const/16 v0, 0x13
 
-    invoke-direct {v0, v2, p0}, Li2e;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p3, v0, p0}, Ldcd;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {p2, v0}, Lhmb;-><init>(Lnq6;)V
+    invoke-direct {p2, p3}, Loqb;-><init>(Lzs6;)V
 
-    invoke-virtual {v1, p2}, Lymb;->setLeftActions(Lmmb;)V
+    invoke-virtual {v1, p2}, Lirb;->setLeftActions(Lsqb;)V
 
-    sget-object p2, Lpc3;->t0:Lkme;
+    sget-object p2, Lzc3;->A0:Lz66;
 
-    invoke-virtual {p2, v1}, Lkme;->p(Landroid/view/View;)Lzlb;
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p3
+
+    invoke-virtual {p2, p3}, Lz66;->d(Landroid/content/Context;)Lzc3;
 
     move-result-object p2
 
-    invoke-interface {p2}, Lzlb;->b()Lxf0;
+    invoke-virtual {p2}, Lzc3;->m()Ldqb;
 
     move-result-object p2
 
-    iget p2, p2, Lxf0;->c:I
+    invoke-interface {p2}, Ldqb;->s()Lxpb;
+
+    move-result-object p2
+
+    iget p2, p2, Lxpb;->c:I
 
     invoke-virtual {v1, p2}, Landroid/view/View;->setBackgroundColor(I)V
 
-    sget p2, Lj6e;->b2:I
+    sget p2, Lbie;->X2:I
 
-    invoke-virtual {v1, p2}, Lymb;->setTitle(I)V
+    invoke-virtual {v1, p2}, Lirb;->setTitle(I)V
 
-    int-to-float p2, p3
+    const/4 p2, 0x6
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    int-to-float p2, p2
+
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
     move-result-object p3
 
@@ -753,11 +994,11 @@
 
     mul-float/2addr p3, p2
 
-    invoke-static {p3}, Lq7j;->c(F)I
+    invoke-static {p3}, Lh43;->U(F)I
 
     move-result p3
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -769,7 +1010,7 @@
 
     mul-float/2addr p2, v0
 
-    invoke-static {p2}, Lq7j;->c(F)I
+    invoke-static {p2}, Lh43;->U(F)I
 
     move-result p2
 
@@ -783,27 +1024,27 @@
 
     invoke-virtual {v1, p3, v0, p2, v2}, Landroid/view/View;->setPaddingRelative(IIII)V
 
-    new-instance v2, Ljdb;
+    new-instance v2, Lsfb;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
-    invoke-direct {v2, p2}, Ljdb;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, p2}, Lsfb;-><init>(Landroid/content/Context;)V
 
-    sget p2, Lv8d;->oneme_location_map_view:I
+    sget p2, Lxid;->oneme_location_map_view:I
 
     invoke-virtual {v2, p2}, Landroid/view/View;->setId(I)V
 
-    new-instance p2, Lej8;
+    new-instance p2, Lho8;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object p3
 
-    invoke-direct {p2, p3}, Lej8;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p3}, Lho8;-><init>(Landroid/content/Context;)V
 
-    sget p3, Lv8d;->oneme_location_map_location_info:I
+    sget p3, Lxid;->oneme_location_map_location_info:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setId(I)V
 
@@ -823,7 +1064,7 @@
 
     move-result-object p3
 
-    invoke-static {p3}, Lcaj;->a(Landroid/content/Context;)Lg6b;
+    invoke-static {p3}, Lhlj;->a(Landroid/content/Context;)Lq8b;
 
     move-result-object p3
 
@@ -831,33 +1072,33 @@
 
     move-result-object v0
 
-    sget-object v3, Lfj8;->a:Lfj8;
+    iget-object v3, p0, Lone/me/location/map/show/ShowLocationScreen;->B0:Lg;
 
-    invoke-virtual {v3}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v3
-
-    const/16 v5, 0x1d5
-
-    invoke-virtual {v3, v5}, Lr5;->d(I)Ln8g;
+    invoke-virtual {v3}, Lscout/Component;->getAccessor()Lz5;
 
     move-result-object v3
 
-    iget-object v5, p0, Lone/me/location/map/show/ShowLocationScreen;->B0:Lo58;
+    const/16 v5, 0x229
 
-    invoke-interface {v5}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-virtual {v3, v5}, Lz5;->d(I)Lakg;
 
-    move-result-object v5
+    move-result-object v3
 
-    check-cast v5, Lgre;
+    iget-object v5, p0, Lone/me/location/map/show/ShowLocationScreen;->L0:Lia8;
 
-    check-cast v5, Lidc;
-
-    invoke-virtual {v5}, Lidc;->n()Lxx6;
+    invoke-interface {v5}, Lia8;->getValue()Ljava/lang/Object;
 
     move-result-object v5
 
-    invoke-static {v0, v3, v5}, Lts8;->a(Landroid/content/Context;Lo58;Lxx6;)Lcom/facebook/drawee/view/SimpleDraweeView;
+    check-cast v5, Lc4f;
+
+    check-cast v5, Lijc;
+
+    invoke-virtual {v5}, Lijc;->f()Lbw8;
+
+    move-result-object v5
+
+    invoke-static {v0, v3, v5}, Lxw8;->a(Landroid/content/Context;Lia8;Lbw8;)Lcom/facebook/drawee/view/SimpleDraweeView;
 
     move-result-object v3
 
@@ -869,25 +1110,25 @@
 
     invoke-direct {v6, p1}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;)V
 
-    new-instance p1, Lfx3;
+    new-instance p1, Lxy3;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, v0, v0}, Lfx3;-><init>(II)V
+    invoke-direct {p1, v0, v0}, Lxy3;-><init>(II)V
 
-    iput v0, p1, Lfx3;->i:I
+    iput v0, p1, Lxy3;->i:I
 
-    iput v0, p1, Lfx3;->t:I
+    iput v0, p1, Lxy3;->t:I
 
-    iput v0, p1, Lfx3;->v:I
+    iput v0, p1, Lxy3;->v:I
 
-    iput v0, p1, Lfx3;->l:I
+    iput v0, p1, Lxy3;->l:I
 
     const/16 v5, 0x30
 
     int-to-float v5, v5
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -899,7 +1140,7 @@
 
     mul-float/2addr v5, v7
 
-    invoke-static {v5}, Lq7j;->c(F)I
+    invoke-static {v5}, Lh43;->U(F)I
 
     move-result v5
 
@@ -915,47 +1156,47 @@
 
     invoke-virtual {v6, v2, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance p1, Lfx3;
+    new-instance p1, Lxy3;
 
-    invoke-direct {p1, v0, v4}, Lfx3;-><init>(II)V
+    invoke-direct {p1, v0, v4}, Lxy3;-><init>(II)V
 
-    iput v0, p1, Lfx3;->i:I
+    iput v0, p1, Lxy3;->i:I
 
-    iput v0, p1, Lfx3;->t:I
+    iput v0, p1, Lxy3;->t:I
 
-    iput v0, p1, Lfx3;->v:I
+    iput v0, p1, Lxy3;->v:I
 
     invoke-virtual {v6, v1, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance p1, Lfx3;
+    new-instance p1, Lxy3;
 
-    invoke-direct {p1, v0, v4}, Lfx3;-><init>(II)V
+    invoke-direct {p1, v0, v4}, Lxy3;-><init>(II)V
 
-    iput v0, p1, Lfx3;->t:I
+    iput v0, p1, Lxy3;->t:I
 
-    iput v0, p1, Lfx3;->v:I
+    iput v0, p1, Lxy3;->v:I
 
-    iput v0, p1, Lfx3;->l:I
+    iput v0, p1, Lxy3;->l:I
 
     invoke-virtual {v6, p2, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance p1, Lfx3;
+    new-instance p1, Lxy3;
 
-    invoke-direct {p1, v4, v4}, Lfx3;-><init>(II)V
+    invoke-direct {p1, v4, v4}, Lxy3;-><init>(II)V
 
-    iput v0, p1, Lfx3;->v:I
+    iput v0, p1, Lxy3;->v:I
 
     invoke-virtual {p2}, Landroid/view/View;->getId()I
 
     move-result v4
 
-    iput v4, p1, Lfx3;->k:I
+    iput v4, p1, Lxy3;->k:I
 
     const/16 v4, 0x10
 
     int-to-float v4, v4
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -967,7 +1208,7 @@
 
     mul-float/2addr v4, v5
 
-    invoke-static {v4}, Lq7j;->c(F)I
+    invoke-static {v4}, Lh43;->U(F)I
 
     move-result v4
 
@@ -979,111 +1220,69 @@
 
     invoke-virtual {v6, p3, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance p1, Lfx3;
+    new-instance p1, Lxy3;
 
-    sget p3, Lts8;->a:I
+    sget p3, Lxw8;->a:I
 
-    sget v4, Lts8;->b:I
+    sget v4, Lxw8;->b:I
 
-    invoke-direct {p1, p3, v4}, Lfx3;-><init>(II)V
+    invoke-direct {p1, p3, v4}, Lxy3;-><init>(II)V
 
-    iput v0, p1, Lfx3;->t:I
+    iput v0, p1, Lxy3;->t:I
 
     invoke-virtual {p2}, Landroid/view/View;->getId()I
 
     move-result p2
 
-    iput p2, p1, Lfx3;->k:I
+    iput p2, p1, Lxy3;->k:I
 
     invoke-virtual {v6, v3, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance v0, Laaf;
+    new-instance v0, Ltlf;
 
     const/4 v5, 0x0
 
     move-object v4, p0
 
-    invoke-direct/range {v0 .. v5}, Laaf;-><init>(Lymb;Ljdb;Lcom/facebook/drawee/view/SimpleDraweeView;Lone/me/location/map/show/ShowLocationScreen;Lkotlin/coroutines/Continuation;)V
+    invoke-direct/range {v0 .. v5}, Ltlf;-><init>(Lirb;Lsfb;Lcom/facebook/drawee/view/SimpleDraweeView;Lone/me/location/map/show/ShowLocationScreen;Lkotlin/coroutines/Continuation;)V
 
-    invoke-static {v0, v6}, Lp6j;->b(Ldr6;Landroid/view/View;)V
+    invoke-static {v0, v6}, Lg84;->t0(Lpt6;Landroid/view/View;)V
 
     return-object v6
 .end method
 
 .method public final onDestroyView(Landroid/view/View;)V
-    .locals 2
+    .locals 1
 
-    invoke-virtual {p0}, Lone/me/location/map/show/ShowLocationScreen;->z0()Ljdb;
+    invoke-virtual {p0}, Lone/me/location/map/show/ShowLocationScreen;->d1()Lsfb;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lsfb;->e()V
+
+    invoke-virtual {p0}, Lone/me/location/map/show/ShowLocationScreen;->d1()Lsfb;
 
     move-result-object p1
 
-    iget-object p1, p1, Ljdb;->a:Lqri;
+    invoke-virtual {p1}, Lsfb;->c()V
 
-    iget-object v0, p1, Lnk0;->a:Ljava/lang/Object;
-
-    check-cast v0, Lz78;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lz78;->e()V
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x4
-
-    invoke-virtual {p1, v0}, Lnk0;->y(I)V
-
-    :goto_0
-    invoke-virtual {p0}, Lone/me/location/map/show/ShowLocationScreen;->z0()Ljdb;
-
-    move-result-object p1
+    iget-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->I0:Ll27;
 
     const/4 v0, 0x0
 
-    iput-object v0, p1, Ljdb;->c:Lnkg;
+    if-eqz p1, :cond_0
 
-    iput-object v0, p1, Ljdb;->d:Lnkg;
+    invoke-virtual {p1, v0}, Ll27;->h(Lone/me/location/map/pick/PickLocationScreen;)V
 
-    iput-object v0, p1, Ljdb;->t0:Lnkg;
+    :cond_0
+    iget-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->I0:Ll27;
 
-    iput-object v0, p1, Ljdb;->u0:Lq07;
+    if-eqz p1, :cond_1
 
-    iput-object v0, p1, Ljdb;->w0:Lidb;
-
-    iget-object p1, p1, Ljdb;->a:Lqri;
-
-    iget-object v1, p1, Lnk0;->a:Ljava/lang/Object;
-
-    check-cast v1, Lz78;
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v1}, Lz78;->b()V
-
-    goto :goto_1
+    invoke-virtual {p1, v0}, Ll27;->g(Li27;)V
 
     :cond_1
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, v1}, Lnk0;->y(I)V
-
-    :goto_1
-    iget-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->y0:Lq07;
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1, v0}, Lq07;->n(Lone/me/location/map/pick/PickLocationScreen;)V
-
-    :cond_2
-    iget-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->y0:Lq07;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1, v0}, Lq07;->m(Ln07;)V
-
-    :cond_3
-    iput-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->y0:Lq07;
+    iput-object v0, p0, Lone/me/location/map/show/ShowLocationScreen;->I0:Ll27;
 
     return-void
 .end method
@@ -1095,27 +1294,27 @@
 
     if-ne p1, v0, :cond_0
 
-    iget-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->A0:Lo58;
+    iget-object p1, p0, Lone/me/location/map/show/ShowLocationScreen;->K0:Lia8;
 
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lia8;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
     move-object v0, p1
 
-    check-cast v0, Lyzb;
+    check-cast v0, La6c;
 
-    new-instance v1, Ljgi;
+    new-instance v1, Lvsi;
 
     const/4 p1, 0x1
 
-    invoke-direct {v1, p0, p1}, Ljgi;-><init>(Lone/me/sdk/arch/Widget;I)V
+    invoke-direct {v1, p0, p1}, Lvsi;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    sget-object v4, Lyzb;->k:[Ljava/lang/String;
+    sget-object v4, La6c;->l:[Ljava/lang/String;
 
-    sget v5, Lj6e;->a1:I
+    sget v5, Lbie;->P1:I
 
-    sget v6, Lj6e;->l1:I
+    sget v6, Lbie;->Y1:I
 
     const/16 v7, 0x80
 
@@ -1123,96 +1322,74 @@
 
     move-object v3, p3
 
-    invoke-static/range {v0 .. v7}, Lyzb;->s(Lyzb;Ljgi;[Ljava/lang/String;[I[Ljava/lang/String;III)Z
+    invoke-static/range {v0 .. v7}, La6c;->w(La6c;Lvsi;[Ljava/lang/String;[I[Ljava/lang/String;III)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lone/me/location/map/show/ShowLocationScreen;->A0()Llaf;
+    invoke-virtual {p0}, Lone/me/location/map/show/ShowLocationScreen;->e1()Lamf;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Llaf;->t()V
+    invoke-virtual {p1}, Lamf;->v()V
 
     :cond_0
     return-void
 .end method
 
 .method public final onSaveInstanceState(Landroid/os/Bundle;)V
-    .locals 2
+    .locals 1
 
     invoke-super {p0, p1}, Lone/me/sdk/arch/Widget;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    invoke-virtual {p0}, Lone/me/location/map/show/ShowLocationScreen;->z0()Ljdb;
+    invoke-virtual {p0}, Lone/me/location/map/show/ShowLocationScreen;->d1()Lsfb;
 
     move-result-object v0
 
-    iget-object v0, v0, Ljdb;->a:Lqri;
+    invoke-virtual {v0, p1}, Lsfb;->d(Landroid/os/Bundle;)V
 
-    iget-object v1, v0, Lnk0;->a:Ljava/lang/Object;
-
-    check-cast v1, Lz78;
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1, p1}, Lz78;->m(Landroid/os/Bundle;)V
-
-    return-void
-
-    :cond_0
-    iget-object v0, v0, Lnk0;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/os/Bundle;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
-
-    :cond_1
     return-void
 .end method
 
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 10
 
-    invoke-virtual {p0}, Lone/me/location/map/show/ShowLocationScreen;->z0()Ljdb;
+    invoke-virtual {p0}, Lone/me/location/map/show/ShowLocationScreen;->d1()Lsfb;
 
     move-result-object p1
 
-    invoke-static {}, Laaj;->b()Landroid/os/Bundle;
+    invoke-static {}, Lhk0;->j()Landroid/os/Bundle;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Ljdb;->b(Landroid/os/Bundle;)V
+    invoke-virtual {p1, v0}, Lsfb;->b(Landroid/os/Bundle;)V
 
-    invoke-virtual {p0}, Lone/me/location/map/show/ShowLocationScreen;->z0()Ljdb;
+    invoke-virtual {p0}, Lone/me/location/map/show/ShowLocationScreen;->d1()Lsfb;
 
     move-result-object p1
 
-    iget-object p1, p1, Ljdb;->a:Lqri;
+    iget-object p1, p1, Lsfb;->a:Lyxb;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v0, Lypi;
+    new-instance v0, Lt3j;
+
+    invoke-direct {v0, p1}, Lt3j;-><init>(Lyxb;)V
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lypi;-><init>(Lnk0;I)V
+    invoke-virtual {p1, v1, v0}, Lyxb;->z(Landroid/os/Bundle;Lz3j;)V
 
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1, v0}, Lnk0;->z(Landroid/os/Bundle;Ldqi;)V
-
-    invoke-virtual {p0}, Lone/me/location/map/show/ShowLocationScreen;->z0()Ljdb;
+    invoke-virtual {p0}, Lone/me/location/map/show/ShowLocationScreen;->d1()Lsfb;
 
     move-result-object p1
 
-    new-instance v2, Le0a;
+    new-instance v2, Lyy9;
 
     const/4 v8, 0x0
 
-    const/16 v9, 0xc
+    const/16 v9, 0xe
 
     const/4 v3, 0x1
 
@@ -1224,27 +1401,25 @@
 
     move-object v4, p0
 
-    invoke-direct/range {v2 .. v9}, Le0a;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v2 .. v9}, Lyy9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    iget-object v0, v4, Lone/me/location/map/show/ShowLocationScreen;->B0:Lo58;
+    iget-object v0, v4, Lone/me/location/map/show/ShowLocationScreen;->L0:Lia8;
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lgre;
+    check-cast v0, Lc4f;
 
-    check-cast v0, Lidc;
+    check-cast v0, Lijc;
 
-    invoke-virtual {v0}, Lidc;->n()Lxx6;
+    invoke-virtual {v0}, Lijc;->f()Lbw8;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lxx6;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
+    iget-object v0, v0, Lbw8;->a:Ljava/lang/String;
 
     goto :goto_0
 
@@ -1252,151 +1427,137 @@
     move-object v0, v1
 
     :goto_0
-    invoke-virtual {p1, v2, v1, v0}, Ljdb;->a(Lnq6;Lone/me/location/map/pick/PickLocationScreen;Ljava/lang/String;)V
+    invoke-virtual {p1, v2, v1, v0}, Lsfb;->a(Lzs6;Lone/me/location/map/pick/PickLocationScreen;Ljava/lang/String;)V
 
-    sget-object p1, Lone/me/location/map/show/ShowLocationScreen;->C0:[Lz28;
+    sget-object p1, Lone/me/location/map/show/ShowLocationScreen;->M0:[Lb88;
 
-    const/4 v0, 0x7
+    const/16 v0, 0x9
 
     aget-object p1, p1, v0
 
-    iget-object v0, v4, Lone/me/location/map/show/ShowLocationScreen;->w0:Ljld;
+    iget-object v0, v4, Lone/me/location/map/show/ShowLocationScreen;->G0:Luvd;
 
-    invoke-interface {v0, p0, p1}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lg6b;
-
-    new-instance v0, Lblc;
-
-    const/16 v2, 0x12
-
-    invoke-direct {v0, v2, p0}, Lblc;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p1, v0}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    invoke-virtual {p0}, Lone/me/location/map/show/ShowLocationScreen;->A0()Llaf;
+    invoke-interface {v0, p0, p1}, Luvd;->y(Ljava/lang/Object;Lb88;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object p1, p1, Llaf;->A0:Lpld;
+    check-cast p1, Lq8b;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj88;
+    new-instance v0, Lb0c;
+
+    const/16 v2, 0x1c
+
+    invoke-direct {v0, v2, p0}, Lb0c;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {p1, v0}, Ls5b;->H(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    invoke-virtual {p0}, Lone/me/location/map/show/ShowLocationScreen;->e1()Lamf;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lamf;->F0:Lbwd;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lad8;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lj88;->p()Ll88;
+    invoke-interface {v0}, Lad8;->q()Lcd8;
 
     move-result-object v0
 
-    sget-object v2, Lo78;->d:Lo78;
+    sget-object v2, Lhc8;->d:Lhc8;
 
-    invoke-static {p1, v0, v2}, Lmt0;->b(Ld76;Ll88;Lo78;)Lpw1;
+    invoke-static {p1, v0, v2}, Lf90;->T(Lxa6;Lcd8;Lhc8;)Ln12;
 
     move-result-object p1
 
-    new-instance v0, Lbaf;
+    new-instance v0, Lulf;
 
-    invoke-direct {v0, v1, p0}, Lbaf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/location/map/show/ShowLocationScreen;)V
+    const/4 v3, 0x0
 
-    new-instance v3, Lm96;
+    invoke-direct {v0, v1, p0, v3}, Lulf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/location/map/show/ShowLocationScreen;I)V
+
+    new-instance v3, Lad6;
 
     const/4 v5, 0x1
 
-    invoke-direct {v3, p1, v0, v5}, Lm96;-><init>(Ld76;Lbr6;I)V
+    invoke-direct {v3, p1, v0, v5}, Lad6;-><init>(Lxa6;Lnt6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
-
-    move-result-object p1
-
-    invoke-static {v3, p1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
-
-    invoke-virtual {p0}, Lone/me/location/map/show/ShowLocationScreen;->A0()Llaf;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lpc8;
 
     move-result-object p1
 
-    iget-object p1, p1, Llaf;->C0:Lcm5;
+    invoke-static {v3, p1}, Lhk0;->Z(Lxa6;Loc4;)Lhyf;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj88;
+    invoke-virtual {p0}, Lone/me/location/map/show/ShowLocationScreen;->e1()Lamf;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lamf;->H0:Lzo5;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lad8;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lj88;->p()Ll88;
+    invoke-interface {v0}, Lad8;->q()Lcd8;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v2}, Lmt0;->b(Ld76;Ll88;Lo78;)Lpw1;
+    invoke-static {p1, v0, v2}, Lf90;->T(Lxa6;Lcd8;Lhc8;)Ln12;
 
     move-result-object p1
 
-    new-instance v0, Lcaf;
+    new-instance v0, Lulf;
 
-    invoke-direct {v0, v1, p0}, Lcaf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/location/map/show/ShowLocationScreen;)V
+    const/4 v3, 0x1
 
-    new-instance v3, Lm96;
+    invoke-direct {v0, v1, p0, v3}, Lulf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/location/map/show/ShowLocationScreen;I)V
 
-    invoke-direct {v3, p1, v0, v5}, Lm96;-><init>(Ld76;Lbr6;I)V
+    new-instance v3, Lad6;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
+    invoke-direct {v3, p1, v0, v5}, Lad6;-><init>(Lxa6;Lnt6;I)V
 
-    move-result-object p1
-
-    invoke-static {v3, p1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
-
-    invoke-virtual {p0}, Lone/me/location/map/show/ShowLocationScreen;->A0()Llaf;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lpc8;
 
     move-result-object p1
 
-    iget-object p1, p1, Llaf;->B0:Lcm5;
+    invoke-static {v3, p1}, Lhk0;->Z(Lxa6;Loc4;)Lhyf;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj88;
+    invoke-virtual {p0}, Lone/me/location/map/show/ShowLocationScreen;->e1()Lamf;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lamf;->G0:Lzo5;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lad8;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lj88;->p()Ll88;
+    invoke-interface {v0}, Lad8;->q()Lcd8;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v2}, Lmt0;->b(Ld76;Ll88;Lo78;)Lpw1;
+    invoke-static {p1, v0, v2}, Lf90;->T(Lxa6;Lcd8;Lhc8;)Ln12;
 
     move-result-object p1
 
-    new-instance v0, Ldaf;
+    new-instance v0, Lulf;
 
-    invoke-direct {v0, v1, p0}, Ldaf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/location/map/show/ShowLocationScreen;)V
+    const/4 v2, 0x2
 
-    new-instance v1, Lm96;
+    invoke-direct {v0, v1, p0, v2}, Lulf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/location/map/show/ShowLocationScreen;I)V
+
+    new-instance v1, Lad6;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lm96;-><init>(Ld76;Lbr6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lad6;-><init>(Lxa6;Lnt6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lpc8;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
+    invoke-static {v1, p1}, Lhk0;->Z(Lxa6;Loc4;)Lhyf;
 
     return-void
-.end method
-
-.method public final z0()Ljdb;
-    .locals 2
-
-    sget-object v0, Lone/me/location/map/show/ShowLocationScreen;->C0:[Lz28;
-
-    const/4 v1, 0x6
-
-    aget-object v0, v0, v1
-
-    iget-object v1, p0, Lone/me/location/map/show/ShowLocationScreen;->u0:Ljld;
-
-    invoke-interface {v1, p0, v0}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljdb;
-
-    return-object v0
 .end method

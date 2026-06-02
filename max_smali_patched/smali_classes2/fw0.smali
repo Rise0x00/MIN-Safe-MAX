@@ -1,407 +1,486 @@
 .class public final Lfw0;
-.super Ljava/lang/Object;
+.super Lj3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final g:Ln8g;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public A0:Z
 
-.field public final b:Z
+.field public B0:Z
 
-.field public final c:Lzv0;
+.field public final X:Z
 
-.field public final d:Ljava/lang/String;
+.field public Y:Lyu4;
 
-.field public e:Ljava/nio/ByteBuffer;
+.field public Z:Lx07;
 
-.field public f:I
+.field public final d:Ljava/util/concurrent/LinkedBlockingQueue;
+
+.field public final o:Lq07;
+
+.field public z0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lj;
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, v1}, Lj;-><init>(I)V
-
-    new-instance v1, Ln8g;
-
-    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
-
-    sput-object v1, Lfw0;->g:Ln8g;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ZLzv0;)V
+.method public constructor <init>(Lq07;Lo42;Z)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lj3;-><init>(Lo42;)V
 
-    iput-object p1, p0, Lfw0;->a:Ljava/lang/String;
+    iput-object p1, p0, Lfw0;->o:Lq07;
 
-    iput-boolean p2, p0, Lfw0;->b:Z
+    new-instance p1, Ljava/util/concurrent/LinkedBlockingQueue;
 
-    iput-object p3, p0, Lfw0;->c:Lzv0;
+    invoke-direct {p1}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
-    const-class p2, Lfw0;
+    iput-object p1, p0, Lfw0;->d:Ljava/util/concurrent/LinkedBlockingQueue;
 
-    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p2
-
-    const-string p3, "/"
-
-    invoke-static {p2, p3, p1}, Lxi4;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lfw0;->d:Ljava/lang/String;
-
-    const/16 p1, 0x1000
-
-    iput p1, p0, Lfw0;->f:I
+    iput-boolean p3, p0, Lfw0;->X:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 2
-
-    iget-object v0, p0, Lfw0;->e:Ljava/nio/ByteBuffer;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lfw0;->c:Lzv0;
-
-    invoke-virtual {p0}, Lfw0;->e()Ljava/nio/ByteBuffer;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lzv0;->b(Ljava/nio/ByteBuffer;)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lfw0;->e:Ljava/nio/ByteBuffer;
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final b()V
-    .locals 6
-
-    iget-object v0, p0, Lfw0;->e:Ljava/nio/ByteBuffer;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Lfw0;->e()Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
-
-    move-result v1
-
-    iget-object v2, p0, Lfw0;->a:Ljava/lang/String;
-
-    const/16 v3, 0x4400
-
-    if-ge v1, v3, :cond_2
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
-
-    move-result v1
-
-    mul-int/lit8 v1, v1, 0x2
-
-    invoke-static {v1, v3}, Ljava/lang/Math;->min(II)I
-
-    move-result v1
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
-
-    move-result v0
-
-    const-string v3, ", increasing from "
-
-    const-string v4, " to "
-
-    const-string v5, "enlarging buffer "
-
-    invoke-static {v0, v5, v2, v3, v4}, Lpqb;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lfw0;->d:Ljava/lang/String;
-
-    invoke-static {v2, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lfw0;->c:Lzv0;
-
-    invoke-interface {v0, v1}, Lzv0;->a(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v2
-
-    invoke-virtual {p0}, Lfw0;->e()Ljava/nio/ByteBuffer;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
-
-    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
-
-    iget-boolean v4, p0, Lfw0;->b:Z
-
-    if-eqz v4, :cond_1
-
-    const/4 v4, 0x0
-
-    invoke-virtual {p0, v4}, Lfw0;->f(I)V
-
-    :cond_1
-    invoke-interface {v0, v3}, Lzv0;->b(Ljava/nio/ByteBuffer;)V
-
-    iput-object v2, p0, Lfw0;->e:Ljava/nio/ByteBuffer;
-
-    iput v1, p0, Lfw0;->f:I
-
-    return-void
-
-    :cond_2
-    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
-
-    move-result v0
-
-    const-string v1, " buffer insufficient despite having capacity of "
-
-    invoke-static {v0, v2, v1}, Lhc0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-.end method
-
-.method public final c()V
-    .locals 2
-
-    iget-object v0, p0, Lfw0;->e:Ljava/nio/ByteBuffer;
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lfw0;->c:Lzv0;
-
-    iget v1, p0, Lfw0;->f:I
-
-    invoke-interface {v0, v1}, Lzv0;->a(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lfw0;->e:Ljava/nio/ByteBuffer;
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d()Z
+.method public final d()V
     .locals 1
 
-    iget-object v0, p0, Lfw0;->e:Ljava/nio/ByteBuffer;
+    iget-object v0, p0, Lfw0;->d:Ljava/util/concurrent/LinkedBlockingQueue;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/LinkedBlockingQueue;->clear()V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lfw0;->B0:Z
+
+    iput-boolean v0, p0, Lfw0;->A0:Z
+
+    iput v0, p0, Lfw0;->z0:I
+
+    iget-object v0, p0, Lfw0;->Z:Lx07;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
+    :try_start_0
+    invoke-virtual {v0}, Lx07;->a()V
+    :try_end_0
+    .catch Landroidx/media3/common/util/GlUtil$GlException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result v0
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_0
+    iput-object v0, p0, Lfw0;->Z:Lx07;
 
-    invoke-virtual {p0}, Lfw0;->a()Z
+    goto :goto_0
 
-    move-result v0
+    :catch_0
+    move-exception v0
 
-    return v0
+    invoke-static {v0}, Landroidx/media3/common/VideoFrameProcessingException;->a(Ljava/lang/Exception;)Landroidx/media3/common/VideoFrameProcessingException;
+
+    move-result-object v0
+
+    throw v0
 
     :cond_0
+    :goto_0
+    invoke-super {p0}, Lj3;->d()V
+
+    return-void
+.end method
+
+.method public final f()I
+    .locals 1
+
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final e()Ljava/nio/ByteBuffer;
+.method public final h(Landroid/graphics/Bitmap;Lrq6;Loy3;)V
     .locals 2
 
-    iget-object v0, p0, Lfw0;->e:Ljava/nio/ByteBuffer;
+    iget-object v0, p0, Lj3;->a:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    check-cast v0, Lo42;
 
-    return-object v0
+    new-instance v1, Lcw0;
 
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    invoke-direct {v1, p0, p1, p2, p3}, Lcw0;-><init>(Lfw0;Landroid/graphics/Bitmap;Lrq6;Loy3;)V
 
-    const-string v1, "Required value was null."
+    const/4 p1, 0x1
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p1}, Lo42;->g(Lwth;Z)V
 
-    throw v0
+    return-void
 .end method
 
-.method public final f(I)V
-    .locals 6
+.method public final k()V
+    .locals 3
 
-    iget-object v0, p0, Lfw0;->e:Ljava/nio/ByteBuffer;
+    iget-object v0, p0, Lj3;->a:Ljava/lang/Object;
+
+    check-cast v0, Lo42;
+
+    new-instance v1, Ldw0;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p0, v2}, Ldw0;-><init>(Lfw0;I)V
+
+    invoke-virtual {v0, v1, v2}, Lo42;->g(Lwth;Z)V
+
+    return-void
+.end method
+
+.method public final n()V
+    .locals 3
+
+    iget-object v0, p0, Lj3;->a:Ljava/lang/Object;
+
+    check-cast v0, Lo42;
+
+    new-instance v1, Ldw0;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, p0, v2}, Ldw0;-><init>(Lfw0;I)V
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Lo42;->g(Lwth;Z)V
+
+    return-void
+.end method
+
+.method public final s(Lyu4;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lfw0;->z0:I
+
+    iput-object p1, p0, Lfw0;->Y:Lyu4;
+
+    return-void
+.end method
+
+.method public final t()V
+    .locals 3
+
+    iget-object v0, p0, Lj3;->a:Ljava/lang/Object;
+
+    check-cast v0, Lo42;
+
+    new-instance v1, Ldw0;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p0, v2}, Ldw0;-><init>(Lfw0;I)V
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Lo42;->g(Lwth;Z)V
+
+    return-void
+.end method
+
+.method public final u()V
+    .locals 12
+
+    iget-object v0, p0, Lfw0;->d:Ljava/util/concurrent/LinkedBlockingQueue;
+
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    iget v0, p0, Lfw0;->z0:I
 
     if-nez v0, :cond_0
 
-    return-void
+    goto/16 :goto_5
 
     :cond_0
-    invoke-virtual {p0}, Lfw0;->e()Ljava/nio/ByteBuffer;
+    iget-object v0, p0, Lfw0;->d:Ljava/util/concurrent/LinkedBlockingQueue;
+
+    invoke-interface {v0}, Ljava/util/Queue;->element()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->mark()Ljava/nio/Buffer;
+    check-cast v0, Lew0;
 
-    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    iget-object v1, v0, Lew0;->b:Lrq6;
 
-    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
+    iget-object v2, v0, Lew0;->c:Loy3;
 
-    move-result p1
+    invoke-virtual {v2}, Loy3;->b()Z
 
-    sget-object v1, Lfw0;->g:Ln8g;
+    move-result v3
 
-    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+    invoke-static {v3}, Lh43;->o(Z)V
 
-    move-result-object v2
+    iget-object v3, v0, Lew0;->b:Lrq6;
 
-    check-cast v2, [B
+    iget-wide v3, v3, Lrq6;->b:J
 
-    array-length v2, v2
+    invoke-virtual {v2}, Loy3;->b()Z
 
-    invoke-static {p1, v2}, Ljava/lang/Math;->min(II)I
+    move-result v5
 
-    move-result v2
+    invoke-static {v5}, Lh43;->o(Z)V
 
-    const/4 v3, 0x0
+    iget v5, v2, Loy3;->e:I
 
-    move v4, v3
+    add-int/lit8 v6, v5, 0x1
 
-    :goto_0
-    if-lez v2, :cond_1
+    iput v6, v2, Loy3;->e:I
 
-    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+    iget-wide v6, v2, Loy3;->b:D
 
-    move-result-object v5
+    int-to-double v8, v5
 
-    check-cast v5, [B
+    mul-double/2addr v6, v8
 
-    invoke-virtual {v0, v5, v3, v2}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
+    invoke-static {v6, v7}, Ljava/lang/Math;->round(D)J
 
-    add-int/2addr v4, v2
+    move-result-wide v5
 
-    sub-int v2, p1, v4
+    const-wide/16 v7, 0x0
 
-    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+    cmp-long v2, v5, v7
 
-    move-result-object v5
+    const/4 v7, 0x0
 
-    check-cast v5, [B
+    const/4 v8, 0x1
 
-    array-length v5, v5
+    if-ltz v2, :cond_1
 
-    invoke-static {v2, v5}, Ljava/lang/Math;->min(II)I
-
-    move-result v2
+    move v2, v8
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->reset()Ljava/nio/Buffer;
+    move v2, v7
 
-    return-void
-.end method
+    :goto_0
+    invoke-static {v2}, Lh43;->o(Z)V
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    add-long/2addr v5, v3
 
-    iget-object v0, p0, Lfw0;->e:Ljava/nio/ByteBuffer;
+    iget-boolean v2, p0, Lfw0;->B0:Z
 
-    iget v1, p0, Lfw0;->f:I
+    if-nez v2, :cond_5
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    iput-boolean v8, p0, Lfw0;->B0:Z
 
-    const-string v3, "BufferHolder{name=\'"
+    iget-object v2, v0, Lew0;->a:Landroid/graphics/Bitmap;
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :try_start_0
+    iget-object v3, p0, Lfw0;->Z:Lx07;
 
-    iget-object v3, p0, Lfw0;->a:Ljava/lang/String;
+    if-eqz v3, :cond_2
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3}, Lx07;->a()V
 
-    const-string v3, "\', allocator="
+    goto :goto_1
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :catch_0
+    move-exception v0
 
-    iget-object v3, p0, Lfw0;->c:Lzv0;
+    goto :goto_3
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_2
+    :goto_1
+    new-array v3, v8, [I
 
-    const-string v3, ", plainData="
+    invoke-static {v8, v3, v7}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {}, Ly2c;->d()V
 
-    iget-boolean v3, p0, Lfw0;->b:Z
+    aget v3, v3, v7
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
-    const-string v3, ", maxSize=17408, buffer="
+    move-result v4
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result v9
 
-    const-string v0, ", lastSize="
+    invoke-static {v4, v9}, Ly2c;->a(II)V
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/16 v4, 0x2601
 
-    const-string v0, "}"
+    const/16 v9, 0xde1
 
-    invoke-static {v2, v1, v0}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v9, v3, v4}, Ly2c;->b(III)V
+
+    invoke-static {v9, v7, v2, v7}, Landroid/opengl/GLUtils;->texImage2D(IILandroid/graphics/Bitmap;I)V
+
+    invoke-static {}, Ly2c;->d()V
+
+    new-instance v4, Lx07;
+
+    iget-object v9, v1, Lrq6;->a:Lgm6;
+
+    iget v10, v9, Lgm6;->u:I
+
+    iget v9, v9, Lgm6;->v:I
+
+    const/4 v11, -0x1
+
+    invoke-direct {v4, v3, v11, v10, v9}, Lx07;-><init>(IIII)V
+
+    iput-object v4, p0, Lfw0;->Z:Lx07;
+
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v4, 0x22
+
+    if-lt v3, v4, :cond_3
+
+    invoke-static {v2}, Lo70;->v(Landroid/graphics/Bitmap;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    iget-object v3, p0, Lfw0;->Y:Lyu4;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v2}, Lo70;->f(Landroid/graphics/Bitmap;)Landroid/graphics/Gainmap;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v2}, Lo70;->g(Ljava/lang/Object;)Landroid/graphics/Gainmap;
+
+    move-result-object v2
+
+    invoke-virtual {v3, v2}, Lyu4;->n(Landroid/graphics/Gainmap;)V
+
+    :cond_3
+    iget-boolean v2, p0, Lfw0;->X:Z
+
+    if-eqz v2, :cond_5
+
+    iget-object v2, p0, Lfw0;->Y:Lyu4;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v3, v2, Lmo0;->a:Lcz0;
+
+    iget v3, v3, Lcz0;->b:I
+
+    if-ne v3, v8, :cond_4
+
+    move v3, v8
+
+    goto :goto_2
+
+    :cond_4
+    move v3, v7
+
+    :goto_2
+    invoke-static {v3}, Lh43;->o(Z)V
+
+    iput-boolean v8, v2, Lyu4;->u:Z
+
+    iput-boolean v7, v2, Lyu4;->v:Z
+    :try_end_0
+    .catch Landroidx/media3/common/util/GlUtil$GlException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_4
+
+    :goto_3
+    invoke-static {v0}, Landroidx/media3/common/VideoFrameProcessingException;->a(Ljava/lang/Exception;)Landroidx/media3/common/VideoFrameProcessingException;
 
     move-result-object v0
 
-    return-object v0
+    throw v0
+
+    :cond_5
+    :goto_4
+    iget v2, p0, Lfw0;->z0:I
+
+    sub-int/2addr v2, v8
+
+    iput v2, p0, Lfw0;->z0:I
+
+    iget-object v2, p0, Lfw0;->Y:Lyu4;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v3, p0, Lfw0;->o:Lq07;
+
+    iget-object v4, p0, Lfw0;->Z:Lx07;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v2, v3, v4, v5, v6}, Lmo0;->d(Lq07;Lx07;J)V
+
+    iget-object v1, v1, Lrq6;->a:Lgm6;
+
+    iget v2, v1, Lgm6;->u:I
+
+    iget v1, v1, Lgm6;->v:I
+
+    sget-object v1, Lom4;->a:Ljava/util/LinkedHashMap;
+
+    const-class v1, Lom4;
+
+    monitor-enter v1
+
+    monitor-exit v1
+
+    iget-object v0, v0, Lew0;->c:Loy3;
+
+    invoke-virtual {v0}, Loy3;->b()Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    iput-boolean v7, p0, Lfw0;->B0:Z
+
+    iget-object v0, p0, Lfw0;->d:Ljava/util/concurrent/LinkedBlockingQueue;
+
+    invoke-interface {v0}, Ljava/util/Queue;->remove()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lew0;
+
+    iget-object v0, v0, Lew0;->a:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
+
+    iget-object v0, p0, Lfw0;->d:Ljava/util/concurrent/LinkedBlockingQueue;
+
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    iget-boolean v0, p0, Lfw0;->A0:Z
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, p0, Lfw0;->Y:Lyu4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Lmo0;->c()V
+
+    invoke-static {}, Lom4;->a()V
+
+    iput-boolean v7, p0, Lfw0;->A0:Z
+
+    :cond_6
+    :goto_5
+    return-void
 .end method

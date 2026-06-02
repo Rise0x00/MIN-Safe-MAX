@@ -1,113 +1,149 @@
-.class public final synthetic Lo21;
-.super Ljava/lang/Object;
+.class public final Lo21;
+.super Ljava/lang/ThreadLocal;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public final synthetic a:Z
-
-.field public final synthetic b:Ld31;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ZLd31;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lo21;->a:I
 
-    iput-boolean p1, p0, Lo21;->a:Z
-
-    iput-object p2, p0, Lo21;->b:Ld31;
+    invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.method public get()Ljava/lang/Object;
+    .locals 2
 
-    check-cast p1, Lbt;
+    iget v0, p0, Lo21;->a:I
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Lus;
+    invoke-super {p0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-    invoke-direct {v0, p1}, Lus;-><init>(Lbt;)V
+    move-result-object v0
 
-    :cond_0
-    :goto_0
-    invoke-virtual {v0}, Lus;->hasNext()Z
+    return-object v0
 
-    move-result v1
+    :pswitch_0
+    invoke-super {p0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-    iget-boolean v2, p0, Lo21;->a:Z
+    move-result-object v0
 
-    if-eqz v1, :cond_2
+    check-cast v0, Landroid/graphics/Rect;
 
-    invoke-virtual {v0}, Lus;->next()Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    move-result-object v1
+    invoke-virtual {v0, v1, v1, v1, v1}, Landroid/graphics/Rect;->set(IIII)V
 
-    check-cast v1, Ljava/lang/Number;
+    return-object v0
 
-    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
+    :pswitch_1
+    invoke-super {p0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-    move-result-wide v3
+    move-result-object v0
 
-    invoke-static {v3, v4}, Llub;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    check-cast v0, Landroid/graphics/Rect;
 
-    move-result-object v1
+    const/4 v1, 0x0
 
-    iget-object v3, p0, Lo21;->b:Ld31;
+    invoke-virtual {v0, v1, v1, v1, v1}, Landroid/graphics/Rect;->set(IIII)V
 
-    if-eqz v2, :cond_1
+    return-object v0
 
-    invoke-virtual {v3}, Ld31;->d()Lla4;
+    :pswitch_data_0
+    .packed-switch 0x6
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result-object v2
+.method public final initialValue()Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {v2}, Lla4;->a()Lru/ok/android/externcalls/sdk/Conversation;
+    iget v0, p0, Lo21;->a:I
 
-    move-result-object v2
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v2, :cond_0
+    new-instance v0, Landroid/graphics/Rect;
 
-    const/4 v3, 0x1
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    invoke-interface {v2, v1, v3}, Lru/ok/android/externcalls/sdk/Conversation;->promoteParticipant(Lru/ok/android/externcalls/sdk/id/ParticipantId;Z)V
+    return-object v0
 
-    goto :goto_0
+    :pswitch_0
+    new-instance v0, Landroid/graphics/Rect;
 
-    :cond_1
-    invoke-virtual {v3}, Ld31;->d()Lla4;
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    move-result-object v2
+    return-object v0
 
-    invoke-virtual {v2}, Lla4;->a()Lru/ok/android/externcalls/sdk/Conversation;
+    :pswitch_1
+    new-instance v0, Ljava/text/DecimalFormat;
 
-    move-result-object v2
+    const-string v1, "#,##0.0"
 
-    if-eqz v2, :cond_0
+    invoke-direct {v0, v1}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v2, v1}, Lru/ok/android/externcalls/sdk/Conversation;->removeParticipant(Lru/ok/android/externcalls/sdk/id/ParticipantId;)V
+    return-object v0
 
-    goto :goto_0
+    :pswitch_2
+    new-instance v0, Ljava/text/DecimalFormat;
 
-    :cond_2
-    if-eqz v2, :cond_3
+    const-string v1, "#,##0"
 
-    return-object p1
+    invoke-direct {v0, v1}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
-    :cond_3
-    new-instance p1, Lbt;
+    return-object v0
 
-    const/4 v0, 0x0
+    :pswitch_3
+    new-instance v0, Ljava/util/Random;
 
-    invoke-direct {p1, v0}, Lbt;-><init>(I)V
+    invoke-direct {v0}, Ljava/util/Random;-><init>()V
 
-    return-object p1
+    return-object v0
+
+    :pswitch_4
+    sget-object v0, Ltm4;->a:Lo21;
+
+    const/16 v0, 0x4000
+
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_5
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    return-object v0
+
+    :pswitch_6
+    new-instance v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,115 +1,83 @@
 .class public final Lf48;
-.super Ljava/lang/Object;
+.super Lw4i;
 .source "SourceFile"
-
-# interfaces
-.implements Llq6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Lbwd;
 
-.field public final synthetic b:Landroid/os/Bundle;
+.field public final Y:Lzo5;
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Lia8;
+
+.field public final d:Lia8;
+
+.field public final o:Lb1g;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/os/Bundle;I)V
+.method public constructor <init>(JLjava/lang/String;Lia8;Lia8;Lia8;)V
     .locals 0
 
-    iput p2, p0, Lf48;->a:I
+    invoke-direct {p0}, Lw4i;-><init>()V
 
-    iput-object p1, p0, Lf48;->b:Landroid/os/Bundle;
+    iput-object p3, p0, Lf48;->b:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p4, p0, Lf48;->c:Lia8;
+
+    iput-object p6, p0, Lf48;->d:Lia8;
+
+    const/4 p3, 0x0
+
+    invoke-static {p3}, Lc1g;->a(Ljava/lang/Object;)Lb1g;
+
+    move-result-object p4
+
+    iput-object p4, p0, Lf48;->o:Lb1g;
+
+    new-instance p6, Lbwd;
+
+    invoke-direct {p6, p4}, Lbwd;-><init>(Lvia;)V
+
+    iput-object p6, p0, Lf48;->X:Lbwd;
+
+    new-instance p4, Lzo5;
+
+    invoke-direct {p4, p3}, Lzo5;-><init>(Ljava/lang/String;)V
+
+    iput-object p4, p0, Lf48;->Y:Lzo5;
+
+    invoke-interface {p5}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object p4
+
+    check-cast p4, Lva3;
+
+    invoke-virtual {p4, p1, p2}, Lva3;->l(J)Lbwd;
+
+    move-result-object p1
+
+    new-instance p2, Ltx;
+
+    const/16 p4, 0xf
+
+    invoke-direct {p2, p1, p4}, Ltx;-><init>(Lxa6;I)V
+
+    new-instance p1, Lb48;
+
+    const/4 p4, 0x1
+
+    invoke-direct {p1, p0, p3, p4}, Lb48;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+
+    new-instance p3, Lad6;
+
+    invoke-direct {p3, p2, p1, p4}, Lad6;-><init>(Lxa6;Lnt6;I)V
+
+    iget-object p1, p0, Lw4i;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {p3, p1}, Lhk0;->Z(Lxa6;Loc4;)Lhyf;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lf48;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const-string v0, "default"
-
-    iget-object v1, p0, Lf48;->b:Landroid/os/Bundle;
-
-    if-eqz v1, :cond_2
-
-    const-string v2, "arg_key_scope_id"
-
-    invoke-virtual {v1, v2}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1, v2}, Landroid/os/BaseBundle;->get(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    instance-of v2, v1, Ljava/lang/String;
-
-    if-eqz v2, :cond_1
-
-    move-object v0, v1
-
-    check-cast v0, Ljava/lang/String;
-
-    goto :goto_0
-
-    :cond_1
-    instance-of v2, v1, Lhce;
-
-    if-eqz v2, :cond_2
-
-    check-cast v1, Lhce;
-
-    iget-object v0, v1, Lhce;->a:Ljava/lang/String;
-
-    :cond_2
-    :goto_0
-    new-instance v1, Lhce;
-
-    invoke-direct {v1, v0}, Lhce;-><init>(Ljava/lang/String;)V
-
-    return-object v1
-
-    :pswitch_0
-    iget-object v0, p0, Lf48;->b:Landroid/os/Bundle;
-
-    const-string v1, "arg_key_scope_id"
-
-    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    new-instance v1, Lhce;
-
-    invoke-direct {v1, v0}, Lhce;-><init>(Ljava/lang/String;)V
-
-    return-object v1
-
-    :cond_3
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Required value was null."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

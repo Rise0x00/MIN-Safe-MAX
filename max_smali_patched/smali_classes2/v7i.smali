@@ -1,87 +1,61 @@
 .class public final Lv7i;
-.super Ljava/lang/Object;
+.super Landroid/media/VolumeProvider;
 .source "SourceFile"
-
-# interfaces
-.implements Lq8i;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic a:Lyg9;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(Lyg9;IIILjava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lv7i;->a:Lyg9;
 
-    iput-boolean p1, p0, Lv7i;->a:Z
+    invoke-direct {p0, p2, p3, p4, p5}, Landroid/media/VolumeProvider;-><init>(IIILjava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onAdjustVolume(I)V
+    .locals 4
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lv7i;->a:Lyg9;
 
-    goto :goto_1
+    iget-object v1, v0, Lyg9;->f:Landroid/os/Handler;
 
-    :cond_0
-    instance-of v0, p1, Lv7i;
+    iget-object v0, v0, Lyg9;->g:Lmic;
 
-    if-nez v0, :cond_1
+    new-instance v2, Lxg9;
 
-    goto :goto_0
+    const/4 v3, 0x1
 
-    :cond_1
-    check-cast p1, Lv7i;
+    invoke-direct {v2, v0, p1, v3}, Lxg9;-><init>(Lmic;II)V
 
-    iget-boolean v0, p0, Lv7i;->a:Z
+    invoke-static {v1, v2}, Lpnh;->a0(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
-    iget-boolean p1, p1, Lv7i;->a:Z
-
-    if-eq v0, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final onSetVolumeTo(I)V
+    .locals 4
 
-    iget-boolean v0, p0, Lv7i;->a:Z
+    iget-object v0, p0, Lv7i;->a:Lyg9;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    iget-object v1, v0, Lyg9;->f:Landroid/os/Handler;
 
-    move-result v0
+    iget-object v0, v0, Lyg9;->g:Lmic;
 
-    return v0
-.end method
+    new-instance v2, Lxg9;
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    const/4 v3, 0x0
 
-    const-string v0, "CloseScreen(isFromBridge="
+    invoke-direct {v2, v0, p1, v3}, Lxg9;-><init>(Lmic;II)V
 
-    const-string v1, ")"
+    invoke-static {v1, v2}, Lpnh;->a0(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
-    iget-boolean v2, p0, Lv7i;->a:Z
-
-    invoke-static {v0, v1, v2}, Lmrf;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

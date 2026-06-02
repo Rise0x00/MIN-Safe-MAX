@@ -1,68 +1,40 @@
-.class public final Lape;
-.super Landroid/view/View;
+.class public interface abstract Lape;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public a:Landroid/text/Layout;
-
-.field public b:I
+# interfaces
+.implements Lru/ok/android/externcalls/sdk/events/RecordEventListener;
 
 
-# virtual methods
-.method public final onDraw(Landroid/graphics/Canvas;)V
+# direct methods
+.method public static synthetic e(Lape;)V
     .locals 1
 
-    iget-object v0, p0, Lape;->a:Landroid/text/Layout;
+    sget-object v0, Lhpe;->d:Lhpe;
 
-    if-eqz v0, :cond_0
+    check-cast p0, Lfpe;
 
-    invoke-virtual {v0, p1}, Landroid/text/Layout;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {p0, v0}, Lfpe;->f(Lhpe;)V
 
-    :cond_0
     return-void
 .end method
 
-.method public final onMeasure(II)V
+
+# virtual methods
+.method public p()Lgpe;
     .locals 1
 
-    iget-object p1, p0, Lape;->a:Landroid/text/Layout;
+    move-object v0, p0
 
-    const/4 p2, 0x0
+    check-cast v0, Lfpe;
 
-    if-eqz p1, :cond_1
+    iget-object v0, v0, Lfpe;->B0:Lb1g;
 
-    invoke-virtual {p1}, Landroid/text/Layout;->getLineCount()I
+    invoke-virtual {v0}, Lb1g;->getValue()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v0
 
-    if-lez v0, :cond_0
+    check-cast v0, Lgpe;
 
-    invoke-virtual {p1, p2}, Landroid/text/Layout;->getLineMax(I)F
-
-    move-result p2
-
-    float-to-int p2, p2
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/text/Layout;->getWidth()I
-
-    move-result p2
-
-    :goto_0
-    invoke-virtual {p1}, Landroid/text/Layout;->getHeight()I
-
-    move-result p1
-
-    goto :goto_1
-
-    :cond_1
-    move p1, p2
-
-    :goto_1
-    invoke-virtual {p0, p2, p1}, Landroid/view/View;->setMeasuredDimension(II)V
-
-    return-void
+    return-object v0
 .end method

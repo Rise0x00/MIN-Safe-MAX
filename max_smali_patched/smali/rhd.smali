@@ -1,6 +1,6 @@
 .class public abstract Lrhd;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
+
+# static fields
+.field public static view_tree_saved_state_registry_owner:I = 0x7f0a0d6d

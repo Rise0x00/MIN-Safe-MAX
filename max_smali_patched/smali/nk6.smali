@@ -1,64 +1,76 @@
-.class public final Lnk6;
+.class public final synthetic Lnk6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqk6;
+.implements Lzs6;
 
 
-# static fields
-.field public static final a:Lnk6;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lpk6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lpk6;I)V
+    .locals 0
 
-    new-instance v0, Lnk6;
+    iput p2, p0, Lnk6;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lnk6;->b:Lpk6;
 
-    sput-object v0, Lnk6;->a:Lnk6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lnk6;->a:I
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lz6b;
 
-    return v0
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lnk6;->b:Lpk6;
+
+    iget-object v0, v0, Lpk6;->A0:Lzs6;
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p1, Lz6b;->a:Ljava/lang/String;
+
+    invoke-interface {v0, p1}, Lzs6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    instance-of p1, p1, Lnk6;
+    sget-object p1, Lyeh;->a:Lyeh;
 
-    if-nez p1, :cond_1
+    return-object p1
 
-    const/4 p1, 0x0
+    :pswitch_0
+    iget-object v0, p0, Lnk6;->b:Lpk6;
 
-    return p1
+    iget-object v0, v0, Lpk6;->A0:Lzs6;
+
+    if-eqz v0, :cond_1
+
+    iget-object p1, p1, Lz6b;->a:Ljava/lang/String;
+
+    invoke-interface {v0, p1}, Lzs6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
-    return v0
-.end method
+    sget-object p1, Lyeh;->a:Lyeh;
 
-.method public final hashCode()I
-    .locals 1
+    return-object p1
 
-    const v0, 0x25527745
+    nop
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "MultiselectDisabled"
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

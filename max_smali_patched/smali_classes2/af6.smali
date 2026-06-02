@@ -1,137 +1,66 @@
-.class public final enum Laf6;
-.super Ljava/lang/Enum;
+.class public final Laf6;
+.super Lxd6;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Laf6;
-
-.field public static final synthetic Y:Lal5;
-
-.field public static final b:Ljava/util/Set;
-
-.field public static final enum c:Laf6;
-
-.field public static final enum d:Laf6;
-
-.field public static final enum o:Laf6;
-
-
 # instance fields
-.field public final a:I
+.field public final b:Lqne;
+
+.field public final c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(JLqne;)V
+    .locals 1
 
-    new-instance v0, Laf6;
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    const-string v1, "HIDE_EMPTY"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v2, 0x0
+    iput-wide p1, p0, Laf6;->c:J
 
-    invoke-direct {v0, v1, v2, v2}, Laf6;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Laf6;
-
-    const-string v2, "NO_DELETE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3, v3}, Laf6;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Laf6;->c:Laf6;
-
-    new-instance v2, Laf6;
-
-    const-string v3, "NO_TITLE_EDIT"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4, v4}, Laf6;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Laf6;->d:Laf6;
-
-    new-instance v3, Laf6;
-
-    const-string v4, "NO_FILTERS_EDIT"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5, v5}, Laf6;-><init>(Ljava/lang/String;II)V
-
-    new-instance v4, Laf6;
-
-    const-string v5, "CHAT_SUGGEST"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6, v6}, Laf6;-><init>(Ljava/lang/String;II)V
-
-    sput-object v4, Laf6;->o:Laf6;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Laf6;
-
-    move-result-object v0
-
-    sput-object v0, Laf6;->X:[Laf6;
-
-    new-instance v1, Lal5;
-
-    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Laf6;->Y:Lal5;
-
-    const-class v0, Laf6;
-
-    invoke-static {v0}, Ljava/util/EnumSet;->noneOf(Ljava/lang/Class;)Ljava/util/EnumSet;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object v0
-
-    sput-object v0, Laf6;->b:Ljava/util/Set;
+    iput-object p3, p0, Laf6;->b:Lqne;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+# virtual methods
+.method public final f(Lye6;)V
+    .locals 4
 
-    iput p3, p0, Laf6;->a:I
+    new-instance v0, Lze6;
 
-    return-void
-.end method
+    invoke-direct {v0, p1}, Lze6;-><init>(Lfcg;)V
 
-.method public static valueOf(Ljava/lang/String;)Laf6;
-    .locals 1
+    invoke-interface {p1, v0}, Lfcg;->d(Lhcg;)V
 
-    const-class v0, Laf6;
+    iget-wide v1, p0, Laf6;->c:J
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    move-result-object p0
+    iget-object v3, p0, Laf6;->b:Lqne;
 
-    check-cast p0, Laf6;
+    invoke-virtual {v3, v0, v1, v2, p1}, Lqne;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ls45;
 
-    return-object p0
-.end method
+    move-result-object p1
 
-.method public static values()[Laf6;
-    .locals 1
+    invoke-static {v0, p1}, Ls54;->k(Ljava/util/concurrent/atomic/AtomicReference;Ls45;)Z
 
-    sget-object v0, Laf6;->X:[Laf6;
+    move-result v1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    if-nez v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Laf6;
+    sget-object v1, Lw45;->a:Lw45;
 
-    return-object v0
+    if-ne v0, v1, :cond_0
+
+    invoke-interface {p1}, Ls45;->dispose()V
+
+    :cond_0
+    return-void
 .end method

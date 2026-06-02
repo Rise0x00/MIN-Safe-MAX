@@ -1,80 +1,51 @@
 .class public final Lp93;
-.super Ljava/lang/Object;
+.super Lz84;
 .source "SourceFile"
-
-# interfaces
-.implements Lwm8;
 
 
 # instance fields
-.field public final a:Lyah;
+.field public final synthetic X:Ls93;
 
-.field public final b:Lo58;
+.field public Y:I
 
-.field public final c:Ljava/util/concurrent/ConcurrentHashMap;
+.field public d:Lb1g;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lo58;Lyah;)V
+.method public constructor <init>(Ls93;Lz84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lp93;->X:Ls93;
 
-    iput-object p2, p0, Lp93;->a:Lyah;
-
-    iput-object p1, p0, Lp93;->b:Lo58;
-
-    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object p1, p0, Lp93;->c:Ljava/util/concurrent/ConcurrentHashMap;
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()V
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lp93;->c:Ljava/util/concurrent/ConcurrentHashMap;
+    iput-object p1, p0, Lp93;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->entrySet()Ljava/util/Set;
+    iget p1, p0, Lp93;->Y:I
 
-    move-result-object v1
+    const/high16 v0, -0x80000000
 
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    or-int/2addr p1, v0
 
-    move-result-object v1
+    iput p1, p0, Lp93;->Y:I
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    iget-object p1, p0, Lp93;->X:Ls93;
 
-    move-result v2
+    const/4 v0, 0x0
 
-    if-eqz v2, :cond_0
+    invoke-virtual {p1, v0, p0}, Ls93;->f(Lmg2;Lz84;)Ljava/lang/Object;
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v2
-
-    check-cast v2, Ljava/util/Map$Entry;
-
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lsx7;
-
-    const/4 v3, 0x0
-
-    invoke-interface {v2, v3}, Lsx7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
-
-    return-void
+    return-object p1
 .end method

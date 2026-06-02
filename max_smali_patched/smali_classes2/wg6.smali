@@ -1,8 +1,8 @@
-.class public interface abstract Lwg6;
+.class public abstract Lwg6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract d(Ljava/lang/String;Landroidx/recyclerview/widget/b;)Lone/me/sdk/arch/Widget;
+.method public abstract a()Ljava/lang/CharSequence;
 .end method

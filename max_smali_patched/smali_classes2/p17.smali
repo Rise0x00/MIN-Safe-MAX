@@ -3,109 +3,39 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static volatile b:Lp17;
 
-.field public final b:I
+
+# instance fields
+.field public final a:Ljava/util/HashSet;
 
 
 # direct methods
-.method public constructor <init>(II)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lp17;->a:I
+    .line 4
+    new-instance v0, Ljava/util/HashSet;
 
-    iput p2, p0, Lp17;->b:I
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v0, p0, Lp17;->a:Ljava/util/HashSet;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/util/HashSet;)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-ne p0, p1, :cond_0
+    .line 2
+    iput-object p1, p0, Lp17;->a:Ljava/util/HashSet;
 
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lp17;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lp17;
-
-    iget v0, p0, Lp17;->a:I
-
-    iget v1, p1, Lp17;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lp17;->b:I
-
-    iget p1, p1, Lp17;->b:I
-
-    if-eq v0, p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Lp17;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lp17;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", transparent="
-
-    const-string v1, ")"
-
-    const-string v2, "GradientsLoadingIconContrastColors(filled="
-
-    iget v3, p0, Lp17;->a:I
-
-    iget v4, p0, Lp17;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

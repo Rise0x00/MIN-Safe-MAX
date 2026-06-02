@@ -1,101 +1,75 @@
 .class public final Lnn3;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Ljava/util/Comparator;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/complaintbottomsheet/ComplaintBottomSheet;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/complaintbottomsheet/ComplaintBottomSheet;)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    iput-object p2, p0, Lnn3;->X:Lone/me/complaintbottomsheet/ComplaintBottomSheet;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p1, p0, Lnn3;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 4
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast p1, Landroid/util/Size;
 
-    invoke-virtual {p0, p1, p2}, Lnn3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p2, Landroid/util/Size;
 
-    move-result-object p1
+    invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
-    check-cast p1, Lnn3;
+    move-result v0
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    int-to-long v0, v0
 
-    invoke-virtual {p1, p2}, Lnn3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lnn3;
-
-    iget-object v1, p0, Lnn3;->X:Lone/me/complaintbottomsheet/ComplaintBottomSheet;
-
-    invoke-direct {v0, p2, v1}, Lnn3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/complaintbottomsheet/ComplaintBottomSheet;)V
-
-    iput-object p1, v0, Lnn3;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lnn3;->o:Ljava/lang/Object;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    check-cast v0, Lrn3;
-
-    sget-object p1, Lrn3;->a:Lrn3;
-
-    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    int-to-long v2, p1
 
-    iget-object p1, p0, Lnn3;->X:Lone/me/complaintbottomsheet/ComplaintBottomSheet;
+    mul-long/2addr v0, v2
 
-    iget-object p1, p1, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->Z:Ln8g;
+    invoke-virtual {p2}, Landroid/util/Size;->getWidth()I
 
-    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
+    move-result p1
 
-    move-result-object p1
+    int-to-long v2, p1
 
-    check-cast p1, Ldjb;
+    invoke-virtual {p2}, Landroid/util/Size;->getHeight()I
 
-    invoke-virtual {p1}, Ldjb;->i()Lcjb;
+    move-result p1
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    int-to-long p1, p1
 
-    return-object p1
+    mul-long/2addr v2, p1
+
+    sub-long/2addr v0, v2
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->signum(J)I
+
+    move-result p1
+
+    iget-boolean p2, p0, Lnn3;->a:Z
+
+    if-eqz p2, :cond_0
+
+    mul-int/lit8 p1, p1, -0x1
 
     :cond_0
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
+    return p1
 .end method

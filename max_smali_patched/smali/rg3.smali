@@ -2,16 +2,33 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Closeable;
+.implements Ltk7;
+.implements Lcom/facebook/fresco/middleware/HasExtraData;
+
 
 # virtual methods
-.method public abstract a(Lpj6;Landroid/media/metrics/LogSessionId;)Lro4;
+.method public abstract close()V
 .end method
 
-.method public abstract c()Z
+.method public abstract getHeight()I
 .end method
 
-.method public abstract d()Z
+.method public abstract getImageInfo()Ltk7;
 .end method
 
-.method public abstract g(Lpj6;Landroid/media/metrics/LogSessionId;)Lro4;
+.method public abstract getQualityInfo()Ltcd;
+.end method
+
+.method public abstract getSizeInBytes()I
+.end method
+
+.method public abstract getWidth()I
+.end method
+
+.method public abstract isClosed()Z
+.end method
+
+.method public abstract isStateful()Z
 .end method

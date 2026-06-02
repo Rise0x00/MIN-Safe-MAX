@@ -1,205 +1,295 @@
 .class public final Llc3;
-.super Lp6g;
+.super Lru5;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public synthetic X:I
-
-.field public final synthetic Y:Lpc3;
-
-.field public final synthetic Z:Lmp8;
-
-.field public o:I
+.field public final synthetic q:Lcom/google/android/material/chip/Chip;
 
 
 # direct methods
-.method public constructor <init>(Lpc3;Lmp8;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lcom/google/android/material/chip/Chip;Lcom/google/android/material/chip/Chip;)V
     .locals 0
 
-    iput-object p1, p0, Llc3;->Y:Lpc3;
+    iput-object p1, p0, Llc3;->q:Lcom/google/android/material/chip/Chip;
 
-    iput-object p2, p0, Llc3;->Z:Lmp8;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lru5;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(FF)I
+    .locals 2
 
-    check-cast p1, Ljava/lang/Number;
+    sget v0, Lcom/google/android/material/chip/Chip;->R0:I
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    iget-object v0, p0, Llc3;->q:Lcom/google/android/material/chip/Chip;
 
-    move-result p1
+    invoke-virtual {v0}, Lcom/google/android/material/chip/Chip;->e()Z
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result v1
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-eqz v1, :cond_0
 
-    move-result-object p1
+    invoke-static {v0}, Lcom/google/android/material/chip/Chip;->b(Lcom/google/android/material/chip/Chip;)Landroid/graphics/RectF;
 
-    invoke-virtual {p0, p1, p2}, Llc3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    move-result-object p1
-
-    check-cast p1, Llc3;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Llc3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance v0, Llc3;
-
-    iget-object v1, p0, Llc3;->Y:Lpc3;
-
-    iget-object v2, p0, Llc3;->Z:Lmp8;
-
-    invoke-direct {v0, v1, v2, p2}, Llc3;-><init>(Lpc3;Lmp8;Lkotlin/coroutines/Continuation;)V
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    invoke-virtual {v0, p1, p2}, Landroid/graphics/RectF;->contains(FF)Z
 
     move-result p1
 
-    iput p1, v0, Llc3;->X:I
+    if-eqz p1, :cond_0
 
-    return-object v0
-.end method
+    const/4 p1, 0x1
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
-
-    sget-object v0, Lb3h;->a:Lb3h;
-
-    iget v1, p0, Llc3;->X:I
-
-    sget-object v2, Lac4;->a:Lac4;
-
-    iget v3, p0, Llc3;->o:I
-
-    const/4 v4, 0x1
-
-    if-eqz v3, :cond_1
-
-    if-ne v3, v4, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_2
+    return p1
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 p1, 0x0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    return p1
+.end method
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+.method public final o(Ljava/util/ArrayList;)V
+    .locals 2
 
-    throw p1
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    sget v0, Lcom/google/android/material/chip/Chip;->R0:I
+
+    iget-object v0, p0, Llc3;->q:Lcom/google/android/material/chip/Chip;
+
+    invoke-virtual {v0}, Lcom/google/android/material/chip/Chip;->e()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v0, Lcom/google/android/material/chip/Chip;->o:Lnc3;
+
+    if-eqz v1, :cond_0
+
+    iget-boolean v1, v1, Lnc3;->c1:Z
+
+    if-eqz v1, :cond_0
+
+    iget-object v0, v0, Lcom/google/android/material/chip/Chip;->B0:Landroid/view/View$OnClickListener;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public final s(IILandroid/os/Bundle;)Z
+    .locals 1
+
+    const/16 p3, 0x10
+
+    const/4 v0, 0x0
+
+    if-ne p2, p3, :cond_2
+
+    iget-object p2, p0, Llc3;->q:Lcom/google/android/material/chip/Chip;
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {p2}, Landroid/view/View;->performClick()Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 p3, 0x1
+
+    if-ne p1, p3, :cond_2
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->playSoundEffect(I)V
+
+    iget-object p1, p2, Lcom/google/android/material/chip/Chip;->B0:Landroid/view/View$OnClickListener;
+
+    if-eqz p1, :cond_1
+
+    invoke-interface {p1, p2}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
+
+    move v0, p3
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iget-boolean p1, p2, Lcom/google/android/material/chip/Chip;->N0:Z
 
-    iget-object p1, p0, Llc3;->Y:Lpc3;
+    if-eqz p1, :cond_2
 
-    iget-object p1, p1, Lpc3;->Z:Ljava/lang/Object;
+    iget-object p1, p2, Lcom/google/android/material/chip/Chip;->M0:Llc3;
 
-    check-cast p1, Ljava/lang/String;
+    invoke-virtual {p1, p3, p3}, Lru5;->x(II)V
 
-    sget-object v3, Lc5j;->a:Ledb;
+    :cond_2
+    return v0
+.end method
 
-    const/4 v5, 0x0
+.method public final t(Lo5;)V
+    .locals 3
 
-    if-nez v3, :cond_2
+    iget-object v0, p1, Lo5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    iget-object v1, p0, Llc3;->q:Lcom/google/android/material/chip/Chip;
+
+    iget-object v2, v1, Lcom/google/android/material/chip/Chip;->o:Lnc3;
+
+    if-eqz v2, :cond_0
+
+    iget-boolean v2, v2, Lnc3;->i1:Z
+
+    if-eqz v2, :cond_0
+
+    const/4 v2, 0x1
 
     goto :goto_0
 
-    :cond_2
-    sget-object v6, Lkk8;->d:Lkk8;
+    :cond_0
+    const/4 v2, 0x0
 
-    invoke-virtual {v3, v6}, Ledb;->b(Lkk8;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_3
-
-    const-string v7, "onNewActivityFlow "
-
-    invoke-static {v1, v7}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v3, v6, p1, v7, v5}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_3
     :goto_0
-    iget-object p1, p0, Llc3;->Y:Lpc3;
+    invoke-virtual {v0, v2}, Landroid/view/accessibility/AccessibilityNodeInfo;->setCheckable(Z)V
 
-    iget-object p1, p1, Lpc3;->a:Ljava/lang/Object;
+    invoke-virtual {v1}, Landroid/view/View;->isClickable()Z
 
-    check-cast p1, Ld39;
+    move-result v2
 
-    iget-object v3, p0, Llc3;->Z:Lmp8;
+    invoke-virtual {v0, v2}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClickable(Z)V
 
-    invoke-interface {v3}, Llq6;->invoke()Ljava/lang/Object;
+    invoke-virtual {v1}, Lcom/google/android/material/chip/Chip;->getAccessibilityClassName()Ljava/lang/CharSequence;
 
-    move-result-object v3
+    move-result-object v2
 
-    check-cast v3, Ljava/util/List;
+    invoke-virtual {p1, v2}, Lo5;->h(Ljava/lang/CharSequence;)V
 
-    iput v1, p0, Llc3;->X:I
-
-    iput v4, p0, Llc3;->o:I
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v1, Lf25;->a:Lct4;
-
-    sget-object v1, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lzp8;
-
-    invoke-virtual {v1}, Lzp8;->getImmediate()Lzp8;
-
-    move-result-object v1
-
-    new-instance v4, Lm8;
-
-    invoke-direct {v4, p1, v3, v5}, Lm8;-><init>(Ld39;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v1, v4, p0}, Ls9j;->k(Lqb4;Lbr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    if-ne p1, v2, :cond_4
+    invoke-virtual {v0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_1
+    return-void
+.end method
 
-    :cond_4
-    move-object p1, v0
+.method public final u(ILo5;)V
+    .locals 6
 
-    :goto_1
-    if-ne p1, v2, :cond_5
+    iget-object v0, p2, Lo5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    return-object v2
+    const/4 v1, 0x1
 
-    :cond_5
-    :goto_2
-    return-object v0
+    const-string v2, ""
+
+    if-ne p1, v1, :cond_2
+
+    iget-object p1, p0, Llc3;->q:Lcom/google/android/material/chip/Chip;
+
+    invoke-virtual {p1}, Lcom/google/android/material/chip/Chip;->getCloseIconContentDescription()Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0, v1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    sget v4, Lbnd;->mtrl_chip_close_icon_content_description:I
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_1
+
+    move-object v2, v1
+
+    :cond_1
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v4, v1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    :goto_0
+    invoke-static {p1}, Lcom/google/android/material/chip/Chip;->c(Lcom/google/android/material/chip/Chip;)Landroid/graphics/Rect;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setBoundsInParent(Landroid/graphics/Rect;)V
+
+    sget-object v1, Lj5;->e:Lj5;
+
+    invoke-virtual {p2, v1}, Lo5;->b(Lj5;)V
+
+    invoke-virtual {p1}, Landroid/view/View;->isEnabled()Z
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setEnabled(Z)V
+
+    return-void
+
+    :cond_2
+    invoke-virtual {v0, v2}, Landroid/view/accessibility/AccessibilityNodeInfo;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    sget-object p1, Lcom/google/android/material/chip/Chip;->S0:Landroid/graphics/Rect;
+
+    invoke-virtual {v0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setBoundsInParent(Landroid/graphics/Rect;)V
+
+    return-void
+.end method
+
+.method public final v(IZ)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_0
+
+    iget-object p1, p0, Llc3;->q:Lcom/google/android/material/chip/Chip;
+
+    iput-boolean p2, p1, Lcom/google/android/material/chip/Chip;->H0:Z
+
+    invoke-virtual {p1}, Landroid/view/View;->refreshDrawableState()V
+
+    :cond_0
+    return-void
 .end method

@@ -1,43 +1,80 @@
-.class public abstract Ltu4;
-.super Ljava/lang/Object;
+.class public final Ltu4;
+.super Lune;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:Ljrg;
-
-.field public final c:I
-
-.field public final d:Loj6;
+# static fields
+.field public static final b:Ltu4;
 
 
 # direct methods
-.method public constructor <init>(ILjrg;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ltu4;
 
-    iput p1, p0, Ltu4;->a:I
+    sget v5, Lwqg;->c:I
 
-    iput-object p2, p0, Ltu4;->b:Ljrg;
+    sget v6, Lwqg;->d:I
 
-    iput p3, p0, Ltu4;->c:I
+    sget-wide v2, Lwqg;->e:J
 
-    iget-object p1, p2, Ljrg;->c:[Loj6;
+    sget-object v4, Lwqg;->a:Ljava/lang/String;
 
-    aget-object p1, p1, p3
+    invoke-direct {v0}, Lhc4;-><init>()V
 
-    iput-object p1, p0, Ltu4;->d:Loj6;
+    new-instance v1, Lnc4;
+
+    invoke-direct/range {v1 .. v6}, Lnc4;-><init>(JLjava/lang/String;II)V
+
+    iput-object v1, v0, Lune;->a:Lnc4;
+
+    sput-object v0, Ltu4;->b:Ltu4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a()I
+.method public final close()V
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Dispatchers.Default cannot be closed"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
-.method public abstract b(Ltu4;)Z
+.method public final limitedParallelism(ILjava/lang/String;)Lhc4;
+    .locals 1
+
+    invoke-static {p1}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->checkParallelism(I)V
+
+    sget v0, Lwqg;->c:I
+
+    if-lt p1, v0, :cond_0
+
+    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->namedOrThis(Lhc4;Ljava/lang/String;)Lhc4;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    invoke-super {p0, p1, p2}, Lhc4;->limitedParallelism(ILjava/lang/String;)Lhc4;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Dispatchers.Default"
+
+    return-object v0
 .end method

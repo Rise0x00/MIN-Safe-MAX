@@ -1,60 +1,216 @@
-.class public final synthetic Lia4;
+.class public final Lia4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lby3;
+
+# static fields
+.field public static final d:Lia4;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
+.field public final b:I
+
+.field public final c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lia4;->a:I
+    new-instance v0, Lia4;
 
-    iput-object p1, p0, Lia4;->b:Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
+    invoke-direct {v0}, Lia4;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lia4;->d:Lia4;
 
     return-void
 .end method
 
+.method public synthetic constructor <init>()V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    .line 1
+    invoke-direct {p0, v0, v0, v1}, Lia4;-><init>(IIZ)V
+
+    return-void
+.end method
+
+.method public constructor <init>(IIZ)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput p1, p0, Lia4;->a:I
+
+    .line 4
+    iput p2, p0, Lia4;->b:I
+
+    .line 5
+    iput-boolean p3, p0, Lia4;->c:Z
+
+    return-void
+.end method
+
+.method public static a(Lia4;IIZI)Lia4;
+    .locals 1
+
+    and-int/lit8 v0, p4, 0x1
+
+    if-eqz v0, :cond_0
+
+    iget p1, p0, Lia4;->a:I
+
+    :cond_0
+    and-int/lit8 v0, p4, 0x2
+
+    if-eqz v0, :cond_1
+
+    iget p2, p0, Lia4;->b:I
+
+    :cond_1
+    and-int/lit8 p4, p4, 0x4
+
+    if-eqz p4, :cond_2
+
+    iget-boolean p3, p0, Lia4;->c:Z
+
+    :cond_2
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p0, Lia4;
+
+    invoke-direct {p0, p1, p2, p3}, Lia4;-><init>(IIZ)V
+
+    return-object p0
+.end method
+
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final b()I
+    .locals 2
 
     iget v0, p0, Lia4;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    iget v1, p0, Lia4;->b:I
 
-    iget-object v0, p0, Lia4;->b:Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
+    add-int/2addr v0, v1
 
-    check-cast p1, Ljava/lang/Throwable;
+    return v0
+.end method
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->e(Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;Ljava/lang/Throwable;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    return-void
+    const/4 v0, 0x1
 
-    :pswitch_0
-    iget-object v0, p0, Lia4;->b:Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/Conversation;
+    return v0
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->q(Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;Lru/ok/android/externcalls/sdk/Conversation;)V
+    :cond_0
+    instance-of v1, p1, Lia4;
 
-    return-void
+    const/4 v2, 0x0
 
-    nop
+    if-nez v1, :cond_1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v2
+
+    :cond_1
+    check-cast p1, Lia4;
+
+    iget v1, p0, Lia4;->a:I
+
+    iget v3, p1, Lia4;->a:I
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Lia4;->b:I
+
+    iget v3, p1, Lia4;->b:I
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Lia4;->c:Z
+
+    iget-boolean p1, p1, Lia4;->c:Z
+
+    if-eq v1, p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lia4;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lia4;->b:I
+
+    invoke-static {v2, v0, v1}, Lrtc;->n(III)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lia4;->c:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", inset="
+
+    const-string v1, ", isVisible="
+
+    const-string v2, "ControlState(heightView="
+
+    iget v3, p0, Lia4;->a:I
+
+    iget v4, p0, Lia4;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lo52;->x(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lia4;->c:Z
+
+    invoke-static {v0, v2, v1}, Lo52;->u(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

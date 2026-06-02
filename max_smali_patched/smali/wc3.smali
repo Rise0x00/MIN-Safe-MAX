@@ -1,212 +1,144 @@
 .class public final Lwc3;
-.super Ljava/lang/Object;
+.super Liig;
 .source "SourceFile"
 
 # interfaces
-.implements Like;
+.implements Lpt6;
 
 
 # instance fields
-.field public final X:J
+.field public synthetic X:Ljava/lang/Throwable;
 
-.field public final a:I
+.field public final synthetic Y:Lzc3;
 
-.field public final b:[I
-
-.field public final c:[J
-
-.field public final d:[J
-
-.field public final o:[J
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>([I[J[J[J)V
-    .locals 2
+.method public synthetic constructor <init>(Lzc3;Lkotlin/coroutines/Continuation;I)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lwc3;->o:I
 
-    iput-object p1, p0, Lwc3;->b:[I
+    iput-object p1, p0, Lwc3;->Y:Lzc3;
 
-    iput-object p2, p0, Lwc3;->c:[J
+    const/4 p1, 0x3
 
-    iput-object p3, p0, Lwc3;->d:[J
-
-    iput-object p4, p0, Lwc3;->o:[J
-
-    array-length p1, p1
-
-    iput p1, p0, Lwc3;->a:I
-
-    if-lez p1, :cond_0
-
-    add-int/lit8 p2, p1, -0x1
-
-    aget-wide p2, p3, p2
-
-    add-int/lit8 p1, p1, -0x1
-
-    aget-wide v0, p4, p1
-
-    add-long/2addr p2, v0
-
-    iput-wide p2, p0, Lwc3;->X:J
-
-    return-void
-
-    :cond_0
-    const-wide/16 p1, 0x0
-
-    iput-wide p1, p0, Lwc3;->X:J
+    invoke-direct {p0, p1, p2}, Liig;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Lwc3;->o:I
 
-    return v0
-.end method
+    check-cast p1, Lza6;
 
-.method public final e(J)Lgke;
-    .locals 9
+    check-cast p2, Ljava/lang/Throwable;
 
-    iget-object v0, p0, Lwc3;->o:[J
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance p1, Lwc3;
+
+    iget-object v0, p0, Lwc3;->Y:Lzc3;
 
     const/4 v1, 0x1
 
-    invoke-static {v0, p1, p2, v1}, Lmbh;->e([JJZ)I
+    invoke-direct {p1, v0, p3, v1}, Lwc3;-><init>(Lzc3;Lkotlin/coroutines/Continuation;I)V
 
-    move-result v2
+    iput-object p2, p1, Lwc3;->X:Ljava/lang/Throwable;
 
-    new-instance v3, Lmke;
+    sget-object p2, Lyeh;->a:Lyeh;
 
-    aget-wide v4, v0, v2
+    invoke-virtual {p1, p2}, Lwc3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v6, p0, Lwc3;->c:[J
+    return-object p2
 
-    aget-wide v7, v6, v2
+    :pswitch_0
+    new-instance p1, Lwc3;
 
-    invoke-direct {v3, v4, v5, v7, v8}, Lmke;-><init>(JJ)V
+    iget-object v0, p0, Lwc3;->Y:Lzc3;
 
-    cmp-long p1, v4, p1
+    const/4 v1, 0x0
 
-    if-gez p1, :cond_1
+    invoke-direct {p1, v0, p3, v1}, Lwc3;-><init>(Lzc3;Lkotlin/coroutines/Continuation;I)V
 
-    iget p1, p0, Lwc3;->a:I
+    iput-object p2, p1, Lwc3;->X:Ljava/lang/Throwable;
 
-    sub-int/2addr p1, v1
+    sget-object p2, Lyeh;->a:Lyeh;
 
-    if-ne v2, p1, :cond_0
+    invoke-virtual {p1, p2}, Lwc3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 p1, 0x0
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lwc3;->o:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lwc3;->Y:Lzc3;
+
+    iget-object v0, v0, Lzc3;->z0:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    iget-object v1, p0, Lwc3;->X:Ljava/lang/Throwable;
+
+    invoke-static {p1}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    const-string p1, "big_flow: completion"
+
+    if-eqz v1, :cond_0
+
+    invoke-static {v0, p1, v1}, Lnm4;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lmke;
+    invoke-static {v0, p1}, Lnm4;->y(Ljava/lang/String;Ljava/lang/String;)V
 
-    add-int/2addr v2, v1
-
-    aget-wide v4, v0, v2
-
-    aget-wide v0, v6, v2
-
-    invoke-direct {p1, v4, v5, v0, v1}, Lmke;-><init>(JJ)V
-
-    new-instance p2, Lgke;
-
-    invoke-direct {p2, v3, p1}, Lgke;-><init>(Lmke;Lmke;)V
-
-    return-object p2
-
-    :cond_1
     :goto_0
-    new-instance p1, Lgke;
-
-    invoke-direct {p1, v3, v3}, Lgke;-><init>(Lmke;Lmke;)V
+    sget-object p1, Lyeh;->a:Lyeh;
 
     return-object p1
-.end method
 
-.method public final f()J
-    .locals 2
+    :pswitch_0
+    iget-object v0, p0, Lwc3;->X:Ljava/lang/Throwable;
 
-    iget-wide v0, p0, Lwc3;->X:J
+    invoke-static {p1}, Lmtd;->g0(Ljava/lang/Object;)V
 
-    return-wide v0
-.end method
+    iget-object p1, p0, Lwc3;->Y:Lzc3;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    iget-object p1, p1, Lzc3;->z0:Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p1, Ljava/lang/String;
 
-    const-string v1, "ChunkIndex(length="
+    const-string v1, "big_flow: fail"
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {p1, v1, v0}, Lnm4;->A(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget v1, p0, Lwc3;->a:I
+    throw v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    nop
 
-    const-string v1, ", sizes="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lwc3;->b:[I
-
-    invoke-static {v1}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", offsets="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lwc3;->c:[J
-
-    invoke-static {v1}, Ljava/util/Arrays;->toString([J)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", timeUs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lwc3;->o:[J
-
-    invoke-static {v1}, Ljava/util/Arrays;->toString([J)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", durationsUs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lwc3;->d:[J
-
-    invoke-static {v1}, Ljava/util/Arrays;->toString([J)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

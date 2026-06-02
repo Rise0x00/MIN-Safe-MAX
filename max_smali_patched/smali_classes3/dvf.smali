@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/UnaryOperator;
+.implements Ljava/util/function/Predicate;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lauf;
+.field public final synthetic b:Levf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lauf;I)V
+.method public synthetic constructor <init>(Levf;I)V
     .locals 0
 
     iput p2, p0, Ldvf;->a:I
 
-    iput-object p1, p0, Ldvf;->b:Lauf;
+    iput-object p1, p0, Ldvf;->b:Levf;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,54 +27,64 @@
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final test(Ljava/lang/Object;)Z
+    .locals 1
 
     iget v0, p0, Ldvf;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Lhvf;
+    iget-object v0, p0, Ldvf;->b:Levf;
 
-    iget-object v0, p0, Ldvf;->b:Lauf;
+    check-cast p1, Lrw3;
 
-    iget-wide v0, v0, Lauf;->b:J
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p1, p1, Lhvf;->b:Ljava/lang/String;
+    iget-object p1, p1, Lrw3;->b:[B
 
-    new-instance v2, Lhvf;
+    iget-object v0, v0, Lvw3;->b:[B
 
-    invoke-direct {v2, v0, v1, p1}, Lhvf;-><init>(JLjava/lang/String;)V
+    invoke-static {p1, v0}, Ljava/util/Arrays;->equals([B[B)Z
 
-    return-object v2
+    move-result p1
+
+    return p1
 
     :pswitch_0
-    check-cast p1, Lhvf;
+    iget-object v0, p0, Ldvf;->b:Levf;
 
-    iget-object v0, p0, Ldvf;->b:Lauf;
+    check-cast p1, Lrw3;
 
-    iget-wide v0, v0, Lauf;->b:J
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p1, p1, Lhvf;->b:Ljava/lang/String;
+    iget-object p1, p1, Lrw3;->b:[B
 
-    new-instance v2, Lhvf;
+    iget-object v0, v0, Lvw3;->b:[B
 
-    invoke-direct {v2, v0, v1, p1}, Lhvf;-><init>(JLjava/lang/String;)V
+    invoke-static {p1, v0}, Ljava/util/Arrays;->equals([B[B)Z
 
-    return-object v2
+    move-result p1
+
+    return p1
 
     :pswitch_1
-    check-cast p1, Ljava/lang/Long;
+    iget-object v0, p0, Ldvf;->b:Levf;
 
-    iget-object p1, p0, Ldvf;->b:Lauf;
+    check-cast p1, Lrw3;
 
-    iget-wide v0, p1, Lauf;->b:J
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-object p1, p1, Lrw3;->b:[B
 
-    move-result-object p1
+    iget-object v0, v0, Lvw3;->b:[B
 
-    return-object p1
+    invoke-static {p1, v0}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p1
+
+    return p1
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

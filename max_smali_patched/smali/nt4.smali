@@ -1,385 +1,751 @@
 .class public final Lnt4;
-.super Ldkf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Llk8;
 
 
 # instance fields
-.field public final c:Llt4;
+.field public final a:Lko4;
 
-.field public d:Landroid/animation/AnimatorSet;
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:J
+
+.field public final f:I
+
+.field public final g:Z
+
+.field public final h:J
+
+.field public final i:Ljava/util/HashMap;
+
+.field public j:J
 
 
 # direct methods
-.method public constructor <init>(Llt4;)V
-    .locals 0
+.method public constructor <init>(Lko4;IIIIZ)V
+    .locals 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnt4;->c:Llt4;
+    const-string v0, "bufferForPlaybackMs"
+
+    const/4 v1, 0x0
+
+    const-string v2, "0"
+
+    invoke-static {v0, p4, v1, v2}, Lnt4;->m(Ljava/lang/String;IILjava/lang/String;)V
+
+    const-string v3, "bufferForPlaybackAfterRebufferMs"
+
+    invoke-static {v3, p5, v1, v2}, Lnt4;->m(Ljava/lang/String;IILjava/lang/String;)V
+
+    const-string v4, "minBufferMs"
+
+    invoke-static {v4, p2, p4, v0}, Lnt4;->m(Ljava/lang/String;IILjava/lang/String;)V
+
+    invoke-static {v4, p2, p5, v3}, Lnt4;->m(Ljava/lang/String;IILjava/lang/String;)V
+
+    const-string v0, "maxBufferMs"
+
+    invoke-static {v0, p3, p2, v4}, Lnt4;->m(Ljava/lang/String;IILjava/lang/String;)V
+
+    const-string v0, "backBufferDurationMs"
+
+    invoke-static {v0, v1, v1, v2}, Lnt4;->m(Ljava/lang/String;IILjava/lang/String;)V
+
+    iput-object p1, p0, Lnt4;->a:Lko4;
+
+    int-to-long p1, p2
+
+    invoke-static {p1, p2}, Lpnh;->U(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lnt4;->b:J
+
+    int-to-long p1, p3
+
+    invoke-static {p1, p2}, Lpnh;->U(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lnt4;->c:J
+
+    int-to-long p1, p4
+
+    invoke-static {p1, p2}, Lpnh;->U(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lnt4;->d:J
+
+    int-to-long p1, p5
+
+    invoke-static {p1, p2}, Lpnh;->U(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lnt4;->e:J
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Lnt4;->f:I
+
+    iput-boolean p6, p0, Lnt4;->g:Z
+
+    int-to-long p1, v1
+
+    invoke-static {p1, p2}, Lpnh;->U(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lnt4;->h:J
+
+    new-instance p1, Ljava/util/HashMap;
+
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p1, p0, Lnt4;->i:Ljava/util/HashMap;
+
+    const-wide/16 p1, -0x1
+
+    iput-wide p1, p0, Lnt4;->j:J
+
+    return-void
+.end method
+
+.method public static m(Ljava/lang/String;IILjava/lang/String;)V
+    .locals 0
+
+    if-lt p1, p2, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, " cannot be less than "
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0, p1}, Lh43;->i(Ljava/lang/Object;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/view/ViewGroup;)V
-    .locals 2
+.method public final a(Lkk8;[Liu5;)V
+    .locals 8
 
-    iget-object p1, p0, Lnt4;->c:Llt4;
+    iget-object p1, p1, Lkk8;->a:Lzhc;
 
-    iget-object p1, p1, Ld3;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lnt4;->i:Ljava/util/HashMap;
 
-    check-cast p1, Lekf;
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lnt4;->d:Landroid/animation/AnimatorSet;
+    move-result-object p1
 
-    if-nez v0, :cond_0
+    check-cast p1, Llt4;
 
-    invoke-virtual {p1, p0}, Lekf;->c(Ldkf;)V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-void
+    const/4 v1, -0x1
+
+    iget v2, p0, Lnt4;->f:I
+
+    if-ne v2, v1, :cond_2
+
+    array-length v1, p2
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    move v4, v3
+
+    :goto_0
+    const/high16 v5, 0xc80000
+
+    if-ge v3, v1, :cond_1
+
+    aget-object v6, p2, v3
+
+    if-eqz v6, :cond_0
+
+    invoke-interface {v6}, Liu5;->a()Ld3h;
+
+    move-result-object v6
+
+    iget v6, v6, Ld3h;->c:I
+
+    const/high16 v7, 0x20000
+
+    packed-switch v6, :pswitch_data_0
+
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p1
+
+    :pswitch_0
+    move v5, v7
+
+    goto :goto_1
+
+    :pswitch_1
+    const/high16 v5, 0x1900000
+
+    goto :goto_1
+
+    :pswitch_2
+    const/high16 v5, 0x7d00000
+
+    goto :goto_1
+
+    :pswitch_3
+    const/high16 v5, 0x89a0000
+
+    goto :goto_1
+
+    :pswitch_4
+    move v5, v2
+
+    :goto_1
+    :pswitch_5
+    add-int/2addr v4, v5
 
     :cond_0
-    iget-boolean v1, p1, Lekf;->g:Z
-
-    if-eqz v1, :cond_1
-
-    sget-object v1, Lpt4;->a:Lpt4;
-
-    invoke-virtual {v1, v0}, Lpt4;->a(Landroid/animation/AnimatorSet;)V
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->end()V
+    invoke-static {v5, v4}, Ljava/lang/Math;->max(II)I
 
-    :goto_0
-    const/4 v0, 0x2
-
-    invoke-static {v0}, Landroidx/fragment/app/c;->K(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Animator from operation "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, " has been canceled"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean p1, p1, Lekf;->g:Z
-
-    if-eqz p1, :cond_2
-
-    const-string p1, " with seeking."
-
-    goto :goto_1
+    move-result v2
 
     :cond_2
-    const-string p1, "."
+    iput v2, p1, Llt4;->b:I
 
-    :goto_1
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 p1, 0x20
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "FragmentManager"
-
-    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_3
-    return-void
-.end method
-
-.method public final b(Landroid/view/ViewGroup;)V
-    .locals 2
-
-    iget-object p1, p0, Lnt4;->c:Llt4;
-
-    iget-object p1, p1, Ld3;->b:Ljava/lang/Object;
-
-    check-cast p1, Lekf;
-
-    iget-object v0, p0, Lnt4;->d:Landroid/animation/AnimatorSet;
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p1, p0}, Lekf;->c(Ldkf;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
-
-    const/4 v0, 0x2
-
-    invoke-static {v0}, Landroidx/fragment/app/c;->K(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Animator from operation "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, " has started."
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "FragmentManager"
-
-    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_1
-    return-void
-.end method
-
-.method public final c(Lpf0;)V
-    .locals 11
-
-    iget-object v0, p0, Lnt4;->c:Llt4;
-
-    iget-object v0, v0, Ld3;->b:Ljava/lang/Object;
-
-    check-cast v0, Lekf;
-
-    iget-object v1, p0, Lnt4;->d:Landroid/animation/AnimatorSet;
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {v0, p0}, Lekf;->c(Ldkf;)V
-
-    return-void
-
-    :cond_0
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v3, 0x22
-
-    if-lt v2, v3, :cond_5
-
-    iget-object v2, v0, Lekf;->c:Landroidx/fragment/app/a;
-
-    iget-boolean v2, v2, Landroidx/fragment/app/a;->x0:Z
-
-    if-eqz v2, :cond_5
-
-    const/4 v2, 0x2
-
-    invoke-static {v2}, Landroidx/fragment/app/c;->K(I)Z
-
-    move-result v3
-
-    const-string v4, "FragmentManager"
-
-    if-eqz v3, :cond_1
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v5, "Adding BackProgressCallbacks for Animators to operation "
-
-    invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v4, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_1
-    sget-object v3, Lot4;->a:Lot4;
-
-    invoke-virtual {v3, v1}, Lot4;->a(Landroid/animation/AnimatorSet;)J
-
-    move-result-wide v5
-
-    iget p1, p1, Lpf0;->c:F
-
-    long-to-float v3, v5
-
-    mul-float/2addr p1, v3
-
-    float-to-long v7, p1
-
-    const-wide/16 v9, 0x0
-
-    cmp-long p1, v7, v9
-
-    const-wide/16 v9, 0x1
-
-    if-nez p1, :cond_2
-
-    move-wide v7, v9
-
-    :cond_2
-    cmp-long p1, v7, v5
-
-    if-nez p1, :cond_3
-
-    sub-long v7, v5, v9
-
-    :cond_3
-    invoke-static {v2}, Landroidx/fragment/app/c;->K(I)Z
+    invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
 
     move-result p1
 
-    if-eqz p1, :cond_4
+    iget-object p2, p0, Lnt4;->a:Lko4;
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    if-eqz p1, :cond_3
 
-    const-string v2, "Setting currentPlayTime to "
+    invoke-virtual {p2}, Lko4;->b()V
 
-    invoke-direct {p1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v2, " for Animator "
-
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, " on operation "
-
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v4, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_4
-    sget-object p1, Lpt4;->a:Lpt4;
-
-    invoke-virtual {p1, v1, v7, v8}, Lpt4;->b(Landroid/animation/AnimatorSet;J)V
-
-    :cond_5
     return-void
+
+    :cond_3
+    invoke-virtual {p0}, Lnt4;->n()I
+
+    move-result p1
+
+    invoke-virtual {p2, p1}, Lko4;->c(I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch -0x2
+        :pswitch_4
+        :pswitch_5
+        :pswitch_3
+        :pswitch_5
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final d(Landroid/view/ViewGroup;)V
-    .locals 7
+.method public final b()Z
+    .locals 1
 
-    iget-object v0, p0, Lnt4;->c:Llt4;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ld3;->B0()Z
+    return v0
+.end method
+
+.method public final c()Z
+    .locals 2
+
+    iget-object v0, p0, Lnt4;->i:Ljava/util/HashMap;
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_0
-
-    move-object v6, p0
-
-    goto :goto_4
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Llt4;->L0(Landroid/content/Context;)Lws8;
-
-    move-result-object v1
-
     if-eqz v1, :cond_1
 
-    iget-object v1, v1, Lws8;->c:Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    check-cast v1, Landroid/animation/AnimatorSet;
+    move-result-object v1
+
+    check-cast v1, Llt4;
+
+    iget-boolean v1, v1, Llt4;->a:Z
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_1
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final e(Lzhc;)V
+    .locals 2
+
+    iget-object v0, p0, Lnt4;->i:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
+
+    move-result p1
+
+    iget-object v1, p0, Lnt4;->a:Lko4;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v1}, Lko4;->b()V
 
     goto :goto_0
 
+    :cond_0
+    invoke-virtual {p0}, Lnt4;->n()I
+
+    move-result p1
+
+    invoke-virtual {v1, p1}, Lko4;->c(I)V
+
     :cond_1
-    const/4 v1, 0x0
-
     :goto_0
-    iput-object v1, p0, Lnt4;->d:Landroid/animation/AnimatorSet;
+    invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
 
-    iget-object v0, v0, Ld3;->b:Ljava/lang/Object;
+    move-result p1
 
-    move-object v5, v0
+    if-eqz p1, :cond_2
 
-    check-cast v5, Lekf;
+    const-wide/16 v0, -0x1
 
-    iget-object v0, v5, Lekf;->c:Landroidx/fragment/app/a;
-
-    iget v1, v5, Lekf;->a:I
-
-    const/4 v2, 0x3
-
-    if-ne v1, v2, :cond_2
-
-    const/4 v1, 0x1
-
-    :goto_1
-    move v4, v1
-
-    goto :goto_2
+    iput-wide v0, p0, Lnt4;->j:J
 
     :cond_2
-    const/4 v1, 0x0
+    return-void
+.end method
+
+.method public final f(Lzhc;)V
+    .locals 1
+
+    iget-object v0, p0, Lnt4;->i:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
+
+    move-result p1
+
+    iget-object v0, p0, Lnt4;->a:Lko4;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v0}, Lko4;->b()V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Lnt4;->n()I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Lko4;->c(I)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final h()J
+    .locals 2
+
+    iget-wide v0, p0, Lnt4;->h:J
+
+    return-wide v0
+.end method
+
+.method public final i(Lzhc;)V
+    .locals 6
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->getId()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lnt4;->j:J
+
+    const-wide/16 v4, -0x1
+
+    cmp-long v4, v2, v4
+
+    const/4 v5, 0x0
+
+    if-eqz v4, :cond_1
+
+    cmp-long v2, v2, v0
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v5
 
     goto :goto_1
 
-    :goto_2
-    iget-object v3, v0, Landroidx/fragment/app/a;->T0:Landroid/view/View;
+    :cond_1
+    :goto_0
+    const/4 v2, 0x1
 
-    invoke-virtual {p1, v3}, Landroid/view/ViewGroup;->startViewTransition(Landroid/view/View;)V
+    :goto_1
+    const-string v3, "Players that share the same LoadControl must share the same playback thread. See ExoPlayer.Builder.setPlaybackLooper(Looper)."
 
-    iget-object v0, p0, Lnt4;->d:Landroid/animation/AnimatorSet;
+    invoke-static {v3, v2}, Lh43;->n(Ljava/lang/Object;Z)V
 
-    if-eqz v0, :cond_3
+    iput-wide v0, p0, Lnt4;->j:J
 
-    new-instance v1, Lmt4;
+    iget-object v0, p0, Lnt4;->i:Ljava/util/HashMap;
 
-    move-object v6, p0
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
-    move-object v2, p1
+    move-result v1
 
-    invoke-direct/range {v1 .. v6}, Lmt4;-><init>(Landroid/view/ViewGroup;Landroid/view/View;ZLekf;Lnt4;)V
+    if-nez v1, :cond_2
 
-    invoke-virtual {v0, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+    new-instance v1, Llt4;
 
-    goto :goto_3
+    invoke-direct {v1}, Llt4;-><init>()V
+
+    invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_2
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Llt4;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v0, -0x1
+
+    iget v1, p0, Lnt4;->f:I
+
+    if-ne v1, v0, :cond_3
+
+    const/high16 v1, 0xc80000
 
     :cond_3
-    move-object v6, p0
+    iput v1, p1, Llt4;->b:I
 
-    :goto_3
-    iget-object p1, v6, Lnt4;->d:Landroid/animation/AnimatorSet;
+    iput-boolean v5, p1, Llt4;->a:Z
 
-    if-eqz p1, :cond_4
+    return-void
+.end method
 
-    invoke-virtual {p1, v3}, Landroid/animation/AnimatorSet;->setTarget(Ljava/lang/Object;)V
+.method public final j(Lkk8;)Z
+    .locals 14
+
+    iget-object v0, p0, Lnt4;->i:Ljava/util/HashMap;
+
+    iget-object v1, p1, Lkk8;->a:Lzhc;
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Llt4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v1, p0, Lnt4;->a:Lko4;
+
+    invoke-virtual {v1}, Lko4;->a()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Lnt4;->n()I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    if-lt v1, v2, :cond_0
+
+    move v1, v3
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v4
+
+    :goto_0
+    iget v2, p1, Lkk8;->c:F
+
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    cmpl-float v5, v2, v5
+
+    iget-wide v6, p0, Lnt4;->c:J
+
+    iget-wide v8, p0, Lnt4;->b:J
+
+    if-lez v5, :cond_1
+
+    invoke-static {v2, v8, v9}, Lpnh;->D(FJ)J
+
+    move-result-wide v8
+
+    invoke-static {v8, v9, v6, v7}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v8
+
+    :cond_1
+    const-wide/32 v10, 0x7a120
+
+    invoke-static {v8, v9, v10, v11}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v8
+
+    iget-wide v12, p1, Lkk8;->b:J
+
+    cmp-long p1, v12, v8
+
+    if-gez p1, :cond_4
+
+    iget-boolean p1, p0, Lnt4;->g:Z
+
+    if-nez p1, :cond_3
+
+    if-nez v1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    move v3, v4
+
+    :cond_3
+    :goto_1
+    iput-boolean v3, v0, Llt4;->a:Z
+
+    if-nez v3, :cond_6
+
+    cmp-long p1, v12, v10
+
+    if-gez p1, :cond_6
+
+    const-string p1, "DefaultLoadControl"
+
+    const-string v1, "Target buffer size reached with less than 500ms of buffered media data."
+
+    invoke-static {p1, v1}, Lq98;->Y(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_2
 
     :cond_4
-    :goto_4
-    return-void
+    cmp-long p1, v12, v6
+
+    if-gez p1, :cond_5
+
+    if-eqz v1, :cond_6
+
+    :cond_5
+    iput-boolean v4, v0, Llt4;->a:Z
+
+    :cond_6
+    :goto_2
+    iget-boolean p1, v0, Llt4;->a:Z
+
+    return p1
+.end method
+
+.method public final k()Lko4;
+    .locals 1
+
+    iget-object v0, p0, Lnt4;->a:Lko4;
+
+    return-object v0
+.end method
+
+.method public final l(Lkk8;)Z
+    .locals 8
+
+    iget-wide v0, p1, Lkk8;->b:J
+
+    iget v2, p1, Lkk8;->c:F
+
+    invoke-static {v2, v0, v1}, Lpnh;->G(FJ)J
+
+    move-result-wide v0
+
+    iget-boolean v2, p1, Lkk8;->d:Z
+
+    if-eqz v2, :cond_0
+
+    iget-wide v2, p0, Lnt4;->e:J
+
+    goto :goto_0
+
+    :cond_0
+    iget-wide v2, p0, Lnt4;->d:J
+
+    :goto_0
+    iget-wide v4, p1, Lkk8;->e:J
+
+    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long p1, v4, v6
+
+    if-eqz p1, :cond_1
+
+    const-wide/16 v6, 0x2
+
+    div-long/2addr v4, v6
+
+    invoke-static {v4, v5, v2, v3}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v2
+
+    :cond_1
+    const-wide/16 v4, 0x0
+
+    cmp-long p1, v2, v4
+
+    if-lez p1, :cond_3
+
+    cmp-long p1, v0, v2
+
+    if-gez p1, :cond_3
+
+    iget-boolean p1, p0, Lnt4;->g:Z
+
+    if-nez p1, :cond_2
+
+    iget-object p1, p0, Lnt4;->a:Lko4;
+
+    invoke-virtual {p1}, Lko4;->a()I
+
+    move-result p1
+
+    invoke-virtual {p0}, Lnt4;->n()I
+
+    move-result v0
+
+    if-lt p1, v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final n()I
+    .locals 3
+
+    iget-object v0, p0, Lnt4;->i:Ljava/util/HashMap;
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Llt4;
+
+    iget v2, v2, Llt4;->b:I
+
+    add-int/2addr v1, v2
+
+    goto :goto_0
+
+    :cond_0
+    return v1
 .end method

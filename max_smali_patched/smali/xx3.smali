@@ -1,51 +1,67 @@
-.class public final Lxx3;
+.class public abstract synthetic Lxx3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Ljava/lang/String;
-
-
-# instance fields
-.field public final a:I
-
-.field public final b:Llji;
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
-    const-string v0, "ConstraintsCmdHandler"
-
-    invoke-static {v0}, Lkgi;->k(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {}, Lyx3;->values()[Lyx3;
 
     move-result-object v0
 
-    sput-object v0, Lxx3;->c:Ljava/lang/String;
+    array-length v0, v0
 
-    return-void
-.end method
+    new-array v0, v0, [I
 
-.method public constructor <init>(Landroid/content/Context;ILq8g;)V
-    .locals 0
+    const/4 v1, 0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :try_start_0
+    aput v1, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput p2, p0, Lxx3;->a:I
+    :catch_0
+    const/4 v1, 0x2
 
-    iget-object p1, p3, Lq8g;->o:Ltii;
+    :try_start_1
+    aput v1, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget-object p1, p1, Ltii;->j:Lnre;
+    :catch_1
+    const/4 v1, 0x3
 
-    new-instance p2, Llji;
+    :try_start_2
+    aput v1, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    const/4 p3, 0x0
+    :catch_2
+    const/4 v1, 0x4
 
-    invoke-direct {p2, p1, p3}, Llji;-><init>(Lnre;Lfii;)V
+    :try_start_3
+    aput v1, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    iput-object p2, p0, Lxx3;->b:Llji;
+    :catch_3
+    const/4 v1, 0x0
+
+    const/4 v2, 0x5
+
+    :try_start_4
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    sput-object v0, Lxx3;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

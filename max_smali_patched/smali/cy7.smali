@@ -1,57 +1,74 @@
-.class public abstract Lcy7;
-.super Ljava/lang/Object;
+.class public final Lcy7;
+.super Llqf;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Z
-
-.field public b:I
-
-
 # virtual methods
-.method public final a(I)V
+.method public final bridge synthetic D(Lki8;)V
+    .locals 0
+
+    check-cast p1, Loo0;
+
+    invoke-virtual {p0, p1}, Lcy7;->I(Loo0;)V
+
+    return-void
+.end method
+
+.method public final I(Loo0;)V
     .locals 3
 
-    iget-boolean v0, p0, Lcy7;->a:Z
+    iget-object v0, p0, Lb3e;->a:Landroid/view/View;
 
-    if-nez v0, :cond_0
+    check-cast v0, Lby7;
 
-    const/4 v0, 0x1
+    invoke-interface {p1}, Loo0;->getText()Litg;
 
-    iput-boolean v0, p0, Lcy7;->a:Z
+    move-result-object v1
 
-    iput p1, p0, Lcy7;->b:I
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    return-void
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Litg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    const-string v1, ""
 
     :cond_0
-    iget v0, p0, Lcy7;->b:I
+    invoke-virtual {v0, v1}, Lby7;->setText(Ljava/lang/CharSequence;)V
 
-    if-ne v0, p1, :cond_1
+    invoke-interface {p1}, Loo0;->getIcon()Ljava/lang/Integer;
 
-    return-void
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    goto :goto_0
 
     :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    const/4 p1, 0x0
 
-    const-string v1, "Given job ID "
+    :goto_0
+    invoke-virtual {v0, p1}, Lby7;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
-    const-string v2, " is different than previous "
-
-    invoke-static {p1, v1, v2}, Lj27;->m(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p1
-
-    iget v1, p0, Lcy7;->b:I
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-void
 .end method

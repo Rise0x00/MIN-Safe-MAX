@@ -1,127 +1,51 @@
-.class public final enum Lmhc;
-.super Ljava/lang/Enum;
+.class public final Lmhc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Lmhc;
-
-.field public static final enum b:Lmhc;
-
-.field public static final enum c:Lmhc;
-
-.field public static final enum d:Lmhc;
-
-.field public static final enum o:Lmhc;
-
-
 # instance fields
-.field public final a:I
+.field public final a:Ldng;
+
+.field public final b:Lba0;
+
+.field public final c:Loha;
+
+.field public final d:Lpxh;
+
+.field public final e:Lia8;
+
+.field public final f:Lia8;
+
+.field public final g:Lia8;
+
+.field public final h:Lia8;
+
+.field public final i:Lia8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
-
-    new-instance v0, Lmhc;
-
-    const-string v1, "FILL_START"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, v2}, Lmhc;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lmhc;
-
-    const-string v2, "FILL_CENTER"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3, v3}, Lmhc;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lmhc;->b:Lmhc;
-
-    new-instance v2, Lmhc;
-
-    const-string v3, "FILL_END"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4, v4}, Lmhc;-><init>(Ljava/lang/String;II)V
-
-    new-instance v3, Lmhc;
-
-    const-string v4, "FIT_START"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5, v5}, Lmhc;-><init>(Ljava/lang/String;II)V
-
-    sput-object v3, Lmhc;->c:Lmhc;
-
-    new-instance v4, Lmhc;
-
-    const-string v5, "FIT_CENTER"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6, v6}, Lmhc;-><init>(Ljava/lang/String;II)V
-
-    sput-object v4, Lmhc;->d:Lmhc;
-
-    new-instance v5, Lmhc;
-
-    const-string v6, "FIT_END"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7, v7}, Lmhc;-><init>(Ljava/lang/String;II)V
-
-    sput-object v5, Lmhc;->o:Lmhc;
-
-    filled-new-array/range {v0 .. v5}, [Lmhc;
-
-    move-result-object v0
-
-    sput-object v0, Lmhc;->X:[Lmhc;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Ldng;Lba0;Loha;Lpxh;Lia8;Lia8;Lia8;Lia8;Lia8;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p3, p0, Lmhc;->a:I
+    iput-object p1, p0, Lmhc;->a:Ldng;
+
+    iput-object p2, p0, Lmhc;->b:Lba0;
+
+    iput-object p3, p0, Lmhc;->c:Loha;
+
+    iput-object p4, p0, Lmhc;->d:Lpxh;
+
+    iput-object p5, p0, Lmhc;->e:Lia8;
+
+    iput-object p6, p0, Lmhc;->f:Lia8;
+
+    iput-object p7, p0, Lmhc;->g:Lia8;
+
+    iput-object p8, p0, Lmhc;->h:Lia8;
+
+    iput-object p9, p0, Lmhc;->i:Lia8;
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lmhc;
-    .locals 1
-
-    const-class v0, Lmhc;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lmhc;
-
-    return-object p0
-.end method
-
-.method public static values()[Lmhc;
-    .locals 1
-
-    sget-object v0, Lmhc;->X:[Lmhc;
-
-    invoke-virtual {v0}, [Lmhc;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lmhc;
-
-    return-object v0
 .end method

@@ -1,127 +1,101 @@
-.class public final Lic3;
-.super Lp6g;
+.class public final synthetic Lic3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field public final synthetic X:Lpc3;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Lpc3;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Landroid/view/View;I)V
     .locals 0
 
-    iput-object p1, p0, Lic3;->X:Lpc3;
+    iput p2, p0, Lic3;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lic3;->b:Landroid/view/View;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 3
 
-    check-cast p1, Lzlb;
+    iget v0, p0, Lic3;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lic3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object p1, p0, Lic3;->b:Landroid/view/View;
 
-    move-result-object p1
+    check-cast p1, Lcdf;
 
-    check-cast p1, Lic3;
+    if-eqz p2, :cond_0
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    invoke-virtual {p1}, Landroid/view/View;->callOnClick()Z
 
-    invoke-virtual {p1, p2}, Lic3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_0
+    return-void
 
-    return-object p2
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lic3;->b:Landroid/view/View;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    check-cast v0, Lcom/google/android/material/chip/Chip;
 
-    new-instance v0, Lic3;
+    iget-object v1, v0, Lcom/google/android/material/chip/Chip;->D0:Lky8;
 
-    iget-object v1, p0, Lic3;->X:Lpc3;
+    if-eqz v1, :cond_2
 
-    invoke-direct {v0, v1, p2}, Lic3;-><init>(Lpc3;Lkotlin/coroutines/Continuation;)V
+    check-cast v1, Lsxj;
 
-    iput-object p1, v0, Lic3;->o:Ljava/lang/Object;
+    iget-object v1, v1, Lsxj;->b:Ljava/lang/Object;
 
-    return-object v0
-.end method
+    check-cast v1, Lxb3;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    if-eqz p2, :cond_1
 
-    iget-object v0, p0, Lic3;->o:Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Lxb3;->a(Lly8;)Z
 
-    check-cast v0, Lzlb;
+    move-result v2
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lic3;->X:Lpc3;
-
-    iget-object p1, p1, Lpc3;->o:Ljava/lang/Object;
-
-    check-cast p1, Lspf;
-
-    invoke-virtual {p1, v0}, Lspf;->setValue(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lic3;->X:Lpc3;
-
-    iget-object p1, p1, Lpc3;->Z:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/String;
-
-    sget-object v1, Lc5j;->a:Ledb;
-
-    if-nez v1, :cond_0
+    if-eqz v2, :cond_2
 
     goto :goto_0
 
-    :cond_0
-    sget-object v2, Lkk8;->d:Lkk8;
-
-    invoke-virtual {v1, v2}, Ledb;->b(Lkk8;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "big_flow: onEach "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", isEmitted=true"
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, p1, v0, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
     :cond_1
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    iget-boolean v2, v1, Lxb3;->e:Z
 
-    return-object p1
+    invoke-virtual {v1, v0, v2}, Lxb3;->e(Lly8;Z)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    :goto_0
+    invoke-virtual {v1}, Lxb3;->d()V
+
+    :cond_2
+    iget-object v0, v0, Lcom/google/android/material/chip/Chip;->C0:Landroid/widget/CompoundButton$OnCheckedChangeListener;
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0, p1, p2}, Landroid/widget/CompoundButton$OnCheckedChangeListener;->onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+
+    :cond_3
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -2,49 +2,46 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvwa;
 
+# instance fields
+.field public final a:Ljava/util/List;
 
-# static fields
-.field public static final a:Lwzi;
+.field public final b:Ljava/util/List;
+
+.field public final c:Ljava/util/List;
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:J
+
+.field public final h:F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lwzi;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lwzi;->a:Lwzi;
-
-    new-instance v0, Lbri;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
-
-    const-class v1, Lpri;
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public constructor <init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;IIIJF)V
     .locals 0
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    iput-object p1, p0, Lwzi;->a:Ljava/util/List;
 
-    throw p1
+    iput-object p2, p0, Lwzi;->b:Ljava/util/List;
+
+    iput-object p3, p0, Lwzi;->c:Ljava/util/List;
+
+    iput p4, p0, Lwzi;->d:I
+
+    iput p5, p0, Lwzi;->e:I
+
+    iput p6, p0, Lwzi;->f:I
+
+    iput-wide p7, p0, Lwzi;->g:J
+
+    iput p9, p0, Lwzi;->h:F
+
+    return-void
 .end method

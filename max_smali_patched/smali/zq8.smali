@@ -1,498 +1,276 @@
-.class public final Lzq8;
-.super Ljava/lang/Object;
+.class public final enum Lzq8;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements Ll4c;
+
+
+# static fields
+.field public static final enum A0:Lzq8;
+
+.field public static final enum B0:Lzq8;
+
+.field public static final enum C0:Lzq8;
+
+.field public static final enum D0:Lzq8;
+
+.field public static final enum E0:Lzq8;
+
+.field public static final enum F0:Lzq8;
+
+.field public static final synthetic G0:[Lzq8;
+
+.field public static final enum X:Lzq8;
+
+.field public static final enum Y:Lzq8;
+
+.field public static final enum Z:Lzq8;
+
+.field public static final enum b:Lzq8;
+
+.field public static final enum c:Lzq8;
+
+.field public static final enum d:Lzq8;
+
+.field public static final enum o:Lzq8;
+
+.field public static final enum z0:Lzq8;
 
 
 # instance fields
-.field public final a:Lve0;
-
-.field public final b:Ljava/lang/CharSequence;
-
-.field public final c:Lyk1;
-
-.field public final d:Z
-
-.field public final e:Z
-
-.field public final f:Z
-
-.field public final g:Z
-
-.field public final h:Lgbh;
-
-.field public final i:Z
-
-.field public final j:Z
-
-.field public final k:I
-
-.field public final l:Ljava/lang/CharSequence;
-
-.field public final m:Ljava/lang/String;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lve0;Ljava/lang/CharSequence;Lyk1;ZZZZLgbh;ZZILandroid/text/SpannableStringBuilder;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 17
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lzq8;
 
-    iput-object p1, p0, Lzq8;->a:Lve0;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Lzq8;->b:Ljava/lang/CharSequence;
+    const/16 v2, 0x64
 
-    iput-object p3, p0, Lzq8;->c:Lyk1;
+    const-string v3, "SOCKET_CLOSED"
 
-    iput-boolean p4, p0, Lzq8;->d:Z
+    invoke-direct {v0, v3, v1, v2}, Lzq8;-><init>(Ljava/lang/String;II)V
 
-    iput-boolean p5, p0, Lzq8;->e:Z
+    sput-object v0, Lzq8;->b:Lzq8;
 
-    iput-boolean p6, p0, Lzq8;->f:Z
+    new-instance v1, Lzq8;
 
-    iput-boolean p7, p0, Lzq8;->g:Z
+    const/4 v2, 0x1
 
-    iput-object p8, p0, Lzq8;->h:Lgbh;
+    const/16 v3, 0x65
 
-    iput-boolean p9, p0, Lzq8;->i:Z
+    const-string v4, "SOCKET_DNS_ERROR"
 
-    iput-boolean p10, p0, Lzq8;->j:Z
+    invoke-direct {v1, v4, v2, v3}, Lzq8;-><init>(Ljava/lang/String;II)V
 
-    iput p11, p0, Lzq8;->k:I
+    sput-object v1, Lzq8;->c:Lzq8;
 
-    iput-object p12, p0, Lzq8;->l:Ljava/lang/CharSequence;
+    new-instance v2, Lzq8;
 
-    iput-object p13, p0, Lzq8;->m:Ljava/lang/String;
+    const/4 v3, 0x2
+
+    const/16 v4, 0x66
+
+    const-string v5, "SOCKET_CONNECT_ERROR"
+
+    invoke-direct {v2, v5, v3, v4}, Lzq8;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lzq8;->d:Lzq8;
+
+    new-instance v3, Lzq8;
+
+    const/4 v4, 0x3
+
+    const/16 v5, 0x67
+
+    const-string v6, "SOCKET_TIMEOUT"
+
+    invoke-direct {v3, v6, v4, v5}, Lzq8;-><init>(Ljava/lang/String;II)V
+
+    sput-object v3, Lzq8;->o:Lzq8;
+
+    new-instance v4, Lzq8;
+
+    const/4 v5, 0x4
+
+    const/16 v6, 0x68
+
+    const-string v7, "SOCKET_IO_ERROR"
+
+    invoke-direct {v4, v7, v5, v6}, Lzq8;-><init>(Ljava/lang/String;II)V
+
+    sput-object v4, Lzq8;->X:Lzq8;
+
+    new-instance v5, Lzq8;
+
+    const/4 v6, 0x5
+
+    const/16 v7, 0x69
+
+    const-string v8, "SESSION_STATE_ERROR"
+
+    invoke-direct {v5, v8, v6, v7}, Lzq8;-><init>(Ljava/lang/String;II)V
+
+    sput-object v5, Lzq8;->Y:Lzq8;
+
+    new-instance v6, Lzq8;
+
+    const/4 v7, 0x6
+
+    const/16 v8, 0x6a
+
+    const-string v9, "USER_LOGOUT"
+
+    invoke-direct {v6, v9, v7, v8}, Lzq8;-><init>(Ljava/lang/String;II)V
+
+    sput-object v6, Lzq8;->Z:Lzq8;
+
+    new-instance v7, Lzq8;
+
+    const/4 v8, 0x7
+
+    const/16 v9, 0x6e
+
+    const-string v10, "SESSION_FORCE_UPDATE"
+
+    invoke-direct {v7, v10, v8, v9}, Lzq8;-><init>(Ljava/lang/String;II)V
+
+    sput-object v7, Lzq8;->z0:Lzq8;
+
+    new-instance v8, Lzq8;
+
+    const/16 v9, 0x8
+
+    const/16 v10, 0x6f
+
+    const-string v11, "SESSION_RESTART"
+
+    invoke-direct {v8, v11, v9, v10}, Lzq8;-><init>(Ljava/lang/String;II)V
+
+    sput-object v8, Lzq8;->A0:Lzq8;
+
+    new-instance v9, Lzq8;
+
+    const/16 v10, 0x9
+
+    const/16 v11, 0x78
+
+    const-string v12, "LOGIN_DROP_CACHE"
+
+    invoke-direct {v9, v12, v10, v11}, Lzq8;-><init>(Ljava/lang/String;II)V
+
+    sput-object v9, Lzq8;->B0:Lzq8;
+
+    new-instance v10, Lzq8;
+
+    const/16 v11, 0xa
+
+    const/16 v12, 0x79
+
+    const-string v13, "LOGIN_BACK_BLOCKED"
+
+    invoke-direct {v10, v13, v11, v12}, Lzq8;-><init>(Ljava/lang/String;II)V
+
+    sput-object v10, Lzq8;->C0:Lzq8;
+
+    new-instance v11, Lzq8;
+
+    const/16 v12, 0xb
+
+    const/16 v13, 0x7a
+
+    const-string v14, "LOGIN_RESTART"
+
+    invoke-direct {v11, v14, v12, v13}, Lzq8;-><init>(Ljava/lang/String;II)V
+
+    sput-object v11, Lzq8;->D0:Lzq8;
+
+    new-instance v12, Lzq8;
+
+    const/16 v13, 0xc
+
+    const/16 v14, 0x7b
+
+    const-string v15, "LOGIN_UNKNOWN"
+
+    invoke-direct {v12, v15, v13, v14}, Lzq8;-><init>(Ljava/lang/String;II)V
+
+    sput-object v12, Lzq8;->E0:Lzq8;
+
+    new-instance v13, Lzq8;
+
+    const/16 v14, 0xd
+
+    const/16 v15, 0x7c
+
+    move-object/from16 v16, v0
+
+    const-string v0, "LOGIN_WORK_UNKNOWN"
+
+    invoke-direct {v13, v0, v14, v15}, Lzq8;-><init>(Ljava/lang/String;II)V
+
+    sput-object v13, Lzq8;->F0:Lzq8;
+
+    move-object/from16 v0, v16
+
+    filled-new-array/range {v0 .. v13}, [Lzq8;
+
+    move-result-object v0
+
+    sput-object v0, Lzq8;->G0:[Lzq8;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-ne p0, p1, :cond_0
+    iput p3, p0, Lzq8;->a:I
 
-    goto/16 :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lzq8;
-
-    if-nez v0, :cond_1
-
-    goto/16 :goto_0
-
-    :cond_1
-    check-cast p1, Lzq8;
-
-    iget-object v0, p0, Lzq8;->a:Lve0;
-
-    iget-object v1, p1, Lzq8;->a:Lve0;
-
-    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto/16 :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lzq8;->b:Ljava/lang/CharSequence;
-
-    iget-object v1, p1, Lzq8;->b:Ljava/lang/CharSequence;
-
-    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lzq8;->c:Lyk1;
-
-    iget-object v1, p1, Lzq8;->c:Lyk1;
-
-    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-boolean v0, p0, Lzq8;->d:Z
-
-    iget-boolean v1, p1, Lzq8;->d:Z
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-boolean v0, p0, Lzq8;->e:Z
-
-    iget-boolean v1, p1, Lzq8;->e:Z
-
-    if-eq v0, v1, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-boolean v0, p0, Lzq8;->f:Z
-
-    iget-boolean v1, p1, Lzq8;->f:Z
-
-    if-eq v0, v1, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget-boolean v0, p0, Lzq8;->g:Z
-
-    iget-boolean v1, p1, Lzq8;->g:Z
-
-    if-eq v0, v1, :cond_8
-
-    goto :goto_0
-
-    :cond_8
-    iget-object v0, p0, Lzq8;->h:Lgbh;
-
-    iget-object v1, p1, Lzq8;->h:Lgbh;
-
-    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_9
-
-    goto :goto_0
-
-    :cond_9
-    iget-boolean v0, p0, Lzq8;->i:Z
-
-    iget-boolean v1, p1, Lzq8;->i:Z
-
-    if-eq v0, v1, :cond_a
-
-    goto :goto_0
-
-    :cond_a
-    iget-boolean v0, p0, Lzq8;->j:Z
-
-    iget-boolean v1, p1, Lzq8;->j:Z
-
-    if-eq v0, v1, :cond_b
-
-    goto :goto_0
-
-    :cond_b
-    iget v0, p0, Lzq8;->k:I
-
-    iget v1, p1, Lzq8;->k:I
-
-    if-eq v0, v1, :cond_c
-
-    goto :goto_0
-
-    :cond_c
-    iget-object v0, p0, Lzq8;->l:Ljava/lang/CharSequence;
-
-    iget-object v1, p1, Lzq8;->l:Ljava/lang/CharSequence;
-
-    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_d
-
-    goto :goto_0
-
-    :cond_d
-    iget-object v0, p0, Lzq8;->m:Ljava/lang/String;
-
-    iget-object p1, p1, Lzq8;->m:Ljava/lang/String;
-
-    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_e
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_e
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public static valueOf(Ljava/lang/String;)Lzq8;
+    .locals 1
 
-    const/4 v0, 0x0
+    const-class v0, Lzq8;
 
-    iget-object v1, p0, Lzq8;->a:Lve0;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    if-nez v1, :cond_0
+    move-result-object p0
 
-    move v1, v0
+    check-cast p0, Lzq8;
 
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Lve0;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    const/16 v2, 0x1f
-
-    mul-int/2addr v1, v2
-
-    iget-object v3, p0, Lzq8;->b:Ljava/lang/CharSequence;
-
-    if-nez v3, :cond_1
-
-    move v3, v0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    :goto_1
-    add-int/2addr v1, v3
-
-    mul-int/2addr v1, v2
-
-    iget-object v3, p0, Lzq8;->c:Lyk1;
-
-    if-nez v3, :cond_2
-
-    move v3, v0
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v3}, Lyk1;->hashCode()I
-
-    move-result v3
-
-    :goto_2
-    add-int/2addr v1, v3
-
-    mul-int/2addr v1, v2
-
-    iget-boolean v3, p0, Lzq8;->d:Z
-
-    invoke-static {v1, v2, v3}, Lcbh;->j(IIZ)I
-
-    move-result v1
-
-    iget-boolean v3, p0, Lzq8;->e:Z
-
-    invoke-static {v1, v2, v3}, Lcbh;->j(IIZ)I
-
-    move-result v1
-
-    iget-boolean v3, p0, Lzq8;->f:Z
-
-    invoke-static {v1, v2, v3}, Lcbh;->j(IIZ)I
-
-    move-result v1
-
-    iget-boolean v3, p0, Lzq8;->g:Z
-
-    invoke-static {v1, v2, v3}, Lcbh;->j(IIZ)I
-
-    move-result v1
-
-    iget-object v3, p0, Lzq8;->h:Lgbh;
-
-    if-nez v3, :cond_3
-
-    move v3, v0
-
-    goto :goto_3
-
-    :cond_3
-    invoke-virtual {v3}, Lgbh;->hashCode()I
-
-    move-result v3
-
-    :goto_3
-    add-int/2addr v1, v3
-
-    mul-int/2addr v1, v2
-
-    iget-boolean v3, p0, Lzq8;->i:Z
-
-    invoke-static {v1, v2, v3}, Lcbh;->j(IIZ)I
-
-    move-result v1
-
-    iget-boolean v3, p0, Lzq8;->j:Z
-
-    invoke-static {v1, v2, v3}, Lcbh;->j(IIZ)I
-
-    move-result v1
-
-    iget v3, p0, Lzq8;->k:I
-
-    invoke-static {v3, v1, v2}, Lpqb;->i(III)I
-
-    move-result v1
-
-    iget-object v3, p0, Lzq8;->l:Ljava/lang/CharSequence;
-
-    if-nez v3, :cond_4
-
-    move v3, v0
-
-    goto :goto_4
-
-    :cond_4
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    :goto_4
-    add-int/2addr v1, v3
-
-    mul-int/2addr v1, v2
-
-    iget-object v2, p0, Lzq8;->m:Ljava/lang/String;
-
-    if-nez v2, :cond_5
-
-    goto :goto_5
-
-    :cond_5
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    :goto_5
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public static values()[Lzq8;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object v0, Lzq8;->G0:[Lzq8;
 
-    const-string v1, "MainSpeakerState(avatar="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lzq8;->a:Lve0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", name="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lzq8;->b:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", id="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lzq8;->c:Lyk1;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isTalking="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lzq8;->d:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isConnectedOnce="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isUserConnectionOnce="
-
-    const-string v2, ", isConnecting="
-
-    iget-boolean v3, p0, Lzq8;->e:Z
-
-    iget-boolean v4, p0, Lzq8;->f:Z
-
-    invoke-static {v1, v2, v0, v3, v4}, Lt02;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    iget-boolean v1, p0, Lzq8;->g:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", videoState="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lzq8;->h:Lgbh;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isMe="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isRaiseHand="
-
-    const-string v2, ", talkingState="
-
-    iget-boolean v3, p0, Lzq8;->i:Z
-
-    iget-boolean v4, p0, Lzq8;->j:Z
-
-    invoke-static {v1, v2, v0, v3, v4}, Lt02;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    iget v1, p0, Lzq8;->k:I
-
-    invoke-static {v1}, Liwd;->m(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", label="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lzq8;->l:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", userNameAccessibility="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lzq8;->m:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
+    check-cast v0, [Lzq8;
+
     return-object v0
+.end method
+
+
+# virtual methods
+.method public final a()I
+    .locals 1
+
+    iget v0, p0, Lzq8;->a:I
+
+    return v0
 .end method

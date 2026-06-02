@@ -1,120 +1,86 @@
-.class public final synthetic Lm68;
+.class public final Lm68;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lnm4;
+.implements Lc88;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Lm68;
 
-.field public final synthetic b:J
-
-.field public final synthetic c:I
+.field public static final b:Ll68;
 
 
 # direct methods
-.method public synthetic constructor <init>(IJ)V
+.method static constructor <clinit>()V
     .locals 1
 
-    .line 1
-    const/4 v0, 0x0
+    new-instance v0, Lm68;
 
-    iput v0, p0, Lm68;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lm68;->a:Lm68;
 
-    iput p1, p0, Lm68;->c:I
+    sget-object v0, Ll68;->b:Ll68;
 
-    iput-wide p2, p0, Lm68;->b:J
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(JI)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x1
-
-    iput v0, p0, Lm68;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lm68;->b:J
-
-    iput p3, p0, Lm68;->c:I
+    sput-object v0, Lm68;->b:Ll68;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 5
+.method public final a(Lvk5;Ljava/lang/Object;)V
+    .locals 3
 
-    iget v0, p0, Lm68;->a:I
+    check-cast p2, Lk68;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {p1}, Ls5b;->a(Lvk5;)V
 
-    new-instance v0, Lone/me/location/map/pick/PickLocationScreen;
+    sget-object v0, Labg;->a:Labg;
 
-    iget-wide v1, p0, Lm68;->b:J
+    sget-object v1, Lu58;->a:Lu58;
 
-    iget v3, p0, Lm68;->c:I
+    new-instance v2, Lih8;
 
-    invoke-direct {v0, v1, v2, v3}, Lone/me/location/map/pick/PickLocationScreen;-><init>(JI)V
+    invoke-direct {v2, v0, v1}, Lih8;-><init>(Lc88;Lc88;)V
 
-    return-object v0
+    invoke-virtual {v2, p1, p2}, Lgw8;->a(Lvk5;Ljava/lang/Object;)V
 
-    :pswitch_0
-    new-instance v0, Landroidx/fragment/app/FragmentWrapperWidget;
+    return-void
+.end method
 
-    iget v1, p0, Lm68;->c:I
+.method public final b(Lbn4;)Ljava/lang/Object;
+    .locals 4
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p1}, Ls5b;->c(Lbn4;)Lo58;
 
-    move-result-object v1
+    new-instance v0, Lk68;
 
-    new-instance v2, Lktb;
+    sget-object v1, Labg;->a:Labg;
 
-    const-string v3, "ru.ok.tamtam.extra.REQUEST_CODE"
+    sget-object v2, Lu58;->a:Lu58;
 
-    invoke-direct {v2, v3, v1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    new-instance v3, Lih8;
 
-    iget-wide v3, p0, Lm68;->b:J
+    invoke-direct {v3, v1, v2}, Lih8;-><init>(Lc88;Lc88;)V
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v3, p1}, Lk0;->i(Lbn4;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p1
 
-    new-instance v3, Lktb;
+    check-cast p1, Ljava/util/Map;
 
-    const-string v4, "ru.ok.tamtam.extra.CHAT_ID"
-
-    invoke-direct {v3, v4, v1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v2, v3}, [Lktb;
-
-    move-result-object v1
-
-    invoke-static {v1}, Laaj;->c([Lktb;)Landroid/os/Bundle;
-
-    move-result-object v1
-
-    const v2, 0x7a3a1dca
-
-    const-class v3, Lru/ok/messages/location/FrgLocationMap;
-
-    const-string v4, "ru.ok.messages.location.FrgLocationMap"
-
-    invoke-direct {v0, v2, v3, v4, v1}, Landroidx/fragment/app/FragmentWrapperWidget;-><init>(ILjava/lang/Class;Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-direct {v0, p1}, Lk68;-><init>(Ljava/util/Map;)V
 
     return-object v0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public final d()Lt2f;
+    .locals 1
+
+    sget-object v0, Lm68;->b:Ll68;
+
+    return-object v0
 .end method

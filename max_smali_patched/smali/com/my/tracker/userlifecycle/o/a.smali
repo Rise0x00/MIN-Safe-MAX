@@ -187,9 +187,7 @@
     .line 6
     iget-object p3, p0, Lcom/my/tracker/userlifecycle/o/a;->a:Lcom/my/tracker/core/EngineMiniCore;
 
-    new-instance v0, Lwli;
-
-    const/4 v6, 0x1
+    new-instance v0, Ltyi;
 
     move-object v1, p0
 
@@ -197,9 +195,11 @@
 
     move-object v5, p2
 
-    invoke-direct/range {v0 .. v6}, Lwli;-><init>(Lcom/my/tracker/userlifecycle/o/a;Ljava/util/Map;ZLjava/lang/String;Ljava/lang/String;I)V
+    invoke-direct/range {v0 .. v5}, Ltyi;-><init>(Lcom/my/tracker/userlifecycle/o/a;Ljava/util/Map;ZLjava/lang/String;Ljava/lang/String;)V
 
     const/4 v5, 0x1
+
+    const/4 v6, 0x1
 
     const-wide/16 v2, 0x7
 
@@ -236,11 +236,11 @@
     .line 16
     iget-object v1, p0, Lcom/my/tracker/userlifecycle/o/a;->a:Lcom/my/tracker/core/EngineMiniCore;
 
-    new-instance v9, Lahg;
+    new-instance v9, Lauf;
 
     const/16 v0, 0x10
 
-    invoke-direct {v9, p0, v0, p1}, Lahg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v9, p0, v0, p1}, Lauf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     const/4 v5, 0x0
 
@@ -320,9 +320,7 @@
     .line 5
     iget-object p3, p0, Lcom/my/tracker/userlifecycle/o/a;->a:Lcom/my/tracker/core/EngineMiniCore;
 
-    new-instance v0, Lwli;
-
-    const/4 v6, 0x0
+    new-instance v0, Lng1;
 
     move-object v1, p0
 
@@ -330,7 +328,7 @@
 
     move-object v5, p2
 
-    invoke-direct/range {v0 .. v6}, Lwli;-><init>(Lcom/my/tracker/userlifecycle/o/a;Ljava/util/Map;ZLjava/lang/String;Ljava/lang/String;I)V
+    invoke-direct/range {v0 .. v5}, Lng1;-><init>(Lcom/my/tracker/userlifecycle/o/a;Ljava/util/Map;ZLjava/lang/String;Ljava/lang/String;)V
 
     const/4 v5, 0x1
 

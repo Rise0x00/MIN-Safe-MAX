@@ -1,48 +1,132 @@
-.class public final Lbq1;
-.super Lo84;
-
-
-# instance fields
-.field public final synthetic X:Lr3;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
-
-
-# direct methods
-.method public constructor <init>(Lr3;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lbq1;->X:Lr3;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.class public interface abstract Lbq1;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public b()Z
     .locals 1
 
-    iput-object p1, p0, Lbq1;->d:Ljava/lang/Object;
+    invoke-interface {p0}, Lbq1;->t()Lw1i;
 
-    iget p1, p0, Lbq1;->o:I
+    move-result-object v0
 
-    const/high16 v0, -0x80000000
+    iget-boolean v0, v0, Lw1i;->a:Z
 
-    or-int/2addr p1, v0
+    return v0
+.end method
 
-    iput p1, p0, Lbq1;->o:I
+.method public abstract d()Z
+.end method
 
-    iget-object p1, p0, Lbq1;->X:Lr3;
+.method public abstract g()Z
+.end method
 
+.method public abstract getId()Lzp1;
+.end method
+
+.method public abstract h()Z
+.end method
+
+.method public abstract i()Z
+.end method
+
+.method public abstract isConnected()Z
+.end method
+
+.method public isScreenCaptureEnabled()Z
+    .locals 1
+
+    invoke-interface {p0}, Lbq1;->r()Lw1i;
+
+    move-result-object v0
+
+    iget-boolean v0, v0, Lw1i;->a:Z
+
+    return v0
+.end method
+
+.method public abstract j()Z
+.end method
+
+.method public abstract k()Z
+.end method
+
+.method public abstract m()Z
+.end method
+
+.method public n()Z
+    .locals 1
+
+    invoke-interface {p0}, Lbq1;->b()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-interface {p0}, Lbq1;->isScreenCaptureEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lr3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return v0
 
-    move-result-object p1
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
 
-    return-object p1
+    return v0
+.end method
+
+.method public o()Z
+    .locals 1
+
+    invoke-interface {p0}, Lbq1;->k()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-interface {p0}, Lbq1;->g()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public abstract p()Z
+.end method
+
+.method public abstract q()Z
+.end method
+
+.method public abstract r()Lw1i;
+.end method
+
+.method public abstract s()I
+.end method
+
+.method public abstract t()Lw1i;
+.end method
+
+.method public abstract u()Z
 .end method

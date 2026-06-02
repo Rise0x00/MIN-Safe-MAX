@@ -1,121 +1,72 @@
-.class public final Lqya;
-.super Lzm0;
+.class public final synthetic Lqya;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/function/Predicate;
 
 
 # instance fields
-.field public final a:Le0b;
+.field public final synthetic a:I
 
-.field public final b:[Ljava/lang/Object;
-
-.field public c:I
-
-.field public d:Z
-
-.field public volatile o:Z
+.field public final synthetic b:Lzs6;
 
 
 # direct methods
-.method public constructor <init>(Le0b;[Ljava/lang/Object;)V
+.method public synthetic constructor <init>(ILzs6;)V
     .locals 0
 
+    iput p1, p0, Lqya;->a:I
+
+    iput-object p2, p0, Lqya;->b:Lzs6;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lqya;->a:Le0b;
-
-    iput-object p2, p0, Lqya;->b:[Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final clear()V
+.method public final test(Ljava/lang/Object;)Z
     .locals 1
 
-    iget-object v0, p0, Lqya;->b:[Ljava/lang/Object;
+    iget v0, p0, Lqya;->a:I
 
-    array-length v0, v0
+    packed-switch v0, :pswitch_data_0
 
-    iput v0, p0, Lqya;->c:I
+    iget-object v0, p0, Lqya;->b:Lzs6;
 
-    return-void
-.end method
+    check-cast v0, Lq43;
 
-.method public final dispose()V
-    .locals 1
+    invoke-virtual {v0, p1}, Lq43;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    move-result-object p1
 
-    iput-boolean v0, p0, Lqya;->o:Z
+    check-cast p1, Ljava/lang/Boolean;
 
-    return-void
-.end method
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-.method public final e()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lqya;->o:Z
-
-    return v0
-.end method
-
-.method public final g(I)I
-    .locals 0
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lqya;->d:Z
+    move-result p1
 
     return p1
-.end method
 
-.method public final isEmpty()Z
-    .locals 2
+    :pswitch_0
+    iget-object v0, p0, Lqya;->b:Lzs6;
 
-    iget v0, p0, Lqya;->c:I
+    check-cast v0, Lu3;
 
-    iget-object v1, p0, Lqya;->b:[Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lu3;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    array-length v1, v1
+    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    if-ne v0, v1, :cond_0
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    const/4 v0, 0x1
+    move-result p1
 
-    return v0
+    return p1
 
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final poll()Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lqya;->c:I
-
-    iget-object v1, p0, Lqya;->b:[Ljava/lang/Object;
-
-    array-length v2, v1
-
-    if-eq v0, v2, :cond_0
-
-    add-int/lit8 v2, v0, 0x1
-
-    iput v2, p0, Lqya;->c:I
-
-    aget-object v0, v1, v0
-
-    const-string v1, "The array element is null"
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

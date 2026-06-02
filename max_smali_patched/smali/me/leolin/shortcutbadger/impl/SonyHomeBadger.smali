@@ -163,7 +163,7 @@
 
     if-nez p3, :cond_1
 
-    new-instance p3, Lbjf;
+    new-instance p3, Lwuf;
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -173,7 +173,7 @@
 
     move-result-object p1
 
-    invoke-direct {p3, p1}, Landroid/content/AsyncQueryHandler;-><init>(Landroid/content/ContentResolver;)V
+    invoke-direct {p3, p1}, Lwuf;-><init>(Landroid/content/ContentResolver;)V
 
     iput-object p3, p0, Lme/leolin/shortcutbadger/impl/SonyHomeBadger;->mQueryHandler:Landroid/content/AsyncQueryHandler;
 

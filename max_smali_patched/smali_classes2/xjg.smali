@@ -1,178 +1,137 @@
-.class public final Lxjg;
+.class public final synthetic Lxjg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lfz4;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:J
+.field public final synthetic b:Lzjg;
 
-.field public final c:J
-
-.field public final d:J
-
-.field public final e:Ljava/util/EnumMap;
-
-.field public final f:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public g:Lvy7;
-
-.field public final h:Lnee;
+.field public final synthetic c:Lzjg;
 
 
 # direct methods
-.method public constructor <init>(Lo58;)V
-    .locals 3
+.method public synthetic constructor <init>(Lzjg;Lzjg;I)V
+    .locals 0
+
+    iput p3, p0, Lxjg;->a:I
+
+    iput-object p1, p0, Lxjg;->b:Lzjg;
+
+    iput-object p2, p0, Lxjg;->c:Lzjg;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v0, Lly4;->b:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
-
-    move-result-wide v1
-
-    iput-wide v1, p0, Lxjg;->a:J
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
-
-    move-result-wide v1
-
-    iput-wide v1, p0, Lxjg;->b:J
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
-
-    move-result-wide v1
-
-    iput-wide v1, p0, Lxjg;->c:J
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lxjg;->d:J
-
-    new-instance v0, Ljava/util/EnumMap;
-
-    const-class v1, Ljava/lang/Thread$State;
-
-    invoke-direct {v0, v1}, Ljava/util/EnumMap;-><init>(Ljava/lang/Class;)V
-
-    iput-object v0, p0, Lxjg;->e:Ljava/util/EnumMap;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lmbg;
-
-    check-cast p1, Lj9b;
-
-    invoke-virtual {p1}, Lj9b;->a()Lsb4;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lxjg;->f:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance p1, Lgo3;
-
-    invoke-direct {p1}, Lgo3;-><init>()V
-
-    sget-object v0, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, v0}, Lvy7;->makeCompleting$kotlinx_coroutines_core(Ljava/lang/Object;)Z
-
-    iput-object p1, p0, Lxjg;->g:Lvy7;
-
-    new-instance p1, Lnee;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p1, v0, p0}, Lnee;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lxjg;->h:Lnee;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Llpf;
-    .locals 1
-
-    iget-object v0, p0, Lxjg;->h:Lnee;
-
-    return-object v0
-.end method
-
-.method public final d(Lxk4;)V
+.method public final run()V
     .locals 5
 
-    iget-wide v0, p1, Lxk4;->a:J
+    iget v0, p0, Lxjg;->a:I
 
-    iget-wide v2, p0, Lxjg;->a:J
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v0, v1, v2, v3}, Lly4;->a(JJ)Z
+    iget-object v0, p0, Lxjg;->b:Lzjg;
 
-    move-result p1
+    iget-object v1, p0, Lxjg;->c:Lzjg;
 
-    const/4 v2, 0x0
+    iget-object v2, v0, Lzjg;->f:Luc2;
 
-    if-eqz p1, :cond_0
+    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p1, p0, Lxjg;->g:Lvy7;
+    iget-object v0, v0, Lzjg;->f:Luc2;
 
-    invoke-interface {p1}, Lsx7;->isActive()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    new-instance p1, Lwjg;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p1, v0, v2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    const/4 v0, 0x3
-
-    iget-object v1, p0, Lxjg;->f:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v1, v2, v2, p1, v0}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lxjg;->g:Lvy7;
+    invoke-virtual {v0, v1}, Luc2;->g(Lzjg;)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lxjg;->b:Lzjg;
+
+    iget-object v1, p0, Lxjg;->c:Lzjg;
+
+    iget-object v2, v0, Lzjg;->b:Ls48;
+
+    iget-object v3, v2, Ls48;->b:Ljava/lang/Object;
+
+    monitor-enter v3
+
+    :try_start_0
+    iget-object v4, v2, Ls48;->c:Ljava/lang/Object;
+
+    check-cast v4, Ljava/util/LinkedHashSet;
+
+    invoke-interface {v4, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    iget-object v2, v2, Ls48;->d:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/LinkedHashSet;
+
+    invoke-interface {v2, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    monitor-exit v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0, v1}, Lzjg;->g(Lzjg;)V
+
+    iget-object v2, v0, Lzjg;->g:Lr05;
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, v0, Lzjg;->f:Luc2;
+
+    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, v0, Lzjg;->f:Luc2;
+
+    invoke-virtual {v0, v1}, Luc2;->c(Lzjg;)V
+
+    goto :goto_0
 
     :cond_0
-    iget-wide v3, p0, Lxjg;->d:J
+    const-string v1, "SyncCaptureSessionBase"
 
-    invoke-static {v0, v1, v3, v4}, Lly4;->a(JJ)Z
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    move-result p1
+    const-string v3, "["
 
-    if-eqz p1, :cond_1
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object p1, Lwy4;->c:Lwy4;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ld3;->p0()Ljm4;
+    const-string v0, "] Cannot call onClosed() when the CameraCaptureSession is not correctly configured."
 
-    move-result-object p1
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, ":settings/dev/threadsviewer"
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v2}, Ljm4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    move-result-object v0
 
-    :cond_1
+    invoke-static {v1, v0}, Lw8g;->l(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
     return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

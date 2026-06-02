@@ -1,73 +1,61 @@
-.class public final enum Lflg;
-.super Ljava/lang/Enum;
+.class public final synthetic Lflg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
 
-# static fields
-.field public static final enum a:Lflg;
 
-.field public static final enum b:Lflg;
+# instance fields
+.field public final synthetic a:Ljava/lang/String;
 
-.field public static final synthetic c:[Lflg;
+.field public final synthetic b:Lllg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Ljava/lang/String;Lllg;)V
+    .locals 0
 
-    new-instance v0, Lflg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "UPTIME"
+    iput-object p1, p0, Lflg;->a:Ljava/lang/String;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lflg;->a:Lflg;
-
-    new-instance v1, Lflg;
-
-    const-string v2, "REALTIME"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lflg;->b:Lflg;
-
-    filled-new-array {v0, v1}, [Lflg;
-
-    move-result-object v0
-
-    sput-object v0, Lflg;->c:[Lflg;
+    iput-object p2, p0, Lflg;->b:Lllg;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lflg;
-    .locals 1
 
-    const-class v0, Lflg;
+# virtual methods
+.method public final onPushTokenGenerated(Ljava/lang/String;)V
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p0, Lflg;->a:Ljava/lang/String;
 
-    move-result-object p0
+    invoke-static {v0, p1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    check-cast p0, Lflg;
+    move-result v0
 
-    return-object p0
-.end method
+    if-nez v0, :cond_0
 
-.method public static values()[Lflg;
-    .locals 1
+    iget-object v0, p0, Lflg;->b:Lllg;
 
-    sget-object v0, Lflg;->c:[Lflg;
+    iget-object v1, v0, Lllg;->b:Ljava/lang/String;
 
-    invoke-virtual {v0}, [Lflg;->clone()Ljava/lang/Object;
+    const-string v2, "checkTokenChanged: token changed"
+
+    invoke-static {v1, v2}, Lnm4;->y(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v0, Lllg;->Y:Lia8;
+
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lflg;
+    check-cast v0, Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
 
-    return-object v0
+    invoke-interface {v0, p1}, Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;->onPushTokenGenerated(Ljava/lang/String;)V
+
+    :cond_0
+    return-void
 .end method

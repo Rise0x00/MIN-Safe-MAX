@@ -1,124 +1,85 @@
 .class public final Lfxe;
-.super Lp6g;
+.super Lgie;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lhxe;
+.field public final synthetic A0:Lkxe;
 
-.field public final synthetic Y:Lhve;
+.field public final synthetic Z:Li41;
 
-.field public o:I
+.field public final synthetic z0:Ljk4;
 
 
 # direct methods
-.method public constructor <init>(Lhxe;Lhve;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkxe;Li41;Ljk4;)V
     .locals 0
 
-    iput-object p1, p0, Lfxe;->X:Lhxe;
+    iput-object p1, p0, Lfxe;->A0:Lkxe;
 
-    iput-object p2, p0, Lfxe;->Y:Lhve;
+    iput-object p2, p0, Lfxe;->Z:Li41;
 
-    const/4 p1, 0x2
+    iput-object p3, p0, Lfxe;->z0:Ljk4;
 
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Lgie;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final d()Ljava/lang/Object;
+    .locals 5
 
-    check-cast p1, Lzb4;
+    iget-object v0, p0, Lfxe;->A0:Lkxe;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, v0, Lkxe;->d:Lyzb;
 
-    invoke-virtual {p0, p1, p2}, Lfxe;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v1, Lz1g;
 
-    move-result-object p1
+    iget-object v2, p0, Lfxe;->Z:Li41;
 
-    check-cast p1, Lfxe;
+    invoke-direct {v1, v2}, Lz1g;-><init>(Lbk4;)V
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    sget-object v3, Lqk8;->d:Ljava/util/concurrent/atomic/AtomicLong;
 
-    invoke-virtual {p1, p2}, Lfxe;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
 
-    move-result-object p1
+    const-wide/16 v3, 0x0
 
-    return-object p1
-.end method
+    iput-wide v3, v1, Lz1g;->b:J
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    new-instance v3, Lek4;
 
-    new-instance p1, Lfxe;
+    iget-object v4, p0, Lfxe;->z0:Ljk4;
 
-    iget-object v0, p0, Lfxe;->X:Lhxe;
+    invoke-direct {v3, v1, v4}, Lek4;-><init>(Lbk4;Ljk4;)V
 
-    iget-object v1, p0, Lfxe;->Y:Lhve;
+    :try_start_0
+    invoke-virtual {v3}, Lek4;->l()V
 
-    invoke-direct {p1, v0, v1, p2}, Lfxe;-><init>(Lhxe;Lhve;Lkotlin/coroutines/Continuation;)V
+    iget-object v1, v2, Li41;->z0:Landroid/net/Uri;
 
-    return-object p1
-.end method
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    invoke-interface {v0, v1, v3}, Lyzb;->r(Landroid/net/Uri;Lek4;)Ljava/lang/Object;
 
-    iget v0, p0, Lfxe;->o:I
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 v1, 0x1
+    invoke-static {v3}, Lpnh;->g(Ljava/io/Closeable;)V
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lfxe;->X:Lhxe;
-
-    iget-object p1, p1, Lhxe;->b:Li7f;
-
-    new-instance v0, Lkxe;
-
-    iget-object v2, p0, Lfxe;->Y:Lhve;
-
-    invoke-direct {v0, v2}, Lkxe;-><init>(Lhve;)V
-
-    iput v1, p0, Lfxe;->o:I
-
-    invoke-virtual {p1, v0, p0}, Li7f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
+    check-cast v0, Ld76;
 
     return-object v0
 
-    :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    :catchall_0
+    move-exception v0
 
-    return-object p1
+    invoke-static {v3}, Lpnh;->g(Ljava/io/Closeable;)V
+
+    throw v0
 .end method

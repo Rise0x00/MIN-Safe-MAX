@@ -2,161 +2,67 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/OnReceiveContentListener;
+
 
 # instance fields
-.field public final a:Lo58;
-
-.field public final b:Li7f;
-
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
+.field public final a:Lf5b;
 
 
 # direct methods
-.method public constructor <init>(Lo58;Lo58;)V
-    .locals 2
+.method public constructor <init>(Lf5b;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lh4i;->a:Lo58;
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x7
-
-    invoke-static {v0, v0, v1}, Lj7f;->b(III)Li7f;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lh4i;->b:Li7f;
-
-    invoke-interface {p2}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lmbg;
-
-    check-cast p2, Lj9b;
-
-    invoke-virtual {p2}, Lj9b;->a()Lsb4;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lh4i;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcy0;
-
-    invoke-virtual {p1, p0}, Lcy0;->d(Ljava/lang/Object;)V
+    iput-object p1, p0, Lh4i;->a:Lf5b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lf4i;)V
-    .locals 3
+.method public final onReceiveContent(Landroid/view/View;Landroid/view/ContentInfo;)Landroid/view/ContentInfo;
+    .locals 2
 
-    new-instance v0, Lg4i;
+    new-instance v0, Lt74;
 
-    const/4 v1, 0x0
+    new-instance v1, Lsxj;
 
-    invoke-direct {v0, p0, p1, v1}, Lg4i;-><init>(Lh4i;Lf4i;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v1, p2}, Lsxj;-><init>(Landroid/view/ContentInfo;)V
 
-    const/4 p1, 0x3
+    invoke-direct {v0, v1}, Lt74;-><init>(Ls74;)V
 
-    iget-object v2, p0, Lh4i;->c:Lkotlinx/coroutines/internal/ContextScope;
+    iget-object v1, p0, Lh4i;->a:Lf5b;
 
-    invoke-static {v2, v1, v1, v0, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+    invoke-interface {v1, p1, v0}, Lf5b;->a(Landroid/view/View;Lt74;)Lt74;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public final onEvent(Lj06;)V
-    .locals 3
-    .annotation runtime Lu0g;
-    .end annotation
-
-    .line 6
-    new-instance v0, Lc4i;
-
-    .line 7
-    iget-wide v1, p1, Lj06;->b:J
-
-    .line 8
-    invoke-direct {v0, v1, v2}, Lc4i;-><init>(J)V
-
-    invoke-virtual {p0, v0}, Lh4i;->a(Lf4i;)V
-
-    return-void
-.end method
-
-.method public final onEvent(Ljk0;)V
-    .locals 3
-    .annotation runtime Lu0g;
-    .end annotation
-
-    .line 2
-    new-instance v0, Le4i;
-
-    iget-wide v1, p1, Lkk0;->a:J
-
-    invoke-direct {v0, v1, v2}, Le4i;-><init>(J)V
-
-    invoke-virtual {p0, v0}, Lh4i;->a(Lf4i;)V
-
-    return-void
-.end method
-
-.method public final onEvent(Lm06;)V
-    .locals 3
-    .annotation runtime Lu0g;
-    .end annotation
-
-    .line 3
-    new-instance v0, Le4i;
-
-    .line 4
-    iget-wide v1, p1, Lm06;->b:J
-
-    .line 5
-    invoke-direct {v0, v1, v2}, Le4i;-><init>(J)V
-
-    invoke-virtual {p0, v0}, Lh4i;->a(Lf4i;)V
-
-    return-void
-.end method
-
-.method public final onEvent(Ln06;)V
-    .locals 3
-    .annotation runtime Lu0g;
-    .end annotation
-
-    .line 9
-    new-instance v0, Ld4i;
-
-    iget-wide v1, p1, Lkk0;->a:J
-
-    invoke-direct {v0, v1, v2}, Ld4i;-><init>(J)V
-
-    invoke-virtual {p0, v0}, Lh4i;->a(Lf4i;)V
-
-    return-void
-.end method
-
-.method public final onEvent(Lo06;)V
-    .locals 0
-    .annotation runtime Lu0g;
-    .end annotation
+    if-nez p1, :cond_0
 
     const/4 p1, 0x0
 
-    .line 1
-    throw p1
+    return-object p1
+
+    :cond_0
+    if-ne p1, v0, :cond_1
+
+    return-object p2
+
+    :cond_1
+    iget-object p1, p1, Lt74;->a:Ls74;
+
+    invoke-interface {p1}, Ls74;->u()Landroid/view/ContentInfo;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {p1}, La70;->k(Ljava/lang/Object;)Landroid/view/ContentInfo;
+
+    move-result-object p1
+
+    return-object p1
 .end method

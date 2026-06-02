@@ -1,13 +1,36 @@
 .class public final Lxfh;
-.super Ljava/lang/Object;
+.super Lk9e;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Lwfh;
+# virtual methods
+.method public final c(Ljava/lang/CharSequence;)Z
+    .locals 1
 
-.field public b:Z
+    move-object v0, p1
 
-.field public c:Ljava/lang/String;
+    check-cast v0, Ljava/lang/CharSequence;
 
-.field public d:Ljava/lang/String;
+    invoke-static {v0}, Lqag;->f(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    instance-of p1, p1, Lzqc;
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+.end method

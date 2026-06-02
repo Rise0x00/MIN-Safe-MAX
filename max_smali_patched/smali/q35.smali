@@ -3,26 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Llq6;
+.implements Lxs6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ls35;
+.field public final synthetic b:Lr35;
 
-.field public final synthetic c:Landroid/content/Context;
+.field public final synthetic c:Ls35;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ls35;Landroid/content/Context;I)V
+.method public synthetic constructor <init>(Lr35;Ls35;I)V
     .locals 0
 
     iput p3, p0, Lq35;->a:I
 
-    iput-object p1, p0, Lq35;->b:Ls35;
+    iput-object p1, p0, Lq35;->b:Lr35;
 
-    iput-object p2, p0, Lq35;->c:Landroid/content/Context;
+    iput-object p2, p0, Lq35;->c:Ls35;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,41 +32,203 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 3
+    .locals 14
 
     iget v0, p0, Lq35;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lq35;->c:Landroid/content/Context;
+    iget-object v0, p0, Lq35;->c:Ls35;
 
-    const/4 v1, 0x0
+    iget-object v1, v0, Ls35;->c:Lbr5;
 
-    iget-object v2, p0, Lq35;->b:Ls35;
+    iget-object v2, v0, Ls35;->b:Lapc;
 
-    invoke-virtual {v2, v0, v1}, Ls35;->f(Landroid/content/Context;Z)Landroid/widget/FrameLayout;
+    iget-object v3, p0, Lq35;->b:Lr35;
 
-    move-result-object v0
+    iget-object v3, v3, Lr35;->e:Ljava/lang/Object;
+
+    invoke-interface {v3}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/util/Map;
+
+    new-instance v4, Ljava/util/LinkedHashMap;
+
+    invoke-interface {v3}, Ljava/util/Map;->size()I
+
+    move-result v5
+
+    invoke-static {v5}, Lww8;->y0(I)I
+
+    move-result v5
+
+    invoke-direct {v4, v5}, Ljava/util/LinkedHashMap;-><init>(I)V
+
+    invoke-interface {v3}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/util/Map$Entry;
+
+    invoke-interface {v5}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v6
+
+    invoke-interface {v5}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    move-object v8, v5
+
+    check-cast v8, Lu26;
+
+    new-instance v7, Lu11;
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v2, v5}, Lapc;->b(I)Lxvi;
+
+    move-result-object v9
+
+    invoke-virtual {v2}, Lapc;->c()Lty3;
+
+    move-result-object v10
+
+    invoke-interface {v1}, Lbr5;->p()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v11
+
+    invoke-interface {v1}, Lbr5;->j()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v12
+
+    iget-object v13, v0, Ls35;->d:Lxra;
+
+    invoke-direct/range {v7 .. v13}, Lu11;-><init>(Lu26;Lxvi;Lty3;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Lxra;)V
+
+    invoke-interface {v4, v6, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lin7;
+
+    invoke-direct {v0, v4}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
     return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lq35;->c:Landroid/content/Context;
+    new-instance v5, Lu11;
 
-    const/4 v1, 0x1
+    iget-object v0, p0, Lq35;->b:Lr35;
 
-    iget-object v2, p0, Lq35;->b:Ls35;
+    iget-object v0, v0, Lr35;->c:Ljava/lang/Object;
 
-    invoke-virtual {v2, v0, v1}, Ls35;->f(Landroid/content/Context;Z)Landroid/widget/FrameLayout;
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    move-object v6, v0
+
+    check-cast v6, Lu26;
+
+    iget-object v0, p0, Lq35;->c:Ls35;
+
+    iget-object v1, v0, Ls35;->b:Lapc;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Lapc;->b(I)Lxvi;
+
+    move-result-object v7
+
+    invoke-virtual {v1}, Lapc;->c()Lty3;
+
+    move-result-object v8
+
+    iget-object v1, v0, Ls35;->c:Lbr5;
+
+    invoke-interface {v1}, Lbr5;->p()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v9
+
+    invoke-interface {v1}, Lbr5;->j()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v10
+
+    iget-object v11, v0, Ls35;->d:Lxra;
+
+    invoke-direct/range {v5 .. v11}, Lu11;-><init>(Lu26;Lxvi;Lty3;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Lxra;)V
+
+    return-object v5
+
+    :pswitch_1
+    new-instance v6, Lu11;
+
+    iget-object v0, p0, Lq35;->b:Lr35;
+
+    iget-object v0, v0, Lr35;->a:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v7, v0
+
+    check-cast v7, Lu26;
+
+    iget-object v0, p0, Lq35;->c:Ls35;
+
+    iget-object v1, v0, Ls35;->b:Lapc;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Lapc;->b(I)Lxvi;
+
+    move-result-object v8
+
+    invoke-virtual {v1}, Lapc;->c()Lty3;
+
+    move-result-object v9
+
+    iget-object v1, v0, Ls35;->c:Lbr5;
+
+    invoke-interface {v1}, Lbr5;->p()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v10
+
+    invoke-interface {v1}, Lbr5;->j()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v11
+
+    iget-object v12, v0, Ls35;->d:Lxra;
+
+    invoke-direct/range {v6 .. v12}, Lu11;-><init>(Lu26;Lxvi;Lty3;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Lxra;)V
+
+    return-object v6
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

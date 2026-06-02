@@ -2,142 +2,183 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzs6;
+
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Lcy0;
-
-.field public final c:Lla3;
-
-.field public final d:Li7f;
-
-.field public final e:Lkotlinx/coroutines/internal/ContextScope;
+.field public final synthetic b:Lmf3;
 
 
 # direct methods
-.method public constructor <init>(JLcy0;Lmbg;Lla3;)V
+.method public synthetic constructor <init>(Lmf3;I)V
     .locals 0
 
+    iput p2, p0, Lg05;->a:I
+
+    iput-object p1, p0, Lg05;->b:Lmf3;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lg05;->a:J
-
-    iput-object p3, p0, Lg05;->b:Lcy0;
-
-    iput-object p5, p0, Lg05;->c:Lla3;
-
-    const/4 p1, 0x0
-
-    const/4 p2, 0x7
-
-    invoke-static {p1, p1, p2}, Lj7f;->b(III)Li7f;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lg05;->d:Li7f;
-
-    check-cast p4, Lj9b;
-
-    invoke-virtual {p4}, Lj9b;->c()Lzp8;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lzp8;->getImmediate()Lzp8;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lg05;->e:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p3, p0}, Lcy0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lab3;)V
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
-    .annotation runtime Lu0g;
-    .end annotation
 
-    iget-object p1, p1, Lab3;->b:Ljava/util/Collection;
+    iget v0, p0, Lg05;->a:I
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    check-cast p1, Ljava/lang/Boolean;
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result v0
+    iget-object v0, p0, Lg05;->b:Lmf3;
 
-    if-eqz v0, :cond_2
+    check-cast v0, Lkn8;
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v1, v0, Lkn8;->E0:Lskg;
 
-    move-result-object v0
+    sget-object v2, Lkn8;->g1:[Lb88;
 
-    check-cast v0, Ljava/lang/Number;
+    const/16 v3, 0x12
 
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+    aget-object v2, v2, v3
 
-    move-result-wide v0
+    invoke-virtual {v1, v0, v2, p1}, Lskg;->z(Ljava/lang/Object;Lb88;Ljava/lang/Object;)V
 
-    iget-object v2, p0, Lg05;->c:Lla3;
+    sget-object p1, Lyeh;->a:Lyeh;
 
-    invoke-virtual {v2, v0, v1}, Lla3;->k(J)Lpld;
+    return-object p1
 
-    move-result-object v0
+    :pswitch_0
+    check-cast p1, Ljava/lang/Boolean;
 
-    iget-object v0, v0, Lpld;->a:Llpf;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-interface {v0}, Llpf;->getValue()Ljava/lang/Object;
+    iget-object v0, p0, Lg05;->b:Lmf3;
 
-    move-result-object v0
+    check-cast v0, Lkn8;
 
-    check-cast v0, Lnd2;
+    iget-object v1, v0, Lkn8;->f1:Lskg;
 
-    if-nez v0, :cond_0
+    sget-object v2, Lkn8;->g1:[Lb88;
 
-    goto :goto_0
+    const/16 v3, 0x30
 
-    :cond_0
-    invoke-virtual {v0}, Lnd2;->o()Ley3;
+    aget-object v2, v2, v3
 
-    move-result-object v0
+    invoke-virtual {v1, v0, v2, p1}, Lskg;->z(Ljava/lang/Object;Lb88;Ljava/lang/Object;)V
 
-    if-nez v0, :cond_1
+    sget-object p1, Lyeh;->a:Lyeh;
 
-    goto :goto_0
+    return-object p1
 
-    :cond_1
-    invoke-virtual {v0}, Ley3;->r()J
+    :pswitch_1
+    check-cast p1, Ljava/lang/Boolean;
 
-    move-result-wide v0
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget-wide v2, p0, Lg05;->a:J
+    iget-object v0, p0, Lg05;->b:Lmf3;
 
-    cmp-long p1, v0, v2
+    check-cast v0, Lkn8;
 
-    if-nez p1, :cond_2
+    iget-object v1, v0, Lkn8;->V0:Lskg;
 
-    new-instance p1, Lf05;
+    sget-object v2, Lkn8;->g1:[Lb88;
 
-    const/4 v0, 0x0
+    const/16 v3, 0x23
 
-    invoke-direct {p1, p0, v0}, Lf05;-><init>(Lg05;Lkotlin/coroutines/Continuation;)V
+    aget-object v2, v2, v3
 
-    const/4 v1, 0x3
+    invoke-virtual {v1, v0, v2, p1}, Lskg;->z(Ljava/lang/Object;Lb88;Ljava/lang/Object;)V
 
-    iget-object v2, p0, Lg05;->e:Lkotlinx/coroutines/internal/ContextScope;
+    sget-object p1, Lyeh;->a:Lyeh;
 
-    invoke-static {v2, v0, v0, p1, v1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+    return-object p1
 
-    :cond_2
-    return-void
+    :pswitch_2
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    iget-object v0, p0, Lg05;->b:Lmf3;
+
+    check-cast v0, Lkn8;
+
+    iget-object v1, v0, Lkn8;->B0:Lskg;
+
+    sget-object v2, Lkn8;->g1:[Lb88;
+
+    const/16 v3, 0xf
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v0, v2, p1}, Lskg;->z(Ljava/lang/Object;Lb88;Ljava/lang/Object;)V
+
+    sget-object p1, Lyeh;->a:Lyeh;
+
+    return-object p1
+
+    :pswitch_3
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    iget-object v0, p0, Lg05;->b:Lmf3;
+
+    check-cast v0, Lkn8;
+
+    iget-object v1, v0, Lkn8;->D0:Lskg;
+
+    sget-object v2, Lkn8;->g1:[Lb88;
+
+    const/16 v3, 0x11
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v0, v2, p1}, Lskg;->z(Ljava/lang/Object;Lb88;Ljava/lang/Object;)V
+
+    sget-object p1, Lyeh;->a:Lyeh;
+
+    return-object p1
+
+    :pswitch_4
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    iget-object v0, p0, Lg05;->b:Lmf3;
+
+    check-cast v0, Lkn8;
+
+    iget-object v1, v0, Lkn8;->C0:Lskg;
+
+    sget-object v2, Lkn8;->g1:[Lb88;
+
+    const/16 v3, 0x10
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v0, v2, p1}, Lskg;->z(Ljava/lang/Object;Lb88;Ljava/lang/Object;)V
+
+    sget-object p1, Lyeh;->a:Lyeh;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

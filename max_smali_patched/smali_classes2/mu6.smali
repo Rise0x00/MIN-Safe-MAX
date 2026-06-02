@@ -1,48 +1,78 @@
-.class public final Lmu6;
-.super Lo84;
+.class public final synthetic Lmu6;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final synthetic X:Lku6;
+.field public final synthetic a:Lo12;
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final synthetic b:Lyi8;
 
-.field public o:I
+.field public final synthetic c:J
 
 
 # direct methods
-.method public constructor <init>(Lku6;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lo12;Lyi8;J)V
     .locals 0
 
-    iput-object p1, p0, Lmu6;->X:Lku6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lmu6;->a:Lo12;
+
+    iput-object p2, p0, Lmu6;->b:Lyi8;
+
+    iput-wide p3, p0, Lmu6;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final call()Ljava/lang/Object;
+    .locals 4
 
-    iput-object p1, p0, Lmu6;->d:Ljava/lang/Object;
+    new-instance v0, Ljava/util/concurrent/TimeoutException;
 
-    iget p1, p0, Lmu6;->o:I
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const/high16 v0, -0x80000000
+    const-string v2, "Future["
 
-    or-int/2addr p1, v0
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iput p1, p0, Lmu6;->o:I
+    iget-object v2, p0, Lmu6;->b:Lyi8;
 
-    iget-object p1, p0, Lmu6;->X:Lku6;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    const-string v2, "] is not done within "
 
-    invoke-virtual {p1, v0, p0}, Lku6;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    iget-wide v2, p0, Lmu6;->c:J
 
-    return-object p1
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v2, " ms."
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lmu6;->a:Lo12;
+
+    invoke-virtual {v1, v0}, Lo12;->d(Ljava/lang/Throwable;)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
 .end method

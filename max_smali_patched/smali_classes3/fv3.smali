@@ -1,88 +1,225 @@
-.class public final synthetic Lfv3;
+.class public final Lfv3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/function/Consumer;
-
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lgv3;
+.field public final a:Landroid/os/Bundle;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lgv3;I)V
-    .locals 0
-
-    iput p2, p0, Lfv3;->a:I
-
-    iput-object p1, p0, Lfv3;->b:Lgv3;
+.method public constructor <init>(Litg;Landroid/os/Bundle;Lmoe;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    iput-object v0, p0, Lfv3;->a:Landroid/os/Bundle;
+
+    const-string v1, "title"
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    const-string p1, "payload"
+
+    invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    if-eqz p3, :cond_0
+
+    const-string p1, "stat_screen"
+
+    invoke-virtual {p3}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v0, p1, p2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public final varargs a([Lgv3;)V
+    .locals 3
+
+    iget-object v0, p0, Lfv3;->a:Landroid/os/Bundle;
+
+    const-string v1, "buttons"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    if-nez v2, :cond_0
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    :cond_0
+    invoke-static {v2, p1}, Loj3;->V0(Ljava/util/AbstractCollection;[Ljava/lang/Object;)V
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+
+    return-void
+.end method
+
+.method public final b(ILitg;)V
+    .locals 6
+
+    iget-object v0, p0, Lfv3;->a:Landroid/os/Bundle;
+
+    const-string v1, "buttons"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    if-nez v2, :cond_0
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    :cond_0
+    new-instance v3, Lgv3;
+
+    const/4 v4, 0x1
+
+    const/16 v5, 0x38
+
+    invoke-direct {v3, p1, p2, v4, v5}, Lgv3;-><init>(ILitg;II)V
+
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+
+    return-void
+.end method
+
+.method public final c(ILitg;)V
+    .locals 6
+
+    iget-object v0, p0, Lfv3;->a:Landroid/os/Bundle;
+
+    const-string v1, "buttons"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    if-nez v2, :cond_0
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    :cond_0
+    new-instance v3, Lgv3;
+
+    const/4 v4, 0x2
+
+    const/16 v5, 0x38
+
+    invoke-direct {v3, p1, p2, v4, v5}, Lgv3;-><init>(ILitg;II)V
+
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+
+    return-void
+.end method
+
+.method public final d(ILitg;)V
+    .locals 6
+
+    iget-object v0, p0, Lfv3;->a:Landroid/os/Bundle;
+
+    const-string v1, "buttons"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    if-nez v2, :cond_0
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    :cond_0
+    new-instance v3, Lgv3;
+
+    const/4 v4, 0x3
+
+    const/16 v5, 0x38
+
+    invoke-direct {v3, p1, p2, v4, v5}, Lgv3;-><init>(ILitg;II)V
+
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+
+    return-void
+.end method
+
+.method public final e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+    .locals 2
+
+    new-instance v0, Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+
+    iget-object v1, p0, Lfv3;->a:Landroid/os/Bundle;
+
+    invoke-direct {v0, v1}, Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;-><init>(Landroid/os/Bundle;)V
+
+    return-object v0
+.end method
+
+.method public final f(Litg;)V
+    .locals 2
+
+    const-string v0, "description"
+
+    iget-object v1, p0, Lfv3;->a:Landroid/os/Bundle;
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {v1, v0}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {v1, v0, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    return-void
+.end method
+
+.method public final g(Ljava/lang/Integer;)V
     .locals 4
 
-    iget v0, p0, Lfv3;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Ljava/lang/Integer;
-
-    iget-object v0, p0, Lfv3;->b:Lgv3;
-
-    iget-object v1, v0, Lgv3;->c:Lxoe;
-
-    new-instance v2, Lc0e;
+    new-instance v0, Ljv3;
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
 
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x2
 
-    iput p1, v2, Lc0e;->a:I
+    const/4 v2, 0x0
 
-    new-instance p1, Lfv3;
+    const/4 v3, 0x1
 
-    const/4 v3, 0x0
+    invoke-direct {v0, p1, v3, v1, v2}, Ljv3;-><init>(IIILjava/lang/Integer;)V
 
-    invoke-direct {p1, v0, v3}, Lfv3;-><init>(Lgv3;I)V
+    const-string p1, "icon"
 
-    sget-object v0, Lij5;->d:Lij5;
+    iget-object v1, p0, Lfv3;->a:Landroid/os/Bundle;
 
-    invoke-virtual {v1, v2, v0, p1}, Lxoe;->f(Lb3d;Lij5;Ljava/util/function/Consumer;)V
-
-    return-void
-
-    :pswitch_0
-    check-cast p1, Lb3d;
-
-    iget-object v0, p0, Lfv3;->b:Lgv3;
-
-    iget-object v1, v0, Lgv3;->c:Lxoe;
-
-    new-instance v2, Lfv3;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v0, v3}, Lfv3;-><init>(Lgv3;I)V
-
-    sget-object v0, Lij5;->d:Lij5;
-
-    invoke-virtual {v1, p1, v0, v2}, Lxoe;->f(Lb3d;Lij5;Ljava/util/function/Consumer;)V
+    invoke-virtual {v1, p1, v0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

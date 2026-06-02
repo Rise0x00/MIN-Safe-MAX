@@ -1,40 +1,77 @@
-.class public abstract Ls8d;
-.super Ljava/lang/Object;
+.class public final enum Ls8d;
+.super Ljava/lang/Enum;
+.source "SourceFile"
 
 
 # static fields
-.field public static oneme_contact_not_found_bottom_sheet_negative_button:I = 0x7f0a0631
+.field public static final enum a:Ls8d;
 
-.field public static oneme_contact_not_found_bottom_sheet_positive_button:I = 0x7f0a0632
+.field public static final synthetic b:[Ls8d;
 
-.field public static oneme_invite_action_view_type:I = 0x7f0a0688
 
-.field public static oneme_invite_by_link_action_menu_item:I = 0x7f0a0689
+# direct methods
+.method static constructor <clinit>()V
+    .locals 5
 
-.field public static oneme_invite_by_phone_action_menu_item:I = 0x7f0a068a
+    new-instance v0, Ls8d;
 
-.field public static oneme_invite_by_phone_continue_button:I = 0x7f0a068b
+    const-string v1, "DEFAULT"
 
-.field public static oneme_invite_by_phone_description:I = 0x7f0a068c
+    const/4 v2, 0x0
 
-.field public static oneme_invite_by_phone_input:I = 0x7f0a068d
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-.field public static oneme_invite_by_phone_title:I = 0x7f0a068e
+    sput-object v0, Ls8d;->a:Ls8d;
 
-.field public static oneme_invite_by_phone_toolbar:I = 0x7f0a068f
+    new-instance v1, Ls8d;
 
-.field public static oneme_invite_by_qr_action_menu_item:I = 0x7f0a0690
+    const-string v2, "SIGNED"
 
-.field public static oneme_invite_by_qr_bottom_sheet_name:I = 0x7f0a0691
+    const/4 v3, 0x1
 
-.field public static oneme_invite_by_qr_bottom_sheet_qr_code:I = 0x7f0a0692
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-.field public static oneme_invite_by_qr_bottom_sheet_qr_code_share:I = 0x7f0a0693
+    new-instance v2, Ls8d;
 
-.field public static oneme_invite_by_qr_bottom_sheet_short_name:I = 0x7f0a0694
+    const-string v3, "FIXED"
 
-.field public static oneme_invite_friends_to_max_bottom_sheet_image_stack:I = 0x7f0a0695
+    const/4 v4, 0x2
 
-.field public static oneme_invite_friends_to_max_bottom_sheet_invite_button:I = 0x7f0a0696
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-.field public static oneme_invite_friends_to_max_bottom_sheet_title:I = 0x7f0a0697
+    filled-new-array {v0, v1, v2}, [Ls8d;
+
+    move-result-object v0
+
+    sput-object v0, Ls8d;->b:[Ls8d;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Ls8d;
+    .locals 1
+
+    const-class v0, Ls8d;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ls8d;
+
+    return-object p0
+.end method
+
+.method public static values()[Ls8d;
+    .locals 1
+
+    sget-object v0, Ls8d;->b:[Ls8d;
+
+    invoke-virtual {v0}, [Ls8d;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ls8d;
+
+    return-object v0
+.end method

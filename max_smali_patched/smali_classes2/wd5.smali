@@ -1,58 +1,115 @@
-.class public final synthetic Lwd5;
+.class public final Lwd5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:Lorg/webrtc/EglRenderer;
+.field public final a:I
 
-.field public final synthetic b:F
+.field public final b:I
 
-.field public final synthetic c:F
+.field public final c:Landroid/util/SparseArray;
 
-.field public final synthetic d:F
+.field public final d:Landroid/util/SparseArray;
 
-.field public final synthetic o:F
+.field public final e:Landroid/util/SparseArray;
+
+.field public final f:Landroid/util/SparseArray;
+
+.field public final g:Landroid/util/SparseArray;
+
+.field public h:Ljava/lang/Object;
+
+.field public i:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/webrtc/EglRenderer;FFFF)V
+.method public constructor <init>(III)V
     .locals 0
+
+    packed-switch p3, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwd5;->a:Lorg/webrtc/EglRenderer;
+    iput p1, p0, Lwd5;->a:I
 
-    iput p2, p0, Lwd5;->b:F
+    iput p2, p0, Lwd5;->b:I
 
-    iput p3, p0, Lwd5;->c:F
+    new-instance p1, Landroid/util/SparseArray;
 
-    iput p4, p0, Lwd5;->d:F
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
-    iput p5, p0, Lwd5;->o:F
+    iput-object p1, p0, Lwd5;->c:Landroid/util/SparseArray;
+
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Lwd5;->d:Landroid/util/SparseArray;
+
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Lwd5;->e:Landroid/util/SparseArray;
+
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Lwd5;->f:Landroid/util/SparseArray;
+
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Lwd5;->g:Landroid/util/SparseArray;
 
     return-void
-.end method
 
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-# virtual methods
-.method public final run()V
-    .locals 5
+    iput p1, p0, Lwd5;->a:I
 
-    iget v0, p0, Lwd5;->d:F
+    iput p2, p0, Lwd5;->b:I
 
-    iget v1, p0, Lwd5;->o:F
+    new-instance p1, Landroid/util/SparseArray;
 
-    iget-object v2, p0, Lwd5;->a:Lorg/webrtc/EglRenderer;
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
-    iget v3, p0, Lwd5;->b:F
+    iput-object p1, p0, Lwd5;->c:Landroid/util/SparseArray;
 
-    iget v4, p0, Lwd5;->c:F
+    new-instance p1, Landroid/util/SparseArray;
 
-    invoke-static {v2, v3, v4, v0, v1}, Lorg/webrtc/EglRenderer;->c(Lorg/webrtc/EglRenderer;FFFF)V
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Lwd5;->d:Landroid/util/SparseArray;
+
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Lwd5;->e:Landroid/util/SparseArray;
+
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Lwd5;->f:Landroid/util/SparseArray;
+
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Lwd5;->g:Landroid/util/SparseArray;
 
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

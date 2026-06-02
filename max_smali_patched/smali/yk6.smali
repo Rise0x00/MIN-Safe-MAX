@@ -1,9 +1,9 @@
 .class public final Lyk6;
-.super Lo84;
+.super Lz84;
 
 
 # instance fields
-.field public final synthetic X:Ld83;
+.field public final synthetic X:Lxwa;
 
 .field public synthetic d:Ljava/lang/Object;
 
@@ -11,12 +11,12 @@
 
 
 # direct methods
-.method public constructor <init>(Ld83;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lxwa;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lyk6;->X:Ld83;
+    iput-object p1, p0, Lyk6;->X:Lxwa;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -36,11 +36,11 @@
 
     iput p1, p0, Lyk6;->o:I
 
-    iget-object p1, p0, Lyk6;->X:Ld83;
+    iget-object p1, p0, Lyk6;->X:Lxwa;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Ld83;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lxwa;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 

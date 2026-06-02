@@ -1,602 +1,544 @@
 .class public final Lap6;
-.super Landroid/database/sqlite/SQLiteOpenHelper;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic Z:I
+# interfaces
+.implements Landroid/view/LayoutInflater$Factory2;
 
 
 # instance fields
-.field public final X:Lqic;
-
-.field public Y:Z
-
-.field public final a:Landroid/content/Context;
-
-.field public final b:Lcvd;
-
-.field public final c:Laz;
-
-.field public final d:Z
-
-.field public o:Z
+.field public final a:Landroidx/fragment/app/c;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcvd;Laz;Z)V
-    .locals 6
+.method public constructor <init>(Landroidx/fragment/app/c;)V
+    .locals 0
 
-    iget v4, p4, Laz;->b:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v5, Lyo6;
-
-    invoke-direct {v5, p4, p3}, Lyo6;-><init>(Laz;Lcvd;)V
-
-    const/4 v3, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    invoke-direct/range {v0 .. v5}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;ILandroid/database/DatabaseErrorHandler;)V
-
-    iput-object v1, v0, Lap6;->a:Landroid/content/Context;
-
-    iput-object p3, v0, Lap6;->b:Lcvd;
-
-    iput-object p4, v0, Lap6;->c:Laz;
-
-    iput-boolean p5, v0, Lap6;->d:Z
-
-    new-instance p1, Lqic;
-
-    if-nez v2, :cond_0
-
-    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Ljava/util/UUID;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    goto :goto_0
-
-    :cond_0
-    move-object p2, v2
-
-    :goto_0
-    invoke-virtual {v1}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
-
-    move-result-object p3
-
-    const/4 p4, 0x0
-
-    invoke-direct {p1, p2, p3, p4}, Lqic;-><init>(Ljava/lang/String;Ljava/io/File;Z)V
-
-    iput-object p1, v0, Lap6;->X:Lqic;
+    iput-object p1, p0, Lap6;->a:Landroidx/fragment/app/c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final E(Z)Landroid/database/sqlite/SQLiteDatabase;
-    .locals 5
+.method public final onCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
+    .locals 9
 
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getDatabaseName()Ljava/lang/String;
+    .line 2
+    const-class v0, Landroidx/fragment/app/FragmentContainerView;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-boolean v1, p0, Lap6;->Y:Z
+    invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object v2, p0, Lap6;->a:Landroid/content/Context;
+    move-result v0
+
+    iget-object v1, p0, Lap6;->a:Landroidx/fragment/app/c;
 
     if-eqz v0, :cond_0
 
-    if-nez v1, :cond_0
+    .line 3
+    new-instance p1, Landroidx/fragment/app/FragmentContainerView;
 
-    invoke-virtual {v2, v0}, Landroid/content/Context;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
+    invoke-direct {p1, p3, p4, v1}, Landroidx/fragment/app/FragmentContainerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;Landroidx/fragment/app/c;)V
 
-    move-result-object v1
+    return-object p1
 
-    invoke-virtual {v1}, Ljava/io/File;->getParentFile()Ljava/io/File;
+    .line 4
+    :cond_0
+    const-string v0, "fragment"
 
-    move-result-object v1
+    invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-eqz v1, :cond_0
+    move-result p2
 
-    invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
+    const/4 v0, 0x0
 
-    invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
+    if-nez p2, :cond_1
+
+    goto/16 :goto_4
+
+    .line 5
+    :cond_1
+    const-string p2, "class"
+
+    invoke-interface {p4, v0, p2}, Landroid/util/AttributeSet;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    .line 6
+    sget-object v2, Ldrd;->Fragment:[I
+
+    invoke-virtual {p3, p4, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+
+    move-result-object v2
+
+    if-nez p2, :cond_2
+
+    .line 7
+    sget p2, Ldrd;->Fragment_android_name:I
+
+    invoke-virtual {v2, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    .line 8
+    :cond_2
+    sget v3, Ldrd;->Fragment_android_id:I
+
+    const/4 v4, -0x1
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v3
 
-    if-nez v3, :cond_0
+    .line 9
+    sget v5, Ldrd;->Fragment_android_tag:I
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v5}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
-    const-string v4, "Invalid database parent file, not a directory: "
+    move-result-object v5
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 10
+    invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-eqz p2, :cond_11
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 11
+    invoke-virtual {p3}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
-    move-result-object v1
+    move-result-object v2
 
-    const-string v3, "SupportSQLite"
+    const/4 v6, 0x0
 
-    invoke-static {v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    if-eqz p1, :cond_1
-
+    .line 12
     :try_start_0
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-static {v2, p2}, Lep6;->b(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Class;
 
-    move-result-object p1
+    move-result-object v2
 
-    return-object p1
+    .line 13
+    const-class v7, Landroidx/fragment/app/a;
 
-    :cond_1
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v7, v2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
-    move-result-object p1
+    move-result v2
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-object p1
-
-    :catchall_0
-    const-wide/16 v3, 0x1f4
-
-    :try_start_1
-    invoke-static {v3, v4}, Ljava/lang/Thread;->sleep(J)V
-    :try_end_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
-
-    :catch_0
-    if-eqz p1, :cond_2
-
-    :try_start_2
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
-
-    move-result-object p1
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :catchall_1
-    move-exception v1
+    :catch_0
+    move v2, v6
+
+    :goto_0
+    if-nez v2, :cond_3
+
+    goto/16 :goto_4
+
+    :cond_3
+    if-eqz p1, :cond_4
+
+    .line 14
+    invoke-virtual {p1}, Landroid/view/View;->getId()I
+
+    move-result v6
+
+    :cond_4
+    if-ne v6, v4, :cond_6
+
+    if-ne v3, v4, :cond_6
+
+    if-eqz v5, :cond_5
 
     goto :goto_1
 
-    :cond_2
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    .line 15
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    move-result-object p1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    new-instance p3, Ljava/lang/StringBuilder;
 
-    :goto_0
-    return-object p1
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
+    invoke-interface {p4}, Landroid/util/AttributeSet;->getPositionDescription()Ljava/lang/String;
+
+    move-result-object p4
+
+    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p4, ": Must specify unique android:id, android:tag, or have a parent with an id for "
+
+    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_6
     :goto_1
-    instance-of v3, v1, Lzo6;
+    if-eq v3, v4, :cond_7
 
-    if-eqz v3, :cond_6
+    .line 16
+    invoke-virtual {v1, v3}, Landroidx/fragment/app/c;->C(I)Landroidx/fragment/app/a;
 
-    check-cast v1, Lzo6;
+    move-result-object v0
 
-    iget v3, v1, Lzo6;->a:I
+    :cond_7
+    if-nez v0, :cond_8
 
-    invoke-static {v3}, Lt02;->t(I)I
+    if-eqz v5, :cond_8
 
-    move-result v3
+    .line 17
+    invoke-virtual {v1, v5}, Landroidx/fragment/app/c;->D(Ljava/lang/String;)Landroidx/fragment/app/a;
 
-    iget-object v1, v1, Lzo6;->b:Ljava/lang/Throwable;
+    move-result-object v0
 
-    if-eqz v3, :cond_5
+    :cond_8
+    if-nez v0, :cond_9
 
-    const/4 v4, 0x1
+    if-eq v6, v4, :cond_9
 
-    if-eq v3, v4, :cond_5
+    .line 18
+    invoke-virtual {v1, v6}, Landroidx/fragment/app/c;->C(I)Landroidx/fragment/app/a;
 
-    const/4 v4, 0x2
+    move-result-object v0
 
-    if-eq v3, v4, :cond_5
+    .line 19
+    :cond_9
+    const-string v2, "Fragment "
 
-    const/4 v4, 0x3
+    const-string v4, "FragmentManager"
 
-    if-eq v3, v4, :cond_5
+    const/4 v7, 0x2
 
-    const/4 v4, 0x4
+    const/4 v8, 0x1
 
-    if-ne v3, v4, :cond_4
+    if-nez v0, :cond_b
 
-    instance-of v3, v1, Landroid/database/sqlite/SQLiteException;
+    .line 20
+    invoke-virtual {v1}, Landroidx/fragment/app/c;->G()Lep6;
 
-    if-eqz v3, :cond_3
+    move-result-object p4
+
+    .line 21
+    invoke-virtual {p3}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
+
+    .line 22
+    invoke-virtual {p4, p2}, Lep6;->a(Ljava/lang/String;)Landroidx/fragment/app/a;
+
+    move-result-object v0
+
+    .line 23
+    iput-boolean v8, v0, Landroidx/fragment/app/a;->E0:Z
+
+    if-eqz v3, :cond_a
+
+    move p3, v3
 
     goto :goto_2
 
-    :cond_3
-    throw v1
+    :cond_a
+    move p3, v6
 
-    :cond_4
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_5
-    throw v1
-
-    :cond_6
+    .line 24
     :goto_2
-    instance-of v3, v1, Landroid/database/sqlite/SQLiteException;
+    iput p3, v0, Landroidx/fragment/app/a;->O0:I
 
-    if-eqz v3, :cond_8
+    .line 25
+    iput v6, v0, Landroidx/fragment/app/a;->P0:I
 
-    if-eqz v0, :cond_8
+    .line 26
+    iput-object v5, v0, Landroidx/fragment/app/a;->Q0:Ljava/lang/String;
 
-    iget-boolean v3, p0, Lap6;->d:Z
+    .line 27
+    iput-boolean v8, v0, Landroidx/fragment/app/a;->F0:Z
 
-    if-eqz v3, :cond_8
+    .line 28
+    iput-object v1, v0, Landroidx/fragment/app/a;->K0:Landroidx/fragment/app/c;
 
-    invoke-virtual {v2, v0}, Landroid/content/Context;->deleteDatabase(Ljava/lang/String;)Z
+    .line 29
+    iget-object p3, v1, Landroidx/fragment/app/c;->w:Lyo6;
 
-    if-eqz p1, :cond_7
+    .line 30
+    iput-object p3, v0, Landroidx/fragment/app/a;->L0:Lyo6;
 
-    :try_start_3
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    .line 31
+    iget-object p3, p3, Lyo6;->Z:Landroidx/fragment/app/b;
 
-    move-result-object p1
+    .line 32
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->O()V
+
+    .line 33
+    invoke-virtual {v1, v0}, Landroidx/fragment/app/c;->a(Landroidx/fragment/app/a;)Landroidx/fragment/app/e;
+
+    move-result-object p3
+
+    .line 34
+    invoke-static {v7}, Landroidx/fragment/app/c;->J(I)Z
+
+    move-result p4
+
+    if-eqz p4, :cond_c
+
+    .line 35
+    new-instance p4, Ljava/lang/StringBuilder;
+
+    invoke-direct {p4, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, " has been inflated via the <fragment> tag: id=0x"
+
+    invoke-virtual {p4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 36
+    invoke-static {v3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p4
+
+    .line 37
+    invoke-static {v4, p4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_3
 
-    :catch_1
-    move-exception p1
+    .line 38
+    :cond_b
+    iget-boolean p3, v0, Landroidx/fragment/app/a;->F0:Z
 
-    goto :goto_4
+    if-nez p3, :cond_10
 
-    :cond_7
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    .line 39
+    iput-boolean v8, v0, Landroidx/fragment/app/a;->F0:Z
 
-    move-result-object p1
-    :try_end_3
-    .catch Lzo6; {:try_start_3 .. :try_end_3} :catch_1
+    .line 40
+    iput-object v1, v0, Landroidx/fragment/app/a;->K0:Landroidx/fragment/app/c;
 
+    .line 41
+    iget-object p3, v1, Landroidx/fragment/app/c;->w:Lyo6;
+
+    .line 42
+    iput-object p3, v0, Landroidx/fragment/app/a;->L0:Lyo6;
+
+    .line 43
+    iget-object p3, p3, Lyo6;->Z:Landroidx/fragment/app/b;
+
+    .line 44
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->O()V
+
+    .line 45
+    invoke-virtual {v1, v0}, Landroidx/fragment/app/c;->g(Landroidx/fragment/app/a;)Landroidx/fragment/app/e;
+
+    move-result-object p3
+
+    .line 46
+    invoke-static {v7}, Landroidx/fragment/app/c;->J(I)Z
+
+    move-result p4
+
+    if-eqz p4, :cond_c
+
+    .line 47
+    new-instance p4, Ljava/lang/StringBuilder;
+
+    const-string v1, "Retained Fragment "
+
+    invoke-direct {p4, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, " has been re-attached via the <fragment> tag: id=0x"
+
+    invoke-virtual {p4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 48
+    invoke-static {v3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p4
+
+    .line 49
+    invoke-static {v4, p4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 50
+    :cond_c
     :goto_3
+    check-cast p1, Landroid/view/ViewGroup;
+
+    sget-object p4, Lsp6;->a:Lrp6;
+
+    .line 51
+    new-instance p4, Landroidx/fragment/app/strictmode/FragmentTagUsageViolation;
+
+    invoke-direct {p4, v0, p1}, Landroidx/fragment/app/strictmode/FragmentTagUsageViolation;-><init>(Landroidx/fragment/app/a;Landroid/view/ViewGroup;)V
+
+    .line 52
+    invoke-static {p4}, Lsp6;->b(Landroidx/fragment/app/strictmode/Violation;)V
+
+    .line 53
+    invoke-static {v0}, Lsp6;->a(Landroidx/fragment/app/a;)Lrp6;
+
+    move-result-object p4
+
+    .line 54
+    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 55
+    iput-object p1, v0, Landroidx/fragment/app/a;->Y0:Landroid/view/ViewGroup;
+
+    .line 56
+    invoke-virtual {p3}, Landroidx/fragment/app/e;->k()V
+
+    .line 57
+    invoke-virtual {p3}, Landroidx/fragment/app/e;->j()V
+
+    .line 58
+    iget-object p1, v0, Landroidx/fragment/app/a;->Z0:Landroid/view/View;
+
+    if-eqz p1, :cond_f
+
+    if-eqz v3, :cond_d
+
+    .line 59
+    invoke-virtual {p1, v3}, Landroid/view/View;->setId(I)V
+
+    .line 60
+    :cond_d
+    iget-object p1, v0, Landroidx/fragment/app/a;->Z0:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-nez p1, :cond_e
+
+    .line 61
+    iget-object p1, v0, Landroidx/fragment/app/a;->Z0:Landroid/view/View;
+
+    invoke-virtual {p1, v5}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    .line 62
+    :cond_e
+    iget-object p1, v0, Landroidx/fragment/app/a;->Z0:Landroid/view/View;
+
+    new-instance p2, Lx90;
+
+    invoke-direct {p2, p0, p3}, Lx90;-><init>(Lap6;Landroidx/fragment/app/e;)V
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    .line 63
+    iget-object p1, v0, Landroidx/fragment/app/a;->Z0:Landroid/view/View;
+
     return-object p1
 
+    .line 64
+    :cond_f
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p3, " did not create a view."
+
+    .line 65
+    invoke-static {v2, p2, p3}, Lsb6;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    .line 66
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 67
+    :cond_10
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-interface {p4}, Landroid/util/AttributeSet;->getPositionDescription()Ljava/lang/String;
+
+    move-result-object p4
+
+    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p4, ": Duplicate id 0x"
+
+    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 68
+    invoke-static {v3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object p4
+
+    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p4, ", tag "
+
+    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p4, ", or parent id 0x"
+
+    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 69
+    invoke-static {v6}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object p4
+
+    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p4, " with another fragment for "
+
+    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_11
     :goto_4
-    iget-object p1, p1, Lzo6;->b:Ljava/lang/Throwable;
-
-    throw p1
-
-    :cond_8
-    throw v1
+    return-object v0
 .end method
 
-.method public final close()V
-    .locals 3
-
-    iget-object v0, p0, Lap6;->X:Lqic;
-
-    :try_start_0
-    iget-boolean v1, v0, Lqic;->a:Z
-
-    invoke-virtual {v0, v1}, Lqic;->a(Z)V
-
-    invoke-super {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->close()V
-
-    iget-object v1, p0, Lap6;->b:Lcvd;
-
-    const/4 v2, 0x0
-
-    iput-object v2, v1, Lcvd;->a:Ljava/lang/Object;
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, p0, Lap6;->Y:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0}, Lqic;->b()V
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    invoke-virtual {v0}, Lqic;->b()V
-
-    throw v1
-.end method
-
-.method public final d(Z)Lw4g;
-    .locals 3
-
-    iget-object v0, p0, Lap6;->X:Lqic;
-
-    :try_start_0
-    iget-boolean v1, p0, Lap6;->Y:Z
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getDatabaseName()Ljava/lang/String;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    move v1, v2
-
-    :goto_0
-    invoke-virtual {v0, v1}, Lqic;->a(Z)V
-
-    iput-boolean v2, p0, Lap6;->o:Z
-
-    invoke-virtual {p0, p1}, Lap6;->E(Z)Landroid/database/sqlite/SQLiteDatabase;
-
-    move-result-object v1
-
-    iget-boolean v2, p0, Lap6;->o:Z
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {p0}, Lap6;->close()V
-
-    invoke-virtual {p0, p1}, Lap6;->d(Z)Lw4g;
-
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0}, Lqic;->b()V
-
-    return-object p1
-
-    :cond_1
-    :try_start_1
-    invoke-virtual {p0, v1}, Lap6;->l(Landroid/database/sqlite/SQLiteDatabase;)Lxo6;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    invoke-virtual {v0}, Lqic;->b()V
-
-    return-object p1
-
-    :goto_1
-    invoke-virtual {v0}, Lqic;->b()V
-
-    throw p1
-.end method
-
-.method public final l(Landroid/database/sqlite/SQLiteDatabase;)Lxo6;
-    .locals 3
-
-    iget-object v0, p0, Lap6;->b:Lcvd;
-
-    iget-object v1, v0, Lcvd;->a:Ljava/lang/Object;
-
-    check-cast v1, Lxo6;
-
-    if-eqz v1, :cond_1
-
-    iget-object v2, v1, Lxo6;->a:Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-static {v2, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-object v1
-
-    :cond_1
-    :goto_0
-    new-instance v1, Lxo6;
-
-    invoke-direct {v1, p1}, Lxo6;-><init>(Landroid/database/sqlite/SQLiteDatabase;)V
-
-    iput-object v1, v0, Lcvd;->a:Ljava/lang/Object;
-
-    return-object v1
-.end method
-
-.method public final onConfigure(Landroid/database/sqlite/SQLiteDatabase;)V
-    .locals 4
-
-    iget-boolean v0, p0, Lap6;->o:Z
-
-    const/4 v1, 0x1
-
-    iget-object v2, p0, Lap6;->c:Laz;
-
-    if-nez v0, :cond_0
-
-    iget v0, v2, Laz;->b:I
-
-    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->getVersion()I
-
-    move-result v3
-
-    if-eq v0, v3, :cond_0
-
-    invoke-virtual {p1, v1}, Landroid/database/sqlite/SQLiteDatabase;->setMaxSqlCacheSize(I)V
-
-    :cond_0
-    :try_start_0
-    invoke-virtual {p0, p1}, Lap6;->l(Landroid/database/sqlite/SQLiteDatabase;)Lxo6;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    new-instance v0, Lzo6;
-
-    invoke-direct {v0, v1, p1}, Lzo6;-><init>(ILjava/lang/Throwable;)V
-
-    throw v0
-.end method
-
-.method public final onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
-    .locals 2
-
-    :try_start_0
-    iget-object v0, p0, Lap6;->c:Laz;
-
-    invoke-virtual {p0, p1}, Lap6;->l(Landroid/database/sqlite/SQLiteDatabase;)Lxo6;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Laz;->r(Lxo6;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    new-instance v0, Lzo6;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1, p1}, Lzo6;-><init>(ILjava/lang/Throwable;)V
-
-    throw v0
-.end method
-
-.method public final onDowngrade(Landroid/database/sqlite/SQLiteDatabase;II)V
+.method public final onCreateView(Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
     .locals 1
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lap6;->o:Z
-
-    :try_start_0
-    iget-object v0, p0, Lap6;->c:Laz;
-
-    invoke-virtual {p0, p1}, Lap6;->l(Landroid/database/sqlite/SQLiteDatabase;)Lxo6;
+    .line 1
+    invoke-virtual {p0, v0, p1, p2, p3}, Lap6;->onCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1, p2, p3}, Laz;->t(Lxo6;II)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    new-instance p2, Lzo6;
-
-    const/4 p3, 0x4
-
-    invoke-direct {p2, p3, p1}, Lzo6;-><init>(ILjava/lang/Throwable;)V
-
-    throw p2
-.end method
-
-.method public final onOpen(Landroid/database/sqlite/SQLiteDatabase;)V
-    .locals 2
-
-    iget-boolean v0, p0, Lap6;->o:Z
-
-    if-nez v0, :cond_0
-
-    :try_start_0
-    iget-object v0, p0, Lap6;->c:Laz;
-
-    invoke-virtual {p0, p1}, Lap6;->l(Landroid/database/sqlite/SQLiteDatabase;)Lxo6;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Laz;->u(Lxo6;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    new-instance v0, Lzo6;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1, p1}, Lzo6;-><init>(ILjava/lang/Throwable;)V
-
-    throw v0
-
-    :cond_0
-    :goto_0
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lap6;->Y:Z
-
-    return-void
-.end method
-
-.method public final onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lap6;->o:Z
-
-    :try_start_0
-    iget-object v0, p0, Lap6;->c:Laz;
-
-    invoke-virtual {p0, p1}, Lap6;->l(Landroid/database/sqlite/SQLiteDatabase;)Lxo6;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1, p2, p3}, Laz;->v(Lxo6;II)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    new-instance p2, Lzo6;
-
-    const/4 p3, 0x3
-
-    invoke-direct {p2, p3, p1}, Lzo6;-><init>(ILjava/lang/Throwable;)V
-
-    throw p2
+    return-object p1
 .end method

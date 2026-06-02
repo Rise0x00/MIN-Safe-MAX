@@ -1,92 +1,139 @@
-.class public abstract Lxsi;
-.super Ljava/lang/Object;
+.class public final enum Lxsi;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Latc;
+.field public static final enum b:Lxsi;
 
-.field public static b:Latc;
+.field public static final synthetic c:[Lxsi;
+
+.field public static final synthetic d:Lmn5;
+
+
+# instance fields
+.field public final a:S
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 10
 
-    new-instance v0, Latc;
+    new-instance v0, Lxsi;
 
-    const/4 v1, 0x0
+    const-string v1, "UNKNOWN"
 
-    const/16 v2, 0xa
+    const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v1, v1, v2}, Latc;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v0, v1, v2, v2}, Lxsi;-><init>(Ljava/lang/String;IS)V
 
-    sput-object v0, Lxsi;->a:Latc;
+    sput-object v0, Lxsi;->b:Lxsi;
+
+    new-instance v1, Lxsi;
+
+    const-string v2, "ADAPTIVE_ICON"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v3}, Lxsi;-><init>(Ljava/lang/String;IS)V
+
+    new-instance v2, Lxsi;
+
+    const-string v3, "PICTURE"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4, v4}, Lxsi;-><init>(Ljava/lang/String;IS)V
+
+    new-instance v3, Lxsi;
+
+    const-string v4, "TITLE_BIG"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5, v5}, Lxsi;-><init>(Ljava/lang/String;IS)V
+
+    new-instance v4, Lxsi;
+
+    const-string v5, "TITLE_STANDARD"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6, v6}, Lxsi;-><init>(Ljava/lang/String;IS)V
+
+    new-instance v5, Lxsi;
+
+    const-string v6, "DESCRIPTION"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7, v7}, Lxsi;-><init>(Ljava/lang/String;IS)V
+
+    new-instance v6, Lxsi;
+
+    const-string v7, "FILE"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8, v8}, Lxsi;-><init>(Ljava/lang/String;IS)V
+
+    new-instance v7, Lxsi;
+
+    const-string v8, "KEYBOARD"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9, v9}, Lxsi;-><init>(Ljava/lang/String;IS)V
+
+    filled-new-array/range {v0 .. v7}, [Lxsi;
+
+    move-result-object v0
+
+    sput-object v0, Lxsi;->c:[Lxsi;
+
+    new-instance v1, Lmn5;
+
+    invoke-direct {v1, v0}, Lmn5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lxsi;->d:Lmn5;
 
     return-void
 .end method
 
-.method public static final a(Ljava/lang/String;)Z
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;IS)V
+    .locals 0
 
-    const-string v0, "GET"
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iput-short p3, p0, Lxsi;->a:S
 
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "HEAD"
-
-    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    return-void
 .end method
 
-.method public static final b(Ljava/io/Reader;)Ljava/lang/String;
-    .locals 4
+.method public static valueOf(Ljava/lang/String;)Lxsi;
+    .locals 1
 
-    new-instance v0, Ljava/io/StringWriter;
+    const-class v0, Lxsi;
 
-    invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
-
-    const/16 v1, 0x2000
-
-    new-array v1, v1, [C
-
-    invoke-virtual {p0, v1}, Ljava/io/Reader;->read([C)I
-
-    move-result v2
-
-    :goto_0
-    if-ltz v2, :cond_0
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, v3, v2}, Ljava/io/Writer;->write([CII)V
-
-    invoke-virtual {p0, v1}, Ljava/io/Reader;->read([C)I
-
-    move-result v2
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
+    check-cast p0, Lxsi;
+
     return-object p0
+.end method
+
+.method public static values()[Lxsi;
+    .locals 1
+
+    sget-object v0, Lxsi;->c:[Lxsi;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lxsi;
+
+    return-object v0
 .end method

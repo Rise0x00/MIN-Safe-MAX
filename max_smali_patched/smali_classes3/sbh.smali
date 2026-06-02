@@ -2,169 +2,193 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxs6;
+
 
 # instance fields
-.field public final a:Lo58;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lxs6;
 
 
 # direct methods
-.method public constructor <init>(Lo58;)V
+.method public synthetic constructor <init>(ILxs6;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lsbh;->a:I
 
-    iput-object p1, p0, Lsbh;->a:Lo58;
+    iput-object p2, p0, Lsbh;->b:Lxs6;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/String;)Ljava/lang/CharSequence;
-    .locals 5
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    const/4 v0, 0x0
+    iget v0, p0, Lsbh;->a:I
 
-    if-nez p2, :cond_0
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lsdf;
+
+    iget-object v1, p0, Lsbh;->b:Lxs6;
+
+    check-cast v1, Lu9h;
+
+    const/16 v2, 0x1b
+
+    invoke-direct {v0, v2, v1}, Lsdf;-><init>(ILxs6;)V
 
     return-object v0
 
-    :cond_0
-    const/4 v1, -0x1
+    :pswitch_0
+    new-instance v0, Lsdf;
 
-    if-nez p1, :cond_1
+    iget-object v1, p0, Lsbh;->b:Lxs6;
 
-    move v2, v1
+    check-cast v1, Lqli;
 
-    goto :goto_0
+    const/16 v2, 0x1a
 
-    :cond_1
-    sget-object v2, Lrbh;->$EnumSwitchMapping$0:[I
+    invoke-direct {v0, v2, v1}, Lsdf;-><init>(ILxs6;)V
 
-    invoke-static {p1}, Lt02;->t(I)I
+    return-object v0
 
-    move-result v3
+    :pswitch_1
+    new-instance v0, Lsdf;
 
-    aget v2, v2, v3
+    iget-object v1, p0, Lsbh;->b:Lxs6;
 
-    :goto_0
-    if-eq v2, v1, :cond_6
+    check-cast v1, Lrji;
 
-    const/4 v1, 0x1
+    const/16 v2, 0x19
 
-    if-ne v2, v1, :cond_5
+    invoke-direct {v0, v2, v1}, Lsdf;-><init>(ILxs6;)V
 
-    iget-object v1, p0, Lsbh;->a:Lo58;
+    return-object v0
 
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+    :pswitch_2
+    new-instance v0, Lsdf;
 
-    move-result-object v1
+    iget-object v1, p0, Lsbh;->b:Lxs6;
 
-    check-cast v1, Lwx5;
+    check-cast v1, Lu9h;
 
-    check-cast v1, Lpy5;
+    const/16 v2, 0x18
 
-    iget-object v2, v1, Lpy5;->P:Lby5;
+    invoke-direct {v0, v2, v1}, Lsdf;-><init>(ILxs6;)V
 
-    sget-object v3, Lpy5;->N0:[Lz28;
+    return-object v0
 
-    const/16 v4, 0x1d
+    :pswitch_3
+    new-instance v0, Lsdf;
 
-    aget-object v3, v3, v4
+    iget-object v1, p0, Lsbh;->b:Lxs6;
 
-    invoke-virtual {v2, v1, v3}, Lby5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    check-cast v1, Lu9h;
 
-    move-result-object v1
+    const/16 v2, 0x17
 
-    check-cast v1, Ljava/lang/Boolean;
+    invoke-direct {v0, v2, v1}, Lsdf;-><init>(ILxs6;)V
 
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+    return-object v0
 
-    move-result v1
+    :pswitch_4
+    new-instance v0, Lsdf;
 
-    if-eqz v1, :cond_6
+    iget-object v1, p0, Lsbh;->b:Lxs6;
 
-    if-eqz p1, :cond_4
+    check-cast v1, Lu9h;
 
-    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    const/16 v2, 0x16
 
-    move-result-object p1
+    invoke-direct {v0, v2, v1}, Lsdf;-><init>(ILxs6;)V
 
-    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    return-object v0
 
-    move-result-object p1
+    :pswitch_5
+    new-instance v0, Lsdf;
 
-    invoke-virtual {p1}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
+    iget-object v1, p0, Lsbh;->b:Lxs6;
 
-    move-result-object p2
+    check-cast v1, Ljzh;
 
-    invoke-virtual {p2}, Landroid/net/Uri$Builder;->clearQuery()Landroid/net/Uri$Builder;
+    const/16 v2, 0x15
 
-    move-result-object p2
+    invoke-direct {v0, v2, v1}, Lsdf;-><init>(ILxs6;)V
 
-    invoke-virtual {p1}, Landroid/net/Uri;->getQueryParameterNames()Ljava/util/Set;
+    return-object v0
 
-    move-result-object v0
+    :pswitch_6
+    new-instance v0, Lsdf;
 
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    iget-object v1, p0, Lsbh;->b:Lxs6;
 
-    move-result-object v0
+    check-cast v1, Lu9h;
 
-    :cond_2
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    const/16 v2, 0x14
 
-    move-result v1
+    invoke-direct {v0, v2, v1}, Lsdf;-><init>(ILxs6;)V
 
-    const-string v2, "utm_source"
+    return-object v0
 
-    if-eqz v1, :cond_3
+    :pswitch_7
+    new-instance v0, Lsdf;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v1, p0, Lsbh;->b:Lxs6;
 
-    move-result-object v1
+    check-cast v1, Lsse;
 
-    check-cast v1, Ljava/lang/String;
+    const/16 v2, 0x13
 
-    invoke-static {v1, v2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {v0, v2, v1}, Lsdf;-><init>(ILxs6;)V
 
-    move-result v2
+    return-object v0
 
-    if-nez v2, :cond_2
+    :pswitch_8
+    new-instance v0, Lsdf;
 
-    invoke-virtual {p1, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    iget-object v1, p0, Lsbh;->b:Lxs6;
 
-    move-result-object v2
+    check-cast v1, Lsse;
 
-    invoke-virtual {p2, v1, v2}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+    const/16 v2, 0x12
 
-    goto :goto_1
+    invoke-direct {v0, v2, v1}, Lsdf;-><init>(ILxs6;)V
 
-    :cond_3
-    const-string p1, "trigger"
+    return-object v0
 
-    invoke-virtual {p2, v2, p1}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+    :pswitch_9
+    new-instance v0, Lsdf;
 
-    invoke-virtual {p2}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+    iget-object v1, p0, Lsbh;->b:Lxs6;
 
-    move-result-object p1
+    check-cast v1, Lobh;
 
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+    const/16 v2, 0x11
 
-    move-result-object p1
+    invoke-direct {v0, v2, v1}, Lsdf;-><init>(ILxs6;)V
 
-    return-object p1
+    return-object v0
 
-    :cond_4
-    throw v0
+    nop
 
-    :cond_5
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_6
-    return-object p2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

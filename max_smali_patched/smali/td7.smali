@@ -1,33 +1,167 @@
-.class public abstract Ltd7;
-.super Ljava/lang/Object;
+.class public final Ltd7;
+.super Lqd7;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/regex/Pattern;
+# instance fields
+.field public d:J
 
-.field public static final b:Ljava/util/regex/Pattern;
+.field public final synthetic o:Lqa;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lqa;J)V
+    .locals 2
 
-    const-string v0, "bytes (\\d+)-(\\d+)/(?:\\d+|\\*)"
+    iput-object p1, p0, Ltd7;->o:Lqa;
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    invoke-direct {p0, p1}, Lqd7;-><init>(Lqa;)V
 
-    move-result-object v0
+    iput-wide p2, p0, Ltd7;->d:J
 
-    sput-object v0, Ltd7;->a:Ljava/util/regex/Pattern;
+    const-wide/16 v0, 0x0
 
-    const-string v0, "bytes (?:(?:\\d+-\\d+)|\\*)/(\\d+)"
+    cmp-long p1, p2, v0
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    if-nez p1, :cond_0
 
-    move-result-object v0
+    invoke-virtual {p0}, Lqd7;->l()V
 
-    sput-object v0, Ltd7;->b:Ljava/util/regex/Pattern;
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final close()V
+    .locals 4
+
+    iget-boolean v0, p0, Lqd7;->b:Z
+
+    if-eqz v0, :cond_0
 
     return-void
+
+    :cond_0
+    iget-wide v0, p0, Ltd7;->d:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_1
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const/16 v0, 0x64
+
+    :try_start_0
+    invoke-static {p0, v0}, Lonh;->t(Lcvf;I)Z
+
+    move-result v0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Ltd7;->o:Lqa;
+
+    iget-object v0, v0, Lqa;->c:Ljava/lang/Object;
+
+    check-cast v0, Lmwd;
+
+    invoke-virtual {v0}, Lmwd;->k()V
+
+    invoke-virtual {p0}, Lqd7;->l()V
+
+    :cond_1
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lqd7;->b:Z
+
+    return-void
+.end method
+
+.method public final s0(JLk01;)J
+    .locals 7
+
+    iget-boolean p1, p0, Lqd7;->b:Z
+
+    if-nez p1, :cond_3
+
+    iget-wide p1, p0, Ltd7;->d:J
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v2, p1, v0
+
+    const-wide/16 v3, -0x1
+
+    if-nez v2, :cond_0
+
+    return-wide v3
+
+    :cond_0
+    const-wide/16 v5, 0x2000
+
+    invoke-static {p1, p2, v5, v6}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide p1
+
+    invoke-super {p0, p1, p2, p3}, Lqd7;->s0(JLk01;)J
+
+    move-result-wide p1
+
+    cmp-long p3, p1, v3
+
+    if-eqz p3, :cond_2
+
+    iget-wide v2, p0, Ltd7;->d:J
+
+    sub-long/2addr v2, p1
+
+    iput-wide v2, p0, Ltd7;->d:J
+
+    cmp-long p3, v2, v0
+
+    if-nez p3, :cond_1
+
+    invoke-virtual {p0}, Lqd7;->l()V
+
+    :cond_1
+    return-wide p1
+
+    :cond_2
+    iget-object p1, p0, Ltd7;->o:Lqa;
+
+    iget-object p1, p1, Lqa;->c:Ljava/lang/Object;
+
+    check-cast p1, Lmwd;
+
+    invoke-virtual {p1}, Lmwd;->k()V
+
+    new-instance p1, Ljava/net/ProtocolException;
+
+    const-string p2, "unexpected end of stream"
+
+    invoke-direct {p1, p2}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lqd7;->l()V
+
+    throw p1
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "closed"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

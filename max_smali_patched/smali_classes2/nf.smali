@@ -1,107 +1,159 @@
 .class public final Lnf;
-.super Llf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lrl7;
 
-# virtual methods
-.method public final h(Lxhi;)Lxhi;
-    .locals 6
 
-    iget-object v0, p1, Lxhi;->a:Lvhi;
+# instance fields
+.field public final a:Landroid/media/Image;
 
-    iget v1, p0, Llf;->j:I
+.field public final b:[Lsxj;
 
-    invoke-virtual {v0, v1}, Lvhi;->f(I)Lcs7;
+.field public final c:Lbg0;
 
-    move-result-object v1
 
-    iget v2, p0, Llqf;->d:I
+# direct methods
+.method public constructor <init>(Landroid/media/Image;)V
+    .locals 8
 
-    invoke-virtual {v0, v2}, Lvhi;->f(I)Lcs7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Lnf;->a:Landroid/media/Image;
 
-    iget v2, v1, Lcs7;->a:I
-
-    iget v3, v0, Lcs7;->a:I
-
-    sub-int/2addr v2, v3
-
-    iget v3, v1, Lcs7;->b:I
-
-    iget v4, v0, Lcs7;->b:I
-
-    sub-int/2addr v3, v4
-
-    iget v4, v1, Lcs7;->c:I
-
-    iget v5, v0, Lcs7;->c:I
-
-    sub-int/2addr v4, v5
-
-    iget v1, v1, Lcs7;->d:I
-
-    iget v0, v0, Lcs7;->d:I
-
-    sub-int/2addr v1, v0
-
-    invoke-static {v2, v3, v4, v1}, Lcs7;->b(IIII)Lcs7;
+    invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v0
-
-    iget v1, v0, Lcs7;->a:I
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
-
-    move-result v1
-
-    iget v3, v0, Lcs7;->b:I
-
-    invoke-static {v3, v2}, Ljava/lang/Math;->max(II)I
-
-    move-result v3
-
-    iget v4, v0, Lcs7;->c:I
-
-    invoke-static {v4, v2}, Ljava/lang/Math;->max(II)I
-
-    move-result v4
-
-    iget v0, v0, Lcs7;->d:I
-
-    invoke-static {v0, v2}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    invoke-static {v1, v3, v4, v0}, Lcs7;->b(IIII)Lcs7;
-
-    move-result-object v0
-
-    iget v1, v0, Lcs7;->b:I
-
-    iget v0, v0, Lcs7;->d:I
-
-    sub-int/2addr v1, v0
-
-    int-to-float v0, v1
-
-    iget-object v1, p0, Llqf;->a:Landroid/view/View;
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationY(F)V
-
-    return-object p1
-.end method
-
-.method public final i()V
-    .locals 2
-
-    iget-object v0, p0, Llqf;->a:Landroid/view/View;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
+    if-eqz v0, :cond_0
+
+    array-length v2, v0
+
+    new-array v2, v2, [Lsxj;
+
+    iput-object v2, p0, Lnf;->b:[Lsxj;
+
+    :goto_0
+    array-length v2, v0
+
+    if-ge v1, v2, :cond_1
+
+    iget-object v2, p0, Lnf;->b:[Lsxj;
+
+    new-instance v3, Lsxj;
+
+    aget-object v4, v0, v1
+
+    const/4 v5, 0x1
+
+    invoke-direct {v3, v5, v4}, Lsxj;-><init>(ILjava/lang/Object;)V
+
+    aput-object v3, v2, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    new-array v0, v1, [Lsxj;
+
+    iput-object v0, p0, Lnf;->b:[Lsxj;
+
+    :cond_1
+    sget-object v2, Llmg;->b:Llmg;
+
+    invoke-virtual {p1}, Landroid/media/Image;->getTimestamp()J
+
+    move-result-wide v3
+
+    new-instance v6, Landroid/graphics/Matrix;
+
+    invoke-direct {v6}, Landroid/graphics/Matrix;-><init>()V
+
+    new-instance v1, Lbg0;
+
+    const/4 v5, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-direct/range {v1 .. v7}, Lbg0;-><init>(Llmg;JILandroid/graphics/Matrix;I)V
+
+    iput-object v1, p0, Lnf;->c:Lbg0;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final close()V
+    .locals 1
+
+    iget-object v0, p0, Lnf;->a:Landroid/media/Image;
+
+    invoke-virtual {v0}, Landroid/media/Image;->close()V
+
+    return-void
+.end method
+
+.method public final getFormat()I
+    .locals 1
+
+    iget-object v0, p0, Lnf;->a:Landroid/media/Image;
+
+    invoke-virtual {v0}, Landroid/media/Image;->getFormat()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getHeight()I
+    .locals 1
+
+    iget-object v0, p0, Lnf;->a:Landroid/media/Image;
+
+    invoke-virtual {v0}, Landroid/media/Image;->getHeight()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getImageInfo()Luk7;
+    .locals 1
+
+    iget-object v0, p0, Lnf;->c:Lbg0;
+
+    return-object v0
+.end method
+
+.method public final getWidth()I
+    .locals 1
+
+    iget-object v0, p0, Lnf;->a:Landroid/media/Image;
+
+    invoke-virtual {v0}, Landroid/media/Image;->getWidth()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final n0()Landroid/media/Image;
+    .locals 1
+
+    iget-object v0, p0, Lnf;->a:Landroid/media/Image;
+
+    return-object v0
+.end method
+
+.method public final v()[Lql7;
+    .locals 1
+
+    iget-object v0, p0, Lnf;->b:[Lsxj;
+
+    return-object v0
 .end method

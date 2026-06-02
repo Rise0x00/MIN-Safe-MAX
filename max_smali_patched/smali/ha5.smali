@@ -1,387 +1,613 @@
-.class public final Lha5;
-.super Ls35;
+.class public abstract Lha5;
+.super Landroid/graphics/drawable/Drawable;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/graphics/drawable/Animatable;
+
+
+# static fields
+.field public static final B0:Lye2;
 
 
 # instance fields
-.field public o:I
+.field public A0:I
 
-.field public p:I
+.field public X:Ljava/util/ArrayList;
 
-.field public final q:Lvqj;
+.field public Y:Z
 
-.field public final r:Lvqj;
+.field public Z:F
+
+.field public final a:Landroid/content/Context;
+
+.field public final b:Lmp0;
+
+.field public c:Lej;
+
+.field public d:Landroid/animation/ObjectAnimator;
+
+.field public o:Landroid/animation/ObjectAnimator;
+
+.field public final z0:Landroid/graphics/Paint;
 
 
 # direct methods
-.method public constructor <init>(Lvqj;Lvqj;)V
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Lye2;
+
+    const-string v1, "growFraction"
+
+    const/4 v2, 0x7
+
+    const-class v3, Ljava/lang/Float;
+
+    invoke-direct {v0, v2, v3, v1}, Lye2;-><init>(ILjava/lang/Class;Ljava/lang/String;)V
+
+    sput-object v0, Lha5;->B0:Lye2;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Lmp0;)V
     .locals 1
 
-    invoke-direct {p0}, Ls35;-><init>()V
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    const/4 v0, -0x1
+    new-instance v0, Landroid/graphics/Paint;
 
-    iput v0, p0, Lha5;->o:I
+    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput v0, p0, Lha5;->p:I
+    iput-object v0, p0, Lha5;->z0:Landroid/graphics/Paint;
 
-    iput-object p1, p0, Lha5;->q:Lvqj;
+    iput-object p1, p0, Lha5;->a:Landroid/content/Context;
 
-    iput-object p2, p0, Lha5;->r:Lvqj;
+    iput-object p2, p0, Lha5;->b:Lmp0;
+
+    new-instance p1, Lej;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lha5;->c:Lej;
+
+    const/16 p1, 0xff
+
+    invoke-virtual {p0, p1}, Lha5;->setAlpha(I)V
+
+    return-void
+.end method
+
+.method public static synthetic a(Lha5;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-super {p0, v0, v0}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Lwb5;)Lgb0;
-    .locals 1
+.method public final b()F
+    .locals 2
 
-    sget-object v0, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+    iget-object v0, p0, Lha5;->b:Lmp0;
 
-    invoke-super {p0, p1}, Ls35;->n(Lwb5;)Lgb0;
+    iget v1, v0, Lmp0;->e:I
 
-    move-result-object p1
-
-    invoke-static {}, Lps6;->h()I
-
-    move-result v0
-
-    iput v0, p0, Lha5;->o:I
-
-    invoke-static {}, Lps6;->h()I
-
-    move-result v0
-
-    iput v0, p0, Lha5;->p:I
-
-    return-object p1
-.end method
-
-.method public final q()V
-    .locals 1
-
-    invoke-super {p0}, Ls35;->q()V
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lha5;->o:I
-
-    iput v0, p0, Lha5;->p:I
-
-    return-void
-.end method
-
-.method public final w(JLandroid/view/Surface;Lr5g;Landroid/graphics/SurfaceTexture;Landroid/graphics/SurfaceTexture;)V
-    .locals 8
-
-    iget-object v0, p0, Ls35;->c:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lps6;->d(Ljava/util/concurrent/atomic/AtomicBoolean;Z)V
-
-    iget-object v0, p0, Ls35;->e:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Thread;
-
-    invoke-static {v0}, Lps6;->c(Ljava/lang/Thread;)V
-
-    invoke-virtual {p0, p3}, Ls35;->l(Landroid/view/Surface;)Lxb0;
-
-    move-result-object v0
-
-    sget-object v1, Lps6;->j:Lxb0;
-
-    if-ne v0, v1, :cond_1
-
-    invoke-virtual {p0, p3}, Ls35;->h(Landroid/view/Surface;)Lxb0;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    move-object v2, p0
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v1, p0, Ls35;->d:Ljava/lang/Object;
+    iget v0, v0, Lmp0;->f:I
 
-    check-cast v1, Ljava/util/HashMap;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v1, p3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :goto_0
+    iget v0, p0, Lha5;->Z:F
+
+    return v0
 
     :cond_1
-    move-object v3, v0
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    iget-object v0, v3, Lxb0;->a:Landroid/opengl/EGLSurface;
+    return v0
+.end method
 
-    iget-object v1, p0, Ls35;->k:Ljava/lang/Object;
+.method public final c(ZZZ)Z
+    .locals 3
 
-    check-cast v1, Landroid/view/Surface;
+    iget-object v0, p0, Lha5;->c:Lej;
 
-    if-eq p3, v1, :cond_2
+    iget-object v1, p0, Lha5;->a:Landroid/content/Context;
 
-    invoke-virtual {p0, v0}, Ls35;->o(Landroid/opengl/EGLSurface;)V
+    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    iput-object p3, p0, Ls35;->k:Ljava/lang/Object;
+    move-result-object v1
 
-    :cond_2
-    const/high16 v1, 0x3f800000    # 1.0f
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v2, 0x0
+    const-string v0, "animator_duration_scale"
 
-    invoke-static {v2, v2, v2, v1}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    const/16 v1, 0x4000
+    invoke-static {v1, v0, v2}, Landroid/provider/Settings$Global;->getFloat(Landroid/content/ContentResolver;Ljava/lang/String;F)F
 
-    invoke-static {v1}, Landroid/opengl/GLES20;->glClear(I)V
+    move-result v0
 
-    iget-object v6, p0, Lha5;->q:Lvqj;
+    if-eqz p3, :cond_0
 
-    iget v7, p0, Lha5;->o:I
+    const/4 p3, 0x0
 
-    move-object v2, p0
+    cmpl-float p3, v0, p3
 
-    move-object v4, p4
+    if-lez p3, :cond_0
 
-    move-object v5, p5
+    const/4 p3, 0x1
 
-    invoke-virtual/range {v2 .. v7}, Lha5;->x(Lxb0;Lr5g;Landroid/graphics/SurfaceTexture;Lvqj;I)V
+    goto :goto_0
 
-    iget-object v6, v2, Lha5;->r:Lvqj;
+    :cond_0
+    const/4 p3, 0x0
 
-    iget v7, v2, Lha5;->p:I
-
-    move-object v5, p6
-
-    invoke-virtual/range {v2 .. v7}, Lha5;->x(Lxb0;Lr5g;Landroid/graphics/SurfaceTexture;Lvqj;I)V
-
-    iget-object p4, v2, Ls35;->f:Ljava/lang/Object;
-
-    check-cast p4, Landroid/opengl/EGLDisplay;
-
-    invoke-static {p4, v0, p1, p2}, Landroid/opengl/EGLExt;->eglPresentationTimeANDROID(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;J)Z
-
-    iget-object p1, v2, Ls35;->f:Ljava/lang/Object;
-
-    check-cast p1, Landroid/opengl/EGLDisplay;
-
-    invoke-static {p1, v0}, Landroid/opengl/EGL14;->eglSwapBuffers(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)Z
+    :goto_0
+    invoke-virtual {p0, p1, p2, p3}, Lha5;->d(ZZZ)Z
 
     move-result p1
 
-    if-nez p1, :cond_3
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string p2, "Failed to swap buffers with EGL error: 0x"
-
-    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Landroid/opengl/EGL14;->eglGetError()I
-
-    move-result p2
-
-    invoke-static {p2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "DualOpenGlRenderer"
-
-    invoke-static {p2, p1}, Lm5j;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p3, p1}, Ls35;->s(Landroid/view/Surface;Z)V
-
-    :cond_3
-    :goto_0
-    return-void
+    return p1
 .end method
 
-.method public final x(Lxb0;Lr5g;Landroid/graphics/SurfaceTexture;Lvqj;I)V
-    .locals 17
+.method public d(ZZZ)Z
+    .locals 7
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Lha5;->d:Landroid/animation/ObjectAnimator;
 
-    move-object/from16 v1, p1
+    const/4 v1, 0x2
 
-    move/from16 v2, p5
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v2}, Ls35;->v(I)V
+    const-wide/16 v3, 0x1f4
 
-    iget v2, v1, Lxb0;->b:I
+    sget-object v5, Lha5;->B0:Lye2;
 
-    iget v1, v1, Lxb0;->c:I
+    if-nez v0, :cond_2
 
-    const/4 v3, 0x0
+    new-array v0, v1, [F
 
-    invoke-static {v3, v3, v2, v1}, Landroid/opengl/GLES20;->glViewport(IIII)V
+    fill-array-data v0, :array_0
 
-    invoke-static {v3, v3, v2, v1}, Landroid/opengl/GLES20;->glScissor(IIII)V
+    invoke-static {p0, v5, v0}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    const/16 v4, 0x10
+    move-result-object v0
 
-    new-array v5, v4, [F
+    iput-object v0, p0, Lha5;->d:Landroid/animation/ObjectAnimator;
 
-    move-object/from16 v6, p3
+    invoke-virtual {v0, v3, v4}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    invoke-virtual {v6, v5}, Landroid/graphics/SurfaceTexture;->getTransformMatrix([F)V
+    iget-object v0, p0, Lha5;->d:Landroid/animation/ObjectAnimator;
 
-    new-array v6, v4, [F
+    sget-object v6, Lni;->b:Liy5;
 
-    move-object/from16 v7, p2
+    invoke-virtual {v0, v6}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    invoke-virtual {v7, v6, v5}, Lr5g;->H([F[F)V
+    iget-object v0, p0, Lha5;->d:Landroid/animation/ObjectAnimator;
 
-    iget-object v5, v0, Ls35;->m:Ljava/lang/Object;
+    if-eqz v0, :cond_1
 
-    check-cast v5, Lns6;
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
 
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result v6
 
-    instance-of v7, v5, Los6;
+    if-nez v6, :cond_0
 
-    const-string v8, "glUniformMatrix4fv"
-
-    const/4 v9, 0x1
-
-    if-eqz v7, :cond_0
-
-    move-object v7, v5
-
-    check-cast v7, Los6;
-
-    iget v7, v7, Los6;->f:I
-
-    invoke-static {v7, v9, v3, v6, v3}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
-
-    invoke-static {v8}, Lps6;->b(Ljava/lang/String;)V
+    goto :goto_0
 
     :cond_0
-    new-instance v6, Landroid/util/Size;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    int-to-float v7, v2
+    const-string p2, "Cannot set showAnimator while the current showAnimator is running."
 
-    invoke-virtual/range {p4 .. p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    const/high16 v10, 0x3f800000    # 1.0f
+    throw p1
 
-    mul-float/2addr v7, v10
+    :cond_1
+    :goto_0
+    iput-object v0, p0, Lha5;->d:Landroid/animation/ObjectAnimator;
 
-    float-to-int v7, v7
+    new-instance v6, Lga5;
 
-    int-to-float v11, v1
+    invoke-direct {v6, p0, v2}, Lga5;-><init>(Lha5;I)V
 
-    mul-float/2addr v11, v10
+    invoke-virtual {v0, v6}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    float-to-int v11, v11
+    :cond_2
+    iget-object v0, p0, Lha5;->o:Landroid/animation/ObjectAnimator;
 
-    invoke-direct {v6, v7, v11}, Landroid/util/Size;-><init>(II)V
+    const/4 v6, 0x1
 
-    new-instance v7, Landroid/util/Size;
+    if-nez v0, :cond_5
 
-    invoke-direct {v7, v2, v1}, Landroid/util/Size;-><init>(II)V
+    new-array v0, v1, [F
 
-    new-array v13, v4, [F
+    fill-array-data v0, :array_1
 
-    invoke-static {v13, v3}, Landroid/opengl/Matrix;->setIdentityM([FI)V
+    invoke-static {p0, v5, v0}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    new-array v15, v4, [F
+    move-result-object v0
 
-    invoke-static {v15, v3}, Landroid/opengl/Matrix;->setIdentityM([FI)V
+    iput-object v0, p0, Lha5;->o:Landroid/animation/ObjectAnimator;
 
-    new-array v11, v4, [F
+    invoke-virtual {v0, v3, v4}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    invoke-static {v11, v3}, Landroid/opengl/Matrix;->setIdentityM([FI)V
+    iget-object v0, p0, Lha5;->o:Landroid/animation/ObjectAnimator;
 
-    invoke-virtual {v6}, Landroid/util/Size;->getWidth()I
+    sget-object v1, Lni;->b:Liy5;
+
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    iget-object v0, p0, Lha5;->o:Landroid/animation/ObjectAnimator;
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
 
     move-result v1
 
-    int-to-float v1, v1
+    if-nez v1, :cond_3
 
-    invoke-virtual {v7}, Landroid/util/Size;->getWidth()I
+    goto :goto_1
 
-    move-result v2
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    int-to-float v2, v2
+    const-string p2, "Cannot set hideAnimator while the current hideAnimator is running."
 
-    div-float/2addr v1, v2
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v6}, Landroid/util/Size;->getHeight()I
+    throw p1
 
-    move-result v2
+    :cond_4
+    :goto_1
+    iput-object v0, p0, Lha5;->o:Landroid/animation/ObjectAnimator;
 
-    int-to-float v2, v2
+    new-instance v1, Lga5;
 
-    invoke-virtual {v7}, Landroid/util/Size;->getHeight()I
+    invoke-direct {v1, p0, v6}, Lga5;-><init>(Lha5;I)V
 
-    move-result v4
+    invoke-virtual {v0, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    int-to-float v4, v4
+    :cond_5
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->isVisible()Z
 
-    div-float/2addr v2, v4
+    move-result v0
 
-    invoke-static {v13, v3, v1, v2, v10}, Landroid/opengl/Matrix;->scaleM([FIFFF)V
+    if-nez v0, :cond_6
+
+    if-nez p1, :cond_6
+
+    goto :goto_5
+
+    :cond_6
+    if-eqz p1, :cond_7
+
+    iget-object v0, p0, Lha5;->d:Landroid/animation/ObjectAnimator;
+
+    goto :goto_2
+
+    :cond_7
+    iget-object v0, p0, Lha5;->o:Landroid/animation/ObjectAnimator;
+
+    :goto_2
+    if-eqz p1, :cond_8
+
+    iget-object v1, p0, Lha5;->o:Landroid/animation/ObjectAnimator;
+
+    goto :goto_3
+
+    :cond_8
+    iget-object v1, p0, Lha5;->d:Landroid/animation/ObjectAnimator;
+
+    :goto_3
+    if-nez p3, :cond_b
+
+    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->isRunning()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_9
+
+    new-array p2, v6, [Landroid/animation/ValueAnimator;
+
+    aput-object v1, p2, v2
+
+    iget-boolean p3, p0, Lha5;->Y:Z
+
+    iput-boolean v6, p0, Lha5;->Y:Z
+
+    aget-object p2, p2, v2
+
+    invoke-virtual {p2}, Landroid/animation/ValueAnimator;->cancel()V
+
+    iput-boolean p3, p0, Lha5;->Y:Z
+
+    :cond_9
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_a
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->end()V
+
+    goto :goto_4
+
+    :cond_a
+    new-array p2, v6, [Landroid/animation/ValueAnimator;
+
+    aput-object v0, p2, v2
+
+    iget-boolean p3, p0, Lha5;->Y:Z
+
+    iput-boolean v6, p0, Lha5;->Y:Z
+
+    aget-object p2, p2, v2
+
+    invoke-virtual {p2}, Landroid/animation/ValueAnimator;->end()V
+
+    iput-boolean p3, p0, Lha5;->Y:Z
+
+    :goto_4
+    invoke-super {p0, p1, v2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_b
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_c
+
+    :goto_5
+    return v2
+
+    :cond_c
+    if-eqz p1, :cond_e
+
+    invoke-super {p0, p1, v2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
+
+    move-result p3
+
+    if-eqz p3, :cond_d
+
+    goto :goto_6
+
+    :cond_d
+    move p3, v2
+
+    goto :goto_7
+
+    :cond_e
+    :goto_6
+    move p3, v6
+
+    :goto_7
+    iget-object v1, p0, Lha5;->b:Lmp0;
+
+    if-eqz p1, :cond_f
+
+    iget p1, v1, Lmp0;->e:I
+
+    if-eqz p1, :cond_12
+
+    goto :goto_8
+
+    :cond_f
+    iget p1, v1, Lmp0;->f:I
+
+    if-eqz p1, :cond_12
+
+    :goto_8
+    if-nez p2, :cond_11
+
+    invoke-virtual {v0}, Landroid/animation/Animator;->isPaused()Z
+
+    move-result p1
+
+    if-nez p1, :cond_10
+
+    goto :goto_9
+
+    :cond_10
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->resume()V
+
+    return p3
+
+    :cond_11
+    :goto_9
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
+
+    return p3
+
+    :cond_12
+    new-array p1, v6, [Landroid/animation/ValueAnimator;
+
+    aput-object v0, p1, v2
+
+    iget-boolean p2, p0, Lha5;->Y:Z
+
+    iput-boolean v6, p0, Lha5;->Y:Z
+
+    aget-object p1, p1, v2
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->end()V
+
+    iput-boolean p2, p0, Lha5;->Y:Z
+
+    return p3
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x3f800000    # 1.0f
+        0x0
+    .end array-data
+.end method
+
+.method public final e(Lkp0;)V
+    .locals 1
+
+    iget-object v0, p0, Lha5;->X:Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lha5;->X:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    iget-object p1, p0, Lha5;->X:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lha5;->X:Ljava/util/ArrayList;
+
+    :cond_0
+    return-void
+.end method
+
+.method public final getAlpha()I
+    .locals 1
+
+    iget v0, p0, Lha5;->A0:I
+
+    return v0
+.end method
+
+.method public final getOpacity()I
+    .locals 1
+
+    const/4 v0, -0x3
+
+    return v0
+.end method
+
+.method public final isRunning()Z
+    .locals 1
+
+    iget-object v0, p0, Lha5;->d:Landroid/animation/ObjectAnimator;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    iget-object v0, p0, Lha5;->o:Landroid/animation/ObjectAnimator;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_2
+    :goto_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final setAlpha(I)V
+    .locals 0
+
+    iput p1, p0, Lha5;->A0:I
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+.end method
+
+.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
+    .locals 1
+
+    iget-object v0, p0, Lha5;->z0:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+.end method
+
+.method public final setVisible(ZZ)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, p1, p2, v0}, Lha5;->c(ZZZ)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final start()V
+    .locals 2
+
+    const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    invoke-static {v15, v3, v1, v1, v1}, Landroid/opengl/Matrix;->translateM([FIFFF)V
+    invoke-virtual {p0, v0, v0, v1}, Lha5;->d(ZZZ)Z
 
-    const/4 v14, 0x0
+    return-void
+.end method
 
-    const/16 v16, 0x0
+.method public final stop()V
+    .locals 2
 
-    const/4 v12, 0x0
+    const/4 v0, 0x0
 
-    invoke-static/range {v11 .. v16}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
+    const/4 v1, 0x1
 
-    iget v1, v5, Lns6;->b:I
-
-    invoke-static {v1, v9, v3, v11, v3}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
-
-    invoke-static {v8}, Lps6;->b(Ljava/lang/String;)V
-
-    iget v1, v5, Lns6;->c:I
-
-    invoke-static {v1, v10}, Landroid/opengl/GLES20;->glUniform1f(IF)V
-
-    const-string v1, "glUniform1f"
-
-    invoke-static {v1}, Lps6;->b(Ljava/lang/String;)V
-
-    const/16 v1, 0xbe2
-
-    invoke-static {v1}, Landroid/opengl/GLES20;->glEnable(I)V
-
-    const/16 v2, 0x302
-
-    const/16 v4, 0x303
-
-    invoke-static {v2, v4, v9, v4}, Landroid/opengl/GLES20;->glBlendFuncSeparate(IIII)V
-
-    const/4 v2, 0x5
-
-    const/4 v4, 0x4
-
-    invoke-static {v2, v3, v4}, Landroid/opengl/GLES20;->glDrawArrays(III)V
-
-    const-string v2, "glDrawArrays"
-
-    invoke-static {v2}, Lps6;->b(Ljava/lang/String;)V
-
-    invoke-static {v1}, Landroid/opengl/GLES20;->glDisable(I)V
+    invoke-virtual {p0, v0, v1, v0}, Lha5;->d(ZZZ)Z
 
     return-void
 .end method

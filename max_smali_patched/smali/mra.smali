@@ -1,15 +1,19 @@
-.class public abstract Lmra;
+.class public interface abstract Lmra;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Lwra;
+
+
 # direct methods
-.method public static a(Landroid/app/Notification$Action;)Z
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/app/Notification$Action;->isAuthenticationRequired()Z
+    sget-object v0, Lwra;->Y:Lwra;
 
-    move-result p0
+    sput-object v0, Lmra;->a:Lwra;
 
-    return p0
+    return-void
 .end method

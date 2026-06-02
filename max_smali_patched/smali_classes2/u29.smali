@@ -1,138 +1,89 @@
 .class public final Lu29;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/sdk/gallery/MediaGalleryWidget;
+.field public final a:Landroid/content/Context;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Landroid/media/browse/MediaBrowser;
+
+.field public final c:Landroid/os/Bundle;
+
+.field public final d:Ls29;
+
+.field public final e:Lwu;
+
+.field public f:Lrc5;
+
+.field public g:Landroid/os/Messenger;
+
+.field public h:Ljg9;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/gallery/MediaGalleryWidget;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lu29;->X:Lone/me/sdk/gallery/MediaGalleryWidget;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/util/List;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lu29;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lu29;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lu29;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;Lh7c;Landroid/os/Bundle;)V
     .locals 2
 
-    new-instance v0, Lu29;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v1, p0, Lu29;->X:Lone/me/sdk/gallery/MediaGalleryWidget;
+    new-instance v0, Ls29;
 
-    invoke-direct {v0, v1, p2}, Lu29;-><init>(Lone/me/sdk/gallery/MediaGalleryWidget;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p0}, Ls29;-><init>(Lu29;)V
 
-    iput-object p1, v0, Lu29;->o:Ljava/lang/Object;
+    iput-object v0, p0, Lu29;->d:Ls29;
 
-    return-object v0
-.end method
+    new-instance v0, Lwu;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lu29;->o:Ljava/lang/Object;
+    invoke-direct {v0, v1}, Lhpf;-><init>(I)V
 
-    check-cast v0, Ljava/util/List;
+    iput-object v0, p0, Lu29;->e:Lwu;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iput-object p1, p0, Lu29;->a:Landroid/content/Context;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    new-instance v0, Landroid/os/Bundle;
 
-    move-result p1
+    if-eqz p4, :cond_0
 
-    const-string v1, "uiItems: handleEvent, size = "
-
-    const-string v2, "MediaGalleryWidget"
-
-    invoke-static {p1, v1, v2}, Lxi4;->n(ILjava/lang/String;Ljava/lang/String;)V
-
-    sget-object p1, Lone/me/sdk/gallery/MediaGalleryWidget;->Y:[Lz28;
-
-    iget-object p1, p0, Lu29;->X:Lone/me/sdk/gallery/MediaGalleryWidget;
-
-    invoke-virtual {p1}, Lone/me/sdk/gallery/MediaGalleryWidget;->z0()Lyj5;
-
-    move-result-object v1
-
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x0
+    invoke-direct {v0, p4}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
     goto :goto_0
 
     :cond_0
-    const/16 v2, 0x8
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     :goto_0
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+    iput-object v0, p0, Lu29;->c:Landroid/os/Bundle;
 
-    iget-object v1, p1, Lone/me/sdk/gallery/MediaGalleryWidget;->d:Ln8g;
+    const-string p4, "extra_client_version"
 
-    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    move-result-object v1
+    invoke-virtual {v0, p4, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    check-cast v1, Lqs6;
+    const-string p4, "extra_calling_pid"
 
-    invoke-virtual {v1, v0}, Lnd8;->F(Ljava/util/List;)V
+    invoke-static {}, Landroid/os/Process;->myPid()I
 
-    invoke-virtual {p1}, Lone/me/sdk/gallery/MediaGalleryWidget;->A0()Lut6;
+    move-result v1
 
-    move-result-object p1
+    invoke-virtual {v0, p4, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    iput-object p0, p3, Lh7c;->c:Ljava/lang/Object;
 
-    move-result v0
+    new-instance p4, Landroid/media/browse/MediaBrowser;
 
-    iget-object p1, p1, Lut6;->o:Lspf;
+    iget-object p3, p3, Lh7c;->b:Ljava/lang/Object;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    check-cast p3, Lt29;
 
-    move-result-object v0
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v1, 0x0
+    invoke-direct {p4, p1, p2, p3, v0}, Landroid/media/browse/MediaBrowser;-><init>(Landroid/content/Context;Landroid/content/ComponentName;Landroid/media/browse/MediaBrowser$ConnectionCallback;Landroid/os/Bundle;)V
 
-    invoke-virtual {p1, v1, v0}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iput-object p4, p0, Lu29;->b:Landroid/media/browse/MediaBrowser;
 
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-void
 .end method

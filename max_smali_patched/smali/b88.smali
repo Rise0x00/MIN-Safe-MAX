@@ -1,23 +1,14 @@
-.class public abstract Lb88;
+.class public interface abstract Lb88;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ln78;
 
-# static fields
-.field public static final a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
+# virtual methods
+.method public abstract isConst()Z
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    sput-object v0, Lb88;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    return-void
+.method public abstract isLateinit()Z
 .end method

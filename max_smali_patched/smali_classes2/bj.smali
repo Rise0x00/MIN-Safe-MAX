@@ -2,175 +2,103 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
+
 
 # instance fields
-.field public final a:Lzh;
+.field public X:Z
 
-.field public final b:Lbxa;
+.field public final synthetic Y:Ldj;
 
-.field public final c:Lii;
+.field public final a:Landroid/view/ViewGroup;
 
-.field public final d:Lpc3;
+.field public final b:Landroid/view/View;
 
-.field public final e:Le0a;
+.field public final c:Landroid/view/View;
 
-.field public final f:Landroid/os/HandlerThread;
+.field public final d:Z
 
-.field public final g:Landroid/os/Handler;
-
-.field public final h:Landroid/os/HandlerThread;
-
-.field public final i:Ljava/util/HashMap;
-
-.field public final j:Ljava/util/concurrent/ConcurrentHashMap;
-
-.field public final k:Ljava/util/HashMap;
-
-.field public final l:Ljava/util/LinkedHashSet;
-
-.field public final m:Landroid/graphics/Point;
-
-.field public final n:Lahd;
-
-.field public final o:Lxi1;
-
-.field public volatile p:Z
+.field public final o:Lo94;
 
 
 # direct methods
-.method public constructor <init>(Lzh;Lbxa;Lii;Lorg/webrtc/EglBase;Lpc3;Le0a;)V
-    .locals 1
+.method public constructor <init>(Ldj;Lo94;Landroid/view/View;Landroid/view/View;Landroid/view/ViewGroup;Z)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbj;->a:Lzh;
+    iput-object p1, p0, Lbj;->Y:Ldj;
 
-    iput-object p2, p0, Lbj;->b:Lbxa;
+    iput-object p5, p0, Lbj;->a:Landroid/view/ViewGroup;
 
-    iput-object p3, p0, Lbj;->c:Lii;
+    iput-object p3, p0, Lbj;->b:Landroid/view/View;
 
-    iput-object p5, p0, Lbj;->d:Lpc3;
+    iput-object p4, p0, Lbj;->c:Landroid/view/View;
 
-    iput-object p6, p0, Lbj;->e:Le0a;
+    iput-boolean p6, p0, Lbj;->d:Z
 
-    new-instance p2, Landroid/os/HandlerThread;
-
-    const-string p3, "AniRDControl"
-
-    invoke-direct {p2, p3}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
-
-    iput-object p2, p0, Lbj;->f:Landroid/os/HandlerThread;
-
-    new-instance p3, Landroid/os/HandlerThread;
-
-    const-string p5, "AniRDOutput"
-
-    invoke-direct {p3, p5}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
-
-    iput-object p3, p0, Lbj;->h:Landroid/os/HandlerThread;
-
-    new-instance p5, Ljava/util/HashMap;
-
-    invoke-direct {p5}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p5, p0, Lbj;->i:Ljava/util/HashMap;
-
-    new-instance p5, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {p5}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object p5, p0, Lbj;->j:Ljava/util/concurrent/ConcurrentHashMap;
-
-    new-instance p5, Ljava/util/HashMap;
-
-    invoke-direct {p5}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p5, p0, Lbj;->k:Ljava/util/HashMap;
-
-    new-instance p5, Ljava/util/LinkedHashSet;
-
-    invoke-direct {p5}, Ljava/util/LinkedHashSet;-><init>()V
-
-    iput-object p5, p0, Lbj;->l:Ljava/util/LinkedHashSet;
-
-    new-instance p5, Landroid/graphics/Point;
-
-    invoke-direct {p5}, Landroid/graphics/Point;-><init>()V
-
-    iput-object p5, p0, Lbj;->m:Landroid/graphics/Point;
-
-    iget-object p1, p1, Lzh;->b:Lahd;
-
-    iput-object p1, p0, Lbj;->n:Lahd;
-
-    new-instance p5, Lxi1;
-
-    invoke-interface {p4}, Lorg/webrtc/EglBase;->getEglBaseContext()Lorg/webrtc/EglBase$Context;
-
-    move-result-object p4
-
-    sget-object p6, Lorg/webrtc/EglBase;->CONFIG_PLAIN:[I
-
-    const-string v0, "CallOpenGLAnimoji"
-
-    invoke-direct {p5, p1, p4, p6, v0}, Lxi1;-><init>(Lahd;Lorg/webrtc/EglBase$Context;[ILjava/lang/String;)V
-
-    iput-object p5, p0, Lbj;->o:Lxi1;
-
-    invoke-virtual {p2}, Ljava/lang/Thread;->start()V
-
-    new-instance p1, Landroid/os/Handler;
-
-    invoke-virtual {p2}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    iput-object p1, p0, Lbj;->g:Landroid/os/Handler;
-
-    invoke-virtual {p3}, Ljava/lang/Thread;->start()V
-
-    new-instance p1, Landroid/os/Handler;
-
-    invoke-virtual {p3}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    iput-object p2, p0, Lbj;->o:Lo94;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Integer;Lsk1;[F)V
-    .locals 0
+.method public final a()V
+    .locals 9
 
-    if-eqz p2, :cond_0
+    iget-boolean v0, p0, Lbj;->X:Z
 
-    invoke-virtual {p0, p2}, Lbj;->b(Lsk1;)Lcj;
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lbj;->X:Z
+
+    iget-object v0, p0, Lbj;->c:Landroid/view/View;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/ViewTreeObserver;->isAlive()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
     :cond_0
+    const/4 v7, 0x1
+
+    iget-object v8, p0, Lbj;->o:Lo94;
+
+    iget-object v2, p0, Lbj;->Y:Ldj;
+
+    iget-object v3, p0, Lbj;->a:Landroid/view/ViewGroup;
+
+    iget-object v4, p0, Lbj;->b:Landroid/view/View;
+
+    iget-object v5, p0, Lbj;->c:Landroid/view/View;
+
+    iget-boolean v6, p0, Lbj;->d:Z
+
+    invoke-virtual/range {v2 .. v8}, Ldj;->m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZLo94;)V
+
+    :cond_1
     return-void
 .end method
 
-.method public final b(Lsk1;)Lcj;
+.method public final onPreDraw()Z
     .locals 1
 
-    iget-object v0, p0, Lbj;->i:Ljava/util/HashMap;
+    invoke-virtual {p0}, Lbj;->a()V
 
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    move-result-object p1
-
-    check-cast p1, Lcj;
-
-    iget-object p1, p0, Lbj;->c:Lii;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 p1, 0x0
-
-    return-object p1
+    return v0
 .end method

@@ -1,23 +1,36 @@
 .class public final Lgbf;
-.super Ljava/lang/Object;
+.super Llqf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lo58;
-
-.field public final b:Lo58;
+.field public L0:Lpbf;
 
 
-# direct methods
-.method public constructor <init>(Lo58;Lo58;)V
-    .locals 0
+# virtual methods
+.method public final D(Lki8;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    instance-of v0, p1, Lpbf;
 
-    iput-object p1, p0, Lgbf;->a:Lo58;
+    if-nez v0, :cond_0
 
-    iput-object p2, p0, Lgbf;->b:Lo58;
+    return-void
+
+    :cond_0
+    move-object v0, p1
+
+    check-cast v0, Lpbf;
+
+    iput-object v0, p0, Lgbf;->L0:Lpbf;
+
+    iget-object v0, p0, Lb3e;->a:Landroid/view/View;
+
+    check-cast v0, Lcdf;
+
+    check-cast p1, Lscf;
+
+    invoke-virtual {v0, p1}, Lcdf;->setModelItem(Lscf;)V
 
     return-void
 .end method

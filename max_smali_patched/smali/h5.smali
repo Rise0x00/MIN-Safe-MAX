@@ -1,97 +1,97 @@
-.class public final Lh5;
-.super Landroid/view/accessibility/AccessibilityNodeProvider;
+.class public abstract synthetic Lh5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Li5;
-
-
 # direct methods
-.method public constructor <init>(Li5;)V
+.method public static bridge synthetic a(Ljava/lang/Object;)Landroid/app/LocaleManager;
     .locals 0
 
-    invoke-direct {p0}, Landroid/view/accessibility/AccessibilityNodeProvider;-><init>()V
+    check-cast p0, Landroid/app/LocaleManager;
 
-    iput-object p1, p0, Lh5;->a:Li5;
-
-    return-void
+    return-object p0
 .end method
 
-
-# virtual methods
-.method public final addExtraDataToAccessibilityNodeInfo(ILandroid/view/accessibility/AccessibilityNodeInfo;Ljava/lang/String;Landroid/os/Bundle;)V
+.method public static bridge synthetic b(Landroid/content/pm/PackageManager;Ljava/lang/String;Landroid/content/pm/PackageManager$ApplicationInfoFlags;)Landroid/content/pm/ApplicationInfo;
     .locals 0
 
-    iget-object p1, p0, Lh5;->a:Li5;
+    invoke-virtual {p0, p1, p2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;Landroid/content/pm/PackageManager$ApplicationInfoFlags;)Landroid/content/pm/ApplicationInfo;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p0
 
-    return-void
+    return-object p0
 .end method
 
-.method public final createAccessibilityNodeInfo(I)Landroid/view/accessibility/AccessibilityNodeInfo;
-    .locals 1
-
-    iget-object v0, p0, Lh5;->a:Li5;
-
-    invoke-virtual {v0, p1}, Li5;->w(I)Lg5;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    iget-object p1, p1, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    return-object p1
-.end method
-
-.method public final findAccessibilityNodeInfosByText(Ljava/lang/String;I)Ljava/util/List;
+.method public static bridge synthetic c(Landroid/content/pm/PackageManager;Ljava/lang/String;Landroid/content/pm/PackageManager$PackageInfoFlags;)Landroid/content/pm/PackageInfo;
     .locals 0
 
-    iget-object p1, p0, Lh5;->a:Li5;
+    invoke-virtual {p0, p1, p2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;Landroid/content/pm/PackageManager$PackageInfoFlags;)Landroid/content/pm/PackageInfo;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p0
 
-    const/4 p1, 0x0
-
-    return-object p1
+    return-object p0
 .end method
 
-.method public final findFocus(I)Landroid/view/accessibility/AccessibilityNodeInfo;
-    .locals 1
+.method public static bridge synthetic d(J)Landroid/content/pm/PackageManager$ApplicationInfoFlags;
+    .locals 0
 
-    iget-object v0, p0, Lh5;->a:Li5;
+    invoke-static {p0, p1}, Landroid/content/pm/PackageManager$ApplicationInfoFlags;->of(J)Landroid/content/pm/PackageManager$ApplicationInfoFlags;
 
-    invoke-virtual {v0, p1}, Li5;->x(I)Lg5;
+    move-result-object p0
 
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    iget-object p1, p1, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    return-object p1
+    return-object p0
 .end method
 
-.method public final performAction(IILandroid/os/Bundle;)Z
+.method public static bridge synthetic e(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
+    .locals 0
+
+    invoke-static {p0, p1}, Landroid/content/pm/PackageManager$PackageInfoFlags;->of(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic f()Landroid/graphics/Bitmap$Config;
     .locals 1
 
-    iget-object v0, p0, Lh5;->a:Li5;
+    sget-object v0, Landroid/graphics/Bitmap$Config;->RGBA_1010102:Landroid/graphics/Bitmap$Config;
 
-    invoke-virtual {v0, p1, p2, p3}, Li5;->G(IILandroid/os/Bundle;)Z
+    return-object v0
+.end method
 
-    move-result p1
+.method public static bridge synthetic g(Landroid/app/LocaleManager;)Landroid/os/LocaleList;
+    .locals 0
 
-    return p1
+    invoke-virtual {p0}, Landroid/app/LocaleManager;->getApplicationLocales()Landroid/os/LocaleList;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic h()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+    .locals 1
+
+    sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SHOW_TEXT_SUGGESTIONS:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic i()Ljava/lang/Class;
+    .locals 1
+
+    const-class v0, Landroid/app/LocaleManager;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic j(Landroid/app/LocaleManager;)Landroid/os/LocaleList;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/LocaleManager;->getSystemLocales()Landroid/os/LocaleList;
+
+    move-result-object p0
+
+    return-object p0
 .end method

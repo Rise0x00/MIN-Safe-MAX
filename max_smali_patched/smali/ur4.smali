@@ -1,307 +1,542 @@
 .class public final Lur4;
-.super Ljava/lang/Object;
+.super Lip5;
 .source "SourceFile"
 
 # interfaces
-.implements Lc88;
+.implements Ljava/lang/Runnable;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final Z:Lur4;
 
-.field public final b:Ljava/lang/Object;
+.field private static volatile _thread:Ljava/lang/Thread;
 
-.field public final c:Ljava/lang/Object;
+.field private static volatile debugStatus:I
+
+.field public static final z0:J
 
 
 # direct methods
-.method public constructor <init>(Ld69;Ljn6;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    const/4 v0, 0x1
+    new-instance v0, Lur4;
 
-    iput v0, p0, Lur4;->a:I
+    invoke-direct {v0}, Lhc4;-><init>()V
 
-    .line 8
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lur4;->Z:Lur4;
 
-    iput-object p1, p0, Lur4;->c:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Lur4;->b:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljp5;->u0(Z)V
 
-    return-void
-.end method
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-.method public constructor <init>(Lg88;)V
-    .locals 2
+    const-wide/16 v1, 0x3e8
 
-    const/4 v0, 0x4
+    :try_start_0
+    const-string v3, "kotlinx.coroutines.DefaultExecutor.keepAlive"
 
-    iput v0, p0, Lur4;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput-object p1, p0, Lur4;->b:Ljava/lang/Object;
-
-    .line 4
-    sget-object v0, Lvd3;->c:Lvd3;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    .line 5
-    iget-object v1, v0, Lvd3;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v3, v1, v2}, Ljava/lang/Long;->getLong(Ljava/lang/String;J)Ljava/lang/Long;
 
     move-result-object v1
-
-    check-cast v1, Ltd3;
-
-    if-eqz v1, :cond_0
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_0
-    const/4 v1, 0x0
-
-    .line 6
-    invoke-virtual {v0, p1, v1}, Lvd3;->a(Ljava/lang/Class;[Ljava/lang/reflect/Method;)Ltd3;
+    :catch_0
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
-    .line 7
     :goto_0
-    iput-object v1, p0, Lur4;->c:Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
-    return-void
-.end method
+    move-result-wide v1
 
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
-    .locals 0
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
-    .line 1
-    iput p2, p0, Lur4;->a:I
+    move-result-wide v0
 
-    iput-object p1, p0, Lur4;->b:Ljava/lang/Object;
-
-    iput-object p3, p0, Lur4;->c:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-wide v0, Lur4;->z0:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lj88;Ln78;)V
-    .locals 3
+.method public final G0(JLgp5;)V
+    .locals 0
 
-    iget v0, p0, Lur4;->a:I
+    new-instance p1, Ljava/util/concurrent/RejectedExecutionException;
 
-    packed-switch v0, :pswitch_data_0
+    const-string p2, "DefaultExecutor was shut down. This error indicates that Dispatchers.shutdown() was invoked prior to completion of exiting coroutines, leaving coroutines in incomplete state. Please refer to Dispatchers.shutdown documentation for more details"
 
-    iget-object v0, p0, Lur4;->c:Ljava/lang/Object;
+    invoke-direct {p1, p2}, Ljava/util/concurrent/RejectedExecutionException;-><init>(Ljava/lang/String;)V
 
-    check-cast v0, Ltd3;
+    throw p1
+.end method
 
-    iget-object v0, v0, Ltd3;->a:Ljava/util/HashMap;
+.method public final H0(Ljava/lang/Runnable;)V
+    .locals 2
 
-    invoke-virtual {v0, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    sget v0, Lur4;->debugStatus:I
 
-    move-result-object v1
+    const/4 v1, 0x4
 
-    check-cast v1, Ljava/util/List;
+    if-eq v0, v1, :cond_0
 
-    iget-object v2, p0, Lur4;->b:Ljava/lang/Object;
-
-    invoke-static {v1, p1, p2, v2}, Ltd3;->a(Ljava/util/List;Lj88;Ln78;Ljava/lang/Object;)V
-
-    sget-object v1, Ln78;->ON_ANY:Ln78;
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    invoke-static {v0, p1, p2, v2}, Ltd3;->a(Ljava/util/List;Lj88;Ln78;Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Lip5;->H0(Ljava/lang/Runnable;)V
 
     return-void
-
-    :pswitch_0
-    sget-object p1, Ln78;->ON_START:Ln78;
-
-    if-ne p2, p1, :cond_0
-
-    iget-object p1, p0, Lur4;->b:Ljava/lang/Object;
-
-    check-cast p1, Ll88;
-
-    invoke-virtual {p1, p0}, Ll88;->f(Lg88;)V
-
-    iget-object p1, p0, Lur4;->c:Ljava/lang/Object;
-
-    check-cast p1, Lsn;
-
-    invoke-virtual {p1}, Lsn;->g()V
 
     :cond_0
-    return-void
+    new-instance p1, Ljava/util/concurrent/RejectedExecutionException;
 
-    :pswitch_1
-    sget-object v0, Ln78;->ON_DESTROY:Ln78;
+    const-string v0, "DefaultExecutor was shut down. This error indicates that Dispatchers.shutdown() was invoked prior to completion of exiting coroutines, leaving coroutines in incomplete state. Please refer to Dispatchers.shutdown documentation for more details"
 
-    if-ne p2, v0, :cond_1
+    invoke-direct {p1, v0}, Ljava/util/concurrent/RejectedExecutionException;-><init>(Ljava/lang/String;)V
 
-    iget-object p2, p0, Lur4;->b:Ljava/lang/Object;
+    throw p1
+.end method
 
-    check-cast p2, Landroid/os/Handler;
+.method public final declared-synchronized M0()V
+    .locals 3
 
-    iget-object v0, p0, Lur4;->c:Ljava/lang/Object;
+    monitor-enter p0
 
-    check-cast v0, Lve;
+    :try_start_0
+    sget v0, Lur4;->debugStatus:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p2, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    const/4 v1, 0x2
 
-    invoke-interface {p1}, Lj88;->p()Ll88;
+    const/4 v2, 0x3
 
-    move-result-object p1
+    if-eq v0, v1, :cond_1
 
-    invoke-virtual {p1, p0}, Ll88;->f(Lg88;)V
-
-    :cond_1
-    return-void
-
-    :pswitch_2
-    iget-object p2, p0, Lur4;->b:Ljava/lang/Object;
-
-    check-cast p2, Ljn6;
-
-    iget-object v0, p0, Lur4;->c:Ljava/lang/Object;
-
-    check-cast v0, Ld69;
-
-    iget-object v1, v0, Ld69;->o:Lcn6;
-
-    invoke-virtual {v1}, Landroidx/fragment/app/c;->P()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
+    if-ne v0, v2, :cond_0
 
     goto :goto_0
 
-    :cond_2
-    invoke-interface {p1}, Lj88;->p()Ll88;
+    :cond_0
+    const/4 v0, 0x0
 
-    move-result-object p1
+    goto :goto_1
 
-    invoke-virtual {p1, p0}, Ll88;->f(Lg88;)V
-
-    iget-object p1, p2, Ltsd;->a:Landroid/view/View;
-
-    check-cast p1, Landroid/widget/FrameLayout;
-
-    invoke-virtual {p1}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {v0, p2}, Ld69;->I(Ljn6;)V
-
-    :cond_3
+    :cond_1
     :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    if-nez v0, :cond_2
+
+    monitor-exit p0
+
     return-void
 
-    :pswitch_3
-    iget-object v0, p0, Lur4;->b:Ljava/lang/Object;
+    :cond_2
+    :try_start_1
+    sput v2, Lur4;->debugStatus:I
 
-    check-cast v0, Lsr4;
+    sget-object v0, Lip5;->o:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    sget-object v1, Ltr4;->$EnumSwitchMapping$0:[I
+    const/4 v1, 0x0
 
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v0, p0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    sget-object v0, Lip5;->X:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    invoke-virtual {v0, p0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v0
+.end method
+
+.method public final h0()Ljava/lang/Thread;
+    .locals 2
+
+    sget-object v0, Lur4;->_thread:Ljava/lang/Thread;
+
+    if-nez v0, :cond_1
+
+    monitor-enter p0
+
+    :try_start_0
+    sget-object v0, Lur4;->_thread:Ljava/lang/Thread;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/lang/Thread;
+
+    const-string v1, "kotlinx.coroutines.DefaultExecutor"
+
+    invoke-direct {v0, p0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    sput-object v0, Lur4;->_thread:Ljava/lang/Thread;
+
+    const-class v1, Lur4;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/Thread;->setContextClassLoader(Ljava/lang/ClassLoader;)V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/lang/Thread;->setDaemon(Z)V
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit p0
+
+    return-object v0
+
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+
+    :cond_1
+    return-object v0
+.end method
+
+.method public final invokeOnTimeout(JLjava/lang/Runnable;Lfc4;)Lv45;
+    .locals 2
+
+    sget-object p4, Lkp5;->a:Lkotlinx/coroutines/internal/Symbol;
+
+    const-wide/16 v0, 0x0
+
+    cmp-long p4, p1, v0
+
+    if-gtz p4, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const-wide v0, 0x8637bd05af6L
+
+    cmp-long p4, p1, v0
+
+    if-ltz p4, :cond_1
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    goto :goto_0
+
+    :cond_1
+    const-wide/32 v0, 0xf4240
+
+    mul-long/2addr v0, p1
+
+    :goto_0
+    const-wide p1, 0x3fffffffffffffffL    # 1.9999999999999998
+
+    cmp-long p1, v0, p1
+
+    if-gez p1, :cond_2
+
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide p1
+
+    new-instance p4, Lfp5;
+
+    add-long/2addr v0, p1
+
+    invoke-direct {p4, p3, v0, v1}, Lfp5;-><init>(Ljava/lang/Runnable;J)V
+
+    invoke-virtual {p0, p1, p2, p4}, Lip5;->L0(JLgp5;)V
+
+    return-object p4
+
+    :cond_2
+    sget-object p1, Ljsa;->a:Ljsa;
+
+    return-object p1
+.end method
+
+.method public final run()V
+    .locals 17
+
+    move-object/from16 v1, p0
+
+    sget-object v0, Ljvg;->a:Ljava/lang/ThreadLocal;
+
+    invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    const/4 v2, 0x0
+
+    :try_start_0
+    monitor-enter p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    sget v0, Lur4;->debugStatus:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x3
+
+    const/4 v5, 0x2
+
+    const/4 v6, 0x1
+
+    if-eq v0, v5, :cond_1
+
+    if-ne v0, v4, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v3
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v0, v6
+
+    :goto_1
+    if-eqz v0, :cond_2
+
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    sput-object v2, Lur4;->_thread:Ljava/lang/Thread;
+
+    invoke-virtual {v1}, Lur4;->M0()V
+
+    invoke-virtual {v1}, Lip5;->K0()Z
+
+    move-result v0
+
+    if-nez v0, :cond_a
+
+    invoke-virtual {v1}, Lur4;->h0()Ljava/lang/Thread;
+
+    return-void
+
+    :cond_2
+    :try_start_3
+    sput v6, Lur4;->debugStatus:I
+
+    invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :try_start_4
+    monitor-exit p0
+
+    const-wide v7, 0x7fffffffffffffffL
+
+    move-wide v9, v7
+
+    :cond_3
+    :goto_2
+    invoke-static {}, Ljava/lang/Thread;->interrupted()Z
+
+    invoke-virtual {v1}, Lip5;->E0()J
+
+    move-result-wide v11
+
+    cmp-long v0, v11, v7
+
+    const-wide/16 v13, 0x0
+
+    if-nez v0, :cond_6
+
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v15
+
+    cmp-long v0, v9, v7
+
+    if-nez v0, :cond_4
+
+    sget-wide v9, Lur4;->z0:J
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    add-long/2addr v9, v15
+
+    goto :goto_3
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_7
+
+    :cond_4
+    :goto_3
+    sub-long v15, v9, v15
+
+    cmp-long v0, v15, v13
+
+    if-gtz v0, :cond_5
+
+    sput-object v2, Lur4;->_thread:Ljava/lang/Thread;
+
+    invoke-virtual {v1}, Lur4;->M0()V
+
+    invoke-virtual {v1}, Lip5;->K0()Z
+
+    move-result v0
+
+    if-nez v0, :cond_a
+
+    invoke-virtual {v1}, Lur4;->h0()Ljava/lang/Thread;
+
+    return-void
+
+    :cond_5
+    cmp-long v0, v11, v15
+
+    if-lez v0, :cond_7
+
+    move-wide v11, v15
+
+    goto :goto_4
+
+    :cond_6
+    move-wide v9, v7
+
+    :cond_7
+    :goto_4
+    cmp-long v0, v11, v13
+
+    if-lez v0, :cond_3
+
+    :try_start_5
+    sget v0, Lur4;->debugStatus:I
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    if-eq v0, v5, :cond_9
+
+    if-ne v0, v4, :cond_8
+
+    goto :goto_5
+
+    :cond_8
+    move v0, v3
+
+    goto :goto_6
+
+    :cond_9
+    :goto_5
+    move v0, v6
+
+    :goto_6
+    if-eqz v0, :cond_b
+
+    sput-object v2, Lur4;->_thread:Ljava/lang/Thread;
+
+    invoke-virtual {v1}, Lur4;->M0()V
+
+    invoke-virtual {v1}, Lip5;->K0()Z
+
+    move-result v0
+
+    if-nez v0, :cond_a
+
+    invoke-virtual {v1}, Lur4;->h0()Ljava/lang/Thread;
+
+    :cond_a
+    return-void
+
+    :cond_b
+    :try_start_6
+    invoke-static {v1, v11, v12}, Ljava/util/concurrent/locks/LockSupport;->parkNanos(Ljava/lang/Object;J)V
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception v0
+
+    :try_start_7
+    monitor-exit p0
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+
+    :try_start_8
+    throw v0
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_0
+
+    :goto_7
+    sput-object v2, Lur4;->_thread:Ljava/lang/Thread;
+
+    invoke-virtual {v1}, Lur4;->M0()V
+
+    invoke-virtual {v1}, Lip5;->K0()Z
 
     move-result v2
 
-    aget v1, v1, v2
+    if-nez v2, :cond_c
 
-    packed-switch v1, :pswitch_data_1
+    invoke-virtual {v1}, Lur4;->h0()Ljava/lang/Thread;
 
-    goto :goto_1
+    :cond_c
+    throw v0
+.end method
 
-    :pswitch_4
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+.method public final shutdown()V
+    .locals 1
 
-    const-string p2, "ON_ANY must not been send by anybody"
+    const/4 v0, 0x4
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    sput v0, Lur4;->debugStatus:I
 
-    throw p1
+    invoke-super {p0}, Lip5;->shutdown()V
 
-    :pswitch_5
-    invoke-interface {v0, p1}, Lsr4;->onDestroy(Lj88;)V
-
-    goto :goto_1
-
-    :pswitch_6
-    invoke-interface {v0, p1}, Lsr4;->onStop(Lj88;)V
-
-    goto :goto_1
-
-    :pswitch_7
-    invoke-interface {v0, p1}, Lsr4;->onPause(Lj88;)V
-
-    goto :goto_1
-
-    :pswitch_8
-    invoke-interface {v0, p1}, Lsr4;->onResume(Lj88;)V
-
-    goto :goto_1
-
-    :pswitch_9
-    invoke-interface {v0, p1}, Lsr4;->onStart(Lj88;)V
-
-    goto :goto_1
-
-    :pswitch_a
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :goto_1
-    iget-object v0, p0, Lur4;->c:Ljava/lang/Object;
-
-    check-cast v0, Lc88;
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {v0, p1, p2}, Lc88;->d(Lj88;Ln78;)V
-
-    :cond_4
     return-void
+.end method
 
-    nop
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    const-string v0, "DefaultExecutor"
 
-    :pswitch_data_1
-    .packed-switch 0x1
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-    .end packed-switch
+    return-object v0
 .end method

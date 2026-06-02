@@ -1,25 +1,22 @@
 .class public final Ljg6;
-.super Lj2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lmg6;
 
 
 # instance fields
-.field public final d:J
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method public constructor <init>(Z)V
+    .locals 0
 
-    sget-object v0, Lwob;->M2:Lwob;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lj2;-><init>(Lwob;)V
-
-    iput-wide p1, p0, Ljg6;->d:J
-
-    const-string v0, "folderSync"
-
-    invoke-virtual {p0, p1, p2, v0}, Lj2;->y(JLjava/lang/String;)V
+    iput-boolean p1, p0, Ljg6;->a:Z
 
     return-void
 .end method
@@ -27,48 +24,64 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
+    .locals 1
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Ljg6;
+    instance-of v0, p1, Ljg6;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Ljg6;
 
-    iget-wide v3, p0, Ljg6;->d:J
+    iget-boolean v0, p0, Ljg6;->a:Z
 
-    iget-wide v5, p1, Ljg6;->d:J
+    iget-boolean p1, p1, Ljg6;->a:Z
 
-    cmp-long p1, v3, v5
+    if-eq v0, p1, :cond_2
 
-    if-eqz p1, :cond_2
+    :goto_0
+    const/4 p1, 0x0
 
-    return v2
+    return p1
 
     :cond_2
-    return v0
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 1
 
-    iget-wide v0, p0, Ljg6;->d:J
+    iget-boolean v0, p0, Ljg6;->a:Z
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
     return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "Close(afterCreate="
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Ljg6;->a:Z
+
+    invoke-static {v0, v1, v2}, Lrtc;->s(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

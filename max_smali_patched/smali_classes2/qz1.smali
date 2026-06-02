@@ -2,9 +2,6 @@
 .super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lrz1;
-
 
 # static fields
 .field public static final enum X:Lqz1;
@@ -21,7 +18,7 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
 
 
 # direct methods
@@ -32,59 +29,55 @@
 
     const/4 v1, 0x0
 
-    const-string v2, "everything_ok"
+    const/16 v2, 0x48
 
-    const-string v3, "EVERYTHING_OK"
+    const-string v3, "MIDDLE"
 
-    invoke-direct {v0, v3, v1, v2}, Lqz1;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v0, v3, v1, v2}, Lqz1;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lqz1;->b:Lqz1;
 
     new-instance v1, Lqz1;
 
-    const/4 v2, 0x1
+    const-string v2, "SMALL"
 
-    const-string v3, "to_contacts"
+    const/4 v3, 0x1
 
-    const-string v4, "TO_CONTACTS"
+    const/16 v4, 0x28
 
-    invoke-direct {v1, v4, v2, v3}, Lqz1;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lqz1;-><init>(Ljava/lang/String;II)V
 
     sput-object v1, Lqz1;->c:Lqz1;
 
     new-instance v2, Lqz1;
 
-    const/4 v3, 0x2
+    const-string v3, "PIP"
 
-    const-string v4, "block"
+    const/4 v5, 0x2
 
-    const-string v5, "BLOCK"
-
-    invoke-direct {v2, v5, v3, v4}, Lqz1;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v2, v3, v5, v4}, Lqz1;-><init>(Ljava/lang/String;II)V
 
     sput-object v2, Lqz1;->d:Lqz1;
 
     new-instance v3, Lqz1;
 
-    const/4 v4, 0x3
+    const-string v4, "PREVIEW"
 
-    const-string v5, "close"
+    const/4 v5, 0x3
 
-    const-string v6, "CLOSE"
+    const/16 v6, 0xd8
 
-    invoke-direct {v3, v6, v4, v5}, Lqz1;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v3, v4, v5, v6}, Lqz1;-><init>(Ljava/lang/String;II)V
 
     sput-object v3, Lqz1;->o:Lqz1;
 
     new-instance v4, Lqz1;
 
-    const/4 v5, 0x4
+    const-string v5, "BIG_AVATAR"
 
-    const-string v6, "hide"
+    const/4 v7, 0x4
 
-    const-string v7, "HIDE"
-
-    invoke-direct {v4, v7, v5, v6}, Lqz1;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct {v4, v5, v7, v6}, Lqz1;-><init>(Ljava/lang/String;II)V
 
     sput-object v4, Lqz1;->X:Lqz1;
 
@@ -97,12 +90,12 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p3, p0, Lqz1;->a:Ljava/lang/String;
+    iput p3, p0, Lqz1;->a:I
 
     return-void
 .end method
@@ -131,16 +124,6 @@
     move-result-object v0
 
     check-cast v0, [Lqz1;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final d()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lqz1;->a:Ljava/lang/String;
 
     return-object v0
 .end method

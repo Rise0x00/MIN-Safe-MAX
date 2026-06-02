@@ -1,118 +1,71 @@
 .class public final Lph5;
-.super Lrh5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Z
+.field public final a:Loh5;
+
+.field public b:I
+
+.field public c:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;Ljava/lang/String;Z)V
-    .locals 2
+.method public constructor <init>(Landroid/widget/EditText;Z)V
+    .locals 1
 
-    sget v0, Leeb;->N:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x2
+    const v0, 0x7fffffff
 
-    filled-new-array {p1, p2}, [Ljava/lang/Object;
+    iput v0, p0, Lph5;->b:I
 
-    move-result-object p1
+    const/4 v0, 0x0
 
-    invoke-static {p1, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    iput v0, p0, Lph5;->c:I
 
-    move-result-object p1
+    new-instance v0, Loh5;
 
-    new-instance p2, Lnhg;
+    invoke-direct {v0, p1, p2}, Loh5;-><init>(Landroid/widget/EditText;Z)V
 
-    invoke-static {p1}, Lct;->C([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-direct {p2, v0, p1}, Lnhg;-><init>(ILjava/util/List;)V
-
-    if-eqz p3, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    sget p1, Lx5e;->F0:I
-
-    new-instance v0, Llhg;
-
-    invoke-direct {v0, p1}, Llhg;-><init>(I)V
-
-    move-object p1, v0
-
-    :goto_0
-    invoke-direct {p0, p1, p2}, Lrh5;-><init>(Llhg;Lqhg;)V
-
-    iput-boolean p3, p0, Lph5;->c:Z
+    iput-object v0, p0, Lph5;->a:Loh5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final a(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)Luh5;
+    .locals 2
 
-    const/4 v0, 0x1
+    if-nez p1, :cond_0
 
-    if-ne p0, p1, :cond_0
+    const/4 p1, 0x0
 
-    return v0
+    return-object p1
 
     :cond_0
-    if-eqz p1, :cond_1
+    iget-object v0, p0, Lph5;->a:Loh5;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    instance-of v1, p1, Luh5;
 
-    goto :goto_0
+    if-eqz v1, :cond_1
+
+    check-cast p1, Luh5;
+
+    return-object p1
 
     :cond_1
-    const/4 v1, 0x0
+    new-instance v1, Luh5;
 
-    :goto_0
-    const-class v2, Lph5;
+    iget-object v0, v0, Loh5;->b:Ljava/lang/Object;
 
-    invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    check-cast v0, Landroid/widget/EditText;
 
-    move-result v1
+    invoke-direct {v1, v0, p1, p2}, Luh5;-><init>(Landroid/widget/EditText;Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)V
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    check-cast p1, Lph5;
-
-    iget-boolean v1, p0, Lph5;->c:Z
-
-    iget-boolean p1, p1, Lph5;->c:Z
-
-    if-ne v1, p1, :cond_3
-
-    return v0
-
-    :cond_3
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-boolean v0, p0, Lph5;->c:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    return v0
+    return-object v1
 .end method

@@ -1,49 +1,185 @@
-.class public final Li64;
-.super Lo84;
+.class public final synthetic Li64;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lo9;
 
 
 # instance fields
-.field public X:I
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Lm64;
+.field public final synthetic a:Lzb9;
 
 
 # direct methods
-.method public constructor <init>(Lm64;Lo84;)V
+.method public synthetic constructor <init>(Lzb9;)V
     .locals 0
 
-    iput-object p1, p0, Li64;->o:Lm64;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Li64;->a:Lzb9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final a(Lmge;)V
+    .locals 10
 
-    iput-object p1, p0, Li64;->d:Ljava/lang/Object;
+    iget-object v0, p0, Li64;->a:Lzb9;
 
-    iget p1, p0, Li64;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Li64;->X:I
-
-    iget-object p1, p0, Li64;->o:Lm64;
-
-    const-wide/16 v0, 0x0
-
-    invoke-virtual {p1, v0, v1, p0}, Lm64;->c(JLo84;)Ljava/lang/Comparable;
+    :try_start_0
+    invoke-static {p1}, Lb9j;->b(Lmge;)Landroid/app/Activity;
 
     move-result-object p1
 
-    return-object p1
+    new-instance v1, Lsw5;
+
+    const/16 v2, 0x13
+
+    invoke-direct {v1, p1, v2}, Lsw5;-><init>(Landroid/content/Context;I)V
+
+    iget-object v2, v0, Lzb9;->b:Ljava/lang/Object;
+
+    check-cast v2, Lia8;
+
+    invoke-interface {v2}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lc4f;
+
+    check-cast v2, Lijc;
+
+    iget-object v2, v2, Lijc;->b:Lgjc;
+
+    iget-object v2, v2, Lgjc;->F:Lejc;
+
+    sget-object v3, Lgjc;->x5:[Lb88;
+
+    const/16 v4, 0x19
+
+    aget-object v4, v3, v4
+
+    invoke-virtual {v2, v4}, Lejc;->a(Lb88;)Lkjc;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lkjc;->i()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    if-eqz v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget v2, Luhe;->R:I
+
+    invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    :goto_0
+    iput-object v2, v1, Lsw5;->c:Ljava/lang/Object;
+
+    const-string v2, "text/plain"
+
+    iget-object v4, v1, Lsw5;->d:Ljava/lang/Object;
+
+    check-cast v4, Landroid/content/Intent;
+
+    invoke-virtual {v4, v2}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    iget-object v0, v0, Lzb9;->b:Ljava/lang/Object;
+
+    check-cast v0, Lia8;
+
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lc4f;
+
+    check-cast v0, Lijc;
+
+    iget-object v2, v0, Lijc;->b:Lgjc;
+
+    iget-object v2, v2, Lgjc;->E:Lejc;
+
+    const/16 v4, 0x18
+
+    aget-object v3, v3, v4
+
+    invoke-virtual {v2, v3}, Lejc;->a(Lb88;)Lkjc;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lkjc;->i()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    if-eqz v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    sget v2, Luhe;->Y:I
+
+    invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Lijc;->e()Ljava/lang/String;
+
+    move-result-object v0
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const/4 v2, 0x1
+
+    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    :goto_1
+    invoke-virtual {v1, v2}, Lsw5;->O(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v1}, Lsw5;->P()V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    sget-object v3, Lnm4;->d:Lnfb;
+
+    if-eqz v3, :cond_2
+
+    sget-object v4, Lgp8;->Y:Lgp8;
+
+    const/4 v8, 0x0
+
+    const/16 v9, 0x8
+
+    const-string v5, "ContactsDeepLinkFactory"
+
+    const-string v6, "shareInvite: failed, no activity found"
+
+    const/4 v7, 0x0
+
+    invoke-static/range {v3 .. v9}, Lnfb;->f(Lnfb;Lgp8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
+
+    :cond_2
+    return-void
 .end method

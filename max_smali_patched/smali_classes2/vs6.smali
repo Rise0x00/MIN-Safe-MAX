@@ -1,178 +1,210 @@
-.class public final Lvs6;
-.super Lws6;
+.class public final synthetic Lvs6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxs6;
 
-# static fields
-.field public static final e:Lvs6;
 
-.field public static final f:Landroid/net/Uri;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final g:Ljava/lang/String;
-
-.field public static final h:Ljava/lang/String;
-
-.field public static final i:Ljava/lang/String;
-
-.field public static final j:Ljava/lang/String;
-
-.field public static final k:Ljava/lang/String;
-
-.field public static final l:Ljava/lang/String;
-
-.field public static final m:Ljava/lang/String;
-
-.field public static final n:Ljava/lang/String;
+.field public final synthetic b:Ltg0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Ltg0;I)V
+    .locals 0
 
-    new-instance v0, Lvs6;
+    iput p2, p0, Lvs6;->a:I
 
-    const-string v1, "_size > 0"
+    iput-object p1, p0, Lvs6;->b:Ltg0;
 
-    invoke-direct {v0, v1}, Lws6;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lvs6;->e:Lvs6;
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1d
-
-    if-lt v0, v1, :cond_1
-
-    const-string v0, "external"
-
-    invoke-static {v0}, Landroid/provider/MediaStore$Video$Media;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "no content uri for MediaStore.Video.Media"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    sget-object v0, Landroid/provider/MediaStore$Video$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
-
-    :goto_0
-    sput-object v0, Lvs6;->f:Landroid/net/Uri;
-
-    const-string v0, "_id"
-
-    sput-object v0, Lvs6;->g:Ljava/lang/String;
-
-    const-string v0, "bucket_id"
-
-    sput-object v0, Lvs6;->h:Ljava/lang/String;
-
-    const-string v0, "bucket_display_name"
-
-    sput-object v0, Lvs6;->i:Ljava/lang/String;
-
-    const-string v0, "_data"
-
-    sput-object v0, Lvs6;->j:Ljava/lang/String;
-
-    const-string v0, "date_modified"
-
-    sput-object v0, Lvs6;->k:Ljava/lang/String;
-
-    const-string v0, "mime_type"
-
-    sput-object v0, Lvs6;->l:Ljava/lang/String;
-
-    const-string v0, "duration"
-
-    sput-object v0, Lvs6;->m:Ljava/lang/String;
-
-    const-string v0, "video/mp4"
-
-    sput-object v0, Lvs6;->n:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 6
 
-    sget-object v0, Lvs6;->i:Ljava/lang/String;
+    iget v0, p0, Lvs6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Landroid/widget/ImageView;
+
+    iget-object v1, p0, Lvs6;->b:Ltg0;
+
+    iget-object v2, v1, Ltg0;->b:Ljava/lang/Object;
+
+    check-cast v2, Lyig;
+
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+
+    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/16 v3, 0x34
+
+    int-to-float v3, v3
+
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v4, v3
+
+    invoke-static {v4}, Lh43;->U(F)I
+
+    move-result v4
+
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v5
+
+    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v5
+
+    invoke-static {v3}, Lh43;->U(F)I
+
+    move-result v3
+
+    const v5, 0x800055
+
+    invoke-direct {v2, v4, v3, v5}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    sget-object v2, Lzc3;->A0:Lz66;
+
+    invoke-virtual {v2, v0}, Lz66;->k(Landroid/view/View;)Lgqb;
+
+    move-result-object v3
+
+    iget-object v3, v3, Lgqb;->b:Ldqb;
+
+    invoke-interface {v3}, Ldqb;->o()Lcqb;
+
+    move-result-object v3
+
+    iget-object v3, v3, Lcqb;->b:Loqa;
+
+    iget-object v3, v3, Loqa;->g:Ljava/lang/Object;
+
+    check-cast v3, Lep0;
+
+    iget v3, v3, Lep0;->c:I
+
+    new-instance v4, Landroid/graphics/drawable/ShapeDrawable;
+
+    new-instance v5, Landroid/graphics/drawable/shapes/OvalShape;
+
+    invoke-direct {v5}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
+
+    invoke-direct {v4, v5}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+
+    invoke-virtual {v2, v0}, Lz66;->k(Landroid/view/View;)Lgqb;
+
+    const/high16 v2, -0x67000000
+
+    invoke-static {v2, v4}, Ltla;->P(ILandroid/graphics/drawable/Drawable;)V
+
+    const/4 v2, 0x0
+
+    const/4 v5, 0x4
+
+    invoke-static {v3, v4, v2, v5}, Ljde;->m0(ILandroid/graphics/drawable/Drawable;Landroid/graphics/drawable/ShapeDrawable;I)Landroid/graphics/drawable/RippleDrawable;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    const/16 v2, 0xe
+
+    int-to-float v2, v2
+
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v2, v3, v0}, Ls54;->f(FFLandroid/widget/ImageView;)V
+
+    iget-object v2, v1, Ltg0;->f:Ljava/lang/Object;
+
+    invoke-interface {v2}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    new-instance v2, Lmh6;
+
+    const/4 v3, 0x5
+
+    invoke-direct {v2, v3, v1}, Lmh6;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0, v2}, Ls5b;->H(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     return-object v0
-.end method
 
-.method public final b()Ljava/lang/String;
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Lvs6;->b:Ltg0;
 
-    sget-object v0, Lvs6;->h:Ljava/lang/String;
+    iget-object v0, v0, Ltg0;->b:Ljava/lang/Object;
 
-    return-object v0
-.end method
+    check-cast v0, Lyig;
 
-.method public final c()Ljava/lang/String;
-    .locals 1
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    sget-object v0, Lvs6;->j:Ljava/lang/String;
+    move-result-object v1
 
-    return-object v0
-.end method
+    sget v2, Lxhe;->S2:I
 
-.method public final d()Ljava/lang/String;
-    .locals 1
+    sget-object v3, Lzc3;->A0:Lz66;
 
-    sget-object v0, Lvs6;->k:Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    return-object v0
-.end method
+    move-result-object v0
 
-.method public final e()Ljava/lang/String;
-    .locals 1
+    invoke-virtual {v3, v0}, Lz66;->i(Landroid/content/Context;)Lgqb;
 
-    sget-object v0, Lvs6;->m:Ljava/lang/String;
+    const/4 v0, -0x1
+
+    invoke-static {v2, v0, v1}, Ltla;->w(IILandroid/content/Context;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
 
     return-object v0
-.end method
 
-.method public final f()Ljava/lang/String;
-    .locals 1
+    nop
 
-    sget-object v0, Lvs6;->g:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final h()Ljava/lang/String;
-    .locals 1
-
-    sget-object v0, Lvs6;->l:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final j()Landroid/net/Uri;
-    .locals 1
-
-    sget-object v0, Lvs6;->f:Landroid/net/Uri;
-
-    return-object v0
-.end method
-
-.method public final k()Ljava/lang/String;
-    .locals 1
-
-    sget-object v0, Lvs6;->n:Ljava/lang/String;
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

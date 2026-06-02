@@ -3,120 +3,300 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lem4;
+.implements Le15;
+.implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
 
 
-# static fields
-.field public static final a:Lk3f;
+# instance fields
+.field public final a:Lmf3;
 
-.field public static final b:Ll3f;
+.field public final b:Lia8;
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:Lb1g;
+
+.field public final f:Lbwd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lia8;Lmf3;)V
+    .locals 2
 
-    new-instance v0, Lk3f;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lk3f;->a:Lmf3;
 
-    sput-object v0, Lk3f;->a:Lk3f;
+    iput-object p1, p0, Lk3f;->b:Lia8;
 
-    sget-object v0, Ll3f;->b:Ll3f;
+    sget-object p1, Lf05;->b:Ljava/util/concurrent/atomic/AtomicLong;
 
-    sput-object v0, Lk3f;->b:Ll3f;
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
 
+    move-result-wide v0
+
+    iput-wide v0, p0, Lk3f;->c:J
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lk3f;->d:J
+
+    invoke-virtual {p0}, Lk3f;->e()Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lc1g;->a(Ljava/lang/Object;)Lb1g;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lk3f;->e:Lb1g;
+
+    new-instance v0, Lbwd;
+
+    invoke-direct {v0, p1}, Lbwd;-><init>(Lvia;)V
+
+    iput-object v0, p0, Lk3f;->f:Lbwd;
+
+    instance-of p1, p2, Ld4;
+
+    if-eqz p1, :cond_0
+
+    check-cast p2, Ld4;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    :goto_0
+    if-eqz p2, :cond_1
+
+    iget-object p1, p2, Ld4;->d:Lma8;
+
+    invoke-virtual {p1, p0}, Lma8;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
+
+    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Llm4;
+.method public final b()V
+    .locals 2
+
+    iget-object v0, p0, Lk3f;->a:Lmf3;
+
+    instance-of v1, v0, Ld4;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Ld4;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    iget-object v0, v0, Ld4;->d:Lma8;
+
+    invoke-virtual {v0, p0}, Lma8;->unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final c()Lw0g;
     .locals 1
 
-    sget-object v0, Lk3f;->b:Ll3f;
+    iget-object v0, p0, Lk3f;->f:Lbwd;
 
     return-object v0
 .end method
 
-.method public final b(Ljava/lang/String;Lhm4;Landroid/os/Bundle;)Lom4;
-    .locals 10
+.method public final d(Lmm4;)V
+    .locals 7
 
-    sget-object v0, Lk3f;->b:Ll3f;
+    iget-wide v0, p1, Lmm4;->a:J
 
-    iget-object v0, v0, Llm4;->a:Ljava/util/LinkedHashSet;
+    iget-wide v2, p0, Lk3f;->c:J
 
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    invoke-static {v0, v1, v2, v3}, Lf05;->a(JJ)Z
 
-    move-result v0
+    move-result p1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x6
 
-    if-nez v0, :cond_0
+    iget-object v3, p0, Lk3f;->b:Lia8;
 
-    return-object v1
+    const/4 v4, 0x0
 
-    :cond_0
-    sget-object v0, Ll3f;->b:Ll3f;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Ll3f;->c:Lhm4;
-
-    invoke-virtual {p2, v0}, Lhm4;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v8, Le;
-
-    const/16 v0, 0x1c
-
-    invoke-direct {v8, v0}, Le;-><init>(I)V
-
-    new-instance v2, Lom4;
-
-    const/16 v9, 0x18
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-direct/range {v2 .. v9}, Lom4;-><init>(Ljava/lang/String;Lhm4;Landroid/os/Bundle;ILmm4;Lnm4;I)V
-
-    return-object v2
-
-    :cond_1
-    move-object v4, p2
-
-    const-class p1, Lk3f;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-interface {v3}, Lia8;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    const-string p2, "invalid route "
+    check-cast p1, Lao4;
 
-    invoke-static {p2, v4}, Lj27;->i(Ljava/lang/String;Lhm4;)Ljava/lang/String;
+    sget-object v0, Lh05;->c:Lh05;
 
-    move-result-object p3
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    sget-object v0, Lh05;->B0:Lyn4;
 
-    invoke-static {p2, v4}, Lj27;->i(Ljava/lang/String;Lhm4;)Ljava/lang/String;
+    iget-object v0, v0, Lyn4;->a:Landroid/net/Uri;
 
-    move-result-object p2
+    invoke-static {v0}, Lho4;->a(Landroid/net/Uri;)Ljava/lang/String;
 
-    invoke-direct {v0, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    invoke-static {p1, p3, v0}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p1, v0, v4, v4, v2}, Lao4;->b(Lao4;Ljava/lang/String;Landroid/os/Bundle;Ljl8;I)Z
+
+    return-void
+
+    :cond_0
+    iget-wide v5, p0, Lk3f;->d:J
+
+    invoke-static {v0, v1, v5, v6}, Lf05;->a(JJ)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    invoke-interface {v3}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lao4;
+
+    sget-object v0, Lh05;->c:Lh05;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Lh05;->C0:Lyn4;
+
+    iget-object v0, v0, Lyn4;->a:Landroid/net/Uri;
+
+    invoke-static {v0}, Lho4;->a(Landroid/net/Uri;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1, v0, v4, v4, v2}, Lao4;->b(Lao4;Ljava/lang/String;Landroid/os/Bundle;Ljl8;I)Z
+
+    :cond_1
+    return-void
+.end method
+
+.method public final e()Ljava/util/List;
+    .locals 19
+
+    move-object/from16 v0, p0
+
+    new-instance v1, Lmm4;
+
+    iget-object v2, v0, Lk3f;->a:Lmf3;
+
+    move-object v9, v2
+
+    check-cast v9, Lkn8;
+
+    invoke-virtual {v9}, Lkn8;->I()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v10, ""
+
+    if-nez v2, :cond_0
+
+    move-object v2, v10
+
+    :cond_0
+    new-instance v4, Lhtg;
+
+    invoke-direct {v4, v2}, Lhtg;-><init>(Ljava/lang/CharSequence;)V
+
+    new-instance v6, Lhtg;
+
+    const-string v2, "\u0410\u0434\u0440\u0435\u0441 \u0441\u0435\u0440\u0432\u0435\u0440\u0430"
+
+    invoke-direct {v6, v2}, Lhtg;-><init>(Ljava/lang/CharSequence;)V
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x14
+
+    iget-wide v2, v0, Lk3f;->c:J
+
+    const/4 v5, 0x0
+
+    invoke-direct/range {v1 .. v8}, Lmm4;-><init>(JLitg;ILitg;Ltwj;I)V
+
+    new-instance v11, Lmm4;
+
+    invoke-virtual {v9}, Lkn8;->J()Ljava/lang/String;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move-object v10, v2
+
+    :goto_0
+    new-instance v14, Lhtg;
+
+    invoke-direct {v14, v10}, Lhtg;-><init>(Ljava/lang/CharSequence;)V
+
+    new-instance v2, Lhtg;
+
+    const-string v3, "\u041f\u043e\u0440\u0442 \u0441\u0435\u0440\u0432\u0435\u0440\u0430"
+
+    invoke-direct {v2, v3}, Lhtg;-><init>(Ljava/lang/CharSequence;)V
+
+    const/16 v17, 0x0
+
+    const/16 v18, 0x14
+
+    iget-wide v12, v0, Lk3f;->d:J
+
+    const/4 v15, 0x0
+
+    move-object/from16 v16, v2
+
+    invoke-direct/range {v11 .. v18}, Lmm4;-><init>(JLitg;ILitg;Ltwj;I)V
+
+    filled-new-array {v1, v11}, [Lmm4;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljj3;->M0([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
 
     return-object v1
+.end method
+
+.method public final onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
+    .locals 1
+
+    invoke-virtual {p0}, Lk3f;->e()Ljava/util/List;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    iget-object v0, p0, Lk3f;->e:Lb1g;
+
+    invoke-virtual {v0, p2, p1}, Lb1g;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    return-void
 .end method

@@ -2,258 +2,34 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Luf8;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lrp3;
 
-.field public final b:Ljava/lang/Object;
+.field public final b:Ljava/util/HashSet;
+
+.field public final c:Ljava/util/HashSet;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
-
-    iput p1, p0, Lqh4;->a:I
-
-    iput-object p2, p0, Lqh4;->b:Ljava/lang/Object;
+.method public constructor <init>(Lrp3;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    new-instance v0, Ljava/util/HashSet;
 
-.method private final a(Lxf8;JJZ)V
-    .locals 0
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    return-void
-.end method
+    iput-object v0, p0, Lqh4;->b:Ljava/util/HashSet;
 
+    new-instance v0, Ljava/util/HashSet;
 
-# virtual methods
-.method public final I(Lxf8;JJLjava/io/IOException;I)Li41;
-    .locals 6
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iget p2, p0, Lqh4;->a:I
+    iput-object v0, p0, Lqh4;->c:Ljava/util/HashSet;
 
-    packed-switch p2, :pswitch_data_0
-
-    iget-object p1, p0, Lqh4;->b:Ljava/lang/Object;
-
-    check-cast p1, Li5;
-
-    iget-object p1, p1, Li5;->b:Ljava/lang/Object;
-
-    check-cast p1, Lsh4;
-
-    invoke-virtual {p1, p6}, Lsh4;->x(Ljava/io/IOException;)V
-
-    sget-object p1, Lui8;->o:Li41;
-
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Lbub;
-
-    iget-object p2, p0, Lqh4;->b:Ljava/lang/Object;
-
-    check-cast p2, Lsh4;
-
-    iget-object p3, p2, Lsh4;->q:Lto6;
-
-    new-instance v0, Lof8;
-
-    iget-wide v1, p1, Lbub;->a:J
-
-    iget-object v1, p1, Lbub;->b:Laj4;
-
-    iget-object p7, p1, Lbub;->d:Lxqf;
-
-    iget-object v2, p7, Lxqf;->c:Landroid/net/Uri;
-
-    iget-wide v4, p7, Lxqf;->b:J
-
-    move-wide v2, p4
-
-    invoke-direct/range {v0 .. v5}, Lof8;-><init>(Laj4;JJ)V
-
-    iget p1, p1, Lbub;->c:I
-
-    const/4 p4, 0x1
-
-    invoke-virtual {p3, v0, p1, p6, p4}, Lto6;->P(Lof8;ILjava/io/IOException;Z)V
-
-    iget-object p1, p2, Lsh4;->m:Lrc5;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p2, p6}, Lsh4;->x(Ljava/io/IOException;)V
-
-    sget-object p1, Lui8;->o:Li41;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final o(Lxf8;JJZ)V
-    .locals 0
-
-    iget p2, p0, Lqh4;->a:I
-
-    packed-switch p2, :pswitch_data_0
+    iput-object p1, p0, Lqh4;->a:Lrp3;
 
     return-void
-
-    :pswitch_0
-    check-cast p1, Lbub;
-
-    iget-object p2, p0, Lqh4;->b:Ljava/lang/Object;
-
-    check-cast p2, Lsh4;
-
-    invoke-virtual {p2, p1, p4, p5}, Lsh4;->w(Lbub;J)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final q(Lxf8;JJ)V
-    .locals 12
-
-    iget v0, p0, Lqh4;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p1, p0, Lqh4;->b:Ljava/lang/Object;
-
-    check-cast p1, Li5;
-
-    sget-object v1, Ly0j;->b:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    sget-boolean v0, Ly0j;->c:Z
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/io/IOException;
-
-    new-instance v1, Ljava/util/ConcurrentModificationException;
-
-    invoke-direct {v1}, Ljava/util/ConcurrentModificationException;-><init>()V
-
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    iget-object p1, p1, Li5;->b:Ljava/lang/Object;
-
-    check-cast p1, Lsh4;
-
-    invoke-virtual {p1, v0}, Lsh4;->x(Ljava/io/IOException;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Li5;->E()V
-
-    :goto_0
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    move-object p1, v0
-
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-
-    :pswitch_0
-    check-cast p1, Lbub;
-
-    iget-object v0, p0, Lqh4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lsh4;
-
-    new-instance v1, Lof8;
-
-    iget-wide v2, p1, Lbub;->a:J
-
-    iget-object v2, p1, Lbub;->b:Laj4;
-
-    iget-object v3, p1, Lbub;->d:Lxqf;
-
-    iget-object v4, v3, Lxqf;->c:Landroid/net/Uri;
-
-    iget-wide v5, v3, Lxqf;->b:J
-
-    move-wide/from16 v3, p4
-
-    invoke-direct/range {v1 .. v6}, Lof8;-><init>(Laj4;JJ)V
-
-    iget-object v2, v0, Lsh4;->m:Lrc5;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-object v2, v1
-
-    iget-object v1, v0, Lsh4;->q:Lto6;
-
-    iget v3, p1, Lbub;->c:I
-
-    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
-
-    const-wide v10, -0x7fffffffffffffffL    # -4.9E-324
-
-    const/4 v4, -0x1
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    invoke-virtual/range {v1 .. v11}, Lto6;->N(Lof8;IILpj6;ILjava/lang/Object;JJ)V
-
-    iget-object p1, p1, Lbub;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Long;
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v1
-
-    sub-long/2addr v1, p2
-
-    iput-wide v1, v0, Lsh4;->L:J
-
-    const/4 p1, 0x1
-
-    invoke-virtual {v0, p1}, Lsh4;->y(Z)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

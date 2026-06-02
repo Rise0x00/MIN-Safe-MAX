@@ -1,35 +1,59 @@
 .class public final Lypa;
-.super Ljava/lang/Object;
+.super Lz84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lo58;
+.field public final synthetic A0:Lzpa;
 
-.field public final b:Llgc;
+.field public B0:I
 
-.field public final c:Lcy0;
+.field public X:Ljava/util/Collection;
 
-.field public final d:Lo58;
+.field public Y:I
 
-.field public final e:Lo58;
+.field public Z:I
+
+.field public d:Ljava/util/Collection;
+
+.field public o:Ljava/util/Iterator;
+
+.field public synthetic z0:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lo58;Llgc;Lcy0;Lo58;Lo58;)V
+.method public constructor <init>(Lzpa;Lz84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lypa;->A0:Lzpa;
 
-    iput-object p1, p0, Lypa;->a:Lo58;
-
-    iput-object p2, p0, Lypa;->b:Llgc;
-
-    iput-object p3, p0, Lypa;->c:Lcy0;
-
-    iput-object p4, p0, Lypa;->d:Lo58;
-
-    iput-object p5, p0, Lypa;->e:Lo58;
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lypa;->z0:Ljava/lang/Object;
+
+    iget p1, p0, Lypa;->B0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lypa;->B0:I
+
+    iget-object p1, p0, Lypa;->A0:Lzpa;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lzpa;->c(Ljava/util/List;Lz84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

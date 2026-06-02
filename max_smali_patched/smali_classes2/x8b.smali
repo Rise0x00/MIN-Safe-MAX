@@ -1,61 +1,61 @@
-.class public final Lx8b;
-.super Lo84;
+.class public abstract Lx8b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lone/me/messages/list/loader/MessageModel;
+# static fields
+.field public static final a:J
 
-.field public Y:Lbtd;
+.field public static final b:J
 
-.field public Z:I
+.field public static final c:J
 
-.field public d:Lnd2;
+.field public static final d:J
 
-.field public o:Ljava/util/ArrayList;
+.field public static final e:J
 
-.field public synthetic t0:Ljava/lang/Object;
-
-.field public final synthetic u0:Lz8b;
-
-.field public v0:I
+.field public static final f:J
 
 
 # direct methods
-.method public constructor <init>(Lz8b;Lo84;)V
-    .locals 0
-
-    iput-object p1, p0, Lx8b;->u0:Lz8b;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 2
 
-    iput-object p1, p0, Lx8b;->t0:Ljava/lang/Object;
+    sget v0, Lbid;->call_history_info_copy_link:I
 
-    iget p1, p0, Lx8b;->v0:I
+    int-to-long v0, v0
 
-    const/high16 v0, -0x80000000
+    sput-wide v0, Lx8b;->a:J
 
-    or-int/2addr p1, v0
+    sget v0, Lbid;->call_history_info_open_chat_call:I
 
-    iput p1, p0, Lx8b;->v0:I
+    int-to-long v0, v0
 
-    const/4 p1, 0x0
+    sput-wide v0, Lx8b;->b:J
 
-    const/4 v0, 0x0
+    sget v0, Lbid;->call_history_info_recreate:I
 
-    iget-object v1, p0, Lx8b;->u0:Lz8b;
+    int-to-long v0, v0
 
-    invoke-virtual {v1, p1, v0, p1, p0}, Lz8b;->q(Lnd2;ILjava/util/ArrayList;Lo84;)Ljava/lang/Object;
+    sput-wide v0, Lx8b;->c:J
 
-    move-result-object p1
+    sget v0, Lbid;->call_history_info_send_to_chat:I
 
-    return-object p1
+    int-to-long v0, v0
+
+    sput-wide v0, Lx8b;->d:J
+
+    sget v0, Lbid;->call_history_info_share_link:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Lx8b;->e:J
+
+    sget v0, Lbid;->call_history_info_start_call:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Lx8b;->f:J
+
+    return-void
 .end method

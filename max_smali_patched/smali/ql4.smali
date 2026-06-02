@@ -1,194 +1,185 @@
 .class public final Lql4;
-.super Ljava/lang/Object;
+.super Lapg;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Loj6;
-
-.field public final c:Loj6;
-
-.field public final d:I
-
-.field public final e:I
+# static fields
+.field public static final c0:Lql4;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Loj6;Loj6;II)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 41
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lql4;
 
-    if-eqz p4, :cond_1
+    new-instance v1, Llk3;
 
-    if-nez p5, :cond_0
+    const-wide v2, 0xff697cffL
 
-    goto :goto_0
+    long-to-int v2, v2
 
-    :cond_0
-    const/4 v0, 0x0
+    const-wide v3, 0xffffffffL
 
-    goto :goto_1
+    long-to-int v3, v3
 
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
+    const-wide v4, 0xff000000L
 
-    :goto_1
-    invoke-static {v0}, Ly5j;->b(Z)V
+    long-to-int v5, v4
 
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    const-wide v6, 0xff333344L
 
-    move-result v0
+    long-to-int v8, v6
 
-    if-nez v0, :cond_2
+    const-wide v6, 0xff5b5b69L
 
-    iput-object p1, p0, Lql4;->a:Ljava/lang/String;
+    long-to-int v13, v6
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-wide v6, 0xfff5f5f5L
 
-    iput-object p2, p0, Lql4;->b:Loj6;
+    long-to-int v15, v6
 
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-wide v6, 0xffff3f3fL
 
-    iput-object p3, p0, Lql4;->c:Loj6;
+    long-to-int v4, v6
 
-    iput p4, p0, Lql4;->d:I
+    const-wide v6, 0xfffbc03dL
 
-    iput p5, p0, Lql4;->e:I
+    long-to-int v6, v6
+
+    const-wide v9, 0xffecececL
+
+    long-to-int v7, v9
+
+    const-wide v9, 0xfff2f2f2L
+
+    long-to-int v9, v9
+
+    const-wide v10, 0xffe2e6ffL
+
+    long-to-int v10, v10
+
+    const-wide v11, 0xffd3d9fbL
+
+    long-to-int v11, v11
+
+    move-object/from16 v40, v0
+
+    move-object v12, v1
+
+    const-wide v0, 0xffe8e8e8L
+
+    long-to-int v0, v0
+
+    move/from16 v28, v0
+
+    const-wide v0, 0xffbdbfcdL
+
+    long-to-int v0, v0
+
+    move/from16 v29, v0
+
+    const-wide v0, 0xff84848eL
+
+    long-to-int v0, v0
+
+    move/from16 v30, v0
+
+    const-wide v0, 0xff10bc07L
+
+    long-to-int v0, v0
+
+    move/from16 v32, v0
+
+    const-wide v0, 0xff9da4afL
+
+    long-to-int v0, v0
+
+    move/from16 v33, v0
+
+    const-wide v0, 0xff5b5b68L
+
+    long-to-int v0, v0
+
+    move/from16 v37, v0
+
+    const-wide v0, 0xff474757L
+
+    long-to-int v0, v0
+
+    const/16 v39, 0x3e0
+
+    move/from16 v16, v4
+
+    move v4, v3
+
+    move/from16 v17, v6
+
+    move v6, v2
+
+    move/from16 v18, v7
+
+    move v7, v3
+
+    move/from16 v20, v9
+
+    move v9, v3
+
+    move/from16 v21, v10
+
+    move v10, v8
+
+    move/from16 v22, v11
+
+    move v11, v3
+
+    move-object v1, v12
+
+    move v12, v3
+
+    move v14, v13
+
+    move/from16 v19, v3
+
+    move/from16 v23, v8
+
+    move/from16 v24, v2
+
+    move/from16 v25, v15
+
+    move/from16 v26, v18
+
+    move/from16 v27, v13
+
+    move/from16 v31, v3
+
+    move/from16 v34, v3
+
+    move/from16 v35, v3
+
+    move/from16 v36, v8
+
+    move/from16 v38, v0
+
+    invoke-direct/range {v1 .. v39}, Llk3;-><init>(IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII)V
+
+    const/4 v4, 0x1
+
+    const-string v5, "DAY"
+
+    move-object v6, v1
+
+    const-string v1, "TamTam Light"
+
+    const-string v2, "TamTam Team"
+
+    const/4 v3, 0x0
+
+    move-object/from16 v0, v40
+
+    invoke-direct/range {v0 .. v6}, Lapg;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;Llk3;)V
+
+    sput-object v0, Lql4;->c0:Lql4;
 
     return-void
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw p1
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Lql4;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lql4;
-
-    iget v2, p0, Lql4;->d:I
-
-    iget v3, p1, Lql4;->d:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Lql4;->e:I
-
-    iget v3, p1, Lql4;->e:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-object v2, p0, Lql4;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lql4;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lql4;->b:Loj6;
-
-    iget-object v3, p1, Lql4;->b:Loj6;
-
-    invoke-virtual {v2, v3}, Loj6;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lql4;->c:Loj6;
-
-    iget-object p1, p1, Lql4;->c:Loj6;
-
-    invoke-virtual {v2, p1}, Loj6;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/16 v0, 0x20f
-
-    iget v1, p0, Lql4;->d:I
-
-    add-int/2addr v0, v1
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lql4;->e:I
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lql4;->a:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lql4;->b:Loj6;
-
-    invoke-virtual {v2}, Loj6;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Lql4;->c:Loj6;
-
-    invoke-virtual {v0}, Loj6;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    return v0
 .end method

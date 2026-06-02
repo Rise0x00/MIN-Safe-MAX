@@ -1,83 +1,158 @@
-.class public final synthetic Li2b;
-.super Lqr6;
+.class public final Li2b;
+.super Loqf;
 .source "SourceFile"
 
-# interfaces
-.implements Ldr6;
 
+# instance fields
+.field public final synthetic a:I
 
-# static fields
-.field public static final a:Li2b;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Li2b;
+    iput p1, p0, Li2b;->a:I
 
-    const-string v4, "register(Lkotlinx/coroutines/selects/SelectInstance;Ljava/lang/Object;)V"
+    iput-object p2, p0, Li2b;->b:Ljava/lang/Object;
 
-    const/4 v5, 0x0
-
-    const/4 v1, 0x3
-
-    const-class v2, Lj2b;
-
-    const-string v3, "register"
-
-    invoke-direct/range {v0 .. v5}, Lqr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Li2b;->a:Li2b;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final m(Lirf;)V
+    .locals 3
 
-    check-cast p1, Lj2b;
+    iget v0, p0, Li2b;->a:I
 
-    check-cast p2, Lqme;
+    packed-switch v0, :pswitch_data_0
 
-    iget-wide v0, p1, Lj2b;->a:J
+    sget-object v0, Lkj5;->a:Lkj5;
 
-    const-wide/16 v2, 0x0
+    invoke-interface {p1, v0}, Lirf;->c(Ls45;)V
 
-    cmp-long p3, v0, v2
+    iget-object v0, p0, Li2b;->b:Ljava/lang/Object;
 
-    sget-object v2, Lb3h;->a:Lb3h;
+    invoke-interface {p1, v0}, Lirf;->a(Ljava/lang/Object;)V
 
-    if-gtz p3, :cond_0
+    return-void
 
-    check-cast p2, Lpme;
+    :pswitch_0
+    sget-object v0, Lsr6;->e:Ldu6;
 
-    iput-object v2, p2, Lpme;->o:Ljava/lang/Object;
+    new-instance v1, Lrb2;
 
-    return-object v2
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2, v0}, Lrb2;-><init>(ILjava/lang/Object;)V
+
+    invoke-interface {p1, v1}, Lirf;->c(Ls45;)V
+
+    invoke-virtual {v1}, Lrb2;->f()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    new-instance p3, Lcb9;
+    :try_start_0
+    iget-object v0, p0, Li2b;->b:Ljava/lang/Object;
 
-    const/16 v3, 0xf
+    check-cast v0, Ljava/util/concurrent/Callable;
 
-    invoke-direct {p3, p2, v3, p1}, Lcb9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-interface {v0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
 
-    check-cast p2, Lpme;
+    move-result-object v0
 
-    iget-object p1, p2, Lpme;->a:Lqb4;
+    const-string v2, "The callable returned a null value"
 
-    invoke-static {p1}, Lumj;->f(Lqb4;)Lhw4;
+    invoke-static {v0, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v3
+    invoke-virtual {v1}, Lrb2;->f()Z
 
-    invoke-interface {v3, v0, v1, p3, p1}, Lhw4;->invokeOnTimeout(JLjava/lang/Runnable;Lqb4;)Lr25;
+    move-result v1
 
-    move-result-object p1
+    if-nez v1, :cond_2
 
-    iput-object p1, p2, Lpme;->c:Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lirf;->a(Ljava/lang/Object;)V
 
-    return-object v2
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lmzj;->c(Ljava/lang/Throwable;)V
+
+    invoke-virtual {v1}, Lrb2;->f()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    invoke-interface {p1, v0}, Lirf;->onError(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {v0}, Lq98;->J(Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_0
+    return-void
+
+    :pswitch_1
+    new-instance v0, Luqf;
+
+    invoke-direct {v0, p1}, Luqf;-><init>(Lirf;)V
+
+    invoke-interface {p1, v0}, Lirf;->c(Ls45;)V
+
+    :try_start_1
+    iget-object p1, p0, Li2b;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljrf;
+
+    invoke-interface {p1, v0}, Ljrf;->h(Luqf;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p1
+
+    invoke-static {p1}, Lmzj;->c(Ljava/lang/Throwable;)V
+
+    invoke-virtual {v0, p1}, Luqf;->a(Ljava/lang/Throwable;)V
+
+    :goto_1
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Li2b;->b:Ljava/lang/Object;
+
+    check-cast v0, Lg0b;
+
+    new-instance v1, Lh2b;
+
+    invoke-direct {v1, p1}, Lh2b;-><init>(Lirf;)V
+
+    invoke-virtual {v0, v1}, Lg0b;->j(Lb3b;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

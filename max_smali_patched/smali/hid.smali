@@ -1,26 +1,182 @@
 .class public abstract Lhid;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lux0;
 
 
 # static fields
-.field public static final a:Lu0b;
+.field public static chat_item_view_type:I = 0x7f0a0263
 
+.field public static chat_item_view_type_pinned:I = 0x7f0a0264
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.field public static chat_suggest_item_view_type:I = 0x7f0a0287
 
-    new-instance v0, Lu0b;
+.field public static chat_suggest_stub_item_view_type:I = 0x7f0a0288
 
-    const/16 v1, 0xe
+.field public static chats_list_appbar:I = 0x7f0a0290
 
-    invoke-direct {v0, v1}, Lu0b;-><init>(I)V
+.field public static chats_list_folder_delete:I = 0x7f0a0291
 
-    sput-object v0, Lhid;->a:Lu0b;
+.field public static chats_list_folder_delete_confirm:I = 0x7f0a0292
 
-    return-void
-.end method
+.field public static chats_list_folder_edit:I = 0x7f0a0293
+
+.field public static chats_list_folder_read:I = 0x7f0a0294
+
+.field public static chats_list_folders_container:I = 0x7f0a0295
+
+.field public static chats_list_folders_pager:I = 0x7f0a0296
+
+.field public static chats_list_folders_tabs:I = 0x7f0a0297
+
+.field public static chats_list_pinbars_view:I = 0x7f0a0298
+
+.field public static chats_list_search_recycler_view:I = 0x7f0a0299
+
+.field public static chats_list_search_root_view:I = 0x7f0a029a
+
+.field public static chats_list_search_toolbar:I = 0x7f0a029b
+
+.field public static chats_list_stories_group_layout:I = 0x7f0a029c
+
+.field public static chats_list_stories_recycler_view:I = 0x7f0a029d
+
+.field public static chats_list_toolbar:I = 0x7f0a029e
+
+.field public static chats_list_view:I = 0x7f0a029f
+
+.field public static chats_search_action_view_type:I = 0x7f0a02a0
+
+.field public static chats_search_chat_view_type:I = 0x7f0a02a1
+
+.field public static chats_search_contact_view_type:I = 0x7f0a02a2
+
+.field public static chats_search_empty_view_type:I = 0x7f0a02a3
+
+.field public static chats_search_global_chat_view_type:I = 0x7f0a02a4
+
+.field public static chats_search_global_contact_view_type:I = 0x7f0a02a5
+
+.field public static chats_search_loading_view_type:I = 0x7f0a02a6
+
+.field public static chats_search_message_view_type:I = 0x7f0a02a7
+
+.field public static chats_search_recent_header_view_type:I = 0x7f0a02a8
+
+.field public static chats_search_recent_view_type:I = 0x7f0a02a9
+
+.field public static chats_search_show_more_view_type:I = 0x7f0a02aa
+
+.field public static fake_chat_contact_item_view_type:I = 0x7f0a036e
+
+.field public static fake_chat_phone_item_view_type:I = 0x7f0a036f
+
+.field public static oneme_big_folder_widget_view_type:I = 0x7f0a05e5
+
+.field public static oneme_chat_action_add_favorite:I = 0x7f0a0604
+
+.field public static oneme_chat_action_add_to_folder:I = 0x7f0a0605
+
+.field public static oneme_chat_action_block:I = 0x7f0a0606
+
+.field public static oneme_chat_action_clear_chat_history:I = 0x7f0a0607
+
+.field public static oneme_chat_action_clear_saved_messages:I = 0x7f0a0608
+
+.field public static oneme_chat_action_close_channel:I = 0x7f0a0609
+
+.field public static oneme_chat_action_close_chat:I = 0x7f0a060a
+
+.field public static oneme_chat_action_delete_channel:I = 0x7f0a060b
+
+.field public static oneme_chat_action_delete_chat:I = 0x7f0a060c
+
+.field public static oneme_chat_action_dump_meta:I = 0x7f0a060d
+
+.field public static oneme_chat_action_leave:I = 0x7f0a060e
+
+.field public static oneme_chat_action_mark_as_read:I = 0x7f0a060f
+
+.field public static oneme_chat_action_mark_as_unread:I = 0x7f0a0610
+
+.field public static oneme_chat_action_move_rights_and_leave:I = 0x7f0a0611
+
+.field public static oneme_chat_action_mute:I = 0x7f0a0612
+
+.field public static oneme_chat_action_remove_favorite:I = 0x7f0a0613
+
+.field public static oneme_chat_action_remove_from_folder:I = 0x7f0a0614
+
+.field public static oneme_chat_action_select:I = 0x7f0a0615
+
+.field public static oneme_chat_action_suspend_and_delete_bot:I = 0x7f0a0616
+
+.field public static oneme_chat_action_suspend_bot:I = 0x7f0a0617
+
+.field public static oneme_chat_action_unblock:I = 0x7f0a0618
+
+.field public static oneme_chat_action_unmute:I = 0x7f0a0619
+
+.field public static oneme_chat_list_loading_id:I = 0x7f0a061a
+
+.field public static oneme_chat_list_loading_view_type:I = 0x7f0a061b
+
+.field public static oneme_confirm_block:I = 0x7f0a0639
+
+.field public static oneme_confirm_cancel:I = 0x7f0a063a
+
+.field public static oneme_confirm_delete:I = 0x7f0a063b
+
+.field public static oneme_confirm_delete_for_all:I = 0x7f0a063c
+
+.field public static oneme_confirm_leave:I = 0x7f0a063d
+
+.field public static oneme_confirm_mute_1_day:I = 0x7f0a063e
+
+.field public static oneme_confirm_mute_1_hour:I = 0x7f0a063f
+
+.field public static oneme_confirm_mute_4_hour:I = 0x7f0a0640
+
+.field public static oneme_confirm_mute_infinite:I = 0x7f0a0641
+
+.field public static oneme_confirm_unblock:I = 0x7f0a0642
+
+.field public static oneme_contacts_picker_toolbar:I = 0x7f0a0673
+
+.field public static oneme_folder_tag:I = 0x7f0a0686
+
+.field public static oneme_folder_widget_description:I = 0x7f0a0687
+
+.field public static oneme_folder_widget_icon:I = 0x7f0a0688
+
+.field public static oneme_folder_widget_section_empty_id:I = 0x7f0a0689
+
+.field public static oneme_folder_widget_section_empty_view_type:I = 0x7f0a068a
+
+.field public static oneme_folder_widget_section_id:I = 0x7f0a068b
+
+.field public static oneme_folder_widget_section_view_type:I = 0x7f0a068c
+
+.field public static oneme_folder_widget_title:I = 0x7f0a068d
+
+.field public static oneme_folder_widget_view_type:I = 0x7f0a068e
+
+.field public static oneme_picker_chat_item_view_type:I = 0x7f0a0782
+
+.field public static oneme_picker_confirm_button:I = 0x7f0a0783
+
+.field public static oneme_picker_confirm_cancel:I = 0x7f0a0784
+
+.field public static oneme_picker_confirm_close:I = 0x7f0a0785
+
+.field public static oneme_picker_container_chats:I = 0x7f0a0786
+
+.field public static oneme_picker_input_view:I = 0x7f0a0787
+
+.field public static oneme_picker_main_container:I = 0x7f0a0788
+
+.field public static oneme_picker_media_keyboard_container:I = 0x7f0a0789
+
+.field public static oneme_picker_members_list_view:I = 0x7f0a078a
+
+.field public static oneme_picker_quote_view:I = 0x7f0a078b
+
+.field public static oneme_saved_messages_clear_history:I = 0x7f0a07ac

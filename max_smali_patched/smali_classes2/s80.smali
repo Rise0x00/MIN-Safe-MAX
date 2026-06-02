@@ -2,63 +2,30 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lt80;
 
+# instance fields
+.field public final a:Luf5;
 
-# static fields
-.field public static final a:Ls80;
+.field public final b:J
+
+.field public final c:Lgm6;
+
+.field public final d:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Luf5;JLgm6;Z)V
+    .locals 0
 
-    new-instance v0, Ls80;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ls80;->a:Luf5;
 
-    sput-object v0, Ls80;->a:Ls80;
+    iput-wide p2, p0, Ls80;->b:J
+
+    iput-object p4, p0, Ls80;->c:Lgm6;
+
+    iput-boolean p5, p0, Ls80;->d:Z
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Ls80;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x3f229e5f
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Unknown"
-
-    return-object v0
 .end method

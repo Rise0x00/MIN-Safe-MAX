@@ -1,127 +1,165 @@
 .class public final Lzy4;
-.super Ljava/lang/Object;
+.super Lspf;
 .source "SourceFile"
+
+# interfaces
+.implements Locg;
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:Ljava/lang/String;
+.field public final n:Lxcg;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Lxcg;)V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x2
 
-    iput p1, p0, Lzy4;->a:I
+    new-array v1, v0, [Ltcg;
 
-    iput-object p2, p0, Lzy4;->b:Ljava/lang/String;
+    new-array v0, v0, [Lfe2;
+
+    invoke-direct {p0, v1, v0}, Lspf;-><init>([Lgn4;[Lhn4;)V
+
+    iget v0, p0, Lspf;->g:I
+
+    iget-object v1, p0, Lspf;->e:[Lgn4;
+
+    array-length v2, v1
+
+    const/4 v3, 0x0
+
+    if-ne v0, v2, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v3
+
+    :goto_0
+    invoke-static {v0}, Lh43;->o(Z)V
+
+    array-length v0, v1
+
+    :goto_1
+    if-ge v3, v0, :cond_1
+
+    aget-object v2, v1, v3
+
+    const/16 v4, 0x400
+
+    invoke-virtual {v2, v4}, Lgn4;->r(I)V
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    iput-object p1, p0, Lzy4;->n:Lxcg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final a(J)V
+    .locals 0
 
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lzy4;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lzy4;
-
-    iget v0, p0, Lzy4;->a:I
-
-    iget v1, p1, Lzy4;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lzy4;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lzy4;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 .end method
 
-.method public final hashCode()I
+.method public final f()Lgn4;
     .locals 2
 
-    iget v0, p0, Lzy4;->a:I
+    new-instance v0, Ltcg;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    const/4 v1, 0x1
 
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lzy4;->b:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "DevMenuTab(id="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lzy4;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", name="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lzy4;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Lgn4;-><init>(I)V
 
     return-object v0
+.end method
+
+.method public final g()Lhn4;
+    .locals 2
+
+    new-instance v0, Lfe2;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, p0, v1}, Lfe2;-><init>(Locg;I)V
+
+    return-object v0
+.end method
+
+.method public final h(Ljava/lang/Throwable;)Landroidx/media3/decoder/DecoderException;
+    .locals 2
+
+    new-instance v0, Landroidx/media3/extractor/text/SubtitleDecoderException;
+
+    const-string v1, "Unexpected decode error"
+
+    invoke-direct {v0, v1, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v0
+.end method
+
+.method public final i(Lgn4;Lhn4;Z)Landroidx/media3/decoder/DecoderException;
+    .locals 6
+
+    check-cast p1, Ltcg;
+
+    move-object v0, p2
+
+    check-cast v0, Lfe2;
+
+    :try_start_0
+    iget-object p2, p1, Lgn4;->d:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object v1
+
+    invoke-virtual {p2}, Ljava/nio/Buffer;->limit()I
+
+    move-result p2
+
+    iget-object v2, p0, Lzy4;->n:Lxcg;
+
+    if-eqz p3, :cond_0
+
+    invoke-interface {v2}, Lxcg;->reset()V
+
+    :cond_0
+    const/4 p3, 0x0
+
+    invoke-interface {v2, p3, v1, p2}, Lxcg;->o(I[BI)Lmcg;
+
+    move-result-object v3
+
+    iget-wide v1, p1, Lgn4;->X:J
+
+    iget-wide v4, p1, Ltcg;->z0:J
+
+    invoke-virtual/range {v0 .. v5}, Lfe2;->r(JLmcg;J)V
+
+    iput-boolean p3, v0, Lhn4;->c:Z
+    :try_end_0
+    .catch Landroidx/media3/extractor/text/SubtitleDecoderException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :catch_0
+    move-exception v0
+
+    move-object p1, v0
+
+    return-object p1
 .end method

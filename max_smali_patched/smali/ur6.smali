@@ -1,78 +1,64 @@
-.class public final enum Lur6;
-.super Ljava/lang/Enum;
+.class public final Lur6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Ljfg;
 
 
-# static fields
-.field public static final enum a:Lur6;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final synthetic b:[Lur6;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lur6;
+    iput p1, p0, Lur6;->a:I
 
-    const-string v1, "INSTANCE"
+    iput-object p2, p0, Lur6;->b:Ljava/lang/Object;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lur6;->a:Lur6;
-
-    filled-new-array {v0}, [Lur6;
-
-    move-result-object v0
-
-    sput-object v0, Lur6;->b:[Lur6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lur6;
+
+# virtual methods
+.method public final get()Ljava/lang/Object;
     .locals 1
 
-    const-class v0, Lur6;
+    iget v0, p0, Lur6;->a:I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    iget-object v0, p0, Lur6;->b:Ljava/lang/Object;
 
-    check-cast p0, Lur6;
+    return-object v0
 
-    return-object p0
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lur6;->b:Ljava/lang/Object;
 
-.method public static values()[Lur6;
-    .locals 1
+    check-cast v0, Lia8;
 
-    sget-object v0, Lur6;->b:[Lur6;
-
-    invoke-virtual {v0}, [Lur6;->clone()Ljava/lang/Object;
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lur6;
+    check-cast v0, Ly66;
+
+    invoke-virtual {v0}, Ly66;->k()Ljava/io/File;
+
+    move-result-object v0
 
     return-object v0
-.end method
 
+    nop
 
-# virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 0
-
-    check-cast p1, Ljava/lang/Comparable;
-
-    invoke-interface {p1, p2}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

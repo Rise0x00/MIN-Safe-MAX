@@ -1,49 +1,131 @@
 .class public final Lxva;
-.super Lo84;
+.super Lgwa;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:I
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Lyva;
+.field public final e:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lyva;Lo84;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lxva;->o:Lyva;
+    invoke-direct {p0}, Lgwa;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lxva;->e:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final b(Lb4h;)V
+    .locals 2
 
-    iput-object p1, p0, Lxva;->d:Ljava/lang/Object;
+    iget-object p1, p1, Lb4h;->d:Ljava/lang/Object;
 
-    iget p1, p0, Lxva;->X:I
+    check-cast p1, Landroid/app/Notification$Builder;
 
-    const/high16 v0, -0x80000000
+    new-instance v0, Landroid/app/Notification$InboxStyle;
 
-    or-int/2addr p1, v0
+    invoke-direct {v0, p1}, Landroid/app/Notification$InboxStyle;-><init>(Landroid/app/Notification$Builder;)V
 
-    iput p1, p0, Lxva;->X:I
+    iget-object p1, p0, Lgwa;->b:Ljava/lang/CharSequence;
 
-    iget-object p1, p0, Lxva;->o:Lyva;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Lyva;->d(Lyva;Ljava/util/ArrayList;Lo84;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroid/app/Notification$InboxStyle;->setBigContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$InboxStyle;
 
     move-result-object p1
 
-    return-object p1
+    iget-boolean v0, p0, Lgwa;->d:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lgwa;->c:Ljava/lang/CharSequence;
+
+    invoke-virtual {p1, v0}, Landroid/app/Notification$InboxStyle;->setSummaryText(Ljava/lang/CharSequence;)Landroid/app/Notification$InboxStyle;
+
+    :cond_0
+    iget-object v0, p0, Lxva;->e:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/CharSequence;
+
+    invoke-virtual {p1, v1}, Landroid/app/Notification$InboxStyle;->addLine(Ljava/lang/CharSequence;)Landroid/app/Notification$InboxStyle;
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method
+
+.method public final c()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "androidx.core.app.NotificationCompat$InboxStyle"
+
+    return-object v0
+.end method
+
+.method public final d(Ljava/lang/CharSequence;)V
+    .locals 1
+
+    if-eqz p1, :cond_0
+
+    iget-object v0, p0, Lxva;->e:Ljava/util/ArrayList;
+
+    invoke-static {p1}, Lrva;->c(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public final e(Ljava/lang/String;)V
+    .locals 0
+
+    invoke-static {p1}, Lrva;->c(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lgwa;->b:Ljava/lang/CharSequence;
+
+    return-void
+.end method
+
+.method public final f(Ljava/lang/String;)V
+    .locals 0
+
+    invoke-static {p1}, Lrva;->c(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lgwa;->c:Ljava/lang/CharSequence;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lgwa;->d:Z
+
+    return-void
 .end method

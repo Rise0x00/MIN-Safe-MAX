@@ -1,79 +1,132 @@
-.class public abstract Lh4j;
-.super Ljava/lang/Object;
+.class public final Lh4j;
+.super Lcom/google/android/gms/common/internal/a;
 .source "SourceFile"
 
 
+# instance fields
+.field public final P0:Lhrg;
+
+
 # direct methods
-.method public static final a(Lj88;)Ly78;
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lj80;Lhrg;Lz2j;Lz2j;)V
+    .locals 8
 
-    invoke-interface {p0}, Lj88;->p()Ll88;
+    const/16 v3, 0x10e
 
-    move-result-object p0
+    const/4 v7, 0x0
 
-    invoke-static {p0}, Ld4j;->c(Ll88;)Ly78;
+    move-object v0, p0
 
-    move-result-object p0
+    move-object v1, p1
 
-    return-object p0
-.end method
+    move-object v2, p2
 
-.method public static d(Ljava/lang/Object;)Ljava/lang/String;
-    .locals 2
+    move-object v4, p3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-object v5, p5
 
-    const-string v1, "\'"
+    move-object v6, p6
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v7}, Lcom/google/android/gms/common/internal/a;-><init>(Landroid/content/Context;Landroid/os/Looper;ILj80;Ld27;Le27;I)V
 
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    iput-object p4, v0, Lh4j;->P0:Lhrg;
 
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static e(Ljava/lang/String;)Z
-    .locals 0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result p0
-
-    if-lez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public abstract b()V
+.method public final g()I
+    .locals 1
+
+    const v0, 0xc1fa340
+
+    return v0
 .end method
 
-.method public c()V
-    .locals 0
+.method public final synthetic l(Landroid/os/IBinder;)Landroid/os/IInterface;
+    .locals 2
 
-    return-void
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    const-string v0, "com.google.android.gms.common.internal.service.IClientTelemetryService"
+
+    invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v0
+
+    instance-of v1, v0, Lb4j;
+
+    if-eqz v1, :cond_1
+
+    check-cast v0, Lb4j;
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Lb4j;
+
+    invoke-direct {v0, p1}, Lb4j;-><init>(Landroid/os/IBinder;)V
+
+    return-object v0
+.end method
+
+.method public final m()[La16;
+    .locals 1
+
+    sget-object v0, Ltf3;->f:[La16;
+
+    return-object v0
+.end method
+
+.method public final n()Landroid/os/Bundle;
+    .locals 3
+
+    iget-object v0, p0, Lh4j;->P0:Lhrg;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Landroid/os/Bundle;
+
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+
+    iget-object v0, v0, Lhrg;->a:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    const-string v2, "api"
+
+    invoke-virtual {v1, v2, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    return-object v1
+.end method
+
+.method public final p()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "com.google.android.gms.common.internal.service.IClientTelemetryService"
+
+    return-object v0
+.end method
+
+.method public final q()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "com.google.android.gms.common.telemetry.service.START"
+
+    return-object v0
+.end method
+
+.method public final r()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

@@ -1,115 +1,334 @@
 .class public final Lxe9;
-.super Lnth;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
 
 # instance fields
-.field public final X:Lcm5;
+.field public final synthetic a:I
 
-.field public final Y:Lo58;
-
-.field public final Z:Lo58;
-
-.field public final b:Lve9;
-
-.field public final c:J
-
-.field public final d:Landroid/content/Context;
-
-.field public final o:Lspf;
-
-.field public final t0:Lo58;
-
-.field public final u0:Lo58;
+.field public final synthetic b:Landroid/view/KeyEvent$Callback;
 
 
 # direct methods
-.method public constructor <init>(Lve9;J)V
-    .locals 5
+.method public synthetic constructor <init>(Landroid/view/KeyEvent$Callback;I)V
+    .locals 0
 
-    sget-object v0, Ley2;->a:Ley2;
+    iput p2, p0, Lxe9;->a:I
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    iput-object p1, p0, Lxe9;->b:Landroid/view/KeyEvent$Callback;
 
-    move-result-object v1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v2, 0x11
+    return-void
+.end method
 
-    invoke-virtual {v1, v2}, Lr5;->c(I)Ljava/lang/Object;
 
-    move-result-object v1
+# virtual methods
+.method public final onProgressChanged(Landroid/widget/SeekBar;IZ)V
+    .locals 3
 
-    check-cast v1, Landroid/content/Context;
+    iget v0, p0, Lxe9;->a:I
 
-    sget-object v2, Ldy2;->a:Lo58;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    iget-object p1, p0, Lxe9;->b:Landroid/view/KeyEvent$Callback;
 
-    move-result-object v2
+    check-cast p1, Lohc;
 
-    const/16 v3, 0x34
+    iget-object v0, p1, Lohc;->z0:Lsth;
 
-    invoke-virtual {v2, v3}, Lr5;->d(I)Ln8g;
+    if-eqz p3, :cond_2
 
-    move-result-object v2
+    iget-boolean p3, p1, Lohc;->B0:Z
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    if-nez p3, :cond_0
 
-    move-result-object v3
+    goto :goto_0
 
-    const/16 v4, 0x77
+    :cond_0
+    iget-object p3, p1, Lohc;->C0:Lnhc;
 
-    invoke-virtual {v3, v4}, Lr5;->d(I)Ln8g;
+    if-eqz p3, :cond_1
 
-    move-result-object v3
+    check-cast p3, Lwq7;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    iget-object p3, p3, Lwq7;->F0:Lsif;
 
-    move-result-object v0
+    new-instance v1, Lba4;
 
-    const/16 v4, 0xc
+    invoke-direct {v1, p2}, Lba4;-><init>(I)V
 
-    invoke-virtual {v0, v4}, Lr5;->d(I)Ln8g;
+    invoke-virtual {p3, v1}, Lsif;->h(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    :cond_1
+    int-to-long p2, p2
 
-    invoke-static {}, Ldy2;->a()Lo58;
+    iget-object v1, v0, Lsth;->b:Landroid/widget/TextView;
 
-    move-result-object v4
+    invoke-static {p2, p3}, Lgyj;->b(J)Ljava/lang/String;
 
-    invoke-direct {p0}, Lnth;-><init>()V
+    move-result-object p2
 
-    iput-object p1, p0, Lxe9;->b:Lve9;
+    invoke-virtual {v1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iput-wide p2, p0, Lxe9;->c:J
+    iget-object p2, p1, Lohc;->o:Ljic;
 
-    iput-object v1, p0, Lxe9;->d:Landroid/content/Context;
+    invoke-virtual {p2}, Landroid/widget/AbsSeekBar;->getThumb()Landroid/graphics/drawable/Drawable;
 
-    new-instance p1, Lef9;
+    move-result-object p3
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p3}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    invoke-static {p1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+    move-result-object p3
+
+    invoke-virtual {p3}, Landroid/graphics/Rect;->centerX()I
+
+    move-result p3
+
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v1
+
+    add-int/2addr v1, p3
+
+    invoke-virtual {p2}, Landroid/widget/AbsSeekBar;->getThumbOffset()I
+
+    move-result p3
+
+    add-int/2addr p3, v1
+
+    int-to-float p3, p3
+
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    const/high16 v2, 0x40000000    # 2.0f
+
+    div-float/2addr v1, v2
+
+    sub-float/2addr p3, v1
+
+    iget-object v1, p1, Lohc;->c:Landroid/widget/TextView;
+
+    invoke-virtual {v1}, Landroid/view/View;->getWidth()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    invoke-static {v1, p3}, Ljava/lang/Math;->max(FF)F
+
+    move-result p3
+
+    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
+
+    move-result p2
+
+    iget-object p1, p1, Lohc;->d:Landroid/widget/TextView;
+
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+
+    move-result p1
+
+    sub-int/2addr p2, p1
+
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+
+    move-result p1
+
+    sub-int/2addr p2, p1
+
+    int-to-float p1, p2
+
+    invoke-static {p1, p3}, Ljava/lang/Math;->min(FF)F
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationX(F)V
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    const/16 p1, 0x8
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    :goto_1
+    return-void
+
+    :pswitch_0
+    if-eqz p3, :cond_5
+
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object p1
 
-    iput-object p1, p0, Lxe9;->o:Lspf;
+    check-cast p1, Llf9;
 
-    new-instance p1, Lcm5;
+    iget-object p3, p0, Lxe9;->b:Landroid/view/KeyEvent$Callback;
 
-    const/4 p2, 0x0
+    check-cast p3, Lye9;
 
-    invoke-direct {p1, p2}, Lcm5;-><init>(I)V
+    iget-object p3, p3, Lye9;->M0:Ljava/util/HashMap;
 
-    iput-object p1, p0, Lxe9;->X:Lcm5;
+    iget-object v0, p1, Llf9;->c:Ljava/lang/String;
 
-    iput-object v2, p0, Lxe9;->Y:Lo58;
+    invoke-virtual {p3, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-object v3, p0, Lxe9;->Z:Lo58;
+    move-result-object p3
 
-    iput-object v0, p0, Lxe9;->t0:Lo58;
+    check-cast p3, Landroidx/mediarouter/app/e;
 
-    iput-object v4, p0, Lxe9;->u0:Lo58;
+    if-eqz p3, :cond_4
+
+    if-nez p2, :cond_3
+
+    const/4 v0, 0x1
+
+    goto :goto_2
+
+    :cond_3
+    const/4 v0, 0x0
+
+    :goto_2
+    invoke-virtual {p3, v0}, Landroidx/mediarouter/app/e;->E(Z)V
+
+    :cond_4
+    invoke-virtual {p1, p2}, Llf9;->j(I)V
+
+    :cond_5
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onStartTrackingTouch(Landroid/widget/SeekBar;)V
+    .locals 3
+
+    iget v0, p0, Lxe9;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p1, p0, Lxe9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p1, Lohc;
+
+    invoke-virtual {p1}, Lohc;->getListener()Lnhc;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    check-cast p1, Lwq7;
+
+    iget-object p1, p1, Lwq7;->F0:Lsif;
+
+    sget-object v0, Lda4;->a:Lda4;
+
+    invoke-virtual {p1, v0}, Lsif;->h(Ljava/lang/Object;)Z
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lxe9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast v0, Lye9;
+
+    iget-object v1, v0, Lye9;->N0:Llf9;
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, v0, Lye9;->I0:Lk20;
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
+
+    :cond_1
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Llf9;
+
+    iput-object p1, v0, Lye9;->N0:Llf9;
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onStopTrackingTouch(Landroid/widget/SeekBar;)V
+    .locals 3
+
+    iget v0, p0, Lxe9;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lxe9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast v0, Lohc;
+
+    invoke-virtual {v0}, Lohc;->getListener()Lnhc;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p1}, Landroid/widget/ProgressBar;->getProgress()I
+
+    move-result p1
+
+    check-cast v1, Lwq7;
+
+    iget-object v1, v1, Lwq7;->F0:Lsif;
+
+    new-instance v2, Lea4;
+
+    invoke-direct {v2, p1}, Lea4;-><init>(I)V
+
+    invoke-virtual {v1, v2}, Lsif;->h(Ljava/lang/Object;)Z
+
+    :cond_0
+    iget-object p1, v0, Lohc;->z0:Lsth;
+
+    const/16 v0, 0x8
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lxe9;->b:Landroid/view/KeyEvent$Callback;
+
+    check-cast p1, Lye9;
+
+    iget-object p1, p1, Lye9;->I0:Lk20;
+
+    const/4 v0, 0x2
+
+    const-wide/16 v1, 0x1f4
+
+    invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

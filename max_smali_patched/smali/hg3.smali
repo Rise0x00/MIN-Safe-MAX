@@ -2,33 +2,20 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Closeable;
-.implements Lai7;
-.implements Lcom/facebook/fresco/middleware/HasExtraData;
+
+# static fields
+.field public static final a:Lgkg;
 
 
-# virtual methods
-.method public abstract close()V
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.method public abstract getHeight()I
-.end method
+    new-instance v0, Lgkg;
 
-.method public abstract getImageInfo()Lai7;
-.end method
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract getQualityInfo()Ll2d;
-.end method
+    sput-object v0, Lhg3;->a:Lgkg;
 
-.method public abstract getSizeInBytes()I
-.end method
-
-.method public abstract getWidth()I
-.end method
-
-.method public abstract isClosed()Z
-.end method
-
-.method public abstract isStateful()Z
+    return-void
 .end method

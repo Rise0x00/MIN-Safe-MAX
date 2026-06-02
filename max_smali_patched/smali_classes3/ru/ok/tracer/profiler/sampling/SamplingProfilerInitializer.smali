@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmp7;
+.implements Lps7;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lmp7;"
+        "Lps7;"
     }
 .end annotation
 
@@ -20,8 +20,8 @@
     }
     d2 = {
         "Lru/ok/tracer/profiler/sampling/SamplingProfilerInitializer;",
-        "Lmp7;",
-        "Lo8e;",
+        "Lps7;",
+        "Lake;",
         "<init>",
         "()V",
         "tracer-profiler-sampling_release"
@@ -29,8 +29,8 @@
     k = 0x1
     mv = {
         0x1,
-        0x7,
-        0x1
+        0x8,
+        0x0
     }
     xi = 0x30
 .end annotation
@@ -62,7 +62,7 @@
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
     .locals 0
 
-    sget-object p1, Lo8e;->a:Lo8e;
+    sget-object p1, Lake;->a:Lake;
 
     return-object p1
 .end method

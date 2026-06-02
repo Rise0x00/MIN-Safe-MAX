@@ -1,146 +1,72 @@
 .class public final Ldk1;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lkk1;
 
 
-# instance fields
-.field public final synthetic X:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
-
-.field public final synthetic Y:I
-
-.field public final synthetic Z:Landroid/os/Bundle;
-
-.field public o:I
+# static fields
+.field public static final a:Ldk1;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Ldk1;->X:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
+    new-instance v0, Ldk1;
 
-    iput p2, p0, Ldk1;->Y:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Ldk1;->Z:Landroid/os/Bundle;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Ldk1;->a:Ldk1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Z
+    .locals 1
 
-    check-cast p1, Lzb4;
+    const/4 v0, 0x0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ldk1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ldk1;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Ldk1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    new-instance p1, Ldk1;
+    const/4 v0, 0x1
 
-    iget v0, p0, Ldk1;->Y:I
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Ldk1;->Z:Landroid/os/Bundle;
-
-    iget-object v2, p0, Ldk1;->X:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
-
-    invoke-direct {p1, v2, v0, v1, p2}, Ldk1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget v0, p0, Ldk1;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of p1, p1, Ldk1;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    if-nez p1, :cond_1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const/4 p1, 0x0
 
-    throw p1
+    return p1
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    return v0
+.end method
 
-    sget-object p1, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->I0:[Lz28;
+.method public final hashCode()I
+    .locals 1
 
-    iget-object p1, p0, Ldk1;->X:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
+    const v0, 0x3669a369
 
-    invoke-virtual {p1}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->E0()Lzj1;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    iput v1, p0, Ldk1;->o:I
-
-    iget-object v0, p1, Lzj1;->o:Lmbg;
-
-    check-cast v0, Lj9b;
-
-    invoke-virtual {v0}, Lj9b;->b()Lsb4;
-
-    move-result-object v0
-
-    new-instance v1, Lvj1;
-
-    const/4 v2, 0x0
-
-    iget v3, p0, Ldk1;->Y:I
-
-    iget-object v4, p0, Ldk1;->Z:Landroid/os/Bundle;
-
-    invoke-direct {v1, p1, v3, v4, v2}, Lvj1;-><init>(Lzj1;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, v1, p0}, Ls9j;->k(Lqb4;Lbr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
+    const-string v0, "FinishedCall"
 
     return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
 .end method

@@ -114,11 +114,11 @@
 .method public onEngineWorkerWithEngineCore(Lcom/my/tracker/core/utils/Consumer;)V
     .locals 2
 
-    new-instance v0, Lghh;
+    new-instance v0, Lrvi;
 
-    const/16 v1, 0x17
+    const/4 v1, 0x4
 
-    invoke-direct {v0, p0, v1, p1}, Lghh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p0, v1, p1}, Lrvi;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/core/o/h;->onEngineWorker(Ljava/lang/Runnable;)V
 

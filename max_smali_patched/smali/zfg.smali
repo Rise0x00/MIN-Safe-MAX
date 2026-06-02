@@ -3,115 +3,33 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Ljava/util/regex/Pattern;
-
-.field public static final e:Lsk7;
-
-.field public static final f:Lsk7;
-
-.field public static final g:Lsk7;
-
-.field public static final h:Lsk7;
-
-
 # instance fields
-.field public final a:I
+.field public final a:Landroid/content/Context;
 
-.field public final b:I
+.field public final b:Ljava/lang/String;
 
-.field public final c:I
+.field public final c:Lm01;
+
+.field public final d:Z
+
+.field public final e:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    const-string v0, "\\s+"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lzfg;->d:Ljava/util/regex/Pattern;
-
-    const-string v0, "auto"
-
-    const-string v1, "none"
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const/4 v1, 0x2
-
-    invoke-static {v1, v0}, Lsk7;->i(I[Ljava/lang/Object;)Lsk7;
-
-    move-result-object v0
-
-    sput-object v0, Lzfg;->e:Lsk7;
-
-    const-string v0, "dot"
-
-    const-string v2, "sesame"
-
-    const-string v3, "circle"
-
-    filled-new-array {v0, v2, v3}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v2, v0}, Lsk7;->i(I[Ljava/lang/Object;)Lsk7;
-
-    move-result-object v0
-
-    sput-object v0, Lzfg;->f:Lsk7;
-
-    const-string v0, "filled"
-
-    const-string v3, "open"
-
-    filled-new-array {v0, v3}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lsk7;->i(I[Ljava/lang/Object;)Lsk7;
-
-    move-result-object v0
-
-    sput-object v0, Lzfg;->g:Lsk7;
-
-    const-string v0, "before"
-
-    const-string v1, "outside"
-
-    const-string v3, "after"
-
-    filled-new-array {v3, v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Lsk7;->i(I[Ljava/lang/Object;)Lsk7;
-
-    move-result-object v0
-
-    sput-object v0, Lzfg;->h:Lsk7;
-
-    return-void
-.end method
-
-.method public constructor <init>(III)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lm01;ZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lzfg;->a:I
+    iput-object p1, p0, Lzfg;->a:Landroid/content/Context;
 
-    iput p2, p0, Lzfg;->b:I
+    iput-object p2, p0, Lzfg;->b:Ljava/lang/String;
 
-    iput p3, p0, Lzfg;->c:I
+    iput-object p3, p0, Lzfg;->c:Lm01;
+
+    iput-boolean p4, p0, Lzfg;->d:Z
+
+    iput-boolean p5, p0, Lzfg;->e:Z
 
     return-void
 .end method

@@ -4,189 +4,114 @@
 
 
 # static fields
-.field public static final a:Lvrg;
+.field public static final d:Ljava/util/regex/Pattern;
+
+.field public static final e:Lpn7;
+
+.field public static final f:Lpn7;
+
+.field public static final g:Lpn7;
+
+.field public static final h:Lpn7;
+
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 4
 
-    new-instance v0, Lvrg;
+    const-string v0, "\\s+"
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    sput-object v0, Lvrg;->a:Lvrg;
+    move-result-object v0
+
+    sput-object v0, Lvrg;->d:Ljava/util/regex/Pattern;
+
+    const-string v0, "auto"
+
+    const-string v1, "none"
+
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    invoke-static {v1, v0}, Lpn7;->i(I[Ljava/lang/Object;)Lpn7;
+
+    move-result-object v0
+
+    sput-object v0, Lvrg;->e:Lpn7;
+
+    const-string v0, "dot"
+
+    const-string v2, "sesame"
+
+    const-string v3, "circle"
+
+    filled-new-array {v0, v2, v3}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v2, v0}, Lpn7;->i(I[Ljava/lang/Object;)Lpn7;
+
+    move-result-object v0
+
+    sput-object v0, Lvrg;->f:Lpn7;
+
+    const-string v0, "filled"
+
+    const-string v3, "open"
+
+    filled-new-array {v0, v3}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lpn7;->i(I[Ljava/lang/Object;)Lpn7;
+
+    move-result-object v0
+
+    sput-object v0, Lvrg;->g:Lpn7;
+
+    const-string v0, "before"
+
+    const-string v1, "outside"
+
+    const-string v3, "after"
+
+    filled-new-array {v3, v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lpn7;->i(I[Ljava/lang/Object;)Lpn7;
+
+    move-result-object v0
+
+    sput-object v0, Lvrg;->h:Lpn7;
 
     return-void
 .end method
 
+.method public constructor <init>(III)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
+    iput p1, p0, Lvrg;->a:I
 
-    if-ne p0, p1, :cond_0
+    iput p2, p0, Lvrg;->b:I
 
-    return v0
+    iput p3, p0, Lvrg;->c:I
 
-    :cond_0
-    instance-of v1, p1, Lvrg;
-
-    if-nez v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lvrg;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const p1, 0x3f333333    # 0.7f
-
-    invoke-static {p1, p1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/high16 p1, 0x3f400000    # 0.75f
-
-    invoke-static {p1, p1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 5
-
-    sget-object v0, Lno6;->c:Lno6;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    sget-object v2, Lno6;->v0:Lno6;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    const-wide/16 v3, 0x2710
-
-    invoke-static {v2, v1, v3, v4}, Lcbh;->i(IIJ)I
-
-    move-result v0
-
-    const-wide/16 v2, 0x61a8
-
-    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
-
-    move-result v0
-
-    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
-
-    move-result v0
-
-    const/16 v2, 0x4ff
-
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
-
-    move-result v0
-
-    const/16 v2, 0x2cf
-
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
-
-    move-result v0
-
-    const v2, 0x3f333333    # 0.7f
-
-    invoke-static {v0, v2, v1}, Lob3;->b(IFI)I
-
-    move-result v0
-
-    const/high16 v2, 0x3f400000    # 0.75f
-
-    invoke-static {v0, v2, v1}, Lob3;->b(IFI)I
-
-    move-result v0
-
-    const/4 v2, 0x1
-
-    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
-
-    move-result v0
-
-    const/4 v3, 0x0
-
-    invoke-static {v0, v1, v3}, Lcbh;->j(IIZ)I
-
-    move-result v0
-
-    invoke-static {v2}, Lt02;->t(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "TrackSelectionConfig(minFrameSize="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    sget-object v1, Lno6;->c:Lno6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", maxFrameSize="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v1, Lno6;->v0:Lno6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", minDurationForQualityIncreaseMs=10000, maxDurationForQualityDecreaseMs=25000, minDurationToRetainAfterDiscardMs=25000, maxWidthToDiscard=1279, maxHeightToDiscard=719, bandwidthFraction=0.7, bufferedFractionToLiveEdgeForQualityIncrease=0.75, fastQualityUp=true, allowExceedsCapabilities=false, adaptationCheckpointMode="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "DEFAULT"
-
-    const-string v2, ")"
-
-    invoke-static {v0, v1, v2}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

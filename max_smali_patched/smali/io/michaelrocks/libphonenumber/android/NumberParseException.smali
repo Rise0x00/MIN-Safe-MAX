@@ -25,7 +25,7 @@
 
 # virtual methods
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -33,56 +33,12 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v1, 0x1
+    iget v1, p0, Lio/michaelrocks/libphonenumber/android/NumberParseException;->a:I
 
-    iget v2, p0, Lio/michaelrocks/libphonenumber/android/NumberParseException;->a:I
+    invoke-static {v1}, Lvx9;->r(I)Ljava/lang/String;
 
-    if-eq v2, v1, :cond_4
+    move-result-object v1
 
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_3
-
-    const/4 v1, 0x3
-
-    if-eq v2, v1, :cond_2
-
-    const/4 v1, 0x4
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x5
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "TOO_LONG"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "TOO_SHORT_NSN"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "TOO_SHORT_AFTER_IDD"
-
-    goto :goto_0
-
-    :cond_3
-    const-string v1, "NOT_A_NUMBER"
-
-    goto :goto_0
-
-    :cond_4
-    const-string v1, "INVALID_COUNTRY_CODE"
-
-    :goto_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, ". "

@@ -1,68 +1,23 @@
-.class public final synthetic Leha;
+.class public final Leha;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lz07;
 
-.field public final synthetic b:Lkha;
+.field public final b:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkha;I)V
+.method public constructor <init>(Lz07;J)V
     .locals 0
-
-    iput p2, p0, Leha;->a:I
-
-    iput-object p1, p0, Leha;->b:Lkha;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Leha;->a:Lz07;
 
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
-
-    iget p1, p0, Leha;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    new-instance p1, Lyk0;
-
-    const/16 v0, 0x1c
-
-    invoke-direct {p1, v0}, Lyk0;-><init>(I)V
-
-    iget-object v0, p0, Leha;->b:Lkha;
-
-    invoke-virtual {v0, p1}, Le3;->k(Ldy3;)V
+    iput-wide p2, p0, Leha;->b:J
 
     return-void
-
-    :pswitch_0
-    new-instance p1, Lyk0;
-
-    const/16 v0, 0x19
-
-    invoke-direct {p1, v0}, Lyk0;-><init>(I)V
-
-    iget-object v0, p0, Leha;->b:Lkha;
-
-    invoke-virtual {v0, p1}, Le3;->k(Ldy3;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

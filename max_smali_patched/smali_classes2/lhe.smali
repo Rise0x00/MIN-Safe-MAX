@@ -1,48 +1,128 @@
-.class public final synthetic Llhe;
-.super Lt8;
+.class public final Llhe;
+.super Lco0;
 .source "SourceFile"
-
-# interfaces
-.implements Ldr6;
 
 
 # static fields
-.field public static final Z:Llhe;
+.field public static final synthetic Y:I
+
+
+# instance fields
+.field public X:Landroid/net/Uri;
+
+.field public o:Lio/antmedia/rtmp_client/RtmpClient;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 1
 
-    new-instance v0, Llhe;
+    const-string v0, "media3.datasource.rtmp"
 
-    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
+    invoke-static {v0}, Lma9;->a(Ljava/lang/String;)V
 
-    const/4 v2, 0x4
+    return-void
+.end method
 
-    const/4 v3, 0x3
+.method public constructor <init>()V
+    .locals 1
 
-    const-class v4, Lktb;
+    const/4 v0, 0x1
 
-    invoke-direct {v0, v3, v4, v1, v2}, Lt8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Llhe;->Z:Llhe;
+    invoke-direct {p0, v0}, Lco0;-><init>(Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final G(Ljk4;)J
+    .locals 3
 
-    check-cast p1, Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lco0;->d(Ljk4;)V
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    new-instance v0, Lio/antmedia/rtmp_client/RtmpClient;
 
-    new-instance p3, Lktb;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p3, p1, p2}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    const-wide/16 v1, 0x0
 
-    return-object p3
+    iput-wide v1, v0, Lio/antmedia/rtmp_client/RtmpClient;->a:J
+
+    iput-object v0, p0, Llhe;->o:Lio/antmedia/rtmp_client/RtmpClient;
+
+    iget-object v1, p1, Ljk4;->a:Landroid/net/Uri;
+
+    invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lio/antmedia/rtmp_client/RtmpClient;->b(Ljava/lang/String;)V
+
+    iget-object v0, p1, Ljk4;->a:Landroid/net/Uri;
+
+    iput-object v0, p0, Llhe;->X:Landroid/net/Uri;
+
+    invoke-virtual {p0, p1}, Lco0;->e(Ljk4;)V
+
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+.end method
+
+.method public final close()V
+    .locals 2
+
+    iget-object v0, p0, Llhe;->X:Landroid/net/Uri;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    iput-object v1, p0, Llhe;->X:Landroid/net/Uri;
+
+    invoke-virtual {p0}, Lco0;->c()V
+
+    :cond_0
+    iget-object v0, p0, Llhe;->o:Lio/antmedia/rtmp_client/RtmpClient;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lio/antmedia/rtmp_client/RtmpClient;->a()V
+
+    iput-object v1, p0, Llhe;->o:Lio/antmedia/rtmp_client/RtmpClient;
+
+    :cond_1
+    return-void
+.end method
+
+.method public final getUri()Landroid/net/Uri;
+    .locals 1
+
+    iget-object v0, p0, Llhe;->X:Landroid/net/Uri;
+
+    return-object v0
+.end method
+
+.method public final read([BII)I
+    .locals 2
+
+    iget-object v0, p0, Llhe;->o:Lio/antmedia/rtmp_client/RtmpClient;
+
+    sget-object v1, Lpnh;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, p1, p2, p3}, Lio/antmedia/rtmp_client/RtmpClient;->c([BII)I
+
+    move-result p1
+
+    const/4 p2, -0x1
+
+    if-ne p1, p2, :cond_0
+
+    return p2
+
+    :cond_0
+    invoke-virtual {p0, p1}, Lco0;->b(I)V
+
+    return p1
 .end method

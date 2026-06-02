@@ -1,41 +1,53 @@
-.class public interface abstract Lsx7;
-.super Ljava/lang/Object;
+.class public final Lsx7;
+.super Lz84;
 .source "SourceFile"
 
-# interfaces
-.implements Lob4;
+
+# instance fields
+.field public X:Z
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Ltx7;
+
+.field public d:I
+
+.field public o:Lpr3;
+
+.field public z0:I
+
+
+# direct methods
+.method public constructor <init>(Ltx7;Lz84;)V
+    .locals 0
+
+    iput-object p1, p0, Lsx7;->Z:Ltx7;
+
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract attachChild(Lpb3;)Lmb3;
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract cancel(Ljava/util/concurrent/CancellationException;)V
-.end method
+    iput-object p1, p0, Lsx7;->Y:Ljava/lang/Object;
 
-.method public abstract getCancellationException()Ljava/util/concurrent/CancellationException;
-.end method
+    iget p1, p0, Lsx7;->z0:I
 
-.method public abstract getChildren()Lfpe;
-.end method
+    const/high16 v0, -0x80000000
 
-.method public abstract invokeOnCompletion(Lnq6;)Lr25;
-.end method
+    or-int/2addr p1, v0
 
-.method public abstract invokeOnCompletion(ZZLnq6;)Lr25;
-.end method
+    iput p1, p0, Lsx7;->z0:I
 
-.method public abstract isActive()Z
-.end method
+    iget-object p1, p0, Lsx7;->Z:Ltx7;
 
-.method public abstract isCancelled()Z
-.end method
+    invoke-virtual {p1, p0}, Ltx7;->b(Lz84;)Ljava/lang/Object;
 
-.method public abstract isCompleted()Z
-.end method
+    move-result-object p1
 
-.method public abstract join(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-.end method
-
-.method public abstract start()Z
+    return-object p1
 .end method

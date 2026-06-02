@@ -3,135 +3,205 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/Object;
+# instance fields
+.field public final a:Lnui;
 
-.field public static b:Ljava/lang/reflect/Method;
-
-.field public static c:Z
+.field public b:[Lbv7;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 1
 
-    new-instance v0, Ljava/lang/Object;
+    .line 1
+    new-instance v0, Lnui;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Lnui;-><init>()V
 
-    sput-object v0, Lbui;->a:Ljava/lang/Object;
+    invoke-direct {p0, v0}, Lbui;-><init>(Lnui;)V
 
     return-void
 .end method
 
-.method public static final a(Lxkg;J)V
-    .locals 2
+.method public constructor <init>(Lnui;)V
+    .locals 0
 
-    instance-of v0, p0, Lykg;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_1
+    .line 3
+    iput-object p1, p0, Lbui;->a:Lnui;
 
-    check-cast p0, Lykg;
+    return-void
+.end method
 
-    monitor-enter p0
 
-    const-wide/16 v0, 0x0
+# virtual methods
+.method public final a()V
+    .locals 5
 
-    cmp-long v0, p1, v0
+    iget-object v0, p0, Lbui;->b:[Lbv7;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_4
 
-    :try_start_0
-    iget-object v0, p0, Lykg;->a:Ljava/lang/Long;
+    const/4 v1, 0x0
+
+    aget-object v1, v0, v1
+
+    const/4 v2, 0x1
+
+    aget-object v0, v0, v2
+
+    iget-object v3, p0, Lbui;->a:Lnui;
 
     if-nez v0, :cond_0
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    const/4 v0, 0x2
 
-    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    iget-object v4, v3, Lnui;->a:Liui;
 
-    move-result-wide p1
+    invoke-virtual {v4, v0}, Liui;->f(I)Lbv7;
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lykg;->a:Ljava/lang/Long;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide p1
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lykg;->b:Ljava/lang/Long;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
+    move-result-object v0
 
     :cond_0
-    monitor-exit p0
+    if-nez v1, :cond_1
+
+    iget-object v1, v3, Lnui;->a:Liui;
+
+    invoke-virtual {v1, v2}, Liui;->f(I)Lbv7;
+
+    move-result-object v1
 
     :cond_1
+    invoke-static {v1, v0}, Lbv7;->a(Lbv7;Lbv7;)Lbv7;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lbui;->g(Lbv7;)V
+
+    iget-object v0, p0, Lbui;->b:[Lbv7;
+
+    const/16 v1, 0x10
+
+    invoke-static {v1}, Lq98;->D(I)I
+
+    move-result v1
+
+    aget-object v0, v0, v1
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p0, v0}, Lbui;->f(Lbv7;)V
+
+    :cond_2
+    iget-object v0, p0, Lbui;->b:[Lbv7;
+
+    const/16 v1, 0x20
+
+    invoke-static {v1}, Lq98;->D(I)I
+
+    move-result v1
+
+    aget-object v0, v0, v1
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {p0, v0}, Lbui;->d(Lbv7;)V
+
+    :cond_3
+    iget-object v0, p0, Lbui;->b:[Lbv7;
+
+    const/16 v1, 0x40
+
+    invoke-static {v1}, Lq98;->D(I)I
+
+    move-result v1
+
+    aget-object v0, v0, v1
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {p0, v0}, Lbui;->h(Lbv7;)V
+
+    :cond_4
     return-void
 .end method
 
-.method public static final b(I)Lko7;
-    .locals 1
+.method public abstract b()Lnui;
+.end method
 
-    int-to-byte p0, p0
+.method public c(ILbv7;)V
+    .locals 3
 
-    if-nez p0, :cond_0
+    iget-object v0, p0, Lbui;->b:[Lbv7;
 
-    new-instance p0, Lio7;
+    if-nez v0, :cond_0
 
-    const/4 v0, 0x0
+    const/16 v0, 0xa
 
-    invoke-direct {p0, v0}, Lko7;-><init>(B)V
+    new-array v0, v0, [Lbv7;
 
-    return-object p0
+    iput-object v0, p0, Lbui;->b:[Lbv7;
 
     :cond_0
     const/4 v0, 0x1
 
-    if-ne p0, v0, :cond_1
+    :goto_0
+    const/16 v1, 0x200
 
-    new-instance p0, Lgo7;
+    if-gt v0, v1, :cond_2
 
-    invoke-direct {p0, v0}, Lko7;-><init>(B)V
+    and-int v1, p1, v0
 
-    return-object p0
+    if-nez v1, :cond_1
+
+    goto :goto_1
 
     :cond_1
-    const/4 v0, 0x2
+    iget-object v1, p0, Lbui;->b:[Lbv7;
 
-    if-ne p0, v0, :cond_2
+    invoke-static {v0}, Lq98;->D(I)I
 
-    new-instance p0, Lho7;
+    move-result v2
 
-    invoke-direct {p0, v0}, Lko7;-><init>(B)V
+    aput-object p2, v1, v2
 
-    return-object p0
+    :goto_1
+    shl-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
 
     :cond_2
-    new-instance v0, Ljo7;
+    return-void
+.end method
 
-    invoke-direct {v0, p0}, Lko7;-><init>(B)V
+.method public d(Lbv7;)V
+    .locals 0
 
-    return-object v0
+    return-void
+.end method
+
+.method public abstract e(Lbv7;)V
+.end method
+
+.method public f(Lbv7;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract g(Lbv7;)V
+.end method
+
+.method public h(Lbv7;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public i(IZ)V
+    .locals 0
+
+    return-void
 .end method

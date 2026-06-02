@@ -1,100 +1,51 @@
 .class public final Lgs0;
-.super Ljava/lang/Object;
+.super Lz84;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/content/ServiceConnection;
 
 
 # instance fields
-.field public a:Z
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Ljava/util/concurrent/LinkedBlockingQueue;
+.field public final synthetic Y:Lis0;
+
+.field public Z:I
+
+.field public d:Lis0;
+
+.field public o:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lis0;Lz84;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lgs0;->Y:Lis0;
 
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lgs0;->a:Z
-
-    new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
-
-    invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
-
-    iput-object v0, p0, Lgs0;->b:Ljava/util/concurrent/LinkedBlockingQueue;
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Landroid/os/IBinder;
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    iput-object p1, p0, Lgs0;->X:Ljava/lang/Object;
 
-    const-string v1, "BlockingServiceConnection.getServiceWithTimeout() called on main thread"
+    iget p1, p0, Lgs0;->Z:I
 
-    invoke-static {v1}, Ldkj;->f(Ljava/lang/String;)V
+    const/high16 v0, -0x80000000
 
-    iget-boolean v1, p0, Lgs0;->a:Z
+    or-int/2addr p1, v0
 
-    if-nez v1, :cond_1
+    iput p1, p0, Lgs0;->Z:I
 
-    const/4 v1, 0x1
+    iget-object p1, p0, Lgs0;->Y:Lis0;
 
-    iput-boolean v1, p0, Lgs0;->a:Z
+    invoke-static {p1, p0}, Lis0;->a(Lis0;Lz84;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lgs0;->b:Ljava/util/concurrent/LinkedBlockingQueue;
+    move-result-object p1
 
-    const-wide/16 v2, 0x2710
-
-    invoke-virtual {v1, v2, v3, v0}, Ljava/util/concurrent/LinkedBlockingQueue;->poll(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/IBinder;
-
-    if-eqz v0, :cond_0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/util/concurrent/TimeoutException;
-
-    const-string v1, "Timed out waiting for the service connection"
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Cannot call get on this connection more than once"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
-    .locals 0
-
-    iget-object p1, p0, Lgs0;->b:Ljava/util/concurrent/LinkedBlockingQueue;
-
-    invoke-interface {p1, p2}, Ljava/util/concurrent/BlockingQueue;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public final onServiceDisconnected(Landroid/content/ComponentName;)V
-    .locals 0
-
-    return-void
+    return-object p1
 .end method

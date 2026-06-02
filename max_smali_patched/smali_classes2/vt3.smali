@@ -1,8 +1,63 @@
-.class public interface abstract Lvt3;
-.super Ljava/lang/Object;
+.class public final Lvt3;
+.super Laj0;
 .source "SourceFile"
 
 
+# static fields
+.field public static final b:Lvt3;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lvt3;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1}, Laj0;-><init>(I)V
+
+    sput-object v0, Lvt3;->b:Lvt3;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract a(Ljava/lang/String;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lvt3;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x420fd21c
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "MainScreen"
+
+    return-object v0
 .end method

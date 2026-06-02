@@ -1,80 +1,46 @@
 .class public final Lgg6;
-.super Lj2;
+.super Llqf;
 .source "SourceFile"
 
 
-# instance fields
-.field public final d:Lkfa;
+# virtual methods
+.method public final D(Lki8;)V
+    .locals 1
 
+    instance-of v0, p1, Lng6;
 
-# direct methods
-.method public constructor <init>(Lkfa;)V
-    .locals 2
+    if-nez v0, :cond_0
 
-    sget-object v0, Lwob;->P2:Lwob;
+    return-void
 
-    invoke-direct {p0, v0}, Lj2;-><init>(Lwob;)V
+    :cond_0
+    iget-object v0, p0, Lb3e;->a:Landroid/view/View;
 
-    iput-object p1, p0, Lgg6;->d:Lkfa;
+    check-cast v0, Lcdf;
 
-    iget-object v0, p0, Lj2;->b:Ljava/lang/Object;
+    check-cast p1, Lscf;
 
-    check-cast v0, Lys;
-
-    const-string v1, "folderIds"
-
-    invoke-virtual {v0, v1, p1}, Ladf;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lcdf;->setModelItem(Lscf;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final H()V
     .locals 3
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lb3e;->a:Landroid/view/View;
 
-    if-ne p0, p1, :cond_0
+    move-object v1, v0
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lgg6;
+    check-cast v1, Lcdf;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    return v2
+    check-cast v0, Lcdf;
 
-    :cond_1
-    check-cast p1, Lgg6;
+    invoke-virtual {v0, v2}, Lcdf;->setOnSwitchListener(Lycf;)V
 
-    iget-object v1, p0, Lgg6;->d:Lkfa;
-
-    iget-object p1, p1, Lgg6;->d:Lkfa;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lgg6;->d:Lkfa;
-
-    invoke-virtual {v0}, Lkfa;->hashCode()I
-
-    move-result v0
-
-    return v0
+    return-void
 .end method

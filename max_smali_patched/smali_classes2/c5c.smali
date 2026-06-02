@@ -2,63 +2,38 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Le5c;
 
+# instance fields
+.field public final a:Ljava/lang/String;
 
-# static fields
-.field public static final a:Lc5c;
+.field public final b:J
+
+.field public final c:Ljava/util/List;
+
+.field public final d:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;JLjava/util/ArrayList;Ljava/util/List;)V
+    .locals 0
 
-    new-instance v0, Lc5c;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lc5c;->a:Ljava/lang/String;
 
-    sput-object v0, Lc5c;->a:Lc5c;
+    iput-wide p2, p0, Lc5c;->b:J
+
+    invoke-static {p4}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lc5c;->c:Ljava/util/List;
+
+    invoke-static {p5}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lc5c;->d:Ljava/util/List;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lc5c;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x1e302f13
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ClearSearch"
-
-    return-object v0
 .end method

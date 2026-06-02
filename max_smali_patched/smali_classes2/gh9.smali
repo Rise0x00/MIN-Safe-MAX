@@ -2,86 +2,111 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lih9;
-
 
 # instance fields
-.field public final a:J
+.field public a:Llh9;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lgh9;->a:J
+    if-eqz p1, :cond_2
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1c
+
+    if-lt v0, v1, :cond_0
+
+    new-instance v0, Lkh9;
+
+    invoke-direct {v0, p1, p2, p3}, Llh9;-><init>(Ljava/lang/String;II)V
+
+    invoke-static {p2, p3, p1}, Le5;->u(IILjava/lang/String;)V
+
+    iput-object v0, p0, Lgh9;->a:Llh9;
 
     return-void
+
+    :cond_0
+    new-instance v0, Llh9;
+
+    invoke-direct {v0, p1, p2, p3}, Llh9;-><init>(Ljava/lang/String;II)V
+
+    iput-object v0, p0, Lgh9;->a:Llh9;
+
+    return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "packageName should be nonempty"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "package shouldn\'t be null"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
+    .locals 1
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_0
-    instance-of v1, p1, Lgh9;
+    instance-of v0, p1, Lgh9;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
+    const/4 p1, 0x0
 
-    return v2
+    return p1
 
     :cond_1
+    iget-object v0, p0, Lgh9;->a:Llh9;
+
     check-cast p1, Lgh9;
 
-    iget-wide v3, p0, Lgh9;->a:J
+    iget-object p1, p1, Lgh9;->a:Llh9;
 
-    iget-wide v5, p1, Lgh9;->a:J
+    invoke-virtual {v0, p1}, Llh9;->equals(Ljava/lang/Object;)Z
 
-    cmp-long p1, v3, v5
+    move-result p1
 
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 1
 
-    iget-wide v0, p0, Lgh9;->a:J
+    iget-object v0, p0, Lgh9;->a:Llh9;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0}, Llh9;->hashCode()I
 
     move-result v0
 
     return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "OnOwnerClicked(id="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lgh9;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

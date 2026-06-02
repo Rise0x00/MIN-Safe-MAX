@@ -1,48 +1,27 @@
 .class public final Li04;
-.super Lo84;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lkf2;
+.field public final a:Ld74;
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final b:Ldng;
 
-.field public o:I
+.field public final c:Lia8;
 
 
 # direct methods
-.method public constructor <init>(Lkf2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ld74;Ldng;Lia8;)V
     .locals 0
 
-    iput-object p1, p0, Li04;->X:Lkf2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Li04;->a:Ld74;
+
+    iput-object p2, p0, Li04;->b:Ldng;
+
+    iput-object p3, p0, Li04;->c:Lia8;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Li04;->d:Ljava/lang/Object;
-
-    iget p1, p0, Li04;->o:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Li04;->o:I
-
-    iget-object p1, p0, Li04;->X:Lkf2;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lkf2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

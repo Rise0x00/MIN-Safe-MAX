@@ -1,24 +1,19 @@
-.class public final Ljx8;
+.class public Ljx8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpx8;
 
-
-# static fields
-.field public static final a:Ljx8;
+# instance fields
+.field public final a:Lq5j;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lq5j;)V
+    .locals 0
 
-    new-instance v0, Ljx8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ljx8;->a:Ljx8;
+    iput-object p1, p0, Ljx8;->a:Lq5j;
 
     return-void
 .end method
@@ -26,39 +21,97 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 3
 
-    const/4 v0, 0x1
+    instance-of v0, p1, Ljx8;
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x0
 
-    return v0
+    if-nez v0, :cond_0
+
+    return v1
 
     :cond_0
-    instance-of p1, p1, Ljx8;
+    :try_start_0
+    iget-object v0, p0, Ljx8;->a:Lq5j;
 
-    if-nez p1, :cond_1
+    check-cast p1, Ljx8;
 
-    const/4 p1, 0x0
+    iget-object p1, p1, Ljx8;->a:Lq5j;
 
-    return p1
+    check-cast v0, Lk5j;
+
+    invoke-virtual {v0}, Ls2j;->U()Landroid/os/Parcel;
+
+    move-result-object v2
+
+    invoke-static {v2, p1}, Lm8j;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
+
+    const/16 p1, 0x10
+
+    invoke-virtual {v0, v2, p1}, Ls2j;->T(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v1, 0x1
 
     :cond_1
-    return v0
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v1
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 3
 
-    const v0, 0x1bae2b89
+    :try_start_0
+    iget-object v0, p0, Ljx8;->a:Lq5j;
 
-    return v0
-.end method
+    check-cast v0, Lk5j;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-virtual {v0}, Ls2j;->U()Landroid/os/Parcel;
 
-    const-string v0, "OnClosed"
+    move-result-object v1
 
-    return-object v0
+    const/16 v2, 0x11
+
+    invoke-virtual {v0, v1, v2}, Ls2j;->T(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v1
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

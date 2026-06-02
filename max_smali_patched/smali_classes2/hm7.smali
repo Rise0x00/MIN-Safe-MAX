@@ -1,48 +1,26 @@
 .class public final Lhm7;
-.super Lo84;
+.super Lim7;
+.source "SourceFile"
 
-
-# instance fields
-.field public final synthetic X:Ld83;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
-
-
-# direct methods
-.method public constructor <init>(Ld83;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lhm7;->X:Ld83;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Ljava/util/concurrent/ScheduledFuture;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final bridge synthetic compareTo(Ljava/lang/Object;)I
+    .locals 0
 
-    iput-object p1, p0, Lhm7;->d:Ljava/lang/Object;
+    check-cast p1, Ljava/util/concurrent/Delayed;
 
-    iget p1, p0, Lhm7;->o:I
+    const/4 p1, -0x1
 
-    const/high16 v0, -0x80000000
+    return p1
+.end method
 
-    or-int/2addr p1, v0
+.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
+    .locals 2
 
-    iput p1, p0, Lhm7;->o:I
+    const-wide/16 v0, 0x0
 
-    iget-object p1, p0, Lhm7;->X:Ld83;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ld83;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-wide v0
 .end method

@@ -1,199 +1,171 @@
-.class public final La69;
+.class public final synthetic La69;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Lz59;
+.field public final synthetic a:I
 
-.field public final b:Lz59;
-
-.field public final c:Lz59;
-
-.field public final d:Lz59;
+.field public final synthetic b:Ld69;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Ld69;I)V
+    .locals 0
 
     .line 1
-    sget-object v0, Lz59;->a:Lz59;
+    iput p2, p0, La69;->a:I
 
-    invoke-direct {p0, v0, v0, v0, v0}, La69;-><init>(Lz59;Lz59;Lz59;Lz59;)V
+    iput-object p1, p0, La69;->b:Ld69;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Lz59;Lz59;Lz59;Lz59;)V
+.method public synthetic constructor <init>(Ld69;Ljbb;)V
     .locals 0
 
     .line 2
+    const/4 p2, 0x2
+
+    iput p2, p0, La69;->a:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    iput-object p1, p0, La69;->a:Lz59;
-
-    .line 4
-    iput-object p2, p0, La69;->b:Lz59;
-
-    .line 5
-    iput-object p3, p0, La69;->c:Lz59;
-
-    .line 6
-    iput-object p4, p0, La69;->d:Lz59;
+    iput-object p1, p0, La69;->b:Ld69;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final run()V
+    .locals 6
 
-    const/4 v0, 0x1
+    iget v0, p0, La69;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, La69;->b:Ld69;
+
+    iget-object v0, v0, Ld69;->b:Lb59;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    iget-object v2, v0, Lb59;->o:Landroid/os/Handler;
+
+    invoke-virtual {v2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    move-result-object v2
+
+    if-ne v1, v2, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, La69;
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    :goto_0
+    invoke-static {v1}, Lh43;->o(Z)V
 
-    if-nez v1, :cond_1
+    iget-object v0, v0, Lb59;->d:Lz49;
 
-    return v2
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Lz49;->w()Ljm7;
+
+    invoke-interface {v0}, Lz49;->u()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, La69;->b:Ld69;
+
+    iget-boolean v1, v0, Ld69;->k:Z
+
+    if-nez v1, :cond_2
+
+    iget-object v1, v0, Ld69;->i:Lkg9;
+
+    iget-object v1, v1, Lkg9;->a:Ljava/lang/Object;
+
+    check-cast v1, Lf59;
+
+    iget-object v1, v1, Lf59;->e:Ljg9;
+
+    invoke-virtual {v1}, Ljg9;->a()Ldh7;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    goto :goto_1
 
     :cond_1
-    check-cast p1, La69;
-
-    iget-object v1, p0, La69;->a:Lz59;
-
-    iget-object v3, p1, La69;->a:Lz59;
-
-    if-eq v1, v3, :cond_2
-
-    return v2
+    invoke-virtual {v0}, Ld69;->R()V
 
     :cond_2
-    iget-object v1, p0, La69;->b:Lz59;
+    :goto_1
+    return-void
 
-    iget-object v3, p1, La69;->b:Lz59;
+    :pswitch_1
+    new-instance v0, Lw29;
 
-    if-eq v1, v3, :cond_3
+    iget-object v1, p0, La69;->b:Ld69;
 
-    return v2
+    iget-object v2, v1, Ld69;->a:Landroid/content/Context;
 
-    :cond_3
-    iget-object v1, p0, La69;->c:Lz59;
+    iget-object v3, v1, Ld69;->c:Ln8f;
 
-    iget-object v3, p1, La69;->c:Lz59;
+    iget-object v3, v3, Ln8f;->a:Lm8f;
 
-    if-eq v1, v3, :cond_4
+    invoke-interface {v3}, Lm8f;->b()Landroid/content/ComponentName;
 
-    return v2
+    move-result-object v3
 
-    :cond_4
-    iget-object v1, p0, La69;->d:Lz59;
+    new-instance v4, Lh7c;
 
-    iget-object p1, p1, La69;->d:Lz59;
+    invoke-direct {v4, v1}, Lh7c;-><init>(Ld69;)V
 
-    if-eq v1, p1, :cond_5
+    iget-object v5, v1, Ld69;->b:Lb59;
 
-    return v2
+    iget-object v5, v5, Lb59;->c:La59;
 
-    :cond_5
-    return v0
-.end method
+    invoke-interface {v5}, La59;->E()Landroid/os/Bundle;
 
-.method public final hashCode()I
-    .locals 2
+    move-result-object v5
 
-    iget-object v0, p0, La69;->a:Lz59;
+    invoke-direct {v0, v2, v3, v4, v5}, Lw29;-><init>(Landroid/content/Context;Landroid/content/ComponentName;Lh7c;Landroid/os/Bundle;)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iput-object v0, v1, Ld69;->j:Lw29;
 
-    move-result v0
+    const-string v1, "MediaBrowserCompat"
 
-    mul-int/lit8 v0, v0, 0x1f
+    const-string v2, "Connecting to a MediaBrowserService."
 
-    iget-object v1, p0, La69;->b:Lz59;
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    iget-object v0, v0, Lw29;->a:Lu29;
 
-    move-result v1
+    iget-object v0, v0, Lu29;->b:Landroid/media/browse/MediaBrowser;
 
-    add-int/2addr v1, v0
+    invoke-virtual {v0}, Landroid/media/browse/MediaBrowser;->connect()V
 
-    mul-int/lit8 v1, v1, 0x1f
+    return-void
 
-    iget-object v0, p0, La69;->c:Lz59;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, La69;->d:Lz59;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "MediaOptions(audioState="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, La69;->a:Lz59;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", videoState="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, La69;->b:Lz59;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", screenshareState="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, La69;->c:Lz59;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", movieSharingState="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, La69;->d:Lz59;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

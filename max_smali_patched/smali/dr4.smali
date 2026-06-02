@@ -1,108 +1,153 @@
-.class public final synthetic Ldr4;
+.class public final Ldr4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lwfc;
+.implements Ly95;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/content/res/Resources;
+
+.field public final b:Ly95;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Landroid/content/res/Resources;Ly95;)V
     .locals 0
 
-    iput p1, p0, Ldr4;->a:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ldr4;->a:Landroid/content/res/Resources;
+
+    iput-object p2, p0, Ldr4;->b:Ly95;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(Lrg3;)Landroid/graphics/drawable/Drawable;
+    .locals 3
 
-    iget v0, p0, Ldr4;->a:I
+    :try_start_0
+    invoke-static {}, Lis6;->B()Lhs6;
 
-    packed-switch v0, :pswitch_data_0
+    instance-of v0, p1, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
 
-    check-cast p1, Ljava/lang/String;
+    if-eqz v0, :cond_2
 
-    if-eqz p1, :cond_0
+    check-cast p1, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
 
-    const/4 p1, 0x1
+    new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
+
+    iget-object v1, p0, Ldr4;->a:Landroid/content/res/Resources;
+
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getUnderlyingBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
+
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getRotationAngle()I
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getRotationAngle()I
+
+    move-result v1
+
+    const/4 v2, -0x1
+
+    if-eq v1, v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getExifOrientation()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_1
+
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getExifOrientation()I
+
+    move-result v1
+
+    if-eqz v1, :cond_1
 
     :goto_0
-    return p1
+    new-instance v1, Lmwb;
 
-    :pswitch_0
-    check-cast p1, Ljava/util/Map$Entry;
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getRotationAngle()I
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    move-result v2
 
-    move-result-object p1
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getExifOrientation()I
 
-    if-eqz p1, :cond_1
+    move-result p1
 
-    const/4 p1, 0x1
+    invoke-direct {v1, v0, v2, p1}, Lmwb;-><init>(Landroid/graphics/drawable/BitmapDrawable;II)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {}, Lis6;->B()Lhs6;
+
+    return-object v1
+
+    :catchall_0
+    move-exception p1
 
     goto :goto_1
 
     :cond_1
-    const/4 p1, 0x0
+    invoke-static {}, Lis6;->B()Lhs6;
 
-    :goto_1
-    return p1
-
-    :pswitch_1
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    const/4 p1, 0x1
-
-    goto :goto_2
+    return-object v0
 
     :cond_2
+    iget-object v0, p0, Ldr4;->b:Ly95;
+
+    if-eqz v0, :cond_3
+
+    :try_start_1
+    invoke-interface {v0, p1}, Ly95;->b(Lrg3;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v0, p1}, Ly95;->a(Lrg3;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-static {}, Lis6;->B()Lhs6;
+
+    return-object p1
+
+    :cond_3
+    invoke-static {}, Lis6;->B()Lhs6;
+
     const/4 p1, 0x0
 
-    :goto_2
-    return p1
+    return-object p1
 
-    :pswitch_2
-    check-cast p1, Ljava/lang/String;
+    :goto_1
+    invoke-static {}, Lis6;->B()Lhs6;
 
-    if-eqz p1, :cond_3
+    throw p1
+.end method
+
+.method public final b(Lrg3;)Z
+    .locals 0
 
     const/4 p1, 0x1
 
-    goto :goto_3
-
-    :cond_3
-    const/4 p1, 0x0
-
-    :goto_3
     return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

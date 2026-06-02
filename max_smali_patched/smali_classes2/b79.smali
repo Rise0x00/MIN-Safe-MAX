@@ -1,158 +1,97 @@
 .class public final Lb79;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Ld79;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/mediapicker/MediaPickerScreen;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:F
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/mediapicker/MediaPickerScreen;)V
+.method public constructor <init>(F)V
     .locals 0
 
-    iput-object p2, p0, Lb79;->X:Lone/me/mediapicker/MediaPickerScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lb79;->a:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lb79;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
+    return v0
 
+    :cond_0
+    instance-of v1, p1, Lb79;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lb79;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget v1, p0, Lb79;->a:F
 
-    invoke-virtual {p1, p2}, Lb79;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget p1, p1, Lb79;->a:F
 
-    return-object p2
-.end method
+    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lb79;
-
-    iget-object v1, p0, Lb79;->X:Lone/me/mediapicker/MediaPickerScreen;
-
-    invoke-direct {v0, p2, v1}, Lb79;-><init>(Lkotlin/coroutines/Continuation;Lone/me/mediapicker/MediaPickerScreen;)V
-
-    iput-object p1, v0, Lb79;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget-object v0, p0, Lb79;->o:Ljava/lang/Object;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    check-cast v0, Ltt6;
-
-    instance-of p1, v0, Lpt6;
+    move-result p1
 
     if-eqz p1, :cond_2
 
-    sget-object p1, Lone/me/mediapicker/MediaPickerScreen;->C0:[Lz28;
-
-    iget-object p1, p0, Lb79;->X:Lone/me/mediapicker/MediaPickerScreen;
-
-    invoke-virtual {p1}, Lone/me/mediapicker/MediaPickerScreen;->C0()Li79;
-
-    move-result-object p1
-
-    check-cast v0, Lpt6;
-
-    iget-object v0, v0, Lpt6;->c:Lwh8;
-
-    iget-object v1, p1, Li79;->b:Lft6;
-
-    iget-boolean v1, v1, Lft6;->u0:Z
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p1, Li79;->v0:Lmmf;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Ll0;->isActive()Z
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v1, p1, Li79;->o:Lo58;
-
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lmbg;
-
-    check-cast v1, Lj9b;
-
-    invoke-virtual {v1}, Lj9b;->b()Lsb4;
-
-    move-result-object v1
-
-    new-instance v2, Lg79;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p1, v0, v3}, Lg79;-><init>(Li79;Lwh8;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v0, 0x2
-
-    invoke-static {p1, v1, v2, v0}, Lnth;->n(Lnth;Lqb4;Lbr6;I)Lmmf;
-
-    move-result-object v0
-
-    iput-object v0, p1, Li79;->v0:Lmmf;
-
-    goto :goto_0
-
-    :cond_1
-    iget-object p1, p1, Li79;->w0:Lcm5;
-
-    new-instance v1, Lx69;
-
-    iget-object v0, v0, Lwh8;->b:Landroid/net/Uri;
-
-    invoke-virtual {v0}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Lx69;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p1, v1}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+    return v2
 
     :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    return v0
+.end method
 
-    return-object p1
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Lb79;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SeekStart(progress="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lb79;->a:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,48 +1,60 @@
-.class public final Lz7c;
-.super Lo84;
+.class public final synthetic Lz7c;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lfo4;
 
 
 # instance fields
-.field public final synthetic X:Ldr7;
+.field public final synthetic a:J
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final synthetic b:Z
 
-.field public o:I
+.field public final synthetic c:Z
+
+.field public final synthetic d:Ljava/lang/Long;
+
+.field public final synthetic o:Lioe;
 
 
 # direct methods
-.method public constructor <init>(Ldr7;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(JZZLjava/lang/Long;Lioe;)V
     .locals 0
 
-    iput-object p1, p0, Lz7c;->X:Ldr7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lz7c;->a:J
+
+    iput-boolean p3, p0, Lz7c;->b:Z
+
+    iput-boolean p4, p0, Lz7c;->c:Z
+
+    iput-object p5, p0, Lz7c;->d:Ljava/lang/Long;
+
+    iput-object p6, p0, Lz7c;->o:Lioe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final o()Ljava/lang/Object;
+    .locals 7
 
-    iput-object p1, p0, Lz7c;->d:Ljava/lang/Object;
+    new-instance v0, Lone/me/mediaeditor/MediaEditScreen;
 
-    iget p1, p0, Lz7c;->o:I
+    iget-wide v1, p0, Lz7c;->a:J
 
-    const/high16 v0, -0x80000000
+    iget-boolean v3, p0, Lz7c;->b:Z
 
-    or-int/2addr p1, v0
+    iget-boolean v4, p0, Lz7c;->c:Z
 
-    iput p1, p0, Lz7c;->o:I
+    iget-object v5, p0, Lz7c;->d:Ljava/lang/Long;
 
-    iget-object p1, p0, Lz7c;->X:Ldr7;
+    iget-object v6, p0, Lz7c;->o:Lioe;
 
-    const/4 v0, 0x0
+    invoke-direct/range {v0 .. v6}, Lone/me/mediaeditor/MediaEditScreen;-><init>(JZZLjava/lang/Long;Lioe;)V
 
-    invoke-virtual {p1, v0, p0}, Ldr7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

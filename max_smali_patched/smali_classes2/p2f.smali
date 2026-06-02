@@ -1,99 +1,48 @@
-.class public abstract synthetic Lp2f;
-.super Ljava/lang/Object;
+.class public final synthetic Lp2f;
+.super Lbu6;
 .source "SourceFile"
+
+# interfaces
+.implements Lzs6;
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
-
-.field public static final synthetic $EnumSwitchMapping$1:[I
-
-.field public static final synthetic $EnumSwitchMapping$2:[I
+.field public static final a:Lp2f;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 6
 
-    const/4 v0, 0x3
+    new-instance v0, Lp2f;
 
-    invoke-static {v0}, Lt02;->w(I)[I
+    const-string v4, "iterator()Ljava/util/Iterator;"
 
-    move-result-object v1
+    const/4 v5, 0x0
 
-    array-length v1, v1
+    const/4 v1, 0x1
 
-    new-array v1, v1, [I
+    const-class v2, Ljava/lang/Iterable;
 
-    const/4 v2, 0x1
+    const-string v3, "iterator"
 
-    const/4 v3, 0x2
+    invoke-direct/range {v0 .. v5}, Lbu6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    aput v3, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    sput-object v1, Lp2f;->$EnumSwitchMapping$0:[I
-
-    invoke-static {}, Labh;->values()[Labh;
-
-    move-result-object v1
-
-    array-length v1, v1
-
-    new-array v1, v1, [I
-
-    const/4 v4, 0x0
-
-    :try_start_2
-    aput v2, v1, v4
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    :try_start_3
-    aput v3, v1, v3
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    aput v0, v1, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    sput-object v1, Lp2f;->$EnumSwitchMapping$1:[I
-
-    invoke-static {}, Ltk5;->values()[Ltk5;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_5
-    aput v2, v0, v4
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    :try_start_6
-    aput v3, v0, v2
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    sput-object v0, Lp2f;->$EnumSwitchMapping$2:[I
+    sput-object v0, Lp2f;->a:Lp2f;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ljava/lang/Iterable;
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    return-object p1
 .end method

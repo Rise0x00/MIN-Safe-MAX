@@ -1,186 +1,142 @@
 .class public final Lj31;
-.super Lp6g;
+.super Lovb;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+.field public final a:Ljt6;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Lovb;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;)V
+.method public constructor <init>(Ljt6;Lovb;)V
     .locals 0
 
-    iput-object p2, p0, Lj31;->X:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lj31;->a:Ljt6;
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lj31;->b:Lovb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lj31;->a:Ljt6;
 
-    invoke-virtual {p0, p1, p2}, Lj31;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-interface {v0, p1}, Ljt6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lj31;
+    invoke-interface {v0, p2}, Ljt6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    move-result-object p2
 
-    invoke-virtual {p1, p2}, Lj31;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Lj31;->b:Lovb;
 
-    return-object p2
+    invoke-interface {v0, p1, p2}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    new-instance v0, Lj31;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lj31;->X:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+    if-ne p1, p0, :cond_0
 
-    invoke-direct {v0, p2, v1}, Lj31;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;)V
+    return v0
 
-    iput-object p1, v0, Lj31;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
-
-    iget-object v0, p0, Lj31;->o:Ljava/lang/Object;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    check-cast v0, Lhja;
-
-    instance-of p1, v0, Lvo1;
-
-    const/4 v1, 0x1
+    :cond_0
+    instance-of v1, p1, Lj31;
 
     const/4 v2, 0x0
 
-    iget-object v3, p0, Lj31;->X:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+    if-eqz v1, :cond_1
 
-    if-eqz p1, :cond_3
+    check-cast p1, Lj31;
 
-    sget-object p1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->C0:[Lz28;
+    iget-object v1, p0, Lj31;->a:Ljt6;
 
-    new-instance v5, Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;
+    iget-object v3, p1, Lj31;->a:Ljt6;
 
-    sget-object p1, Lgqd;->b:Lgqd;
+    invoke-interface {v1, v3}, Ljt6;->equals(Ljava/lang/Object;)Z
 
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    move-result v1
 
-    invoke-direct {v5, p1, v0}, Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;-><init>(Lgqd;Ljava/lang/Boolean;)V
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v5, v3}, Lone/me/sdk/arch/Widget;->setTargetController(La94;)V
+    iget-object v1, p0, Lj31;->b:Lovb;
 
-    :goto_0
-    invoke-virtual {v3}, La94;->getParentController()La94;
+    iget-object p1, p1, Lj31;->b:Lovb;
 
-    move-result-object p1
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    if-eqz p1, :cond_0
-
-    invoke-virtual {v3}, La94;->getParentController()La94;
-
-    move-result-object v3
-
-    goto :goto_0
-
-    :cond_0
-    instance-of p1, v3, Lc5e;
-
-    const/4 v0, 0x0
+    move-result p1
 
     if-eqz p1, :cond_1
 
-    check-cast v3, Lc5e;
-
-    goto :goto_1
+    return v0
 
     :cond_1
-    move-object v3, v0
+    return v2
+.end method
 
-    :goto_1
-    if-eqz v3, :cond_2
+.method public final hashCode()I
+    .locals 2
 
-    check-cast v3, Lone/me/android/root/RootController;
+    iget-object v0, p0, Lj31;->a:Ljt6;
 
-    invoke-virtual {v3}, Lone/me/android/root/RootController;->F0()Lw4e;
+    iget-object v1, p0, Lj31;->b:Lovb;
+
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    :cond_2
-    if-eqz v0, :cond_4
+    invoke-static {v0}, Lkhj;->b([Ljava/lang/Object;)I
 
-    new-instance v4, Lz4e;
+    move-result v0
 
-    const/4 v9, 0x0
+    return v0
+.end method
 
-    const/4 v10, -0x1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    const/4 v6, 0x0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v7, 0x0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/4 v8, 0x0
+    iget-object v1, p0, Lj31;->b:Lovb;
 
-    invoke-direct/range {v4 .. v10}, Lz4e;-><init>(La94;Ljava/lang/String;Lf94;Lf94;ZI)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p1, "BottomSheetWidget"
+    const-string v1, ".onResultOf("
 
-    invoke-static {v2, v4, v1, p1}, Lt02;->s(ZLz4e;ZLjava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v4}, Lw4e;->H(Lz4e;)V
+    iget-object v1, p0, Lj31;->a:Ljt6;
 
-    goto :goto_2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :cond_3
-    instance-of p1, v0, Lap1;
+    const-string v1, ")"
 
-    if-eqz p1, :cond_4
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object p1, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->t0:[Lz28;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object p1, v3, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->X:Ljava/lang/Object;
+    move-result-object v0
 
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lxaf;
-
-    check-cast v0, Lap1;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p1, Lxk5;
-
-    invoke-direct {p1, v0, v3, v2, v1}, Lxk5;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
-
-    sget-object v0, Lio1;->a:Lio1;
-
-    invoke-static {v0, p1}, Lxaf;->b(Lio1;Llq6;)V
-
-    :cond_4
-    :goto_2
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-object v0
 .end method

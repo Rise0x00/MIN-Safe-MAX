@@ -1,80 +1,66 @@
 .class public final Luvi;
-.super Ljava/lang/Object;
+.super Landroid/content/ContextWrapper;
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Ldt3;
 
 
-# static fields
-.field public static final a:Luvi;
+# instance fields
+.field public final a:Ltvi;
+
+.field public final synthetic b:Lvvi;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lvvi;Landroid/content/Context;)V
+    .locals 1
 
-    new-instance v0, Luvi;
+    iput-object p1, p0, Luvi;->b:Lvvi;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Luvi;->a:Luvi;
+    iget-object p2, p1, Lvvi;->a:Landroid/content/Context;
 
-    new-instance v0, Lbri;
+    invoke-virtual {p2}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    const/4 v1, 0x1
+    move-result-object p2
 
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+    new-instance v0, Ltvi;
 
-    const-class v1, Lpri;
+    invoke-direct {v0, p1, p2}, Ltvi;-><init>(Lvvi;Landroid/content/Context;)V
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    iput-object v0, p0, Luvi;->a:Ltvi;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a()Lft3;
+    .locals 1
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Luvi;->b:Lvvi;
 
-    move-result-object p1
+    iget-object v0, v0, Lvvi;->a:Landroid/content/Context;
 
-    throw p1
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    check-cast v0, Ldt3;
+
+    invoke-interface {v0}, Ldt3;->a()Lft3;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getApplicationContext()Landroid/content/Context;
+    .locals 1
+
+    iget-object v0, p0, Luvi;->a:Ltvi;
+
+    return-object v0
 .end method

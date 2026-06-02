@@ -1,158 +1,68 @@
-.class public abstract Lie0;
-.super Lhja;
+.class public final Lie0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements La0b;
+
+
+# static fields
+.field public static final a:Lie0;
+
+.field public static final b:Lf26;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    packed-switch p1, :pswitch_data_0
+    new-instance v0, Lie0;
 
-    :pswitch_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Lhja;-><init>(Ljava/lang/Object;)V
+    sput-object v0, Lie0;->a:Lie0;
 
-    return-void
+    new-instance v0, Lr20;
 
-    :pswitch_1
-    sget-object p1, Lb3h;->a:Lb3h;
+    const/4 v1, 0x1
 
-    invoke-direct {p0, p1}, Lhja;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Lr20;-><init>(I)V
 
-    return-void
+    const-class v1, Lt8d;
 
-    :pswitch_2
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-static {v1, v0}, Ln;->f(Ljava/lang/Class;Lr20;)Ljava/util/HashMap;
 
-    invoke-direct {p0, p1}, Lhja;-><init>(Ljava/lang/Object;)V
+    move-result-object v0
 
-    return-void
+    new-instance v1, Lf26;
 
-    :pswitch_3
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-static {v0}, Ln;->g(Ljava/util/HashMap;)Ljava/util/Map;
 
-    invoke-direct {p0, p1}, Lhja;-><init>(Ljava/lang/Object;)V
+    move-result-object v0
 
-    return-void
+    const-string v2, "storageMetrics"
 
-    :pswitch_4
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-direct {v1, v2, v0}, Lf26;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    invoke-direct {p0, p1}, Lhja;-><init>(Ljava/lang/Object;)V
+    sput-object v1, Lie0;->b:Lf26;
 
     return-void
+.end method
 
-    :pswitch_5
-    sget-object p1, Lb3h;->a:Lb3h;
 
-    invoke-direct {p0, p1}, Lhja;-><init>(Ljava/lang/Object;)V
+# virtual methods
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    return-void
+    check-cast p1, Lq17;
 
-    :pswitch_6
-    sget-object p1, Lb3h;->a:Lb3h;
+    check-cast p2, Lb0b;
 
-    invoke-direct {p0, p1}, Lhja;-><init>(Ljava/lang/Object;)V
+    sget-object v0, Lie0;->b:Lf26;
 
-    return-void
+    iget-object p1, p1, Lq17;->a:Ly7g;
 
-    :pswitch_7
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-direct {p0, p1}, Lhja;-><init>(Ljava/lang/Object;)V
+    invoke-interface {p2, v0, p1}, Lb0b;->a(Lf26;Ljava/lang/Object;)Lb0b;
 
     return-void
-
-    :pswitch_8
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-direct {p0, p1}, Lhja;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_9
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-direct {p0, p1}, Lhja;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_a
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-direct {p0, p1}, Lhja;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_b
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-direct {p0, p1}, Lhja;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_c
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-direct {p0, p1}, Lhja;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_d
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-direct {p0, p1}, Lhja;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_e
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-direct {p0, p1}, Lhja;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_f
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-direct {p0, p1}, Lhja;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_10
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    invoke-direct {p0, p1}, Lhja;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_10
-        :pswitch_f
-        :pswitch_0
-        :pswitch_e
-        :pswitch_d
-        :pswitch_0
-        :pswitch_c
-        :pswitch_0
-        :pswitch_b
-        :pswitch_a
-        :pswitch_0
-        :pswitch_0
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-    .end packed-switch
 .end method

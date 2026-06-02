@@ -1,184 +1,218 @@
 .class public final Lxx8;
-.super Lp6g;
+.super Landroid/widget/ArrayAdapter;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lfy8;
+.field public a:Landroid/content/res/ColorStateList;
 
-.field public o:I
+.field public b:Landroid/content/res/ColorStateList;
+
+.field public final synthetic c:Lyx8;
 
 
 # direct methods
-.method public constructor <init>(Lfy8;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lyx8;Landroid/content/Context;I[Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lxx8;->X:Lfy8;
+    iput-object p1, p0, Lxx8;->c:Lyx8;
 
-    const/4 p1, 0x2
+    invoke-direct {p0, p2, p3, p4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;I[Ljava/lang/Object;)V
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-virtual {p0}, Lxx8;->a()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()V
+    .locals 7
 
-    check-cast p1, Lzb4;
+    iget-object v0, p0, Lxx8;->c:Lyx8;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, v0, Lyx8;->F0:Landroid/content/res/ColorStateList;
 
-    invoke-virtual {p0, p1, p2}, Lxx8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 v2, 0x0
 
-    move-result-object p1
+    const/4 v3, 0x0
 
-    check-cast p1, Lxx8;
+    if-eqz v1, :cond_0
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    const v4, 0x10100a7
 
-    invoke-virtual {p1, p2}, Lxx8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lxx8;
-
-    iget-object v0, p0, Lxx8;->X:Lfy8;
-
-    invoke-direct {p1, v0, p2}, Lxx8;-><init>(Lfy8;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
-
-    iget-object v0, p0, Lxx8;->X:Lfy8;
-
-    iget-object v1, v0, Lfy8;->w0:Lo58;
-
-    iget v2, p0, Lxx8;->o:I
-
-    const/4 v3, 0x2
-
-    const/4 v4, 0x1
-
-    sget-object v5, Lac4;->a:Lac4;
-
-    if-eqz v2, :cond_2
-
-    if-eq v2, v4, :cond_1
-
-    if-ne v2, v3, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_2
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_2
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iput v4, p0, Lxx8;->o:I
-
-    invoke-static {v0, p0}, Lfy8;->s(Lfy8;Lp6g;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v5, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    :goto_0
-    check-cast p1, Lnd2;
-
-    iget-object v2, v0, Lfy8;->v0:Lo58;
-
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lwx5;
-
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+    filled-new-array {v4}, [I
 
     move-result-object v4
 
-    check-cast v4, Lef3;
+    invoke-virtual {v1, v4, v3}, Landroid/content/res/ColorStateList;->getColorForState([II)I
 
-    check-cast v4, Lyfe;
+    move-result v1
 
-    invoke-virtual {v4}, Lyfe;->s()J
-
-    move-result-wide v6
-
-    invoke-static {p1, v2, v6, v7}, Lynj;->a(Lnd2;Lwx5;J)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    iget-object v0, v0, Lfy8;->A0:Lyw0;
-
-    new-instance v2, Lww8;
-
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+    filled-new-array {v1, v3}, [I
 
     move-result-object v1
 
-    check-cast v1, Lef3;
+    new-array v5, v3, [I
 
-    check-cast v1, Lyfe;
+    filled-new-array {v4, v5}, [[I
 
-    invoke-virtual {v1}, Lyfe;->s()J
+    move-result-object v4
 
-    move-result-wide v6
+    new-instance v5, Landroid/content/res/ColorStateList;
 
-    invoke-static {p1, v6, v7}, Lynj;->d(Lnd2;J)Llhg;
+    invoke-direct {v5, v4, v1}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
+
+    goto :goto_0
+
+    :cond_0
+    move-object v5, v2
+
+    :goto_0
+    iput-object v5, p0, Lxx8;->b:Landroid/content/res/ColorStateList;
+
+    iget v1, v0, Lyx8;->E0:I
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, v0, Lyx8;->F0:Landroid/content/res/ColorStateList;
+
+    if-eqz v1, :cond_1
+
+    const v1, 0x1010367
+
+    const v2, -0x10100a7
+
+    filled-new-array {v1, v2}, [I
+
+    move-result-object v1
+
+    const v4, 0x10100a1
+
+    filled-new-array {v4, v2}, [I
+
+    move-result-object v2
+
+    iget-object v4, v0, Lyx8;->F0:Landroid/content/res/ColorStateList;
+
+    invoke-virtual {v4, v2, v3}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result v4
+
+    iget-object v5, v0, Lyx8;->F0:Landroid/content/res/ColorStateList;
+
+    invoke-virtual {v5, v1, v3}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result v5
+
+    iget v6, v0, Lyx8;->E0:I
+
+    invoke-static {v4, v6}, Lkk3;->g(II)I
+
+    move-result v4
+
+    iget v6, v0, Lyx8;->E0:I
+
+    invoke-static {v5, v6}, Lkk3;->g(II)I
+
+    move-result v5
+
+    iget v0, v0, Lyx8;->E0:I
+
+    filled-new-array {v4, v5, v0}, [I
+
+    move-result-object v0
+
+    new-array v3, v3, [I
+
+    filled-new-array {v2, v1, v3}, [[I
+
+    move-result-object v1
+
+    new-instance v2, Landroid/content/res/ColorStateList;
+
+    invoke-direct {v2, v1, v0}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
+
+    :cond_1
+    iput-object v2, p0, Lxx8;->a:Landroid/content/res/ColorStateList;
+
+    return-void
+.end method
+
+.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 3
+
+    invoke-super {p0, p1, p2, p3}, Landroid/widget/ArrayAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
 
-    invoke-direct {v2, p1}, Lww8;-><init>(Llhg;)V
+    instance-of p2, p1, Landroid/widget/TextView;
 
-    iput v3, p0, Lxx8;->o:I
+    if-eqz p2, :cond_2
 
-    invoke-interface {v0, v2, p0}, Lioe;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-object p2, p1
 
-    move-result-object p1
+    check-cast p2, Landroid/widget/TextView;
 
-    if-ne p1, v5, :cond_4
+    iget-object p3, p0, Lxx8;->c:Lyx8;
 
-    :goto_1
-    return-object v5
+    invoke-virtual {p3}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
-    :cond_4
-    :goto_2
-    sget-object p1, Lb3h;->a:Lb3h;
+    move-result-object v0
 
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p2}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contentEquals(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    iget v0, p3, Lyx8;->E0:I
+
+    if-eqz v0, :cond_1
+
+    new-instance v0, Landroid/graphics/drawable/ColorDrawable;
+
+    iget p3, p3, Lyx8;->E0:I
+
+    invoke-direct {v0, p3}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+
+    iget-object p3, p0, Lxx8;->b:Landroid/content/res/ColorStateList;
+
+    if-eqz p3, :cond_0
+
+    iget-object p3, p0, Lxx8;->a:Landroid/content/res/ColorStateList;
+
+    invoke-virtual {v0, p3}, Landroid/graphics/drawable/Drawable;->setTintList(Landroid/content/res/ColorStateList;)V
+
+    new-instance p3, Landroid/graphics/drawable/RippleDrawable;
+
+    iget-object v2, p0, Lxx8;->b:Landroid/content/res/ColorStateList;
+
+    invoke-direct {p3, v2, v0, v1}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    move-object v1, p3
+
+    goto :goto_0
+
+    :cond_0
+    move-object v1, v0
+
+    :cond_1
+    :goto_0
+    sget-object p3, Lj4i;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {p2, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_2
     return-object p1
 .end method

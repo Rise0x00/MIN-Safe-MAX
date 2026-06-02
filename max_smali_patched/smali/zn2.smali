@@ -1,49 +1,85 @@
-.class public final Lzn2;
-.super Lo84;
+.class public final synthetic Lzn2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lzs6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Ljx;
+.field public final synthetic b:Ljava/util/LinkedHashSet;
 
 
 # direct methods
-.method public constructor <init>(Ljx;Lo84;)V
+.method public synthetic constructor <init>(Ljava/util/LinkedHashSet;I)V
     .locals 0
 
-    iput-object p1, p0, Lzn2;->o:Ljx;
+    iput p2, p0, Lzn2;->a:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lzn2;->b:Ljava/util/LinkedHashSet;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Lzn2;->d:Ljava/lang/Object;
+    iget v0, p0, Lzn2;->a:I
 
-    iget p1, p0, Lzn2;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    check-cast p1, Ly87;
 
-    or-int/2addr p1, v0
+    invoke-interface {p1}, Ly87;->getId()J
 
-    iput p1, p0, Lzn2;->X:I
+    move-result-wide v0
 
-    iget-object p1, p0, Lzn2;->o:Ljx;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const/4 v0, 0x0
+    move-result-object p1
 
-    invoke-virtual {p1, v0, p0}, Ljx;->n(Ljava/util/Collection;Lo84;)Ljava/lang/Object;
+    iget-object v0, p0, Lzn2;->b:Ljava/util/LinkedHashSet;
+
+    invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    :goto_0
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
     return-object p1
+
+    :pswitch_0
+    check-cast p1, Lej2;
+
+    invoke-virtual {p1}, Lej2;->t()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lzn2;->b:Ljava/util/LinkedHashSet;
+
+    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

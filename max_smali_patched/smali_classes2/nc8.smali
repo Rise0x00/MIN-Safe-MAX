@@ -2,60 +2,66 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxc8;
 
-# static fields
-.field public static final a:Lnc8;
+
+# instance fields
+.field public final a:Lzp4;
+
+.field public final b:Lad8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lad8;Lzp4;)V
+    .locals 0
 
-    new-instance v0, Lnc8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lnc8;->b:Lad8;
 
-    sput-object v0, Lnc8;->a:Lnc8;
+    iput-object p2, p0, Lnc8;->a:Lzp4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public onDestroy(Lad8;)V
     .locals 1
+    .annotation runtime Lz4b;
+        value = .enum Lgc8;->ON_DESTROY:Lgc8;
+    .end annotation
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lnc8;->a:Lzp4;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0, p1}, Lzp4;->D0(Lad8;)V
 
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lnc8;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
+.method public onStart(Lad8;)V
     .locals 1
+    .annotation runtime Lz4b;
+        value = .enum Lgc8;->ON_START:Lgc8;
+    .end annotation
 
-    const v0, 0x31462cf7
+    iget-object v0, p0, Lnc8;->a:Lzp4;
 
-    return v0
+    invoke-virtual {v0, p1}, Lzp4;->p0(Lad8;)V
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public onStop(Lad8;)V
     .locals 1
+    .annotation runtime Lz4b;
+        value = .enum Lgc8;->ON_STOP:Lgc8;
+    .end annotation
 
-    const-string v0, "Valid"
+    iget-object v0, p0, Lnc8;->a:Lzp4;
 
-    return-object v0
+    invoke-virtual {v0, p1}, Lzp4;->q0(Lad8;)V
+
+    return-void
 .end method

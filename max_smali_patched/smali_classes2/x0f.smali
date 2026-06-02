@@ -1,17 +1,58 @@
-.class public final Lx0f;
-.super Ljef;
+.class public final synthetic Lx0f;
+.super Lbu6;
 .source "SourceFile"
+
+# interfaces
+.implements Lnt6;
+
+
+# static fields
+.field public static final a:Lx0f;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 6
+
+    new-instance v0, Lx0f;
+
+    const-string v4, "createSegment(JLkotlinx/coroutines/sync/SemaphoreSegment;)Lkotlinx/coroutines/sync/SemaphoreSegment;"
+
+    const/4 v5, 0x1
+
+    const/4 v1, 0x2
+
+    const-class v2, Lb1f;
+
+    const-string v3, "createSegment"
+
+    invoke-direct/range {v0 .. v5}, Lbu6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lx0f;->a:Lx0f;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final y(Lud8;)V
-    .locals 0
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Ljava/lang/Number;
 
-    new-instance p1, Ljava/lang/ClassCastException;
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
 
-    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+    move-result-wide v0
 
-    throw p1
+    check-cast p2, Lc1f;
+
+    sget p1, Lb1f;->a:I
+
+    new-instance p1, Lc1f;
+
+    const/4 v2, 0x0
+
+    invoke-direct {p1, v0, v1, p2, v2}, Lc1f;-><init>(JLc1f;I)V
+
+    return-object p1
 .end method

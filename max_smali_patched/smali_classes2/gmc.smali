@@ -1,102 +1,159 @@
 .class public final Lgmc;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Limc;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+.field public final a:Litg;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Litg;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;)V
-    .locals 0
+.method public constructor <init>(Litg;Litg;)V
+    .locals 1
 
-    iput-object p2, p0, Lgmc;->X:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+    sget v0, Lxhe;->a:I
 
-    const/4 p2, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lgmc;->a:Litg;
+
+    iput-object p2, p0, Lgmc;->b:Litg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lgmc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
+    return v0
 
+    :cond_0
+    instance-of v1, p1, Lgmc;
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
     check-cast p1, Lgmc;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget-object v1, p0, Lgmc;->a:Litg;
 
-    invoke-virtual {p1, p2}, Lgmc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v2, p1, Lgmc;->a:Litg;
 
-    return-object p2
+    invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v1, p0, Lgmc;->b:Litg;
+
+    iget-object p1, p1, Lgmc;->b:Litg;
+
+    invoke-static {v1, p1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    sget p1, Lxhe;->a:I
+
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final hashCode()I
     .locals 2
 
-    new-instance v0, Lgmc;
+    iget-object v0, p0, Lgmc;->a:Litg;
 
-    iget-object v1, p0, Lgmc;->X:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    invoke-direct {v0, p2, v1}, Lgmc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;)V
+    move-result v0
 
-    iput-object p1, v0, Lgmc;->o:Ljava/lang/Object;
+    mul-int/lit8 v0, v0, 0x1f
 
-    return-object v0
+    iget-object v1, p0, Lgmc;->b:Litg;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    sget v1, Lxhe;->a4:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v0, p0, Lgmc;->o:Ljava/lang/Object;
+    sget v0, Lxhe;->a4:I
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    check-cast v0, Ljmc;
+    const-string v2, "ShowSnackbar(title="
 
-    iget-object p1, p0, Lgmc;->X:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p1, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->d:Ljld;
+    iget-object v2, p0, Lgmc;->a:Litg;
 
-    sget-object v2, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->X:[Lz28;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x0
+    const-string v2, ", description="
 
-    aget-object v2, v2, v3
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v1, p1, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    iget-object v2, p0, Lgmc;->b:Litg;
 
-    move-result-object v1
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    check-cast v1, Landroid/widget/TextView;
+    const-string v2, ", icon="
 
-    iget-object v0, v0, Ljmc;->a:Ljhg;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    const-string v2, ")"
 
-    move-result-object p1
+    invoke-static {v1, v0, v2}, Lsb6;->p(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    move-result-object v0
 
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-object v0
 .end method

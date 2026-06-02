@@ -1,58 +1,16 @@
-.class public final Lgid;
+.class public abstract Lgid;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lf9f;
 
 
-# instance fields
-.field public final a:Ljava/util/HashSet;
+# static fields
+.field public static oneme_picker_input_view:I = 0x7f0a0787
 
+.field public static oneme_picker_media_keyboard_container:I = 0x7f0a0789
 
-# direct methods
-.method public constructor <init>()V
-    .locals 1
+.field public static oneme_picker_quote_view:I = 0x7f0a078b
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_picker_toolbar:I = 0x7f0a078c
 
-    new-instance v0, Ljava/util/HashSet;
+.field public static oneme_picker_toolbar_action_cancel_selection:I = 0x7f0a078d
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v0, p0, Lgid;->a:Ljava/util/HashSet;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onRateCall(Lorg/json/JSONObject;)V
-    .locals 2
-
-    iget-object v0, p0, Lgid;->a:Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lf9f;
-
-    invoke-interface {v1, p1}, Lf9f;->onRateCall(Lorg/json/JSONObject;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
+.field public static oneme_picker_toolbar_action_select:I = 0x7f0a078e

@@ -1,146 +1,196 @@
 .class public final Lsxa;
-.super Lf3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final a:Lide;
 
-.field public final c:Lpbe;
+.field public final b:Lbo3;
+
+.field public final c:Lrxa;
 
 
 # direct methods
-.method public constructor <init>(Ldxa;Lpbe;)V
+.method public constructor <init>(Lide;)V
     .locals 1
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lsxa;->b:I
+    iput-object p1, p0, Lsxa;->a:Lide;
 
-    .line 1
-    invoke-direct {p0, p1}, Lf3;-><init>(Lsza;)V
+    new-instance p1, Lbo3;
 
-    .line 2
-    iput-object p2, p0, Lsxa;->c:Lpbe;
+    const/4 v0, 0x5
+
+    invoke-direct {p1, v0}, Lbo3;-><init>(I)V
+
+    iput-object p1, p0, Lsxa;->b:Lbo3;
+
+    new-instance p1, Lrxa;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Lrxa;-><init>(I)V
+
+    iput-object p1, p0, Lsxa;->c:Lrxa;
 
     return-void
 .end method
 
-.method public constructor <init>(Le0d;Lpbe;I)V
-    .locals 0
+.method public static a(Lsxa;Ljava/util/List;Ljava/util/List;Lz84;)Ljava/lang/Object;
+    .locals 8
 
-    iput p3, p0, Lsxa;->b:I
+    instance-of v0, p3, Lpxa;
 
-    packed-switch p3, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    sget-object p3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    move-object v0, p3
 
-    .line 3
-    invoke-direct {p0, p1}, Lf3;-><init>(Lsza;)V
+    check-cast v0, Lpxa;
 
-    .line 4
-    iput-object p2, p0, Lsxa;->c:Lpbe;
+    iget v1, v0, Lpxa;->Z:I
 
-    return-void
+    const/high16 v2, -0x80000000
 
-    .line 5
-    :pswitch_0
-    sget-object p3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    and-int v3, v1, v2
 
-    .line 6
-    invoke-direct {p0, p1}, Lf3;-><init>(Lsza;)V
+    if-eqz v3, :cond_0
 
-    .line 7
-    iput-object p2, p0, Lsxa;->c:Lpbe;
+    sub-int/2addr v1, v2
 
-    return-void
+    iput v1, v0, Lpxa;->Z:I
 
-    nop
+    goto :goto_0
 
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
+    :cond_0
+    new-instance v0, Lpxa;
 
+    invoke-direct {v0, p0, p3}, Lpxa;-><init>(Lsxa;Lz84;)V
 
-# virtual methods
-.method public final k(Le0b;)V
-    .locals 3
+    :goto_0
+    iget-object p3, v0, Lpxa;->X:Ljava/lang/Object;
 
-    iget v0, p0, Lsxa;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lwza;
-
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v1, p0, Lsxa;->c:Lpbe;
-
-    invoke-virtual {v1}, Lpbe;->a()Lnbe;
-
-    move-result-object v1
-
-    invoke-direct {v0, p1, v1}, Lwza;-><init>(Le0b;Lnbe;)V
-
-    iget-object p1, p0, Lf3;->a:Lsza;
-
-    invoke-interface {p1, v0}, Lsza;->a(Le0b;)V
-
-    return-void
-
-    :pswitch_0
-    new-instance v0, Lnw1;
-
-    invoke-direct {v0, p1}, Lnw1;-><init>(Le0b;)V
-
-    invoke-interface {p1, v0}, Le0b;->c(Lo25;)V
-
-    new-instance p1, Lhs6;
-
-    const/16 v1, 0x14
+    iget v1, v0, Lpxa;->Z:I
 
     const/4 v2, 0x0
 
-    invoke-direct {p1, p0, v0, v2, v1}, Lhs6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+    const/4 v3, 0x2
 
-    iget-object v1, p0, Lsxa;->c:Lpbe;
+    sget-object v4, Lyeh;->a:Lyeh;
 
-    invoke-virtual {v1, p1}, Lpbe;->b(Ljava/lang/Runnable;)Lo25;
+    const/4 v5, 0x1
+
+    sget-object v6, Lpc4;->a:Lpc4;
+
+    if-eqz v1, :cond_3
+
+    if-eq v1, v5, :cond_2
+
+    if-ne v1, v3, :cond_1
+
+    invoke-static {p3}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    return-object v4
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_2
+    iget-object p2, v0, Lpxa;->o:Ljava/util/List;
+
+    iget-object p0, v0, Lpxa;->d:Lsxa;
+
+    invoke-static {p3}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    :cond_3
+    invoke-static {p3}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result p3
+
+    if-nez p3, :cond_5
+
+    iput-object p0, v0, Lpxa;->d:Lsxa;
+
+    iput-object p2, v0, Lpxa;->o:Ljava/util/List;
+
+    iput v5, v0, Lpxa;->Z:I
+
+    iget-object p3, p0, Lsxa;->a:Lide;
+
+    new-instance v1, Lqxa;
+
+    const/4 v7, 0x1
+
+    invoke-direct {v1, p0, p1, v7}, Lqxa;-><init>(Lsxa;Ljava/util/List;I)V
+
+    invoke-static {p3, v2, v5, v1, v0}, Lyn8;->E(Lide;ZZLzs6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Ls25;->g(Ljava/util/concurrent/atomic/AtomicReference;Lo25;)Z
+    if-ne p1, v6, :cond_4
 
-    return-void
+    goto :goto_1
 
-    :pswitch_1
-    new-instance v0, Lrxa;
+    :cond_4
+    move-object p1, v4
 
-    new-instance v1, Leqe;
+    :goto_1
+    if-ne p1, v6, :cond_5
 
-    invoke-direct {v1, p1}, Leqe;-><init>(Le0b;)V
+    goto :goto_4
 
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    :cond_5
+    :goto_2
+    invoke-interface {p2}, Ljava/util/Collection;->isEmpty()Z
 
-    iget-object p1, p0, Lsxa;->c:Lpbe;
+    move-result p1
 
-    invoke-virtual {p1}, Lpbe;->a()Lnbe;
+    if-nez p1, :cond_7
 
-    move-result-object p1
+    const/4 p1, 0x0
 
-    invoke-direct {v0, v1, p1}, Lrxa;-><init>(Leqe;Lnbe;)V
+    iput-object p1, v0, Lpxa;->d:Lsxa;
 
-    iget-object p1, p0, Lf3;->a:Lsza;
+    iput-object p1, v0, Lpxa;->o:Ljava/util/List;
 
-    invoke-interface {p1, v0}, Lsza;->a(Le0b;)V
+    iput v3, v0, Lpxa;->Z:I
 
-    return-void
+    iget-object p1, p0, Lsxa;->a:Lide;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    new-instance p3, Lqxa;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p3, p0, p2, v1}, Lqxa;-><init>(Lsxa;Ljava/util/List;I)V
+
+    invoke-static {p1, v2, v5, p3, v0}, Lyn8;->E(Lide;ZZLzs6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-ne p0, v6, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    move-object p0, v4
+
+    :goto_3
+    if-ne p0, v6, :cond_7
+
+    :goto_4
+    return-object v6
+
+    :cond_7
+    return-object v4
 .end method

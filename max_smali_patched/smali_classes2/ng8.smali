@@ -1,83 +1,120 @@
 .class public final Lng8;
-.super Lo84;
+.super Landroid/text/method/LinkMovementMethod;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic A0:Ljava/lang/Object;
-
-.field public final synthetic B0:Ltg8;
-
-.field public C0:I
-
-.field public X:Ljava/util/ArrayList;
-
-.field public Y:Ljava/lang/Object;
-
-.field public Z:Ljava/lang/Object;
-
-.field public d:Lnd2;
-
-.field public o:Ljava/util/List;
-
-.field public t0:Ljava/lang/String;
-
-.field public u0:Ljava/lang/String;
-
-.field public v0:I
-
-.field public w0:I
-
-.field public x0:Z
-
-.field public y0:J
-
-.field public z0:J
-
-
-# direct methods
-.method public constructor <init>(Ltg8;Lo84;)V
-    .locals 0
-
-    iput-object p1, p0, Lng8;->B0:Ltg8;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# static fields
+.field public static a:Lng8;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
+    .locals 4
 
-    iput-object p1, p0, Lng8;->A0:Ljava/lang/Object;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    iget p1, p0, Lng8;->C0:I
+    const/16 v1, 0x23
 
-    const/high16 v0, -0x80000000
+    if-ge v0, v1, :cond_3
 
-    or-int/2addr p1, v0
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getAction()I
 
-    iput p1, p0, Lng8;->C0:I
+    move-result v0
 
-    const/4 v4, 0x0
+    const/4 v1, 0x1
 
-    const/4 v5, 0x0
+    if-eq v0, v1, :cond_0
 
-    iget-object v0, p0, Lng8;->B0:Ltg8;
+    if-nez v0, :cond_3
 
-    const/4 v1, 0x0
+    :cond_0
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getX()F
 
-    const/4 v2, 0x0
+    move-result v0
 
-    const/4 v3, 0x0
+    float-to-int v0, v0
 
-    move-object v6, p0
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getY()F
 
-    invoke-virtual/range {v0 .. v6}, Ltg8;->L0(Lnd2;Ljava/util/List;Ljava/util/List;IZLo84;)Ljava/lang/Object;
+    move-result v1
 
-    move-result-object p1
+    float-to-int v1, v1
 
-    return-object p1
+    invoke-virtual {p1}, Landroid/widget/TextView;->getTotalPaddingLeft()I
+
+    move-result v2
+
+    sub-int/2addr v0, v2
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getTotalPaddingTop()I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollX()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
+
+    move-result-object v1
+
+    if-ltz v0, :cond_2
+
+    invoke-virtual {v1}, Landroid/text/Layout;->getHeight()I
+
+    move-result v3
+
+    if-le v0, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v1, v0}, Landroid/text/Layout;->getLineForVertical(I)I
+
+    move-result v0
+
+    int-to-float v2, v2
+
+    invoke-virtual {v1, v0}, Landroid/text/Layout;->getLineLeft(I)F
+
+    move-result v3
+
+    cmpg-float v3, v2, v3
+
+    if-ltz v3, :cond_2
+
+    invoke-virtual {v1, v0}, Landroid/text/Layout;->getLineRight(I)F
+
+    move-result v0
+
+    cmpl-float v0, v2, v0
+
+    if-lez v0, :cond_3
+
+    :cond_2
+    :goto_0
+    invoke-static {p2}, Landroid/text/Selection;->removeSelection(Landroid/text/Spannable;)V
+
+    invoke-static {p1, p2, p3}, Landroid/text/method/Touch;->onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_3
+    invoke-super {p0, p1, p2, p3}, Landroid/text/method/LinkMovementMethod;->onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
+
+    move-result p1
+
+    return p1
 .end method

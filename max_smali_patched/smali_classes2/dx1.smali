@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lxs6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;
+.field public final synthetic b:Lhx1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;I)V
+.method public synthetic constructor <init>(Lhx1;I)V
     .locals 0
 
     iput p2, p0, Ldx1;->a:I
 
-    iput-object p1, p0, Ldx1;->b:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;
+    iput-object p1, p0, Ldx1;->b:Lhx1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,30 +27,58 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
     iget v0, p0, Ldx1;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Ldx1;->b:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;
+    iget-object v0, p0, Ldx1;->b:Lhx1;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->b(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;)V
+    iget-object v0, v0, Lhx1;->b1:Luuh;
 
-    return-void
+    return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Ldx1;->b:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;
+    new-instance v0, Lo3;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->a(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;)V
+    const/16 v1, 0x19
 
-    return-void
+    iget-object v2, p0, Ldx1;->b:Lhx1;
+
+    invoke-direct {v0, v1, v2}, Lo3;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Ldx1;->b:Lhx1;
+
+    iget-object v0, v0, Lhx1;->e1:Lbx1;
+
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, p0, Ldx1;->b:Lhx1;
+
+    iget-object v0, v0, Lhx1;->b1:Luuh;
+
+    return-object v0
+
+    :pswitch_3
+    iget-object v0, p0, Ldx1;->b:Lhx1;
+
+    iget-object v0, v0, Lhx1;->b1:Luuh;
+
+    return-object v0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

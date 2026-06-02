@@ -1,97 +1,119 @@
-.class public final enum Lu94;
-.super Ljava/lang/Enum;
+.class public abstract Lu94;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum a:Lu94;
+.field public static final synthetic a:[Lb88;
 
-.field public static final enum b:Lu94;
-
-.field public static final enum c:Lu94;
-
-.field public static final enum d:Lu94;
-
-.field public static final synthetic o:[Lu94;
+.field public static final b:Lsm4;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 4
 
-    new-instance v0, Lu94;
+    new-instance v0, Lj8d;
 
-    const-string v1, "TEMPORARY_VISIBLE"
+    const-class v1, Lu94;
 
-    const/4 v2, 0x0
+    const-string v2, "methodRemoveViewReference"
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const-string v3, "getMethodRemoveViewReference()Ljava/lang/reflect/Method;"
 
-    sput-object v0, Lu94;->a:Lu94;
+    invoke-direct {v0, v1, v2, v3}, Lj8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v1, Lu94;
+    sget-object v1, Lr3e;->a:Ls3e;
 
-    const-string v2, "HIDDEN"
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v3, 0x1
+    const/4 v1, 0x1
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    new-array v2, v1, [Lb88;
 
-    sput-object v1, Lu94;->b:Lu94;
+    const/4 v3, 0x0
 
-    new-instance v2, Lu94;
+    aput-object v0, v2, v3
 
-    const-string v3, "PLAY_HIDDEN"
+    sput-object v2, Lu94;->a:[Lb88;
 
-    const/4 v4, 0x2
+    const-class v0, Landroid/content/Context;
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lu94;->c:Lu94;
-
-    new-instance v3, Lu94;
-
-    const-string v4, "PERMANENTLY_VISIBLE"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lu94;->d:Lu94;
-
-    filled-new-array {v0, v1, v2, v3}, [Lu94;
+    filled-new-array {v0}, [Ljava/lang/Class;
 
     move-result-object v0
 
-    sput-object v0, Lu94;->o:[Lu94;
+    new-instance v2, Lsm4;
+
+    sget-object v3, Lt94;->b:Lt94;
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ljava/lang/Class;
+
+    const-string v1, "removeViewReference"
+
+    invoke-direct {v2, v3, v1, v0}, Lsm4;-><init>(Lxs6;Ljava/lang/String;[Ljava/lang/Class;)V
+
+    sput-object v2, Lu94;->b:Lsm4;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lu94;
-    .locals 1
+.method public static final a(Ll94;)Z
+    .locals 0
 
-    const-class v0, Lu94;
+    iget-object p0, p0, Ll94;->viewState:Landroid/os/Bundle;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    if-eqz p0, :cond_0
 
-    move-result-object p0
+    const/4 p0, 0x1
 
-    check-cast p0, Lu94;
+    return p0
 
-    return-object p0
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
-.method public static values()[Lu94;
-    .locals 1
+.method public static final b(Ll94;Landroid/content/Context;)V
+    .locals 3
 
-    sget-object v0, Lu94;->o:[Lu94;
+    sget-object v0, Lu94;->a:[Lb88;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    sget-object v1, Lu94;->b:Lsm4;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2, v0}, Lsm4;->y(Ljava/lang/Object;Lb88;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lu94;
+    check-cast v0, Ljava/lang/reflect/Method;
 
-    return-object v0
+    if-eqz v0, :cond_0
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p0, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "Required value was null."
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

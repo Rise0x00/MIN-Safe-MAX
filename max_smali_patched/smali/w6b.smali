@@ -1,37 +1,82 @@
-.class public abstract Lw6b;
-.super Ljava/lang/Object;
+.class public final Lw6b;
+.super Lh43;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
+# instance fields
+.field public final e:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 0
 
-    sget v0, Lcdd;->call_share_message_failed_create_p2p_invite_link:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lw6b;->a:I
-
-    sget v0, Lcdd;->call_share_picker_confirm_p2p_invite_cancel:I
-
-    sput v0, Lw6b;->b:I
-
-    sget v0, Lcdd;->call_share_picker_confirm_p2p_invite_retry:I
-
-    sput v0, Lw6b;->c:I
-
-    sget v0, Lcdd;->call_share_search_hint:I
-
-    sput v0, Lw6b;->d:I
+    iput p1, p0, Lw6b;->e:I
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lw6b;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lw6b;
+
+    iget v1, p0, Lw6b;->e:I
+
+    iget p1, p1, Lw6b;->e:I
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Lw6b;->e:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "Counter(value="
+
+    const-string v1, ")"
+
+    iget v2, p0, Lw6b;->e:I
+
+    invoke-static {v2, v0, v1}, Lsb6;->h(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

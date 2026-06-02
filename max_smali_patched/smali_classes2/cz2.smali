@@ -1,164 +1,140 @@
 .class public final Lcz2;
-.super Lp6g;
+.super Liig;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lpt6;
 
 
 # instance fields
-.field public final synthetic X:Ll03;
+.field public synthetic X:Lnf2;
 
-.field public final synthetic Y:Ljava/lang/Long;
-
-.field public final synthetic Z:Ljava/lang/Long;
-
-.field public o:I
-
-.field public final synthetic t0:Ljava/lang/CharSequence;
-
-.field public final synthetic u0:Ljava/util/List;
-
-.field public final synthetic v0:Z
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Ll03;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/CharSequence;Ljava/util/List;ZLkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    iput-object p1, p0, Lcz2;->X:Ll03;
+    iput p3, p0, Lcz2;->o:I
 
-    iput-object p2, p0, Lcz2;->Y:Ljava/lang/Long;
-
-    iput-object p3, p0, Lcz2;->Z:Ljava/lang/Long;
-
-    iput-object p4, p0, Lcz2;->t0:Ljava/lang/CharSequence;
-
-    iput-object p5, p0, Lcz2;->u0:Ljava/util/List;
-
-    iput-boolean p6, p0, Lcz2;->v0:Z
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p7}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Liig;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lcz2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lcz2;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lcz2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 8
-
-    new-instance v0, Lcz2;
-
-    iget-object v5, p0, Lcz2;->u0:Ljava/util/List;
-
-    iget-boolean v6, p0, Lcz2;->v0:Z
-
-    iget-object v1, p0, Lcz2;->X:Ll03;
-
-    iget-object v2, p0, Lcz2;->Y:Ljava/lang/Long;
-
-    iget-object v3, p0, Lcz2;->Z:Ljava/lang/Long;
-
-    iget-object v4, p0, Lcz2;->t0:Ljava/lang/CharSequence;
-
-    move-object v7, p2
-
-    invoke-direct/range {v0 .. v7}, Lcz2;-><init>(Ll03;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/CharSequence;Ljava/util/List;ZLkotlin/coroutines/Continuation;)V
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
     iget v0, p0, Lcz2;->o:I
 
+    check-cast p1, Lnf2;
+
+    check-cast p2, Ldqb;
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance p2, Lcz2;
+
+    const/4 v0, 0x3
+
     const/4 v1, 0x1
 
-    if-eqz v0, :cond_1
+    invoke-direct {p2, v0, p3, v1}, Lcz2;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    if-ne v0, v1, :cond_0
+    iput-object p1, p2, Lcz2;->X:Lnf2;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    sget-object p1, Lyeh;->a:Lyeh;
 
-    goto :goto_0
+    invoke-virtual {p2, p1}, Lcz2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    return-object p1
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    :pswitch_0
+    new-instance p2, Lcz2;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x3
 
-    throw p1
+    const/4 v1, 0x0
 
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-direct {p2, v0, p3, v1}, Lcz2;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    iget-object p1, p0, Lcz2;->X:Ll03;
+    iput-object p1, p2, Lcz2;->X:Lnf2;
 
-    iget-object v2, p1, Ll03;->Z:Lzc5;
+    sget-object p1, Lyeh;->a:Lyeh;
 
-    iget-object p1, p0, Lcz2;->Y:Ljava/lang/Long;
+    invoke-virtual {p2, p1}, Lcz2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    return-object p1
 
-    move-result-wide v3
+    nop
 
-    iget-object p1, p0, Lcz2;->Z:Ljava/lang/Long;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    move-result-wide v5
+    iget v0, p0, Lcz2;->o:I
 
-    iput v1, p0, Lcz2;->o:I
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v7, p0, Lcz2;->t0:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcz2;->X:Lnf2;
 
-    iget-object v8, p0, Lcz2;->u0:Ljava/util/List;
+    invoke-static {p1}, Lmtd;->g0(Ljava/lang/Object;)V
 
-    iget-boolean v9, p0, Lcz2;->v0:Z
+    sget-object p1, Lzc3;->A0:Lz66;
 
-    move-object v10, p0
-
-    invoke-virtual/range {v2 .. v10}, Lzc5;->a(JJLjava/lang/CharSequence;Ljava/util/List;ZLp6g;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lz66;->g(Landroid/view/View;)Ldqb;
 
     move-result-object p1
 
-    sget-object v0, Lac4;->a:Lac4;
+    invoke-interface {p1}, Ldqb;->b()Lnpb;
 
-    if-ne p1, v0, :cond_2
+    move-result-object p1
 
-    return-object v0
+    iget p1, p1, Lnpb;->a:I
 
-    :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lyeh;->a:Lyeh;
 
     return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lcz2;->X:Lnf2;
+
+    invoke-static {p1}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    sget-object p1, Lzc3;->A0:Lz66;
+
+    invoke-virtual {p1, v0}, Lz66;->g(Landroid/view/View;)Ldqb;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ldqb;->s()Lxpb;
+
+    move-result-object p1
+
+    iget p1, p1, Lxpb;->c:I
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lyeh;->a:Lyeh;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

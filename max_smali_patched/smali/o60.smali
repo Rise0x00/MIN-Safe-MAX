@@ -1,156 +1,187 @@
-.class public final synthetic Lo60;
-.super Ljava/lang/Object;
+.class public final Lo60;
+.super Le30;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Ljava/lang/Long;
 
-.field public final synthetic b:Lq60;
+.field public final Y:[B
 
-.field public final synthetic c:Z
+.field public final Z:Ljava/lang/String;
+
+.field public final d:Ljava/lang/Long;
+
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lq60;ZI)V
-    .locals 0
+.method public constructor <init>(JLjava/lang/String;J[BZLjava/lang/String;Z)V
+    .locals 1
 
-    iput p3, p0, Lo60;->a:I
+    sget-object v0, Lw40;->X:Lw40;
 
-    iput-object p1, p0, Lo60;->b:Lq60;
+    invoke-direct {p0, v0, p7, p9}, Le30;-><init>(Lw40;ZZ)V
 
-    iput-boolean p2, p0, Lo60;->c:Z
+    invoke-static {p4, p5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object p4
+
+    iput-object p4, p0, Lo60;->X:Ljava/lang/Long;
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lo60;->d:Ljava/lang/Long;
+
+    iput-object p3, p0, Lo60;->o:Ljava/lang/String;
+
+    iput-object p6, p0, Lo60;->Y:[B
+
+    iput-object p8, p0, Lo60;->Z:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final a()Ljava/util/HashMap;
+    .locals 6
 
-    iget v0, p0, Lo60;->a:I
+    invoke-super {p0}, Le30;->a()Ljava/util/HashMap;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    iget-object v0, p0, Lo60;->b:Lq60;
+    iget-object v1, p0, Lo60;->Z:Ljava/lang/String;
 
-    iget v1, v0, Lq60;->g:I
+    invoke-static {v1}, Lis6;->K(Ljava/lang/CharSequence;)Z
 
-    invoke-static {v1}, Lt02;->t(I)I
+    move-result v2
 
-    move-result v1
+    if-nez v2, :cond_0
 
-    const/4 v2, 0x2
+    const-string v2, "token"
 
-    if-eqz v1, :cond_1
-
-    const/4 v3, 0x1
-
-    if-eq v1, v3, :cond_1
-
-    if-eq v1, v2, :cond_0
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Ljava/lang/AssertionError;
+    const-string v1, "audioId"
 
-    const-string v1, "AudioSource is released"
+    iget-object v2, p0, Lo60;->d:Ljava/lang/Long;
 
-    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    throw v0
+    :goto_0
+    iget-object v1, p0, Lo60;->Y:[B
+
+    if-eqz v1, :cond_1
+
+    const-string v2, "wave"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
-    iget-boolean v1, v0, Lq60;->r:Z
+    iget-object v1, p0, Lo60;->X:Ljava/lang/Long;
 
-    iget-boolean v3, p0, Lo60;->c:Z
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
-    if-ne v1, v3, :cond_2
+    move-result-wide v2
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v2, v2, v4
+
+    if-lez v2, :cond_2
+
+    const-string v2, "duration"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_2
+    return-object v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Lo60;->Y:[B
+
+    if-eqz v0, :cond_0
+
+    array-length v0, v0
 
     goto :goto_0
 
-    :cond_2
-    iput-boolean v3, v0, Lq60;->r:Z
+    :cond_0
+    const/4 v0, -0x1
 
-    iget v1, v0, Lq60;->g:I
-
-    if-ne v1, v2, :cond_3
-
-    invoke-virtual {v0}, Lq60;->a()V
-
-    :cond_3
     :goto_0
-    return-void
+    iget-object v1, p0, Lo60;->o:Ljava/lang/String;
 
-    :pswitch_0
-    iget-object v0, p0, Lo60;->b:Lq60;
-
-    iget v1, v0, Lq60;->g:I
-
-    invoke-static {v1}, Lt02;->t(I)I
+    invoke-static {v1}, Lis6;->M(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    const/4 v2, 0x2
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    if-eqz v1, :cond_5
+    const-string v3, "Attach{type="
 
-    if-eq v1, v2, :cond_4
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    goto :goto_1
+    iget-object v3, p0, Le30;->a:Lw40;
 
-    :cond_4
-    new-instance v0, Ljava/lang/AssertionError;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "AudioSource is released"
+    const-string v3, ", deleted="
 
-    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    throw v0
+    iget-boolean v3, p0, Le30;->b:Z
 
-    :cond_5
-    iget-object v1, v0, Lq60;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x0
+    const-string v3, ", sensitive="
 
-    invoke-virtual {v1, v3}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, v0, Lq60;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-boolean v3, p0, Le30;->c:Z
 
-    const/4 v3, 0x0
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    const-string v3, ", audioId="
 
-    invoke-virtual {v0, v2}, Lq60;->d(I)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, v0, Lq60;->a:Lwpe;
+    iget-object v3, p0, Lo60;->d:Ljava/lang/Long;
 
-    new-instance v2, Lo60;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x1
+    const-string v3, ", wave.size="
 
-    iget-boolean v4, p0, Lo60;->c:Z
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v2, v0, v4, v3}, Lo60;-><init>(Lq60;ZI)V
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Lwpe;->execute(Ljava/lang/Runnable;)V
+    const-string v0, ", duration="
 
-    invoke-virtual {v0}, Lq60;->f()V
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_1
-    return-void
+    iget-object v0, p0, Lo60;->X:Ljava/lang/Long;
 
-    nop
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const-string v0, ", hasUrl="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-static {v2, v1, v0}, Lo52;->u(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

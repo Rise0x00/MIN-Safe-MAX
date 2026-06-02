@@ -1,144 +1,104 @@
 .class public final Lhf;
-.super Ljava/lang/Object;
+.super Ljde;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lcom/facebook/animated/gif/GifImage;
+# instance fields
+.field public final i:Ljavax/net/ssl/X509TrustManager;
 
-.field public static final b:Lcom/facebook/animated/gif/GifImage;
+.field public final j:Landroid/net/http/X509TrustManagerExtensions;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    const-class v1, Lcom/facebook/animated/gif/GifImage;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/facebook/animated/gif/GifImage;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-object v1, v0
-
-    :goto_0
-    sput-object v1, Lhf;->a:Lcom/facebook/animated/gif/GifImage;
-
-    const-string v1, "com.facebook.animated.webp.WebPImage"
-
-    :try_start_1
-    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/facebook/animated/gif/GifImage;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    move-object v0, v1
-
-    :catchall_1
-    sput-object v0, Lhf;->b:Lcom/facebook/animated/gif/GifImage;
-
-    return-void
-.end method
-
-.method public constructor <init>(Limf;Loac;Z)V
+.method public constructor <init>(Ljavax/net/ssl/X509TrustManager;Landroid/net/http/X509TrustManagerExtensions;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput-object p1, p0, Lhf;->i:Ljavax/net/ssl/X509TrustManager;
+
+    iput-object p2, p0, Lhf;->j:Landroid/net/http/X509TrustManagerExtensions;
+
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;Lth7;Lcom/facebook/animated/gif/GifImage;)Lgg3;
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    instance-of v0, p1, Lhf;
 
-    new-instance p1, Lloe;
+    if-eqz v0, :cond_0
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    check-cast p1, Lhf;
 
-    iput-object p2, p1, Lloe;->b:Ljava/lang/Object;
+    iget-object p1, p1, Lhf;->i:Ljavax/net/ssl/X509TrustManager;
 
-    const/4 p2, 0x0
+    iget-object v0, p0, Lhf;->i:Ljavax/net/ssl/X509TrustManager;
 
-    iput-object p2, p1, Lloe;->c:Ljava/lang/Object;
-
-    iput-object p2, p1, Lloe;->d:Ljava/lang/Object;
-
-    iput-object p0, p1, Lloe;->a:Ljava/lang/Object;
-
-    const/4 p0, 0x0
-
-    :try_start_0
-    new-instance p2, Ll2b;
-
-    invoke-direct {p2, p1}, Ll2b;-><init>(Lloe;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object v0, p1, Lloe;->c:Ljava/lang/Object;
-
-    check-cast v0, Lkg3;
-
-    invoke-static {v0}, Lkg3;->f0(Lkg3;)V
-
-    iput-object p0, p1, Lloe;->c:Ljava/lang/Object;
-
-    iget-object v0, p1, Lloe;->d:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/ArrayList;
-
-    invoke-static {v0}, Lkg3;->g0(Ljava/util/ArrayList;)V
-
-    iput-object p0, p1, Lloe;->d:Ljava/lang/Object;
-
-    new-instance p0, Lgg3;
-
-    invoke-direct {p0}, Lyj0;-><init>()V
-
-    iput-object p2, p0, Lgg3;->d:Ll2b;
+    if-ne p1, v0, :cond_0
 
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Lgg3;->o:Z
+    return p1
 
-    return-object p0
+    :cond_0
+    const/4 p1, 0x0
 
-    :catchall_0
-    move-exception p2
+    return p1
+.end method
 
-    iget-object v0, p1, Lloe;->c:Ljava/lang/Object;
+.method public final hashCode()I
+    .locals 1
 
-    check-cast v0, Lkg3;
+    iget-object v0, p0, Lhf;->i:Ljavax/net/ssl/X509TrustManager;
 
-    invoke-static {v0}, Lkg3;->f0(Lkg3;)V
+    invoke-static {v0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
-    iput-object p0, p1, Lloe;->c:Ljava/lang/Object;
+    move-result v0
 
-    iget-object v0, p1, Lloe;->d:Ljava/lang/Object;
+    return v0
+.end method
 
-    check-cast v0, Ljava/util/ArrayList;
+.method public final p(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    .locals 2
 
-    invoke-static {v0}, Lkg3;->g0(Ljava/util/ArrayList;)V
+    const/4 v0, 0x0
 
-    iput-object p0, p1, Lloe;->d:Ljava/lang/Object;
+    new-array v0, v0, [Ljava/security/cert/X509Certificate;
+
+    invoke-interface {p2, v0}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, [Ljava/security/cert/X509Certificate;
+
+    :try_start_0
+    iget-object v0, p0, Lhf;->j:Landroid/net/http/X509TrustManagerExtensions;
+
+    const-string v1, "RSA"
+
+    invoke-virtual {v0, p2, v1, p1}, Landroid/net/http/X509TrustManagerExtensions;->checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
+
+    new-instance p2, Ljavax/net/ssl/SSLPeerUnverifiedException;
+
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p2, v0}, Ljavax/net/ssl/SSLPeerUnverifiedException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
     throw p2
 .end method

@@ -1,67 +1,73 @@
 .class public final Lfzh;
-.super Ljava/lang/Object;
+.super Liig;
 .source "SourceFile"
+
+# interfaces
+.implements Lpt6;
 
 
 # instance fields
-.field public final a:Lb2e;
+.field public synthetic X:Z
 
-.field public final b:Lai;
-
-.field public final c:Lcua;
-
-
-# direct methods
-.method public constructor <init>(Lb2e;)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lfzh;->a:Lb2e;
-
-    new-instance p1, Lai;
-
-    const/16 v0, 0x1a
-
-    invoke-direct {p1, v0}, Lai;-><init>(I)V
-
-    iput-object p1, p0, Lfzh;->b:Lai;
-
-    new-instance p1, Lcua;
-
-    const/4 v0, 0x3
-
-    invoke-direct {p1, v0}, Lcua;-><init>(I)V
-
-    iput-object p1, p0, Lfzh;->c:Lcua;
-
-    return-void
-.end method
+.field public synthetic o:J
 
 
 # virtual methods
-.method public final a(JJLp6g;)Ljava/lang/Object;
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    new-instance v0, Lww5;
+    check-cast p1, Ljava/lang/Number;
 
-    const/16 v1, 0xc
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
 
-    move-wide v2, p1
+    move-result-wide v0
 
-    move-wide v4, p3
+    check-cast p2, Ljava/lang/Boolean;
 
-    invoke-direct/range {v0 .. v5}, Lww5;-><init>(IJJ)V
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget-object p1, p0, Lfzh;->a:Lb2e;
+    move-result p1
 
-    const/4 p2, 0x1
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    const/4 p3, 0x0
+    new-instance p2, Lfzh;
 
-    invoke-static {v0, p1, p5, p2, p3}, Lulj;->f(Lnq6;Lb2e;Lkotlin/coroutines/Continuation;ZZ)Ljava/lang/Object;
+    const/4 v2, 0x3
+
+    invoke-direct {p2, v2, p3}, Liig;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    iput-wide v0, p2, Lfzh;->o:J
+
+    iput-boolean p1, p2, Lfzh;->X:Z
+
+    sget-object p1, Lyeh;->a:Lyeh;
+
+    invoke-virtual {p2, p1}, Lfzh;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget-wide v0, p0, Lfzh;->o:J
+
+    iget-boolean v2, p0, Lfzh;->X:Z
+
+    invoke-static {p1}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    if-eqz v2, :cond_0
+
+    new-instance p1, Ljava/lang/Long;
+
+    invoke-direct {p1, v0, v1}, Ljava/lang/Long;-><init>(J)V
+
+    return-object p1
+
+    :cond_0
+    const/4 p1, 0x0
 
     return-object p1
 .end method

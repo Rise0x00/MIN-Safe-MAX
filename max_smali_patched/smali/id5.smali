@@ -1,100 +1,123 @@
-.class public final Lid5;
+.class public abstract synthetic Lid5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lhud;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Lcvd;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Lhd5;->values()[Lhd5;
 
-    iget-object p1, p1, Lcvd;->a:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast p1, Lek7;
+    array-length v0, v0
 
-    invoke-virtual {p1}, Lek7;->i()Lhud;
+    new-array v0, v0, [I
 
-    move-result-object p1
+    :try_start_0
+    sget-object v1, Lhd5;->Z:Lhd5;
 
-    iput-object p1, p0, Lid5;->a:Lhud;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-virtual {p1}, Ljava/util/AbstractCollection;->isEmpty()Z
+    move-result v1
 
-    move-result v0
+    const/4 v2, 0x1
 
-    xor-int/lit8 v0, v0, 0x1
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    const-string v1, "The sequence must contain at least one EditedMediaItem."
+    :catch_0
+    :try_start_1
+    sget-object v1, Lhd5;->Y:Lhd5;
 
-    invoke-static {v1, v0}, Lh6j;->a(Ljava/lang/Object;Z)V
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    const/4 v0, 0x0
+    move-result v1
 
-    invoke-virtual {p1, v0}, Lhud;->get(I)Ljava/lang/Object;
+    const/4 v2, 0x2
 
-    move-result-object p1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    check-cast p1, Lhd5;
+    :catch_1
+    :try_start_2
+    sget-object v1, Lhd5;->X:Lhd5;
 
-    iget-object p1, p1, Lhd5;->a:Ld49;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-static {p1}, Lhd5;->c(Ld49;)Z
+    move-result v1
 
-    move-result p1
+    const/4 v2, 0x3
 
-    xor-int/lit8 p1, p1, 0x1
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    const-string v0, "If the first item in the sequence is a Gap, then forceAudioTrack or forceVideoTrack flag must be set"
+    :catch_2
+    :try_start_3
+    sget-object v1, Lhd5;->o:Lhd5;
 
-    invoke-static {v0, p1}, Lh6j;->a(Ljava/lang/Object;Z)V
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    sget-object v1, Lhd5;->d:Lhd5;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    :try_start_5
+    sget-object v1, Lhd5;->b:Lhd5;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    :try_start_6
+    sget-object v1, Lhd5;->c:Lhd5;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    sput-object v0, Lid5;->$EnumSwitchMapping$0:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Z
-    .locals 4
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    iget-object v2, p0, Lid5;->a:Lhud;
-
-    iget v3, v2, Lhud;->d:I
-
-    if-ge v1, v3, :cond_1
-
-    invoke-virtual {v2, v1}, Lhud;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lhd5;
-
-    iget-object v2, v2, Lhd5;->a:Ld49;
-
-    invoke-static {v2}, Lhd5;->c(Ld49;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return v0
 .end method

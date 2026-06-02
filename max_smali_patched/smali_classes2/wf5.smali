@@ -1,122 +1,93 @@
-.class public final Lwf5;
+.class public abstract synthetic Lwf5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lij9;
-
-
-# instance fields
-.field public final a:[Landroid/graphics/Bitmap;
-
-.field public final b:Lgq0;
-
-.field public final c:Lzo8;
-
 
 # direct methods
-.method public constructor <init>(Lkz4;)V
-    .locals 6
+.method public static bridge synthetic a(Landroid/hardware/camera2/CameraManager;Ljava/lang/String;)Landroid/hardware/camera2/CameraDevice$CameraDeviceSetup;
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, p1}, Landroid/hardware/camera2/CameraManager;->getCameraDeviceSetup(Ljava/lang/String;)Landroid/hardware/camera2/CameraDevice$CameraDeviceSetup;
 
-    const/16 v0, 0x19
+    move-result-object p0
 
-    new-array v1, v0, [Landroid/graphics/Bitmap;
+    return-object p0
+.end method
 
-    const/4 v2, 0x0
+.method public static bridge synthetic b(ILtt8;)Landroid/media/LoudnessCodecController;
+    .locals 1
 
-    :goto_0
-    if-ge v2, v0, :cond_0
+    sget-object v0, La35;->a:La35;
 
-    const/4 v3, 0x0
+    invoke-static {p0, v0, p1}, Landroid/media/LoudnessCodecController;->create(ILjava/util/concurrent/Executor;Landroid/media/LoudnessCodecController$OnLoudnessCodecUpdateListener;)Landroid/media/LoudnessCodecController;
 
-    aput-object v3, v1, v2
+    move-result-object p0
 
-    add-int/lit8 v2, v2, 0x1
+    return-object p0
+.end method
 
-    goto :goto_0
+.method public static bridge synthetic c(Landroid/media/metrics/EditingEndedEvent$Builder;)Landroid/media/metrics/EditingEndedEvent$Builder;
+    .locals 1
 
-    :cond_0
-    iput-object v1, p0, Lwf5;->a:[Landroid/graphics/Bitmap;
+    const/high16 v0, 0x42c80000    # 100.0f
 
-    new-instance v1, Lgq0;
+    invoke-virtual {p0, v0}, Landroid/media/metrics/EditingEndedEvent$Builder;->setFinalProgressPercent(F)Landroid/media/metrics/EditingEndedEvent$Builder;
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+    move-result-object p0
 
-    move-result p1
+    return-object p0
+.end method
 
-    if-eqz p1, :cond_3
+.method public static bridge synthetic d(Landroid/media/metrics/EditingEndedEvent$Builder;)Landroid/media/metrics/EditingEndedEvent;
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-virtual {p0}, Landroid/media/metrics/EditingEndedEvent$Builder;->build()Landroid/media/metrics/EditingEndedEvent;
 
-    if-eq p1, v0, :cond_2
+    move-result-object p0
 
-    const/4 v0, 0x2
+    return-object p0
+.end method
 
-    if-ne p1, v0, :cond_1
+.method public static bridge synthetic e(Landroid/media/LoudnessCodecController;)V
+    .locals 0
 
-    const/16 v0, 0x32
-
-    goto :goto_1
-
-    :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_2
-    const/16 v0, 0x28
-
-    :cond_3
-    :goto_1
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Number;->doubleValue()D
-
-    move-result-wide v2
-
-    const/high16 p1, 0x100000
-
-    int-to-double v4, p1
-
-    mul-double/2addr v2, v4
-
-    invoke-static {v2, v3}, Lq7j;->b(D)I
-
-    move-result p1
-
-    const/4 v0, 0x0
-
-    invoke-direct {v1, p1, v0}, Lgq0;-><init>(II)V
-
-    iput-object v1, p0, Lwf5;->b:Lgq0;
-
-    new-instance p1, Lzo8;
-
-    const/16 v0, 0x64
-
-    invoke-direct {p1, v0}, Lzo8;-><init>(I)V
-
-    iput-object p1, p0, Lwf5;->c:Lzo8;
+    invoke-virtual {p0}, Landroid/media/LoudnessCodecController;->close()V
 
     return-void
 .end method
 
+.method public static bridge synthetic f(Landroid/media/LoudnessCodecController;Landroid/media/MediaCodec;)V
+    .locals 0
 
-# virtual methods
-.method public final a(Lhj9;)V
-    .locals 1
-
-    iget-object p1, p0, Lwf5;->b:Lgq0;
-
-    const/4 v0, -0x1
-
-    invoke-virtual {p1, v0}, Lzo8;->i(I)V
+    invoke-virtual {p0, p1}, Landroid/media/LoudnessCodecController;->removeMediaCodec(Landroid/media/MediaCodec;)V
 
     return-void
+.end method
+
+.method public static bridge synthetic g(Landroid/media/metrics/EditingSession;Landroid/media/metrics/EditingEndedEvent;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/metrics/EditingSession;->reportEditingEndedEvent(Landroid/media/metrics/EditingEndedEvent;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic h(Landroid/hardware/camera2/CameraManager;Ljava/lang/String;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/hardware/camera2/CameraManager;->isCameraDeviceSetupSupported(Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static bridge synthetic i(Landroid/media/LoudnessCodecController;Landroid/media/MediaCodec;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/LoudnessCodecController;->addMediaCodec(Landroid/media/MediaCodec;)Z
+
+    move-result p0
+
+    return p0
 .end method

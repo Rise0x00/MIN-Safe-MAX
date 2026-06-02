@@ -1,82 +1,72 @@
 .class public final Lm4b;
-.super Lxdj;
+.super Lu98;
 .source "SourceFile"
+
+# interfaces
+.implements Lxs6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Ls4b;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public synthetic constructor <init>(Ls4b;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lm4b;->a:I
 
-    iput p1, p0, Lm4b;->a:I
+    iput-object p1, p0, Lm4b;->b:Ls4b;
+
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lu98;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lm4b;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lm4b;
-
-    iget v1, p0, Lm4b;->a:I
-
-    iget p1, p1, Lm4b;->a:I
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final invoke()Ljava/lang/Object;
     .locals 1
 
     iget v0, p0, Lm4b;->a:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object v0, p0, Lm4b;->b:Ls4b;
 
-    return v0
-.end method
+    invoke-virtual {v0}, Ls4b;->d()V
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "Counter(value="
-
-    const-string v1, ")"
-
-    iget v2, p0, Lm4b;->a:I
-
-    invoke-static {v2, v0, v1}, Lkz1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    sget-object v0, Lyeh;->a:Lyeh;
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lm4b;->b:Ls4b;
+
+    invoke-virtual {v0}, Ls4b;->c()V
+
+    sget-object v0, Lyeh;->a:Lyeh;
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lm4b;->b:Ls4b;
+
+    invoke-virtual {v0}, Ls4b;->d()V
+
+    sget-object v0, Lyeh;->a:Lyeh;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

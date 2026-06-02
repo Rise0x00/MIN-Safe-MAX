@@ -18,7 +18,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x2,
+        0x3,
         0x0
     }
     xi = 0x30
@@ -60,18 +60,18 @@
     return-void
 .end method
 
-.method public static final a(Lone/me/android/notifications/NotificationsImagesProvider;Lzb4;Lddf;Lo84;)Ljava/lang/Object;
+.method public static final a(Lone/me/android/notifications/NotificationsImagesProvider;Loc4;Llpf;Lz84;)Ljava/lang/Object;
     .locals 5
 
-    instance-of v0, p3, Lfua;
+    instance-of v0, p3, Ltxa;
 
     if-eqz v0, :cond_0
 
     move-object v0, p3
 
-    check-cast v0, Lfua;
+    check-cast v0, Ltxa;
 
-    iget v1, v0, Lfua;->Z:I
+    iget v1, v0, Ltxa;->Z:I
 
     const/high16 v2, -0x80000000
 
@@ -81,19 +81,19 @@
 
     sub-int/2addr v1, v2
 
-    iput v1, v0, Lfua;->Z:I
+    iput v1, v0, Ltxa;->Z:I
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lfua;
+    new-instance v0, Ltxa;
 
-    invoke-direct {v0, p0, p3}, Lfua;-><init>(Lone/me/android/notifications/NotificationsImagesProvider;Lo84;)V
+    invoke-direct {v0, p0, p3}, Ltxa;-><init>(Lone/me/android/notifications/NotificationsImagesProvider;Lz84;)V
 
     :goto_0
-    iget-object p0, v0, Lfua;->X:Ljava/lang/Object;
+    iget-object p0, v0, Ltxa;->X:Ljava/lang/Object;
 
-    iget p3, v0, Lfua;->Z:I
+    iget p3, v0, Ltxa;->Z:I
 
     const/4 v1, 0x1
 
@@ -101,11 +101,11 @@
 
     if-ne p3, v1, :cond_1
 
-    iget-object p1, v0, Lfua;->o:Lb01;
+    iget-object p1, v0, Ltxa;->o:Lq41;
 
-    iget-object p2, v0, Lfua;->d:Lzb4;
+    iget-object p2, v0, Ltxa;->d:Loc4;
 
-    invoke-static {p0}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-static {p0}, Lmtd;->g0(Ljava/lang/Object;)V
 
     move-object v4, p2
 
@@ -125,17 +125,17 @@
     throw p0
 
     :cond_2
-    invoke-static {p0}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-static {p0}, Lmtd;->g0(Ljava/lang/Object;)V
 
     :cond_3
     :goto_1
-    invoke-static {p1}, Lilj;->e(Lzb4;)Z
+    invoke-static {p1}, Lsr6;->J(Loc4;)Z
 
     move-result p0
 
     if-eqz p0, :cond_5
 
-    invoke-static {p2}, Lone/me/android/notifications/NotificationsImagesProvider;->c(Lb01;)Ljava/io/File;
+    invoke-static {p2}, Lone/me/android/notifications/NotificationsImagesProvider;->c(Lq41;)Ljava/io/File;
 
     move-result-object p0
 
@@ -150,19 +150,19 @@
     return-object p0
 
     :cond_4
-    iput-object p1, v0, Lfua;->d:Lzb4;
+    iput-object p1, v0, Ltxa;->d:Loc4;
 
-    iput-object p2, v0, Lfua;->o:Lb01;
+    iput-object p2, v0, Ltxa;->o:Lq41;
 
-    iput v1, v0, Lfua;->Z:I
+    iput v1, v0, Ltxa;->Z:I
 
     const-wide/16 v2, 0x64
 
-    invoke-static {v2, v3, v0}, Lumj;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {v2, v3, v0}, Ltf3;->s(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
 
-    sget-object p3, Lac4;->a:Lac4;
+    sget-object p3, Lpc4;->a:Lpc4;
 
     if-ne p0, p3, :cond_3
 
@@ -174,95 +174,95 @@
     return-object p0
 .end method
 
-.method public static final b(Lone/me/android/notifications/NotificationsImagesProvider;Landroid/net/Uri;Lgua;)Ljava/lang/Object;
+.method public static final b(Lone/me/android/notifications/NotificationsImagesProvider;Landroid/net/Uri;Lrw6;)Ljava/lang/Object;
     .locals 1
 
-    new-instance p0, Lg62;
+    new-instance p0, Lpb2;
 
-    invoke-static {p2}, Lo1j;->d(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {p2}, Lis6;->J(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p2
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0, p2}, Lg62;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, v0, p2}, Lpb2;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p0}, Lg62;->o()V
+    invoke-virtual {p0}, Lpb2;->o()V
 
-    invoke-static {}, Lhp6;->i()Loi7;
+    invoke-static {}, Lsr6;->G()Lhl7;
 
     move-result-object p2
 
-    invoke-static {p1}, Lcj7;->a(Landroid/net/Uri;)Lcj7;
+    invoke-static {p1}, Lzl7;->a(Landroid/net/Uri;)Lzl7;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Loi7;->f(Lcj7;)Lo0;
+    invoke-virtual {p2, p1}, Lhl7;->f(Lzl7;)Ls0;
 
     move-result-object p1
 
-    new-instance p2, Lhua;
+    new-instance p2, Luxa;
 
     const/4 v0, 0x0
 
-    invoke-direct {p2, p1, v0}, Lhua;-><init>(Lo0;I)V
+    invoke-direct {p2, p1, v0}, Luxa;-><init>(Ls0;I)V
 
-    invoke-virtual {p0, p2}, Lg62;->f(Lnq6;)V
+    invoke-virtual {p0, p2}, Lpb2;->e(Lzs6;)V
 
-    new-instance p2, Liua;
+    new-instance p2, Lvxa;
 
-    invoke-direct {p2, p0, v0}, Liua;-><init>(Lg62;I)V
+    invoke-direct {p2, p0, v0}, Lvxa;-><init>(Lpb2;I)V
 
-    sget-object v0, Lvw1;->a:Lvw1;
+    sget-object v0, Lt12;->a:Lt12;
 
-    invoke-virtual {p1, p2, v0}, Lo0;->l(Lbj4;Ljava/util/concurrent/Executor;)V
+    invoke-virtual {p1, p2, v0}, Ls0;->l(Lkk4;Ljava/util/concurrent/Executor;)V
 
-    invoke-virtual {p0}, Lg62;->n()Ljava/lang/Object;
+    invoke-virtual {p0}, Lpb2;->n()Ljava/lang/Object;
 
     move-result-object p0
 
-    sget-object p1, Lac4;->a:Lac4;
+    sget-object p1, Lpc4;->a:Lpc4;
 
     if-ne p0, p1, :cond_0
 
     return-object p0
 
     :cond_0
-    sget-object p0, Lb3h;->a:Lb3h;
+    sget-object p0, Lyeh;->a:Lyeh;
 
     return-object p0
 .end method
 
-.method public static c(Lb01;)Ljava/io/File;
+.method public static c(Lq41;)Ljava/io/File;
     .locals 2
 
-    invoke-static {}, Lri7;->g()Lri7;
+    invoke-static {}, Lll7;->g()Lll7;
 
     move-result-object v0
 
-    iget-object v0, v0, Lri7;->d:Ls15;
+    iget-object v0, v0, Lll7;->d:Ls35;
 
-    invoke-virtual {v0}, Ls15;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lr15;
-
-    iget-object v0, v0, Lr15;->a:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ls35;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lxz5;
+    check-cast v0, Lr35;
 
-    check-cast v0, Lu15;
+    iget-object v0, v0, Lr35;->a:Ljava/lang/Object;
 
-    invoke-virtual {v0, p0}, Lu15;->b(Lb01;)Lwz5;
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lu26;
+
+    check-cast v0, Lw35;
+
+    invoke-virtual {v0, p0}, Lw35;->b(Lq41;)Lt26;
 
     move-result-object p0
 
-    instance-of v0, p0, Lwz5;
+    instance-of v0, p0, Lt26;
 
     const/4 v1, 0x0
 
@@ -276,7 +276,7 @@
     :goto_0
     if-eqz p0, :cond_1
 
-    iget-object p0, p0, Lwz5;->a:Ljava/io/File;
+    iget-object p0, p0, Lt26;->a:Ljava/io/File;
 
     return-object p0
 
@@ -301,7 +301,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p2, p1, v0}, Lzzf;->t(Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-static {p2, p1, v0}, Lmbg;->h0(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result p1
 
@@ -309,7 +309,7 @@
 
     const-string p1, "image/"
 
-    invoke-static {p2, p1, v0}, Lzzf;->t(Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-static {p2, p1, v0}, Lmbg;->h0(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result p1
 
@@ -324,7 +324,7 @@
 
     :cond_1
     :goto_0
-    sget-object p1, Lt5a;->b:[Ljava/lang/String;
+    sget-object p1, Ls9a;->b:[Ljava/lang/String;
 
     return-object p1
 .end method
@@ -354,7 +354,9 @@
 .end method
 
 .method public final openFile(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
-    .locals 7
+    .locals 10
+
+    sget-object v1, Lgp8;->X:Lgp8;
 
     const-string v0, "r"
 
@@ -362,7 +364,7 @@
 
     move-result p2
 
-    if-eqz p2, :cond_f
+    if-eqz p2, :cond_10
 
     sget-object p2, Lone/me/android/notifications/NotificationsImagesProvider;->a:Landroid/content/UriMatcher;
 
@@ -372,17 +374,17 @@
 
     const-class v0, Lone/me/android/notifications/NotificationsImagesProvider;
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    const/4 v2, 0x0
+    const/4 v7, 0x0
 
-    if-ne p2, v1, :cond_e
+    if-ne p2, v2, :cond_f
 
     invoke-virtual {p1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object p2
 
-    if-eqz p2, :cond_e
+    if-eqz p2, :cond_f
 
     invoke-interface {p2}, Ljava/util/Collection;->isEmpty()Z
 
@@ -397,7 +399,7 @@
 
     move-result-object p2
 
-    invoke-interface {p2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {p2, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -412,10 +414,10 @@
     goto :goto_0
 
     :cond_1
-    move-object v3, v2
+    move-object v3, v7
 
     :goto_0
-    if-eqz v3, :cond_d
+    if-eqz v3, :cond_e
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -447,7 +449,7 @@
     goto :goto_1
 
     :cond_3
-    move-object p2, v2
+    move-object p2, v7
 
     :goto_1
     if-nez p2, :cond_4
@@ -464,26 +466,26 @@
 
     const-string v0, "no load from network"
 
-    invoke-static {p1, v0, p2}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p1, v0, p2}, Lnm4;->m0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    return-object v2
+    return-object v7
 
     :cond_4
-    invoke-static {v3}, Lxti;->j(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v3}, Ljde;->R(Ljava/lang/String;)Landroid/net/Uri;
 
-    move-result-object v0
+    move-result-object v5
 
     invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v0
 
-    invoke-static {v0, v3, v2}, Lt3j;->k(Landroid/net/Uri;Landroid/content/Context;Lym5;)Z
+    invoke-static {v0, v5}, Lvej;->i(Landroid/content/Context;Landroid/net/Uri;)Z
 
-    move-result v3
+    move-result v0
 
-    const-string v4, "one.me.android.notifications.NotificationsImagesProvider"
+    const-string v9, "one.me.android.notifications.NotificationsImagesProvider"
 
-    if-eqz v3, :cond_5
+    if-eqz v0, :cond_6
 
     new-instance p2, Ljava/lang/SecurityException;
 
@@ -491,181 +493,188 @@
 
     invoke-direct {p2, v0}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object v0, Lnm4;->d:Lnfb;
 
-    const-string v1, "openFile: failed, internal uri="
+    if-nez v0, :cond_5
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v4, p1, p2}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v2
+    goto/16 :goto_5
 
     :cond_5
-    invoke-static {v0}, Ldj7;->d(Landroid/net/Uri;)Ldj7;
+    invoke-virtual {v0, v1}, Lnfb;->b(Lgp8;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_c
+
+    const-string v2, "openFile: failed, internal uri="
+
+    invoke-static {p1, v2}, Lrtc;->r(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    sget-object v3, Lbj7;->c:Lbj7;
+    invoke-virtual {v0, v1, v9, p1, p2}, Lnfb;->c(Lgp8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iput-object v3, p1, Ldj7;->b:Lbj7;
+    return-object v7
 
-    invoke-virtual {p1}, Ldj7;->a()Lcj7;
-
-    move-result-object p1
-
-    invoke-static {}, Lko4;->G()Lko4;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p1, p1, Lcj7;->b:Landroid/net/Uri;
-
-    invoke-virtual {v3, p1}, Lko4;->E(Landroid/net/Uri;)Lddf;
+    :cond_6
+    invoke-static {v5}, Lam7;->d(Landroid/net/Uri;)Lam7;
 
     move-result-object p1
 
-    invoke-static {p1}, Lone/me/android/notifications/NotificationsImagesProvider;->c(Lb01;)Ljava/io/File;
+    sget-object v0, Lyl7;->c:Lyl7;
 
-    move-result-object v3
+    iput-object v0, p1, Lam7;->b:Lyl7;
 
-    if-eqz v3, :cond_8
+    invoke-virtual {p1}, Lam7;->a()Lzl7;
+
+    move-result-object p1
+
+    invoke-static {}, Lcq4;->r()Lcq4;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p1, p1, Lzl7;->b:Landroid/net/Uri;
+
+    invoke-virtual {v0, p1}, Lcq4;->q(Landroid/net/Uri;)Llpf;
+
+    move-result-object v6
+
+    invoke-static {v6}, Lone/me/android/notifications/NotificationsImagesProvider;->c(Lq41;)Ljava/io/File;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_9
 
     :try_start_0
-    invoke-virtual {v3}, Ljava/io/File;->exists()Z
+    invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
-    move-result v5
+    move-result v0
 
-    if-eqz v5, :cond_6
+    if-eqz v0, :cond_7
 
-    invoke-virtual {v3}, Ljava/io/File;->canRead()Z
+    invoke-virtual {p1}, Ljava/io/File;->canRead()Z
 
-    move-result v5
+    move-result v0
 
-    if-eqz v5, :cond_6
+    if-eqz v0, :cond_7
 
     goto :goto_2
 
     :catchall_0
-    move-exception v1
+    move-exception v0
 
     goto :goto_3
 
-    :cond_6
-    const/4 v1, 0x0
+    :cond_7
+    const/4 v2, 0x0
 
     :goto_2
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v1
+    move-result-object v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_4
 
     :goto_3
-    new-instance v5, Lszd;
+    new-instance v2, Lmae;
 
-    invoke-direct {v5, v1}, Lszd;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v2, v0}, Lmae;-><init>(Ljava/lang/Throwable;)V
 
-    move-object v1, v5
+    move-object v0, v2
 
     :goto_4
-    sget-object v5, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    instance-of v6, v1, Lszd;
+    instance-of v3, v0, Lmae;
 
-    if-eqz v6, :cond_7
+    if-eqz v3, :cond_8
 
-    move-object v1, v5
-
-    :cond_7
-    check-cast v1, Ljava/lang/Boolean;
-
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v1
-
-    if-nez v1, :cond_9
+    move-object v0, v2
 
     :cond_8
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-nez v0, :cond_a
+
+    :cond_9
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_9
+    if-eqz v0, :cond_a
 
-    new-instance v1, Ljua;
+    new-instance v3, Lw04;
 
-    invoke-direct {v1, p0, v0, p1, v2}, Ljua;-><init>(Lone/me/android/notifications/NotificationsImagesProvider;Landroid/net/Uri;Lddf;Lkotlin/coroutines/Continuation;)V
+    const/16 v8, 0x1d
 
-    sget-object p1, Lxg5;->a:Lxg5;
+    move-object v4, p0
 
-    invoke-static {p1, v1}, Ls9j;->h(Lqb4;Lbr6;)Ljava/lang/Object;
+    invoke-direct/range {v3 .. v8}, Lw04;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+
+    sget-object p1, Ljj5;->a:Ljj5;
+
+    invoke-static {p1, v3}, Ly6j;->X(Lfc4;Lnt6;)Ljava/lang/Object;
 
     move-result-object p1
 
-    move-object v3, p1
+    check-cast p1, Ljava/io/File;
 
-    check-cast v3, Ljava/io/File;
-
-    :cond_9
-    if-nez v3, :cond_c
+    :cond_a
+    if-nez p1, :cond_d
 
     new-instance p1, Ljava/io/FileNotFoundException;
 
     invoke-direct {p1}, Ljava/io/FileNotFoundException;-><init>()V
 
-    sget-object v0, Lc5j;->a:Ledb;
+    sget-object v0, Lnm4;->d:Lnfb;
 
-    if-nez v0, :cond_a
+    if-nez v0, :cond_b
 
     goto :goto_5
 
-    :cond_a
-    sget-object v1, Lkk8;->X:Lkk8;
+    :cond_b
+    invoke-virtual {v0, v1}, Lnfb;->b(Lgp8;)Z
 
-    invoke-virtual {v0, v1}, Ledb;->b(Lkk8;)Z
+    move-result v2
 
-    move-result v3
+    if-eqz v2, :cond_c
 
-    if-eqz v3, :cond_b
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string v3, "openFile: no image in cache, loadFromNetwork="
 
-    const-string v5, "openFile: no image in cache, loadFromNetwork="
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-virtual {v0, v1, v4, p2, p1}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_b
-    :goto_5
-    return-object v2
+    invoke-virtual {v0, v1, v9, p2, p1}, Lnfb;->c(Lgp8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_c
-    const/high16 p1, 0x10000000
+    :goto_5
+    return-object v7
 
-    invoke-static {v3, p1}, Landroid/os/ParcelFileDescriptor;->open(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;
+    :cond_d
+    const/high16 p2, 0x10000000
+
+    invoke-static {p1, p2}, Landroid/os/ParcelFileDescriptor;->open(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;
 
     move-result-object p1
 
     return-object p1
 
-    :cond_d
+    :cond_e
     :goto_6
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -677,11 +686,11 @@
 
     invoke-direct {p2, v0}, Ljava/io/FileNotFoundException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1, v0, p2}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p1, v0, p2}, Lnm4;->m0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    return-object v2
+    return-object v7
 
-    :cond_e
+    :cond_f
     :goto_7
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -695,11 +704,11 @@
 
     const-string v0, "wrong uri"
 
-    invoke-static {p1, v0, p2}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p1, v0, p2}, Lnm4;->m0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    return-object v2
+    return-object v7
 
-    :cond_f
+    :cond_10
     new-instance p1, Ljava/lang/SecurityException;
 
     const-string p2, "Only read mode is supported"

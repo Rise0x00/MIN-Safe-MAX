@@ -1,159 +1,133 @@
-.class public abstract Ldg;
+.class public final Ldg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lkvg;
+
 
 # static fields
-.field public static final a:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public static final a:Ldg;
 
-.field public static final b:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public static final c:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public static final d:Ljava/util/concurrent/ConcurrentHashMap;
-
-.field public static final e:Ln8g;
-
-.field public static final f:Lmc;
-
-.field public static final g:Lmc;
+.field public static final b:Luha;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 5
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    new-instance v0, Ldg;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+    sput-object v0, Ldg;->a:Ldg;
 
-    sput-object v0, Ldg;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+    new-instance v0, Luha;
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    const/16 v1, 0xa
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    sput-object v0, Ldg;->b:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    sput-object v0, Ldg;->c:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    sput-object v0, Ldg;->d:Ljava/util/concurrent/ConcurrentHashMap;
-
-    new-instance v0, Lj;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Lj;-><init>(I)V
-
-    new-instance v1, Ln8g;
-
-    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
-
-    sput-object v1, Ldg;->e:Ln8g;
-
-    new-instance v0, Lmc;
+    invoke-direct {v0, v1}, Luha;-><init>(I)V
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v2}, Lmc;-><init>(I)V
+    invoke-virtual {v0, v2, v1}, Luha;->e(II)V
 
-    sput-object v0, Ldg;->f:Lmc;
+    const/4 v2, 0x2
 
-    new-instance v2, Lmc;
+    const/16 v3, 0x10
 
-    const/4 v3, 0x2
+    invoke-virtual {v0, v2, v3}, Luha;->e(II)V
 
-    invoke-direct {v2, v3}, Lmc;-><init>(I)V
+    const/4 v2, 0x3
 
-    sput-object v2, Ldg;->g:Lmc;
+    const/16 v4, 0xd
 
-    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v2, v4}, Luha;->e(II)V
 
-    move-result-object v3
+    const/4 v2, 0x4
 
-    check-cast v3, Landroid/os/Handler;
+    invoke-virtual {v0, v2, v3}, Luha;->e(II)V
 
-    invoke-virtual {v3, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    const/4 v2, 0x5
 
-    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+    const/4 v3, 0x0
 
-    move-result-object v0
+    invoke-virtual {v0, v2, v3}, Luha;->e(II)V
 
-    check-cast v0, Landroid/os/Handler;
+    const/4 v2, 0x6
 
-    invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    const/4 v3, -0x2
+
+    invoke-virtual {v0, v2, v3}, Luha;->e(II)V
+
+    const/4 v2, 0x7
+
+    const/4 v3, -0x4
+
+    invoke-virtual {v0, v2, v3}, Luha;->e(II)V
+
+    const/16 v2, 0x8
+
+    const/4 v3, -0x6
+
+    invoke-virtual {v0, v2, v3}, Luha;->e(II)V
+
+    const/16 v2, 0x9
+
+    const/4 v3, -0x5
+
+    invoke-virtual {v0, v2, v3}, Luha;->e(II)V
+
+    const/4 v2, -0x8
+
+    invoke-virtual {v0, v1, v2}, Luha;->e(II)V
+
+    sput-object v0, Ldg;->b:Luha;
 
     return-void
 .end method
 
-.method public static a(Lio6;I)V
-    .locals 4
 
-    iget v0, p0, Lio6;->a:I
+# virtual methods
+.method public final a(I)V
+    .locals 2
 
-    iget-object p0, p0, Lio6;->b:Lqfg;
+    sget-object v0, Ldg;->b:Luha;
 
-    int-to-float v1, v0
+    invoke-virtual {v0, p1}, Luha;->b(I)I
 
-    const/high16 v2, 0x3f000000    # 0.5f
+    move-result p1
 
-    mul-float/2addr v1, v2
+    const/4 v1, -0x1
 
-    const/high16 v2, 0x3f800000    # 1.0f
+    if-ltz p1, :cond_0
 
-    cmpg-float v3, v1, v2
+    iget-object v0, v0, Luha;->c:[I
 
-    if-gez v3, :cond_0
+    aget p1, v0, p1
 
-    move v1, v2
+    goto :goto_0
 
     :cond_0
-    float-to-int v1, v1
+    move p1, v1
 
-    iget v2, p0, Lqfg;->Y:I
+    :goto_0
+    if-ne p1, v1, :cond_1
 
-    add-int/2addr v2, p1
+    const-string p1, "PriorityPatcher"
 
-    invoke-static {v2, v1, v0}, Lamj;->d(III)I
+    const-string v0, "Early return in patch cuz of processPriority == -1"
 
-    move-result p1
+    invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget v0, p0, Lqfg;->Y:I
-
-    if-eq p1, v0, :cond_1
-
-    if-eq p1, v0, :cond_1
-
-    const/4 v0, 0x1
-
-    iget v1, p0, Lqfg;->X:I
-
-    invoke-static {p1, v0, v1}, Lamj;->d(III)I
-
-    move-result p1
-
-    iput p1, p0, Lqfg;->Y:I
-
-    invoke-virtual {p0}, Lqfg;->q()Lew0;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    iget p0, p0, Lqfg;->Y:I
-
-    invoke-virtual {p1, p0}, Lew0;->a(I)V
+    return-void
 
     :cond_1
+    :try_start_0
+    invoke-static {p1}, Landroid/os/Process;->setThreadPriority(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
     return-void
 .end method

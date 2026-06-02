@@ -1,148 +1,83 @@
 .class public final Lpba;
-.super Lhyb;
+.super Lm4;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lpba;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
-.field public final g:Ljava/lang/String;
+.field public final a:I
+
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lsxb;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Leah;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1}, Leah;-><init>(I)V
+
+    sput-object v0, Lpba;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(IZ)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lhyb;-><init>(Lsxb;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string p1, "msg_round_trip"
+    iput p1, p0, Lpba;->a:I
 
-    iput-object p1, p0, Lpba;->g:Ljava/lang/String;
+    iput-boolean p2, p0, Lpba;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final i()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lpba;->g:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final n()Ljfa;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    invoke-virtual {p0}, Lhyb;->j()Llyb;
+    const/16 p2, 0x4f45
 
-    move-result-object v0
+    invoke-static {p1, p2}, Luoj;->r(Landroid/os/Parcel;I)I
 
-    invoke-virtual {v0}, Llyb;->a()I
+    move-result p2
 
-    move-result v0
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v1, 0x4
 
-    move-result-object v0
+    invoke-static {p1, v0, v1}, Luoj;->t(Landroid/os/Parcel;II)V
 
-    const-string v1, "connection_type"
+    iget v0, p0, Lpba;->a:I
 
-    invoke-static {v0, v1}, Lxnj;->b(Ljava/lang/Object;Ljava/lang/String;)Ljfa;
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result-object v0
+    const/4 v0, 0x2
 
-    return-object v0
-.end method
+    invoke-static {p1, v0, v1}, Luoj;->t(Landroid/os/Parcel;II)V
 
-.method public final s(Loba;)Ljfa;
-    .locals 3
+    iget-boolean v0, p0, Lpba;->b:Z
 
-    sget-object v0, Leae;->a:[J
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    new-instance v0, Ljfa;
-
-    invoke-direct {v0}, Ljfa;-><init>()V
-
-    invoke-virtual {p0}, Lhyb;->j()Llyb;
-
-    move-result-object v1
-
-    iget-object v1, v1, Llyb;->c:Lo58;
-
-    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Liwh;
-
-    invoke-virtual {v1}, Liwh;->d()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-string v2, "background"
-
-    invoke-virtual {v0, v2, v1}, Ljfa;->i(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    :cond_0
-    iget p1, p1, Loba;->a:I
-
-    invoke-static {p1}, Lt02;->t(I)I
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    const-string v1, "flow"
-
-    invoke-virtual {v0, v1, p1}, Ljfa;->i(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-object v0
-.end method
-
-.method public final t(Lnba;Loba;)V
-    .locals 2
-
-    invoke-virtual {p0, p2}, Lpba;->s(Loba;)Ljfa;
-
-    move-result-object p2
-
-    const/4 v0, 0x5
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v1, p2, v1, v0}, Lhyb;->p(Lhyb;Ljava/lang/String;Ljfa;Ljava/lang/Long;I)Ljava/lang/String;
-
-    move-result-object p2
-
-    const/16 v0, 0xc
-
-    invoke-static {p0, p1, p2, v1, v0}, Lhyb;->g(Lhyb;Luxb;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static {p1, p2}, Luoj;->s(Landroid/os/Parcel;I)V
 
     return-void
-.end method
-
-.method public final u(I)Loba;
-    .locals 3
-
-    new-instance v0, Loba;
-
-    invoke-virtual {p0}, Lhyb;->j()Llyb;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v1
-
-    invoke-direct {v0, p1, v1, v2}, Loba;-><init>(IJ)V
-
-    return-object v0
 .end method

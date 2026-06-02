@@ -1,6 +1,7 @@
-.class public abstract Lw78;
+.class public interface abstract Lw78;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzb4;
+.implements La88;
+.implements Lb88;

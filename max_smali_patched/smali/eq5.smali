@@ -1,118 +1,297 @@
-.class public final synthetic Leq5;
+.class public final Leq5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lksf;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lk92;
 
-.field public final synthetic b:Z
+.field public final a:Lksf;
 
-.field public final synthetic c:I
+.field public final b:J
 
-.field public final synthetic d:Ljava/lang/Object;
+.field public c:Z
+
+.field public d:J
+
+.field public o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcga;ZI)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x1
-
-    iput v0, p0, Leq5;->a:I
+.method public constructor <init>(Lk92;Lksf;J)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Leq5;->d:Ljava/lang/Object;
+    iput-object p1, p0, Leq5;->X:Lk92;
 
-    iput-boolean p2, p0, Leq5;->b:Z
+    iput-object p2, p0, Leq5;->a:Lksf;
 
-    iput p3, p0, Leq5;->c:I
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lrq5;IZ)V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x0
-
-    iput v0, p0, Leq5;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Leq5;->d:Ljava/lang/Object;
-
-    iput p2, p0, Leq5;->c:I
-
-    iput-boolean p3, p0, Leq5;->b:Z
+    iput-wide p3, p0, Leq5;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final G(Ljava/io/IOException;)Ljava/io/IOException;
+    .locals 3
 
-    iget v0, p0, Leq5;->a:I
+    iget-boolean v0, p0, Leq5;->c:Z
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Leq5;->d:Ljava/lang/Object;
+    return-object p1
 
-    check-cast v0, Lcga;
+    :cond_0
+    const/4 v0, 0x1
 
-    iget-boolean v1, p0, Leq5;->b:Z
+    iput-boolean v0, p0, Leq5;->c:Z
 
-    iget v2, p0, Leq5;->c:I
+    iget-object v1, p0, Leq5;->X:Lk92;
 
-    invoke-virtual {v0, v2, v1}, Lcga;->N0(IZ)V
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2, v0, p1}, Lk92;->a(ZZLjava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final J()V
+    .locals 1
+
+    iget-object v0, p0, Leq5;->a:Lksf;
+
+    invoke-interface {v0}, Lksf;->flush()V
+
+    return-void
+.end method
+
+.method public final close()V
+    .locals 4
+
+    iget-boolean v0, p0, Leq5;->o:Z
+
+    if-eqz v0, :cond_0
 
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Leq5;->d:Ljava/lang/Object;
+    :cond_0
+    const/4 v0, 0x1
 
-    check-cast v0, Lrq5;
+    iput-boolean v0, p0, Leq5;->o:Z
 
-    iget-object v1, v0, Lrq5;->I0:Lon4;
+    const-wide/16 v0, -0x1
 
-    iget-object v0, v0, Lrq5;->a:[Lzvd;
+    iget-wide v2, p0, Leq5;->b:J
 
-    iget v2, p0, Leq5;->c:I
+    cmp-long v0, v2, v0
 
-    aget-object v0, v0, v2
+    if-eqz v0, :cond_2
 
-    iget-object v0, v0, Lzvd;->e:Ljava/lang/Object;
+    iget-wide v0, p0, Leq5;->d:J
 
-    check-cast v0, Lol0;
+    cmp-long v0, v0, v2
 
-    iget v0, v0, Lol0;->b:I
+    if-nez v0, :cond_1
 
-    invoke-virtual {v1}, Lon4;->H()Lid;
+    goto :goto_0
 
-    move-result-object v3
+    :cond_1
+    new-instance v0, Ljava/net/ProtocolException;
 
-    new-instance v4, Lym4;
+    const-string v1, "unexpected end of stream"
 
-    iget-boolean v5, p0, Leq5;->b:Z
+    invoke-direct {v0, v1}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v4, v3, v2, v0, v5}, Lym4;-><init>(Lid;IIZ)V
+    throw v0
 
-    const/16 v0, 0x409
+    :cond_2
+    :goto_0
+    :try_start_0
+    invoke-virtual {p0}, Leq5;->l()V
 
-    invoke-virtual {v1, v3, v0, v4}, Lon4;->I(Lid;ILqe8;)V
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Leq5;->G(Ljava/io/IOException;)Ljava/io/IOException;
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {p0, v0}, Leq5;->G(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object v0
+
+    throw v0
+.end method
+
+.method public final flush()V
+    .locals 1
+
+    :try_start_0
+    invoke-virtual {p0}, Leq5;->J()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {p0, v0}, Leq5;->G(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object v0
+
+    throw v0
+.end method
+
+.method public final l()V
+    .locals 1
+
+    iget-object v0, p0, Leq5;->a:Lksf;
+
+    invoke-interface {v0}, Lksf;->close()V
+
+    return-void
+.end method
+
+.method public final m()Lsxg;
+    .locals 1
+
+    iget-object v0, p0, Leq5;->a:Lksf;
+
+    invoke-interface {v0}, Lksf;->m()Lsxg;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final o0(JLk01;)V
+    .locals 4
+
+    iget-boolean v0, p0, Leq5;->o:Z
+
+    if-nez v0, :cond_2
+
+    const-wide/16 v0, -0x1
+
+    iget-wide v2, p0, Leq5;->b:J
+
+    cmp-long v0, v2, v0
+
+    if-eqz v0, :cond_1
+
+    iget-wide v0, p0, Leq5;->d:J
+
+    add-long/2addr v0, p1
+
+    cmp-long v0, v0, v2
+
+    if-gtz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p3, Ljava/net/ProtocolException;
+
+    const-string v0, "expected "
+
+    const-string v1, " bytes but received "
+
+    invoke-static {v2, v3, v0, v1}, Lo52;->v(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Leq5;->d:J
+
+    add-long/2addr v1, p1
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p3, p1}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+
+    throw p3
+
+    :cond_1
+    :goto_0
+    :try_start_0
+    iget-object v0, p0, Leq5;->a:Lksf;
+
+    invoke-interface {v0, p1, p2, p3}, Lksf;->o0(JLk01;)V
+
+    iget-wide v0, p0, Leq5;->d:J
+
+    add-long/2addr v0, p1
+
+    iput-wide v0, p0, Leq5;->d:J
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    invoke-virtual {p0, p1}, Leq5;->G(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object p1
+
+    throw p1
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "closed"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-class v1, Leq5;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x28
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Leq5;->a:Lksf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x29
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

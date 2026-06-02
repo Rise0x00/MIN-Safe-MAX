@@ -1,48 +1,57 @@
 .class public final Lii0;
-.super Lo84;
+.super Lf9e;
+.source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lpx;
+# virtual methods
+.method public final b()Lq41;
+    .locals 5
 
-.field public synthetic d:Ljava/lang/Object;
+    new-instance v0, Llpf;
 
-.field public o:I
+    const-string v1, "circle|resize:"
 
+    const-string v2, ","
 
-# direct methods
-.method public constructor <init>(Lpx;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+    iget v3, p0, Lf9e;->c:I
 
-    iput-object p1, p0, Lii0;->X:Lpx;
+    iget v4, p0, Lf9e;->d:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-static {v1, v3, v4, v2}, Lsb6;->k(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Llpf;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public final c(Landroid/graphics/Bitmap;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    invoke-static {p1, v0}, Lcom/facebook/imagepipeline/nativecode/NativeRoundingFilter;->toCircleFast(Landroid/graphics/Bitmap;Z)V
 
     return-void
 .end method
 
+.method public final getName()Ljava/lang/String;
+    .locals 5
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    const-string v0, ","
 
-    iput-object p1, p0, Lii0;->d:Ljava/lang/Object;
+    const-string v1, ")"
 
-    iget p1, p0, Lii0;->o:I
+    const-string v2, "AvatarAsCirclePostProcessor("
 
-    const/high16 v0, -0x80000000
+    iget v3, p0, Lf9e;->c:I
 
-    or-int/2addr p1, v0
+    iget v4, p0, Lf9e;->d:I
 
-    iput p1, p0, Lii0;->o:I
+    invoke-static {v2, v3, v0, v4, v1}, Lx82;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
-    iget-object p1, p0, Lii0;->X:Lpx;
+    move-result-object v0
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lpx;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

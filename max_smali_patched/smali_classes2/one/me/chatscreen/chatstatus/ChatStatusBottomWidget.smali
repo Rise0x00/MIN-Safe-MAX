@@ -21,17 +21,17 @@
         "args",
         "<init>",
         "(Landroid/os/Bundle;)V",
-        "Lhce;",
+        "Lioe;",
         "scopeId",
-        "Lv03;",
+        "Le23;",
         "chatStatus",
-        "(Ljava/lang/String;Lv03;Lso4;)V",
+        "(Lioe;Le23;)V",
         "chat-screen_release"
     }
     k = 0x1
     mv = {
         0x2,
-        0x2,
+        0x3,
         0x0
     }
     xi = 0x30
@@ -39,30 +39,30 @@
 
 
 # static fields
-.field public static final synthetic c:[Lz28;
+.field public static final synthetic c:[Lb88;
 
 
 # instance fields
-.field public final a:Lo58;
+.field public final a:Lia8;
 
-.field public final b:Ljld;
+.field public final b:Luvd;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 6
 
-    new-instance v0, Lhfa;
+    new-instance v0, Lpia;
 
     const-class v1, Lone/me/chatscreen/chatstatus/ChatStatusBottomWidget;
 
     const-string v2, "parentScopeId"
 
-    const-string v3, "getParentScopeId-IluPPks()Ljava/lang/String;"
+    const-string v3, "getParentScopeId()Lone/me/sdk/arch/store/ScopeId;"
 
-    invoke-direct {v0, v1, v2, v3}, Lhfa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3}, Lpia;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v2, Lctd;->a:Ldtd;
+    sget-object v2, Lr3e;->a:Ls3e;
 
     const-string v3, "button"
 
@@ -70,13 +70,13 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v2, v1, v3, v4, v5}, Lj27;->e(Ldtd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Liyc;
+    invoke-static {v2, v1, v3, v4, v5}, Lsb6;->d(Ls3e;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lk8d;
 
     move-result-object v1
 
     const/4 v2, 0x2
 
-    new-array v2, v2, [Lz28;
+    new-array v2, v2, [Lb88;
 
     aput-object v0, v2, v5
 
@@ -84,7 +84,7 @@
 
     aput-object v1, v2, v0
 
-    sput-object v2, Lone/me/chatscreen/chatstatus/ChatStatusBottomWidget;->c:[Lz28;
+    sput-object v2, Lone/me/chatscreen/chatstatus/ChatStatusBottomWidget;->c:[Lb88;
 
     return-void
 .end method
@@ -98,82 +98,74 @@
 
     const/4 v2, 0x0
 
-    .line 4
-    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILso4;)V
+    .line 1
+    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILjq4;)V
 
-    .line 5
-    new-instance p1, Lls;
+    .line 2
+    new-instance p1, Lfu;
 
-    const-class v1, Lhce;
+    const-class v1, Lioe;
 
     const-string v3, "arg_key_scope_id"
 
-    invoke-direct {p1, v1, v3}, Lls;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {p1, v3, v1}, Lfu;-><init>(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 6
-    sget-object v1, Lone/me/chatscreen/chatstatus/ChatStatusBottomWidget;->c:[Lz28;
+    .line 3
+    sget-object v1, Lone/me/chatscreen/chatstatus/ChatStatusBottomWidget;->c:[Lb88;
 
     aget-object v0, v1, v0
 
-    invoke-virtual {p1, p0}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Lfu;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lhce;
+    check-cast p1, Lioe;
+
+    .line 4
+    const-class v0, Lt13;
+
+    .line 5
+    invoke-virtual {p0, p1, v0, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel(Lioe;Ljava/lang/Class;Lxs6;)Lia8;
+
+    move-result-object p1
+
+    .line 6
+    iput-object p1, p0, Lone/me/chatscreen/chatstatus/ChatStatusBottomWidget;->a:Lia8;
 
     .line 7
-    iget-object p1, p1, Lhce;->a:Ljava/lang/String;
+    sget p1, Lmab;->c:I
 
-    .line 8
-    const-class v0, Ll03;
-
-    .line 9
-    invoke-virtual {p0, p1, v0, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Llq6;)Lo58;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Luvd;
 
     move-result-object p1
 
-    .line 10
-    iput-object p1, p0, Lone/me/chatscreen/chatstatus/ChatStatusBottomWidget;->a:Lo58;
-
-    .line 11
-    sget p1, Lc8b;->c:I
-
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lone/me/chatscreen/chatstatus/ChatStatusBottomWidget;->b:Ljld;
+    iput-object p1, p0, Lone/me/chatscreen/chatstatus/ChatStatusBottomWidget;->b:Luvd;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lv03;Lso4;)V
-    .locals 1
+.method public constructor <init>(Lioe;Le23;)V
+    .locals 2
 
-    .line 1
-    new-instance p3, Lhce;
+    .line 8
+    new-instance v0, Lgzb;
 
-    invoke-direct {p3, p1}, Lhce;-><init>(Ljava/lang/String;)V
+    const-string v1, "arg_key_scope_id"
 
-    .line 2
-    new-instance p1, Lktb;
+    invoke-direct {v0, v1, p1}, Lgzb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    const-string v0, "arg_key_scope_id"
+    new-instance p1, Lgzb;
 
-    invoke-direct {p1, v0, p3}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    const-string v1, "arg_key_chat_status"
 
-    new-instance p3, Lktb;
+    invoke-direct {p1, v1, p2}, Lgzb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    const-string v0, "arg_key_chat_status"
-
-    invoke-direct {p3, v0, p2}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 3
-    filled-new-array {p1, p3}, [Lktb;
+    .line 9
+    filled-new-array {v0, p1}, [Lgzb;
 
     move-result-object p1
 
-    invoke-static {p1}, Laaj;->c([Lktb;)Landroid/os/Bundle;
+    invoke-static {p1}, Lhk0;->k([Lgzb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -184,6 +176,20 @@
 
 
 # virtual methods
+.method public final d1()Lt13;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/chatscreen/chatstatus/ChatStatusBottomWidget;->a:Lia8;
+
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lt13;
+
+    return-object v0
+.end method
+
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 5
 
@@ -205,7 +211,7 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance p2, Lcy2;
+    new-instance p2, Lwz2;
 
     const/4 p3, 0x3
 
@@ -213,33 +219,33 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p2, p3, v2, v1}, Lcy2;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {p2, p3, v2, v1}, Lwz2;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p2, p1}, Lp6j;->b(Ldr6;Landroid/view/View;)V
+    invoke-static {p2, p1}, Lg84;->t0(Lpt6;Landroid/view/View;)V
 
-    new-instance p2, Lone/me/sdk/uikit/common/button/OneMeButton;
+    new-instance p2, Li8b;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p3
 
-    invoke-direct {p2, p3, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p2, p3}, Li8b;-><init>(Landroid/content/Context;)V
 
-    sget p3, Lc8b;->c:I
+    sget p3, Lmab;->c:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setId(I)V
 
-    sget-object p3, Ly5b;->c:Ly5b;
+    sget-object p3, Lg8b;->c:Lg8b;
 
-    invoke-virtual {p2, p3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Ly5b;)V
+    invoke-virtual {p2, p3}, Li8b;->setSize(Lg8b;)V
 
-    sget-object p3, Lx5b;->c:Lx5b;
+    sget-object p3, Lf8b;->c:Lf8b;
 
-    invoke-virtual {p2, p3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lx5b;)V
+    invoke-virtual {p2, p3}, Li8b;->setMode(Lf8b;)V
 
-    sget-object p3, Lv5b;->c:Lv5b;
+    sget-object p3, Ld8b;->c:Ld8b;
 
-    invoke-virtual {p2, p3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lv5b;)V
+    invoke-virtual {p2, p3}, Li8b;->setAppearance(Ld8b;)V
 
     new-instance p3, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -249,7 +255,7 @@
 
     int-to-float v0, v0
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -261,7 +267,7 @@
 
     mul-float/2addr v1, v0
 
-    invoke-static {v1}, Lq7j;->c(F)I
+    invoke-static {v1}, Lh43;->U(F)I
 
     move-result v1
 
@@ -269,7 +275,7 @@
 
     int-to-float v2, v2
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -281,11 +287,11 @@
 
     mul-float/2addr v3, v2
 
-    invoke-static {v3}, Lq7j;->c(F)I
+    invoke-static {v3}, Lh43;->U(F)I
 
     move-result v3
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -297,11 +303,11 @@
 
     mul-float/2addr v0, v4
 
-    invoke-static {v0}, Lq7j;->c(F)I
+    invoke-static {v0}, Lh43;->U(F)I
 
     move-result v0
 
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lr25;->e()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -313,7 +319,7 @@
 
     mul-float/2addr v2, v4
 
-    invoke-static {v2}, Lq7j;->c(F)I
+    invoke-static {v2}, Lh43;->U(F)I
 
     move-result v2
 
@@ -329,63 +335,51 @@
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 3
 
-    invoke-virtual {p0}, Lone/me/chatscreen/chatstatus/ChatStatusBottomWidget;->z0()Ll03;
+    invoke-virtual {p0}, Lone/me/chatscreen/chatstatus/ChatStatusBottomWidget;->d1()Lt13;
 
     move-result-object p1
 
-    iget-object p1, p1, Ll03;->j1:Lpld;
+    iget-object p1, p1, Lt13;->u1:Lbwd;
 
-    new-instance v0, Lr83;
+    new-instance v0, Ltx;
 
-    const/16 v1, 0xc
+    const/16 v1, 0xf
 
-    invoke-direct {v0, p1, v1}, Lr83;-><init>(Ld76;I)V
+    invoke-direct {v0, p1, v1}, Ltx;-><init>(Lxa6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj88;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lj88;->p()Ll88;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lad8;
 
     move-result-object p1
 
-    sget-object v1, Lo78;->d:Lo78;
-
-    invoke-static {v0, p1, v1}, Lmt0;->b(Ld76;Ll88;Lo78;)Lpw1;
+    invoke-interface {p1}, Lad8;->q()Lcd8;
 
     move-result-object p1
 
-    new-instance v0, Lx03;
+    sget-object v1, Lhc8;->d:Lhc8;
 
-    const/4 v1, 0x0
+    invoke-static {v0, p1, v1}, Lf90;->T(Lxa6;Lcd8;Lhc8;)Ln12;
 
-    invoke-direct {v0, v1, p0}, Lx03;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/chatstatus/ChatStatusBottomWidget;)V
+    move-result-object p1
 
-    new-instance v1, Lm96;
+    new-instance v0, Lrw1;
+
+    const/16 v1, 0x19
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, p0, v1}, Lrw1;-><init>(Lkotlin/coroutines/Continuation;Ljava/lang/Object;I)V
+
+    new-instance v1, Lad6;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lm96;-><init>(Ld76;Lbr6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lad6;-><init>(Lxa6;Lnt6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lpc8;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
+    invoke-static {v1, p1}, Lhk0;->Z(Lxa6;Loc4;)Lhyf;
 
     return-void
-.end method
-
-.method public final z0()Ll03;
-    .locals 1
-
-    iget-object v0, p0, Lone/me/chatscreen/chatstatus/ChatStatusBottomWidget;->a:Lo58;
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ll03;
-
-    return-object v0
 .end method

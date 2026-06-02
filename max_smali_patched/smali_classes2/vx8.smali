@@ -1,120 +1,135 @@
 .class public final Lvx8;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lfy8;
+.field public final a:Ljava/util/regex/Matcher;
 
-.field public o:I
+.field public final b:Ljava/lang/CharSequence;
+
+.field public c:Lux8;
 
 
 # direct methods
-.method public constructor <init>(Lfy8;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/util/regex/Matcher;Ljava/lang/CharSequence;)V
     .locals 0
 
-    iput-object p1, p0, Lvx8;->X:Lfy8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lvx8;->a:Ljava/util/regex/Matcher;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lvx8;->b:Ljava/lang/CharSequence;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lvx8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lvx8;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lvx8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a()Ljava/util/List;
     .locals 1
 
-    new-instance p1, Lvx8;
+    iget-object v0, p0, Lvx8;->c:Lux8;
 
-    iget-object v0, p0, Lvx8;->X:Lfy8;
+    if-nez v0, :cond_0
 
-    invoke-direct {p1, v0, p2}, Lvx8;-><init>(Lfy8;Lkotlin/coroutines/Continuation;)V
+    new-instance v0, Lux8;
 
-    return-object p1
-.end method
+    invoke-direct {v0, p0}, Lux8;-><init>(Lvx8;)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lvx8;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    iput-object v0, p0, Lvx8;->c:Lux8;
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object v0, p0, Lvx8;->c:Lux8;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    return-object v0
+.end method
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+.method public final b()Ltv7;
+    .locals 2
 
-    throw p1
+    iget-object v0, p0, Lvx8;->a:Ljava/util/regex/Matcher;
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->start()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->end()I
+
+    move-result v0
+
+    invoke-static {v1, v0}, Lnm4;->i0(II)Ltv7;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final c()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lvx8;->a:Ljava/util/regex/Matcher;
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final d()Lvx8;
+    .locals 4
+
+    iget-object v0, p0, Lvx8;->a:Ljava/util/regex/Matcher;
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->end()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->end()I
+
+    move-result v2
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->start()I
+
+    move-result v3
+
+    if-ne v2, v3, :cond_0
+
+    const/4 v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    add-int/2addr v1, v2
+
+    iget-object v2, p0, Lvx8;->b:Ljava/lang/CharSequence;
+
+    invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
+
+    move-result v3
+
+    if-gt v1, v3, :cond_1
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->pattern()Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
+
+    invoke-static {v0, v1, v2}, Lwnj;->a(Ljava/util/regex/Matcher;ILjava/lang/CharSequence;)Lvx8;
+
+    move-result-object v0
+
+    return-object v0
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    const/4 v0, 0x0
 
-    iget-object p1, p0, Lvx8;->X:Lfy8;
-
-    iget-object v0, p1, Lfy8;->y0:Lspf;
-
-    new-instance v2, Lm40;
-
-    const/16 v3, 0x8
-
-    invoke-direct {v2, v3, p1}, Lm40;-><init>(ILjava/lang/Object;)V
-
-    iput v1, p0, Lvx8;->o:I
-
-    new-instance p1, Lzsd;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    new-instance v1, Lr3;
-
-    const/16 v3, 0x19
-
-    invoke-direct {v1, p1, v2, v3}, Lr3;-><init>(Ljava/io/Serializable;Lf76;I)V
-
-    invoke-interface {v0, v1, p0}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    sget-object p1, Lac4;->a:Lac4;
-
-    return-object p1
+    return-object v0
 .end method

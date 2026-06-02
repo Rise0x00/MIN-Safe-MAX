@@ -4,319 +4,251 @@
 
 
 # static fields
-.field public static final j:Landroid/util/SparseIntArray;
+.field public static final g:Ljava/lang/String;
+
+.field public static final h:Ljava/lang/String;
+
+.field public static final i:Ljava/lang/String;
+
+.field public static final j:Ljava/lang/String;
+
+.field public static final k:Ljava/lang/String;
+
+.field public static final l:Ljava/lang/String;
 
 
 # instance fields
-.field public a:I
+.field public final a:I
 
-.field public b:I
+.field public final b:I
 
-.field public c:I
+.field public final c:Ljava/lang/String;
 
-.field public d:F
+.field public final d:I
 
-.field public e:F
+.field public final e:Landroid/os/Bundle;
 
-.field public f:F
-
-.field public g:I
-
-.field public h:Ljava/lang/String;
-
-.field public i:I
+.field public final f:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    new-instance v0, Landroid/util/SparseIntArray;
+    sget-object v0, Lpnh;->a:Ljava/lang/String;
 
-    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
+    const/4 v0, 0x0
 
-    sput-object v0, Llx3;->j:Landroid/util/SparseIntArray;
+    const/16 v1, 0x24
 
-    sget v1, Lkgd;->Motion_motionPathRotate:I
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
-    const/4 v2, 0x1
+    move-result-object v0
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    sput-object v0, Llx3;->g:Ljava/lang/String;
 
-    sget v1, Lkgd;->Motion_pathMotionArc:I
+    const/4 v0, 0x1
 
-    const/4 v2, 0x2
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    move-result-object v0
 
-    sget v1, Lkgd;->Motion_transitionEasing:I
+    sput-object v0, Llx3;->h:Ljava/lang/String;
 
-    const/4 v2, 0x3
+    const/4 v0, 0x2
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
-    sget v1, Lkgd;->Motion_drawPath:I
+    move-result-object v0
 
-    const/4 v2, 0x4
+    sput-object v0, Llx3;->i:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    const/4 v0, 0x3
 
-    sget v1, Lkgd;->Motion_animateRelativeTo:I
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
-    const/4 v2, 0x5
+    move-result-object v0
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    sput-object v0, Llx3;->j:Ljava/lang/String;
 
-    sget v1, Lkgd;->Motion_animateCircleAngleTo:I
+    const/4 v0, 0x4
 
-    const/4 v2, 0x6
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    move-result-object v0
 
-    sget v1, Lkgd;->Motion_motionStagger:I
+    sput-object v0, Llx3;->k:Ljava/lang/String;
 
-    const/4 v2, 0x7
+    const/4 v0, 0x5
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
-    sget v1, Lkgd;->Motion_quantizeMotionSteps:I
+    move-result-object v0
 
-    const/16 v2, 0x8
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lkgd;->Motion_quantizeMotionPhase:I
-
-    const/16 v2, 0x9
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lkgd;->Motion_quantizeMotionInterpolator:I
-
-    const/16 v2, 0xa
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    sput-object v0, Llx3;->l:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public constructor <init>(IILjava/lang/String;ILandroid/os/Bundle;I)V
+    .locals 0
 
-# virtual methods
-.method public final a(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 7
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lkgd;->Motion:[I
+    .line 3
+    iput p1, p0, Llx3;->a:I
 
-    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    .line 4
+    iput p2, p0, Llx3;->b:I
 
-    move-result-object p1
+    .line 5
+    iput-object p3, p0, Llx3;->c:Ljava/lang/String;
 
-    invoke-virtual {p1}, Landroid/content/res/TypedArray;->getIndexCount()I
+    .line 6
+    iput p4, p0, Llx3;->d:I
 
-    move-result p2
+    .line 7
+    iput-object p5, p0, Llx3;->e:Landroid/os/Bundle;
 
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    if-ge v1, p2, :cond_4
-
-    invoke-virtual {p1, v1}, Landroid/content/res/TypedArray;->getIndex(I)I
-
-    move-result v2
-
-    sget-object v3, Llx3;->j:Landroid/util/SparseIntArray;
-
-    invoke-virtual {v3, v2}, Landroid/util/SparseIntArray;->get(I)I
-
-    move-result v3
-
-    const/4 v4, 0x3
-
-    packed-switch v3, :pswitch_data_0
-
-    goto/16 :goto_1
-
-    :pswitch_0
-    invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/TypedValue;->type:I
-
-    const/4 v5, -0x1
-
-    const/4 v6, 0x1
-
-    if-ne v3, v6, :cond_0
-
-    invoke-virtual {p1, v2, v5}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result v2
-
-    iput v2, p0, Llx3;->i:I
-
-    goto/16 :goto_1
-
-    :cond_0
-    if-ne v3, v4, :cond_1
-
-    invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, p0, Llx3;->h:Ljava/lang/String;
-
-    const-string v4, "/"
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
-
-    move-result v3
-
-    if-lez v3, :cond_3
-
-    invoke-virtual {p1, v2, v5}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result v2
-
-    iput v2, p0, Llx3;->i:I
-
-    goto :goto_1
-
-    :cond_1
-    iget v3, p0, Llx3;->i:I
-
-    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getInteger(II)I
-
-    goto :goto_1
-
-    :pswitch_1
-    iget v3, p0, Llx3;->f:F
-
-    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v2
-
-    iput v2, p0, Llx3;->f:F
-
-    goto :goto_1
-
-    :pswitch_2
-    iget v3, p0, Llx3;->g:I
-
-    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getInteger(II)I
-
-    move-result v2
-
-    iput v2, p0, Llx3;->g:I
-
-    goto :goto_1
-
-    :pswitch_3
-    iget v3, p0, Llx3;->d:F
-
-    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v2
-
-    iput v2, p0, Llx3;->d:F
-
-    goto :goto_1
-
-    :pswitch_4
-    iget v3, p0, Llx3;->b:I
-
-    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getInteger(II)I
-
-    move-result v2
-
-    iput v2, p0, Llx3;->b:I
-
-    goto :goto_1
-
-    :pswitch_5
-    iget v3, p0, Llx3;->a:I
-
-    invoke-static {p1, v2, v3}, Lox3;->i(Landroid/content/res/TypedArray;II)I
-
-    move-result v2
-
-    iput v2, p0, Llx3;->a:I
-
-    goto :goto_1
-
-    :pswitch_6
-    invoke-virtual {p1, v2, v0}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    goto :goto_1
-
-    :pswitch_7
-    invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/TypedValue;->type:I
-
-    if-ne v3, v4, :cond_2
-
-    invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
-
-    goto :goto_1
-
-    :cond_2
-    sget-object v3, Ldr8;->b:[Ljava/lang/String;
-
-    invoke-virtual {p1, v2, v0}, Landroid/content/res/TypedArray;->getInteger(II)I
-
-    move-result v2
-
-    aget-object v2, v3, v2
-
-    goto :goto_1
-
-    :pswitch_8
-    iget v3, p0, Llx3;->c:I
-
-    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result v2
-
-    iput v2, p0, Llx3;->c:I
-
-    goto :goto_1
-
-    :pswitch_9
-    iget v3, p0, Llx3;->e:F
-
-    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v2
-
-    iput v2, p0, Llx3;->e:F
-
-    :cond_3
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto/16 :goto_0
-
-    :cond_4
-    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+    .line 8
+    iput p6, p0, Llx3;->f:I
 
     return-void
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public constructor <init>(Ljava/lang/String;ILandroid/os/Bundle;)V
+    .locals 7
+
+    .line 1
+    new-instance v5, Landroid/os/Bundle;
+
+    invoke-direct {v5, p3}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
+
+    const v1, 0x3c14dd2c
+
+    const/4 v2, 0x7
+
+    const/4 v6, 0x0
+
+    move-object v0, p0
+
+    move-object v3, p1
+
+    move v4, p2
+
+    invoke-direct/range {v0 .. v6}, Llx3;-><init>(IILjava/lang/String;ILandroid/os/Bundle;I)V
+
+    return-void
+.end method
+
+.method public static a(Landroid/os/Bundle;)Llx3;
+    .locals 9
+
+    sget-object v0, Llx3;->g:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+
+    move-result v3
+
+    sget-object v0, Llx3;->k:Ljava/lang/String;
+
+    invoke-virtual {p0, v0, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+
+    move-result v4
+
+    sget-object v0, Llx3;->h:Ljava/lang/String;
+
+    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Llx3;->i:Ljava/lang/String;
+
+    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result v2
+
+    invoke-static {v2}, Lh43;->j(Z)V
+
+    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
+
+    move-result v6
+
+    sget-object v0, Llx3;->j:Ljava/lang/String;
+
+    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v0
+
+    sget-object v2, Llx3;->l:Ljava/lang/String;
+
+    invoke-virtual {p0, v2, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+
+    move-result v8
+
+    new-instance v2, Llx3;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
+
+    :cond_0
+    move-object v7, v0
+
+    invoke-direct/range {v2 .. v8}, Llx3;-><init>(IILjava/lang/String;ILandroid/os/Bundle;I)V
+
+    return-object v2
+.end method
+
+
+# virtual methods
+.method public final b()Landroid/os/Bundle;
+    .locals 3
+
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    sget-object v1, Llx3;->g:Ljava/lang/String;
+
+    iget v2, p0, Llx3;->a:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    sget-object v1, Llx3;->h:Ljava/lang/String;
+
+    iget-object v2, p0, Llx3;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Llx3;->i:Ljava/lang/String;
+
+    iget v2, p0, Llx3;->d:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    sget-object v1, Llx3;->j:Ljava/lang/String;
+
+    iget-object v2, p0, Llx3;->e:Landroid/os/Bundle;
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    sget-object v1, Llx3;->k:Ljava/lang/String;
+
+    iget v2, p0, Llx3;->b:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    sget-object v1, Llx3;->l:Ljava/lang/String;
+
+    iget v2, p0, Llx3;->f:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    return-object v0
 .end method

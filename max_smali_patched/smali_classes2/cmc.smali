@@ -1,145 +1,152 @@
-.class public final Lcmc;
-.super Llm4;
+.class public final synthetic Lcmc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
-# static fields
-.field public static final b:Lcmc;
 
-.field public static final c:Lhm4;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final d:Lhm4;
-
-.field public static final e:Lhm4;
-
-.field public static final f:Lhm4;
-
-.field public static final g:Lhm4;
-
-.field public static final h:Lhm4;
-
-.field public static final i:Lhm4;
-
-.field public static final j:Lhm4;
+.field public final synthetic b:Lone/me/finishbottomsheet/PollFinishBottomSheet;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(Lone/me/finishbottomsheet/PollFinishBottomSheet;I)V
+    .locals 0
 
-    new-instance v0, Lcmc;
+    iput p2, p0, Lcmc;->a:I
 
-    invoke-direct {v0}, Llm4;-><init>()V
+    iput-object p1, p0, Lcmc;->b:Lone/me/finishbottomsheet/PollFinishBottomSheet;
 
-    sput-object v0, Lcmc;->b:Lcmc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "id"
+    return-void
+.end method
 
-    const-string v2, "type"
 
-    filled-new-array {v1, v2}, [Ljava/lang/String;
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 5
 
-    move-result-object v3
+    iget p1, p0, Lcmc;->a:I
 
-    const-string v4, ":profile/avatars"
+    const/4 v0, 0x1
 
-    const/4 v5, 0x0
+    packed-switch p1, :pswitch_data_0
 
-    const/16 v6, 0xe
+    iget-object p1, p0, Lcmc;->b:Lone/me/finishbottomsheet/PollFinishBottomSheet;
 
-    invoke-static {v0, v4, v3, v5, v6}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    sget-object v1, Lone/me/finishbottomsheet/PollFinishBottomSheet;->R0:[Lb88;
 
-    move-result-object v3
+    invoke-virtual {p1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->j1(Z)V
 
-    sput-object v3, Lcmc;->c:Lhm4;
+    return-void
 
-    const-string v3, ":profile"
+    :pswitch_0
+    iget-object p1, p0, Lcmc;->b:Lone/me/finishbottomsheet/PollFinishBottomSheet;
 
-    filled-new-array {v1, v2}, [Ljava/lang/String;
+    sget-object v1, Lone/me/finishbottomsheet/PollFinishBottomSheet;->R0:[Lb88;
 
-    move-result-object v4
+    iget-object p1, p1, Lone/me/finishbottomsheet/PollFinishBottomSheet;->P0:Lia8;
 
-    invoke-static {v0, v3, v4, v5, v6}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    invoke-interface {p1}, Lia8;->getValue()Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object p1
 
-    sput-object v3, Lcmc;->d:Lhm4;
+    check-cast p1, Lmmc;
 
-    const-string v3, ":profile/attaches"
+    iget-object v1, p1, Lmmc;->Z:Lhyf;
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    const/4 v2, 0x0
 
-    move-result-object v4
+    if-eqz v1, :cond_1
 
-    invoke-static {v0, v3, v4, v5, v6}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    invoke-virtual {v1}, Lo0;->isActive()Z
 
-    move-result-object v3
+    move-result v1
 
-    sput-object v3, Lcmc;->e:Lhm4;
+    if-ne v1, v0, :cond_1
 
-    const-string v3, ":profile/members"
+    iget-object p1, p1, Lmmc;->Y:Ljava/lang/String;
 
-    filled-new-array {v1, v2}, [Ljava/lang/String;
+    sget-object v0, Lnm4;->d:Lnfb;
 
-    move-result-object v2
+    if-nez v0, :cond_0
 
-    invoke-static {v0, v3, v2, v5, v6}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    goto :goto_0
 
-    move-result-object v2
+    :cond_0
+    sget-object v1, Lgp8;->d:Lgp8;
 
-    sput-object v2, Lcmc;->f:Lhm4;
+    invoke-virtual {v0, v1}, Lnfb;->b(Lgp8;)Z
 
-    const-string v2, ":profile/invite"
+    move-result v3
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    if-eqz v3, :cond_2
 
-    move-result-object v1
+    const-string v3, "finish poll cancelled cuz finish already started"
 
-    invoke-static {v0, v2, v1, v5, v6}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    invoke-virtual {v0, v1, p1, v3, v2}, Lnfb;->c(Lgp8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result-object v1
+    goto :goto_0
 
-    sput-object v1, Lcmc;->g:Lhm4;
+    :cond_1
+    iget-object v1, p1, Lmmc;->o:Lia8;
 
-    const-string v1, "chat_id"
-
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, ":profile/add-admins"
-
-    invoke-static {v0, v3, v2, v5, v6}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
-
-    move-result-object v2
-
-    sput-object v2, Lcmc;->h:Lhm4;
-
-    const-string v2, "is_chat"
-
-    filled-new-array {v1, v2}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, ":profile/add-members"
-
-    invoke-static {v0, v3, v2, v5, v6}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
-
-    move-result-object v2
-
-    sput-object v2, Lcmc;->i:Lhm4;
-
-    const-string v2, ":profile/change-owner"
-
-    filled-new-array {v1}, [Ljava/lang/String;
+    invoke-interface {v1}, Lia8;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-static {v0, v2, v1, v5, v6}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+    check-cast v1, Ldng;
+
+    check-cast v1, Lsbb;
+
+    invoke-virtual {v1}, Lsbb;->a()Lhc4;
+
+    move-result-object v1
+
+    new-instance v3, Llmc;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, p1, v2, v4}, Llmc;-><init>(Lmmc;Lkotlin/coroutines/Continuation;I)V
+
+    const/4 v4, 0x2
+
+    invoke-static {p1, v1, v3, v4}, Lw4i;->r(Lw4i;Lfc4;Lnt6;I)Lhyf;
+
+    iget-object v1, p1, Lmmc;->o:Lia8;
+
+    invoke-interface {v1}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ldng;
+
+    check-cast v1, Lsbb;
+
+    invoke-virtual {v1}, Lsbb;->b()Lhc4;
+
+    move-result-object v1
+
+    new-instance v3, Llmc;
+
+    invoke-direct {v3, p1, v2, v0}, Llmc;-><init>(Lmmc;Lkotlin/coroutines/Continuation;I)V
+
+    invoke-static {p1, v1, v3, v4}, Lw4i;->r(Lw4i;Lfc4;Lnt6;I)Lhyf;
 
     move-result-object v0
 
-    sput-object v0, Lcmc;->j:Lhm4;
+    iput-object v0, p1, Lmmc;->Z:Lhyf;
 
+    :cond_2
+    :goto_0
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

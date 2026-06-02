@@ -4,23 +4,9 @@
 
 
 # instance fields
-.field public a:Lp7h;
+.field public final a:Landroid/util/SparseArray;
 
-.field public b:Ljava/lang/String;
-
-.field public c:Ljava/lang/String;
-
-.field public d:Ljava/lang/String;
-
-.field public e:F
-
-.field public f:J
-
-.field public g:Lh9h;
-
-.field public h:Lf9h;
-
-.field public i:J
+.field public b:I
 
 
 # direct methods
@@ -29,9 +15,15 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lh9h;->b:Lh9h;
+    new-instance v0, Landroid/util/SparseArray;
 
-    iput-object v0, p0, Lp6h;->g:Lh9h;
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object v0, p0, Lp6h;->a:Landroid/util/SparseArray;
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lp6h;->b:I
 
     return-void
 .end method

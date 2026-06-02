@@ -1,366 +1,934 @@
 .class public final Lr52;
-.super Lkpc;
+.super Landroid/hardware/camera2/CameraDevice$StateCallback;
 .source "SourceFile"
-
-# interfaces
-.implements Luig;
 
 
 # instance fields
-.field public final F0:Lone/me/sdk/uikit/common/button/OneMeButton;
+.field public final a:Ls2f;
 
-.field public final G0:Landroidx/appcompat/widget/AppCompatTextView;
+.field public final b:Lh57;
+
+.field public c:Lq52;
+
+.field public d:Ljava/util/concurrent/ScheduledFuture;
+
+.field public final e:Lp52;
+
+.field public final synthetic f:Ls52;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 10
+.method public constructor <init>(Ls52;Ls2f;Lh57;J)V
+    .locals 0
 
-    new-instance v0, Landroid/widget/LinearLayout;
+    iput-object p1, p0, Lr52;->f:Ls52;
 
-    invoke-direct {v0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0}, Landroid/hardware/camera2/CameraDevice$StateCallback;-><init>()V
 
-    invoke-direct {p0, v0}, Ltsd;-><init>(Landroid/view/View;)V
+    iput-object p2, p0, Lr52;->a:Ls2f;
 
-    new-instance v1, Lone/me/sdk/uikit/common/button/OneMeButton;
+    iput-object p3, p0, Lr52;->b:Lh57;
 
-    const/4 v2, 0x0
+    new-instance p1, Lp52;
 
-    invoke-direct {v1, p1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    sget-object v3, Ly5b;->c:Ly5b;
+    iput-object p0, p1, Lp52;->c:Ljava/lang/Object;
 
-    invoke-virtual {v1, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Ly5b;)V
+    const-wide/16 p2, -0x1
 
-    sget-object v3, Lx5b;->a:Lx5b;
+    iput-wide p2, p1, Lp52;->b:J
 
-    invoke-virtual {v1, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lx5b;)V
+    iput-wide p4, p1, Lp52;->a:J
 
-    sget-object v3, Lv5b;->c:Lv5b;
-
-    invoke-virtual {v1, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lv5b;)V
-
-    sget v3, Lpfb;->m:I
-
-    invoke-virtual {v1, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
-
-    new-instance v3, Landroid/widget/LinearLayout$LayoutParams;
-
-    const/4 v4, -0x1
-
-    const/4 v5, -0x2
-
-    invoke-direct {v3, v4, v5}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    const/16 v6, 0x8
-
-    int-to-float v6, v6
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v7
-
-    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v6, v7
-
-    invoke-static {v6}, Lq7j;->c(F)I
-
-    move-result v6
-
-    iput v6, v3, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
-
-    const/16 v6, 0xc
-
-    int-to-float v6, v6
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v7
-
-    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v7, v6
-
-    invoke-static {v7}, Lq7j;->c(F)I
-
-    move-result v7
-
-    iput v7, v3, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v7
-
-    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v7, v6
-
-    invoke-static {v7}, Lq7j;->c(F)I
-
-    move-result v7
-
-    iput v7, v3, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v7
-
-    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v7, v6
-
-    invoke-static {v7}, Lq7j;->c(F)I
-
-    move-result v7
-
-    iput v7, v3, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
-
-    invoke-virtual {v1, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iput-object v1, p0, Lr52;->F0:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    new-instance v3, Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-direct {v3, p1, v2}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    sget v7, Llfb;->a:I
-
-    invoke-static {p1, v7}, Lq74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    sget-object v7, Lzhg;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, p1, v2, v2, v2}, Landroidx/appcompat/widget/AppCompatTextView;->setCompoundDrawablesRelativeWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    sget-object p1, Lpc3;->t0:Lkme;
-
-    invoke-virtual {p1, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
-
-    move-result-object v7
-
-    invoke-interface {v7}, Lzlb;->getIcon()Lwe7;
-
-    move-result-object v7
-
-    iget v7, v7, Lwe7;->c:I
-
-    invoke-static {v7}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v7
-
-    invoke-virtual {v3, v7}, Landroid/widget/TextView;->setCompoundDrawableTintList(Landroid/content/res/ColorStateList;)V
-
-    const/16 v7, 0x14
-
-    int-to-float v7, v7
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v8
-
-    iget v8, v8, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v8, v7
-
-    invoke-static {v8}, Lq7j;->c(F)I
-
-    move-result v8
-
-    invoke-virtual {v3, v8}, Landroid/widget/TextView;->setCompoundDrawablePadding(I)V
-
-    sget-object v8, Lr1h;->d:Lrhg;
-
-    invoke-static {v8, v3}, Lrhg;->d(Lrhg;Landroid/widget/TextView;)V
-
-    invoke-virtual {p1, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lzlb;->getText()Lrfg;
-
-    move-result-object p1
-
-    iget p1, p1, Lrfg;->b:I
-
-    invoke-virtual {v3, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v7
-
-    invoke-static {p1}, Lq7j;->c(F)I
-
-    move-result p1
-
-    const/16 v8, 0xa
-
-    int-to-float v8, v8
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v9
-
-    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v8, v9
-
-    invoke-static {v8}, Lq7j;->c(F)I
-
-    move-result v8
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v9
-
-    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v6, v9
-
-    invoke-static {v6}, Lq7j;->c(F)I
-
-    move-result v6
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v9
-
-    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v7, v9
-
-    invoke-static {v7}, Lq7j;->c(F)I
-
-    move-result v7
-
-    invoke-virtual {v3, p1, v7, v6, v8}, Landroid/view/View;->setPaddingRelative(IIII)V
-
-    iput-object v3, p0, Lr52;->G0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    const/4 p1, 0x1
-
-    invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->setOrientation(I)V
-
-    new-instance p1, Landroid/widget/LinearLayout$LayoutParams;
-
-    invoke-direct {p1, v4, v5}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    iput-object p1, p0, Lr52;->e:Lp52;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onThemeChanged(Lzlb;)V
-    .locals 3
+.method public final a()Z
+    .locals 4
 
-    sget-object p1, Lpc3;->t0:Lkme;
+    iget-object v0, p0, Lr52;->d:Ljava/util/concurrent/ScheduledFuture;
 
-    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
+    const/4 v1, 0x0
 
-    invoke-virtual {p1, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v2, "Cancelling scheduled re-open: "
+
+    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lr52;->c:Lq52;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lr52;->f:Ls52;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v0, v3}, Ls52;->v(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Lr52;->c:Lq52;
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, v0, Lq52;->b:Z
+
+    iput-object v3, p0, Lr52;->c:Lq52;
+
+    iget-object v0, p0, Lr52;->d:Ljava/util/concurrent/ScheduledFuture;
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    iput-object v3, p0, Lr52;->d:Ljava/util/concurrent/ScheduledFuture;
+
+    return v2
+
+    :cond_0
+    return v1
+.end method
+
+.method public final b()V
+    .locals 10
+
+    iget-object v0, p0, Lr52;->c:Lq52;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-nez v0, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v2
+
+    :goto_0
+    const/4 v3, 0x0
+
+    invoke-static {v3, v0}, Lvfa;->m(Ljava/lang/String;Z)V
+
+    iget-object v0, p0, Lr52;->d:Ljava/util/concurrent/ScheduledFuture;
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move v1, v2
+
+    :goto_1
+    invoke-static {v3, v1}, Lvfa;->m(Ljava/lang/String;Z)V
+
+    iget-object v0, p0, Lr52;->e:Lp52;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v4
+
+    iget-wide v6, v0, Lp52;->b:J
+
+    const-wide/16 v8, -0x1
+
+    cmp-long v1, v6, v8
+
+    if-nez v1, :cond_2
+
+    iput-wide v4, v0, Lp52;->b:J
+
+    :cond_2
+    iget-wide v6, v0, Lp52;->b:J
+
+    sub-long/2addr v4, v6
+
+    invoke-virtual {v0}, Lp52;->b()I
+
+    move-result v1
+
+    int-to-long v6, v1
+
+    cmp-long v1, v4, v6
+
+    iget-object v4, p0, Lr52;->f:Ls52;
+
+    if-ltz v1, :cond_3
+
+    iput-wide v8, v0, Lp52;->b:J
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v5, "Camera reopening attempted for "
+
+    invoke-direct {v1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lp52;->b()I
+
+    move-result v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, "ms without success."
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Camera2CameraImpl"
+
+    invoke-static {v1, v0}, Lw8g;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x4
+
+    invoke-virtual {v4, v0, v3, v2}, Ls52;->F(ILgf0;Z)V
+
+    return-void
+
+    :cond_3
+    new-instance v1, Lq52;
+
+    iget-object v2, p0, Lr52;->a:Ls2f;
+
+    invoke-direct {v1, p0, v2}, Lq52;-><init>(Lr52;Ls2f;)V
+
+    iput-object v1, p0, Lr52;->c:Lq52;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Attempting camera re-open in "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lp52;->a()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, "ms: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lr52;->c:Lq52;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " activeResuming = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, v4, Ls52;->X0:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lzlb;->getText()Lrfg;
+    invoke-virtual {v4, v1, v3}, Ls52;->v(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result-object v1
+    iget-object v1, p0, Lr52;->c:Lq52;
 
-    iget v1, v1, Lrfg;->b:I
+    invoke-virtual {v0}, Lp52;->a()I
 
-    iget-object v2, p0, Lr52;->G0:Landroidx/appcompat/widget/AppCompatTextView;
+    move-result v0
 
-    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTextColor(I)V
+    int-to-long v2, v0
 
-    invoke-virtual {p1, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    move-result-object p1
+    iget-object v4, p0, Lr52;->b:Lh57;
 
-    invoke-interface {p1}, Lzlb;->getIcon()Lwe7;
+    invoke-virtual {v4, v1, v2, v3, v0}, Lh57;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
-    move-result-object p1
+    move-result-object v0
 
-    iget p1, p1, Lwe7;->c:I
-
-    sget-object v0, Lzhg;->a:Ljava/util/ArrayList;
-
-    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p1
-
-    invoke-virtual {v2, p1}, Landroid/widget/TextView;->setCompoundDrawableTintList(Landroid/content/res/ColorStateList;)V
+    iput-object v0, p0, Lr52;->d:Ljava/util/concurrent/ScheduledFuture;
 
     return-void
 .end method
 
-.method public final y(Lud8;)V
-    .locals 1
+.method public final c()Z
+    .locals 3
 
-    check-cast p1, Lq52;
+    iget-object v0, p0, Lr52;->f:Ls52;
 
-    iget-object p1, p1, Lq52;->a:Lqhg;
+    iget-boolean v1, v0, Ls52;->X0:Z
 
-    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iget v0, v0, Ls52;->B0:I
 
-    move-result-object v0
+    const/4 v1, 0x1
 
-    invoke-virtual {p1, v0}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    if-eq v0, v1, :cond_0
+
+    const/4 v2, 0x2
+
+    if-ne v0, v2, :cond_1
+
+    :cond_0
+    return v1
+
+    :cond_1
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final onClosed(Landroid/hardware/camera2/CameraDevice;)V
+    .locals 6
+
+    iget-object v0, p0, Lr52;->f:Ls52;
+
+    const-string v1, "CameraDevice.onClosed()"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Ls52;->v(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Lr52;->f:Ls52;
+
+    iget-object v0, v0, Ls52;->A0:Landroid/hardware/camera2/CameraDevice;
+
+    const/4 v1, 0x0
+
+    const/4 v3, 0x1
+
+    if-nez v0, :cond_0
+
+    move v0, v3
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "Unexpected onClose callback on camera device: "
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    iget-object v0, p0, Lr52;->G0:Landroidx/appcompat/widget/AppCompatTextView;
+    invoke-static {p1, v0}, Lvfa;->m(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    iget-object p1, p0, Lr52;->f:Ls52;
+
+    iget p1, p1, Ls52;->c1:I
+
+    invoke-static {p1}, Lo52;->F(I)I
+
+    move-result p1
+
+    if-eq p1, v3, :cond_4
+
+    const/4 v0, 0x5
+
+    if-eq p1, v0, :cond_4
+
+    const/4 v0, 0x6
+
+    if-eq p1, v0, :cond_2
+
+    const/4 v0, 0x7
+
+    if-ne p1, v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    iget-object v0, p0, Lr52;->f:Ls52;
+
+    iget v0, v0, Ls52;->c1:I
+
+    invoke-static {v0}, Lwy0;->o(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Camera closed while in state: "
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    :goto_1
+    iget-object p1, p0, Lr52;->f:Ls52;
+
+    iget v0, p1, Ls52;->B0:I
+
+    if-eqz v0, :cond_3
+
+    invoke-static {v0}, Ls52;->x(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Camera closed due to error: "
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0, v2}, Ls52;->v(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {p0}, Lr52;->b()V
+
+    return-void
+
+    :cond_3
+    invoke-virtual {p1, v1}, Ls52;->K(Z)V
+
+    return-void
+
+    :cond_4
+    iget-object p1, p0, Lr52;->f:Ls52;
+
+    iget-object p1, p1, Ls52;->G0:Ljava/util/LinkedHashMap;
+
+    invoke-interface {p1}, Ljava/util/Map;->isEmpty()Z
+
+    move-result p1
+
+    invoke-static {v2, p1}, Lvfa;->m(Ljava/lang/String;Z)V
+
+    iget-object p1, p0, Lr52;->f:Ls52;
+
+    invoke-virtual {p1}, Ls52;->t()V
+
+    return-void
+.end method
+
+.method public final onDisconnected(Landroid/hardware/camera2/CameraDevice;)V
+    .locals 3
+
+    const-string v0, "CameraDevice.onDisconnected()"
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lr52;->f:Ls52;
+
+    invoke-virtual {v2, v0, v1}, Ls52;->v(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, p1, v0}, Lr52;->onError(Landroid/hardware/camera2/CameraDevice;I)V
+
+    return-void
+.end method
+
+.method public final onError(Landroid/hardware/camera2/CameraDevice;I)V
+    .locals 11
+
+    iget-object v0, p0, Lr52;->f:Ls52;
+
+    iput-object p1, v0, Ls52;->A0:Landroid/hardware/camera2/CameraDevice;
+
+    iput p2, v0, Ls52;->B0:I
+
+    iget-object v0, v0, Ls52;->b1:Li9c;
+
+    iget-object v1, v0, Li9c;->b:Ljava/lang/Object;
+
+    check-cast v1, Ls52;
+
+    const-string v2, "Camera receive onErrorCallback"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v3}, Ls52;->v(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {v0}, Li9c;->A()V
+
+    iget-object v0, p0, Lr52;->f:Ls52;
+
+    iget v0, v0, Ls52;->c1:I
+
+    invoke-static {v0}, Lo52;->F(I)I
+
+    move-result v0
+
+    const-string v1, " while in "
+
+    const-string v2, " failed with "
+
+    const-string v4, "CameraDevice.onError(): "
+
+    const-string v5, "Camera2CameraImpl"
+
+    const/4 v6, 0x1
+
+    if-eq v0, v6, :cond_7
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    iget-object p2, p0, Lr52;->f:Ls52;
+
+    iget p2, p2, Ls52;->c1:I
+
+    invoke-static {p2}, Lwy0;->o(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    const-string v0, "onError() should not be possible from state: "
+
+    invoke-virtual {v0, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/hardware/camera2/CameraDevice;->getId()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p2}, Ls52;->x(I)Ljava/lang/String;
+
+    move-result-object v7
+
+    iget-object v8, p0, Lr52;->f:Ls52;
+
+    iget v8, v8, Ls52;->c1:I
+
+    invoke-static {v8}, Lwy0;->m(I)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v4, v0, v2, v7, v1}, Lo52;->z(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " state. Will attempt recovering from error."
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v5, v0}, Lw8g;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lr52;->f:Ls52;
+
+    iget v0, v0, Ls52;->c1:I
+
+    const/16 v1, 0x9
+
+    const/4 v2, 0x0
+
+    const/16 v4, 0x8
+
+    if-eq v0, v1, :cond_1
+
+    iget-object v0, p0, Lr52;->f:Ls52;
+
+    iget v0, v0, Ls52;->c1:I
+
+    const/16 v1, 0xa
+
+    if-eq v0, v1, :cond_1
+
+    iget-object v0, p0, Lr52;->f:Ls52;
+
+    iget v0, v0, Ls52;->c1:I
+
+    const/16 v1, 0xb
+
+    if-eq v0, v1, :cond_1
+
+    iget-object v0, p0, Lr52;->f:Ls52;
+
+    iget v0, v0, Ls52;->c1:I
+
+    if-eq v0, v4, :cond_1
+
+    iget-object v0, p0, Lr52;->f:Ls52;
+
+    iget v0, v0, Ls52;->c1:I
+
+    const/4 v1, 0x7
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v2
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v0, v6
+
+    :goto_1
+    iget-object v1, p0, Lr52;->f:Ls52;
+
+    iget v1, v1, Ls52;->c1:I
+
+    invoke-static {v1}, Lwy0;->o(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v7, "Attempt to handle open error from non open state: "
+
+    invoke-virtual {v7, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lvfa;->m(Ljava/lang/String;Z)V
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x2
+
+    if-eq p2, v6, :cond_3
+
+    if-eq p2, v1, :cond_3
+
+    const/4 v7, 0x4
+
+    if-eq p2, v7, :cond_3
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Error observed on open (or opening) camera device "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Landroid/hardware/camera2/CameraDevice;->getId()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, ": "
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {p2}, Ls52;->x(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " closing camera."
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v5, p1}, Lw8g;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 p1, 0x6
+
+    if-ne p2, v0, :cond_2
+
+    const/4 p2, 0x5
+
+    goto :goto_2
+
+    :cond_2
+    move p2, p1
+
+    :goto_2
+    iget-object v0, p0, Lr52;->f:Ls52;
+
+    new-instance v1, Lgf0;
+
+    invoke-direct {v1, p2, v3}, Lgf0;-><init>(ILjava/lang/Throwable;)V
+
+    invoke-virtual {v0, p1, v1, v6}, Ls52;->F(ILgf0;Z)V
+
+    iget-object p1, p0, Lr52;->f:Ls52;
+
+    invoke-virtual {p1}, Ls52;->s()V
+
+    return-void
+
+    :cond_3
+    invoke-virtual {p1}, Landroid/hardware/camera2/CameraDevice;->getId()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p2}, Ls52;->x(I)Ljava/lang/String;
+
+    move-result-object v7
+
+    const-string v8, "] after error["
+
+    const-string v9, "]"
+
+    const-string v10, "Attempt to reopen camera["
+
+    invoke-static {v10, p1, v8, v7, v9}, Lo52;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v5, p1}, Lw8g;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lr52;->f:Ls52;
+
+    iget v5, p1, Ls52;->B0:I
+
+    if-eqz v5, :cond_4
+
+    move v2, v6
+
+    :cond_4
+    const-string v5, "Can only reopen camera device after error if the camera device is actually in an error state."
+
+    invoke-static {v5, v2}, Lvfa;->m(Ljava/lang/String;Z)V
+
+    if-eq p2, v6, :cond_6
+
+    if-eq p2, v1, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    move v0, v6
+
+    goto :goto_3
+
+    :cond_6
+    move v0, v1
+
+    :goto_3
+    new-instance p2, Lgf0;
+
+    invoke-direct {p2, v0, v3}, Lgf0;-><init>(ILjava/lang/Throwable;)V
+
+    invoke-virtual {p1, v4, p2, v6}, Ls52;->F(ILgf0;Z)V
+
+    invoke-virtual {p1}, Ls52;->s()V
+
+    return-void
+
+    :cond_7
+    :pswitch_1
+    invoke-virtual {p1}, Landroid/hardware/camera2/CameraDevice;->getId()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p2}, Ls52;->x(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    iget-object v0, p0, Lr52;->f:Ls52;
+
+    iget v0, v0, Ls52;->c1:I
+
+    invoke-static {v0}, Lwy0;->m(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v4, p1, v2, p2, v1}, Lo52;->z(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, " state. Will finish closing camera."
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v5, p1}, Lw8g;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lr52;->f:Ls52;
+
+    invoke-virtual {p1}, Ls52;->s()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x5
+        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onOpened(Landroid/hardware/camera2/CameraDevice;)V
+    .locals 5
+
+    iget-object v0, p0, Lr52;->f:Ls52;
+
+    const-string v1, "CameraDevice.onOpened()"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Ls52;->v(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Lr52;->f:Ls52;
+
+    iput-object p1, v0, Ls52;->A0:Landroid/hardware/camera2/CameraDevice;
+
+    const/4 v1, 0x0
+
+    iput v1, v0, Ls52;->B0:I
+
+    iget-object v1, p0, Lr52;->e:Lp52;
+
+    const-wide/16 v3, -0x1
+
+    iput-wide v3, v1, Lp52;->b:J
+
+    iget v0, v0, Ls52;->c1:I
+
+    invoke-static {v0}, Lo52;->F(I)I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_3
+
+    const/4 v1, 0x5
+
+    if-eq v0, v1, :cond_3
+
+    const/4 v1, 0x6
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v1, 0x7
+
+    if-eq v0, v1, :cond_1
+
+    const/16 v1, 0x8
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    iget-object v0, p0, Lr52;->f:Ls52;
+
+    iget v0, v0, Ls52;->c1:I
+
+    invoke-static {v0}, Lwy0;->o(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "onOpened() should not be possible from state: "
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Lr52;->f:Ls52;
+
+    const/16 v1, 0xa
+
+    invoke-virtual {v0, v1}, Ls52;->G(I)V
+
+    iget-object v0, p0, Lr52;->f:Ls52;
+
+    iget-object v0, v0, Ls52;->K0:Lja2;
+
+    invoke-virtual {p1}, Landroid/hardware/camera2/CameraDevice;->getId()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object v1, p0, Lr52;->f:Ls52;
+
+    iget-object v2, v1, Ls52;->J0:Lb52;
+
+    iget-object v1, v1, Ls52;->A0:Landroid/hardware/camera2/CameraDevice;
+
+    invoke-virtual {v1}, Landroid/hardware/camera2/CameraDevice;->getId()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Lb52;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, p1, v1}, Lja2;->e(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, p0, Lr52;->f:Ls52;
+
+    invoke-virtual {p1}, Ls52;->D()V
+
+    :cond_2
+    return-void
+
+    :cond_3
+    iget-object p1, p0, Lr52;->f:Ls52;
+
+    iget-object p1, p1, Ls52;->G0:Ljava/util/LinkedHashMap;
+
+    invoke-interface {p1}, Ljava/util/Map;->isEmpty()Z
+
+    move-result p1
+
+    invoke-static {v2, p1}, Lvfa;->m(Ljava/lang/String;Z)V
+
+    iget-object p1, p0, Lr52;->f:Ls52;
+
+    iget-object p1, p1, Ls52;->A0:Landroid/hardware/camera2/CameraDevice;
+
+    invoke-virtual {p1}, Landroid/hardware/camera2/CameraDevice;->close()V
+
+    iget-object p1, p0, Lr52;->f:Ls52;
+
+    iput-object v2, p1, Ls52;->A0:Landroid/hardware/camera2/CameraDevice;
 
     return-void
 .end method

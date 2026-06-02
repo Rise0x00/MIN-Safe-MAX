@@ -1,61 +1,233 @@
 .class public final Lk67;
-.super Lxl5;
+.super Lgj3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lk67;
+# instance fields
+.field public final synthetic b:I
+
+.field public final c:Lli8;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lc88;I)V
     .locals 1
 
-    new-instance v0, Lk67;
+    iput p2, p0, Lk67;->b:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    packed-switch p2, :pswitch_data_0
 
-    sput-object v0, Lk67;->a:Lk67;
+    invoke-direct {p0, p1}, Lfj3;-><init>(Lc88;)V
+
+    new-instance p2, Liu;
+
+    invoke-interface {p1}, Lc88;->d()Lt2f;
+
+    move-result-object p1
+
+    const/4 v0, 0x1
+
+    invoke-direct {p2, p1, v0}, Liu;-><init>(Lt2f;I)V
+
+    iput-object p2, p0, Lk67;->c:Lli8;
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0, p1}, Lfj3;-><init>(Lc88;)V
+
+    new-instance p2, Liu;
+
+    invoke-interface {p1}, Lc88;->d()Lt2f;
+
+    move-result-object p1
+
+    const/4 v0, 0x2
+
+    invoke-direct {p2, p1, v0}, Liu;-><init>(Lt2f;I)V
+
+    iput-object p2, p0, Lk67;->c:Lli8;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final d()Lt2f;
     .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lk67;->b:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lk67;->c:Lli8;
 
-    :cond_0
-    instance-of p1, p1, Lk67;
+    check-cast v0, Liu;
 
-    if-nez p1, :cond_1
+    return-object v0
 
-    const/4 p1, 0x0
+    :pswitch_0
+    iget-object v0, p0, Lk67;->c:Lli8;
+
+    check-cast v0, Liu;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final e()Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lk67;->b:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f(Ljava/lang/Object;)I
+    .locals 1
+
+    iget v0, p0, Lk67;->b:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Ljava/util/LinkedHashSet;
+
+    invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
+
+    move-result p1
 
     return p1
 
-    :cond_1
-    return v0
+    :pswitch_0
+    check-cast p1, Ljava/util/HashSet;
+
+    invoke-virtual {p1}, Ljava/util/HashSet;->size()I
+
+    move-result p1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
+.method public final k(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const v0, 0x3e8b5524
+    iget p1, p0, Lk67;->b:I
 
-    return v0
+    packed-switch p1, :pswitch_data_0
+
+    new-instance p1, Ljava/util/LinkedHashSet;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
+
+    return-object p1
+
+    :pswitch_0
+    new-instance p1, Ljava/util/HashSet;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final l(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const-string v0, "HidePlaceholderSurnameEvent"
+    iget v0, p0, Lk67;->b:I
 
-    return-object v0
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Ljava/util/LinkedHashSet;
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Ljava/util/HashSet;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final m(Ljava/lang/Object;ILjava/lang/Object;)V
+    .locals 0
+
+    iget p2, p0, Lk67;->b:I
+
+    packed-switch p2, :pswitch_data_0
+
+    check-cast p1, Ljava/util/LinkedHashSet;
+
+    invoke-virtual {p1, p3}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    return-void
+
+    :pswitch_0
+    check-cast p1, Ljava/util/HashSet;
+
+    invoke-virtual {p1, p3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

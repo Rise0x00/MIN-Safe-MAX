@@ -2,89 +2,54 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvwa;
 
-
-# static fields
-.field public static final a:Lrui;
+# instance fields
+.field public final a:Lyn8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/view/Window;Landroid/view/View;)V
+    .locals 2
 
-    new-instance v0, Lrui;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lr5e;
 
-    sput-object v0, Lrui;->a:Lrui;
+    invoke-direct {v0, p2}, Lr5e;-><init>(Landroid/view/View;)V
 
-    new-instance v0, Lbri;
+    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/4 v1, 0x1
+    const/16 v1, 0x23
 
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+    if-lt p2, v1, :cond_0
 
-    const-class v1, Lpri;
+    new-instance p2, Lqui;
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+    invoke-direct {p2, p1, v0}, Lqui;-><init>(Landroid/view/Window;Lr5e;)V
 
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    iput-object p2, p0, Lrui;->a:Lyn8;
 
     return-void
-.end method
 
+    :cond_0
+    const/16 v1, 0x1e
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    if-lt p2, v1, :cond_1
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    new-instance p2, Lpui;
 
-    move-result-object p1
+    invoke-direct {p2, p1, v0}, Lpui;-><init>(Landroid/view/Window;Lr5e;)V
 
-    throw p1
+    iput-object p2, p0, Lrui;->a:Lyn8;
+
+    return-void
+
+    :cond_1
+    new-instance p2, Loui;
+
+    invoke-direct {p2, p1, v0}, Loui;-><init>(Landroid/view/Window;Lr5e;)V
+
+    iput-object p2, p0, Lrui;->a:Lyn8;
+
+    return-void
 .end method

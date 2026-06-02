@@ -2,10 +2,13 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lg88;
-
 
 # virtual methods
-.method public abstract d(Lj88;Ln78;)V
+.method public abstract a(Lvk5;Ljava/lang/Object;)V
+.end method
+
+.method public abstract b(Lbn4;)Ljava/lang/Object;
+.end method
+
+.method public abstract d()Lt2f;
 .end method

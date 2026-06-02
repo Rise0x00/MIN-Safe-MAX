@@ -1,158 +1,111 @@
 .class public final Lue6;
-.super Ljava/lang/Object;
+.super Licg;
 .source "SourceFile"
 
 # interfaces
-.implements La7c;
+.implements Lye6;
 
 
 # instance fields
-.field public final a:Le9g;
+.field public final A0:Lre6;
 
-.field public final b:Ll5h;
+.field public B0:J
 
-.field public final c:Lo58;
+.field public final Z:Lg3f;
 
-.field public final d:Lo58;
-
-.field public final e:Li7f;
-
-.field public final f:Lold;
-
-.field public g:Lzb4;
-
-.field public h:Z
+.field public final z0:Ld3f;
 
 
 # direct methods
-.method public constructor <init>(Le9g;Lo58;)V
-    .locals 7
+.method public constructor <init>(Lg3f;Ld3f;Lre6;)V
+    .locals 0
 
-    sget-object v0, Ldg6;->a:Ldg6;
+    invoke-direct {p0}, Licg;-><init>()V
 
-    new-instance v1, Ll5h;
+    iput-object p1, p0, Lue6;->Z:Lg3f;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    iput-object p2, p0, Lue6;->z0:Ld3f;
 
-    move-result-object v2
-
-    const/16 v3, 0x9e
-
-    invoke-virtual {v2, v3}, Lr5;->d(I)Ln8g;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v3
-
-    const/16 v4, 0x46
-
-    invoke-virtual {v3, v4}, Lr5;->d(I)Ln8g;
-
-    move-result-object v3
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v4
-
-    const/16 v5, 0x77
-
-    invoke-virtual {v4, v5}, Lr5;->d(I)Ln8g;
-
-    move-result-object v4
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v5
-
-    const/16 v6, 0xd
-
-    invoke-virtual {v5, v6}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lym5;
-
-    invoke-direct {v1, v2, v3, v4, v5}, Ll5h;-><init>(Lo58;Lo58;Lo58;Lym5;)V
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v0
-
-    const/16 v2, 0x1d5
-
-    invoke-virtual {v0, v2}, Lr5;->d(I)Ln8g;
-
-    move-result-object v0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lue6;->a:Le9g;
-
-    iput-object v1, p0, Lue6;->b:Ll5h;
-
-    iput-object v0, p0, Lue6;->c:Lo58;
-
-    iput-object p2, p0, Lue6;->d:Lo58;
-
-    const p1, 0x7fffffff
-
-    const/4 p2, 0x5
-
-    const/4 v0, 0x0
-
-    invoke-static {v0, p1, p2}, Lj7f;->b(III)Li7f;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lue6;->e:Li7f;
-
-    new-instance p2, Lold;
-
-    invoke-direct {p2, p1}, Lold;-><init>(Llfa;)V
-
-    iput-object p2, p0, Lue6;->f:Lold;
+    iput-object p3, p0, Lue6;->A0:Lre6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final b()V
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lue6;->A0:Lre6;
 
-    iput-object v0, p0, Lue6;->g:Lzb4;
+    invoke-virtual {v0}, Lre6;->cancel()V
+
+    iget-object v0, p0, Lue6;->Z:Lg3f;
+
+    invoke-virtual {v0}, Lg3f;->b()V
 
     return-void
 .end method
 
-.method public final b(Lq6c;)V
+.method public final cancel()V
     .locals 1
 
-    iget-object v0, p0, Lue6;->a:Le9g;
+    invoke-super {p0}, Licg;->cancel()V
 
-    invoke-virtual {v0, p1}, Le9g;->O(Lq6c;)V
+    iget-object v0, p0, Lue6;->A0:Lre6;
+
+    invoke-virtual {v0}, Lre6;->cancel()V
 
     return-void
 .end method
 
-.method public final d(J)V
-    .locals 1
+.method public final e(Ljava/lang/Object;)V
+    .locals 4
 
-    iget-object v0, p0, Lue6;->a:Le9g;
+    iget-wide v0, p0, Lue6;->B0:J
 
-    invoke-virtual {v0, p1, p2}, Le9g;->N(J)V
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lue6;->B0:J
+
+    iget-object v0, p0, Lue6;->Z:Lg3f;
+
+    invoke-virtual {v0, p1}, Lg3f;->e(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final e(Lkotlinx/coroutines/internal/ContextScope;)V
-    .locals 0
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 5
 
-    iput-object p1, p0, Lue6;->g:Lzb4;
+    sget-object v0, Lkk5;->a:Lkk5;
+
+    invoke-virtual {p0, v0}, Licg;->h(Lhcg;)V
+
+    iget-wide v0, p0, Lue6;->B0:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v4, v0, v2
+
+    if-eqz v4, :cond_0
+
+    iput-wide v2, p0, Lue6;->B0:J
+
+    invoke-virtual {p0, v0, v1}, Licg;->f(J)V
+
+    :cond_0
+    iget-object v0, p0, Lue6;->A0:Lre6;
+
+    const-wide/16 v1, 0x1
+
+    invoke-virtual {v0, v1, v2}, Lre6;->g(J)V
+
+    iget-object v0, p0, Lue6;->z0:Ld3f;
+
+    invoke-virtual {v0, p1}, Ld3f;->e(Ljava/lang/Object;)V
 
     return-void
 .end method

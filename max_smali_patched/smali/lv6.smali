@@ -1,138 +1,201 @@
-.class public Llv6;
-.super Lfl0;
+.class public final Llv6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final u0:[I
+.field public final a:Lkv6;
+
+.field public b:I
+
+.field public c:Z
+
+.field public final d:Z
 
 
 # direct methods
-.method public constructor <init>(Ljj9;Lxdc;Lyna;)V
+.method public constructor <init>(Lkv6;IZZ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Llv6;->a:Lkv6;
+
+    iput p2, p0, Llv6;->b:I
+
+    iput-boolean p3, p0, Llv6;->c:Z
+
+    iput-boolean p4, p0, Llv6;->d:Z
+
+    return-void
+.end method
+
+.method public static a(Llv6;II)Llv6;
     .locals 2
 
-    invoke-direct {p0, p1, p2, p3}, Lfl0;-><init>(Ljj9;Lxdc;Lydc;)V
+    iget-object v0, p0, Llv6;->a:Lkv6;
 
-    iget-object p1, p2, Lxdc;->c:Landroid/util/SparseIntArray;
+    and-int/lit8 p2, p2, 0x4
 
-    const/4 p2, 0x0
+    if-eqz p2, :cond_0
 
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Landroid/util/SparseIntArray;->size()I
-
-    move-result p3
-
-    new-array p3, p3, [I
-
-    iput-object p3, p0, Llv6;->u0:[I
-
-    invoke-virtual {p1}, Landroid/util/SparseIntArray;->size()I
-
-    move-result p3
-
-    :goto_0
-    if-ge p2, p3, :cond_1
-
-    iget-object v0, p0, Llv6;->u0:[I
-
-    invoke-virtual {p1, p2}, Landroid/util/SparseIntArray;->keyAt(I)I
-
-    move-result v1
-
-    aput v1, v0, p2
-
-    add-int/lit8 p2, p2, 0x1
+    iget-boolean p2, p0, Llv6;->c:Z
 
     goto :goto_0
 
     :cond_0
-    new-array p1, p2, [I
+    const/4 p2, 0x1
 
-    iput-object p1, p0, Llv6;->u0:[I
+    :goto_0
+    iget-boolean v1, p0, Llv6;->d:Z
 
-    :cond_1
-    iget-object p1, p0, Lfl0;->b:Ljj9;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-interface {p1, p0}, Ljj9;->a(Lij9;)V
+    new-instance p0, Llv6;
 
-    iget-object p1, p0, Lfl0;->t0:Lydc;
+    invoke-direct {p0, v0, p1, p2, v1}, Llv6;-><init>(Lkv6;IZZ)V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public final e(I)Ljava/lang/Object;
-    .locals 0
-
-    new-array p1, p1, [B
-
-    return-object p1
-.end method
-
-.method public final bridge synthetic g(Ljava/lang/Object;)V
-    .locals 0
-
-    check-cast p1, [B
-
-    return-void
-.end method
-
-.method public final i(I)I
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    if-lez p1, :cond_2
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Llv6;->u0:[I
+    if-ne p0, p1, :cond_0
 
-    array-length v1, v0
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Llv6;
 
     const/4 v2, 0x0
 
-    :goto_0
-    if-ge v2, v1, :cond_1
+    if-nez v1, :cond_1
 
-    aget v3, v0, v2
-
-    if-lt v3, p1, :cond_0
-
-    return v3
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
+    return v2
 
     :cond_1
-    return p1
+    check-cast p1, Llv6;
+
+    iget-object v1, p0, Llv6;->a:Lkv6;
+
+    iget-object v3, p1, Llv6;->a:Lkv6;
+
+    invoke-static {v1, v3}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
 
     :cond_2
-    new-instance v0, Lcom/facebook/imagepipeline/memory/BasePool$InvalidSizeException;
+    iget v1, p0, Llv6;->b:I
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget v3, p1, Llv6;->b:I
 
-    move-result-object p1
+    if-eq v1, v3, :cond_3
 
-    invoke-direct {v0, p1}, Lcom/facebook/imagepipeline/memory/BasePool$InvalidSizeException;-><init>(Ljava/lang/Integer;)V
+    return v2
 
-    throw v0
+    :cond_3
+    iget-boolean v1, p0, Llv6;->c:Z
+
+    iget-boolean v3, p1, Llv6;->c:Z
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-boolean v1, p0, Llv6;->d:Z
+
+    iget-boolean p1, p1, Llv6;->d:Z
+
+    if-eq v1, p1, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
 .end method
 
-.method public final j(Ljava/lang/Object;)I
-    .locals 0
+.method public final hashCode()I
+    .locals 3
 
-    check-cast p1, [B
+    iget-object v0, p0, Llv6;->a:Lkv6;
 
-    array-length p1, p1
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    return p1
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Llv6;->b:I
+
+    invoke-static {v2, v0, v1}, Lrtc;->n(III)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Llv6;->c:Z
+
+    invoke-static {v0, v1, v2}, Lwph;->b(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Llv6;->d:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final k(I)I
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    return p1
+    iget v0, p0, Llv6;->b:I
+
+    iget-boolean v1, p0, Llv6;->c:Z
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "GalleryAlbum(type="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, p0, Llv6;->a:Lkv6;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v3, ", totalCount="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ", isLoaded="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", hasImages="
+
+    const-string v3, ")"
+
+    iget-boolean v4, p0, Llv6;->d:Z
+
+    invoke-static {v0, v3, v2, v1, v4}, Lo52;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

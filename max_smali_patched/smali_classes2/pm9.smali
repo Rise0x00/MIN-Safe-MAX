@@ -1,79 +1,64 @@
 .class public final Lpm9;
-.super Ljava/io/OutputStream;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lum9;
 
-# instance fields
-.field public final a:Ly9h;
 
-.field public final b:Ljava/security/MessageDigest;
+# static fields
+.field public static final a:Lpm9;
 
 
 # direct methods
-.method public constructor <init>(Ly9h;Ljava/security/MessageDigest;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
+    new-instance v0, Lpm9;
 
-    iput-object p1, p0, Lpm9;->a:Ly9h;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lpm9;->b:Ljava/security/MessageDigest;
+    sput-object v0, Lpm9;->a:Lpm9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget-object v0, p0, Lpm9;->a:Ly9h;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Ly9h;->close()V
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lpm9;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
 .end method
 
-.method public final flush()V
+.method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lpm9;->a:Ly9h;
+    const v0, -0x45112e64
 
-    invoke-virtual {v0}, Ly9h;->flush()V
-
-    return-void
+    return v0
 .end method
 
-.method public final write(I)V
+.method public final toString()Ljava/lang/String;
     .locals 1
 
-    .line 1
-    iget-object v0, p0, Lpm9;->a:Ly9h;
+    const-string v0, "OnDisableClicked"
 
-    invoke-virtual {v0, p1}, Ly9h;->write(I)V
-
-    .line 2
-    iget-object v0, p0, Lpm9;->b:Ljava/security/MessageDigest;
-
-    int-to-byte p1, p1
-
-    invoke-virtual {v0, p1}, Ljava/security/MessageDigest;->update(B)V
-
-    return-void
-.end method
-
-.method public final write([BII)V
-    .locals 1
-
-    .line 3
-    iget-object v0, p0, Lpm9;->a:Ly9h;
-
-    invoke-virtual {v0, p1, p2, p3}, Ly9h;->write([BII)V
-
-    .line 4
-    iget-object v0, p0, Lpm9;->b:Ljava/security/MessageDigest;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/security/MessageDigest;->update([BII)V
-
-    return-void
+    return-object v0
 .end method

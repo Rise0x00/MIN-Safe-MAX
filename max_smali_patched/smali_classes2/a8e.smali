@@ -1,75 +1,107 @@
 .class public final La8e;
-.super Lnth;
+.super Lc8e;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Lz28;
-
-
 # instance fields
-.field public final b:Lo58;
+.field public final X:Lgsd;
 
-.field public final c:Lo58;
-
-.field public final d:Lx07;
-
-.field public final o:Lcm5;
+.field public final Y:Ldtb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lgm6;Len7;Ldxe;Ljava/util/ArrayList;)V
+    .locals 6
 
-    new-instance v0, Lhfa;
+    invoke-direct {p0, p1, p2, p3, p4}, Lc8e;-><init>(Lgm6;Ljava/util/List;Lexe;Ljava/util/List;)V
 
-    const-string v1, "enableSafeModeJob"
+    const/4 p1, 0x0
 
-    const-string v2, "getEnableSafeModeJob()Lkotlinx/coroutines/Job;"
+    invoke-interface {p2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    const-class v3, La8e;
+    move-result-object p1
 
-    invoke-direct {v0, v3, v1, v2}, Lhfa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    check-cast p1, Llq0;
 
-    sget-object v1, Lctd;->a:Ldtd;
+    iget-object p1, p1, Llq0;->a:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    const/4 v1, 0x1
+    iget-wide v4, p3, Ldxe;->e:J
 
-    new-array v1, v1, [Lz28;
+    const-wide/16 p1, 0x0
 
-    const/4 v2, 0x0
+    cmp-long p1, v4, p1
 
-    aput-object v0, v1, v2
+    const/4 p2, 0x0
 
-    sput-object v1, La8e;->X:[Lz28;
+    if-gtz p1, :cond_0
+
+    move-object v0, p2
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lgsd;
+
+    const/4 v1, 0x0
+
+    iget-wide v2, p3, Ldxe;->d:J
+
+    invoke-direct/range {v0 .. v5}, Lgsd;-><init>(Ljava/lang/String;JJ)V
+
+    :goto_0
+    iput-object v0, p0, La8e;->X:Lgsd;
+
+    if-eqz v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p2, Ldtb;
+
+    new-instance v0, Lgsd;
+
+    const/4 v1, 0x0
+
+    const-wide/16 v2, 0x0
+
+    const-wide/16 v4, -0x1
+
+    invoke-direct/range {v0 .. v5}, Lgsd;-><init>(Ljava/lang/String;JJ)V
+
+    const/16 p1, 0x8
+
+    invoke-direct {p2, p1, v0}, Ldtb;-><init>(ILjava/lang/Object;)V
+
+    :goto_1
+    iput-object p2, p0, La8e;->Y:Ldtb;
 
     return-void
 .end method
 
-.method public constructor <init>(Lo58;Lo58;)V
-    .locals 0
 
-    invoke-direct {p0}, Lnth;-><init>()V
+# virtual methods
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-    iput-object p1, p0, La8e;->b:Lo58;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, La8e;->c:Lo58;
+    return-object v0
+.end method
 
-    invoke-static {}, Lhlj;->b()Lx07;
+.method public final c()Lfj4;
+    .locals 1
 
-    move-result-object p1
+    iget-object v0, p0, La8e;->Y:Ldtb;
 
-    iput-object p1, p0, La8e;->d:Lx07;
+    return-object v0
+.end method
 
-    new-instance p1, Lcm5;
+.method public final e()Lgsd;
+    .locals 1
 
-    const/4 p2, 0x0
+    iget-object v0, p0, La8e;->X:Lgsd;
 
-    invoke-direct {p1, p2}, Lcm5;-><init>(I)V
-
-    iput-object p1, p0, La8e;->o:Lcm5;
-
-    return-void
+    return-object v0
 .end method

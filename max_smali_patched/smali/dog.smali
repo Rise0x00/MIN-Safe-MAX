@@ -1,204 +1,168 @@
-.class public final Ldog;
-.super Lvuh;
+.class public final synthetic Ldog;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public b:Z
+.field public final synthetic b:Ljwi;
 
-.field public c:I
+.field public final synthetic c:Llo;
 
-.field public final synthetic d:Ljava/lang/Object;
+.field public final synthetic d:Lrog;
+
+.field public final synthetic o:Lxng;
 
 
 # direct methods
-.method public constructor <init>(Lb39;)V
+.method public synthetic constructor <init>(Ljwi;Llo;Lrog;Lxng;)V
     .locals 1
 
+    .line 1
     const/4 v0, 0x1
 
     iput v0, p0, Ldog;->a:I
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Ldog;->d:Ljava/lang/Object;
+    iput-object p1, p0, Ldog;->b:Ljwi;
 
-    const/4 p1, 0x0
+    iput-object p2, p0, Ldog;->c:Llo;
 
-    .line 3
-    iput-boolean p1, p0, Ldog;->b:Z
+    iput-object p3, p0, Ldog;->d:Lrog;
 
-    .line 4
-    iput p1, p0, Ldog;->c:I
+    iput-object p4, p0, Ldog;->o:Lxng;
 
     return-void
 .end method
 
-.method public constructor <init>(Leog;I)V
+.method public synthetic constructor <init>(Ljwi;Lrog;Lxng;Llo;)V
     .locals 1
 
+    .line 2
     const/4 v0, 0x0
 
     iput v0, p0, Ldog;->a:I
 
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
-    iput-object p1, p0, Ldog;->d:Ljava/lang/Object;
+    iput-object p1, p0, Ldog;->b:Ljwi;
 
-    iput p2, p0, Ldog;->c:I
+    iput-object p2, p0, Ldog;->d:Lrog;
 
-    const/4 p1, 0x0
+    iput-object p3, p0, Ldog;->o:Lxng;
 
-    .line 7
-    iput-boolean p1, p0, Ldog;->b:Z
+    iput-object p4, p0, Ldog;->c:Llo;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 1
+.method public final run()V
+    .locals 6
 
     iget v0, p0, Ldog;->a:I
 
     packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ldog;->c:Llo;
+
+    invoke-virtual {v0}, Llo;->u()Lp2;
+
+    move-result-object v1
+
+    iget-object v2, p0, Ldog;->b:Ljwi;
+
+    if-eqz v1, :cond_0
+
+    iget-object v3, v2, Ljwi;->c:Ljava/lang/Object;
+
+    check-cast v3, Lhog;
+
+    iget-object v3, v3, Lhog;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    iget-object v1, p0, Ldog;->d:Lrog;
+
+    invoke-interface {v1}, Lrog;->d()Lqog;
+
+    move-result-object v3
+
+    new-instance v4, Ldog;
+
+    iget-object v5, p0, Ldog;->o:Lxng;
+
+    invoke-direct {v4, v2, v1, v5, v0}, Ldog;-><init>(Ljwi;Lrog;Lxng;Llo;)V
+
+    invoke-virtual {v3, v4}, Lqog;->a(Ljava/lang/Runnable;)V
 
     return-void
 
     :pswitch_0
-    const/4 v0, 0x1
+    iget-object v0, p0, Ldog;->b:Ljwi;
 
-    iput-boolean v0, p0, Ldog;->b:Z
+    iget-object v1, p0, Ldog;->d:Lrog;
 
-    return-void
+    iget-object v2, p0, Ldog;->o:Lxng;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    iget-object v3, p0, Ldog;->c:Llo;
 
-.method public final b()V
-    .locals 2
+    :try_start_0
+    invoke-interface {v1, v2}, Lrog;->b(Lxng;)V
 
-    iget v0, p0, Ldog;->a:I
+    iget-object v0, v0, Ljwi;->c:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Lhog;
 
-    iget-boolean v0, p0, Ldog;->b:Z
-
-    if-eqz v0, :cond_0
+    invoke-static {v0, v3}, Lhog;->a(Lhog;Llo;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_0
-    const/4 v0, 0x1
+    :catch_0
+    move-exception v0
 
-    iput-boolean v0, p0, Ldog;->b:Z
+    sget-object v2, Lhog;->H0:Ljava/lang/String;
 
-    iget-object v0, p0, Ldog;->d:Ljava/lang/Object;
+    const-string v4, "failure to run task %s"
 
-    check-cast v0, Lb39;
+    filled-new-array {v3}, [Ljava/lang/Object;
 
-    iget-object v0, v0, Lb39;->o:Ljava/lang/Object;
+    move-result-object v3
 
-    check-cast v0, Luuh;
+    invoke-static {v2, v0, v4, v3}, Lnm4;->o0(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_1
+    new-instance v2, Leng;
 
-    invoke-interface {v0}, Luuh;->b()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    :cond_1
+    move-result-object v0
+
+    const/4 v3, 0x0
+
+    const-string v4, "app.exception"
+
+    invoke-direct {v2, v4, v0, v3}, Leng;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v1, v2}, Lrog;->e(Leng;)V
+
     :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ldog;->d:Ljava/lang/Object;
-
-    check-cast v0, Leog;
-
-    iget-object v0, v0, Leog;->a:Landroidx/appcompat/widget/Toolbar;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c()V
-    .locals 3
-
-    iget v0, p0, Ldog;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Ldog;->c:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Ldog;->c:I
-
-    iget-object v1, p0, Ldog;->d:Ljava/lang/Object;
-
-    check-cast v1, Lb39;
-
-    iget-object v2, v1, Lb39;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    if-ne v0, v2, :cond_1
-
-    iget-object v0, v1, Lb39;->o:Ljava/lang/Object;
-
-    check-cast v0, Luuh;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Luuh;->c()V
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput v0, p0, Ldog;->c:I
-
-    iput-boolean v0, p0, Ldog;->b:Z
-
-    iput-boolean v0, v1, Lb39;->c:Z
-
-    :cond_1
-    return-void
-
-    :pswitch_0
-    iget-boolean v0, p0, Ldog;->b:Z
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p0, Ldog;->d:Ljava/lang/Object;
-
-    check-cast v0, Leog;
-
-    iget-object v0, v0, Leog;->a:Landroidx/appcompat/widget/Toolbar;
-
-    iget v1, p0, Ldog;->c:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_2
     return-void
 
     :pswitch_data_0

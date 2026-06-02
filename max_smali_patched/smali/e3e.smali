@@ -1,74 +1,54 @@
-.class public final Le3e;
-.super Lnu7;
+.class public final synthetic Le3e;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic b:Lf1e;
+.field public final synthetic a:Landroidx/recyclerview/widget/RecyclerView;
+
+.field public final synthetic b:I
+
+.field public final synthetic c:Ljava/lang/Runnable;
+
+.field public final synthetic d:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>([Ljava/lang/String;Lf1e;)V
+.method public synthetic constructor <init>(ILandroidx/recyclerview/widget/RecyclerView;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
     .locals 0
 
-    iput-object p2, p0, Le3e;->b:Lf1e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Lnu7;-><init>([Ljava/lang/String;)V
+    iput-object p2, p0, Le3e;->a:Landroidx/recyclerview/widget/RecyclerView;
+
+    iput p1, p0, Le3e;->b:I
+
+    iput-object p3, p0, Le3e;->c:Ljava/lang/Runnable;
+
+    iput-object p4, p0, Le3e;->d:Ljava/lang/Runnable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/Set;)V
-    .locals 3
+.method public final run()V
+    .locals 4
 
-    invoke-static {}, Ljs;->c()Ljs;
+    iget v0, p0, Le3e;->b:I
 
-    move-result-object p1
+    add-int/lit8 v0, v0, 0x1
 
-    new-instance v0, Lk9b;
+    iget-object v1, p0, Le3e;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    const/16 v1, 0x13
+    iget-object v2, p0, Le3e;->c:Ljava/lang/Runnable;
 
-    iget-object v2, p0, Le3e;->b:Lf1e;
+    iget-object v3, p0, Le3e;->d:Ljava/lang/Runnable;
 
-    invoke-direct {v0, v1, v2}, Lk9b;-><init>(ILjava/lang/Object;)V
-
-    iget-object v1, p1, Ljs;->b:Lzt4;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v2
-
-    if-ne v1, v2, :cond_0
-
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v0}, Lk9b;->run()V
-
-    return-void
-
-    :cond_1
-    invoke-virtual {p1, v0}, Ljs;->d(Ljava/lang/Runnable;)V
+    invoke-static {v0, v1, v2, v3}, Lhp7;->d(ILandroidx/recyclerview/widget/RecyclerView;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
     return-void
 .end method

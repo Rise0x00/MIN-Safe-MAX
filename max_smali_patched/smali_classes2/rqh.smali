@@ -1,21 +1,18 @@
 .class public final Lrqh;
-.super Lqqh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsqh;
 
-# instance fields
-.field public final d:Ldgc;
 
+# virtual methods
+.method public final c(Lie5;)Ljava/util/ArrayList;
+    .locals 0
 
-# direct methods
-.method public constructor <init>(Ldgc;Ljava/lang/String;Lihh;)V
-    .locals 1
+    new-instance p1, Ljava/util/ArrayList;
 
-    const/16 v0, 0xd
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-direct {p0, p2, v0, p3}, Lj2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lrqh;->d:Ldgc;
-
-    return-void
+    return-object p1
 .end method

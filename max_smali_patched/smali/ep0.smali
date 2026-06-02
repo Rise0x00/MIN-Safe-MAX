@@ -4,213 +4,405 @@
 
 
 # instance fields
-.field public a:Landroid/content/Context;
+.field public final synthetic a:I
+
+.field public b:I
+
+.field public c:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;I)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    packed-switch p2, :pswitch_data_0
+    .line 1
+    iput p1, p0, Lep0;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lep0;->a:Landroid/content/Context;
-
     return-void
+.end method
 
-    :pswitch_0
+.method public synthetic constructor <init>(III)V
+    .locals 0
+
+    .line 2
+    iput p3, p0, Lep0;->a:I
+
+    iput p1, p0, Lep0;->b:I
+
+    iput p2, p0, Lep0;->c:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lep0;->a:Landroid/content/Context;
-
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public a()Lrg4;
-    .locals 8
+.method public a(I)V
+    .locals 2
 
-    iget-object v0, p0, Lep0;->a:Landroid/content/Context;
+    iget v0, p0, Lep0;->c:I
 
-    if-eqz v0, :cond_0
+    if-lt v0, p1, :cond_0
 
-    new-instance v1, Lrg4;
+    iget v1, p0, Lep0;->b:I
 
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    if-lez v1, :cond_0
 
-    sget-object v2, Ldi9;->a:Lyna;
+    add-int/lit8 v1, v1, -0x1
 
-    invoke-static {v2}, Lk35;->a(Lot5;)Ljavax/inject/Provider;
+    iput v1, p0, Lep0;->b:I
 
-    move-result-object v2
+    sub-int/2addr v0, p1
 
-    iput-object v2, v1, Lrg4;->a:Ljavax/inject/Provider;
+    iput v0, p0, Lep0;->c:I
 
-    new-instance v2, Ls3e;
-
-    const/16 v3, 0x16
-
-    invoke-direct {v2, v3, v0}, Ls3e;-><init>(ILjava/lang/Object;)V
-
-    iput-object v2, v1, Lrg4;->b:Ls3e;
-
-    new-instance v0, La4a;
-
-    const/16 v3, 0xa
-
-    invoke-direct {v0, v3, v2}, La4a;-><init>(ILjava/lang/Object;)V
-
-    new-instance v3, Lxz0;
-
-    const/16 v4, 0x19
-
-    invoke-direct {v3, v2, v4, v0}, Lxz0;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v3}, Lk35;->a(Lot5;)Ljavax/inject/Provider;
-
-    move-result-object v0
-
-    iput-object v0, v1, Lrg4;->c:Ljavax/inject/Provider;
-
-    iget-object v0, v1, Lrg4;->b:Ls3e;
-
-    new-instance v2, Lig5;
-
-    const/16 v3, 0x1d
-
-    invoke-direct {v2, v3, v0}, Lig5;-><init>(ILjava/lang/Object;)V
-
-    iput-object v2, v1, Lrg4;->d:Lig5;
-
-    new-instance v2, Lcvd;
-
-    invoke-direct {v2, v0}, Lcvd;-><init>(Ljava/lang/Object;)V
-
-    invoke-static {v2}, Lk35;->a(Lot5;)Ljavax/inject/Provider;
-
-    move-result-object v0
-
-    iput-object v0, v1, Lrg4;->o:Ljavax/inject/Provider;
-
-    iget-object v2, v1, Lrg4;->d:Lig5;
-
-    new-instance v3, Lvnb;
-
-    const/4 v4, 0x7
-
-    invoke-direct {v3, v2, v4, v0}, Lvnb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v3}, Lk35;->a(Lot5;)Ljavax/inject/Provider;
-
-    move-result-object v0
-
-    iput-object v0, v1, Lrg4;->X:Ljavax/inject/Provider;
-
-    new-instance v2, Ltna;
-
-    const/16 v3, 0x1d
-
-    invoke-direct {v2, v3}, Ltna;-><init>(I)V
-
-    iget-object v3, v1, Lrg4;->b:Ls3e;
-
-    new-instance v4, Latc;
-
-    const/16 v5, 0xc
-
-    invoke-direct {v4, v3, v0, v2, v5}, Latc;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    iget-object v2, v1, Lrg4;->a:Ljavax/inject/Provider;
-
-    iget-object v5, v1, Lrg4;->c:Ljavax/inject/Provider;
-
-    new-instance v6, Law4;
-
-    invoke-direct {v6}, Ljava/lang/Object;-><init>()V
-
-    iput-object v2, v6, Law4;->a:Ljava/lang/Object;
-
-    iput-object v5, v6, Law4;->b:Ljava/lang/Object;
-
-    iput-object v4, v6, Law4;->c:Ljava/lang/Object;
-
-    iput-object v0, v6, Law4;->d:Ljava/lang/Object;
-
-    iput-object v0, v6, Law4;->o:Ljava/lang/Object;
-
-    new-instance v7, Lnp3;
-
-    invoke-direct {v7}, Ljava/lang/Object;-><init>()V
-
-    iput-object v3, v7, Lnp3;->a:Ljava/lang/Object;
-
-    iput-object v5, v7, Lnp3;->b:Ljava/lang/Object;
-
-    iput-object v0, v7, Lnp3;->c:Ljava/lang/Object;
-
-    iput-object v4, v7, Lnp3;->d:Ljava/lang/Object;
-
-    iput-object v2, v7, Lnp3;->o:Ljava/lang/Object;
-
-    iput-object v0, v7, Lnp3;->X:Ljava/lang/Object;
-
-    iput-object v0, v7, Lnp3;->Y:Ljava/lang/Object;
-
-    new-instance v3, Ll2b;
-
-    invoke-direct {v3, v2, v0, v4, v0}, Ll2b;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v0, Latc;
-
-    const/16 v2, 0xf
-
-    invoke-direct {v0, v6, v7, v3, v2}, Latc;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-static {v0}, Lk35;->a(Lot5;)Ljavax/inject/Provider;
-
-    move-result-object v0
-
-    iput-object v0, v1, Lrg4;->Y:Ljavax/inject/Provider;
-
-    return-object v1
+    return-void
 
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    iget v0, p0, Lep0;->c:I
 
-    const-class v2, Landroid/content/Context;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v2
+    iget v1, p0, Lep0;->b:I
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, " must be set"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    filled-new-array {p1, v0, v1}, [Ljava/lang/Object;
 
-    throw v0
+    move-result-object p1
+
+    const-string v0, "com.facebook.imagepipeline.memory.BasePool.Counter"
+
+    const-string v1, "Unexpected decrement of %d. Current numBytes = %d, count = %d"
+
+    invoke-static {v0, v1, p1}, Lnw5;->n(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public b()I
+    .locals 1
+
+    iget v0, p0, Lep0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lep0;->c:I
+
+    return v0
+
+    :pswitch_0
+    iget v0, p0, Lep0;->b:I
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x6
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public c()I
+    .locals 1
+
+    iget v0, p0, Lep0;->c:I
+
+    return v0
+.end method
+
+.method public d()I
+    .locals 1
+
+    iget v0, p0, Lep0;->b:I
+
+    return v0
+.end method
+
+.method public e()I
+    .locals 1
+
+    iget v0, p0, Lep0;->a:I
+
+    sparse-switch v0, :sswitch_data_0
+
+    iget v0, p0, Lep0;->c:I
+
+    return v0
+
+    :sswitch_0
+    iget v0, p0, Lep0;->c:I
+
+    return v0
+
+    :sswitch_1
+    iget v0, p0, Lep0;->c:I
+
+    return v0
+
+    :sswitch_data_0
+    .sparse-switch
+        0xc -> :sswitch_1
+        0x12 -> :sswitch_0
+    .end sparse-switch
+.end method
+
+.method public f()I
+    .locals 1
+
+    iget v0, p0, Lep0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lep0;->b:I
+
+    return v0
+
+    :pswitch_0
+    iget v0, p0, Lep0;->b:I
+
+    return v0
+
+    :pswitch_1
+    iget v0, p0, Lep0;->b:I
+
+    return v0
+
+    :pswitch_2
+    iget v0, p0, Lep0;->b:I
+
+    return v0
+
+    :pswitch_3
+    iget v0, p0, Lep0;->b:I
+
+    return v0
+
+    :pswitch_4
+    iget v0, p0, Lep0;->b:I
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0xd
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public g()I
+    .locals 1
+
+    iget v0, p0, Lep0;->b:I
+
+    return v0
+.end method
+
+.method public h()I
+    .locals 1
+
+    iget v0, p0, Lep0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lep0;->b:I
+
+    return v0
+
+    :pswitch_0
+    iget v0, p0, Lep0;->c:I
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x6
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public i()I
+    .locals 1
+
+    iget v0, p0, Lep0;->c:I
+
+    return v0
+.end method
+
+.method public j()I
+    .locals 1
+
+    iget v0, p0, Lep0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lep0;->b:I
+
+    return v0
+
+    :pswitch_0
+    iget v0, p0, Lep0;->c:I
+
+    return v0
+
+    :pswitch_1
+    iget v0, p0, Lep0;->b:I
+
+    return v0
+
+    :pswitch_2
+    iget v0, p0, Lep0;->c:I
+
+    return v0
+
+    :pswitch_3
+    iget v0, p0, Lep0;->c:I
+
+    return v0
+
+    :pswitch_4
+    iget v0, p0, Lep0;->c:I
+
+    return v0
+
+    :pswitch_5
+    iget v0, p0, Lep0;->c:I
+
+    return v0
+
+    :pswitch_6
+    iget v0, p0, Lep0;->c:I
+
+    return v0
+
+    :pswitch_7
+    iget v0, p0, Lep0;->b:I
+
+    return v0
+
+    :pswitch_data_0
+    .packed-switch 0xc
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public k()I
+    .locals 1
+
+    iget v0, p0, Lep0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lep0;->b:I
+
+    return v0
+
+    :pswitch_0
+    iget v0, p0, Lep0;->b:I
+
+    return v0
+
+    :pswitch_1
+    iget v0, p0, Lep0;->b:I
+
+    return v0
+
+    :pswitch_2
+    iget v0, p0, Lep0;->b:I
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x7
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public l()I
+    .locals 1
+
+    iget v0, p0, Lep0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lep0;->c:I
+
+    return v0
+
+    :pswitch_0
+    iget v0, p0, Lep0;->c:I
+
+    return v0
+
+    :pswitch_1
+    iget v0, p0, Lep0;->c:I
+
+    return v0
+
+    :pswitch_2
+    iget v0, p0, Lep0;->c:I
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x7
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public m(Lb3e;)V
+    .locals 1
+
+    iget-object p1, p1, Lb3e;->a:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
+
+    move-result v0
+
+    iput v0, p0, Lep0;->b:I
+
+    invoke-virtual {p1}, Landroid/view/View;->getTop()I
+
+    move-result v0
+
+    iput v0, p0, Lep0;->c:I
+
+    invoke-virtual {p1}, Landroid/view/View;->getRight()I
+
+    invoke-virtual {p1}, Landroid/view/View;->getBottom()I
+
+    return-void
 .end method

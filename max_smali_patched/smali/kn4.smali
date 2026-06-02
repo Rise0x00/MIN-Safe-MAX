@@ -1,88 +1,49 @@
-.class public final synthetic Lkn4;
+.class public abstract Lkn4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqe8;
 
+# static fields
+.field public static final a:Lxvi;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:Lxvi;
 
-.field public final synthetic b:Lof8;
-
-.field public final synthetic c:Le59;
+.field public static final c:Lxvi;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lid;Lof8;Le59;)V
-    .locals 0
-
-    .line 1
-    const/4 p1, 0x1
-
-    iput p1, p0, Lkn4;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lkn4;->b:Lof8;
-
-    iput-object p3, p0, Lkn4;->c:Le59;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lid;Lof8;Le59;I)V
-    .locals 0
-
-    .line 2
-    const/4 p1, 0x0
-
-    iput p1, p0, Lkn4;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lkn4;->b:Lof8;
-
-    iput-object p3, p0, Lkn4;->c:Le59;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)V
+.method static constructor <clinit>()V
     .locals 2
 
-    iget v0, p0, Lkn4;->a:I
+    new-instance v0, Lxvi;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "video/avc"
 
-    iget-object v0, p0, Lkn4;->c:Le59;
+    invoke-direct {v0, v1}, Lxvi;-><init>(Ljava/lang/String;)V
 
-    check-cast p1, Ljd;
+    new-instance v0, Lxvi;
 
-    iget-object v1, p0, Lkn4;->b:Lof8;
+    const-string v1, "video/x-vnd.on2.vp9"
 
-    invoke-interface {p1, v1, v0}, Ljd;->H(Lof8;Le59;)V
+    invoke-direct {v0, v1}, Lxvi;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lkn4;->a:Lxvi;
+
+    new-instance v0, Lxvi;
+
+    const-string v1, "video/av01"
+
+    invoke-direct {v0, v1}, Lxvi;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lkn4;->b:Lxvi;
+
+    new-instance v0, Lxvi;
+
+    const-string v1, "audio/opus"
+
+    invoke-direct {v0, v1}, Lxvi;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lkn4;->c:Lxvi;
 
     return-void
-
-    :pswitch_0
-    check-cast p1, Ljd;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lkn4;->b:Lof8;
-
-    iget-object v1, p0, Lkn4;->c:Le59;
-
-    invoke-interface {p1, v0, v1}, Ljd;->R(Lof8;Le59;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

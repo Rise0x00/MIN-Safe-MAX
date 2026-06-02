@@ -1,64 +1,68 @@
 .class public final Lse9;
-.super Ljava/lang/Object;
+.super Landroid/support/v4/media/session/MediaControllerCompat$Callback;
 .source "SourceFile"
 
-# interfaces
-.implements Lue9;
 
-
-# static fields
-.field public static final a:Lse9;
+# instance fields
+.field public final synthetic a:Lye9;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lye9;)V
+    .locals 0
 
-    new-instance v0, Lse9;
+    iput-object p1, p0, Lse9;->a:Lye9;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lse9;->a:Lse9;
+    invoke-direct {p0}, Landroid/support/v4/media/session/MediaControllerCompat$Callback;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final onMetadataChanged(Landroid/support/v4/media/MediaMetadataCompat;)V
     .locals 1
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lse9;
-
-    if-nez p1, :cond_1
+    if-nez p1, :cond_0
 
     const/4 p1, 0x0
 
-    return p1
+    goto :goto_0
 
-    :cond_1
-    return v0
+    :cond_0
+    invoke-virtual {p1}, Landroid/support/v4/media/MediaMetadataCompat;->getDescription()Landroid/support/v4/media/MediaDescriptionCompat;
+
+    move-result-object p1
+
+    :goto_0
+    iget-object v0, p0, Lse9;->a:Lye9;
+
+    iput-object p1, v0, Lye9;->c1:Landroid/support/v4/media/MediaDescriptionCompat;
+
+    invoke-virtual {v0}, Lye9;->h()V
+
+    invoke-virtual {v0}, Lye9;->m()V
+
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final onSessionDestroyed()V
+    .locals 3
 
-    const v0, -0x5ca6eb28
+    iget-object v0, p0, Lse9;->a:Lye9;
 
-    return v0
-.end method
+    iget-object v1, v0, Lye9;->a1:Landroid/support/v4/media/session/MediaControllerCompat;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    if-eqz v1, :cond_0
 
-    const-string v0, "SelectFileMode"
+    iget-object v2, v0, Lye9;->b1:Lse9;
 
-    return-object v0
+    invoke-virtual {v1, v2}, Landroid/support/v4/media/session/MediaControllerCompat;->unregisterCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)V
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lye9;->a1:Landroid/support/v4/media/session/MediaControllerCompat;
+
+    :cond_0
+    return-void
 .end method

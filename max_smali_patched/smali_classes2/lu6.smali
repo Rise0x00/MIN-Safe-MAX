@@ -1,100 +1,144 @@
-.class public final Llu6;
+.class public Llu6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ld76;
+.implements Lyi8;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lyi8;
 
-.field public final synthetic b:Ld76;
-
-.field public final synthetic c:Lbv6;
+.field public b:Lo12;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ld76;Lbv6;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput p3, p0, Llu6;->a:I
-
-    iput-object p1, p0, Llu6;->b:Ld76;
-
-    iput-object p2, p0, Llu6;->c:Lbv6;
-
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    new-instance v0, Lh98;
+
+    const/16 v1, 0xf
+
+    invoke-direct {v0, v1, p0}, Lh98;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0}, Lmmj;->a(Lp12;)Lr12;
+
+    move-result-object v0
+
+    iput-object v0, p0, Llu6;->a:Lyi8;
 
     return-void
 .end method
 
+.method public constructor <init>(Lyi8;)V
+    .locals 0
 
-# virtual methods
-.method public final e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 3
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p0, Llu6;->a:I
+    .line 2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    packed-switch v0, :pswitch_data_0
+    .line 3
+    iput-object p1, p0, Llu6;->a:Lyi8;
 
-    new-instance v0, Lku6;
+    return-void
+.end method
 
-    iget-object v1, p0, Llu6;->c:Lbv6;
+.method public static b(Lyi8;)Llu6;
+    .locals 1
 
-    const/4 v2, 0x1
+    instance-of v0, p0, Llu6;
 
-    invoke-direct {v0, p1, v1, v2}, Lku6;-><init>(Lf76;Lbv6;I)V
+    if-eqz v0, :cond_0
 
-    iget-object p1, p0, Llu6;->b:Ld76;
+    check-cast p0, Llu6;
 
-    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lac4;->a:Lac4;
-
-    if-ne p1, p2, :cond_0
-
-    goto :goto_0
+    return-object p0
 
     :cond_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    new-instance v0, Llu6;
 
-    :goto_0
-    return-object p1
+    invoke-direct {v0, p0}, Llu6;-><init>(Lyi8;)V
 
-    :pswitch_0
-    new-instance v0, Lku6;
+    return-object v0
+.end method
 
-    iget-object v1, p0, Llu6;->c:Lbv6;
 
-    const/4 v2, 0x0
+# virtual methods
+.method public final a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    .locals 1
 
-    invoke-direct {v0, p1, v1, v2}, Lku6;-><init>(Lf76;Lbv6;I)V
+    iget-object v0, p0, Llu6;->a:Lyi8;
 
-    iget-object p1, p0, Llu6;->b:Ld76;
+    invoke-interface {v0, p1, p2}, Lyi8;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return-void
+.end method
+
+.method public cancel(Z)Z
+    .locals 1
+
+    iget-object v0, p0, Llu6;->a:Lyi8;
+
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public get()Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Llu6;->a:Lyi8;
+
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Llu6;->a:Lyi8;
+
+    invoke-interface {v0, p1, p2, p3}, Ljava/util/concurrent/Future;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object p2, Lac4;->a:Lac4;
-
-    if-ne p1, p2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    :goto_1
     return-object p1
+.end method
 
-    nop
+.method public final isCancelled()Z
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Llu6;->a:Lyi8;
+
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->isCancelled()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final isDone()Z
+    .locals 1
+
+    iget-object v0, p0, Llu6;->a:Lyi8;
+
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->isDone()Z
+
+    move-result v0
+
+    return v0
 .end method

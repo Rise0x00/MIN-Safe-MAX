@@ -1,48 +1,28 @@
-.class public final Lknd;
+.class public abstract Lknd;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lud8;
 
 
 # static fields
-.field public static final a:Lknd;
+.field public static call_start_group_call_unavailable:I = 0x7f130257
 
-.field public static final b:I
+.field public static call_start_new_dialog_action_cancel:I = 0x7f130258
 
+.field public static call_start_new_dialog_action_continue_audio:I = 0x7f130259
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static call_start_new_dialog_action_continue_video:I = 0x7f13025a
 
-    new-instance v0, Lknd;
+.field public static call_start_new_dialog_subtitle:I = 0x7f13025b
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static call_start_new_dialog_title:I = 0x7f13025c
 
-    sput-object v0, Lknd;->a:Lknd;
+.field public static call_start_no_network_connection_neutral_button:I = 0x7f13025d
 
-    sget v0, Ly7b;->u:I
+.field public static call_start_no_network_connection_subtitle:I = 0x7f13025e
 
-    sput v0, Lknd;->b:I
+.field public static call_start_no_network_connection_title:I = 0x7f13025f
 
-    return-void
-.end method
+.field public static permission_detail_dialog_close:I = 0x7f130b8d
 
+.field public static permission_detail_dialog_subtitile:I = 0x7f130b8e
 
-# virtual methods
-.method public final getItemId()J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    sget v0, Lknd;->b:I
-
-    return v0
-.end method
+.field public static permission_detail_dialog_title:I = 0x7f130b8f

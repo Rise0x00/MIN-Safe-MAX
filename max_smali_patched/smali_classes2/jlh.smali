@@ -1,354 +1,165 @@
-.class public final Ljlh;
+.class public final synthetic Ljlh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Looh;
+.implements Lujg;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public b:Lmmf;
+.field public final synthetic b:Lqkh;
 
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public final d:Lo58;
-
-.field public final e:Lo58;
-
-.field public f:Lqoh;
-
-.field public final g:Li7f;
-
-.field public final h:Lold;
+.field public final synthetic c:Luh0;
 
 
 # direct methods
-.method public constructor <init>(Lo58;Lo58;Lo58;)V
-    .locals 1
+.method public synthetic constructor <init>(Lqkh;Luh0;I)V
+    .locals 0
+
+    iput p3, p0, Ljlh;->a:I
+
+    iput-object p1, p0, Ljlh;->b:Lqkh;
+
+    iput-object p2, p0, Ljlh;->c:Luh0;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-class v0, Ljlh;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ljlh;->a:Ljava/lang/String;
-
-    invoke-interface {p2}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lmbg;
-
-    check-cast p2, Lj9b;
-
-    invoke-virtual {p2}, Lj9b;->c()Lzp8;
-
-    move-result-object p2
-
-    invoke-static {}, Llpb;->a()Lh4g;
-
-    move-result-object v0
-
-    invoke-virtual {p2, v0}, Lm0;->plus(Lqb4;)Lqb4;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Ljlh;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    iput-object p1, p0, Ljlh;->d:Lo58;
-
-    iput-object p3, p0, Ljlh;->e:Lo58;
-
-    const/4 p1, 0x0
-
-    const/4 p2, 0x2
-
-    const/4 p3, 0x1
-
-    invoke-static {p3, p1, p2}, Lj7f;->b(III)Li7f;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ljlh;->g:Li7f;
-
-    new-instance p2, Lold;
-
-    invoke-direct {p2, p1}, Lold;-><init>(Llfa;)V
-
-    iput-object p2, p0, Ljlh;->h:Lold;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()V
-    .locals 3
-
-    iget-object v0, p0, Ljlh;->f:Lqoh;
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Ljlh;->h:Lold;
-
-    iget-object v0, v0, Lold;->a:Le7f;
-
-    invoke-interface {v0}, Le7f;->b()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lpi3;->F(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Llmh;
-
-    if-eqz v0, :cond_0
-
-    sget-object v1, Lkmh;->X:Lkmh;
-
-    iput-object v1, v0, Llmh;->X:Lkmh;
-
-    iget-object v1, p0, Ljlh;->g:Li7f;
-
-    invoke-virtual {v1, v0}, Li7f;->h(Ljava/lang/Object;)Z
-
-    :cond_0
-    iget-object v0, p0, Ljlh;->b:Lmmf;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0, v1}, Lvy7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_1
-    iput-object v1, p0, Ljlh;->b:Lmmf;
-
-    iget-object v0, p0, Ljlh;->f:Lqoh;
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0}, Lqoh;->clear()V
-
-    :cond_2
-    iget-object v0, p0, Ljlh;->f:Lqoh;
-
-    if-eqz v0, :cond_3
-
-    iget-object v2, p0, Ljlh;->d:Lo58;
-
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lhff;
-
-    invoke-virtual {v2, v0}, Lhff;->a(Lqoh;)V
-
-    :cond_3
-    iput-object v1, p0, Ljlh;->f:Lqoh;
-
-    :cond_4
-    return-void
-.end method
-
-.method public final f(F)V
-    .locals 1
-
-    iget-object v0, p0, Ljlh;->f:Lqoh;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p1}, Lqoh;->b(F)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final g()V
-    .locals 3
-
-    iget-object v0, p0, Ljlh;->f:Lqoh;
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Ljlh;->h:Lold;
-
-    iget-object v0, v0, Lold;->a:Le7f;
-
-    invoke-interface {v0}, Le7f;->b()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lpi3;->F(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Llmh;
-
-    if-eqz v0, :cond_0
-
-    sget-object v1, Lkmh;->o:Lkmh;
-
-    iput-object v1, v0, Llmh;->X:Lkmh;
-
-    iget-object v1, p0, Ljlh;->g:Li7f;
-
-    invoke-virtual {v1, v0}, Li7f;->h(Ljava/lang/Object;)Z
-
-    :cond_0
-    iget-object v0, p0, Ljlh;->b:Lmmf;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0, v1}, Lvy7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_1
-    iput-object v1, p0, Ljlh;->b:Lmmf;
-
-    iget-object v0, p0, Ljlh;->f:Lqoh;
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0}, Lqoh;->clear()V
-
-    :cond_2
-    iget-object v0, p0, Ljlh;->f:Lqoh;
-
-    if-eqz v0, :cond_3
-
-    iget-object v2, p0, Ljlh;->d:Lo58;
-
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lhff;
-
-    invoke-virtual {v2, v0}, Lhff;->a(Lqoh;)V
-
-    :cond_3
-    iput-object v1, p0, Ljlh;->f:Lqoh;
-
-    :cond_4
-    return-void
-.end method
-
-.method public final o()V
-    .locals 2
-
-    iget-object v0, p0, Ljlh;->f:Lqoh;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Ljlh;->h:Lold;
-
-    iget-object v0, v0, Lold;->a:Le7f;
-
-    invoke-interface {v0}, Le7f;->b()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lpi3;->F(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Llmh;
-
-    if-eqz v0, :cond_0
-
-    sget-object v1, Lkmh;->d:Lkmh;
-
-    iput-object v1, v0, Llmh;->X:Lkmh;
-
-    iget-object v1, p0, Ljlh;->g:Li7f;
-
-    invoke-virtual {v1, v0}, Li7f;->h(Ljava/lang/Object;)Z
-
-    :cond_0
-    iget-object v0, p0, Ljlh;->b:Lmmf;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0, v1}, Lvy7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_1
-    iput-object v1, p0, Ljlh;->b:Lmmf;
-
-    :cond_2
-    return-void
-.end method
-
-.method public final r()V
+.method public final a()Ljava/lang/Object;
     .locals 4
 
-    iget-object v0, p0, Ljlh;->f:Lqoh;
+    iget v0, p0, Ljlh;->a:I
 
-    if-eqz v0, :cond_2
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Ljlh;->h:Lold;
+    iget-object v0, p0, Ljlh;->b:Lqkh;
 
-    iget-object v0, v0, Lold;->a:Le7f;
+    iget-object v0, v0, Lqkh;->e:Ljava/lang/Object;
 
-    invoke-interface {v0}, Le7f;->b()Ljava/util/List;
+    check-cast v0, Lqp5;
+
+    check-cast v0, Lxie;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lh6a;
+
+    const/16 v2, 0x19
+
+    iget-object v3, p0, Ljlh;->c:Luh0;
+
+    invoke-direct {v1, v0, v2, v3}, Lh6a;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Lxie;->J(Lvie;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v0}, Lpi3;->F(Ljava/util/List;)Ljava/lang/Object;
+    check-cast v0, Ljava/lang/Iterable;
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Ljlh;->c:Luh0;
+
+    iget-object v1, p0, Ljlh;->b:Lqkh;
+
+    iget-object v1, v1, Lqkh;->e:Ljava/lang/Object;
+
+    check-cast v1, Lqp5;
+
+    check-cast v1, Lxie;
+
+    invoke-virtual {v1}, Lxie;->l()Landroid/database/sqlite/SQLiteDatabase;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
+
+    :try_start_0
+    invoke-static {v2, v0}, Lxie;->G(Landroid/database/sqlite/SQLiteDatabase;Luh0;)Ljava/lang/Long;
 
     move-result-object v0
 
-    check-cast v0, Llmh;
+    if-nez v0, :cond_0
 
-    if-eqz v0, :cond_0
-
-    sget-object v1, Lkmh;->b:Lkmh;
-
-    iput-object v1, v0, Llmh;->X:Lkmh;
-
-    iget-object v1, p0, Ljlh;->g:Li7f;
-
-    invoke-virtual {v1, v0}, Li7f;->h(Ljava/lang/Object;)Z
-
-    :cond_0
-    iget-object v0, p0, Ljlh;->f:Lqoh;
-
-    if-nez v0, :cond_1
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     goto :goto_0
 
-    :cond_1
-    new-instance v1, Lflh;
+    :cond_0
+    invoke-virtual {v1}, Lxie;->l()Landroid/database/sqlite/SQLiteDatabase;
 
-    const/4 v2, 0x0
+    move-result-object v1
 
-    invoke-direct {v1, v0, p0, v2}, Lflh;-><init>(Lqoh;Ljlh;Lkotlin/coroutines/Continuation;)V
+    const-string v3, "SELECT 1 FROM events WHERE context_id = ? LIMIT 1"
 
-    const/4 v0, 0x3
-
-    iget-object v3, p0, Ljlh;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v3, v2, v2, v1, v0}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+    invoke-virtual {v0}, Ljava/lang/Long;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Ljlh;->b:Lmmf;
+    filled-new-array {v0}, [Ljava/lang/String;
 
-    :cond_2
+    move-result-object v0
+
+    invoke-virtual {v1, v3, v0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    move-object v0, v1
+
     :goto_0
-    return-void
+    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception v1
+
+    :try_start_3
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    throw v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :goto_1
+    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
+
+    throw v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

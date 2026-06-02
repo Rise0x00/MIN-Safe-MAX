@@ -1,150 +1,47 @@
-.class public final Lom7;
-.super Ljava/lang/Object;
+.class public abstract Lom7;
+.super Lhn7;
 .source "SourceFile"
-
-# interfaces
-.implements Lfoc;
-
-
-# instance fields
-.field public final a:Ljhg;
-
-
-# direct methods
-.method public constructor <init>(Ljhg;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lom7;->a:Ljhg;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lom7;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lom7;
-
-    iget-object v0, p0, Lom7;->a:Ljhg;
-
-    iget-object p1, p1, Lom7;->a:Ljhg;
-
-    invoke-virtual {v0, p1}, Ljhg;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final getItemId()J
+.method public final d()Lvm7;
     .locals 2
 
-    const/16 v0, 0x40
+    new-instance v0, Ljava/lang/AssertionError;
 
-    int-to-long v0, v0
+    const-string v1, "should never be called"
 
-    return-wide v0
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
 .end method
 
-.method public final h(Lud8;)Z
-    .locals 4
-
-    const/16 v0, 0x40
-
-    int-to-long v0, v0
-
-    invoke-interface {p1}, Lud8;->getItemId()J
-
-    move-result-wide v2
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
+.method public final h()Lvm7;
     .locals 1
 
-    iget-object v0, p0, Lom7;->a:Ljhg;
+    move-object v0, p0
 
-    invoke-virtual {v0}, Ljhg;->hashCode()I
+    check-cast v0, Lu4e;
 
-    move-result v0
+    iget-object v0, v0, Lu4e;->Z:Lu4e;
 
-    return v0
+    invoke-virtual {v0}, Lhn7;->g()Lpn7;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public final m()I
+.method public final values()Ljava/util/Collection;
     .locals 1
 
-    const/16 v0, 0x40
+    move-object v0, p0
 
-    return v0
-.end method
+    check-cast v0, Lu4e;
 
-.method public final q(Lud8;)Z
-    .locals 0
+    iget-object v0, v0, Lu4e;->Z:Lu4e;
 
-    invoke-virtual {p0, p1}, Lom7;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "InactiveTimeDeleteProfileItem(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lom7;->a:Ljhg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lhn7;->g()Lpn7;
 
     move-result-object v0
 

@@ -1,93 +1,112 @@
-.class public final Lg20;
+.class public final synthetic Lg20;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/media/MediaCodec$OnFrameRenderedListener;
+
 
 # instance fields
-.field public a:F
+.field public final synthetic a:I
 
-.field public b:F
-
-.field public c:Lh2d;
-
-.field public d:Z
+.field public final synthetic b:Lq49;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public synthetic constructor <init>(Lt39;Lq49;I)V
     .locals 0
+
+    iput p3, p0, Lg20;->a:I
+
+    iput-object p2, p0, Lg20;->b:Lq49;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onFrameRendered(Landroid/media/MediaCodec;JJ)V
+    .locals 2
+
+    iget p1, p0, Lg20;->a:I
 
     packed-switch p1, :pswitch_data_0
 
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object p1, p0, Lg20;->b:Lq49;
 
-    .line 7
-    sget-object p1, Lh2d;->X:Lh2d;
+    iget-object p4, p1, Lq49;->b:Landroid/os/Handler;
 
-    iput-object p1, p0, Lg20;->c:Lh2d;
+    sget p5, Landroid/os/Build$VERSION;->SDK_INT:I
 
+    const/16 v0, 0x1e
+
+    if-ge p5, v0, :cond_0
+
+    const/16 p1, 0x20
+
+    shr-long v0, p2, p1
+
+    long-to-int p1, v0
+
+    long-to-int p2, p2
+
+    const/4 p3, 0x0
+
+    invoke-static {p4, p3, p1, p2}, Landroid/os/Message;->obtain(Landroid/os/Handler;III)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-virtual {p4, p1}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1, p2, p3}, Lq49;->a(J)V
+
+    :goto_0
     return-void
 
-    .line 8
     :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object p1, p0, Lg20;->b:Lq49;
 
-    .line 9
-    sget-object p1, Lh2d;->X:Lh2d;
+    iget-object p4, p1, Lq49;->b:Landroid/os/Handler;
 
-    iput-object p1, p0, Lg20;->c:Lh2d;
+    sget p5, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/4 p1, 0x0
+    const/16 v0, 0x1e
 
-    .line 10
-    iput p1, p0, Lg20;->a:F
+    if-ge p5, v0, :cond_1
 
-    const/high16 p1, 0x3f800000    # 1.0f
+    const/16 p1, 0x20
 
-    .line 11
-    iput p1, p0, Lg20;->b:F
+    shr-long v0, p2, p1
 
-    const/4 p1, 0x0
+    long-to-int p1, v0
 
-    .line 12
-    iput-boolean p1, p0, Lg20;->d:Z
+    long-to-int p2, p2
 
+    const/4 p3, 0x0
+
+    invoke-static {p4, p3, p1, p2}, Landroid/os/Message;->obtain(Landroid/os/Handler;III)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-virtual {p4, p1}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1, p2, p3}, Lq49;->a(J)V
+
+    :goto_1
     return-void
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x2
+    .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-.end method
-
-.method public constructor <init>(Lg20;)V
-    .locals 1
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iget v0, p1, Lg20;->a:F
-
-    iput v0, p0, Lg20;->a:F
-
-    .line 3
-    iget v0, p1, Lg20;->b:F
-
-    iput v0, p0, Lg20;->b:F
-
-    .line 4
-    iget-object v0, p1, Lg20;->c:Lh2d;
-
-    iput-object v0, p0, Lg20;->c:Lh2d;
-
-    .line 5
-    iget-boolean p1, p1, Lg20;->d:Z
-
-    iput-boolean p1, p0, Lg20;->d:Z
-
-    return-void
 .end method

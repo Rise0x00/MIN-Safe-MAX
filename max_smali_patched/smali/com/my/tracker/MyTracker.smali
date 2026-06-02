@@ -399,7 +399,7 @@
 .end method
 
 .method public static flush()V
-    .locals 3
+    .locals 2
 
     sget-object v0, Lcom/my/tracker/MyTracker;->e:Lcom/my/tracker/core/EngineMiniCore;
 
@@ -412,11 +412,9 @@
     return-void
 
     :cond_0
-    new-instance v1, Lrha;
+    new-instance v1, Ljka;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2}, Lrha;-><init>(I)V
+    invoke-direct {v1}, Ljka;-><init>()V
 
     invoke-interface {v0, v1}, Lcom/my/tracker/core/EngineMiniCore;->onEngineWorkerWithEngineCore(Lcom/my/tracker/core/utils/Consumer;)V
 
@@ -628,11 +626,11 @@
 
     invoke-direct {v4, v5, v5}, Ljava/util/concurrent/Semaphore;-><init>(IZ)V
 
-    new-instance v3, Lsha;
+    new-instance v3, Lkka;
 
     move-object v5, p1
 
-    invoke-direct/range {v3 .. v11}, Lsha;-><init>(Ljava/util/concurrent/Semaphore;Landroid/app/Application;Lcom/my/tracker/core/TrackerConfig;Lcom/my/tracker/core/a;Lcom/my/tracker/core/o/h;Lcom/my/tracker/core/o/a0;Lcom/my/tracker/core/o/q;Lcom/my/tracker/core/o/a;)V
+    invoke-direct/range {v3 .. v11}, Lkka;-><init>(Ljava/util/concurrent/Semaphore;Landroid/app/Application;Lcom/my/tracker/core/TrackerConfig;Lcom/my/tracker/core/a;Lcom/my/tracker/core/o/h;Lcom/my/tracker/core/o/a0;Lcom/my/tracker/core/o/q;Lcom/my/tracker/core/o/a;)V
 
     invoke-static {v3}, Lcom/my/tracker/core/o/g;->b(Ljava/lang/Runnable;)V
 
@@ -762,9 +760,9 @@
     move-result-object p1
 
     .line 6
-    new-instance v3, Ltha;
+    new-instance v3, Llka;
 
-    invoke-direct {v3, p0, v1, v2, p1}, Ltha;-><init>(Ljava/lang/String;JLjava/util/Map;)V
+    invoke-direct {v3, p0, v1, v2, p1}, Llka;-><init>(Ljava/lang/String;JLjava/util/Map;)V
 
     invoke-interface {v0, v3}, Lcom/my/tracker/core/EngineMiniCore;->onEngineWorkerWithEngineCore(Lcom/my/tracker/core/utils/Consumer;)V
 

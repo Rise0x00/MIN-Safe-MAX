@@ -1,167 +1,321 @@
 .class public final Lcy6;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
+.field public a:Lw0;
 
-.field public o:I
+.field public final b:F
+
+.field public c:Z
+
+.field public d:Z
+
+.field public e:J
+
+.field public f:F
+
+.field public g:F
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lcy6;->X:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    iput p1, p0, Lcy6;->b:F
+
+    invoke-virtual {p0}, Lcy6;->a()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lcy6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lcy6;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lcy6;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public static c(Landroid/content/Context;)Lcy6;
     .locals 1
 
-    new-instance p1, Lcy6;
+    new-instance v0, Lcy6;
 
-    iget-object v0, p0, Lcy6;->X:Ljava/lang/Object;
+    invoke-direct {v0, p0}, Lcy6;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p1, v0, p2}, Lcy6;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
 
-    iget v0, p0, Lcy6;->o:I
+# virtual methods
+.method public final a()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcy6;->a:Lw0;
+
+    invoke-virtual {p0}, Lcy6;->e()V
+
+    return-void
+.end method
+
+.method public final b()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcy6;->c:Z
+
+    return v0
+.end method
+
+.method public final d(Landroid/view/MotionEvent;)V
+    .locals 9
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
 
     const/4 v1, 0x1
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_9
 
-    if-ne v0, v1, :cond_0
+    const/4 v2, 0x2
 
-    :try_start_0
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget v3, p0, Lcy6;->b:F
 
-    goto :goto_1
+    const/4 v4, 0x0
 
-    :catchall_0
-    move-exception v0
+    if-eq v0, v1, :cond_4
 
-    move-object p1, v0
+    if-eq v0, v2, :cond_1
+
+    const/4 p1, 0x3
+
+    if-eq v0, p1, :cond_0
 
     goto :goto_0
 
-    :catch_0
-    move-exception v0
-
-    move-object p1, v0
-
-    goto :goto_2
-
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iput-boolean v4, p0, Lcy6;->c:Z
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    iput-boolean v4, p0, Lcy6;->d:Z
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-void
 
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
-    iget-object p1, p0, Lcy6;->X:Ljava/lang/Object;
+    move-result v0
 
-    check-cast p1, Ljava/lang/String;
+    iget v1, p0, Lcy6;->f:F
 
-    :try_start_1
-    invoke-static {}, Lhp6;->i()Loi7;
+    sub-float/2addr v0, v1
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    cmpl-float v0, v0, v3
+
+    if-gtz v0, :cond_3
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    move-result p1
+
+    iget v0, p0, Lcy6;->g:F
+
+    sub-float/2addr p1, v0
+
+    invoke-static {p1}, Ljava/lang/Math;->abs(F)F
+
+    move-result p1
+
+    cmpl-float p1, p1, v3
+
+    if-lez p1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    return-void
+
+    :cond_3
+    :goto_1
+    iput-boolean v4, p0, Lcy6;->d:Z
+
+    return-void
+
+    :cond_4
+    iput-boolean v4, p0, Lcy6;->c:Z
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v0
+
+    iget v5, p0, Lcy6;->f:F
+
+    sub-float/2addr v0, v5
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    cmpl-float v0, v0, v3
+
+    if-gtz v0, :cond_5
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v0
+
+    iget v5, p0, Lcy6;->g:F
+
+    sub-float/2addr v0, v5
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    cmpl-float v0, v0, v3
+
+    if-lez v0, :cond_6
+
+    :cond_5
+    iput-boolean v4, p0, Lcy6;->d:Z
+
+    :cond_6
+    iget-boolean v0, p0, Lcy6;->d:Z
+
+    if-eqz v0, :cond_8
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
+
+    move-result-wide v5
+
+    iget-wide v7, p0, Lcy6;->e:J
+
+    sub-long/2addr v5, v7
+
+    invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
+
+    move-result p1
+
+    int-to-long v7, p1
+
+    cmp-long p1, v5, v7
+
+    if-gtz p1, :cond_8
+
+    iget-object p1, p0, Lcy6;->a:Lw0;
+
+    if-eqz p1, :cond_8
+
+    sget-object v0, Lnw5;->a:Lyp8;
+
+    invoke-interface {v0, v2}, Lyp8;->h(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    sget-object v0, Lw0;->u:Ljava/lang/Class;
+
+    invoke-static {p1}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    sget-object v0, La4b;->a:La4b;
+    iget-object v3, p1, Lw0;->j:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lsna;->y(Ljava/lang/String;Lc4b;)Lcj7;
+    const-string v5, "controller %x %s: onClick"
 
-    move-result-object v3
+    invoke-static {v0, v5, v2, v3}, Lnw5;->e(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iput v1, p0, Lcy6;->o:I
+    :cond_7
+    invoke-virtual {p1}, Lw0;->q()Z
 
-    const-wide/16 v4, 0x12c
+    move-result v0
 
-    const/16 v7, 0xc
+    if-eqz v0, :cond_8
 
-    move-object v6, p0
+    iget-object v0, p1, Lw0;->d:Lei7;
 
-    invoke-static/range {v2 .. v7}, Lopj;->b(Loi7;Lcj7;JLo84;I)Ljava/lang/Object;
+    iget v2, v0, Lei7;->c:I
 
-    move-result-object p1
-    :try_end_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    add-int/2addr v2, v1
 
-    sget-object v0, Lac4;->a:Lac4;
+    iput v2, v0, Lei7;->c:I
 
-    if-ne p1, v0, :cond_2
+    iget-object v0, p1, Lw0;->h:Lsx6;
 
-    return-object v0
+    iget-object v1, v0, Lsx6;->f:Lvn6;
 
-    :goto_0
-    new-instance v0, Lszd;
+    iget-object v2, v0, Lsx6;->a:Landroid/graphics/drawable/ColorDrawable;
 
-    invoke-direct {v0, p1}, Lszd;-><init>(Ljava/lang/Throwable;)V
+    invoke-virtual {v1, v2}, Lvn6;->o(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
-    move-object p1, v0
+    invoke-virtual {v0}, Lsx6;->g()V
 
-    :cond_2
-    :goto_1
-    nop
+    invoke-virtual {p1}, Lw0;->r()V
 
-    instance-of v0, p1, Lszd;
+    :cond_8
+    iput-boolean v4, p0, Lcy6;->d:Z
 
-    if-eqz v0, :cond_3
+    return-void
 
-    const/4 p1, 0x0
+    :cond_9
+    iput-boolean v1, p0, Lcy6;->c:Z
 
-    :cond_3
-    return-object p1
+    iput-boolean v1, p0, Lcy6;->d:Z
 
-    :goto_2
-    throw p1
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcy6;->e:J
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v0
+
+    iput v0, p0, Lcy6;->f:F
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    move-result p1
+
+    iput p1, p0, Lcy6;->g:F
+
+    return-void
+.end method
+
+.method public final e()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcy6;->c:Z
+
+    iput-boolean v0, p0, Lcy6;->d:Z
+
+    return-void
+.end method
+
+.method public final f(Lw0;)V
+    .locals 0
+
+    iput-object p1, p0, Lcy6;->a:Lw0;
+
+    return-void
 .end method

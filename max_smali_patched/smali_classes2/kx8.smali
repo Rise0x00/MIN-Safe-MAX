@@ -1,64 +1,121 @@
 .class public final Lkx8;
-.super Ljava/lang/Object;
+.super Lef5;
 .source "SourceFile"
 
-# interfaces
-.implements Lpx8;
 
-
-# static fields
-.field public static final a:Lkx8;
+# instance fields
+.field public final G0:F
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(F)V
     .locals 1
 
-    new-instance v0, Lkx8;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Lef5;-><init>(Z)V
 
-    sput-object v0, Lkx8;->a:Lkx8;
+    const v0, 0x3a83126f    # 0.001f
+
+    sub-float/2addr p1, v0
+
+    iput p1, p0, Lkx8;->G0:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final m(FFFLugf;)V
+    .locals 8
 
-    const/4 v0, 0x1
+    iget p1, p0, Lkx8;->G0:F
 
-    if-ne p0, p1, :cond_0
+    float-to-double v0, p1
 
-    return v0
+    const-wide/high16 v2, 0x4000000000000000L    # 2.0
 
-    :cond_0
-    instance-of p1, p1, Lkx8;
+    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
 
-    if-nez p1, :cond_1
+    move-result-wide v4
 
-    const/4 p1, 0x0
+    mul-double/2addr v4, v0
 
-    return p1
+    div-double/2addr v4, v2
 
-    :cond_1
-    return v0
-.end method
+    double-to-float p1, v4
 
-.method public final hashCode()I
-    .locals 1
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->pow(DD)D
 
-    const v0, 0x5a175638    # 1.064938E16f
+    move-result-wide v4
 
-    return v0
-.end method
+    float-to-double v6, p1
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-static {v6, v7, v2, v3}, Ljava/lang/Math;->pow(DD)D
 
-    const-string v0, "OnClosing"
+    move-result-wide v6
 
-    return-object v0
+    sub-double/2addr v4, v6
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v4
+
+    double-to-float p3, v4
+
+    sub-float v4, p2, p1
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v5
+
+    mul-double/2addr v5, v0
+
+    sub-double/2addr v5, v0
+
+    neg-double v5, v5
+
+    double-to-float v5, v5
+
+    add-float/2addr v5, p3
+
+    const/high16 v6, 0x43870000    # 270.0f
+
+    const/4 v7, 0x0
+
+    invoke-virtual {p4, v4, v5, v6, v7}, Lugf;->d(FFFF)V
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v4
+
+    mul-double/2addr v4, v0
+
+    sub-double/2addr v4, v0
+
+    neg-double v4, v4
+
+    double-to-float v4, v4
+
+    invoke-virtual {p4, p2, v4}, Lugf;->c(FF)V
+
+    add-float/2addr p2, p1
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v2
+
+    mul-double/2addr v2, v0
+
+    sub-double/2addr v2, v0
+
+    neg-double v0, v2
+
+    double-to-float p1, v0
+
+    add-float/2addr p1, p3
+
+    invoke-virtual {p4, p2, p1}, Lugf;->c(FF)V
+
+    return-void
 .end method

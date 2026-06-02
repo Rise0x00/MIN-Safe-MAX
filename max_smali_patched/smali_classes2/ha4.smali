@@ -1,60 +1,239 @@
-.class public final synthetic Lha4;
+.class public final Lha4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lby3;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Z
 
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/factory/JoinCallParams;
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:F
+
+.field public final e:F
+
+.field public final f:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/factory/JoinCallParams;I)V
+.method public constructor <init>(ZIIFFI)V
     .locals 0
 
-    iput p2, p0, Lha4;->a:I
-
-    iput-object p1, p0, Lha4;->b:Lru/ok/android/externcalls/sdk/factory/JoinCallParams;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lha4;->a:Z
+
+    iput p2, p0, Lha4;->b:I
+
+    iput p3, p0, Lha4;->c:I
+
+    iput p4, p0, Lha4;->d:F
+
+    iput p5, p0, Lha4;->e:F
+
+    iput p6, p0, Lha4;->f:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lha4;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lha4;->b:Lru/ok/android/externcalls/sdk/factory/JoinCallParams;
+    return v0
 
-    check-cast p1, Ljava/lang/Throwable;
+    :cond_0
+    instance-of v1, p1, Lha4;
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->h(Lru/ok/android/externcalls/sdk/factory/JoinCallParams;Ljava/lang/Throwable;)V
+    const/4 v2, 0x0
 
-    return-void
+    if-nez v1, :cond_1
 
-    :pswitch_0
-    iget-object v0, p0, Lha4;->b:Lru/ok/android/externcalls/sdk/factory/JoinCallParams;
+    return v2
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/Conversation;
+    :cond_1
+    check-cast p1, Lha4;
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->p(Lru/ok/android/externcalls/sdk/factory/JoinCallParams;Lru/ok/android/externcalls/sdk/Conversation;)V
+    iget-boolean v1, p0, Lha4;->a:Z
 
-    return-void
+    iget-boolean v3, p1, Lha4;->a:Z
 
-    nop
+    if-eq v1, v3, :cond_2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v2
+
+    :cond_2
+    iget v1, p0, Lha4;->b:I
+
+    iget v3, p1, Lha4;->b:I
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget v1, p0, Lha4;->c:I
+
+    iget v3, p1, Lha4;->c:I
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget v1, p0, Lha4;->d:F
+
+    iget v3, p1, Lha4;->d:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget v1, p0, Lha4;->e:F
+
+    iget v3, p1, Lha4;->e:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget v1, p0, Lha4;->f:I
+
+    iget p1, p1, Lha4;->f:I
+
+    if-eq v1, p1, :cond_7
+
+    return v2
+
+    :cond_7
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-boolean v0, p0, Lha4;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lha4;->b:I
+
+    invoke-static {v2, v0, v1}, Lrtc;->n(III)I
+
+    move-result v0
+
+    iget v2, p0, Lha4;->c:I
+
+    invoke-static {v2, v0, v1}, Lrtc;->n(III)I
+
+    move-result v0
+
+    iget v2, p0, Lha4;->d:F
+
+    invoke-static {v0, v2, v1}, Lx82;->d(IFI)I
+
+    move-result v0
+
+    iget v2, p0, Lha4;->e:F
+
+    invoke-static {v0, v2, v1}, Lx82;->d(IFI)I
+
+    move-result v0
+
+    iget v1, p0, Lha4;->f:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "AnimationState(isVisible="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v1, p0, Lha4;->a:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", totalHeight="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lha4;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", directionY="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lha4;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", offsetY="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lha4;->d:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", startY="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lha4;->e:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", inset="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lha4;->f:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

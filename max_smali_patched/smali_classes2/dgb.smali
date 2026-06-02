@@ -1,61 +1,103 @@
-.class public final Ldgb;
-.super Lfgb;
+.class public abstract Ldgb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ldgb;
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Ldgb;
+    sget v0, Lgod;->media_picker_aspect_ratios_bottom_sheet_album_header:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sput v0, Ldgb;->a:I
 
-    sput-object v0, Ldgb;->a:Ldgb;
+    sget v0, Lgod;->media_picker_aspect_ratios_bottom_sheet_portrait_header:I
+
+    sput v0, Ldgb;->b:I
+
+    sget v0, Lgod;->media_picker_aspect_ratios_bottom_sheet_square_ratio:I
+
+    sput v0, Ldgb;->c:I
+
+    sget v0, Lgod;->media_picker_aspect_ratios_bottom_sheet_title:I
+
+    sput v0, Ldgb;->d:I
+
+    sget v0, Lgod;->media_picker_default_toolbar_title:I
+
+    sput v0, Ldgb;->e:I
+
+    sget v0, Lgod;->media_picker_default_toolbar_title_only_photo:I
+
+    sput v0, Ldgb;->f:I
+
+    sget v0, Lgod;->media_picker_empty_media_data:I
+
+    sput v0, Ldgb;->g:I
+
+    sget v0, Lgod;->media_picker_story_toolbar_title:I
+
+    sput v0, Ldgb;->h:I
+
+    sget v0, Lgod;->media_type_picker__permissions_dialog__button:I
+
+    sput v0, Ldgb;->i:I
+
+    sget v0, Lgod;->media_type_picker__permissions_dialog__gallery_camera_subtitle:I
+
+    sput v0, Ldgb;->j:I
+
+    sget v0, Lgod;->media_type_picker__permissions_dialog__gallery_camera_title:I
+
+    sput v0, Ldgb;->k:I
+
+    sget v0, Lgod;->media_type_picker__permissions_dialog__gallery_subtitle:I
+
+    sput v0, Ldgb;->l:I
+
+    sget v0, Lgod;->media_type_picker__permissions_dialog__gallery_title:I
+
+    sput v0, Ldgb;->m:I
+
+    sget v0, Lgod;->media_type_picker__permissions_dialog__subtitle:I
+
+    sput v0, Ldgb;->n:I
+
+    sget v0, Lgod;->media_type_picker__permissions_dialog__title:I
+
+    sput v0, Ldgb;->o:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Ldgb;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0xb05fa03
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Small"
-
-    return-object v0
 .end method

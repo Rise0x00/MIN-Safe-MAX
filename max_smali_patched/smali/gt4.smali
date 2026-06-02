@@ -1,24 +1,35 @@
-.class public final synthetic Lgt4;
+.class public interface abstract Lgt4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvu8;
+.implements Lxc8;
 
 
 # virtual methods
-.method public final b()Landroid/graphics/Matrix;
-    .locals 3
+.method public onDestroy(Lad8;)V
+    .locals 0
 
-    new-instance v0, Landroid/graphics/Matrix;
+    return-void
+.end method
 
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+.method public onPause(Lad8;)V
+    .locals 0
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    return-void
+.end method
 
-    const/high16 v2, -0x40800000    # -1.0f
+.method public abstract onResume(Lad8;)V
+.end method
 
-    invoke-virtual {v0, v1, v2}, Landroid/graphics/Matrix;->setScale(FF)V
+.method public onStart(Lad8;)V
+    .locals 0
 
-    return-object v0
+    return-void
+.end method
+
+.method public onStop(Lad8;)V
+    .locals 0
+
+    return-void
 .end method

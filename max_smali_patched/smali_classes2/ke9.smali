@@ -1,187 +1,224 @@
-.class public abstract Lke9;
+.class public final Lke9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/HashSet;
+# instance fields
+.field public final a:Landroid/os/Bundle;
 
-.field public static final b:Ljava/util/HashSet;
-
-.field public static final c:Ljava/util/Set;
-
-.field public static final d:Ljava/util/HashSet;
-
-.field public static final e:Ljava/util/HashSet;
-
-.field public static final f:Ljava/util/HashSet;
-
-.field public static final g:Ljava/util/HashSet;
-
-.field public static final h:Ljava/util/HashSet;
+.field public b:Lef9;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public constructor <init>(Lef9;Z)V
+    .locals 2
 
-    new-instance v0, Ljava/util/HashSet;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x1
+    if-eqz p1, :cond_0
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-instance v0, Landroid/os/Bundle;
 
-    move-result-object v2
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    const/4 v1, 0x3
+    iput-object v0, p0, Lke9;->a:Landroid/os/Bundle;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iput-object p1, p0, Lke9;->b:Lef9;
 
-    move-result-object v3
+    const-string v1, "selector"
 
-    const/4 v1, 0x4
+    iget-object p1, p1, Lef9;->a:Landroid/os/Bundle;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    move-result-object v4
+    const-string p1, "activeScan"
 
-    const/4 v1, 0x2
+    invoke-virtual {v0, p1, p2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return-void
 
-    move-result-object v5
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const/4 v1, 0x6
+    const-string p2, "selector must not be null"
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v6
+    throw p1
+.end method
 
-    const/4 v1, 0x5
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+# virtual methods
+.method public final a()V
+    .locals 3
 
-    move-result-object v7
+    iget-object v0, p0, Lke9;->b:Lef9;
 
-    const/4 v1, 0x7
+    if-nez v0, :cond_1
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v0, p0, Lke9;->a:Landroid/os/Bundle;
 
-    move-result-object v8
+    const-string v1, "selector"
 
-    filled-new-array/range {v2 .. v8}, [Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    sput-object v0, Lke9;->a:Ljava/util/HashSet;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    filled-new-array {v6, v8}, [Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    sput-object v0, Lke9;->b:Ljava/util/HashSet;
-
-    invoke-static {v5}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v0
 
-    sput-object v0, Lke9;->c:Ljava/util/Set;
+    const/4 v1, 0x0
 
-    new-instance v0, Ljava/util/HashSet;
+    if-eqz v0, :cond_0
 
-    const/16 v1, 0xb
+    new-instance v2, Lef9;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {v2, v0, v1}, Lef9;-><init>(Landroid/os/Bundle;Ljava/util/ArrayList;)V
 
-    move-result-object v1
+    move-object v1, v2
 
-    filled-new-array {v5, v1}, [Ljava/lang/Integer;
+    goto :goto_0
 
-    move-result-object v5
+    :cond_0
+    sget-object v0, Lef9;->c:Lef9;
 
-    invoke-static {v5}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    :goto_0
+    iput-object v1, p0, Lke9;->b:Lef9;
 
-    move-result-object v5
+    if-nez v1, :cond_1
 
-    invoke-direct {v0, v5}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+    sget-object v0, Lef9;->c:Lef9;
 
-    sput-object v0, Lke9;->d:Ljava/util/HashSet;
+    iput-object v0, p0, Lke9;->b:Lef9;
 
-    new-instance v0, Ljava/util/HashSet;
-
-    filled-new-array {v2, v3, v4}, [Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-static {v5}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    invoke-direct {v0, v5}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    sput-object v0, Lke9;->e:Ljava/util/HashSet;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    filled-new-array {v2, v3, v4, v1}, [Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-static {v7}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    sput-object v0, Lke9;->f:Ljava/util/HashSet;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-static {v8}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    sput-object v0, Lke9;->g:Ljava/util/HashSet;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    const/16 v1, 0x9
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    sput-object v0, Lke9;->h:Ljava/util/HashSet;
-
+    :cond_1
     return-void
+.end method
+
+.method public final b()Z
+    .locals 2
+
+    iget-object v0, p0, Lke9;->a:Landroid/os/Bundle;
+
+    const-string v1, "activeScan"
+
+    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    instance-of v0, p1, Lke9;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lke9;
+
+    invoke-virtual {p0}, Lke9;->a()V
+
+    iget-object v0, p0, Lke9;->b:Lef9;
+
+    invoke-virtual {p1}, Lke9;->a()V
+
+    iget-object v2, p1, Lke9;->b:Lef9;
+
+    invoke-virtual {v0, v2}, Lef9;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lke9;->b()Z
+
+    move-result v0
+
+    invoke-virtual {p1}, Lke9;->b()Z
+
+    move-result p1
+
+    if-ne v0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    invoke-virtual {p0}, Lke9;->a()V
+
+    iget-object v0, p0, Lke9;->b:Lef9;
+
+    invoke-virtual {v0}, Lef9;->hashCode()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Lke9;->b()Z
+
+    move-result v1
+
+    xor-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "DiscoveryRequest{ selector="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lke9;->a()V
+
+    iget-object v1, p0, Lke9;->b:Lef9;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", activeScan="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lke9;->b()Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isValid="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lke9;->a()V
+
+    iget-object v1, p0, Lke9;->b:Lef9;
+
+    invoke-virtual {v1}, Lef9;->a()V
+
+    iget-object v1, v1, Lef9;->b:Ljava/util/List;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v1, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    xor-int/lit8 v1, v1, 0x1
+
+    const-string v2, " }"
+
+    invoke-static {v0, v1, v2}, Lo52;->u(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

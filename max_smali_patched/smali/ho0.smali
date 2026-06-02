@@ -1,94 +1,62 @@
-.class public final Lho0;
-.super Ljava/lang/Object;
+.class public Lho0;
+.super Lio0;
 .source "SourceFile"
-
-# interfaces
-.implements Like;
 
 
 # instance fields
-.field public final X:J
-
-.field public final a:Lko0;
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final d:J
-
-.field public final o:J
+.field public final b:Leng;
 
 
 # direct methods
-.method public constructor <init>(Lko0;JJJJJ)V
+.method public constructor <init>(JLeng;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 2
+    invoke-direct {p0, p1, p2}, Lio0;-><init>(J)V
 
-    iput-object p1, p0, Lho0;->a:Lko0;
+    .line 3
+    iput-object p3, p0, Lho0;->b:Leng;
 
-    iput-wide p2, p0, Lho0;->b:J
+    return-void
+.end method
 
-    iput-wide p4, p0, Lho0;->c:J
+.method public constructor <init>(Leng;)V
+    .locals 2
 
-    iput-wide p6, p0, Lho0;->d:J
+    const-wide/high16 v0, -0x8000000000000000L
 
-    iput-wide p8, p0, Lho0;->o:J
-
-    iput-wide p10, p0, Lho0;->X:J
+    .line 1
+    invoke-direct {p0, v0, v1, p1}, Lho0;-><init>(JLeng;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Z
-    .locals 1
+.method public toString()Ljava/lang/String;
+    .locals 4
 
-    const/4 v0, 0x1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return v0
-.end method
+    const-string v1, "BaseErrorEvent{error="
 
-.method public final e(J)Lgke;
-    .locals 13
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lho0;->a:Lko0;
+    iget-object v1, p0, Lho0;->b:Leng;
 
-    invoke-interface {v0, p1, p2}, Lko0;->c(J)J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-wide v1
+    const-string v1, ", requestId="
 
-    iget-wide v9, p0, Lho0;->o:J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v11, p0, Lho0;->X:J
+    iget-wide v1, p0, Lio0;->a:J
 
-    const-wide/16 v3, 0x0
+    const/16 v3, 0x7d
 
-    iget-wide v5, p0, Lho0;->c:J
+    invoke-static {v0, v1, v2, v3}, Lrtc;->t(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
 
-    iget-wide v7, p0, Lho0;->d:J
+    move-result-object v0
 
-    invoke-static/range {v1 .. v12}, Lio0;->b(JJJJJJ)J
-
-    move-result-wide v0
-
-    new-instance v2, Lgke;
-
-    new-instance v3, Lmke;
-
-    invoke-direct {v3, p1, p2, v0, v1}, Lmke;-><init>(JJ)V
-
-    invoke-direct {v2, v3, v3}, Lgke;-><init>(Lmke;Lmke;)V
-
-    return-object v2
-.end method
-
-.method public final f()J
-    .locals 2
-
-    iget-wide v0, p0, Lho0;->b:J
-
-    return-wide v0
+    return-object v0
 .end method

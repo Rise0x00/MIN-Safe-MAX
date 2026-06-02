@@ -1,88 +1,250 @@
-.class public final Lwse;
-.super Lore;
+.class public final synthetic Lwse;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final b:J
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/chatscreen/search/SearchMessageBottomWidget;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public synthetic constructor <init>(Lone/me/chatscreen/search/SearchMessageBottomWidget;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lwse;->a:I
 
-    iput-wide p1, p0, Lwse;->b:J
+    iput-object p1, p0, Lwse;->b:Lone/me/chatscreen/search/SearchMessageBottomWidget;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final t()V
-    .locals 5
+.method public final onClick(Landroid/view/View;)V
+    .locals 7
 
-    invoke-virtual {p0}, Lore;->b()Lxg2;
+    iget p1, p0, Lwse;->a:I
 
-    move-result-object v0
+    iget-object v0, p0, Lwse;->b:Lone/me/chatscreen/search/SearchMessageBottomWidget;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    packed-switch p1, :pswitch_data_0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-boolean p1, v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->X:Z
 
-    const-string v2, "storeChatFromCache chatId = "
+    if-eqz p1, :cond_4
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->i1()Lcte;
 
-    iget-wide v2, p0, Lwse;->b:J
+    move-result-object p1
 
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-object p1, p1, Lcte;->d:Lvh0;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object p1, p1, Lvh0;->a:Ljava/lang/Object;
 
-    move-result-object v1
+    move-object v1, p1
 
-    const-string v4, "xg2"
+    check-cast v1, Lkw2;
 
-    invoke-static {v4, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object p1, v1, Lkw2;->f:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v2, v3}, Lxg2;->L(J)Lvh2;
+    iget v0, v1, Lkw2;->d:I
 
-    move-result-object v1
+    add-int/lit8 v0, v0, 0x1
 
-    if-nez v1, :cond_0
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-result v2
 
-    const-string v1, "storeChatFromCache, chatId = "
+    if-gt v0, v2, :cond_2
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget v0, v1, Lkw2;->d:I
 
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    add-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iput v0, v1, Lkw2;->d:I
 
-    move-result-object v0
+    iget-object v2, v1, Lkw2;->g:Lvh0;
 
-    invoke-static {v4, v0}, Lc5j;->e(Ljava/lang/String;Ljava/lang/String;)V
+    if-eqz v2, :cond_0
 
-    return-void
+    iget v3, v1, Lkw2;->k:I
+
+    invoke-virtual {v2, v0, v3}, Lvh0;->d(II)V
 
     :cond_0
-    iget-object v1, v1, Lvh2;->b:Luh2;
+    iget-object v0, v1, Lkw2;->g:Lvh0;
 
-    iget-object v0, v0, Lxg2;->m:Lj35;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lj35;->get()Ljava/lang/Object;
+    iget v2, v1, Lkw2;->d:I
+
+    add-int/lit8 v2, v2, -0x1
+
+    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lhw9;
+
+    invoke-virtual {v0, v2}, Lvh0;->e(Lhw9;)V
+
+    :cond_1
+    iget v0, v1, Lkw2;->d:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-gt v0, v2, :cond_2
+
+    iget-object v0, v1, Lkw2;->g:Lvh0;
+
+    if-eqz v0, :cond_2
+
+    iget v0, v1, Lkw2;->d:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lii4;
+    check-cast v0, Lhw9;
 
-    iget-object v0, v0, Lii4;->b:Ls1e;
+    :cond_2
+    iget-object v2, v1, Lkw2;->c:Ljava/lang/String;
 
-    invoke-virtual {v0, v2, v3, v1}, Ls1e;->h(JLuh2;)V
+    iget-boolean v0, v1, Lkw2;->h:Z
 
+    if-eqz v0, :cond_4
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result p1
+
+    iget v0, v1, Lkw2;->d:I
+
+    sub-int/2addr p1, v0
+
+    const/4 v0, 0x5
+
+    if-ge p1, v0, :cond_4
+
+    iget-wide v3, v1, Lkw2;->j:J
+
+    const-wide/16 v5, 0x0
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_4
+
+    if-eqz v2, :cond_4
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    const-string p1, "kw2"
+
+    const-string v0, "Search for next messages"
+
+    invoke-static {p1, v0}, Lnm4;->y(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, v1, Lkw2;->h:Z
+
+    iget-wide v3, v1, Lkw2;->j:J
+
+    iget-object p1, v1, Lkw2;->e:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v0, Ldb1;
+
+    const/4 v5, 0x0
+
+    invoke-direct/range {v0 .. v5}, Ldb1;-><init>(Lkw2;Ljava/lang/String;JLkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x0
+
+    invoke-static {p1, v2, v2, v0, v1}, Ly6j;->L(Loc4;Lfc4;Lrc4;Lnt6;I)Lhyf;
+
+    :cond_4
+    :goto_0
     return-void
+
+    :pswitch_0
+    iget-boolean p1, v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->Y:Z
+
+    if-eqz p1, :cond_6
+
+    invoke-virtual {v0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->i1()Lcte;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lcte;->d:Lvh0;
+
+    iget-object p1, p1, Lvh0;->a:Ljava/lang/Object;
+
+    check-cast p1, Lkw2;
+
+    iget-object v0, p1, Lkw2;->f:Ljava/util/ArrayList;
+
+    iget v1, p1, Lkw2;->d:I
+
+    add-int/lit8 v2, v1, -0x1
+
+    if-ltz v2, :cond_6
+
+    add-int/lit8 v1, v1, -0x1
+
+    iput v1, p1, Lkw2;->d:I
+
+    iget-object v2, p1, Lkw2;->g:Lvh0;
+
+    if-eqz v2, :cond_5
+
+    iget v3, p1, Lkw2;->k:I
+
+    invoke-virtual {v2, v1, v3}, Lvh0;->d(II)V
+
+    :cond_5
+    iget-object v1, p1, Lkw2;->g:Lvh0;
+
+    if-eqz v1, :cond_6
+
+    iget p1, p1, Lkw2;->d:I
+
+    add-int/lit8 p1, p1, -0x1
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lhw9;
+
+    invoke-virtual {v1, p1}, Lvh0;->e(Lhw9;)V
+
+    :cond_6
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,123 +1,65 @@
 .class public final Lwxa;
-.super Lvm0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ljava/lang/Object;
+.field public final a:Lide;
 
-.field public Y:Z
+.field public final b:Lbo3;
+
+
+# direct methods
+.method public constructor <init>(Lide;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lwxa;->a:Lide;
+
+    new-instance p1, Lbo3;
+
+    const/4 v0, 0x6
+
+    invoke-direct {p1, v0}, Lbo3;-><init>(I)V
+
+    iput-object p1, p0, Lwxa;->b:Lbo3;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final poll()Ljava/lang/Object;
-    .locals 2
+.method public final a(Ljava/util/List;Lz84;)Ljava/lang/Object;
+    .locals 3
 
-    :goto_0
-    iget-object v0, p0, Lvm0;->c:Lp2d;
+    const-string v0, "SELECT * FROM notifications_read_marks WHERE chat_id IN ("
 
-    invoke-interface {v0}, Lsdf;->poll()Ljava/lang/Object;
+    invoke-static {v0}, Lwph;->g(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    const-string v1, ")"
 
-    const/4 v0, 0x0
+    invoke-static {v1, v0, p1}, Lwph;->e(Ljava/lang/String;Ljava/lang/StringBuilder;Ljava/util/List;)Ljava/lang/String;
 
-    return-object v0
+    move-result-object v0
 
-    :cond_0
-    iget-boolean v1, p0, Lwxa;->Y:Z
+    new-instance v1, Lv06;
 
-    if-nez v1, :cond_1
+    const/4 v2, 0x1
 
-    const/4 v1, 0x1
+    invoke-direct {v1, v2, v0, p1}, Lv06;-><init>(ILjava/lang/String;Ljava/util/List;)V
 
-    iput-boolean v1, p0, Lwxa;->Y:Z
+    iget-object p1, p0, Lwxa;->a:Lide;
 
-    iput-object v0, p0, Lwxa;->X:Ljava/lang/Object;
-
-    return-object v0
-
-    :cond_1
-    iget-object v1, p0, Lwxa;->X:Ljava/lang/Object;
-
-    invoke-static {v1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    iput-object v0, p0, Lwxa;->X:Ljava/lang/Object;
-
-    return-object v0
-
-    :cond_2
-    iput-object v0, p0, Lwxa;->X:Ljava/lang/Object;
-
-    goto :goto_0
-.end method
-
-.method public final r(Ljava/lang/Object;)V
-    .locals 2
-
-    iget-boolean v0, p0, Lvm0;->d:Z
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget v0, p0, Lvm0;->o:I
-
-    iget-object v1, p0, Lvm0;->a:Le0b;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v1, p1}, Le0b;->r(Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_1
-    :try_start_0
-    iget-boolean v0, p0, Lwxa;->Y:Z
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lwxa;->X:Ljava/lang/Object;
-
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    iput-object p1, p0, Lwxa;->X:Ljava/lang/Object;
-
-    if-eqz v0, :cond_3
-
-    :goto_0
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_2
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lwxa;->Y:Z
+    const/4 v2, 0x0
 
-    iput-object p1, p0, Lwxa;->X:Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {p1, v0, v2, v1, p2}, Lyn8;->E(Lide;ZZLzs6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :cond_3
-    invoke-interface {v1, p1}, Le0b;->r(Ljava/lang/Object;)V
+    move-result-object p1
 
-    return-void
-
-    :goto_1
-    invoke-virtual {p0, p1}, Lvm0;->a(Ljava/lang/Throwable;)V
-
-    return-void
+    return-object p1
 .end method

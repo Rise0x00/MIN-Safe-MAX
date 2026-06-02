@@ -1,97 +1,212 @@
-.class public final enum Ly59;
-.super Ljava/lang/Enum;
+.class public final synthetic Ly59;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lij8;
 
-# static fields
-.field public static final enum a:Ly59;
 
-.field public static final enum b:Ly59;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum c:Ly59;
-
-.field public static final enum d:Ly59;
-
-.field public static final synthetic o:[Ly59;
+.field public final synthetic b:Ljbb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Ljbb;I)V
+    .locals 0
 
-    new-instance v0, Ly59;
+    iput p2, p0, Ly59;->a:I
 
-    const-string v1, "AUDIO"
+    iput-object p1, p0, Ly59;->b:Ljbb;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ly59;->a:Ly59;
-
-    new-instance v1, Ly59;
-
-    const-string v2, "VIDEO"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Ly59;->b:Ly59;
-
-    new-instance v2, Ly59;
-
-    const-string v3, "SCREEN_SHARING"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Ly59;->c:Ly59;
-
-    new-instance v3, Ly59;
-
-    const-string v4, "MOVIE_SHARING"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Ly59;->d:Ly59;
-
-    filled-new-array {v0, v1, v2, v3}, [Ly59;
-
-    move-result-object v0
-
-    sput-object v0, Ly59;->o:[Ly59;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ly59;
-    .locals 1
 
-    const-class v0, Ly59;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Ly59;->a:I
 
-    move-result-object p0
+    check-cast p1, Lghc;
 
-    check-cast p0, Ly59;
+    packed-switch v0, :pswitch_data_0
 
-    return-object p0
-.end method
+    iget-object v0, p0, Ly59;->b:Ljbb;
 
-.method public static values()[Ly59;
-    .locals 1
+    iget-object v0, v0, Ljbb;->a:Ljava/lang/Object;
 
-    sget-object v0, Ly59;->o:[Ly59;
+    check-cast v0, Lcic;
 
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-boolean v0, v0, Lcic;->i:Z
 
-    move-result-object v0
+    invoke-interface {p1, v0}, Lghc;->T(Z)V
 
-    check-cast v0, [Ly59;
+    return-void
 
-    return-object v0
+    :pswitch_0
+    iget-object v0, p0, Ly59;->b:Ljbb;
+
+    iget-object v0, v0, Ljbb;->a:Ljava/lang/Object;
+
+    check-cast v0, Lcic;
+
+    iget v0, v0, Lcic;->h:I
+
+    invoke-interface {p1, v0}, Lghc;->onRepeatModeChanged(I)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Ly59;->b:Ljbb;
+
+    iget-object v0, v0, Ljbb;->a:Ljava/lang/Object;
+
+    check-cast v0, Lcic;
+
+    iget-object v0, v0, Lcic;->g:Lpgc;
+
+    invoke-interface {p1, v0}, Lghc;->A0(Lpgc;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Ly59;->b:Ljbb;
+
+    iget-object v0, v0, Ljbb;->a:Ljava/lang/Object;
+
+    check-cast v0, Lcic;
+
+    iget-boolean v0, v0, Lcic;->v:Z
+
+    invoke-interface {p1, v0}, Lghc;->q(Z)V
+
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Ly59;->b:Ljbb;
+
+    iget-object v0, v0, Ljbb;->a:Ljava/lang/Object;
+
+    check-cast v0, Lcic;
+
+    iget-boolean v0, v0, Lcic;->t:Z
+
+    const/4 v1, 0x4
+
+    invoke-interface {p1, v1, v0}, Lghc;->i(IZ)V
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Ly59;->b:Ljbb;
+
+    iget-object v0, v0, Ljbb;->a:Ljava/lang/Object;
+
+    check-cast v0, Lcic;
+
+    iget v0, v0, Lcic;->y:I
+
+    invoke-interface {p1, v0}, Lghc;->k(I)V
+
+    return-void
+
+    :pswitch_5
+    iget-object v0, p0, Ly59;->b:Ljbb;
+
+    iget-object v0, v0, Ljbb;->a:Ljava/lang/Object;
+
+    check-cast v0, Lcic;
+
+    iget-object v0, v0, Lcic;->m:Lwa9;
+
+    invoke-interface {p1, v0}, Lghc;->j0(Lwa9;)V
+
+    return-void
+
+    :pswitch_6
+    iget-object v0, p0, Ly59;->b:Ljbb;
+
+    iget-object v0, v0, Ljbb;->a:Ljava/lang/Object;
+
+    check-cast v0, Lcic;
+
+    iget-object v1, v0, Lcic;->j:Lqxg;
+
+    iget v0, v0, Lcic;->k:I
+
+    invoke-interface {p1, v1, v0}, Lghc;->m0(Lqxg;I)V
+
+    return-void
+
+    :pswitch_7
+    iget-object v0, p0, Ly59;->b:Ljbb;
+
+    iget-object v0, v0, Ljbb;->c:Ljava/lang/Object;
+
+    check-cast v0, Ldhc;
+
+    invoke-interface {p1, v0}, Lghc;->B0(Ldhc;)V
+
+    return-void
+
+    :pswitch_8
+    iget-object v0, p0, Ly59;->b:Ljbb;
+
+    iget-object v0, v0, Ljbb;->a:Ljava/lang/Object;
+
+    check-cast v0, Lcic;
+
+    iget v1, v0, Lcic;->r:I
+
+    iget-boolean v0, v0, Lcic;->s:Z
+
+    invoke-interface {p1, v1, v0}, Lghc;->l(IZ)V
+
+    return-void
+
+    :pswitch_9
+    iget-object v0, p0, Ly59;->b:Ljbb;
+
+    iget-object v0, v0, Ljbb;->a:Ljava/lang/Object;
+
+    check-cast v0, Lcic;
+
+    iget-object v0, v0, Lcic;->q:Lk15;
+
+    invoke-interface {p1, v0}, Lghc;->E0(Lk15;)V
+
+    return-void
+
+    :pswitch_a
+    iget-object v0, p0, Ly59;->b:Ljbb;
+
+    iget-object v0, v0, Ljbb;->a:Ljava/lang/Object;
+
+    check-cast v0, Lcic;
+
+    iget-object v0, v0, Lcic;->o:Lt60;
+
+    invoke-interface {p1, v0}, Lghc;->x(Lt60;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,176 +3,89 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lzje;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lzje;
 
-.field public final synthetic b:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+.field public final b:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/settings/twofa/password/TwoFACheckPassScreen;I)V
+.method public constructor <init>(Lzje;J)V
     .locals 0
 
-    iput p2, p0, Ltwg;->a:I
-
-    iput-object p1, p0, Ltwg;->b:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ltwg;->a:Lzje;
+
+    iput-wide p2, p0, Ltwg;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 5
+.method public final b()V
+    .locals 1
 
-    iget p1, p0, Ltwg;->a:I
+    iget-object v0, p0, Ltwg;->a:Lzje;
 
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Ltwg;->b:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
-
-    sget-object v2, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->u0:[Lz28;
-
-    invoke-virtual {p1}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->z0()Llxg;
-
-    move-result-object p1
-
-    iget-object v2, p1, Llxg;->t0:Lo58;
-
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lmbg;
-
-    check-cast v2, Lj9b;
-
-    invoke-virtual {v2}, Lj9b;->b()Lsb4;
-
-    move-result-object v2
-
-    sget-object v3, Lcc4;->b:Lcc4;
-
-    new-instance v4, Lixg;
-
-    invoke-direct {v4, p1, v1}, Lixg;-><init>(Llxg;Lkotlin/coroutines/Continuation;)V
-
-    iget-object v1, p1, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v1, v2, v3, v4}, Ls9j;->f(Lzb4;Lqb4;Lcc4;Lbr6;)Lmmf;
-
-    move-result-object v1
-
-    iget-object v2, p1, Llxg;->E0:Lx07;
-
-    sget-object v3, Llxg;->H0:[Lz28;
-
-    aget-object v0, v3, v0
-
-    invoke-virtual {v2, p1, v0, v1}, Lx07;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
+    invoke-interface {v0}, Lzje;->b()V
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object p1, p0, Ltwg;->b:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+.method public final e()Z
+    .locals 1
 
-    sget-object v2, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->u0:[Lz28;
+    iget-object v0, p0, Ltwg;->a:Lzje;
 
-    invoke-virtual {p1}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->z0()Llxg;
+    invoke-interface {v0}, Lzje;->e()Z
 
-    move-result-object p1
+    move-result v0
 
-    iget-object v2, p0, Ltwg;->b:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    return v0
+.end method
 
-    iget-object v3, v2, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->X:Ljld;
+.method public final g(J)I
+    .locals 2
 
-    sget-object v4, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->u0:[Lz28;
+    iget-wide v0, p0, Ltwg;->b:J
 
-    aget-object v0, v4, v0
+    sub-long/2addr p1, v0
 
-    invoke-interface {v3, v2, v0}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    iget-object v0, p0, Ltwg;->a:Lzje;
 
-    move-result-object v0
+    invoke-interface {v0, p1, p2}, Lzje;->g(J)I
 
-    check-cast v0, Ld1h;
+    move-result p1
 
-    invoke-virtual {v0}, Ld1h;->getInputTexts()Lktb;
+    return p1
+.end method
 
-    move-result-object v0
+.method public final n(Lhrc;Lgn4;I)I
+    .locals 4
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Ltwg;->a:Lzje;
 
-    iget-object v0, v0, Lktb;->a:Ljava/lang/Object;
+    invoke-interface {v0, p1, p2, p3}, Lzje;->n(Lhrc;Lgn4;I)I
 
-    check-cast v0, Ljava/lang/CharSequence;
+    move-result p1
 
-    if-eqz v0, :cond_0
+    const/4 p3, -0x4
 
-    invoke-static {v0}, Lrzf;->d0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    if-ne p1, p3, :cond_0
 
-    move-result-object v0
+    iget-wide v0, p2, Lgn4;->X:J
 
-    goto :goto_0
+    iget-wide v2, p0, Ltwg;->b:J
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p2, Lgn4;->X:J
 
     :cond_0
-    move-object v0, v1
-
-    :goto_0
-    iget-object v2, p1, Llxg;->D0:Lmmf;
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v2}, Ll0;->isActive()Z
-
-    move-result v2
-
-    const/4 v3, 0x1
-
-    if-ne v2, v3, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v2, p1, Llxg;->t0:Lo58;
-
-    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lmbg;
-
-    check-cast v2, Lj9b;
-
-    invoke-virtual {v2}, Lj9b;->b()Lsb4;
-
-    move-result-object v2
-
-    new-instance v3, Laxg;
-
-    invoke-direct {v3, v0, p1, v1}, Laxg;-><init>(Ljava/lang/CharSequence;Llxg;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v0, 0x2
-
-    invoke-static {p1, v2, v3, v0}, Lnth;->n(Lnth;Lqb4;Lbr6;I)Lmmf;
-
-    move-result-object v0
-
-    iput-object v0, p1, Llxg;->D0:Lmmf;
-
-    :goto_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

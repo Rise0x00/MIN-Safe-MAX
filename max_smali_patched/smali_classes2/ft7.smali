@@ -1,124 +1,190 @@
-.class public final Lft7;
+.class public final synthetic Lft7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lht7;
+.implements Lvz3;
 
 
 # instance fields
-.field public final X:F
-
-.field public final Y:F
-
-.field public final a:Ljava/lang/ref/WeakReference;
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final d:F
-
-.field public final o:F
+.field public final synthetic a:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Lgt7;FFFF)V
-    .locals 2
+.method public synthetic constructor <init>(Landroid/view/View;)V
+    .locals 0
+
+    iput-object p1, p0, Lft7;->a:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lft7;->a:Ljava/lang/ref/WeakReference;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lft7;->c:J
-
-    const-wide/16 v0, 0xc8
-
-    iput-wide v0, p0, Lft7;->b:J
-
-    iput p2, p0, Lft7;->d:F
-
-    iput p3, p0, Lft7;->o:F
-
-    iput p4, p0, Lft7;->X:F
-
-    iput p5, p0, Lft7;->Y:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public accept(Ljava/lang/Object;)V
+    .locals 1
+
+    iget-object v0, p0, Lft7;->a:Landroid/view/View;
+
+    check-cast p1, Landroid/graphics/Rect;
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
+
+    return-void
+.end method
+
+.method public b(Ls7a;ILandroid/os/Bundle;)Z
     .locals 5
 
-    iget-object v0, p0, Lft7;->a:Ljava/lang/ref/WeakReference;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    and-int/2addr p2, v0
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    check-cast v0, Lgt7;
+    if-eqz p2, :cond_1
 
-    if-nez v0, :cond_0
+    :try_start_0
+    iget-object p2, p1, Ls7a;->a:Ljava/lang/Object;
 
-    return-void
+    check-cast p2, Lh98;
+
+    iget-object p2, p2, Lh98;->b:Ljava/lang/Object;
+
+    check-cast p2, Landroid/view/inputmethod/InputContentInfo;
+
+    invoke-virtual {p2}, Landroid/view/inputmethod/InputContentInfo;->requestPermission()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    iget-object p2, p1, Ls7a;->a:Ljava/lang/Object;
+
+    check-cast p2, Lh98;
+
+    iget-object p2, p2, Lh98;->b:Ljava/lang/Object;
+
+    check-cast p2, Landroid/view/inputmethod/InputContentInfo;
+
+    if-nez p3, :cond_0
+
+    new-instance p3, Landroid/os/Bundle;
+
+    invoke-direct {p3}, Landroid/os/Bundle;-><init>()V
+
+    goto :goto_0
 
     :cond_0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    new-instance v2, Landroid/os/Bundle;
 
-    move-result-wide v1
+    invoke-direct {v2, p3}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
-    iget-wide v3, p0, Lft7;->c:J
+    move-object p3, v2
 
-    sub-long/2addr v1, v3
+    :goto_0
+    const-string v2, "androidx.core.view.extra.INPUT_CONTENT_INFO"
 
-    iget-wide v3, p0, Lft7;->b:J
+    invoke-virtual {p3, v2, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    invoke-static {v3, v4, v1, v2}, Ljava/lang/Math;->min(JJ)J
+    goto :goto_1
 
-    move-result-wide v1
+    :catch_0
+    move-exception p1
 
-    long-to-float v1, v1
+    const-string p2, "InputConnectionCompat"
 
-    long-to-float v2, v3
+    const-string p3, "Can\'t insert content from IME; requestPermission() failed"
 
-    iget v3, p0, Lft7;->o:F
+    invoke-static {p2, p3, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    invoke-static {v1, v3, v2}, Lllj;->b(FFF)F
-
-    move-result v3
-
-    cmpg-float v1, v1, v2
-
-    if-gez v1, :cond_1
-
-    iget v1, p0, Lft7;->d:F
-
-    add-float/2addr v1, v3
-
-    iget v2, p0, Lft7;->X:F
-
-    iget v3, p0, Lft7;->Y:F
-
-    invoke-virtual {v0, v1, v2, v3}, Lgt7;->j(FFF)V
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
+    return v1
 
     :cond_1
-    const/4 v1, 0x1
+    :goto_1
+    new-instance p2, Landroid/content/ClipData;
 
-    invoke-virtual {v0, v1}, Lgt7;->setImageToWrapCropBounds(Z)V
+    iget-object v2, p1, Ls7a;->a:Ljava/lang/Object;
 
-    return-void
+    check-cast v2, Lh98;
+
+    iget-object p1, p1, Ls7a;->a:Ljava/lang/Object;
+
+    check-cast p1, Lh98;
+
+    iget-object v2, v2, Lh98;->b:Ljava/lang/Object;
+
+    check-cast v2, Landroid/view/inputmethod/InputContentInfo;
+
+    invoke-virtual {v2}, Landroid/view/inputmethod/InputContentInfo;->getDescription()Landroid/content/ClipDescription;
+
+    move-result-object v2
+
+    new-instance v3, Landroid/content/ClipData$Item;
+
+    iget-object v4, p1, Lh98;->b:Ljava/lang/Object;
+
+    check-cast v4, Landroid/view/inputmethod/InputContentInfo;
+
+    invoke-virtual {v4}, Landroid/view/inputmethod/InputContentInfo;->getContentUri()Landroid/net/Uri;
+
+    move-result-object v4
+
+    invoke-direct {v3, v4}, Landroid/content/ClipData$Item;-><init>(Landroid/net/Uri;)V
+
+    invoke-direct {p2, v2, v3}, Landroid/content/ClipData;-><init>(Landroid/content/ClipDescription;Landroid/content/ClipData$Item;)V
+
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v3, 0x1f
+
+    const/4 v4, 0x2
+
+    if-lt v2, v3, :cond_2
+
+    new-instance v2, Lnr;
+
+    invoke-direct {v2, p2, v4}, Lnr;-><init>(Landroid/content/ClipData;I)V
+
+    goto :goto_2
+
+    :cond_2
+    new-instance v2, Leg7;
+
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, v2, Leg7;->c:Ljava/lang/Object;
+
+    iput v4, v2, Leg7;->a:I
+
+    :goto_2
+    iget-object p1, p1, Lh98;->b:Ljava/lang/Object;
+
+    check-cast p1, Landroid/view/inputmethod/InputContentInfo;
+
+    invoke-virtual {p1}, Landroid/view/inputmethod/InputContentInfo;->getLinkUri()Landroid/net/Uri;
+
+    move-result-object p1
+
+    invoke-interface {v2, p1}, Lr74;->c(Landroid/net/Uri;)V
+
+    invoke-interface {v2, p3}, Lr74;->setExtras(Landroid/os/Bundle;)V
+
+    invoke-interface {v2}, Lr74;->build()Lt74;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lft7;->a:Landroid/view/View;
+
+    invoke-static {p2, p1}, Lj4i;->i(Landroid/view/View;Lt74;)Lt74;
+
+    move-result-object p1
+
+    if-nez p1, :cond_3
+
+    return v0
+
+    :cond_3
+    return v1
 .end method

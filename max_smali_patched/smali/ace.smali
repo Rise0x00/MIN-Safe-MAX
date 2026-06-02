@@ -1,159 +1,120 @@
-.class public abstract Lace;
+.class public final synthetic Lace;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxs6;
 
-# static fields
-.field public static final a:Lrff;
 
-.field public static final b:Lpq3;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:Ltw7;
+.field public final synthetic b:Lgce;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lgce;I)V
+    .locals 0
 
-    const-string v0, "Scheduler Supplier result can\'t be null"
+    iput p2, p0, Lace;->a:I
 
-    :try_start_0
-    sget-object v1, Lzbe;->a:Lrff;
+    iput-object p1, p0, Lace;->b:Lgce;
 
-    invoke-static {v1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_3
-
-    sput-object v1, Lace;->a:Lrff;
-
-    :try_start_1
-    sget-object v1, Lwbe;->a:Lpq3;
-
-    invoke-static {v1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_2
-
-    sput-object v1, Lace;->b:Lpq3;
-
-    :try_start_2
-    sget-object v1, Lxbe;->a:Ltw7;
-
-    invoke-static {v1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    sput-object v1, Lace;->c:Ltw7;
-
-    sget v1, Lqsg;->c:I
-
-    :try_start_3
-    sget-object v1, Lybe;->a:Lfna;
-
-    invoke-static {v1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lan5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    move-result-object v0
-
-    throw v0
-
-    :catchall_1
-    move-exception v0
-
-    invoke-static {v0}, Lan5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    move-result-object v0
-
-    throw v0
-
-    :catchall_2
-    move-exception v0
-
-    invoke-static {v0}, Lan5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    move-result-object v0
-
-    throw v0
-
-    :catchall_3
-    move-exception v0
-
-    invoke-static {v0}, Lan5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    move-result-object v0
-
-    throw v0
 .end method
 
-.method public static a()Lpbe;
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
     .locals 2
 
-    sget-object v0, Lace;->b:Lpq3;
+    iget v0, p0, Lace;->a:I
 
-    sget-object v1, Lknj;->b:Lwna;
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v1, :cond_0
+    iget-object v0, p0, Lace;->b:Lgce;
 
-    return-object v0
+    iget-object v0, v0, Lgce;->e:Lia8;
 
-    :cond_0
-    :try_start_0
-    invoke-virtual {v1, v0}, Lwna;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    check-cast v0, Lpbe;
-
-    return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lan5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    throw v0
-.end method
+    check-cast v0, Ly66;
 
-.method public static b()Lpbe;
-    .locals 2
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lace;->c:Ltw7;
-
-    sget-object v1, Lknj;->d:Lkme;
-
-    if-nez v1, :cond_0
-
-    return-object v0
-
-    :cond_0
-    :try_start_0
-    invoke-virtual {v1, v0}, Lkme;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    check-cast v0, Lpbe;
-
-    return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lan5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-virtual {v0}, Ly66;->b()Ljava/lang/String;
 
     move-result-object v0
 
-    throw v0
+    const-string v1, "ringtones"
+
+    invoke-static {v0, v1}, Ly66;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lace;->b:Lgce;
+
+    iget-object v0, v0, Lgce;->e:Lia8;
+
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ly66;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Ly66;->b()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "ringtones"
+
+    invoke-static {v0, v1}, Ly66;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lace;->b:Lgce;
+
+    iget-object v0, v0, Lgce;->e:Lia8;
+
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ly66;
+
+    invoke-virtual {v0}, Ly66;->n()Ljava/io/File;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

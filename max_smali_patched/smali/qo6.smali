@@ -1,57 +1,115 @@
-.class public abstract Lqo6;
-.super Ljava/lang/Object;
+.class public final Lqo6;
+.super Lsxg;
 .source "SourceFile"
 
-# interfaces
-.implements Lie4;
 
-
-# static fields
-.field public static final a:Z
+# instance fields
+.field public e:Lsxg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lsxg;)V
+    .locals 0
 
-    const-string v0, "Amazon"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v1, Lkbh;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    sget-object v0, Lkbh;->d:Ljava/lang/String;
-
-    const-string v1, "AFTM"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v1, "AFTB"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
-    sput-boolean v0, Lqo6;->a:Z
+    iput-object p1, p0, Lqo6;->e:Lsxg;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()Lsxg;
+    .locals 1
+
+    iget-object v0, p0, Lqo6;->e:Lsxg;
+
+    invoke-virtual {v0}, Lsxg;->a()Lsxg;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final b()Lsxg;
+    .locals 1
+
+    iget-object v0, p0, Lqo6;->e:Lsxg;
+
+    invoke-virtual {v0}, Lsxg;->b()Lsxg;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final c()J
+    .locals 2
+
+    iget-object v0, p0, Lqo6;->e:Lsxg;
+
+    invoke-virtual {v0}, Lsxg;->c()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final d(J)Lsxg;
+    .locals 1
+
+    iget-object v0, p0, Lqo6;->e:Lsxg;
+
+    invoke-virtual {v0, p1, p2}, Lsxg;->d(J)Lsxg;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final e()Z
+    .locals 1
+
+    iget-object v0, p0, Lqo6;->e:Lsxg;
+
+    invoke-virtual {v0}, Lsxg;->e()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final f()V
+    .locals 1
+
+    iget-object v0, p0, Lqo6;->e:Lsxg;
+
+    invoke-virtual {v0}, Lsxg;->f()V
+
+    return-void
+.end method
+
+.method public final g(JLjava/util/concurrent/TimeUnit;)Lsxg;
+    .locals 1
+
+    iget-object v0, p0, Lqo6;->e:Lsxg;
+
+    invoke-virtual {v0, p1, p2, p3}, Lsxg;->g(JLjava/util/concurrent/TimeUnit;)Lsxg;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final h()J
+    .locals 2
+
+    iget-object v0, p0, Lqo6;->e:Lsxg;
+
+    invoke-virtual {v0}, Lsxg;->h()J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method

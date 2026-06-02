@@ -3,127 +3,118 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb01;
-
-
-# instance fields
-.field public final a:Lig;
-
-.field public final b:I
-
-
-# direct methods
-.method public constructor <init>(Lig;I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lgf;->a:Lig;
-
-    iput p2, p0, Lgf;->b:I
-
-    return-void
-.end method
+.implements Lkuf;
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final a(Ljavax/net/ssl/SSLSocket;)Z
+    .locals 0
 
+    invoke-static {p1}, Lf5;->t(Ljavax/net/ssl/SSLSocket;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final b()Z
+    .locals 2
+
+    sget-object v0, Ldgc;->a:Ldgc;
+
+    invoke-static {}, Lura;->p()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1d
+
+    if-lt v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final b()Ljava/lang/String;
+.method public final c(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
     .locals 1
 
-    const/4 v0, 0x0
+    invoke-static {p1}, Lf5;->i(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
 
-    return-object v0
-.end method
+    move-result-object p1
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    if-nez p1, :cond_0
 
-    if-ne p1, p0, :cond_0
+    const/4 v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lgf;
+    const-string v0, ""
 
-    if-eqz v0, :cond_1
-
-    check-cast p1, Lgf;
-
-    iget v0, p0, Lgf;->b:I
-
-    iget v1, p1, Lgf;->b:I
-
-    if-ne v0, v1, :cond_1
-
-    iget-object v0, p0, Lgf;->a:Lig;
-
-    iget-object p1, p1, Lgf;->a:Lig;
-
-    invoke-virtual {v0, p1}, Lig;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lgf;->a:Lig;
-
-    invoke-virtual {v0}, Lig;->hashCode()I
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    mul-int/lit16 v0, v0, 0x3f5
+    :goto_0
+    if-eqz v0, :cond_1
 
-    iget v1, p0, Lgf;->b:I
+    const/4 p1, 0x0
 
-    add-int/2addr v0, v1
-
-    return v0
+    :cond_1
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
+    .locals 1
 
-    invoke-static {p0}, Lhdj;->b(Ljava/lang/Object;)Lle5;
+    :try_start_0
+    invoke-static {p1}, Lf5;->q(Ljavax/net/ssl/SSLSocket;)V
 
-    move-result-object v0
+    invoke-virtual {p1}, Ljavax/net/ssl/SSLSocket;->getSSLParameters()Ljavax/net/ssl/SSLParameters;
 
-    const-string v1, "imageCacheKey"
+    move-result-object p2
 
-    iget-object v2, p0, Lgf;->a:Lig;
+    sget-object v0, Ldgc;->a:Ldgc;
 
-    invoke-virtual {v0, v2, v1}, Lle5;->h(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3}, Lura;->k(Ljava/util/List;)Ljava/util/ArrayList;
 
-    const-string v1, "frameIndex"
+    move-result-object p3
 
-    iget v2, p0, Lgf;->b:I
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v2, v1}, Lle5;->c(ILjava/lang/String;)V
+    new-array v0, v0, [Ljava/lang/String;
 
-    invoke-virtual {v0}, Lle5;->toString()Ljava/lang/String;
+    invoke-virtual {p3, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p3
 
-    return-object v0
+    check-cast p3, [Ljava/lang/String;
+
+    invoke-static {p2, p3}, Lf5;->p(Ljavax/net/ssl/SSLParameters;[Ljava/lang/String;)V
+
+    invoke-virtual {p1, p2}, Ljavax/net/ssl/SSLSocket;->setSSLParameters(Ljavax/net/ssl/SSLParameters;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance p2, Ljava/io/IOException;
+
+    const-string p3, "Android internal error"
+
+    invoke-direct {p2, p3, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
 .end method

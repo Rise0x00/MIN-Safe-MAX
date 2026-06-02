@@ -1,151 +1,231 @@
-.class public abstract synthetic Ll35;
+.class public final Ll35;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:[I
+# instance fields
+.field public final a:I
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljfg;
+
+.field public final d:J
+
+.field public final e:J
+
+.field public final f:J
+
+.field public final g:Lmfj;
+
+.field public final h:Ltra;
+
+.field public final i:Lura;
+
+.field public final j:Landroid/content/Context;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lk35;)V
+    .locals 5
 
-    invoke-static {}, Ljava/math/RoundingMode;->values()[Ljava/math/RoundingMode;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iget-object v0, p1, Lk35;->g:Landroid/content/Context;
 
-    array-length v0, v0
+    iput-object v0, p0, Ll35;->j:Landroid/content/Context;
 
-    new-array v0, v0, [I
-
-    sput-object v0, Ll35;->a:[I
-
-    :try_start_0
-    sget-object v1, Ljava/math/RoundingMode;->UNNECESSARY:Ljava/math/RoundingMode;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
+    iget-object v1, p1, Lk35;->b:Ljfg;
 
     const/4 v2, 0x1
 
-    aput v2, v0, v1
+    if-nez v1, :cond_1
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v3, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v3, v2
+
+    :goto_1
+    const-string v4, "Either a non-null context or a base directory path or supplier must be provided."
+
+    if-eqz v3, :cond_6
+
+    if-nez v1, :cond_2
+
+    if-eqz v0, :cond_2
+
+    new-instance v0, Lj35;
+
+    invoke-direct {v0, p0}, Lj35;-><init>(Ll35;)V
+
+    iput-object v0, p1, Lk35;->b:Ljfg;
+
+    :cond_2
+    iput v2, p0, Ll35;->a:I
+
+    iget-object v0, p1, Lk35;->a:Ljava/lang/String;
+
+    iput-object v0, p0, Ll35;->b:Ljava/lang/String;
+
+    iget-object v0, p1, Lk35;->b:Ljfg;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object v0, p0, Ll35;->c:Ljfg;
+
+    iget-wide v0, p1, Lk35;->c:J
+
+    iput-wide v0, p0, Ll35;->d:J
+
+    iget-wide v0, p1, Lk35;->d:J
+
+    iput-wide v0, p0, Ll35;->e:J
+
+    iget-wide v0, p1, Lk35;->e:J
+
+    iput-wide v0, p0, Ll35;->f:J
+
+    iget-object p1, p1, Lk35;->f:Lmfj;
+
+    iput-object p1, p0, Ll35;->g:Lmfj;
+
+    const-class p1, Ltra;
+
+    monitor-enter p1
+
+    :try_start_0
+    sget-object v0, Ltra;->b:Ltra;
+
+    if-nez v0, :cond_3
+
+    new-instance v0, Ltra;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ltra;-><init>(I)V
+
+    sput-object v0, Ltra;->b:Ltra;
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_7
+
+    :cond_3
+    :goto_2
+    sget-object v0, Ltra;->b:Ltra;
     :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :catch_0
+    monitor-exit p1
+
+    iput-object v0, p0, Ll35;->h:Ltra;
+
+    const-class v0, Lura;
+
+    monitor-enter v0
+
     :try_start_1
-    sget-object v0, Ll35;->a:[I
+    sget-object p1, Lura;->b:Lura;
 
-    sget-object v1, Ljava/math/RoundingMode;->FLOOR:Ljava/math/RoundingMode;
+    if-nez p1, :cond_4
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    new-instance p1, Lura;
 
-    move-result v1
+    const/4 v1, 0x0
 
-    const/4 v2, 0x2
+    invoke-direct {p1, v1}, Lura;-><init>(I)V
 
-    aput v2, v0, v1
+    sput-object p1, Lura;->b:Lura;
+
+    goto :goto_3
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_6
+
+    :cond_4
+    :goto_3
+    sget-object p1, Lura;->b:Lura;
     :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    :catch_1
+    monitor-exit v0
+
+    iput-object p1, p0, Ll35;->i:Lura;
+
+    const-class p1, Lwra;
+
+    monitor-enter p1
+
     :try_start_2
-    sget-object v0, Ll35;->a:[I
+    sget-object v0, Lwra;->b:Lwra;
 
-    sget-object v1, Ljava/math/RoundingMode;->CEILING:Ljava/math/RoundingMode;
+    if-nez v0, :cond_5
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    new-instance v0, Lwra;
 
-    move-result v1
+    const/4 v1, 0x0
 
-    const/4 v2, 0x3
+    invoke-direct {v0, v1}, Lwra;-><init>(I)V
 
-    aput v2, v0, v1
+    sput-object v0, Lwra;->b:Lwra;
     :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    :catch_2
-    :try_start_3
-    sget-object v0, Ll35;->a:[I
+    goto :goto_4
 
-    sget-object v1, Ljava/math/RoundingMode;->DOWN:Ljava/math/RoundingMode;
+    :catchall_2
+    move-exception v0
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    goto :goto_5
 
-    move-result v1
+    :cond_5
+    :goto_4
+    monitor-exit p1
 
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    sget-object v0, Ll35;->a:[I
-
-    sget-object v1, Ljava/math/RoundingMode;->UP:Ljava/math/RoundingMode;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
-    sget-object v0, Ll35;->a:[I
-
-    sget-object v1, Ljava/math/RoundingMode;->HALF_EVEN:Ljava/math/RoundingMode;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x6
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    :try_start_6
-    sget-object v0, Ll35;->a:[I
-
-    sget-object v1, Ljava/math/RoundingMode;->HALF_UP:Ljava/math/RoundingMode;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x7
-
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    :try_start_7
-    sget-object v0, Ll35;->a:[I
-
-    sget-object v1, Ljava/math/RoundingMode;->HALF_DOWN:Ljava/math/RoundingMode;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0x8
-
-    aput v2, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
-
-    :catch_7
     return-void
+
+    :goto_5
+    :try_start_3
+    monitor-exit p1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+
+    throw v0
+
+    :goto_6
+    :try_start_4
+    monitor-exit v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    throw p1
+
+    :goto_7
+    :try_start_5
+    monitor-exit p1
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    throw v0
+
+    :cond_6
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

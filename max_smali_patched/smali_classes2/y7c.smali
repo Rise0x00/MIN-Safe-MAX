@@ -1,263 +1,242 @@
 .class public final Ly7c;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/pinbars/PinBarsWidget;
+.field public final a:Ljava/lang/String;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Landroid/graphics/RectF;
+
+.field public final c:Landroid/graphics/Rect;
+
+.field public final d:Landroid/net/Uri;
+
+.field public final e:Lwe4;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
+.method public constructor <init>(Ljava/lang/String;Landroid/graphics/RectF;Landroid/graphics/Rect;Landroid/net/Uri;Lwe4;)V
     .locals 0
 
-    iput-object p2, p0, Ly7c;->X:Lone/me/pinbars/PinBarsWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Ly7c;->a:Ljava/lang/String;
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Ly7c;->b:Landroid/graphics/RectF;
+
+    iput-object p3, p0, Ly7c;->c:Landroid/graphics/Rect;
+
+    iput-object p4, p0, Ly7c;->d:Landroid/net/Uri;
+
+    iput-object p5, p0, Ly7c;->e:Lwe4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Ly7c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
+    return v0
 
+    :cond_0
+    instance-of v1, p1, Ly7c;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Ly7c;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget-object v1, p0, Ly7c;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Ly7c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v3, p1, Ly7c;->a:Ljava/lang/String;
 
-    return-object p2
-.end method
+    invoke-static {v1, v3}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    move-result v1
 
-    new-instance v0, Ly7c;
+    if-nez v1, :cond_2
 
-    iget-object v1, p0, Ly7c;->X:Lone/me/pinbars/PinBarsWidget;
+    return v2
 
-    invoke-direct {v0, p2, v1}, Ly7c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
+    :cond_2
+    iget-object v1, p0, Ly7c;->b:Landroid/graphics/RectF;
 
-    iput-object p1, v0, Ly7c;->o:Ljava/lang/Object;
+    iget-object v3, p1, Ly7c;->b:Landroid/graphics/RectF;
 
-    return-object v0
-.end method
+    invoke-static {v1, v3}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
+    move-result v1
 
-    iget-object v0, p0, Ly7c;->o:Ljava/lang/Object;
+    if-nez v1, :cond_3
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    return v2
 
-    check-cast v0, Lu40;
+    :cond_3
+    iget-object v1, p0, Ly7c;->c:Landroid/graphics/Rect;
 
-    sget-object p1, Ls40;->a:Ls40;
+    iget-object v3, p1, Ly7c;->c:Landroid/graphics/Rect;
 
-    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Ly7c;->d:Landroid/net/Uri;
+
+    iget-object v3, p1, Ly7c;->d:Landroid/net/Uri;
+
+    invoke-static {v1, v3}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Ly7c;->e:Lwe4;
+
+    iget-object p1, p1, Ly7c;->e:Lwe4;
+
+    invoke-static {v1, p1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    iget-object v1, p0, Ly7c;->X:Lone/me/pinbars/PinBarsWidget;
+    if-nez p1, :cond_6
 
-    if-eqz p1, :cond_1
+    return v2
 
-    sget-object p1, Lone/me/pinbars/PinBarsWidget;->x0:[Lz28;
+    :cond_6
+    return v0
+.end method
 
-    iget-object p1, v1, Lone/me/pinbars/PinBarsWidget;->b:Lmog;
+.method public final hashCode()I
+    .locals 2
 
-    if-eqz p1, :cond_0
+    iget-object v0, p0, Ly7c;->a:Ljava/lang/String;
 
-    invoke-virtual {p1}, Lmog;->dismiss()V
-
-    :cond_0
-    const/4 p1, 0x0
-
-    iput-object p1, v1, Lone/me/pinbars/PinBarsWidget;->b:Lmog;
-
-    goto/16 :goto_0
-
-    :cond_1
-    instance-of p1, v0, Lt40;
-
-    if-eqz p1, :cond_5
-
-    check-cast v0, Lt40;
-
-    iget-object p1, v0, Lt40;->a:Llhg;
-
-    iget-object v0, v1, Lone/me/pinbars/PinBarsWidget;->X:Lr6a;
-
-    if-nez v0, :cond_2
-
-    goto/16 :goto_0
-
-    :cond_2
-    invoke-virtual {v0}, Landroid/view/View;->isLaidOut()Z
-
-    move-result v2
-
-    const/4 v3, 0x1
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {v0}, Landroid/view/View;->isLayoutRequested()Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    const/4 v2, 0x2
-
-    new-array v4, v2, [I
-
-    invoke-virtual {v0}, Lr6a;->getTooltipAnchor()Landroid/view/View;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v4}, Landroid/view/View;->getLocationOnScreen([I)V
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lmkj;->c(Landroid/content/Context;)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    const/4 v5, 0x0
+    mul-int/lit8 v0, v0, 0x1f
 
-    aget v5, v4, v5
+    iget-object v1, p0, Ly7c;->b:Landroid/graphics/RectF;
 
-    sub-int/2addr v0, v5
+    invoke-virtual {v1}, Landroid/graphics/RectF;->hashCode()I
 
-    invoke-virtual {v7}, Landroid/view/View;->getWidth()I
+    move-result v1
 
-    move-result v5
+    add-int/2addr v1, v0
 
-    div-int/2addr v5, v2
+    mul-int/lit8 v1, v1, 0x1f
 
-    sub-int/2addr v0, v5
+    iget-object v0, p0, Ly7c;->c:Landroid/graphics/Rect;
 
-    const/16 v2, 0x12
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v2, v5, v0}, Lxi4;->r(FFI)I
+    invoke-virtual {v0}, Landroid/graphics/Rect;->hashCode()I
 
     move-result v0
 
-    aget v2, v4, v3
+    add-int/2addr v0, v1
 
-    invoke-virtual {v7}, Landroid/view/View;->getHeight()I
+    mul-int/lit8 v0, v0, 0x1f
 
-    move-result v4
+    iget-object v1, p0, Ly7c;->d:Landroid/net/Uri;
 
-    add-int/2addr v4, v2
+    if-nez v1, :cond_0
 
-    new-instance v2, Landroid/graphics/Point;
-
-    invoke-direct {v2, v0, v4}, Landroid/graphics/Point;-><init>(II)V
-
-    iget-object v0, v1, Lone/me/pinbars/PinBarsWidget;->b:Lmog;
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Landroid/widget/PopupWindow;->isShowing()Z
-
-    move-result v0
-
-    if-ne v0, v3, :cond_3
-
-    iget-object v0, v1, Lone/me/pinbars/PinBarsWidget;->b:Lmog;
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Lmog;->dismiss()V
-
-    :cond_3
-    new-instance v5, Lmog;
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v6
-
-    new-instance v8, Lbz8;
-
-    const/16 v0, 0x1b
-
-    invoke-direct {v8, v0, v1}, Lbz8;-><init>(ILjava/lang/Object;)V
-
-    const/4 v11, 0x3
-
-    const/16 v12, 0x8
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x1
-
-    invoke-direct/range {v5 .. v12}, Lmog;-><init>(Landroid/content/Context;Landroid/view/View;Llq6;Lg31;III)V
-
-    invoke-virtual {v5, p1}, Lmog;->c(Lqhg;)V
-
-    const p1, 0x800035
-
-    const-wide/16 v6, 0xbb8
-
-    invoke-virtual {v5, v2, p1, v6, v7}, Lmog;->d(Landroid/graphics/Point;IJ)V
-
-    new-instance p1, Lxj9;
-
-    invoke-direct {p1, v3, v1}, Lxj9;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v5, p1}, Landroid/widget/PopupWindow;->setOnDismissListener(Landroid/widget/PopupWindow$OnDismissListener;)V
-
-    iput-object v5, v1, Lone/me/pinbars/PinBarsWidget;->b:Lmog;
+    const/4 v1, 0x0
 
     goto :goto_0
 
-    :cond_4
-    new-instance v2, Lgh1;
+    :cond_0
+    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
 
-    invoke-direct {v2, v0, v1, p1, v3}, Lgh1;-><init>(Landroid/view/View;Lone/me/sdk/arch/Widget;Ljava/lang/Object;I)V
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+    move-result v1
 
     :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    add-int/2addr v0, v1
 
-    return-object p1
+    mul-int/lit8 v0, v0, 0x1f
 
-    :cond_5
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    iget-object v1, p0, Ly7c;->e:Lwe4;
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-virtual {v1}, Lwe4;->hashCode()I
 
-    throw p1
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "PhotoCropResult(path="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ly7c;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", relativeCrop="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ly7c;->b:Landroid/graphics/RectF;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", absoluteCrop="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ly7c;->c:Landroid/graphics/Rect;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", imageUri="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ly7c;->d:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", cropResult="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ly7c;->e:Lwe4;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

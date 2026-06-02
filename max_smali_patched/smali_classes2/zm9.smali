@@ -1,16 +1,51 @@
 .class public final Lzm9;
-.super Ljava/lang/Object;
+.super Lz84;
 .source "SourceFile"
 
-# interfaces
-.implements Lfn9;
+
+# instance fields
+.field public final synthetic X:Lbn9;
+
+.field public Y:I
+
+.field public d:Ljava/util/List;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lbn9;Lz84;)V
+    .locals 0
+
+    iput-object p1, p0, Lzm9;->X:Lbn9;
+
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const-string v0, "ChatUpdate"
+    iput-object p1, p0, Lzm9;->o:Ljava/lang/Object;
 
-    return-object v0
+    iget p1, p0, Lzm9;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lzm9;->Y:I
+
+    iget-object p1, p0, Lzm9;->X:Lbn9;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, v0, p0}, Lbn9;->u(Lbn9;Ljava/util/List;Lfm9;Lz84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

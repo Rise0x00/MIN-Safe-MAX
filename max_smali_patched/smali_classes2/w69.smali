@@ -1,23 +1,24 @@
 .class public final Lw69;
-.super Lie0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ly69;
 
 
 # static fields
-.field public static final b:Lw69;
+.field public static final a:Lw69;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
     new-instance v0, Lw69;
 
-    const/16 v1, 0x9
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lie0;-><init>(I)V
-
-    sput-object v0, Lw69;->b:Lw69;
+    sput-object v0, Lw69;->a:Lw69;
 
     return-void
 .end method
@@ -49,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x2c33eae1
+    const v0, -0x1da1d930
 
     return v0
 .end method
@@ -57,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "Pop"
+    const-string v0, "Loading"
 
     return-object v0
 .end method

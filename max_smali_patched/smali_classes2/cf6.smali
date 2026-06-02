@@ -1,66 +1,45 @@
-.class public final synthetic Lcf6;
-.super Ljava/lang/Object;
+.class public final Lcf6;
+.super Ldf6;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lnq6;
-
-.field public final synthetic c:Lpah;
+.field public final synthetic a:[Ljava/lang/Iterable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqr6;Lpah;I)V
+.method public constructor <init>([Ljava/lang/Iterable;)V
     .locals 0
 
-    iput p3, p0, Lcf6;->a:I
-
-    check-cast p1, Lnq6;
-
-    iput-object p1, p0, Lcf6;->b:Lnq6;
-
-    iput-object p2, p0, Lcf6;->c:Lpah;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcf6;->a:[Ljava/lang/Iterable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method public final iterator()Ljava/util/Iterator;
+    .locals 3
 
-    iget p1, p0, Lcf6;->a:I
+    new-instance v0, Lbf6;
 
-    packed-switch p1, :pswitch_data_0
+    iget-object v1, p0, Lcf6;->a:[Ljava/lang/Iterable;
 
-    iget-object p1, p0, Lcf6;->b:Lnq6;
+    array-length v1, v1
 
-    iget-object v0, p0, Lcf6;->c:Lpah;
+    invoke-direct {v0, p0, v1}, Lbf6;-><init>(Lcf6;I)V
 
-    invoke-interface {p1, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v1, Lh08;
 
-    return-void
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    :pswitch_0
-    iget-object p1, p0, Lcf6;->b:Lnq6;
+    sget-object v2, Lg08;->o:Lg08;
 
-    iget-object v0, p0, Lcf6;->c:Lpah;
+    iput-object v2, v1, Lh08;->b:Ljava/util/Iterator;
 
-    invoke-interface {p1, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object v0, v1, Lh08;->c:Ljava/util/Iterator;
 
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v1
 .end method

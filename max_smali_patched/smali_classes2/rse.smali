@@ -1,86 +1,43 @@
 .class public final Lrse;
-.super Lnse;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
 
-
-# instance fields
-.field public final synthetic h:I
-
-.field public final i:Ljava/lang/String;
-
-.field public j:Z
-
-.field public final k:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(JLjava/lang/String;Li20;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lrse;->h:I
-
-    .line 5
-    invoke-direct {p0, p1, p2}, Lnse;-><init>(J)V
-
-    .line 6
-    iput-object p3, p0, Lrse;->i:Ljava/lang/String;
-
-    .line 7
-    iput-object p4, p0, Lrse;->k:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(JLjava/lang/String;ZLjava/util/List;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lrse;->h:I
-
-    .line 1
-    invoke-direct {p0, p1, p2}, Lnse;-><init>(J)V
-
-    .line 2
-    iput-object p3, p0, Lrse;->i:Ljava/lang/String;
-
-    .line 3
-    iput-boolean p4, p0, Lrse;->j:Z
-
-    .line 4
-    iput-object p5, p0, Lrse;->k:Ljava/lang/Object;
-
-    return-void
-.end method
+# interfaces
+.implements Lgug;
 
 
 # virtual methods
-.method public final a()Lose;
-    .locals 1
+.method public final onThemeChanged(Ldqb;)V
+    .locals 2
 
-    iget v0, p0, Lrse;->h:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    new-instance v0, Ltse;
+    move-result-object v0
 
-    invoke-direct {v0, p0}, Ltse;-><init>(Lrse;)V
+    instance-of v1, v0, Landroid/widget/ProgressBar;
 
-    return-object v0
+    if-eqz v1, :cond_0
 
-    :pswitch_0
-    new-instance v0, Lsse;
+    check-cast v0, Landroid/widget/ProgressBar;
 
-    invoke-direct {v0, p0}, Lsse;-><init>(Lrse;)V
+    goto :goto_0
 
-    return-object v0
+    :cond_0
+    const/4 v0, 0x0
 
-    nop
+    :goto_0
+    if-eqz v0, :cond_1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-interface {p1}, Ldqb;->getIcon()Lzpb;
+
+    move-result-object p1
+
+    iget p1, p1, Lzpb;->c:I
+
+    invoke-static {v0, p1}, Ltla;->Q(Landroid/widget/ProgressBar;I)V
+
+    :cond_1
+    return-void
 .end method

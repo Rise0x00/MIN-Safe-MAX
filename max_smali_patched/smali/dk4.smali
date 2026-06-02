@@ -1,223 +1,304 @@
 .class public final Ldk4;
-.super Landroid/widget/BaseAdapter;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lsv0;
+
+
+# static fields
+.field public static final o:Lkfg;
 
 
 # instance fields
-.field public final a:Ljava/util/Calendar;
+.field public final a:Loj8;
 
-.field public final b:I
+.field public final b:Lrq4;
 
-.field public final c:I
+.field public final c:Landroid/graphics/BitmapFactory$Options;
+
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 2
 
-    .line 1
-    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
+    new-instance v0, Lck4;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    .line 2
-    invoke-static {v0}, Libh;->c(Ljava/util/Calendar;)Ljava/util/Calendar;
+    invoke-direct {v0, v1}, Lck4;-><init>(I)V
+
+    invoke-static {v0}, Ltla;->G(Lkfg;)Lkfg;
 
     move-result-object v0
 
-    .line 3
-    iput-object v0, p0, Ldk4;->a:Ljava/util/Calendar;
-
-    const/4 v1, 0x7
-
-    .line 4
-    invoke-virtual {v0, v1}, Ljava/util/Calendar;->getMaximum(I)I
-
-    move-result v1
-
-    iput v1, p0, Ldk4;->b:I
-
-    .line 5
-    invoke-virtual {v0}, Ljava/util/Calendar;->getFirstDayOfWeek()I
-
-    move-result v0
-
-    iput v0, p0, Ldk4;->c:I
+    sput-object v0, Ldk4;->o:Lkfg;
 
     return-void
 .end method
 
-.method public constructor <init>(I)V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
 
-    .line 6
-    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
+    .line 1
+    sget-object v0, Ldk4;->o:Lkfg;
 
-    const/4 v0, 0x0
-
-    .line 7
-    invoke-static {v0}, Libh;->c(Ljava/util/Calendar;)Ljava/util/Calendar;
+    invoke-interface {v0}, Lkfg;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 8
-    iput-object v0, p0, Ldk4;->a:Ljava/util/Calendar;
+    check-cast v0, Loj8;
 
-    const/4 v1, 0x7
+    invoke-static {v0}, Lh43;->p(Ljava/lang/Object;)V
 
-    .line 9
-    invoke-virtual {v0, v1}, Ljava/util/Calendar;->getMaximum(I)I
+    new-instance v1, Lrq4;
 
-    move-result v0
+    invoke-direct {v1, p1}, Lrq4;-><init>(Landroid/content/Context;)V
 
-    iput v0, p0, Ldk4;->b:I
+    const/4 p1, 0x0
 
-    .line 10
-    iput p1, p0, Ldk4;->c:I
+    const/4 v2, -0x1
+
+    .line 2
+    invoke-direct {p0, v0, v1, p1, v2}, Ldk4;-><init>(Loj8;Lrq4;Landroid/graphics/BitmapFactory$Options;I)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Loj8;Lrq4;Landroid/graphics/BitmapFactory$Options;I)V
+    .locals 0
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    iput-object p1, p0, Ldk4;->a:Loj8;
+
+    .line 5
+    iput-object p2, p0, Ldk4;->b:Lrq4;
+
+    .line 6
+    iput-object p3, p0, Ldk4;->c:Landroid/graphics/BitmapFactory$Options;
+
+    .line 7
+    iput p4, p0, Ldk4;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getCount()I
-    .locals 1
-
-    iget v0, p0, Ldk4;->b:I
-
-    return v0
-.end method
-
-.method public final getItem(I)Ljava/lang/Object;
+.method public final f(Landroid/net/Uri;)Lyi8;
     .locals 2
 
-    iget v0, p0, Ldk4;->b:I
+    new-instance v0, Lhb4;
 
-    if-lt p1, v0, :cond_0
+    const/4 v1, 0x2
 
-    const/4 p1, 0x0
+    invoke-direct {v0, p0, v1, p1}, Lhb4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    return-object p1
+    iget-object p1, p0, Ldk4;->a:Loj8;
 
-    :cond_0
-    iget v1, p0, Ldk4;->c:I
+    check-cast p1, Lwba;
 
-    add-int/2addr p1, v1
-
-    if-le p1, v0, :cond_1
-
-    sub-int/2addr p1, v0
-
-    :cond_1
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {p1, v0}, Lwba;->d(Ljava/util/concurrent/Callable;)Lyi8;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final getItemId(I)J
-    .locals 2
+.method public final h(Ljava/lang/String;)Z
+    .locals 4
 
-    const-wide/16 v0, 0x0
+    sget-object v0, Lpnh;->a:Ljava/lang/String;
 
-    return-wide v0
-.end method
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
-.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 3
-
-    move-object v0, p2
-
-    check-cast v0, Landroid/widget/TextView;
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p3}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p2
-
-    invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object p2
-
-    sget v0, Llbd;->mtrl_calendar_day_of_week:I
+    move-result v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {p2, v0, p3, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    const/4 v2, 0x1
 
-    move-result-object p2
+    const/4 v3, -0x1
 
-    move-object v0, p2
+    sparse-switch v0, :sswitch_data_0
 
-    check-cast v0, Landroid/widget/TextView;
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "image/png"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    iget p2, p0, Ldk4;->c:I
+    const/4 v3, 0x6
 
-    add-int/2addr p1, p2
+    goto :goto_0
 
-    iget p2, p0, Ldk4;->b:I
+    :sswitch_1
+    const-string v0, "image/bmp"
 
-    if-le p1, p2, :cond_1
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    sub-int/2addr p1, p2
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    goto :goto_0
 
     :cond_1
-    iget-object p2, p0, Ldk4;->a:Ljava/util/Calendar;
+    const/4 v3, 0x5
 
-    const/4 v1, 0x7
+    goto :goto_0
 
-    invoke-virtual {p2, v1, p1}, Ljava/util/Calendar;->set(II)V
+    :sswitch_2
+    const-string v0, "image/webp"
 
-    invoke-virtual {v0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v3, 0x4
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v0, "image/jpeg"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    const/4 v3, 0x3
+
+    goto :goto_0
+
+    :sswitch_4
+    const-string v0, "image/heif"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    const/4 v3, 0x2
+
+    goto :goto_0
+
+    :sswitch_5
+    const-string v0, "image/heic"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    move v3, v2
+
+    goto :goto_0
+
+    :sswitch_6
+    const-string v0, "image/avif"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    move v3, v1
+
+    :goto_0
+    packed-switch v3, :pswitch_data_0
+
+    goto :goto_1
+
+    :pswitch_0
+    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v0, 0x22
+
+    if-lt p1, v0, :cond_7
+
+    :pswitch_1
+    return v2
+
+    :cond_7
+    :goto_1
+    return v1
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x58abd7ba -> :sswitch_6
+        -0x58a8e8f5 -> :sswitch_5
+        -0x58a8e8f2 -> :sswitch_4
+        -0x58a7d764 -> :sswitch_3
+        -0x58a21830 -> :sswitch_2
+        -0x3468a12f -> :sswitch_1
+        -0x34686c8b -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public final j([B)Lyi8;
+    .locals 2
+
+    new-instance v0, Lhb4;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, v1, p1}, Lhb4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object p1, p0, Ldk4;->a:Loj8;
+
+    check-cast p1, Lwba;
+
+    invoke-virtual {p1, v0}, Lwba;->d(Ljava/util/concurrent/Callable;)Lyi8;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object p1
-
-    iget-object p1, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
-
-    const/4 v2, 0x4
-
-    invoke-virtual {p2, v1, v2, p1}, Ljava/util/Calendar;->getDisplayName(IILjava/util/Locale;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p3}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    sget p3, Ltcd;->mtrl_picker_day_of_week_column_header:I
-
-    invoke-virtual {p1, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 p3, 0x2
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object v2
-
-    invoke-virtual {p2, v1, p3, v2}, Ljava/util/Calendar;->getDisplayName(IILjava/util/Locale;)Ljava/lang/String;
-
-    move-result-object p2
-
-    filled-new-array {p2}, [Ljava/lang/Object;
-
-    move-result-object p2
-
-    invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
-
-    return-object v0
+    return-object p1
 .end method

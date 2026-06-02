@@ -1,87 +1,48 @@
-.class public final enum Llhc;
-.super Ljava/lang/Enum;
-.source "SourceFile"
-
-
-# static fields
-.field public static final enum b:Llhc;
-
-.field public static final enum c:Llhc;
-
-.field public static final synthetic d:[Llhc;
+.class public final Llhc;
+.super Lz84;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lxwa;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Llhc;
-
-    const-string v1, "PERFORMANCE"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, v2}, Llhc;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Llhc;->b:Llhc;
-
-    new-instance v1, Llhc;
-
-    const-string v2, "COMPATIBLE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3, v3}, Llhc;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Llhc;->c:Llhc;
-
-    filled-new-array {v0, v1}, [Llhc;
-
-    move-result-object v0
-
-    sput-object v0, Llhc;->d:[Llhc;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Lxwa;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Llhc;->X:Lxwa;
 
-    iput p3, p0, Llhc;->a:I
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Llhc;
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const-class v0, Llhc;
+    iput-object p1, p0, Llhc;->d:Ljava/lang/Object;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget p1, p0, Llhc;->o:I
 
-    move-result-object p0
+    const/high16 v0, -0x80000000
 
-    check-cast p0, Llhc;
+    or-int/2addr p1, v0
 
-    return-object p0
-.end method
+    iput p1, p0, Llhc;->o:I
 
-.method public static values()[Llhc;
-    .locals 1
+    iget-object p1, p0, Llhc;->X:Lxwa;
 
-    sget-object v0, Llhc;->d:[Llhc;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, [Llhc;->clone()Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lxwa;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, [Llhc;
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,64 +1,97 @@
 .class public final Lkp9;
-.super Ljava/lang/Object;
+.super Lti8;
 .source "SourceFile"
 
 # interfaces
-.implements Llw9;
+.implements Lyo9;
 
 
 # static fields
-.field public static final a:Lkp9;
+.field public static final U0:Ljava/lang/reflect/Method;
+
+
+# instance fields
+.field public T0:Lh98;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
-    new-instance v0, Lkp9;
+    :try_start_0
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0x1c
 
-    sput-object v0, Lkp9;->a:Lkp9;
+    if-gt v0, v1, :cond_0
+
+    const-class v0, Landroid/widget/PopupWindow;
+
+    const-string v1, "setTouchModal"
+
+    sget-object v2, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    filled-new-array {v2}, [Ljava/lang/Class;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    sput-object v0, Lkp9;->U0:Ljava/lang/reflect/Method;
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    return-void
+
+    :catch_0
+    const-string v0, "MenuPopupWindow"
+
+    const-string v1, "Could not find method setTouchModal() on PopupWindow. Oh well."
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final d(Lvo9;Landroid/view/MenuItem;)V
     .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lkp9;->T0:Lh98;
 
-    if-ne p0, p1, :cond_0
+    if-eqz v0, :cond_0
 
-    return v0
+    invoke-virtual {v0, p1, p2}, Lh98;->d(Lvo9;Landroid/view/MenuItem;)V
 
     :cond_0
-    instance-of p1, p1, Lkp9;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
+.method public final k(Lvo9;Lzo9;)V
     .locals 1
 
-    const v0, 0x43f6b71e
+    iget-object v0, p0, Lkp9;->T0:Lh98;
 
-    return v0
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1, p2}, Lh98;->k(Lvo9;Lzo9;)V
+
+    :cond_0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final q(Landroid/content/Context;Z)Lwb5;
     .locals 1
 
-    const-string v0, "MessagePinned"
+    new-instance v0, Ljp9;
+
+    invoke-direct {v0, p1, p2}, Ljp9;-><init>(Landroid/content/Context;Z)V
+
+    invoke-virtual {v0, p0}, Ljp9;->setHoverListener(Lyo9;)V
 
     return-object v0
 .end method

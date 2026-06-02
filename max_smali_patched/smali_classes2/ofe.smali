@@ -1,222 +1,156 @@
 .class public final Lofe;
-.super Ljava/lang/Object;
+.super Landroid/view/OrientationEventListener;
 .source "SourceFile"
-
-# interfaces
-.implements Llq6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:I
 
-.field public final synthetic b:Lo58;
+.field public final synthetic b:Lal8;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lo58;I)V
+.method public constructor <init>(Lal8;Landroid/content/Context;)V
     .locals 0
 
-    iput p2, p0, Lofe;->a:I
+    iput-object p1, p0, Lofe;->b:Lal8;
 
-    iput-object p1, p0, Lofe;->b:Lo58;
+    invoke-direct {p0, p2}, Landroid/view/OrientationEventListener;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, -0x1
+
+    iput p1, p0, Lofe;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 7
+.method public final onOrientationChanged(I)V
+    .locals 5
 
-    iget v0, p0, Lofe;->a:I
+    const/4 v0, -0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p1, v0, :cond_0
 
-    iget-object v0, p0, Lofe;->b:Lo58;
+    goto :goto_3
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    :cond_0
+    const/16 v0, 0x13b
 
-    move-result-object v1
+    if-ge p1, v0, :cond_4
 
-    check-cast v1, Liz4;
+    const/16 v0, 0x2d
 
-    invoke-virtual {v1}, Liz4;->j()Lmah;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lmah;->b:Ljava/lang/String;
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Liz4;
-
-    invoke-virtual {v2}, Liz4;->j()Lmah;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lmah;->d:Ljava/lang/String;
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Liz4;
-
-    invoke-virtual {v3}, Liz4;->j()Lmah;
-
-    move-result-object v3
-
-    iget-object v3, v3, Lmah;->h:Ljava/lang/String;
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Liz4;
-
-    invoke-virtual {v0}, Liz4;->j()Lmah;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lmah;->i:Ljava/lang/String;
-
-    const-string v4, "OKMessages/"
-
-    const-string v5, " ("
-
-    const-string v6, "; "
-
-    invoke-static {v4, v1, v5, v2, v6}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ")"
-
-    invoke-static {v1, v3, v6, v0, v2}, Lpqb;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :try_start_0
-    invoke-static {}, Ljava/nio/charset/Charset;->defaultCharset()Ljava/nio/charset/Charset;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/nio/charset/Charset;->name()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lofe;->b:Lo58;
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lplf;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v0, 0x0
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lofe;->b:Lo58;
-
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lplf;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :try_start_1
-    invoke-static {}, Ljavax/net/ssl/TrustManagerFactory;->getDefaultAlgorithm()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljavax/net/ssl/TrustManagerFactory;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/TrustManagerFactory;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljavax/net/ssl/TrustManagerFactory;->init(Ljava/security/KeyStore;)V
-
-    invoke-virtual {v0}, Ljavax/net/ssl/TrustManagerFactory;->getTrustManagers()[Ljavax/net/ssl/TrustManager;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    check-cast v0, Ljavax/net/ssl/X509TrustManager;
-    :try_end_1
-    .catch Ljavax/net/ssl/SSLException; {:try_start_1 .. :try_end_1} :catch_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    return-object v0
-
-    :catchall_0
-    move-exception v0
+    if-ge p1, v0, :cond_1
 
     goto :goto_0
 
-    :catch_1
-    move-exception v0
+    :cond_1
+    const/16 v0, 0xe1
+
+    if-lt p1, v0, :cond_2
+
+    const/4 p1, 0x1
 
     goto :goto_1
 
+    :cond_2
+    const/16 v0, 0x87
+
+    if-lt p1, v0, :cond_3
+
+    const/4 p1, 0x2
+
+    goto :goto_1
+
+    :cond_3
+    const/4 p1, 0x3
+
+    goto :goto_1
+
+    :cond_4
     :goto_0
-    new-instance v1, Ljavax/net/ssl/SSLException;
-
-    const-string v2, "Failed to create trust manager"
-
-    invoke-direct {v1, v2, v0}, Ljavax/net/ssl/SSLException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
+    const/4 p1, 0x0
 
     :goto_1
-    throw v0
+    iget v0, p0, Lofe;->a:I
 
-    :pswitch_2
-    iget-object v0, p0, Lofe;->b:Lo58;
+    if-eq v0, p1, :cond_5
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    iput p1, p0, Lofe;->a:I
+
+    iget-object v0, p0, Lofe;->b:Lal8;
+
+    iget-object v0, v0, Lal8;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    new-instance v1, Ljava/util/ArrayList;
+
+    iget-object v2, p0, Lofe;->b:Lal8;
+
+    iget-object v2, v2, Lal8;->d:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/HashMap;
+
+    invoke-virtual {v2}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    check-cast v0, Lplf;
+    :goto_2
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    const/4 v1, 0x0
+    move-result v1
 
-    invoke-virtual {v0, v1}, Lplf;->a(Ljava/lang/String;)Ljavax/net/ssl/SSLSocketFactory;
+    if-eqz v1, :cond_5
 
-    move-result-object v0
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    return-object v0
+    move-result-object v1
 
-    nop
+    check-cast v1, Lpfe;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    iget-object v2, v1, Lpfe;->b:Ljava/util/concurrent/Executor;
+
+    new-instance v3, Ld80;
+
+    const/16 v4, 0x10
+
+    invoke-direct {v3, v1, p1, v4}, Ld80;-><init>(Ljava/lang/Object;II)V
+
+    invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+
+    :cond_5
+    :goto_3
+    return-void
 .end method

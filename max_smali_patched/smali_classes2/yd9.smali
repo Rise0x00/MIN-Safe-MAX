@@ -1,362 +1,419 @@
 .class public final Lyd9;
-.super Ljava/lang/Object;
+.super Liq;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public A0:Ljava/util/ArrayList;
 
-.field public final b:Ljava/util/ArrayList;
+.field public B0:Lxd9;
 
-.field public c:Ljava/lang/String;
+.field public C0:Landroid/widget/ListView;
 
-.field public d:I
+.field public D0:Z
 
-.field public e:I
+.field public E0:J
 
-.field public f:I
+.field public final F0:Lk20;
 
-.field public g:F
+.field public final X:Lmf9;
 
-.field public h:F
+.field public final Y:Lud9;
 
-.field public i:Z
+.field public Z:Landroid/widget/TextView;
 
-.field public j:Z
-
-.field public k:Z
-
-.field public l:Z
-
-.field public m:Z
-
-.field public n:I
-
-.field public o:Lrz6;
-
-.field public p:J
-
-.field public q:J
-
-.field public r:Z
+.field public z0:Lef9;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lyd9;->a:Landroid/content/Context;
+    invoke-static {p1, v0}, Lsf9;->a(Landroid/content/Context;Z)Landroid/view/ContextThemeWrapper;
 
-    new-instance p1, Ljava/util/ArrayList;
+    move-result-object p1
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    sget v0, Ljfd;->mediaRouteTheme:I
 
-    iput-object p1, p0, Lyd9;->b:Ljava/util/ArrayList;
+    invoke-static {p1, v0}, Lsf9;->g(Landroid/content/Context;I)I
 
-    const/4 p1, -0x1
+    move-result v0
 
-    iput p1, p0, Lyd9;->f:I
+    if-nez v0, :cond_0
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    invoke-static {p1}, Lsf9;->e(Landroid/content/Context;)I
 
-    iput v0, p0, Lyd9;->h:F
+    move-result v0
+
+    :cond_0
+    invoke-direct {p0, p1, v0}, Liq;-><init>(Landroid/view/ContextThemeWrapper;I)V
+
+    sget-object p1, Lef9;->c:Lef9;
+
+    iput-object p1, p0, Lyd9;->z0:Lef9;
+
+    new-instance p1, Lk20;
+
+    const/4 v0, 0x6
+
+    invoke-direct {p1, v0, p0}, Lk20;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, p0, Lyd9;->F0:Lk20;
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lmf9;->d(Landroid/content/Context;)Lmf9;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lyd9;->X:Lmf9;
+
+    new-instance p1, Lud9;
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lyd9;->l:Z
+    invoke-direct {p1, p0, v0}, Lud9;-><init>(Landroid/view/KeyEvent$Callback;I)V
 
-    iput-boolean v0, p0, Lyd9;->m:Z
-
-    iput p1, p0, Lyd9;->n:I
-
-    const-wide/16 v0, 0x1f4
-
-    iput-wide v0, p0, Lyd9;->p:J
-
-    const-wide/32 v0, 0x493e0
-
-    iput-wide v0, p0, Lyd9;->q:J
+    iput-object p1, p0, Lyd9;->Y:Lud9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lje9;
-    .locals 8
+.method public final g()V
+    .locals 7
 
-    iget-wide v0, p0, Lyd9;->p:J
+    iget-boolean v0, p0, Lyd9;->D0:Z
 
-    iget-object v2, p0, Lyd9;->c:Ljava/lang/String;
+    if-eqz v0, :cond_4
 
-    const/4 v3, 0x0
+    new-instance v0, Ljava/util/ArrayList;
 
-    if-eqz v2, :cond_0
+    iget-object v1, p0, Lyd9;->X:Lmf9;
 
-    invoke-static {v2}, Lrzf;->d0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v2
+    invoke-static {}, Lmf9;->b()V
 
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-static {}, Lmf9;->c()Lif9;
 
-    move-result-object v2
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
     goto :goto_0
 
     :cond_0
-    move-object v2, v3
+    iget-object v1, v1, Lif9;->g:Ljava/util/ArrayList;
 
     :goto_0
-    iput-object v2, p0, Lyd9;->c:Ljava/lang/String;
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    iget-object v2, p0, Lyd9;->b:Ljava/util/ArrayList;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
+    move-result v1
 
-    move-result v4
+    :goto_1
+    add-int/lit8 v2, v1, -0x1
 
-    if-nez v4, :cond_6
+    if-lez v1, :cond_2
 
-    iget-object v4, p0, Lyd9;->c:Ljava/lang/String;
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    if-eqz v4, :cond_6
+    move-result-object v1
 
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
+    check-cast v1, Llf9;
 
-    move-result v4
+    invoke-virtual {v1}, Llf9;->d()Z
 
-    if-eqz v4, :cond_6
+    move-result v3
 
-    iget v4, p0, Lyd9;->g:F
+    if-nez v3, :cond_1
 
-    const/4 v5, 0x0
+    iget-boolean v3, v1, Llf9;->g:Z
 
-    cmpg-float v5, v4, v5
+    if-eqz v3, :cond_1
 
-    if-ltz v5, :cond_5
+    iget-object v3, p0, Lyd9;->z0:Lef9;
 
-    const/high16 v5, 0x3f800000    # 1.0f
+    invoke-virtual {v1, v3}, Llf9;->h(Lef9;)Z
 
-    cmpg-float v5, v5, v4
+    move-result v1
 
-    if-lez v5, :cond_5
+    if-eqz v1, :cond_1
 
-    iget v5, p0, Lyd9;->h:F
+    goto :goto_2
 
-    cmpg-float v4, v5, v4
+    :cond_1
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    if-lez v4, :cond_5
-
-    const-wide/high16 v6, 0x3ff0000000000000L    # 1.0
-
-    float-to-double v4, v5
-
-    cmpg-double v4, v6, v4
-
-    if-ltz v4, :cond_5
-
-    iget v4, p0, Lyd9;->d:I
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x1
-
-    if-gtz v4, :cond_1
-
-    move v4, v6
+    :goto_2
+    move v1, v2
 
     goto :goto_1
 
-    :cond_1
-    move v4, v5
-
-    :goto_1
-    iget v7, p0, Lyd9;->e:I
-
-    if-gtz v7, :cond_2
-
-    move v5, v6
-
     :cond_2
-    if-ne v4, v5, :cond_4
+    sget-object v1, Lyb5;->c:Lyb5;
 
-    const-wide/16 v4, 0x0
+    invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    cmp-long v4, v0, v4
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    if-lez v4, :cond_3
+    move-result-wide v1
 
-    new-instance v3, Lje9;
+    iget-wide v3, p0, Lyd9;->E0:J
 
-    new-instance v4, Lyd9;
+    sub-long/2addr v1, v3
 
-    iget-object v5, p0, Lyd9;->a:Landroid/content/Context;
+    const-wide/16 v3, 0x12c
 
-    invoke-direct {v4, v5}, Lyd9;-><init>(Landroid/content/Context;)V
+    cmp-long v1, v1, v3
 
-    iget-object v5, v4, Lyd9;->b:Ljava/util/ArrayList;
+    if-ltz v1, :cond_3
 
-    invoke-virtual {v5, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    iget-object v2, p0, Lyd9;->c:Ljava/lang/String;
+    move-result-wide v1
 
-    iput-object v2, v4, Lyd9;->c:Ljava/lang/String;
+    iput-wide v1, p0, Lyd9;->E0:J
 
-    iget v2, p0, Lyd9;->d:I
+    iget-object v1, p0, Lyd9;->A0:Ljava/util/ArrayList;
 
-    iput v2, v4, Lyd9;->d:I
+    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    iget v2, p0, Lyd9;->e:I
+    iget-object v1, p0, Lyd9;->A0:Ljava/util/ArrayList;
 
-    iput v2, v4, Lyd9;->e:I
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    iget v2, p0, Lyd9;->f:I
+    iget-object v0, p0, Lyd9;->B0:Lxd9;
 
-    iput v2, v4, Lyd9;->f:I
+    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
-    iget-boolean v2, p0, Lyd9;->i:Z
-
-    iput-boolean v2, v4, Lyd9;->i:Z
-
-    iget-boolean v2, p0, Lyd9;->j:Z
-
-    iput-boolean v2, v4, Lyd9;->j:Z
-
-    iget-boolean v2, p0, Lyd9;->k:Z
-
-    iput-boolean v2, v4, Lyd9;->k:Z
-
-    iget v2, p0, Lyd9;->h:F
-
-    iput v2, v4, Lyd9;->h:F
-
-    iget v2, p0, Lyd9;->g:F
-
-    iput v2, v4, Lyd9;->g:F
-
-    iget-boolean v2, p0, Lyd9;->l:Z
-
-    iput-boolean v2, v4, Lyd9;->l:Z
-
-    iget-boolean v2, p0, Lyd9;->m:Z
-
-    iput-boolean v2, v4, Lyd9;->m:Z
-
-    iget v2, p0, Lyd9;->n:I
-
-    iput v2, v4, Lyd9;->n:I
-
-    iget-object v2, p0, Lyd9;->o:Lrz6;
-
-    iput-object v2, v4, Lyd9;->o:Lrz6;
-
-    iput-wide v0, v4, Lyd9;->p:J
-
-    iget-wide v0, p0, Lyd9;->q:J
-
-    iput-wide v0, v4, Lyd9;->q:J
-
-    iget-boolean v0, p0, Lyd9;->r:Z
-
-    iput-boolean v0, v4, Lyd9;->r:Z
-
-    invoke-direct {v3, v4}, Lje9;-><init>(Lyd9;)V
-
-    return-object v3
+    return-void
 
     :cond_3
-    new-instance v2, Lone/me/sdk/media/transformer/impl/IllegalMediaTransformException;
+    iget-object v1, p0, Lyd9;->F0:Lk20;
 
-    const-string v4, "Illegal ping delay="
+    const/4 v2, 0x1
 
-    const-string v5, " ms"
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    invoke-static {v0, v1, v4, v5}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2, v0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
-    invoke-direct {v2, v0, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget-wide v5, p0, Lyd9;->E0:J
 
-    throw v2
+    add-long/2addr v5, v3
+
+    invoke-virtual {v1, v0, v5, v6}, Landroid/os/Handler;->sendMessageAtTime(Landroid/os/Message;J)Z
 
     :cond_4
-    new-instance v0, Lone/me/sdk/media/transformer/impl/IllegalMediaTransformException;
+    return-void
+.end method
 
-    iget v1, p0, Lyd9;->d:I
+.method public final h(Lef9;)V
+    .locals 3
 
-    iget v2, p0, Lyd9;->e:I
+    if-eqz p1, :cond_2
 
-    const-string v4, "Illegal requested size="
+    iget-object v0, p0, Lyd9;->z0:Lef9;
 
-    const-string v5, "x"
+    invoke-virtual {v0, p1}, Lef9;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {v4, v1, v2, v5}, Lj27;->h(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    move-result v0
 
-    move-result-object v1
+    if-nez v0, :cond_1
 
-    invoke-direct {v0, v1, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    iput-object p1, p0, Lyd9;->z0:Lef9;
 
-    throw v0
+    iget-boolean v0, p0, Lyd9;->D0:Z
 
-    :cond_5
-    new-instance v0, Lone/me/sdk/media/transformer/impl/IllegalMediaTransformException;
+    if-eqz v0, :cond_0
 
-    iget v1, p0, Lyd9;->g:F
+    iget-object v0, p0, Lyd9;->X:Lmf9;
 
-    iget v2, p0, Lyd9;->h:F
+    iget-object v1, p0, Lyd9;->Y:Lud9;
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Lmf9;->f(Lud9;)V
 
-    const-string v5, "Illegal requested position range=["
+    const/4 v2, 0x1
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, p1, v1, v2}, Lmf9;->a(Lef9;Lud9;I)V
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    :cond_0
+    invoke-virtual {p0}, Lyd9;->g()V
 
-    const-string v1, ", "
+    :cond_1
+    return-void
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    const-string v0, "selector must not be null"
 
-    const-string v1, "]"
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    throw p1
+.end method
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.method public final onAttachedToWindow()V
+    .locals 4
 
-    move-result-object v1
+    invoke-super {p0}, Landroid/app/Dialog;->onAttachedToWindow()V
 
-    invoke-direct {v0, v1, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    const/4 v0, 0x1
 
-    throw v0
+    iput-boolean v0, p0, Lyd9;->D0:Z
 
-    :cond_6
-    new-instance v0, Lone/me/sdk/media/transformer/impl/IllegalMediaTransformException;
+    iget-object v1, p0, Lyd9;->z0:Lef9;
 
-    iget-object v1, p0, Lyd9;->c:Ljava/lang/String;
+    iget-object v2, p0, Lyd9;->Y:Lud9;
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    iget-object v3, p0, Lyd9;->X:Lmf9;
 
-    const-string v5, "Illegal input/output="
+    invoke-virtual {v3, v1, v2, v0}, Lmf9;->a(Lef9;Lud9;I)V
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0}, Lyd9;->g()V
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    const-string v2, "/"
+.method public final onCreate(Landroid/os/Bundle;)V
+    .locals 2
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-super {p0, p1}, Liq;->onCreate(Landroid/os/Bundle;)V
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget p1, Lpld;->mr_chooser_dialog:I
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0, p1}, Liq;->setContentView(I)V
 
-    move-result-object v1
+    new-instance p1, Ljava/util/ArrayList;
 
-    invoke-direct {v0, v1, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    throw v0
+    iput-object p1, p0, Lyd9;->A0:Ljava/util/ArrayList;
+
+    new-instance p1, Lxd9;
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lyd9;->A0:Ljava/util/ArrayList;
+
+    invoke-direct {p1, v0, v1}, Lxd9;-><init>(Landroid/content/Context;Ljava/util/ArrayList;)V
+
+    iput-object p1, p0, Lyd9;->B0:Lxd9;
+
+    sget p1, Lphd;->mr_chooser_list:I
+
+    invoke-virtual {p0, p1}, Liq;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/ListView;
+
+    iput-object p1, p0, Lyd9;->C0:Landroid/widget/ListView;
+
+    iget-object v0, p0, Lyd9;->B0:Lxd9;
+
+    invoke-virtual {p1, v0}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
+
+    iget-object p1, p0, Lyd9;->C0:Landroid/widget/ListView;
+
+    iget-object v0, p0, Lyd9;->B0:Lxd9;
+
+    invoke-virtual {p1, v0}, Landroid/widget/AdapterView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+
+    iget-object p1, p0, Lyd9;->C0:Landroid/widget/ListView;
+
+    const v0, 0x1020004
+
+    invoke-virtual {p0, v0}, Liq;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/AdapterView;->setEmptyView(Landroid/view/View;)V
+
+    sget p1, Lphd;->mr_chooser_title:I
+
+    invoke-virtual {p0, p1}, Liq;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/TextView;
+
+    iput-object p1, p0, Lyd9;->Z:Landroid/widget/TextView;
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ls7j;->a(Landroid/content/Context;)I
+
+    move-result v0
+
+    const/4 v1, -0x2
+
+    invoke-virtual {p1, v0, v1}, Landroid/view/Window;->setLayout(II)V
+
+    return-void
+.end method
+
+.method public final onDetachedFromWindow()V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lyd9;->D0:Z
+
+    iget-object v0, p0, Lyd9;->X:Lmf9;
+
+    iget-object v1, p0, Lyd9;->Y:Lud9;
+
+    invoke-virtual {v0, v1}, Lmf9;->f(Lud9;)V
+
+    iget-object v0, p0, Lyd9;->F0:Lk20;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
+
+    invoke-super {p0}, Landroid/app/Dialog;->onDetachedFromWindow()V
+
+    return-void
+.end method
+
+.method public final setTitle(I)V
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Lyd9;->Z:Landroid/widget/TextView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(I)V
+
+    return-void
+.end method
+
+.method public final setTitle(Ljava/lang/CharSequence;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lyd9;->Z:Landroid/widget/TextView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
 .end method

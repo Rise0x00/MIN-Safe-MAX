@@ -1,106 +1,143 @@
 .class public final Liwe;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
+
+# static fields
+.field public static final c:Liwe;
 
 
 # instance fields
-.field public final synthetic X:Landroid/graphics/RectF;
+.field public final a:J
 
-.field public final synthetic o:Lowe;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Lowe;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Liwe;
+
+    const-wide/16 v1, 0x0
+
+    invoke-direct {v0, v1, v2, v1, v2}, Liwe;-><init>(JJ)V
+
+    sput-object v0, Liwe;->c:Liwe;
+
+    return-void
+.end method
+
+.method public constructor <init>(JJ)V
     .locals 0
 
-    iput-object p1, p0, Liwe;->o:Lowe;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Liwe;->X:Landroid/graphics/RectF;
+    iput-wide p1, p0, Liwe;->a:J
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p3, p0, Liwe;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    check-cast p1, Lzb4;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Liwe;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    const/4 v1, 0x0
 
+    if-eqz p1, :cond_2
+
+    const-class v2, Liwe;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
     check-cast p1, Liwe;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget-wide v2, p0, Liwe;->a:J
 
-    invoke-virtual {p1, p2}, Liwe;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v4, p1, Liwe;->a:J
 
-    return-object p2
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_2
+
+    iget-wide v2, p0, Liwe;->b:J
+
+    iget-wide v4, p1, Liwe;->b:J
+
+    cmp-long p1, v2, v4
+
+    if-nez p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final hashCode()I
+    .locals 3
 
-    new-instance p1, Liwe;
+    iget-wide v0, p0, Liwe;->a:J
 
-    iget-object v0, p0, Liwe;->o:Lowe;
+    long-to-int v0, v0
 
-    iget-object v1, p0, Liwe;->X:Landroid/graphics/RectF;
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-direct {p1, v0, v1, p2}, Liwe;-><init>(Lowe;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
+    iget-wide v1, p0, Liwe;->b:J
 
-    return-object p1
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    sget-object p1, Lowe;->N0:[Lz28;
+    const/16 v1, 0x3c
 
-    iget-object p1, p0, Liwe;->o:Lowe;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    iget-object v0, p1, Lowe;->t0:Lo58;
+    const-string v1, "[timeUs="
 
-    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    iget-wide v1, p0, Liwe;->a:J
 
-    check-cast v0, Lm36;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object v1, p1, Lowe;->I0:Ljava/util/concurrent/atomic/AtomicReference;
+    const-string v1, ", position="
 
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    const-string v1, "]"
 
-    check-cast v1, Ljava/lang/String;
+    iget-wide v2, p0, Liwe;->b:J
 
-    invoke-virtual {v0, v1}, Lm36;->p(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    invoke-static {v2, v3, v1, v0}, Lsb6;->i(JLjava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Liwe;->X:Landroid/graphics/RectF;
-
-    invoke-virtual {p1, v0, v1}, Lowe;->x(Ljava/lang/String;Landroid/graphics/RectF;)V
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-object v0
 .end method

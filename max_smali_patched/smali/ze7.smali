@@ -1,53 +1,19 @@
-.class public abstract Lze7;
+.class public interface abstract Lze7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final y:Lye7;
+
+
 # direct methods
-.method public static a(Ljava/lang/Object;)I
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    check-cast p0, Landroid/graphics/drawable/Icon;
+    sget-object v0, Lye7;->a:Lye7;
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getResId()I
+    sput-object v0, Lze7;->y:Lye7;
 
-    move-result p0
-
-    return p0
-.end method
-
-.method public static b(Ljava/lang/Object;)Ljava/lang/String;
-    .locals 0
-
-    check-cast p0, Landroid/graphics/drawable/Icon;
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getResPackage()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c(Ljava/lang/Object;)I
-    .locals 0
-
-    check-cast p0, Landroid/graphics/drawable/Icon;
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getType()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static d(Ljava/lang/Object;)Landroid/net/Uri;
-    .locals 0
-
-    check-cast p0, Landroid/graphics/drawable/Icon;
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getUri()Landroid/net/Uri;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

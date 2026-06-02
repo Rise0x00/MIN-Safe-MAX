@@ -1,45 +1,56 @@
-.class public abstract Lzjf;
+.class public final synthetic Lzjf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
-# static fields
-.field public static final a:Ljava/util/regex/Pattern;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ldkf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ldkf;I)V
+    .locals 0
 
-    const-string v0, "(&#13;)?&#10;"
+    iput p2, p0, Lzjf;->a:I
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    iput-object p1, p0, Lzjf;->b:Ldkf;
 
-    move-result-object v0
-
-    sput-object v0, Lzjf;->a:Ljava/util/regex/Pattern;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/CharSequence;)Ljava/lang/String;
-    .locals 1
 
-    invoke-static {p0}, Landroid/text/Html;->escapeHtml(Ljava/lang/CharSequence;)Ljava/lang/String;
+# virtual methods
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 0
 
-    move-result-object p0
+    iget p1, p0, Lzjf;->a:I
 
-    sget-object v0, Lzjf;->a:Ljava/util/regex/Pattern;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+    iget-object p1, p0, Lzjf;->b:Ldkf;
 
-    move-result-object p0
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
-    const-string v0, "<br>"
+    return-void
 
-    invoke-virtual {p0, v0}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
+    :pswitch_0
+    iget-object p1, p0, Lzjf;->b:Ldkf;
 
-    move-result-object p0
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
-    return-object p0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

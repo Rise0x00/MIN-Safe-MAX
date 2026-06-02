@@ -1,129 +1,122 @@
-.class public final enum Llpg;
-.super Ljava/lang/Enum;
+.class public final Llpg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic X:[Llpg;
-
-.field public static final enum b:Llpg;
-
-.field public static final enum c:Llpg;
-
-.field public static final enum d:Llpg;
-
-.field public static final enum o:Llpg;
+# interfaces
+.implements Ly84;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ly84;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
-
-    new-instance v0, Llpg;
-
-    const/4 v1, 0x0
-
-    const-string v2, "no_connection_timeout"
-
-    const-string v3, "NO_CONNECTION_TIMEOUT"
-
-    invoke-direct {v0, v3, v1, v2}, Llpg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Llpg;->b:Llpg;
-
-    new-instance v1, Llpg;
-
-    const/4 v2, 0x1
-
-    const-string v3, "no_data_timeout"
-
-    const-string v4, "NO_DATA_TIMEOUT"
-
-    invoke-direct {v1, v4, v2, v3}, Llpg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Llpg;->c:Llpg;
-
-    new-instance v2, Llpg;
-
-    const/4 v3, 0x2
-
-    const-string v4, "connection_failed"
-
-    const-string v5, "CONNECTION_FAILED"
-
-    invoke-direct {v2, v5, v3, v4}, Llpg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v3, Llpg;
-
-    const/4 v4, 0x3
-
-    const-string v5, "success_audio"
-
-    const-string v6, "SUCCESS_AUDIO"
-
-    invoke-direct {v3, v6, v4, v5}, Llpg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Llpg;->d:Llpg;
-
-    new-instance v4, Llpg;
-
-    const/4 v5, 0x4
-
-    const-string v6, "success_connection"
-
-    const-string v7, "SUCCESS_CONNECTION"
-
-    invoke-direct {v4, v7, v5, v6}, Llpg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v4, Llpg;->o:Llpg;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Llpg;
-
-    move-result-object v0
-
-    sput-object v0, Llpg;->X:[Llpg;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public synthetic constructor <init>(Ly84;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p2, p0, Llpg;->a:I
 
-    iput-object p3, p0, Llpg;->a:Ljava/lang/String;
+    iput-object p1, p0, Llpg;->b:Ly84;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Llpg;
+
+# virtual methods
+.method public final a(Lbolts/Task;)Ljava/lang/Object;
     .locals 1
 
-    const-class v0, Llpg;
+    iget v0, p0, Llpg;->a:I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    invoke-virtual {p1}, Lbolts/Task;->isFaulted()Z
 
-    check-cast p0, Llpg;
+    move-result v0
 
-    return-object p0
-.end method
+    if-eqz v0, :cond_0
 
-.method public static values()[Llpg;
-    .locals 1
+    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
 
-    sget-object v0, Llpg;->X:[Llpg;
+    move-result-object p1
 
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-static {p1}, Lbolts/Task;->forError(Ljava/lang/Exception;)Lbolts/Task;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, [Llpg;
+    goto :goto_0
 
-    return-object v0
+    :cond_0
+    invoke-virtual {p1}, Lbolts/Task;->isCancelled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {}, Lbolts/Task;->cancelled()Lbolts/Task;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Llpg;->b:Ly84;
+
+    invoke-virtual {p1, v0}, Lbolts/Task;->continueWithTask(Ly84;)Lbolts/Task;
+
+    move-result-object p1
+
+    :goto_0
+    return-object p1
+
+    :pswitch_0
+    invoke-virtual {p1}, Lbolts/Task;->isFaulted()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lbolts/Task;->forError(Ljava/lang/Exception;)Lbolts/Task;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p1}, Lbolts/Task;->isCancelled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-static {}, Lbolts/Task;->cancelled()Lbolts/Task;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_3
+    iget-object v0, p0, Llpg;->b:Ly84;
+
+    invoke-virtual {p1, v0}, Lbolts/Task;->continueWith(Ly84;)Lbolts/Task;
+
+    move-result-object p1
+
+    :goto_1
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

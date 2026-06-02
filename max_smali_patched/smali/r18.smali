@@ -1,44 +1,57 @@
-.class public abstract Lr18;
-.super Ljava/lang/Object;
+.class public final Lr18;
+.super Lm18;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field public a:I
+.field public final b:Lz18;
+
+.field public final c:Ls18;
+
+.field public final d:Ldc3;
+
+.field public final o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lz18;Ls18;Ldc3;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-static {}, Lnyf;->values()[Lnyf;
+    invoke-direct {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Lr18;->b:Lz18;
 
-    invoke-static {v0}, Lbg3;->H([Lnx7;)Lbg3;
+    iput-object p2, p0, Lr18;->c:Ls18;
+
+    iput-object p3, p0, Lr18;->d:Ldc3;
+
+    iput-object p4, p0, Lr18;->o:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract E()Ljava/lang/String;
+.method public final c()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
-.method public abstract H()[C
-.end method
+.method public final d(Ljava/lang/Throwable;)V
+    .locals 3
 
-.method public abstract f0()I
-.end method
+    iget-object p1, p0, Lr18;->d:Ldc3;
 
-.method public abstract g0()I
-.end method
+    iget-object v0, p0, Lr18;->o:Ljava/lang/Object;
 
-.method public abstract l()Lh18;
-.end method
+    iget-object v1, p0, Lr18;->b:Lz18;
 
-.method public abstract p0()Ld28;
+    iget-object v2, p0, Lr18;->c:Ls18;
+
+    invoke-static {v1, v2, p1, v0}, Lz18;->access$continueCompleting(Lz18;Ls18;Ldc3;Ljava/lang/Object;)V
+
+    return-void
 .end method

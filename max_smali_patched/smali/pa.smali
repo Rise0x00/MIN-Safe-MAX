@@ -3,141 +3,232 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lpa;
-
-
 # instance fields
-.field public final a:Lqhg;
+.field public a:I
 
-.field public final b:Ljava/util/List;
+.field public b:I
 
+.field public c:Ljava/lang/Object;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lpa;
-
-    sget-object v1, Lqhg;->b:Lphg;
-
-    sget-object v2, Ldh5;->a:Ldh5;
-
-    invoke-direct {v0, v1, v2}, Lpa;-><init>(Lqhg;Ljava/util/List;)V
-
-    sput-object v0, Lpa;->c:Lpa;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lqhg;Ljava/util/List;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lpa;->a:Lqhg;
-
-    iput-object p2, p0, Lpa;->b:Ljava/util/List;
-
-    return-void
-.end method
+.field public d:I
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
     instance-of v1, p1, Lpa;
 
-    const/4 v2, 0x0
-
     if-nez v1, :cond_1
 
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lpa;
 
-    iget-object v1, p0, Lpa;->a:Lqhg;
+    iget v1, p0, Lpa;->a:I
 
-    iget-object v3, p1, Lpa;->a:Lqhg;
+    iget v2, p1, Lpa;->a:I
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eq v1, v2, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/16 v2, 0x8
+
+    if-ne v1, v2, :cond_3
+
+    iget v1, p0, Lpa;->d:I
+
+    iget v2, p0, Lpa;->b:I
+
+    sub-int/2addr v1, v2
+
+    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
 
     move-result v1
 
-    if-nez v1, :cond_2
+    if-ne v1, v0, :cond_3
 
-    return v2
+    iget v1, p0, Lpa;->d:I
 
-    :cond_2
-    iget-object v1, p0, Lpa;->b:Ljava/util/List;
+    iget v2, p1, Lpa;->b:I
 
-    iget-object p1, p1, Lpa;->b:Ljava/util/List;
+    if-ne v1, v2, :cond_3
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget v1, p0, Lpa;->b:I
+
+    iget v2, p1, Lpa;->d:I
+
+    if-ne v1, v2, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    iget v1, p0, Lpa;->d:I
+
+    iget v2, p1, Lpa;->d:I
+
+    if-eq v1, v2, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget v1, p0, Lpa;->b:I
+
+    iget v2, p1, Lpa;->b:I
+
+    if-eq v1, v2, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-object v1, p0, Lpa;->c:Ljava/lang/Object;
+
+    if-eqz v1, :cond_6
+
+    iget-object p1, p1, Lpa;->c:Ljava/lang/Object;
+
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-nez p1, :cond_3
+    if-nez p1, :cond_7
 
-    return v2
+    goto :goto_0
 
-    :cond_3
+    :cond_6
+    iget-object p1, p1, Lpa;->c:Ljava/lang/Object;
+
+    if-eqz p1, :cond_7
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_7
+    :goto_1
     return v0
 .end method
 
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lpa;->a:Lqhg;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
+    iget v0, p0, Lpa;->a:I
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lpa;->b:Ljava/util/List;
+    iget v1, p0, Lpa;->b:I
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    add-int/2addr v0, v1
 
-    move-result v1
+    mul-int/lit8 v0, v0, 0x1f
 
-    add-int/2addr v1, v0
+    iget v1, p0, Lpa;->d:I
 
-    return v1
+    add-int/2addr v0, v1
+
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "AdminWaitingRoomState(subtitle="
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
-    iget-object v1, p0, Lpa;->a:Lqhg;
+    move-result v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
-    const-string v1, ", list="
+    move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lpa;->b:Ljava/util/List;
+    const-string v1, "["
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lpa;->a:I
+
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_3
+
+    const/4 v2, 0x2
+
+    if-eq v1, v2, :cond_2
+
+    const/4 v2, 0x4
+
+    if-eq v1, v2, :cond_1
+
+    const/16 v2, 0x8
+
+    if-eq v1, v2, :cond_0
+
+    const-string v1, "??"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "mv"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "up"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v1, "rm"
+
+    goto :goto_0
+
+    :cond_3
+    const-string v1, "add"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ",s:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lpa;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, "c:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lpa;->d:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ",p:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lpa;->c:Ljava/lang/Object;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ")"
+    const-string v1, "]"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

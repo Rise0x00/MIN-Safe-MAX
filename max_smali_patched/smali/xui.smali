@@ -1,7 +1,11 @@
-.class public final Lxui;
+.class public interface abstract Lxui;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lyui;
 
-# instance fields
-.field public a:I
+
+# virtual methods
+.method public abstract b()Z
+.end method

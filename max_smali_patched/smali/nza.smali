@@ -1,90 +1,43 @@
-.class public final Lnza;
-.super Ldxa;
+.class public abstract Lnza;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljxa;
+# static fields
+.field public static final a:Lkotlinx/coroutines/internal/Symbol;
 
-.field public final b:Ljava/util/concurrent/atomic/AtomicReference;
+.field public static final b:Lkotlinx/coroutines/internal/Symbol;
 
-.field public final c:Lfza;
-
-.field public final d:Lkza;
+.field public static final c:Lkotlinx/coroutines/internal/Symbol;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 0
+    .locals 2
 
-    return-void
-.end method
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-.method public constructor <init>(Lkza;Ljxa;Ljava/util/concurrent/atomic/AtomicReference;Lfza;)V
-    .locals 0
+    const-string v1, "NULL"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Lnza;->d:Lkza;
+    sput-object v0, Lnza;->a:Lkotlinx/coroutines/internal/Symbol;
 
-    iput-object p2, p0, Lnza;->a:Ljxa;
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    iput-object p3, p0, Lnza;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    const-string v1, "UNINITIALIZED"
 
-    iput-object p4, p0, Lnza;->c:Lfza;
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    return-void
-.end method
+    sput-object v0, Lnza;->b:Lkotlinx/coroutines/internal/Symbol;
 
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-# virtual methods
-.method public final k(Le0b;)V
-    .locals 1
+    const-string v1, "DONE"
 
-    iget-object v0, p0, Lnza;->d:Lkza;
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lkza;->a(Le0b;)V
+    sput-object v0, Lnza;->c:Lkotlinx/coroutines/internal/Symbol;
 
-    return-void
-.end method
-
-.method public final p()V
-    .locals 3
-
-    iget-object v0, p0, Lnza;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljza;
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1}, Ljza;->e()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    :cond_0
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    return-void
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-eq v2, v1, :cond_0
-
-    :cond_2
     return-void
 .end method

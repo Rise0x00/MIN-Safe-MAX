@@ -1,107 +1,120 @@
 .class public final Lfg3;
-.super Ljava/lang/Object;
+.super Lu1i;
 .source "SourceFile"
-
-# interfaces
-.implements Lu62;
 
 
 # instance fields
-.field public final a:I
+.field public final d:Lu1i;
 
-.field public final b:Ljava/lang/String;
+.field public final e:J
+
+.field public final f:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/InputStream;)V
+.method public constructor <init>(Lu1i;JJ)V
     .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget v0, p1, Lu1i;->a:I
 
-    invoke-static {p1}, Lv4j;->f(Ljava/io/InputStream;)I
+    iget-object v1, p1, Lu1i;->b:Landroid/net/Uri;
 
-    invoke-static {p1}, Lv4j;->f(Ljava/io/InputStream;)I
+    iget-boolean v2, p1, Lu1i;->c:Z
 
-    move-result v0
+    invoke-direct {p0, v0, v1, v2}, Lu1i;-><init>(ILandroid/net/Uri;Z)V
 
-    new-array v1, v0, [B
+    iput-object p1, p0, Lfg3;->d:Lu1i;
 
-    invoke-static {p1, v1, v0}, Lar8;->e(Ljava/io/InputStream;[BI)I
+    iput-wide p2, p0, Lfg3;->e:J
 
-    move-result p1
-
-    if-ne p1, v0, :cond_0
-
-    invoke-static {v1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
-
-    move-result v0
-
-    iput v0, p0, Lfg3;->a:I
-
-    new-instance v0, Ljava/lang/String;
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
-
-    move-result v2
-
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
-
-    move-result p1
-
-    invoke-direct {v0, v1, v2, p1}, Ljava/lang/String;-><init>([BII)V
-
-    iput-object v0, p0, Lfg3;->b:Ljava/lang/String;
+    iput-wide p4, p0, Lfg3;->f:J
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/io/EOFException;
-
-    const-string v0, "Unexpected end of stream"
-
-    invoke-direct {p1, v0}, Ljava/io/EOFException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final getType()J
-    .locals 2
+.method public final c(Ljava/lang/String;)Lu1i;
+    .locals 6
 
-    const-wide/16 v0, 0x2843
+    new-instance v0, Lfg3;
 
-    return-wide v0
-.end method
+    iget-object v1, p0, Lfg3;->d:Lu1i;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    invoke-virtual {v1, p1}, Lu1i;->c(Ljava/lang/String;)Lu1i;
 
-    iget v0, p0, Lfg3;->a:I
+    move-result-object v1
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-wide v2, p0, Lfg3;->e:J
 
-    move-result-object v0
+    iget-wide v4, p0, Lfg3;->f:J
 
-    iget-object v1, p0, Lfg3;->b:Ljava/lang/String;
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v1, "CloseWebtransportSessionCapsule[%d,%s]"
-
-    invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct/range {v0 .. v5}, Lfg3;-><init>(Lu1i;JJ)V
 
     return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
+
+    invoke-super {p0, p1}, Lu1i;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lfg3;
+
+    iget-wide v2, p0, Lfg3;->e:J
+
+    iget-wide v4, p1, Lfg3;->e:J
+
+    cmp-long v0, v2, v4
+
+    if-nez v0, :cond_0
+
+    iget-wide v2, p0, Lfg3;->f:J
+
+    iget-wide v4, p1, Lfg3;->f:J
+
+    cmp-long p1, v2, v4
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    invoke-super {p0}, Lu1i;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lfg3;->e:J
+
+    invoke-static {v0, v1, v2, v3}, Lwph;->a(IIJ)I
+
+    move-result v0
+
+    iget-wide v1, p0, Lfg3;->f:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method

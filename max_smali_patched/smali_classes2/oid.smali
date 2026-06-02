@@ -1,9 +1,6 @@
-.class public final Loid;
+.class public abstract Loid;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public a:Ljava/lang/ThreadLocal;
-
-.field public b:Ljava/lang/ThreadLocal;
+# static fields
+.field public static oneme_devmenu_logsviewer_show_log_recycler_view:I = 0x7f0a0677

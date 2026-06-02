@@ -3,37 +3,49 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lpt4;
+# instance fields
+.field public a:Z
 
+.field public b:I
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public c:Ljava/lang/Object;
 
-    new-instance v0, Lpt4;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lpt4;->a:Lpt4;
-
-    return-void
-.end method
+.field public d:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final a(Landroid/animation/AnimatorSet;)V
-    .locals 0
+.method public a()Ln3j;
+    .locals 4
 
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->reverse()V
+    iget-object v0, p0, Lpt4;->c:Ljava/lang/Object;
 
-    return-void
-.end method
+    check-cast v0, Lg5e;
 
-.method public final b(Landroid/animation/AnimatorSet;J)V
-    .locals 0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1, p2, p3}, Landroid/animation/AnimatorSet;->setCurrentPlayTime(J)V
+    const/4 v0, 0x1
 
-    return-void
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    const-string v1, "execute parameter required"
+
+    invoke-static {v1, v0}, Lis6;->g(Ljava/lang/String;Z)V
+
+    new-instance v0, Ln3j;
+
+    iget-object v1, p0, Lpt4;->d:Ljava/lang/Object;
+
+    check-cast v1, [La16;
+
+    iget-boolean v2, p0, Lpt4;->a:Z
+
+    iget v3, p0, Lpt4;->b:I
+
+    invoke-direct {v0, p0, v1, v2, v3}, Ln3j;-><init>(Lpt4;[La16;ZI)V
+
+    return-object v0
 .end method

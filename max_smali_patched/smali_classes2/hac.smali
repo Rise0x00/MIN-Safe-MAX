@@ -3,184 +3,115 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfoc;
+.implements Lscc;
 
 
 # instance fields
-.field public final a:Llhg;
+.field public final a:Lia8;
+
+.field public final b:Lia8;
+
+.field public final c:Lia8;
+
+.field public final d:Lb1g;
+
+.field public final e:Lbwd;
 
 
 # direct methods
-.method public constructor <init>(Llhg;)V
+.method public constructor <init>(Lia8;Lia8;Lia8;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhac;->a:Llhg;
+    iput-object p1, p0, Lhac;->a:Lia8;
+
+    iput-object p2, p0, Lhac;->b:Lia8;
+
+    iput-object p3, p0, Lhac;->c:Lia8;
+
+    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-static {p1}, Lc1g;->a(Ljava/lang/Object;)Lb1g;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lhac;->d:Lb1g;
+
+    new-instance p2, Lbwd;
+
+    invoke-direct {p2, p1}, Lbwd;-><init>(Lvia;)V
+
+    iput-object p2, p0, Lhac;->e:Lbwd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lhac;
-
-    if-nez v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lhac;
-
-    iget-object v1, p0, Lhac;->a:Llhg;
-
-    iget-object p1, p1, Lhac;->a:Llhg;
-
-    invoke-virtual {v1, p1}, Llhg;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    const/high16 v0, 0x10000
-
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public final h(Lud8;)Z
-    .locals 4
-
-    const/high16 v0, 0x10000
-
-    int-to-long v0, v0
-
-    invoke-interface {p1}, Lud8;->getItemId()J
-
-    move-result-wide v2
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lhac;->a:Llhg;
-
-    iget v0, v0, Llhg;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    const/high16 v1, -0x7fff0000
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final k(Lud8;)Ljava/lang/Object;
-    .locals 1
-
-    instance-of v0, p1, Lu8f;
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    new-instance v0, Luoc;
-
-    check-cast p1, Lu8f;
-
-    iget-object p1, p1, Lu8f;->a:Lqpj;
-
-    invoke-direct {v0, p1}, Luoc;-><init>(Lqpj;)V
-
-    return-object v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    const/high16 v0, -0x7fff0000
-
-    return v0
-.end method
-
-.method public final q(Lud8;)Z
+.method public final a()V
     .locals 0
 
-    invoke-virtual {p0, p1}, Lhac;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final b(Llcc;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    const-string v1, "PlaceholderItem(text="
+.method public final d(J)V
+    .locals 0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-void
+.end method
 
-    iget-object v1, p0, Lhac;->a:Llhg;
+.method public final e(Lkotlinx/coroutines/internal/ContextScope;)V
+    .locals 4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lhac;->c:Lia8;
 
-    const-string v1, ", viewType=-2147418112)"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, La6c;
+
+    sget-object v1, La6c;->g:[Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, La6c;->d([Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lhac;->b:Lia8;
+
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ldng;
+
+    check-cast v0, Lsbb;
+
+    invoke-virtual {v0}, Lsbb;->b()Lhc4;
+
+    move-result-object v0
+
+    new-instance v1, Lkn9;
+
+    const/16 v2, 0x1c
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, p0, v3, v2}, Lkn9;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+
+    const/4 v2, 0x2
+
+    invoke-static {p1, v0, v3, v1, v2}, Ly6j;->L(Loc4;Lfc4;Lrc4;Lnt6;I)Lhyf;
+
+    :cond_0
+    return-void
 .end method

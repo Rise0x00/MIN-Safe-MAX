@@ -1,186 +1,49 @@
 .class public final Lqb6;
-.super Lcw4;
+.super Lz84;
 .source "SourceFile"
-
-# interfaces
-.implements Lxb6;
 
 
 # instance fields
-.field public final c:Z
+.field public X:I
 
-.field public d:Lb1g;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public o:Z
+.field public final synthetic o:Lrb6;
 
 
 # direct methods
-.method public constructor <init>(Lz0g;Z)V
+.method public constructor <init>(Lrb6;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcw4;-><init>(Lz0g;)V
+    iput-object p1, p0, Lqb6;->o:Lrb6;
 
-    iput-boolean p2, p0, Lqb6;->c:Z
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
-
-    iget-boolean v0, p0, Lqb6;->o:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lqb6;->o:Z
-
-    iget-object v0, p0, Lcw4;->b:Ljava/lang/Object;
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lcw4;->b:Ljava/lang/Object;
-
-    if-nez v0, :cond_1
-
-    move-object v0, v1
-
-    :cond_1
-    if-nez v0, :cond_3
-
-    iget-boolean v0, p0, Lqb6;->c:Z
-
-    iget-object v1, p0, Lcw4;->a:Lz0g;
-
-    if-eqz v0, :cond_2
-
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    invoke-interface {v1, v0}, Lz0g;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_2
-    invoke-interface {v1}, Lz0g;->b()V
-
-    return-void
-
-    :cond_3
-    invoke-virtual {p0, v0}, Lcw4;->e(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final cancel()V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x4
+    iput-object p1, p0, Lqb6;->d:Ljava/lang/Object;
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+    iget p1, p0, Lqb6;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lqb6;->X:I
+
+    iget-object p1, p0, Lqb6;->o:Lrb6;
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcw4;->b:Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lrb6;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lqb6;->d:Lb1g;
+    move-result-object p1
 
-    invoke-interface {v0}, Lb1g;->cancel()V
-
-    return-void
-.end method
-
-.method public final d(Lb1g;)V
-    .locals 2
-
-    iget-object v0, p0, Lqb6;->d:Lb1g;
-
-    invoke-static {v0, p1}, Le1g;->g(Lb1g;Lb1g;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Lqb6;->d:Lb1g;
-
-    iget-object v0, p0, Lcw4;->a:Lz0g;
-
-    invoke-interface {v0, p0}, Lz0g;->d(Lb1g;)V
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    invoke-interface {p1, v0, v1}, Lb1g;->f(J)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lqb6;->o:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1}, Lknj;->b(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lqb6;->o:Z
-
-    iget-object v0, p0, Lcw4;->a:Lz0g;
-
-    invoke-interface {v0, p1}, Lz0g;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final r(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lqb6;->o:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lcw4;->b:Ljava/lang/Object;
-
-    if-eqz v0, :cond_1
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lqb6;->o:Z
-
-    iget-object p1, p0, Lqb6;->d:Lb1g;
-
-    invoke-interface {p1}, Lb1g;->cancel()V
-
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Sequence contains more than one element!"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcw4;->a:Lz0g;
-
-    invoke-interface {v0, p1}, Lz0g;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_1
-    iput-object p1, p0, Lcw4;->b:Ljava/lang/Object;
-
-    return-void
+    return-object p1
 .end method

@@ -1,69 +1,146 @@
 .class public final Lga1;
-.super Lrr4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic t:Lt9b;
+.field public final a:Lia8;
 
 
 # direct methods
-.method public constructor <init>(Lt9b;)V
-    .locals 2
+.method public constructor <init>(Lia8;)V
+    .locals 0
 
-    iput-object p1, p0, Lga1;->t:Lt9b;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Lrr4;-><init>()V
-
-    const-wide/16 v0, 0x12c
-
-    iput-wide v0, p0, Lbsd;->d:J
-
-    iput-wide v0, p0, Lbsd;->c:J
-
-    iput-wide v0, p0, Lbsd;->f:J
-
-    iput-wide v0, p0, Lbsd;->e:J
+    iput-object p1, p0, Lga1;->a:Lia8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m()V
-    .locals 3
+.method public final a()Lru/ok/android/externcalls/sdk/video/CameraManager;
+    .locals 1
 
-    iget-object v0, p0, Lga1;->t:Lt9b;
+    iget-object v0, p0, Lga1;->a:Lia8;
 
-    iget-object v0, v0, Lt9b;->b:Ljava/lang/Object;
+    invoke-interface {v0}, Lia8;->getValue()Ljava/lang/Object;
 
-    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
+    move-result-object v0
 
-    if-eqz v0, :cond_1
+    check-cast v0, Lxa4;
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0}, Lxa4;->a()Lru/ok/android/externcalls/sdk/Conversation;
 
-    move-result-object v1
+    move-result-object v0
 
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
-    const/4 v2, -0x2
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/Conversation;->getCameraManager()Lru/ok/android/externcalls/sdk/video/CameraManager;
 
-    iput v2, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
+    return-object v0
 
     :cond_0
-    new-instance v0, Ljava/lang/NullPointerException;
+    const/4 v0, 0x0
 
-    const-string v1, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+    return-object v0
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+.method public final b()Z
+    .locals 3
 
-    throw v0
+    invoke-virtual {p0}, Lga1;->a()Lru/ok/android/externcalls/sdk/video/CameraManager;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/video/CameraManager;->isCapturingFromFrontCamera()Z
+
+    move-result v0
+
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_0
+
+    return v2
+
+    :cond_0
+    return v1
+.end method
+
+.method public final c()Z
+    .locals 2
+
+    invoke-virtual {p0}, Lga1;->a()Lru/ok/android/externcalls/sdk/video/CameraManager;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/video/CameraManager;->isCameraEnabled()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    return v1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final d(Z)V
+    .locals 5
+
+    sget-object v0, Lnm4;->d:Lnfb;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, Lgp8;->d:Lgp8;
+
+    invoke-virtual {v0, v1}, Lnfb;->b(Lgp8;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "CallCameraController camera changed="
+
+    const-string v3, " "
+
+    invoke-static {v2, v3, p1}, Lrtc;->s(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    const-string v4, "CallCameraControllerTag"
+
+    invoke-virtual {v0, v1, v4, v2, v3}, Lnfb;->c(Lgp8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
+    :goto_0
+    invoke-virtual {p0}, Lga1;->a()Lru/ok/android/externcalls/sdk/video/CameraManager;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0, p1}, Lru/ok/android/externcalls/sdk/video/CameraManager;->setCameraEnabled(Z)V
+
+    :cond_2
     return-void
 .end method

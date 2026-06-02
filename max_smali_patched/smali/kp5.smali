@@ -1,106 +1,33 @@
-.class public final synthetic Lkp5;
+.class public abstract Lkp5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpe8;
-.implements Lqe8;
-.implements Lzx3;
 
+# static fields
+.field public static final a:Lkotlinx/coroutines/internal/Symbol;
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:F
+.field public static final b:Lkotlinx/coroutines/internal/Symbol;
 
 
 # direct methods
-.method public synthetic constructor <init>(IF)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p1, p0, Lkp5;->a:I
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    iput p2, p0, Lkp5;->b:F
+    const-string v1, "REMOVED_TASK"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    return-void
-.end method
+    sput-object v0, Lkp5;->a:Lkotlinx/coroutines/internal/Symbol;
 
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-# virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 1
+    const-string v1, "CLOSED_EMPTY"
 
-    iget v0, p0, Lkp5;->a:I
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Lxcc;
-
-    invoke-virtual {p1}, Lxcc;->m0()V
-
-    iget-object p1, p1, Lxcc;->a:Ldq5;
-
-    iget v0, p0, Lkp5;->b:F
-
-    invoke-virtual {p1, v0}, Ldq5;->u1(F)V
+    sput-object v0, Lkp5;->b:Lkotlinx/coroutines/internal/Symbol;
 
     return-void
-
-    :pswitch_0
-    iget v0, p0, Lkp5;->b:F
-
-    check-cast p1, Lxcc;
-
-    invoke-virtual {p1, v0}, Lxcc;->i0(F)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public invoke(Ljava/lang/Object;)V
-    .locals 1
-
-    iget v0, p0, Lkp5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Lkp5;->b:F
-
-    check-cast p1, Lobc;
-
-    invoke-interface {p1, v0}, Lobc;->j(F)V
-
-    return-void
-
-    :pswitch_0
-    iget v0, p0, Lkp5;->b:F
-
-    check-cast p1, Lobc;
-
-    invoke-interface {p1, v0}, Lobc;->j(F)V
-
-    return-void
-
-    :pswitch_1
-    iget v0, p0, Lkp5;->b:F
-
-    check-cast p1, Lnbc;
-
-    invoke-interface {p1, v0}, Lnbc;->j(F)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

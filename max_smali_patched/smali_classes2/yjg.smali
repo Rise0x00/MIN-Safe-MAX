@@ -1,319 +1,111 @@
-.class public final Lyjg;
-.super Lp6g;
+.class public final synthetic Lyjg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic o:Lzjg;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lzjg;
 
 
 # direct methods
-.method public constructor <init>(Lzjg;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lzjg;I)V
     .locals 0
 
-    iput-object p1, p0, Lyjg;->o:Lzjg;
+    iput p2, p0, Lyjg;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lyjg;->b:Lzjg;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 4
 
-    check-cast p1, Lzb4;
+    iget v0, p0, Lyjg;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lyjg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lyjg;->b:Lzjg;
 
-    move-result-object p1
+    const-string v1, "Session call super.close()"
 
-    check-cast p1, Lyjg;
+    invoke-virtual {v0, v1}, Lzjg;->k(Ljava/lang/String;)V
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget-object v1, v0, Lzjg;->g:Lr05;
 
-    invoke-virtual {p1, p2}, Lyjg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v2, "Need to call openCaptureSession before using this API."
 
-    return-object p2
-.end method
+    invoke-static {v1, v2}, Lvfa;->l(Ljava/lang/Object;Ljava/lang/String;)V
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    iget-object v1, v0, Lzjg;->b:Ls48;
 
-    new-instance p1, Lyjg;
+    iget-object v2, v1, Ls48;->b:Ljava/lang/Object;
 
-    iget-object v0, p0, Lyjg;->o:Lzjg;
+    monitor-enter v2
 
-    invoke-direct {p1, v0, p2}, Lyjg;-><init>(Lzjg;Lkotlin/coroutines/Continuation;)V
+    :try_start_0
+    iget-object v1, v1, Ls48;->d:Ljava/lang/Object;
 
-    return-object p1
-.end method
+    check-cast v1, Ljava/util/LinkedHashSet;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
+    invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object p1, p0, Lyjg;->o:Lzjg;
+    iget-object v1, v0, Lzjg;->g:Lr05;
 
-    iget-object v0, p1, Lzjg;->d:Ljava/util/List;
+    iget-object v1, v1, Lr05;->b:Ljava/lang/Object;
 
-    new-instance v1, Ljava/util/ArrayList;
+    check-cast v1, Ltf;
 
-    const/16 v2, 0xa
+    iget-object v1, v1, Ltf;->b:Ljava/lang/Object;
 
-    invoke-static {v0, v2}, Lri3;->n(Ljava/lang/Iterable;I)I
+    check-cast v1, Landroid/hardware/camera2/CameraCaptureSession;
 
-    move-result v2
+    invoke-virtual {v1}, Landroid/hardware/camera2/CameraCaptureSession;->close()V
 
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+    iget-object v1, v0, Lzjg;->d:Ls2f;
 
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    new-instance v2, Lyjg;
 
-    move-result-object v0
+    const/4 v3, 0x0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-direct {v2, v0, v3}, Lyjg;-><init>(Lzjg;I)V
 
-    move-result v2
+    invoke-virtual {v1, v2}, Ls2f;->execute(Ljava/lang/Runnable;)V
 
-    if-eqz v2, :cond_a
+    return-void
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :catchall_0
+    move-exception v0
 
-    move-result-object v2
+    :try_start_1
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    check-cast v2, Lktb;
+    throw v0
 
-    iget-object v3, v2, Lktb;->a:Ljava/lang/Object;
+    :pswitch_0
+    iget-object v0, p0, Lyjg;->b:Lzjg;
 
-    move-object v5, v3
+    invoke-virtual {v0, v0}, Lzjg;->g(Lzjg;)V
 
-    check-cast v5, Ljava/lang/String;
+    return-void
 
-    iget-object v2, v2, Lktb;->b:Ljava/lang/Object;
-
-    check-cast v2, Ljava/util/concurrent/ExecutorService;
-
-    instance-of v3, v2, Lyn5;
-
-    const-wide/16 v6, -0x1
-
-    if-eqz v3, :cond_1
-
-    move-object v4, v2
-
-    check-cast v4, Lyn5;
-
-    iget-object v4, v4, Lyn5;->a:Ljava/util/concurrent/ExecutorService;
-
-    instance-of v8, v4, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    if-eqz v8, :cond_0
-
-    check-cast v4, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    invoke-virtual {v4}, Ljava/util/concurrent/ThreadPoolExecutor;->getCompletedTaskCount()J
-
-    move-result-wide v6
-
-    :cond_0
-    :goto_1
-    move-wide v7, v6
-
-    goto :goto_2
-
-    :cond_1
-    instance-of v4, v2, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    if-eqz v4, :cond_0
-
-    move-object v4, v2
-
-    check-cast v4, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    invoke-virtual {v4}, Ljava/util/concurrent/ThreadPoolExecutor;->getCompletedTaskCount()J
-
-    move-result-wide v6
-
-    goto :goto_1
-
-    :goto_2
-    const/4 v4, -0x1
-
-    if-eqz v3, :cond_3
-
-    move-object v6, v2
-
-    check-cast v6, Lyn5;
-
-    iget-object v6, v6, Lyn5;->a:Ljava/util/concurrent/ExecutorService;
-
-    instance-of v9, v6, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    if-eqz v9, :cond_2
-
-    check-cast v6, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    invoke-virtual {v6}, Ljava/util/concurrent/ThreadPoolExecutor;->getActiveCount()I
-
-    move-result v6
-
-    goto :goto_3
-
-    :cond_2
-    move v6, v4
-
-    :goto_3
-    move v9, v6
-
-    goto :goto_4
-
-    :cond_3
-    instance-of v6, v2, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    if-eqz v6, :cond_4
-
-    move-object v6, v2
-
-    check-cast v6, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    invoke-virtual {v6}, Ljava/util/concurrent/ThreadPoolExecutor;->getActiveCount()I
-
-    move-result v6
-
-    goto :goto_3
-
-    :cond_4
-    move v9, v4
-
-    :goto_4
-    if-eqz v3, :cond_6
-
-    move-object v6, v2
-
-    check-cast v6, Lyn5;
-
-    iget-object v6, v6, Lyn5;->a:Ljava/util/concurrent/ExecutorService;
-
-    instance-of v10, v6, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    if-eqz v10, :cond_5
-
-    check-cast v6, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    invoke-virtual {v6}, Ljava/util/concurrent/ThreadPoolExecutor;->getPoolSize()I
-
-    move-result v10
-
-    invoke-virtual {v6}, Ljava/util/concurrent/ThreadPoolExecutor;->getActiveCount()I
-
-    move-result v6
-
-    goto :goto_6
-
-    :cond_5
-    move v10, v4
-
-    :goto_5
-    move v6, v10
-
-    goto :goto_7
-
-    :cond_6
-    instance-of v6, v2, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    if-eqz v6, :cond_7
-
-    move-object v6, v2
-
-    check-cast v6, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    invoke-virtual {v6}, Ljava/util/concurrent/ThreadPoolExecutor;->getPoolSize()I
-
-    move-result v10
-
-    invoke-virtual {v6}, Ljava/util/concurrent/ThreadPoolExecutor;->getActiveCount()I
-
-    move-result v6
-
-    :goto_6
-    sub-int/2addr v10, v6
-
-    goto :goto_5
-
-    :cond_7
-    move v6, v4
-
-    :goto_7
-    if-eqz v3, :cond_9
-
-    move-object v3, v2
-
-    check-cast v3, Lyn5;
-
-    invoke-virtual {v3}, Lyn5;->c()I
-
-    move-result v4
-
-    :cond_8
-    :goto_8
-    move v10, v4
-
-    goto :goto_9
-
-    :cond_9
-    instance-of v3, v2, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    if-eqz v3, :cond_8
-
-    move-object v3, v2
-
-    check-cast v3, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    invoke-virtual {v3}, Ljava/util/concurrent/ThreadPoolExecutor;->getQueue()Ljava/util/concurrent/BlockingQueue;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Ljava/util/Collection;->size()I
-
-    move-result v4
-
-    goto :goto_8
-
-    :goto_9
-    new-instance v4, Lzn5;
-
-    invoke-interface {v2}, Ljava/util/concurrent/ExecutorService;->isShutdown()Z
-
-    move-result v11
-
-    invoke-interface {v2}, Ljava/util/concurrent/ExecutorService;->isTerminated()Z
-
-    move-result v12
-
-    invoke-direct/range {v4 .. v12}, Lzn5;-><init>(Ljava/lang/String;IJIIZZ)V
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto/16 :goto_0
-
-    :cond_a
-    iget-object p1, p1, Lzjg;->b:Lspf;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v1}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -2,128 +2,109 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lx41;
+
 
 # instance fields
-.field public final a:Lo58;
+.field public final a:Li85;
 
-.field public final b:Li7f;
+.field public final b:J
 
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
+.field public final c:I
+
+.field public d:J
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lo58;Lmbg;)V
-    .locals 2
+.method public constructor <init>(Li85;JIJI)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhxe;->a:Lo58;
+    iput-object p1, p0, Lhxe;->a:Li85;
 
-    const/4 v0, 0x0
+    iput-wide p2, p0, Lhxe;->b:J
 
-    const/4 v1, 0x7
+    iput p4, p0, Lhxe;->c:I
 
-    invoke-static {v0, v0, v1}, Lj7f;->b(III)Li7f;
+    iput-wide p5, p0, Lhxe;->d:J
 
-    move-result-object v0
-
-    iput-object v0, p0, Lhxe;->b:Li7f;
-
-    check-cast p2, Lj9b;
-
-    invoke-virtual {p2}, Lj9b;->a()Lsb4;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lhxe;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcy0;
-
-    invoke-virtual {p1, p0}, Lcy0;->d(Ljava/lang/Object;)V
+    iput p7, p0, Lhxe;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lhve;)V
-    .locals 3
-    .annotation runtime Lu0g;
-    .end annotation
+.method public final a(JJJ)V
+    .locals 6
 
-    .line 3
-    new-instance v0, Lfxe;
+    iget-wide p1, p0, Lhxe;->d:J
 
-    const/4 v1, 0x0
+    add-long v4, p1, p5
 
-    invoke-direct {v0, p0, p1, v1}, Lfxe;-><init>(Lhxe;Lhve;Lkotlin/coroutines/Continuation;)V
+    iput-wide v4, p0, Lhxe;->d:J
 
-    const/4 p1, 0x3
+    iget-wide v2, p0, Lhxe;->b:J
 
-    iget-object v2, p0, Lhxe;->c:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-virtual {p0}, Lhxe;->b()F
 
-    invoke-static {v2, v1, v1, v0, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+    move-result v1
 
-    return-void
-.end method
+    iget-object v0, p0, Lhxe;->a:Li85;
 
-.method public final onEvent(Ljk0;)V
-    .locals 3
-    .annotation runtime Lu0g;
-    .end annotation
-
-    .line 4
-    new-instance v0, Lgxe;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, v1}, Lgxe;-><init>(Lhxe;Ljk0;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    iget-object v2, p0, Lhxe;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v1, v1, v0, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+    invoke-virtual/range {v0 .. v5}, Li85;->b(FJJ)V
 
     return-void
 .end method
 
-.method public final onEvent(Ljve;)V
-    .locals 3
-    .annotation runtime Lu0g;
-    .end annotation
+.method public final b()F
+    .locals 5
 
-    .line 2
-    new-instance v0, Lexe;
+    const-wide/16 v0, -0x1
 
-    const/4 v1, 0x0
+    iget-wide v2, p0, Lhxe;->b:J
 
-    invoke-direct {v0, p0, p1, v1}, Lexe;-><init>(Lhxe;Ljve;Lkotlin/coroutines/Continuation;)V
+    cmp-long v0, v2, v0
 
-    const/4 p1, 0x3
+    if-eqz v0, :cond_0
 
-    iget-object v2, p0, Lhxe;->c:Lkotlinx/coroutines/internal/ContextScope;
+    const-wide/16 v0, 0x0
 
-    invoke-static {v2, v1, v1, v0, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+    cmp-long v0, v2, v0
 
-    return-void
-.end method
+    if-eqz v0, :cond_0
 
-.method public final onEvent(Lkv3;)V
-    .locals 0
-    .annotation runtime Lu0g;
-    .end annotation
+    iget-wide v0, p0, Lhxe;->d:J
 
-    const/4 p1, 0x0
+    invoke-static {v0, v1, v2, v3}, Lpnh;->Y(JJ)F
 
-    .line 1
-    throw p1
+    move-result v0
+
+    return v0
+
+    :cond_0
+    iget v0, p0, Lhxe;->c:I
+
+    if-eqz v0, :cond_1
+
+    iget v1, p0, Lhxe;->o:I
+
+    int-to-long v1, v1
+
+    int-to-long v3, v0
+
+    invoke-static {v1, v2, v3, v4}, Lpnh;->Y(JJ)F
+
+    move-result v0
+
+    return v0
+
+    :cond_1
+    const/high16 v0, -0x40800000    # -1.0f
+
+    return v0
 .end method

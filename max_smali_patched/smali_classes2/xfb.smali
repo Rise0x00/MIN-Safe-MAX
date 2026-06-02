@@ -1,61 +1,67 @@
 .class public final Lxfb;
-.super Lagb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lxfb;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    new-instance v0, Lxfb;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lxfb;->a:Lxfb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(Landroid/content/Context;Ljava/lang/Long;Ljava/lang/Long;)Landroid/app/PendingIntent;
+    .locals 3
 
-    const/4 v0, 0x1
+    if-eqz p2, :cond_0
 
-    if-ne p0, p1, :cond_0
+    sget-object v0, Lmu8;->c:Lmu8;
 
-    return v0
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 p2, 0x0
+
+    invoke-static {v1, v2, p2, p3, p2}, Lmu8;->f0(JLjava/lang/Long;Ljava/lang/Long;Ljava/lang/String;)Lwn4;
+
+    move-result-object p2
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Lxfb;
+    sget-object p2, Lmu8;->c:Lmu8;
 
-    if-nez p1, :cond_1
+    const/4 p3, 0x0
 
-    const/4 p1, 0x0
+    invoke-static {p2, p3}, Lmu8;->g0(Lmu8;Z)Lwn4;
 
-    return p1
+    move-result-object p2
 
-    :cond_1
-    return v0
-.end method
+    :goto_0
+    sget-object p3, Lmu8;->c:Lmu8;
 
-.method public final hashCode()I
-    .locals 1
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const v0, 0x715c406f
+    const-string p3, "https"
 
-    return v0
-.end method
+    const-string v0, "max.ru"
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-static {p2, p1, p3, v0}, Lmu8;->l0(Lwn4;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    const-string v0, "PrimaryStatic"
+    move-result-object p2
 
-    return-object v0
+    const/16 p3, 0x2a
+
+    invoke-static {p1, p3, p2}, Ls5b;->s(Landroid/content/Context;ILandroid/content/Intent;)Landroid/app/PendingIntent;
+
+    move-result-object p1
+
+    return-object p1
 .end method

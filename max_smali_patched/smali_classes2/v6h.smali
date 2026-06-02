@@ -1,53 +1,39 @@
 .class public final Lv6h;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Landroid/view/View;
 
-.field public final synthetic Y:Lo7h;
+.field public final b:Ljava/lang/String;
 
-.field public Z:I
+.field public final c:Lk7h;
 
-.field public d:Lq6h;
+.field public final d:Landroid/view/WindowId;
 
-.field public o:Lp74;
+.field public final e:Lz6h;
+
+.field public final f:Landroid/animation/Animator;
 
 
 # direct methods
-.method public constructor <init>(Lo7h;Lo84;)V
+.method public constructor <init>(Landroid/view/View;Ljava/lang/String;Lz6h;Landroid/view/WindowId;Lk7h;Landroid/animation/Animator;)V
     .locals 0
 
-    iput-object p1, p0, Lv6h;->Y:Lo7h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lv6h;->a:Landroid/view/View;
+
+    iput-object p2, p0, Lv6h;->b:Ljava/lang/String;
+
+    iput-object p5, p0, Lv6h;->c:Lk7h;
+
+    iput-object p4, p0, Lv6h;->d:Landroid/view/WindowId;
+
+    iput-object p3, p0, Lv6h;->e:Lz6h;
+
+    iput-object p6, p0, Lv6h;->f:Landroid/animation/Animator;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lv6h;->X:Ljava/lang/Object;
-
-    iget p1, p0, Lv6h;->Z:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lv6h;->Z:I
-
-    iget-object p1, p0, Lv6h;->Y:Lo7h;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0, p0}, Lo7h;->f(Lq6h;Lp74;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

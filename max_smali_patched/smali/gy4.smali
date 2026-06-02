@@ -1,138 +1,163 @@
-.class public final Lgy4;
-.super Ljava/lang/Object;
+.class public final enum Lgy4;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final enum X:Lgy4;
+
+.field public static final synthetic Y:[Lgy4;
+
+.field public static final d:Lcq4;
+
+.field public static final enum o:Lgy4;
+
+
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:B
 
-.field public final b:Ljava/lang/String;
+.field public final b:Lakg;
 
-.field public final c:Ljava/lang/String;
+.field public final c:Lakg;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lgy4;
 
-    iput-object p1, p0, Lgy4;->a:Ljava/lang/String;
+    const-string v1, "REGULAR"
 
-    iput-object p2, p0, Lgy4;->b:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    iput-object p3, p0, Lgy4;->c:Ljava/lang/String;
+    invoke-direct {v0, v1, v2, v2}, Lgy4;-><init>(Ljava/lang/String;IB)V
+
+    sput-object v0, Lgy4;->o:Lgy4;
+
+    new-instance v1, Lgy4;
+
+    const-string v2, "DELAYED"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v3}, Lgy4;-><init>(Ljava/lang/String;IB)V
+
+    sput-object v1, Lgy4;->X:Lgy4;
+
+    filled-new-array {v0, v1}, [Lgy4;
+
+    move-result-object v0
+
+    sput-object v0, Lgy4;->Y:[Lgy4;
+
+    new-instance v0, Lcq4;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1}, Lcq4;-><init>(I)V
+
+    sput-object v0, Lgy4;->d:Lcq4;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;IB)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v0, 0x1
+    iput-byte p3, p0, Lgy4;->a:B
 
-    if-ne p0, p1, :cond_0
+    new-instance p1, Lfy4;
 
-    return v0
+    const/4 p2, 0x0
 
-    :cond_0
-    const/4 v1, 0x0
+    invoke-direct {p1, p0, p2}, Lfy4;-><init>(Lgy4;I)V
 
-    if-eqz p1, :cond_2
+    new-instance p2, Lakg;
 
-    const-class v2, Lgy4;
+    invoke-direct {p2, p1}, Lakg;-><init>(Lxs6;)V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p2, p0, Lgy4;->b:Lakg;
 
-    move-result-object v3
+    new-instance p1, Lfy4;
 
-    if-eq v2, v3, :cond_1
+    const/4 p2, 0x1
 
-    goto :goto_0
+    invoke-direct {p1, p0, p2}, Lfy4;-><init>(Lgy4;I)V
 
-    :cond_1
-    check-cast p1, Lgy4;
+    new-instance p2, Lakg;
 
-    iget-object v2, p0, Lgy4;->a:Ljava/lang/String;
+    invoke-direct {p2, p1}, Lakg;-><init>(Lxs6;)V
 
-    iget-object v3, p1, Lgy4;->a:Ljava/lang/String;
+    iput-object p2, p0, Lgy4;->c:Lakg;
 
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lgy4;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lgy4;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lgy4;->c:Ljava/lang/String;
-
-    iget-object p1, p1, Lgy4;->c:Ljava/lang/String;
-
-    invoke-static {v2, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public static valueOf(Ljava/lang/String;)Lgy4;
+    .locals 1
 
-    iget-object v0, p0, Lgy4;->a:Ljava/lang/String;
+    const-class v0, Lgy4;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lgy4;
+
+    return-object p0
+.end method
+
+.method public static values()[Lgy4;
+    .locals 1
+
+    sget-object v0, Lgy4;->Y:[Lgy4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lgy4;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final a()Z
+    .locals 1
+
+    iget-object v0, p0, Lgy4;->c:Lakg;
+
+    invoke-virtual {v0}, Lakg;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    return v0
+.end method
 
-    const/4 v1, 0x0
+.method public final c()Z
+    .locals 1
 
-    iget-object v2, p0, Lgy4;->b:Ljava/lang/String;
+    iget-object v0, p0, Lgy4;->b:Lakg;
 
-    if-eqz v2, :cond_0
+    invoke-virtual {v0}, Lakg;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    move-result-object v0
 
-    move-result v2
+    check-cast v0, Ljava/lang/Boolean;
 
-    goto :goto_0
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    :cond_0
-    move v2, v1
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Lgy4;->c:Ljava/lang/String;
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :cond_1
-    add-int/2addr v0, v1
+    move-result v0
 
     return v0
 .end method

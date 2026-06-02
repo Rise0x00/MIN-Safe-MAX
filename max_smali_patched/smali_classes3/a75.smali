@@ -2,22 +2,29 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lc75;
+
 
 # instance fields
-.field public final a:J
+.field public final a:I
 
-.field public final b:Ljava/lang/String;
+.field public final b:J
+
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;)V
+.method public constructor <init>(IJJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, La75;->a:J
+    iput p1, p0, La75;->a:I
 
-    iput-object p3, p0, La75;->b:Ljava/lang/String;
+    iput-wide p2, p0, La75;->b:J
+
+    iput-wide p4, p0, La75;->c:J
 
     return-void
 .end method
@@ -45,9 +52,15 @@
     :cond_1
     check-cast p1, La75;
 
-    iget-wide v3, p0, La75;->a:J
+    iget v1, p0, La75;->a:I
 
-    iget-wide v5, p1, La75;->a:J
+    iget v3, p1, La75;->a:I
+
+    if-ne v1, v3, :cond_4
+
+    iget-wide v3, p0, La75;->b:J
+
+    iget-wide v5, p1, La75;->b:J
 
     cmp-long v1, v3, v5
 
@@ -56,36 +69,45 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, La75;->b:Ljava/lang/String;
+    iget-wide v3, p0, La75;->c:J
 
-    iget-object p1, p1, La75;->b:Ljava/lang/String;
+    iget-wide v5, p1, La75;->c:J
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    cmp-long p1, v3, v5
 
-    move-result p1
-
-    if-nez p1, :cond_3
+    if-eqz p1, :cond_3
 
     return v2
 
     :cond_3
     return v0
+
+    :cond_4
+    return v2
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 4
 
-    iget-wide v0, p0, La75;->a:J
+    iget v0, p0, La75;->a:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/16 v1, 0x1f
 
-    iget-object v1, p0, La75;->b:Ljava/lang/String;
+    mul-int/2addr v0, v1
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    iget-wide v2, p0, La75;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lwph;->a(IIJ)I
+
+    move-result v0
+
+    iget-wide v1, p0, La75;->c:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v1
 
@@ -97,23 +119,29 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    const-string v0, "DraftMediaUploadKey(chatId="
+    iget v0, p0, La75;->a:I
 
-    const-string v1, ", attachLocalId="
-
-    iget-wide v2, p0, La75;->a:J
-
-    iget-object v4, p0, La75;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v1, v4}, Lj27;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, La1k;->e(I)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, ")"
+    const-string v1, "Loading(progress="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, ", time="
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-wide v3, p0, La75;->b:J
+
+    invoke-static {v3, v4, v1, v0, v2}, Lrtc;->x(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", chatId="
+
+    const-string v2, ")"
+
+    iget-wide v3, p0, La75;->c:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Lx82;->i(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object v0
 

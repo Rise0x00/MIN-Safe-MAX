@@ -2,177 +2,288 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Lclj;
-
-.field public final b:Ljava/lang/Boolean;
-
-.field public final c:Lcqj;
-
-.field public final d:Llxi;
-
-.field public final e:Llxi;
+# interfaces
+.implements Le1j;
 
 
 # direct methods
-.method public synthetic constructor <init>(Led6;)V
-    .locals 1
+.method public static a(Ljava/net/HttpURLConnection;)Ll55;
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
-    iget-object v0, p1, Led6;->a:Ljava/lang/Object;
+    move-result v0
 
-    check-cast v0, Lclj;
+    const/16 v1, 0x190
 
-    iput-object v0, p0, Lj1j;->a:Lclj;
+    if-lt v0, v1, :cond_1
 
-    iget-object v0, p1, Led6;->b:Ljava/lang/Object;
+    :try_start_0
+    invoke-virtual {p0}, Ljava/net/HttpURLConnection;->getErrorStream()Ljava/io/InputStream;
 
-    check-cast v0, Ljava/lang/Boolean;
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput-object v0, p0, Lj1j;->b:Ljava/lang/Boolean;
+    if-eqz p0, :cond_0
 
-    iget-object v0, p1, Led6;->c:Ljava/lang/Object;
+    :try_start_1
+    new-instance v1, Ljava/lang/String;
 
-    check-cast v0, Lcqj;
+    invoke-static {p0}, Lsr6;->R(Ljava/io/InputStream;)[B
 
-    iput-object v0, p0, Lj1j;->c:Lcqj;
+    move-result-object v2
 
-    iget-object v0, p1, Led6;->d:Ljava/lang/Object;
+    sget-object v3, Lbj2;->a:Ljava/nio/charset/Charset;
 
-    check-cast v0, Llxi;
+    invoke-direct {v1, v2, v3}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    iput-object v0, p0, Lj1j;->d:Llxi;
+    :try_start_2
+    invoke-interface {p0}, Ljava/io/Closeable;->close()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    iget-object p1, p1, Led6;->e:Ljava/lang/Object;
+    goto :goto_0
 
-    check-cast p1, Llxi;
+    :catchall_0
+    move-exception v1
 
-    iput-object p1, p0, Lj1j;->e:Llxi;
+    :try_start_3
+    throw v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    return-void
+    :catchall_1
+    move-exception v2
+
+    :try_start_4
+    invoke-static {p0, v1}, Lddh;->i(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw v2
+
+    :cond_0
+    const-string p0, "2b15e3713f8c354e03917a5951817a4f08"
+
+    invoke-static {p0}, Ljde;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const-string p0, "a54e499adc2827c9ff2d6ed1f5693cc0fb2d6ec0e83b21d7ba2b21c1e3"
+
+    invoke-static {p0}, Ljde;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
+
+    move-result-object p0
+
+    :try_start_5
+    new-instance v1, Ljava/lang/String;
+
+    invoke-static {p0}, Lsr6;->R(Ljava/io/InputStream;)[B
+
+    move-result-object v2
+
+    sget-object v3, Lbj2;->a:Ljava/nio/charset/Charset;
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+
+    invoke-interface {p0}, Ljava/io/Closeable;->close()V
+
+    :goto_0
+    new-instance p0, Ll55;
+
+    invoke-direct {p0, v0, v1}, Ll55;-><init>(ILjava/lang/String;)V
+
+    return-object p0
+
+    :catchall_2
+    move-exception v0
+
+    :try_start_6
+    throw v0
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_3
+
+    :catchall_3
+    move-exception v1
+
+    invoke-static {p0, v0}, Lddh;->i(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw v1
 .end method
 
+.method public static b(Ljava/net/HttpURLConnection;Lwv8;)V
+    .locals 2
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    const-string v0, "ad373688d87964f9"
 
-    if-ne p1, p0, :cond_0
+    invoke-static {v0}, Ljde;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Ljava/net/URLConnection;->setDoOutput(Z)V
+
+    invoke-virtual {p0, v0}, Ljava/net/URLConnection;->setDoInput(Z)V
+
+    const/16 v0, 0x2710
+
+    invoke-virtual {p0, v0}, Ljava/net/URLConnection;->setConnectTimeout(I)V
+
+    invoke-virtual {p0, v0}, Ljava/net/URLConnection;->setReadTimeout(I)V
+
+    invoke-virtual {p1}, Lwv8;->entrySet()Ljava/util/Set;
+
+    move-result-object p1
+
+    check-cast p1, Lxv8;
+
+    invoke-virtual {p1}, Lxv8;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {p0, v1, v0}, Ljava/net/URLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lj1j;
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, Lj1j;
-
-    iget-object v0, p0, Lj1j;->a:Lclj;
-
-    iget-object v1, p1, Lj1j;->a:Lclj;
-
-    invoke-static {v0, v1}, Lddj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/4 v0, 0x0
-
-    invoke-static {v0, v0}, Lddj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lj1j;->b:Ljava/lang/Boolean;
-
-    iget-object v2, p1, Lj1j;->b:Ljava/lang/Boolean;
-
-    invoke-static {v1, v2}, Lddj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-static {v0, v0}, Lddj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lj1j;->c:Lcqj;
-
-    iget-object v1, p1, Lj1j;->c:Lcqj;
-
-    invoke-static {v0, v1}, Lddj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lj1j;->d:Llxi;
-
-    iget-object v1, p1, Lj1j;->d:Llxi;
-
-    invoke-static {v0, v1}, Lddj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lj1j;->e:Llxi;
-
-    iget-object p1, p1, Lj1j;->e:Llxi;
-
-    invoke-static {v0, p1}, Lddj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 7
+.method public static c(Ljava/net/HttpURLConnection;[BLwv8;)V
+    .locals 1
 
-    iget-object v5, p0, Lj1j;->d:Llxi;
+    const-string v0, "83ff264f0c4991f72a488bae0a489cec2b4f91e4"
 
-    iget-object v6, p0, Lj1j;->e:Llxi;
-
-    iget-object v0, p0, Lj1j;->a:Lclj;
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lj1j;->b:Ljava/lang/Boolean;
-
-    const/4 v3, 0x0
-
-    iget-object v4, p0, Lj1j;->c:Lcqj;
-
-    filled-new-array/range {v0 .. v6}, [Ljava/lang/Object;
+    invoke-static {v0}, Ljde;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    invoke-virtual {p2, v0}, Lwv8;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v0
+    move-result-object p2
 
-    return v0
+    const-string v0, "ad424f4225352bdd"
+
+    invoke-static {v0}, Ljde;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p2, v0}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    new-instance p2, Ljava/io/ByteArrayOutputStream;
+
+    invoke-direct {p2}, Ljava/io/ByteArrayOutputStream;-><init>()V
+
+    new-instance v0, Ljava/util/zip/GZIPOutputStream;
+
+    invoke-direct {v0, p2}, Ljava/util/zip/GZIPOutputStream;-><init>(Ljava/io/OutputStream;)V
+
+    :try_start_0
+    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write([B)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-interface {v0}, Ljava/io/Closeable;->close()V
+
+    invoke-virtual {p2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    :try_start_1
+    throw p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :catchall_1
+    move-exception p1
+
+    invoke-static {v0, p0}, Lddh;->i(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw p1
+
+    :cond_0
+    :goto_0
+    array-length p2, p1
+
+    invoke-virtual {p0, p2}, Ljava/net/HttpURLConnection;->setFixedLengthStreamingMode(I)V
+
+    invoke-virtual {p0}, Ljava/net/URLConnection;->getOutputStream()Ljava/io/OutputStream;
+
+    move-result-object p0
+
+    :try_start_2
+    invoke-virtual {p0, p1}, Ljava/io/OutputStream;->write([B)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    invoke-interface {p0}, Ljava/io/Closeable;->close()V
+
+    return-void
+
+    :catchall_2
+    move-exception p1
+
+    :try_start_3
+    throw p1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
+
+    :catchall_3
+    move-exception p2
+
+    invoke-static {p0, p1}, Lddh;->i(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw p2
 .end method

@@ -1,20 +1,64 @@
-.class public interface abstract Lhw1;
+.class public final Lhw1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lkw1;
+
+
+# static fields
+.field public static final a:Lhw1;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lhw1;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lhw1;->a:Lhw1;
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract onAttendee(Lrv1;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lhw1;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
 .end method
 
-.method public abstract onFeedback(Lsv1;)V
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x42bf222b
+
+    return v0
 .end method
 
-.method public abstract onHandUp(Ltv1;)V
-.end method
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-.method public abstract onMeInWaitingRoomChanged(Z)V
-.end method
+    const-string v0, "Hide"
 
-.method public abstract onPromotionUpdated(Luv1;)V
+    return-object v0
 .end method

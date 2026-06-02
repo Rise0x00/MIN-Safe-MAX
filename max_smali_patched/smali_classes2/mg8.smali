@@ -1,51 +1,92 @@
-.class public abstract synthetic Lmg8;
+.class public final synthetic Lmg8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxs6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/android/deeplink/LinkInterceptorWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lone/me/android/deeplink/LinkInterceptorWidget;I)V
+    .locals 0
 
-    invoke-static {}, Lsh2;->values()[Lsh2;
+    iput p2, p0, Lmg8;->a:I
+
+    iput-object p1, p0, Lmg8;->b:Lone/me/android/deeplink/LinkInterceptorWidget;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lmg8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lmg8;->b:Lone/me/android/deeplink/LinkInterceptorWidget;
+
+    invoke-virtual {v0}, Ll94;->getRouter()Lmge;
 
     move-result-object v0
 
-    array-length v0, v0
+    return-object v0
 
-    new-array v0, v0, [I
+    :pswitch_0
+    iget-object v0, p0, Lmg8;->b:Lone/me/android/deeplink/LinkInterceptorWidget;
 
-    const/4 v1, 0x1
+    iget-object v1, v0, Lone/me/android/deeplink/LinkInterceptorWidget;->b:Lq32;
 
-    const/4 v2, 0x0
+    new-instance v2, Lmg8;
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v3, 0x2
 
-    :catch_0
-    const/4 v1, 0x2
+    invoke-direct {v2, v0, v3}, Lmg8;-><init>(Lone/me/android/deeplink/LinkInterceptorWidget;I)V
 
-    :try_start_1
-    aput v1, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    new-instance v3, Lakg;
 
-    :catch_1
-    const/4 v1, 0x3
+    invoke-direct {v3, v2}, Lakg;-><init>(Lxs6;)V
 
-    :try_start_2
-    aput v1, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    invoke-static {v1, v3, v0}, Ltla;->s(Lq32;Lakg;Lone/me/sdk/arch/Widget;)Ljq1;
 
-    :catch_2
-    sput-object v0, Lmg8;->$EnumSwitchMapping$0:[I
+    move-result-object v0
 
-    return-void
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lmg8;->b:Lone/me/android/deeplink/LinkInterceptorWidget;
+
+    iget-object v0, v0, Lone/me/android/deeplink/LinkInterceptorWidget;->a:Lsab;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lz5;
+
+    move-result-object v0
+
+    const/16 v1, 0x3d2
+
+    invoke-virtual {v0, v1}, Lz5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Llg8;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

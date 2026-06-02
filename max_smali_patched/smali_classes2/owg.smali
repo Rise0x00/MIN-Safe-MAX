@@ -1,64 +1,79 @@
-.class public final Lowg;
+.class public abstract Lowg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lrwg;
-
 
 # static fields
-.field public static final a:Lowg;
+.field public static final a:Lakg;
+
+.field public static final b:Lakg;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    new-instance v0, Lowg;
+    new-instance v0, Lb8g;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0x8
 
-    sput-object v0, Lowg;->a:Lowg;
+    invoke-direct {v0, v1}, Lb8g;-><init>(I)V
+
+    new-instance v1, Lakg;
+
+    invoke-direct {v1, v0}, Lakg;-><init>(Lxs6;)V
+
+    sput-object v1, Lowg;->a:Lakg;
+
+    new-instance v0, Lb8g;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1}, Lb8g;-><init>(I)V
+
+    new-instance v1, Lakg;
+
+    invoke-direct {v1, v0}, Lakg;-><init>(Lxs6;)V
+
+    sput-object v1, Lowg;->b:Lakg;
 
     return-void
 .end method
 
+.method public static final a(Ljava/lang/String;)Ljava/io/ByteArrayOutputStream;
+    .locals 3
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    const/16 v0, 0x100
 
-    const/4 v0, 0x1
+    sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    if-ne p0, p1, :cond_0
+    invoke-static {v0, v0, v1}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
-    return v0
+    move-result-object v0
 
-    :cond_0
-    instance-of p1, p1, Lowg;
+    new-instance v1, Landroid/graphics/Canvas;
 
-    if-nez p1, :cond_1
+    invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    const/4 p1, 0x0
+    invoke-static {p0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
-    return p1
+    move-result p0
 
-    :cond_1
-    return v0
-.end method
+    invoke-virtual {v1, p0}, Landroid/graphics/Canvas;->drawColor(I)V
 
-.method public final hashCode()I
-    .locals 1
+    new-instance p0, Ljava/io/ByteArrayOutputStream;
 
-    const v0, 0x63dd302c
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getAllocationByteCount()I
 
-    return v0
-.end method
+    move-result v1
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-direct {p0, v1}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
 
-    const-string v0, "GoToMainScreen"
+    sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
-    return-object v0
+    const/16 v2, 0x64
+
+    invoke-virtual {v0, v1, v2, p0}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+
+    return-object p0
 .end method

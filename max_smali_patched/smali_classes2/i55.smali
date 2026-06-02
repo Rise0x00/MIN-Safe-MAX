@@ -1,53 +1,21 @@
-.class public final Li55;
-.super Lo84;
+.class public interface abstract annotation Li55;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lo55;
-
-.field public Z:I
-
-.field public d:Lkp8;
-
-.field public o:Ln6g;
+# interfaces
+.implements Ljava/lang/annotation/Annotation;
 
 
-# direct methods
-.method public constructor <init>(Lo55;Lo84;)V
-    .locals 0
+# annotations
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->CLASS:Ljava/lang/annotation/RetentionPolicy;
+.end annotation
 
-    iput-object p1, p0, Li55;->Y:Lo55;
-
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Li55;->X:Ljava/lang/Object;
-
-    iget p1, p0, Li55;->Z:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Li55;->Z:I
-
-    iget-object p1, p0, Li55;->Y:Lo55;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0, p0}, Lo55;->l(Lkp8;Ln6g;Lo84;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
+.annotation runtime Ljava/lang/annotation/Target;
+    value = {
+        .enum Ljava/lang/annotation/ElementType;->TYPE:Ljava/lang/annotation/ElementType;,
+        .enum Ljava/lang/annotation/ElementType;->FIELD:Ljava/lang/annotation/ElementType;,
+        .enum Ljava/lang/annotation/ElementType;->METHOD:Ljava/lang/annotation/ElementType;,
+        .enum Ljava/lang/annotation/ElementType;->CONSTRUCTOR:Ljava/lang/annotation/ElementType;
+    }
+.end annotation

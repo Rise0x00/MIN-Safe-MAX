@@ -3,75 +3,102 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lejb;
+.implements Lck3;
+.implements Lyt6;
 
 
 # instance fields
-.field public final synthetic a:Ls8c;
-
-.field public final synthetic b:Lnd2;
-
-.field public final synthetic c:J
-
-.field public final synthetic d:J
+.field public final synthetic a:Lone/me/mediaeditor/PhotoEditScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ls8c;Lnd2;JJ)V
+.method public constructor <init>(Lone/me/mediaeditor/PhotoEditScreen;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lo8c;->a:Ls8c;
-
-    iput-object p2, p0, Lo8c;->b:Lnd2;
-
-    iput-wide p3, p0, Lo8c;->c:J
-
-    iput-wide p5, p0, Lo8c;->d:J
+    iput-object p1, p0, Lo8c;->a:Lone/me/mediaeditor/PhotoEditScreen;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final k(Lfjb;)V
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    sget-object v0, Lfjb;->o:Lfjb;
+    instance-of v0, p1, Lck3;
 
-    if-ne p1, v0, :cond_0
+    if-eqz v0, :cond_0
 
-    iget-object v2, p0, Lo8c;->a:Ls8c;
+    instance-of v0, p1, Lyt6;
 
-    iget-object p1, v2, Ls8c;->d:Lzb4;
+    if-eqz v0, :cond_0
 
-    iget-object v0, v2, Ls8c;->b:Lmbg;
-
-    check-cast v0, Lj9b;
-
-    invoke-virtual {v0}, Lj9b;->b()Lsb4;
+    invoke-virtual {p0}, Lo8c;->getFunctionDelegate()Lqt6;
 
     move-result-object v0
 
-    new-instance v1, Lp8c;
+    check-cast p1, Lyt6;
 
-    const/4 v8, 0x0
+    invoke-interface {p1}, Lyt6;->getFunctionDelegate()Lqt6;
 
-    iget-object v3, p0, Lo8c;->b:Lnd2;
+    move-result-object p1
 
-    iget-wide v4, p0, Lo8c;->c:J
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iget-wide v6, p0, Lo8c;->d:J
+    move-result p1
 
-    invoke-direct/range {v1 .. v8}, Lp8c;-><init>(Ls8c;Lnd2;JJLkotlin/coroutines/Continuation;)V
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x0
-
-    invoke-static {p1, v0, v3, v1, v2}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+    return p1
 
     :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final getFunctionDelegate()Lqt6;
+    .locals 7
+
+    new-instance v0, Lbu6;
+
+    const-string v6, "onColorSelected(I)V"
+
+    const/4 v2, 0x0
+
+    const/4 v1, 0x1
+
+    const-class v3, Lone/me/mediaeditor/PhotoEditScreen;
+
+    iget-object v4, p0, Lo8c;->a:Lone/me/mediaeditor/PhotoEditScreen;
+
+    const-string v5, "onColorSelected"
+
+    invoke-direct/range {v0 .. v6}, Lau6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    invoke-virtual {p0}, Lo8c;->getFunctionDelegate()Lqt6;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final v0(I)V
+    .locals 1
+
+    iget-object v0, p0, Lo8c;->a:Lone/me/mediaeditor/PhotoEditScreen;
+
+    invoke-virtual {v0, p1}, Lone/me/mediaeditor/PhotoEditScreen;->v0(I)V
+
     return-void
 .end method

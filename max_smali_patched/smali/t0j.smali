@@ -3,48 +3,134 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Landroid/app/Application$ActivityLifecycleCallbacks;
 
 
-# static fields
-.field public static final a:Lt0j;
+# instance fields
+.field public final a:Landroid/app/Application;
+
+.field public final b:Ln2;
+
+.field public final c:Landroid/os/Handler;
+
+.field public d:I
+
+.field public o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/app/Application;Ln2;)V
+    .locals 0
 
-    new-instance v0, Lt0j;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lt0j;->a:Landroid/app/Application;
 
-    sput-object v0, Lt0j;->a:Lt0j;
+    iput-object p2, p0, Lt0j;->b:Ln2;
 
-    new-instance v0, Lbri;
+    new-instance p1, Landroid/os/Handler;
 
-    const/4 v1, 0x1
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+    move-result-object p2
 
-    const-class v1, Lpri;
+    invoke-direct {p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+    iput-object p1, p0, Lt0j;->c:Landroid/os/Handler;
 
-    move-result-object v0
+    const/4 p1, 0x1
 
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    iput-boolean p1, p0, Lt0j;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 0
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    return-void
+.end method
 
-    move-result-object p1
+.method public final onActivityDestroyed(Landroid/app/Activity;)V
+    .locals 0
 
-    throw p1
+    return-void
+.end method
+
+.method public final onActivityPaused(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivityResumed(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivityStarted(Landroid/app/Activity;)V
+    .locals 1
+
+    iget p1, p0, Lt0j;->d:I
+
+    const/4 v0, 0x1
+
+    add-int/2addr p1, v0
+
+    iput p1, p0, Lt0j;->d:I
+
+    if-ne p1, v0, :cond_0
+
+    iget-boolean p1, p0, Lt0j;->o:Z
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lt0j;->o:Z
+
+    new-instance p1, Lp3e;
+
+    const/16 v0, 0xd
+
+    invoke-direct {p1, v0, p0}, Lp3e;-><init>(ILjava/lang/Object;)V
+
+    iget-object v0, p0, Lt0j;->c:Landroid/os/Handler;
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onActivityStopped(Landroid/app/Activity;)V
+    .locals 0
+
+    iget p1, p0, Lt0j;->d:I
+
+    add-int/lit8 p1, p1, -0x1
+
+    iput p1, p0, Lt0j;->d:I
+
+    if-nez p1, :cond_0
+
+    iget-boolean p1, p0, Lt0j;->o:Z
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lt0j;->o:Z
+
+    :cond_0
+    return-void
 .end method

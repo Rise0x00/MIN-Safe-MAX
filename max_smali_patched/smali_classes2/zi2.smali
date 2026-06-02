@@ -1,138 +1,67 @@
 .class public final Lzi2;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lkf9;
+.field public final a:I
 
-.field public final synthetic Y:Laj2;
+.field public final b:I
 
-.field public final synthetic Z:Lnn2;
+.field public final c:[Ljava/lang/String;
 
-.field public o:I
+.field public final d:[Lyi2;
 
 
 # direct methods
-.method public constructor <init>(Lkf9;Laj2;Lnn2;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Laj2;)V
+    .locals 1
 
-    iput-object p1, p0, Lzi2;->X:Lkf9;
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lzi2;->Y:Laj2;
+    .line 7
+    iget v0, p1, Laj2;->h:I
 
-    iput-object p3, p0, Lzi2;->Z:Lnn2;
+    iput v0, p0, Lzi2;->a:I
 
-    const/4 p1, 0x2
+    .line 8
+    iget v0, p1, Laj2;->k:I
 
-    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput v0, p0, Lzi2;->b:I
+
+    .line 9
+    iget-object v0, p1, Laj2;->f:[Ljava/lang/String;
+
+    iput-object v0, p0, Lzi2;->c:[Ljava/lang/String;
+
+    .line 10
+    iget-object p1, p1, Laj2;->g:[Lyi2;
+
+    iput-object p1, p0, Lzi2;->d:[Lyi2;
 
     return-void
 .end method
 
+.method public constructor <init>([Ljava/lang/String;[Lyi2;)V
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p1, Lzb4;
+    const/4 v0, 0x0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    .line 2
+    iput v0, p0, Lzi2;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lzi2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .line 3
+    iput v0, p0, Lzi2;->b:I
 
-    move-result-object p1
+    .line 4
+    iput-object p1, p0, Lzi2;->c:[Ljava/lang/String;
 
-    check-cast p1, Lzi2;
+    .line 5
+    iput-object p2, p0, Lzi2;->d:[Lyi2;
 
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lzi2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object p1, Lac4;->a:Lac4;
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance p1, Lzi2;
-
-    iget-object v0, p0, Lzi2;->Y:Laj2;
-
-    iget-object v1, p0, Lzi2;->Z:Lnn2;
-
-    iget-object v2, p0, Lzi2;->X:Lkf9;
-
-    invoke-direct {p1, v2, v0, v1, p2}, Lzi2;-><init>(Lkf9;Laj2;Lnn2;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget v0, p0, Lzi2;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-eq v0, v1, :cond_0
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_0
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lzi2;->X:Lkf9;
-
-    iget-object v0, p1, Lkf9;->x0:Lpld;
-
-    new-instance v2, Lsx;
-
-    iget-object v3, p0, Lzi2;->Z:Lnn2;
-
-    const/4 v4, 0x3
-
-    iget-object v5, p0, Lzi2;->Y:Laj2;
-
-    invoke-direct {v2, v5, v3, p1, v4}, Lsx;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    iput v1, p0, Lzi2;->o:I
-
-    iget-object p1, v0, Lpld;->a:Llpf;
-
-    invoke-interface {p1, v2, p0}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    new-instance p1, Lkotlin/KotlinNothingValueException;
-
-    invoke-direct {p1}, Lkotlin/KotlinNothingValueException;-><init>()V
-
-    throw p1
+    return-void
 .end method

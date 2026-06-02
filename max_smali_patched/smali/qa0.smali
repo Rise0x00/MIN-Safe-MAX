@@ -3,45 +3,89 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
+# static fields
+.field public static final e:Lqa0;
 
-.field public final b:Lib0;
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lib0;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lqa0;
 
-    if-eqz p1, :cond_1
+    const/4 v1, -0x1
 
-    iput-object p1, p0, Lqa0;->a:Ljava/lang/String;
+    invoke-direct {v0, v1, v1, v1}, Lqa0;-><init>(III)V
 
-    if-eqz p2, :cond_0
-
-    iput-object p2, p0, Lqa0;->b:Lib0;
+    sput-object v0, Lqa0;->e:Lqa0;
 
     return-void
+.end method
+
+.method public constructor <init>(III)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput p1, p0, Lqa0;->a:I
+
+    .line 4
+    iput p2, p0, Lqa0;->b:I
+
+    .line 5
+    iput p3, p0, Lqa0;->c:I
+
+    .line 6
+    invoke-static {p3}, Lpnh;->M(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    .line 7
+    invoke-static {p3}, Lpnh;->t(I)I
+
+    move-result p1
+
+    mul-int/2addr p1, p2
+
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+    const/4 p1, -0x1
 
-    const-string p2, "Null cameraConfigId"
+    .line 8
+    :goto_0
+    iput p1, p0, Lqa0;->d:I
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    return-void
+.end method
 
-    throw p1
+.method public constructor <init>(Lgm6;)V
+    .locals 2
 
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
+    .line 1
+    iget v0, p1, Lgm6;->G:I
 
-    const-string p2, "Null cameraIdString"
+    iget v1, p1, Lgm6;->F:I
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    iget p1, p1, Lgm6;->H:I
 
-    throw p1
+    invoke-direct {p0, v0, v1, p1}, Lqa0;-><init>(III)V
+
+    return-void
 .end method
 
 
@@ -51,7 +95,7 @@
 
     const/4 v0, 0x1
 
-    if-ne p1, p0, :cond_0
+    if-ne p0, p1, :cond_0
 
     return v0
 
@@ -60,88 +104,99 @@
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_1
+    if-nez v1, :cond_1
 
+    return v2
+
+    :cond_1
     check-cast p1, Lqa0;
 
-    iget-object v1, p0, Lqa0;->a:Ljava/lang/String;
+    iget v1, p0, Lqa0;->a:I
 
-    iget-object v3, p1, Lqa0;->a:Ljava/lang/String;
+    iget v3, p1, Lqa0;->a:I
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-ne v1, v3, :cond_2
 
-    move-result v1
+    iget v1, p0, Lqa0;->b:I
 
-    if-eqz v1, :cond_1
+    iget v3, p1, Lqa0;->b:I
 
-    iget-object v1, p0, Lqa0;->b:Lib0;
+    if-ne v1, v3, :cond_2
 
-    iget-object p1, p1, Lqa0;->b:Lib0;
+    iget v1, p0, Lqa0;->c:I
 
-    invoke-virtual {v1, p1}, Lib0;->equals(Ljava/lang/Object;)Z
+    iget p1, p1, Lqa0;->c:I
 
-    move-result p1
-
-    if-eqz p1, :cond_1
+    if-ne v1, p1, :cond_2
 
     return v0
 
-    :cond_1
+    :cond_2
     return v2
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget-object v0, p0, Lqa0;->a:Ljava/lang/String;
+    iget v0, p0, Lqa0;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iget v1, p0, Lqa0;->b:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iget v2, p0, Lqa0;->c:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    filled-new-array {v0, v1, v2}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result v0
-
-    const v1, 0xf4243
-
-    xor-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Lqa0;->b:Lib0;
-
-    invoke-virtual {v1}, Lib0;->hashCode()I
-
-    move-result v1
-
-    xor-int/2addr v0, v1
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "CameraId{cameraIdString="
+    const-string v1, "AudioFormat[sampleRate="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lqa0;->a:Ljava/lang/String;
+    iget v1, p0, Lqa0;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", channelCount="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", cameraConfigId="
+    iget v1, p0, Lqa0;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", encoding="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lqa0;->b:Lib0;
+    iget v1, p0, Lqa0;->c:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/16 v2, 0x5d
 
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lo52;->t(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,91 +1,73 @@
-.class public final Lmv7;
-.super Lp6g;
+.class public abstract Lmv7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
 
-
-# instance fields
-.field public final synthetic X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p2, p0, Lmv7;->X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+    new-instance v0, Luha;
 
-    const/4 p2, 0x2
+    const/4 v1, 0x0
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Luha;-><init>(I)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lmv7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lmv7;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lmv7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public static final a(IIII)Luha;
     .locals 2
 
-    new-instance v0, Lmv7;
+    new-instance v0, Luha;
 
-    iget-object v1, p0, Lmv7;->X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+    invoke-direct {v0}, Luha;-><init>()V
 
-    invoke-direct {v0, p2, v1}, Lmv7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
+    const/16 v1, 0x2000
 
-    iput-object p1, v0, Lmv7;->o:Ljava/lang/Object;
+    invoke-virtual {v0, v1, p0}, Luha;->e(II)V
+
+    const/4 p0, 0x4
+
+    invoke-virtual {v0, p0, p1}, Luha;->e(II)V
+
+    const/16 p0, 0x4000
+
+    invoke-virtual {v0, p0, p2}, Luha;->e(II)V
+
+    const/16 p0, 0x800
+
+    invoke-virtual {v0, p0, p3}, Luha;->e(II)V
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public static final b(IIIIIII)Luha;
+    .locals 2
 
-    iget-object v0, p0, Lmv7;->o:Ljava/lang/Object;
+    new-instance v0, Luha;
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-direct {v0}, Luha;-><init>()V
 
-    check-cast v0, Lhja;
+    const/16 v1, 0x400
 
-    instance-of p1, v0, Lfm4;
+    invoke-virtual {v0, v1, p0}, Luha;->e(II)V
 
-    if-eqz p1, :cond_0
+    const/16 p0, 0x800
 
-    iget-object p1, p0, Lmv7;->X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+    invoke-virtual {v0, p0, p1}, Luha;->e(II)V
 
-    invoke-static {p1}, Lg3j;->d(La94;)V
+    invoke-virtual {v0, p2, p3}, Luha;->e(II)V
 
-    invoke-static {p1}, Ll8j;->a(La94;)V
+    invoke-virtual {v0, p4, p5}, Luha;->e(II)V
 
-    sget-object p1, Lav7;->c:Lav7;
+    const/16 p0, 0x80
 
-    check-cast v0, Lfm4;
+    invoke-virtual {v0, p0, p6}, Luha;->e(II)V
 
-    invoke-virtual {p1, v0}, Ld3;->s0(Lfm4;)V
-
-    :cond_0
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-object v0
 .end method

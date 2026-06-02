@@ -1,67 +1,117 @@
 .class public final Ln55;
-.super Lo84;
+.super Lduc;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:J
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lo55;
-
-.field public d:Ljm9;
-
-.field public o:Li20;
-
-.field public t0:I
+# static fields
+.field public static final c:Ln55;
 
 
 # direct methods
-.method public constructor <init>(Lo55;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Ln55;->Z:Lo55;
+    new-instance v0, Ln55;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    sget-object v1, Ls55;->a:Ls55;
+
+    invoke-direct {v0, v1}, Lduc;-><init>(Lc88;)V
+
+    sput-object v0, Ln55;->c:Ln55;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+.method public final h(Ljava/lang/Object;)I
+    .locals 0
 
-    iput-object p1, p0, Ln55;->Y:Ljava/lang/Object;
+    check-cast p1, [D
 
-    iget p1, p0, Ln55;->t0:I
+    array-length p1, p1
 
-    const/high16 v0, -0x80000000
+    return p1
+.end method
 
-    or-int/2addr p1, v0
+.method public final j(Lqq3;ILjava/lang/Object;)V
+    .locals 3
 
-    iput p1, p0, Ln55;->t0:I
+    check-cast p3, Lm55;
 
-    const-wide/16 v6, 0x0
+    iget-object v0, p0, Lduc;->b:Lcuc;
 
-    const/4 v8, 0x0
+    invoke-interface {p1, v0, p2}, Lqq3;->A(Lt2f;I)D
 
-    iget-object v0, p0, Ln55;->Z:Lo55;
+    move-result-wide p1
 
-    const/4 v1, 0x0
+    invoke-static {p3}, Lbuc;->c(Lbuc;)V
 
-    const/4 v2, 0x0
+    iget-object v0, p3, Lm55;->a:[D
 
-    const/4 v3, 0x0
+    iget v1, p3, Lm55;->b:I
 
-    const-wide/16 v4, 0x0
+    add-int/lit8 v2, v1, 0x1
 
-    move-object v9, p0
+    iput v2, p3, Lm55;->b:I
 
-    invoke-virtual/range {v0 .. v9}, Lo55;->o(Ljm9;Lb20;IJJLjava/io/File;Lo84;)Ljava/lang/Object;
+    aput-wide p1, v0, v1
 
-    move-result-object p1
+    return-void
+.end method
 
-    return-object p1
+.method public final k(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p1, [D
+
+    new-instance v0, Lm55;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, v0, Lm55;->a:[D
+
+    array-length p1, p1
+
+    iput p1, v0, Lm55;->b:I
+
+    const/16 p1, 0xa
+
+    invoke-virtual {v0, p1}, Lm55;->b(I)V
+
+    return-object v0
+.end method
+
+.method public final n()Ljava/lang/Object;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [D
+
+    return-object v0
+.end method
+
+.method public final o(Lsq3;Ljava/lang/Object;I)V
+    .locals 4
+
+    check-cast p2, [D
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, p3, :cond_0
+
+    iget-object v1, p0, Lduc;->b:Lcuc;
+
+    aget-wide v2, p2, v0
+
+    invoke-interface {p1, v1, v0, v2, v3}, Lsq3;->o(Lt2f;ID)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method

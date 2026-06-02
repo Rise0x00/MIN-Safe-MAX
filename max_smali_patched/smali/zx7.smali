@@ -1,181 +1,81 @@
-.class public final Lzx7;
-.super Ljava/lang/Object;
+.class public final enum Lzx7;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lyx7;
 
+# static fields
+.field public static final enum a:Lzx7;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum b:Lzx7;
 
-.field public final b:Landroid/app/job/JobWorkItem;
+.field public static final synthetic c:[Lzx7;
 
-.field public final synthetic c:Landroid/app/job/JobServiceEngine;
+.field public static final synthetic d:Lmn5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/app/job/JobServiceEngine;Landroid/app/job/JobWorkItem;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p3, p0, Lzx7;->a:I
+    new-instance v0, Lzx7;
 
-    iput-object p1, p0, Lzx7;->c:Landroid/app/job/JobServiceEngine;
+    const-string v1, "INVITE_BY_PHONE"
 
-    iput-object p2, p0, Lzx7;->b:Landroid/app/job/JobWorkItem;
+    const/4 v2, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lzx7;->a:Lzx7;
+
+    new-instance v1, Lzx7;
+
+    const-string v2, "INVITE_BY_LINK"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lzx7;->b:Lzx7;
+
+    filled-new-array {v0, v1}, [Lzx7;
+
+    move-result-object v0
+
+    sput-object v0, Lzx7;->c:[Lzx7;
+
+    new-instance v1, Lmn5;
+
+    invoke-direct {v1, v0}, Lmn5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lzx7;->d:Lmn5;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a()V
-    .locals 3
-
-    iget v0, p0, Lzx7;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lzx7;->c:Landroid/app/job/JobServiceEngine;
-
-    check-cast v0, Lay7;
-
-    iget-object v0, v0, Lay7;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lzx7;->c:Landroid/app/job/JobServiceEngine;
-
-    check-cast v1, Lay7;
-
-    iget-object v1, v1, Lay7;->c:Landroid/app/job/JobParameters;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v1, :cond_0
-
-    :try_start_1
-    iget-object v2, p0, Lzx7;->b:Landroid/app/job/JobWorkItem;
-
-    invoke-virtual {v1, v2}, Landroid/app/job/JobParameters;->completeWork(Landroid/app/job/JobWorkItem;)V
-    :try_end_1
-    .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_2
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v1
-
-    :goto_0
-    :try_start_2
-    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
-
-    :cond_0
-    :goto_1
-    monitor-exit v0
-
-    return-void
-
-    :goto_2
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw v1
-
-    :pswitch_0
-    iget-object v0, p0, Lzx7;->c:Landroid/app/job/JobServiceEngine;
-
-    check-cast v0, Lay7;
-
-    iget-object v0, v0, Lay7;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_3
-    iget-object v1, p0, Lzx7;->c:Landroid/app/job/JobServiceEngine;
-
-    check-cast v1, Lay7;
-
-    iget-object v1, v1, Lay7;->c:Landroid/app/job/JobParameters;
-
-    if-eqz v1, :cond_1
-
-    iget-object v2, p0, Lzx7;->b:Landroid/app/job/JobWorkItem;
-
-    invoke-virtual {v1, v2}, Landroid/app/job/JobParameters;->completeWork(Landroid/app/job/JobWorkItem;)V
-
-    goto :goto_3
-
-    :catchall_1
-    move-exception v1
-
-    goto :goto_4
-
-    :cond_1
-    :goto_3
-    monitor-exit v0
-
-    return-void
-
-    :goto_4
-    monitor-exit v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    throw v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final getIntent()Landroid/content/Intent;
+.method public static valueOf(Ljava/lang/String;)Lzx7;
     .locals 1
 
-    iget v0, p0, Lzx7;->a:I
+    const-class v0, Lzx7;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object v0, p0, Lzx7;->b:Landroid/app/job/JobWorkItem;
+    move-result-object p0
 
-    invoke-virtual {v0}, Landroid/app/job/JobWorkItem;->getIntent()Landroid/content/Intent;
+    check-cast p0, Lzx7;
+
+    return-object p0
+.end method
+
+.method public static values()[Lzx7;
+    .locals 1
+
+    sget-object v0, Lzx7;->c:[Lzx7;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lzx7;->b:Landroid/app/job/JobWorkItem;
-
-    invoke-virtual {v0}, Landroid/app/job/JobWorkItem;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
+    check-cast v0, [Lzx7;
 
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

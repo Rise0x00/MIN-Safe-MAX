@@ -2,54 +2,171 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/ThreadFactory;
+
+
+# static fields
+.field public static final o:Landroid/util/SparseIntArray;
+
 
 # instance fields
-.field public final a:Lpj6;
+.field public final a:I
 
-.field public final b:Lhk7;
+.field public final b:I
 
-.field public final c:Lhle;
+.field public final c:Ljava/lang/String;
 
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/util/ArrayList;
-
-.field public final f:Ljava/util/ArrayList;
-
-.field public final g:J
-
-.field public final h:Ljava/util/List;
-
-.field public final i:Ljava/util/List;
+.field public final d:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public constructor <init>(Lpj6;Ljava/util/List;Lhle;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/List;Ljava/util/List;J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
+
+    new-instance v0, Landroid/util/SparseIntArray;
+
+    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
+
+    sput-object v0, Ldh4;->o:Landroid/util/SparseIntArray;
+
+    const/4 v1, 0x1
+
+    const/16 v2, 0xa
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/4 v1, 0x2
+
+    const/16 v3, 0x10
+
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/4 v1, 0x3
+
+    const/16 v4, 0xd
+
+    invoke-virtual {v0, v1, v4}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/4 v1, 0x5
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/4 v1, 0x6
+
+    const/4 v3, -0x2
+
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/4 v1, 0x7
+
+    const/4 v3, -0x4
+
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/16 v1, 0x8
+
+    const/4 v3, -0x6
+
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/16 v1, 0x9
+
+    const/4 v3, -0x5
+
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/4 v1, -0x8
+
+    invoke-virtual {v0, v2, v1}, Landroid/util/SparseIntArray;->put(II)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldh4;->a:Lpj6;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-static {p2}, Lhk7;->j(Ljava/util/Collection;)Lhk7;
+    const/4 v1, 0x0
 
-    move-result-object p1
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    iput-object p1, p0, Ldh4;->b:Lhk7;
+    iput-object v0, p0, Ldh4;->d:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iput-object p3, p0, Ldh4;->c:Lhle;
+    const/16 v0, 0x9
 
-    iput-object p4, p0, Ldh4;->d:Ljava/lang/String;
+    iput v0, p0, Ldh4;->a:I
 
-    iput-object p5, p0, Ldh4;->e:Ljava/util/ArrayList;
+    sget-object v2, Ldh4;->o:Landroid/util/SparseIntArray;
 
-    iput-object p6, p0, Ldh4;->f:Ljava/util/ArrayList;
+    invoke-virtual {v2, v0, v1}, Landroid/util/SparseIntArray;->get(II)I
 
-    iput-object p7, p0, Ldh4;->h:Ljava/util/List;
+    move-result v0
 
-    iput-object p8, p0, Ldh4;->i:Ljava/util/List;
+    iput v0, p0, Ldh4;->b:I
 
-    iput-wide p9, p0, Ldh4;->g:J
+    iput-object p1, p0, Ldh4;->c:Ljava/lang/String;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 2
+
+    new-instance v0, Le90;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, p0, v1, p1}, Le90;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Ljava/lang/Thread;
+
+    invoke-direct {p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    :try_start_0
+    iget v0, p0, Ldh4;->a:I
+
+    invoke-virtual {p1, v0}, Ljava/lang/Thread;->setPriority(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Ldh4;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "-"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ldh4;->d:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
+
+    return-object p1
 .end method

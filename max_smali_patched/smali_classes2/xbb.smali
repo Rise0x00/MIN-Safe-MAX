@@ -1,115 +1,41 @@
-.class public abstract Lxbb;
-.super Ljava/lang/Object;
+.class public final Lxbb;
+.super Landroid/text/style/ReplacementSpan;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
+# instance fields
+.field public final a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 0
 
-    sget v0, Lpdd;->oneme_fodlers_delete_folder_bottom_sheet_title:I
+    invoke-direct {p0}, Landroid/text/style/ReplacementSpan;-><init>()V
 
-    sput v0, Lxbb;->a:I
-
-    sget v0, Lpdd;->oneme_folder_list_recommended_folders_section_title:I
-
-    sput v0, Lxbb;->b:I
-
-    sget v0, Lpdd;->oneme_folder_list_toolbar_title:I
-
-    sput v0, Lxbb;->c:I
-
-    sget v0, Lpdd;->oneme_folders_delete_folder_bottom_sheet_delete_button:I
-
-    sput v0, Lxbb;->d:I
-
-    sget v0, Lpdd;->oneme_folders_delete_folder_bottom_sheet_description:I
-
-    sput v0, Lxbb;->e:I
-
-    sget v0, Lpdd;->oneme_folders_edit_add_chats_button:I
-
-    sput v0, Lxbb;->f:I
-
-    sget v0, Lpdd;->oneme_folders_edit_create_button:I
-
-    sput v0, Lxbb;->g:I
-
-    sget v0, Lpdd;->oneme_folders_edit_delete_button:I
-
-    sput v0, Lxbb;->h:I
-
-    sget v0, Lpdd;->oneme_folders_edit_name_hint:I
-
-    sput v0, Lxbb;->i:I
-
-    sget v0, Lpdd;->oneme_folders_edit_toolbar_title_creation:I
-
-    sput v0, Lxbb;->j:I
-
-    sget v0, Lpdd;->oneme_folders_edit_toolbar_title_edit:I
-
-    sput v0, Lxbb;->k:I
-
-    sget v0, Lpdd;->oneme_folders_error_max_count:I
-
-    sput v0, Lxbb;->l:I
-
-    sget v0, Lpdd;->oneme_folders_list_create_folder:I
-
-    sput v0, Lxbb;->m:I
-
-    sget v0, Lpdd;->oneme_folders_list_menu_action_change:I
-
-    sput v0, Lxbb;->n:I
-
-    sget v0, Lpdd;->oneme_folders_list_menu_action_delete_folder:I
-
-    sput v0, Lxbb;->o:I
-
-    sget v0, Lpdd;->oneme_folders_picker_empty_title:I
-
-    sput v0, Lxbb;->p:I
-
-    sget v0, Lpdd;->oneme_folders_picker_toolbar_title:I
-
-    sput v0, Lxbb;->q:I
+    iput p1, p0, Lxbb;->a:I
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
+    .locals 0
+
+    int-to-float p6, p7
+
+    move-object p7, p9
+
+    invoke-virtual/range {p1 .. p7}, Landroid/graphics/Canvas;->drawText(Ljava/lang/CharSequence;IIFFLandroid/graphics/Paint;)V
+
+    return-void
+.end method
+
+.method public final getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
+    .locals 0
+
+    iget p1, p0, Lxbb;->a:I
+
+    return p1
 .end method

@@ -1,84 +1,124 @@
 .class public final Lr1b;
-.super Ljava/lang/Object;
+.super Lhr0;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/window/OnBackAnimationCallback;
 
 
 # instance fields
-.field public final synthetic a:Lnq6;
+.field public X:Z
 
-.field public final synthetic b:Lnq6;
+.field public final a:Lb3b;
 
-.field public final synthetic c:Llq6;
+.field public final b:Ljava/util/Iterator;
 
-.field public final synthetic d:Llq6;
+.field public volatile c:Z
+
+.field public d:Z
+
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(Lnq6;Lnq6;Llq6;Llq6;)V
+.method public constructor <init>(Lb3b;Ljava/util/Iterator;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lr1b;->a:Lnq6;
+    iput-object p1, p0, Lr1b;->a:Lb3b;
 
-    iput-object p2, p0, Lr1b;->b:Lnq6;
-
-    iput-object p3, p0, Lr1b;->c:Llq6;
-
-    iput-object p4, p0, Lr1b;->d:Llq6;
+    iput-object p2, p0, Lr1b;->b:Ljava/util/Iterator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onBackCancelled()V
+.method public final clear()V
     .locals 1
 
-    iget-object v0, p0, Lr1b;->d:Llq6;
+    const/4 v0, 0x1
 
-    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+    iput-boolean v0, p0, Lr1b;->o:Z
 
     return-void
 .end method
 
-.method public final onBackInvoked()V
+.method public final dispose()V
     .locals 1
 
-    iget-object v0, p0, Lr1b;->c:Llq6;
+    const/4 v0, 0x1
 
-    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+    iput-boolean v0, p0, Lr1b;->c:Z
 
     return-void
 .end method
 
-.method public final onBackProgressed(Landroid/window/BackEvent;)V
+.method public final f()Z
     .locals 1
 
-    new-instance v0, Lpf0;
+    iget-boolean v0, p0, Lr1b;->c:Z
 
-    invoke-direct {v0, p1}, Lpf0;-><init>(Landroid/window/BackEvent;)V
-
-    iget-object p1, p0, Lr1b;->b:Lnq6;
-
-    invoke-interface {p1, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
+    return v0
 .end method
 
-.method public final onBackStarted(Landroid/window/BackEvent;)V
+.method public final isEmpty()Z
     .locals 1
 
-    new-instance v0, Lpf0;
+    iget-boolean v0, p0, Lr1b;->o:Z
 
-    invoke-direct {v0, p1}, Lpf0;-><init>(Landroid/window/BackEvent;)V
+    return v0
+.end method
 
-    iget-object p1, p0, Lr1b;->a:Lnq6;
+.method public final l(I)I
+    .locals 0
 
-    invoke-interface {p1, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 p1, 0x1
 
-    return-void
+    iput-boolean p1, p0, Lr1b;->d:Z
+
+    return p1
+.end method
+
+.method public final poll()Ljava/lang/Object;
+    .locals 4
+
+    iget-boolean v0, p0, Lr1b;->o:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    return-object v1
+
+    :cond_0
+    iget-boolean v0, p0, Lr1b;->X:Z
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Lr1b;->b:Ljava/util/Iterator;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    iput-boolean v2, p0, Lr1b;->o:Z
+
+    return-object v1
+
+    :cond_1
+    iput-boolean v2, p0, Lr1b;->X:Z
+
+    :cond_2
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "The iterator returned a null value"
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    return-object v0
 .end method

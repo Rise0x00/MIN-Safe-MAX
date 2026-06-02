@@ -1,140 +1,109 @@
 .class public final Lsuc;
-.super Lp6g;
+.super Ljwf;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lsuc;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:J
 
-.field public final synthetic Y:Lr83;
+.field public final b:J
 
-.field public final synthetic Z:Lvuc;
-
-.field public o:I
+.field public final c:[B
 
 
 # direct methods
-.method public constructor <init>(Lr83;Lkotlin/coroutines/Continuation;Lvuc;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ljnb;
+
+    const/16 v1, 0x13
+
+    invoke-direct {v0, v1}, Ljnb;-><init>(I)V
+
+    sput-object v0, Lsuc;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(J[BJ)V
     .locals 0
 
-    iput-object p1, p0, Lsuc;->Y:Lr83;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lsuc;->Z:Lvuc;
+    .line 2
+    iput-wide p4, p0, Lsuc;->a:J
 
-    const/4 p1, 0x2
+    .line 3
+    iput-wide p1, p0, Lsuc;->b:J
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 4
+    iput-object p3, p0, Lsuc;->c:[B
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 2
+
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lsuc;->a:J
+
+    .line 7
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lsuc;->b:J
+
+    .line 8
+    invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
+
+    move-result-object p1
+
+    sget v0, Lnnh;->a:I
+
+    iput-object p1, p0, Lsuc;->c:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    check-cast p1, Lf76;
+    iget-wide v0, p0, Lsuc;->a:J
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    invoke-virtual {p0, p1, p2}, Lsuc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-wide v0, p0, Lsuc;->b:J
 
-    move-result-object p1
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    check-cast p1, Lsuc;
+    iget-object p2, p0, Lsuc;->c:[B
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    invoke-virtual {p1, p2}, Lsuc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance v0, Lsuc;
-
-    iget-object v1, p0, Lsuc;->Y:Lr83;
-
-    iget-object v2, p0, Lsuc;->Z:Lvuc;
-
-    invoke-direct {v0, v1, p2, v2}, Lsuc;-><init>(Lr83;Lkotlin/coroutines/Continuation;Lvuc;)V
-
-    iput-object p1, v0, Lsuc;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget-object v0, p0, Lsuc;->X:Ljava/lang/Object;
-
-    check-cast v0, Lf76;
-
-    iget v1, p0, Lsuc;->o:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v2, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    new-instance p1, Lysd;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    new-instance v1, Lruc;
-
-    iget-object v3, p0, Lsuc;->Z:Lvuc;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v1, p1, v0, v3, v4}, Lruc;-><init>(Lysd;Lf76;Lvuc;I)V
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lsuc;->X:Ljava/lang/Object;
-
-    iput v2, p0, Lsuc;->o:I
-
-    iget-object p1, p0, Lsuc;->Y:Lr83;
-
-    invoke-virtual {p1, v1, p0}, Lr83;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-void
 .end method

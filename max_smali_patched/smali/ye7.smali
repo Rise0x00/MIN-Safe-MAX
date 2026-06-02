@@ -1,25 +1,31 @@
-.class public abstract Lye7;
+.class public final Lye7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic a:Lye7;
+
+.field public static final b:Lura;
+
+
 # direct methods
-.method public static a(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    new-instance v0, Landroid/graphics/drawable/AdaptiveIconDrawable;
+    new-instance v0, Lye7;
 
-    invoke-direct {v0, p0, p1}, Landroid/graphics/drawable/AdaptiveIconDrawable;-><init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return-object v0
-.end method
+    sput-object v0, Lye7;->a:Lye7;
 
-.method public static b(Landroid/graphics/Bitmap;)Landroid/graphics/drawable/Icon;
-    .locals 0
+    new-instance v0, Lura;
 
-    invoke-static {p0}, Landroid/graphics/drawable/Icon;->createWithAdaptiveBitmap(Landroid/graphics/Bitmap;)Landroid/graphics/drawable/Icon;
+    const/16 v1, 0xe
 
-    move-result-object p0
+    invoke-direct {v0, v1}, Lura;-><init>(I)V
 
-    return-object p0
+    sput-object v0, Lye7;->b:Lura;
+
+    return-void
 .end method

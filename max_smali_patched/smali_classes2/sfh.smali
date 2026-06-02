@@ -1,113 +1,84 @@
 .class public final Lsfh;
-.super Ljava/lang/Object;
+.super Lhc4;
 .source "SourceFile"
 
 
 # static fields
-.field public static final b:Landroid/util/LruCache;
-
-
-# instance fields
-.field public final a:Lo58;
+.field public static final a:Lsfh;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Landroid/util/LruCache;
+    new-instance v0, Lsfh;
 
-    const/16 v1, 0x3e8
+    invoke-direct {v0}, Lhc4;-><init>()V
 
-    invoke-direct {v0, v1}, Landroid/util/LruCache;-><init>(I)V
-
-    sput-object v0, Lsfh;->b:Landroid/util/LruCache;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lo58;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lsfh;->a:Lo58;
+    sput-object v0, Lsfh;->a:Lsfh;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lqfh;
-    .locals 7
+.method public final dispatch(Lfc4;Ljava/lang/Runnable;)V
+    .locals 2
 
-    sget-object v0, Lsfh;->b:Landroid/util/LruCache;
+    sget-object p1, Ltu4;->b:Ltu4;
 
-    invoke-virtual {v0, p1}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    move-result-object v1
+    iget-object p1, p1, Lune;->a:Lnc4;
 
-    check-cast v1, Lrfh;
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    invoke-virtual {p1, p2, v0, v1}, Lnc4;->G(Ljava/lang/Runnable;ZZ)V
 
-    if-nez v1, :cond_0
+    return-void
+.end method
 
-    return-object v2
+.method public final dispatchYield(Lfc4;Ljava/lang/Runnable;)V
+    .locals 1
 
-    :cond_0
-    iget-object v3, p0, Lsfh;->a:Lo58;
+    sget-object p1, Ltu4;->b:Ltu4;
 
-    invoke-interface {v3}, Lo58;->getValue()Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    move-result-object v3
+    iget-object p1, p1, Lune;->a:Lnc4;
 
-    check-cast v3, Lwx5;
+    invoke-virtual {p1, p2, v0, v0}, Lnc4;->G(Ljava/lang/Runnable;ZZ)V
 
-    check-cast v3, Lpy5;
+    return-void
+.end method
 
-    iget-object v4, v3, Lpy5;->n0:Lyx5;
+.method public final limitedParallelism(ILjava/lang/String;)Lhc4;
+    .locals 1
 
-    sget-object v5, Lpy5;->N0:[Lz28;
+    invoke-static {p1}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->checkParallelism(I)V
 
-    const/16 v6, 0x36
+    sget v0, Lwqg;->d:I
 
-    aget-object v5, v5, v6
+    if-lt p1, v0, :cond_0
 
-    invoke-virtual {v4, v3, v5}, Lyx5;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->namedOrThis(Lhc4;Ljava/lang/String;)Lhc4;
 
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Number;
-
-    invoke-virtual {v3}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v3
-
-    const-wide/32 v5, 0xea60
-
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide v3
-
-    iget-wide v5, v1, Lrfh;->b:J
-
-    add-long/2addr v5, v3
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v3
-
-    cmp-long v3, v5, v3
-
-    if-lez v3, :cond_1
-
-    iget-object p1, v1, Lrfh;->a:Lqfh;
+    move-result-object p1
 
     return-object p1
 
-    :cond_1
-    invoke-virtual {v0, p1}, Landroid/util/LruCache;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_0
+    invoke-super {p0, p1, p2}, Lhc4;->limitedParallelism(ILjava/lang/String;)Lhc4;
 
-    return-object v2
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Dispatchers.IO"
+
+    return-object v0
 .end method

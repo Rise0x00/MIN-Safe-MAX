@@ -1,103 +1,59 @@
 .class public final Luvf;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
+
+# static fields
+.field public static final e:Lmh8;
+
+.field public static final f:Lmh8;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/stickerssettings/StickersSettingsScreen;
+.field public final a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:I
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/stickerssettings/StickersSettingsScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p2, p0, Luvf;->X:Lone/me/stickerssettings/StickersSettingsScreen;
+    new-instance v0, Lmh8;
 
-    const/4 p2, 0x2
+    const/16 v1, 0x10
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Lmh8;-><init>(I)V
+
+    sput-object v0, Luvf;->e:Lmh8;
+
+    new-instance v0, Lmh8;
+
+    const/16 v1, 0x11
+
+    invoke-direct {v0, v1}, Lmh8;-><init>(I)V
+
+    sput-object v0, Luvf;->f:Lmh8;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, p1, p2}, Luvf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iput p2, p0, Luvf;->a:I
 
-    move-result-object p1
+    iput p3, p0, Luvf;->b:I
 
-    check-cast p1, Luvf;
+    iput-object p1, p0, Luvf;->c:Ljava/lang/String;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iput-object p4, p0, Luvf;->d:Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Luvf;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Luvf;
-
-    iget-object v1, p0, Luvf;->X:Lone/me/stickerssettings/StickersSettingsScreen;
-
-    invoke-direct {v0, p2, v1}, Luvf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/stickerssettings/StickersSettingsScreen;)V
-
-    iput-object p1, v0, Luvf;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Luvf;->o:Ljava/lang/Object;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    check-cast v0, Lhja;
-
-    sget-object p1, Lone/me/stickerssettings/StickersSettingsScreen;->X:[Lz28;
-
-    instance-of p1, v0, Lag3;
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Luvf;->X:Lone/me/stickerssettings/StickersSettingsScreen;
-
-    invoke-virtual {p1}, La94;->getRouter()Lw4e;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lw4e;->C()Z
-
-    goto :goto_0
-
-    :cond_0
-    instance-of p1, v0, Lfm4;
-
-    if-eqz p1, :cond_1
-
-    sget-object p1, Lqvf;->c:Lqvf;
-
-    check-cast v0, Lfm4;
-
-    invoke-virtual {p1, v0}, Ld3;->s0(Lfm4;)V
-
-    :cond_1
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
-
-    return-object p1
+    return-void
 .end method

@@ -25,7 +25,7 @@
 
     new-instance v0, Lkmh;
 
-    const-string v1, "PREPARE"
+    const-string v1, "IMAGE_CAPTURE"
 
     const/4 v2, 0x0
 
@@ -35,7 +35,7 @@
 
     new-instance v1, Lkmh;
 
-    const-string v2, "PLAY"
+    const-string v2, "PREVIEW"
 
     const/4 v3, 0x1
 
@@ -45,7 +45,7 @@
 
     new-instance v2, Lkmh;
 
-    const-string v3, "IN_PROGRESS"
+    const-string v3, "IMAGE_ANALYSIS"
 
     const/4 v4, 0x2
 
@@ -55,7 +55,7 @@
 
     new-instance v3, Lkmh;
 
-    const-string v4, "PAUSE"
+    const-string v4, "VIDEO_CAPTURE"
 
     const/4 v5, 0x3
 
@@ -65,7 +65,7 @@
 
     new-instance v4, Lkmh;
 
-    const-string v5, "STOP"
+    const-string v5, "STREAM_SHARING"
 
     const/4 v6, 0x4
 
@@ -75,7 +75,7 @@
 
     new-instance v5, Lkmh;
 
-    const-string v6, "END"
+    const-string v6, "METERING_REPEATING"
 
     const/4 v7, 0x5
 
@@ -111,7 +111,7 @@
 
     sget-object v0, Lkmh;->Y:[Lkmh;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [Lkmh;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

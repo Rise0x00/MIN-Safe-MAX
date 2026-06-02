@@ -1,53 +1,179 @@
-.class public interface abstract Lx74;
+.class public final Lx74;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Serializable;
+
+
+# static fields
+.field public static final c:Lx74;
+
+
+# instance fields
+.field public final transient a:Ljava/lang/Object;
+
+.field public final b:Z
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lx74;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, v1}, Lx74;-><init>(Ljava/lang/Object;Z)V
+
+    sput-object v0, Lx74;->c:Lx74;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Object;Z)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p2, p0, Lx74;->b:Z
+
+    iput-object p1, p0, Lx74;->a:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public static a(I[I)V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    aget v1, p1, v0
+
+    if-gez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    if-lt v1, p0, :cond_1
+
+    move v1, p0
+
+    :cond_1
+    :goto_0
+    aput v1, p1, v0
+
+    const/4 v0, 0x1
+
+    aget v2, p1, v0
+
+    sub-int/2addr p0, v1
+
+    if-ltz v2, :cond_3
+
+    if-le v2, p0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    return-void
+
+    :cond_3
+    :goto_1
+    aput p0, p1, v0
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract b()Lx74;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p1, p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    if-nez p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    instance-of v0, p1, Lx74;
+
+    if-nez v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    check-cast p1, Lx74;
+
+    iget-object p1, p1, Lx74;->a:Ljava/lang/Object;
+
+    iget-object v0, p0, Lx74;->a:Ljava/lang/Object;
+
+    if-nez v0, :cond_3
+
+    if-nez p1, :cond_6
+
+    goto :goto_0
+
+    :cond_3
+    if-nez p1, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    instance-of v1, v0, Ljava/io/File;
+
+    if-nez v1, :cond_7
+
+    instance-of v1, v0, Ljava/net/URL;
+
+    if-nez v1, :cond_7
+
+    instance-of v1, v0, Ljava/net/URI;
+
+    if-eqz v1, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    if-ne v0, p1, :cond_6
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_6
+    :goto_1
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_7
+    :goto_2
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method
 
-.method public abstract build()Ly74;
-.end method
+.method public final hashCode()I
+    .locals 1
 
-.method public abstract c()Lx74;
-.end method
+    iget-object v0, p0, Lx74;->a:Ljava/lang/Object;
 
-.method public abstract k(Landroid/graphics/Rect;F)Lx74;
-.end method
+    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
 
-.method public n()Lx74;
-    .locals 0
+    move-result v0
 
-    return-object p0
-.end method
-
-.method public abstract o(Ljava/util/Collection;)Lx74;
-.end method
-
-.method public p(FF)Lx74;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public abstract s(F)Lx74;
-.end method
-
-.method public abstract t(Landroid/os/Bundle;)Lx74;
-.end method
-
-.method public v()Lx74;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public abstract w(Landroid/view/View;)Lx74;
-.end method
-
-.method public abstract x()Lx74;
-.end method
-
-.method public abstract y(Lqhg;)Lx74;
+    return v0
 .end method

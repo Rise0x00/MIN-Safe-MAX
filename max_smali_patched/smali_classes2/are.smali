@@ -1,11 +1,29 @@
 .class public final Lare;
-.super Ljava/lang/Object;
+.super Lz24;
 .source "SourceFile"
+
+
+# static fields
+.field public static final a:Lare;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lare;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lare;->a:Lare;
+
+    return-void
+.end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 1
 
     const/4 v0, 0x1
 
@@ -14,30 +32,22 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lare;
+    instance-of p1, p1, Lare;
 
-    if-nez v1, :cond_1
+    if-nez p1, :cond_1
 
     const/4 p1, 0x0
 
     return p1
 
     :cond_1
-    check-cast p1, Lare;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
     return v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
+    const v0, 0x44a1b2ef
 
     return v0
 .end method
@@ -45,7 +55,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "Options(isDebugMode=false)"
+    const-string v0, "ScrollToTop"
 
     return-object v0
 .end method

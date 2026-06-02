@@ -3,172 +3,60 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Cloneable;
+.implements Landroid/widget/PopupWindow$OnDismissListener;
 
 
 # instance fields
-.field public a:Ljava/nio/charset/CodingErrorAction;
+.field public final synthetic a:I
 
-.field public b:Ljava/nio/charset/CodingErrorAction;
+.field public final synthetic b:Ljava/lang/Object;
 
-.field public c:I
 
-.field public d:I
+# direct methods
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-.field public o:I
+    iput p1, p0, Lfp9;->a:I
+
+    iput-object p2, p0, Lfp9;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final clone()Ljava/lang/Object;
+.method public final onDismiss()V
     .locals 2
 
-    new-instance v0, Lfp9;
+    iget v0, p0, Lfp9;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    packed-switch v0, :pswitch_data_0
 
-    sget-object v1, Ljava/nio/charset/CodingErrorAction;->REPLACE:Ljava/nio/charset/CodingErrorAction;
+    iget-object v0, p0, Lfp9;->b:Ljava/lang/Object;
 
-    iput-object v1, v0, Lfp9;->a:Ljava/nio/charset/CodingErrorAction;
-
-    iput-object v1, v0, Lfp9;->b:Ljava/nio/charset/CodingErrorAction;
-
-    const v1, 0x7fffffff
-
-    iput v1, v0, Lfp9;->c:I
-
-    const/16 v1, 0x2000
-
-    iput v1, v0, Lfp9;->d:I
-
-    iput v1, v0, Lfp9;->o:I
-
-    iget-object v1, p0, Lfp9;->a:Ljava/nio/charset/CodingErrorAction;
-
-    iput-object v1, v0, Lfp9;->a:Ljava/nio/charset/CodingErrorAction;
-
-    iget-object v1, p0, Lfp9;->b:Ljava/nio/charset/CodingErrorAction;
-
-    iput-object v1, v0, Lfp9;->b:Ljava/nio/charset/CodingErrorAction;
-
-    iget v1, p0, Lfp9;->c:I
-
-    iput v1, v0, Lfp9;->c:I
-
-    iget v1, p0, Lfp9;->d:I
-
-    iput v1, v0, Lfp9;->d:I
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    instance-of v0, p1, Lfp9;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    check-cast p1, Lfp9;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lfp9;->a:Ljava/nio/charset/CodingErrorAction;
-
-    iget-object v1, p1, Lfp9;->a:Ljava/nio/charset/CodingErrorAction;
-
-    if-ne v0, v1, :cond_1
-
-    iget-object v0, p0, Lfp9;->b:Ljava/nio/charset/CodingErrorAction;
-
-    iget-object v1, p1, Lfp9;->b:Ljava/nio/charset/CodingErrorAction;
-
-    if-ne v0, v1, :cond_1
-
-    iget v0, p0, Lfp9;->c:I
-
-    iget v1, p1, Lfp9;->c:I
-
-    if-ne v0, v1, :cond_1
-
-    iget v0, p0, Lfp9;->o:I
-
-    iget v1, p1, Lfp9;->o:I
-
-    if-ne v0, v1, :cond_1
-
-    iget v0, p0, Lfp9;->d:I
-
-    iget p1, p1, Lfp9;->d:I
-
-    if-ne v0, p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lfp9;->a:Ljava/nio/charset/CodingErrorAction;
+    check-cast v0, Lone/me/pinbars/PinBarsWidget;
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    iput-object v1, v0, Lone/me/pinbars/PinBarsWidget;->o:Lq0h;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    return-void
 
-    move-result v0
+    :pswitch_0
+    iget-object v0, p0, Lfp9;->b:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast v0, Lgp9;
 
-    :cond_0
-    move v0, v1
+    invoke-virtual {v0}, Lgp9;->c()V
 
-    :goto_0
-    const/16 v2, 0x3e0
+    return-void
 
-    add-int/2addr v2, v0
+    nop
 
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget-object v0, p0, Lfp9;->b:Ljava/nio/charset/CodingErrorAction;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :cond_1
-    add-int/2addr v2, v1
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget v0, p0, Lfp9;->c:I
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget v0, p0, Lfp9;->d:I
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget v0, p0, Lfp9;->o:I
-
-    add-int/2addr v2, v0
-
-    return v2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,120 +1,316 @@
-.class public final synthetic Lxo3;
-.super Ljava/lang/Object;
+.class public final Lxo3;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 # interfaces
-.implements Ln9e;
+.implements Ls45;
+.implements Lirf;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Landroidx/fragment/app/b;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/fragment/app/b;I)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput p2, p0, Lxo3;->a:I
+    iput p1, p0, Lxo3;->a:I
 
-    iput-object p1, p0, Lxo3;->b:Landroidx/fragment/app/b;
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lxo3;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Landroid/os/Bundle;
-    .locals 5
+.method public a(Ljava/lang/Object;)V
+    .locals 1
+
+    :try_start_0
+    sget-object v0, Lw45;->a:Lw45;
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lxo3;->b:Ljava/lang/Object;
+
+    check-cast v0, Ld30;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    check-cast p1, Ljava/text/Collator;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Lmzj;->c(Ljava/lang/Throwable;)V
+
+    invoke-static {p1}, Lq98;->J(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public b()V
+    .locals 2
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Lw45;->a:Lw45;
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ls45;
+
+    if-eq v0, v1, :cond_1
+
+    :try_start_0
+    iget-object v1, p0, Lxo3;->b:Ljava/lang/Object;
+
+    check-cast v1, Lfp3;
+
+    invoke-interface {v1}, Lfp3;->b()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Ls45;->dispose()V
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Ls45;->dispose()V
+
+    :cond_0
+    throw v1
+
+    :cond_1
+    return-void
+.end method
+
+.method public c(Ls45;)V
+    .locals 0
+
+    invoke-static {p0, p1}, Lw45;->i(Ljava/util/concurrent/atomic/AtomicReference;Ls45;)Z
+
+    return-void
+.end method
+
+.method public d(Ljava/lang/Throwable;)Z
+    .locals 2
+
+    if-nez p1, :cond_0
+
+    const-string p1, "onError called with a null Throwable."
+
+    invoke-static {p1}, Lbq5;->a(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    move-result-object p1
+
+    :cond_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Lw45;->a:Lw45;
+
+    if-eq v0, v1, :cond_3
+
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ls45;
+
+    if-eq v0, v1, :cond_3
+
+    :try_start_0
+    iget-object v1, p0, Lxo3;->b:Ljava/lang/Object;
+
+    check-cast v1, Lfp3;
+
+    invoke-interface {v1, p1}, Lfp3;->onError(Ljava/lang/Throwable;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Ls45;->dispose()V
+
+    :cond_1
+    const/4 p1, 0x1
+
+    return p1
+
+    :catchall_0
+    move-exception p1
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0}, Ls45;->dispose()V
+
+    :cond_2
+    throw p1
+
+    :cond_3
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final dispose()V
+    .locals 1
 
     iget v0, p0, Lxo3;->a:I
 
     packed-switch v0, :pswitch_data_0
 
+    invoke-static {p0}, Lw45;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p0}, Lw45;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f()Z
+    .locals 2
+
+    iget v0, p0, Lxo3;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Lw45;->a:Lw45;
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
     :cond_0
-    iget-object v0, p0, Lxo3;->b:Landroidx/fragment/app/b;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Landroidx/fragment/app/b;->A()Lcn6;
+    :goto_0
+    return v0
 
-    move-result-object v1
+    :pswitch_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    invoke-static {v1}, Landroidx/fragment/app/b;->B(Landroidx/fragment/app/c;)Z
+    move-result-object v0
 
-    move-result v1
+    check-cast v0, Ls45;
 
-    if-nez v1, :cond_0
+    invoke-static {v0}, Lw45;->c(Ls45;)Z
 
-    iget-object v0, v0, Landroidx/fragment/app/b;->F0:Ll88;
+    move-result v0
 
-    sget-object v1, Ln78;->ON_STOP:Ln78;
+    return v0
 
-    invoke-virtual {v0, v1}, Ll88;->d(Ln78;)V
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    new-instance v0, Landroid/os/Bundle;
+.method public onError(Ljava/lang/Throwable;)V
+    .locals 2
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    :try_start_0
+    sget-object v0, Lw45;->a:Lw45;
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lxo3;->b:Ljava/lang/Object;
+
+    check-cast v0, Ld30;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lmzj;->c(Ljava/lang/Throwable;)V
+
+    new-instance v1, Lio/reactivex/rxjava3/exceptions/CompositeException;
+
+    filled-new-array {p1, v0}, [Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
+
+    invoke-static {v1}, Lq98;->J(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 4
+
+    iget v0, p0, Lxo3;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Ljava/util/concurrent/atomic/AtomicReference;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 
     :pswitch_0
-    new-instance v0, Landroid/os/Bundle;
+    const-class v0, Lxo3;
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    iget-object v1, p0, Lxo3;->b:Landroidx/fragment/app/b;
+    move-result-object v0
 
-    iget-object v1, v1, Lfp3;->Z:Ldp3;
+    invoke-super {p0}, Ljava/util/concurrent/atomic/AtomicReference;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v1
 
-    new-instance v2, Ljava/util/ArrayList;
+    const-string v2, "{"
 
-    iget-object v3, v1, Ldp3;->b:Ljava/util/LinkedHashMap;
+    const-string v3, "}"
 
-    invoke-virtual {v3}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
+    invoke-static {v0, v2, v1, v3}, Lwph;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v4
-
-    invoke-direct {v2, v4}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    const-string v4, "KEY_COMPONENT_ACTIVITY_REGISTERED_RCS"
-
-    invoke-virtual {v0, v4, v2}, Landroid/os/Bundle;->putIntegerArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-virtual {v3}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    const-string v3, "KEY_COMPONENT_ACTIVITY_REGISTERED_KEYS"
-
-    invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    iget-object v3, v1, Ldp3;->d:Ljava/util/ArrayList;
-
-    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    const-string v3, "KEY_COMPONENT_ACTIVITY_LAUNCHED_KEYS"
-
-    invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
-
-    new-instance v2, Landroid/os/Bundle;
-
-    iget-object v1, v1, Ldp3;->g:Landroid/os/Bundle;
-
-    invoke-direct {v2, v1}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
-
-    const-string v1, "KEY_COMPONENT_ACTIVITY_PENDING_RESULT"
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+    move-result-object v0
 
     return-object v0
 

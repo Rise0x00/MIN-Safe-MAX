@@ -1,70 +1,52 @@
 .class public final Ltvi;
-.super Ljava/lang/Object;
+.super Landroid/content/ContextWrapper;
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Ldt3;
 
 
-# static fields
-.field public static final a:Ltvi;
+# instance fields
+.field public final synthetic a:Lvvi;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lvvi;Landroid/content/Context;)V
+    .locals 0
 
-    new-instance v0, Ltvi;
+    iput-object p1, p0, Ltvi;->a:Lvvi;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ltvi;->a:Ltvi;
-
-    new-instance v0, Lbri;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
-
-    const-class v1, Lpri;
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    invoke-direct {p0, p2}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a()Lft3;
+    .locals 1
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Ltvi;->a:Lvvi;
 
-    move-result-object p1
+    iget-object v0, v0, Lvvi;->a:Landroid/content/Context;
 
-    throw p1
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    check-cast v0, Ldt3;
+
+    invoke-interface {v0}, Ldt3;->a()Lft3;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final isDeviceProtectedStorage()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

@@ -3,57 +3,17 @@
 .source "SourceFile"
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+# instance fields
+.field public final a:Ly7g;
 
-    const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+# direct methods
+.method public constructor <init>(Ly7g;)V
+    .locals 0
 
-    return v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :cond_0
-    instance-of v1, p1, Lq17;
+    iput-object p1, p0, Lq17;->a:Ly7g;
 
-    if-nez v1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    check-cast p1, Lq17;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    const/4 v0, -0x1
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "GradientsLoadingIconContrastStaticColors(filled=-1, transparent=-1)"
-
-    return-object v0
+    return-void
 .end method

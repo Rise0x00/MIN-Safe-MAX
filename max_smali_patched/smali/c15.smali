@@ -2,119 +2,273 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/Executor;
+
+# annotations
+.annotation runtime La3f;
+    with = Lb15;
+.end annotation
 
 
 # static fields
-.field public static volatile b:Lc15;
+.field public static final b:Lb15;
 
-.field public static final synthetic c:Lc15;
+.field public static final synthetic c:[Lb88;
 
-.field public static final synthetic d:Lc15;
+.field public static final d:Lc15;
+
+.field public static final e:Lih8;
+
+.field public static final f:Lt2f;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/Map;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 12
+
+    new-instance v0, Lk8d;
+
+    const-class v1, Lc15;
+
+    const-string v2, "isAbEventEnabled"
+
+    const-string v3, "isAbEventEnabled()Z"
+
+    const/4 v4, 0x0
+
+    invoke-direct {v0, v1, v2, v3, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sget-object v2, Lr3e;->a:Ls3e;
+
+    const-string v3, "isOpcodeStatEnabled"
+
+    const-string v5, "isOpcodeStatEnabled()Z"
+
+    invoke-static {v2, v1, v3, v5, v4}, Lsb6;->d(Ls3e;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lk8d;
+
+    move-result-object v2
+
+    new-instance v3, Lk8d;
+
+    const-string v5, "isChatHistoryStatEnabled"
+
+    const-string v6, "isChatHistoryStatEnabled()Z"
+
+    invoke-direct {v3, v1, v5, v6, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v5, Lk8d;
+
+    const-string v6, "isUploadHangCheckEnabled"
+
+    const-string v7, "isUploadHangCheckEnabled()Z"
+
+    invoke-direct {v5, v1, v6, v7, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v6, Lk8d;
+
+    const-string v7, "isUploadErrorEventEnabled"
+
+    const-string v8, "isUploadErrorEventEnabled()Z"
+
+    invoke-direct {v6, v1, v7, v8, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v7, Lk8d;
+
+    const-string v8, "isMemoryStatEnabled"
+
+    const-string v9, "isMemoryStatEnabled()Z"
+
+    invoke-direct {v7, v1, v8, v9, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v8, Lk8d;
+
+    const-string v9, "isBatteryStatEnabled"
+
+    const-string v10, "isBatteryStatEnabled()Z"
+
+    invoke-direct {v8, v1, v9, v10, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v9, Lk8d;
+
+    const-string v10, "isVideoTranscodeSizeRegressionEnabled"
+
+    const-string v11, "isVideoTranscodeSizeRegressionEnabled()Z"
+
+    invoke-direct {v9, v1, v10, v11, v4}, Lk8d;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    const/16 v1, 0x8
+
+    new-array v1, v1, [Lb88;
+
+    aput-object v0, v1, v4
+
+    const/4 v0, 0x1
+
+    aput-object v2, v1, v0
+
+    const/4 v0, 0x2
+
+    aput-object v3, v1, v0
+
+    const/4 v0, 0x3
+
+    aput-object v5, v1, v0
+
+    const/4 v0, 0x4
+
+    aput-object v6, v1, v0
+
+    const/4 v0, 0x5
+
+    aput-object v7, v1, v0
+
+    const/4 v0, 0x6
+
+    aput-object v8, v1, v0
+
+    const/4 v0, 0x7
+
+    aput-object v9, v1, v0
+
+    sput-object v1, Lc15;->c:[Lb88;
+
+    new-instance v0, Lb15;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lc15;->b:Lb15;
 
     new-instance v0, Lc15;
 
-    const/4 v1, 0x1
+    new-instance v1, Lwu;
 
-    invoke-direct {v0, v1}, Lc15;-><init>(I)V
+    invoke-direct {v1, v4}, Lhpf;-><init>(I)V
 
-    sput-object v0, Lc15;->c:Lc15;
-
-    new-instance v0, Lc15;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lc15;-><init>(I)V
+    invoke-direct {v0, v1}, Lc15;-><init>(Ljava/util/Map;)V
 
     sput-object v0, Lc15;->d:Lc15;
+
+    sget-object v0, Labg;->a:Labg;
+
+    sget-object v1, Ltx0;->a:Ltx0;
+
+    new-instance v2, Lih8;
+
+    invoke-direct {v2, v0, v1}, Lih8;-><init>(Lc88;Lc88;)V
+
+    sput-object v2, Lc15;->e:Lih8;
+
+    iget-object v0, v2, Lih8;->c:Li67;
+
+    sput-object v0, Lc15;->f:Lt2f;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Ljava/util/Map;)V
     .locals 0
 
-    iput p1, p0, Lc15;->a:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lc15;->a:Ljava/util/Map;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final execute(Ljava/lang/Runnable;)V
+.method public final a(Ljava/lang/String;)Z
     .locals 2
 
-    iget v0, p0, Lc15;->a:I
+    iget-object v0, p0, Lc15;->a:Ljava/util/Map;
 
-    packed-switch v0, :pswitch_data_0
+    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    invoke-interface {v0, p1, v1}, Ljava/util/Map;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
+    move-result-object p1
 
-    :pswitch_0
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    check-cast p1, Ljava/lang/Boolean;
 
-    return-void
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    :pswitch_1
-    new-instance v0, Ljava/lang/Thread;
+    move-result p1
 
-    invoke-direct {v0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+    return p1
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    return-void
+    const/4 v0, 0x1
 
-    :pswitch_2
-    new-instance v0, Landroid/os/Handler;
+    if-ne p0, p1, :cond_0
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    return v0
 
-    move-result-object v1
+    :cond_0
+    instance-of v1, p1, Lc15;
 
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    if-nez v1, :cond_1
 
-    return-void
+    return v2
 
-    :pswitch_3
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    :cond_1
+    check-cast p1, Lc15;
 
-    return-void
+    iget-object v1, p0, Lc15;->a:Ljava/util/Map;
 
-    :pswitch_4
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    iget-object p1, p1, Lc15;->a:Ljava/util/Map;
 
-    return-void
+    invoke-static {v1, p1}, Lsr6;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :pswitch_5
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    move-result p1
 
-    return-void
+    if-nez p1, :cond_2
 
-    nop
+    return v2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lc15;->a:Ljava/util/Map;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "DevNullServerConfig(events="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lc15;->a:Ljava/util/Map;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

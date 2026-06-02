@@ -1,121 +1,51 @@
 .class public final Lnd6;
-.super Lcsd;
+.super Lz84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lts4;
+.field public final synthetic X:Lqd;
 
-.field public final b:I
+.field public Y:I
 
-.field public final c:I
+.field public d:Lqd;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lts4;)V
-    .locals 1
+.method public constructor <init>(Lqd;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lnd6;->X:Lqd;
 
-    iput-object p1, p0, Lnd6;->a:Lts4;
-
-    const/16 p1, 0x10
-
-    int-to-float p1, p1
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v0
-
-    invoke-static {p1}, Lq7j;->c(F)I
-
-    move-result p1
-
-    iput p1, p0, Lnd6;->b:I
-
-    const/16 p1, 0xc
-
-    int-to-float p1, p1
-
-    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v0
-
-    invoke-static {p1}, Lq7j;->c(F)I
-
-    move-result p1
-
-    iput p1, p0, Lnd6;->c:I
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Lpsd;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {p2}, Landroidx/recyclerview/widget/RecyclerView;->R(Landroid/view/View;)I
+    iput-object p1, p0, Lnd6;->o:Ljava/lang/Object;
 
-    move-result p2
+    iget p1, p0, Lnd6;->Y:I
 
-    invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lwrd;
+    const/high16 v0, -0x80000000
 
-    move-result-object p3
+    or-int/2addr p1, v0
 
-    if-eqz p3, :cond_1
+    iput p1, p0, Lnd6;->Y:I
 
-    if-ltz p2, :cond_1
+    iget-object p1, p0, Lnd6;->X:Lqd;
 
-    invoke-virtual {p3}, Lwrd;->j()I
+    const/4 v0, 0x0
 
-    move-result p3
+    invoke-virtual {p1, v0, p0}, Lqd;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    if-ge p2, p3, :cond_1
+    move-result-object p1
 
-    iget p3, p0, Lnd6;->c:I
-
-    iput p3, p1, Landroid/graphics/Rect;->left:I
-
-    iput p3, p1, Landroid/graphics/Rect;->right:I
-
-    iget-object p3, p0, Lnd6;->a:Lts4;
-
-    invoke-virtual {p3, p2}, Lts4;->h(I)I
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    const/4 p3, 0x1
-
-    if-eq p2, p3, :cond_0
-
-    const/4 p3, 0x4
-
-    if-ne p2, p3, :cond_1
-
-    :cond_0
-    iget p2, p0, Lnd6;->b:I
-
-    iput p2, p1, Landroid/graphics/Rect;->top:I
-
-    :cond_1
-    return-void
+    return-object p1
 .end method

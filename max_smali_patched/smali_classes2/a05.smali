@@ -1,158 +1,138 @@
-.class public final synthetic La05;
+.class public final La05;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llq6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;I)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput p2, p0, La05;->a:I
-
-    iput-object p1, p0, La05;->b:Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, La05;->a:Ljava/lang/String;
+
+    iput-object p2, p0, La05;->b:Ljava/lang/String;
+
+    iput-object p3, p0, La05;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, La05;->a:I
+    const/4 v0, 0x1
 
-    const/4 v1, 0x6
+    if-ne p0, p1, :cond_0
 
-    iget-object v2, p0, La05;->b:Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;
+    return v0
 
-    packed-switch v0, :pswitch_data_0
+    :cond_0
+    const/4 v1, 0x0
 
-    sget-object v0, Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;->X:[Lz28;
+    if-eqz p1, :cond_2
 
-    new-instance v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    const-class v2, La05;
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v3, v4, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    sget v1, Lueb;->j:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v3, -0x1
-
-    invoke-direct {v1, v3, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance v1, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    invoke-direct {v1}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOverScrollMode(I)V
-
-    iget-object v1, v2, Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;->c:Ll0f;
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lwrd;)V
-
-    new-instance v4, Lxp4;
-
-    const/16 v1, 0xb
-
-    invoke-direct {v4, v1}, Lxp4;-><init>(I)V
-
-    new-instance v2, Ldke;
-
-    sget-object v1, Lpc3;->t0:Lkme;
-
-    invoke-virtual {v1, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
 
-    const/4 v6, 0x0
+    if-eq v2, v3, :cond_1
 
-    const/16 v7, 0x1c
+    goto :goto_0
 
-    const/4 v5, 0x0
+    :cond_1
+    check-cast p1, La05;
 
-    invoke-direct/range {v2 .. v7}, Ldke;-><init>(Lzlb;Lbke;Lnq6;Lk1e;I)V
+    iget-object v2, p0, La05;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Landroidx/recyclerview/widget/RecyclerView;->j(Lcsd;)V
+    iget-object v3, p1, La05;->a:Ljava/lang/String;
 
-    new-instance v1, Lu11;
+    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const/4 v2, 0x3
+    move-result v2
 
-    invoke-direct {v1, v2}, Lu11;-><init>(I)V
+    if-eqz v2, :cond_2
 
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->j(Lcsd;)V
+    iget-object v2, p0, La05;->b:Ljava/lang/String;
 
-    return-object v0
+    iget-object v3, p1, La05;->b:Ljava/lang/String;
 
-    :pswitch_0
-    sget-object v0, Lone/me/notifications/settings/screens/dialog/DialogNotificationsSettingsScreen;->X:[Lz28;
+    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    new-instance v0, Lymb;
+    move-result v2
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    if-eqz v2, :cond_2
 
-    move-result-object v2
+    iget-object v2, p0, La05;->c:Ljava/lang/String;
 
-    invoke-direct {v0, v2, v1}, Lymb;-><init>(Landroid/content/Context;I)V
+    iget-object p1, p1, La05;->c:Ljava/lang/String;
 
-    sget v1, Lueb;->l:I
+    invoke-static {v2, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+    move-result p1
 
-    sget-object v1, Lqmb;->b:Lqmb;
+    if-eqz p1, :cond_2
 
-    invoke-virtual {v0, v1}, Lymb;->setForm(Lqmb;)V
+    return v0
 
-    sget v1, Lweb;->k:I
+    :cond_2
+    :goto_0
+    return v1
+.end method
 
-    invoke-virtual {v0, v1}, Lymb;->setTitle(I)V
+.method public final hashCode()I
+    .locals 3
 
-    new-instance v1, Lgmb;
+    iget-object v0, p0, La05;->a:Ljava/lang/String;
 
-    new-instance v2, Lj53;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    const/16 v3, 0x1b
+    move-result v0
 
-    invoke-direct {v2, v3}, Lj53;-><init>(I)V
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-direct {v1, v2}, Lgmb;-><init>(Lnq6;)V
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lymb;->setLeftActions(Lmmb;)V
+    iget-object v2, p0, La05;->b:Ljava/lang/String;
 
-    return-object v0
+    if-eqz v2, :cond_0
 
-    nop
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result v2
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v1
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, La05;->c:Ljava/lang/String;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :cond_1
+    add-int/2addr v0, v1
+
+    return v0
 .end method

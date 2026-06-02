@@ -1,98 +1,167 @@
-.class public final Lmuc;
-.super Lp6g;
+.class public abstract Lmuc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
 
+# static fields
+.field public static final a:Landroid/util/SparseArray;
 
-# instance fields
-.field public final synthetic X:Lvuc;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public static final b:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Lvuc;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Lmuc;->X:Lvuc;
+    new-instance v0, Landroid/util/SparseArray;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lmuc;->a:Landroid/util/SparseArray;
 
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v0, Lmuc;->b:Ljava/util/HashMap;
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Ljuc;->a:Ljuc;
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v1, 0x1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Ljuc;->b:Ljuc;
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v1, 0x2
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Ljuc;->c:Ljuc;
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljuc;
+
+    sget-object v2, Lmuc;->a:Landroid/util/SparseArray;
+
+    sget-object v3, Lmuc;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v3, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Integer;
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    invoke-virtual {v2, v3, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method
 
+.method public static a(Ljuc;)I
+    .locals 3
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    sget-object v0, Lmuc;->b:Ljava/util/HashMap;
 
-    check-cast p1, Lnd2;
+    invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    invoke-virtual {p0, p1, p2}, Lmuc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast v0, Ljava/lang/Integer;
 
-    move-result-object p1
+    if-eqz v0, :cond_0
 
-    check-cast p1, Lmuc;
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    move-result p0
 
-    invoke-virtual {p1, p2}, Lmuc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lmuc;
-
-    iget-object v1, p0, Lmuc;->X:Lvuc;
-
-    invoke-direct {v0, v1, p2}, Lmuc;-><init>(Lvuc;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lmuc;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lmuc;->o:Ljava/lang/Object;
-
-    check-cast v0, Lnd2;
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    invoke-virtual {v0}, Lnd2;->j0()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {v0}, Lnd2;->I()Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
+    return p0
 
     :cond_0
-    iget-object p1, p0, Lmuc;->X:Lvuc;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    iget-object p1, p1, Lvuc;->v0:Lcm5;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    sget-object v0, Lauc;->a:Lauc;
+    const-string v2, "PriorityMapping is missing known Priority value "
 
-    invoke-static {p1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_1
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static b(I)Ljuc;
+    .locals 2
+
+    sget-object v0, Lmuc;->a:Landroid/util/SparseArray;
+
+    invoke-virtual {v0, p0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljuc;
+
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Unknown Priority for value "
+
+    invoke-static {p0, v1}, Lsb6;->g(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

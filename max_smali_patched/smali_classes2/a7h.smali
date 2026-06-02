@@ -1,63 +1,88 @@
 .class public final La7h;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ly6h;
 
 
 # instance fields
-.field public X:Z
+.field public final synthetic a:Landroid/view/ViewGroup;
 
-.field public Y:I
+.field public final synthetic b:Lzy9;
 
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public d:Ljava/lang/String;
-
-.field public o:Lone/me/sdk/transfer/exceptions/HttpErrorException;
-
-.field public final synthetic t0:Lo7h;
-
-.field public u0:I
+.field public final synthetic c:Lb7h;
 
 
 # direct methods
-.method public constructor <init>(Lo7h;Lo84;)V
+.method public constructor <init>(Lb7h;Landroid/view/ViewGroup;Lzy9;)V
     .locals 0
 
-    iput-object p1, p0, La7h;->t0:Lo7h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, La7h;->c:Lb7h;
+
+    iput-object p2, p0, La7h;->a:Landroid/view/ViewGroup;
+
+    iput-object p3, p0, La7h;->b:Lzy9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final a(Lz6h;)V
+    .locals 1
 
-    iput-object p1, p0, La7h;->Z:Ljava/lang/Object;
+    iget-object p1, p0, La7h;->a:Landroid/view/ViewGroup;
 
-    iget p1, p0, La7h;->u0:I
+    iget-object v0, p0, La7h;->b:Lzy9;
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {p1, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    or-int/2addr p1, v0
+    return-void
+.end method
 
-    iput p1, p0, La7h;->u0:I
+.method public final b()V
+    .locals 0
 
-    const/4 v2, 0x0
+    return-void
+.end method
 
-    const-wide/16 v3, 0x0
+.method public final c(Lz6h;)V
+    .locals 1
 
-    iget-object v0, p0, La7h;->t0:Lo7h;
+    iget-object p1, p0, La7h;->c:Lb7h;
 
-    const/4 v1, 0x0
+    iget-object v0, p1, Lb7h;->X:Lo94;
 
-    move-object v5, p0
+    invoke-virtual {v0}, Lo94;->a()V
 
-    invoke-static/range {v0 .. v5}, Lo7h;->c(Lo7h;Ljava/lang/String;Ljava/lang/Throwable;JLo84;)Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object p1
+    iput-object v0, p1, Lb7h;->X:Lo94;
 
-    return-object p1
+    return-void
+.end method
+
+.method public final e()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final g(Lz6h;)V
+    .locals 1
+
+    iget-object p1, p0, La7h;->c:Lb7h;
+
+    iget-object v0, p1, Lb7h;->X:Lo94;
+
+    invoke-virtual {v0}, Lo94;->a()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p1, Lb7h;->X:Lo94;
+
+    return-void
 .end method

@@ -1,11 +1,8 @@
-.class public final Lemg;
-.super Ljava/lang/Exception;
+.class public interface abstract Lemg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final fillInStackTrace()Ljava/lang/Throwable;
-    .locals 0
-
-    return-object p0
+.method public abstract e(Lamg;I)V
 .end method

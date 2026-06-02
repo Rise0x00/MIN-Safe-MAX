@@ -1,142 +1,176 @@
 .class public final Lcf4;
-.super Landroid/widget/Filter;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lnt6;
 
 
 # instance fields
-.field public a:Lbf4;
+.field public final synthetic a:Lnf6;
+
+.field public final synthetic b:Luf4;
+
+
+# direct methods
+.method public constructor <init>(Lnf6;Luf4;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcf4;->a:Lnf6;
+
+    iput-object p2, p0, Lcf4;->b:Luf4;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final convertResultToString(Ljava/lang/Object;)Ljava/lang/CharSequence;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    iget-object v0, p0, Lcf4;->a:Lbf4;
+    check-cast p1, Ljava/lang/String;
 
-    check-cast p1, Landroid/database/Cursor;
+    check-cast p2, Lvia;
 
-    check-cast v0, Lk3g;
+    sget-object p1, Lgp8;->d:Lgp8;
 
-    invoke-virtual {v0, p1}, Lk3g;->c(Landroid/database/Cursor;)Ljava/lang/String;
+    if-nez p2, :cond_0
+
+    iget-object p1, p0, Lcf4;->a:Lnf6;
+
+    invoke-static {p1}, Lc1g;->a(Ljava/lang/Object;)Lb1g;
 
     move-result-object p1
 
     return-object p1
-.end method
 
-.method public final performFiltering(Ljava/lang/CharSequence;)Landroid/widget/Filter$FilterResults;
-    .locals 4
+    :cond_0
+    invoke-interface {p2}, Lvia;->getValue()Ljava/lang/Object;
 
-    iget-object v0, p0, Lcf4;->a:Lbf4;
+    move-result-object v0
 
-    check-cast v0, Lk3g;
+    check-cast v0, Lnf6;
 
-    iget-object v1, v0, Lk3g;->v0:Landroidx/appcompat/widget/e;
+    const/4 v1, 0x0
 
-    if-nez p1, :cond_0
+    const-string v2, "Folder("
 
-    const-string p1, ""
+    if-nez v0, :cond_3
+
+    iget-object v0, p0, Lcf4;->b:Luf4;
+
+    iget-object v0, v0, Luf4;->c:Ljava/lang/String;
+
+    iget-object v3, p0, Lcf4;->a:Lnf6;
+
+    sget-object v4, Lnm4;->d:Lnfb;
+
+    if-nez v4, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    :cond_1
+    invoke-virtual {v4, p1}, Lnfb;->b(Lgp8;)Z
 
-    move-result-object p1
+    move-result v5
 
+    if-eqz v5, :cond_2
+
+    iget-object v3, v3, Lnf6;->a:Ljava/lang/String;
+
+    const-string v5, ") was set to flow"
+
+    invoke-static {v2, v3, v5}, Lsb6;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v4, p1, v0, v2, v1}, Lnfb;->c(Lgp8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
     :goto_0
-    invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
+    iget-object p1, p0, Lcf4;->a:Lnf6;
 
-    move-result v2
+    invoke-interface {p2, p1}, Lvia;->setValue(Ljava/lang/Object;)V
 
-    const/4 v3, 0x0
+    return-object p2
 
-    if-nez v2, :cond_2
+    :cond_3
+    iget-wide v3, v0, Lnf6;->B0:J
 
-    invoke-virtual {v1}, Landroid/view/View;->getWindowVisibility()I
+    iget-object v0, p0, Lcf4;->a:Lnf6;
 
-    move-result v1
+    iget-wide v5, v0, Lnf6;->B0:J
 
-    if-eqz v1, :cond_1
+    cmp-long v3, v3, v5
+
+    if-lez v3, :cond_6
+
+    iget-object v3, p0, Lcf4;->b:Luf4;
+
+    iget-object v3, v3, Luf4;->c:Ljava/lang/String;
+
+    sget-object v4, Lnm4;->d:Lnfb;
+
+    if-nez v4, :cond_4
 
     goto :goto_1
 
-    :cond_1
-    :try_start_0
-    iget-object v1, v0, Lk3g;->w0:Landroid/app/SearchableInfo;
+    :cond_4
+    invoke-virtual {v4, p1}, Lnfb;->b(Lgp8;)Z
 
-    invoke-virtual {v0, v1, p1}, Lk3g;->g(Landroid/app/SearchableInfo;Ljava/lang/String;)Landroid/database/Cursor;
+    move-result v5
 
-    move-result-object p1
+    if-eqz v5, :cond_5
 
-    if-eqz p1, :cond_2
+    iget-object v0, v0, Lnf6;->a:Ljava/lang/String;
 
-    invoke-interface {p1}, Landroid/database/Cursor;->getCount()I
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    const-string v5, ") was ignored due to greater time of present folder"
+
+    invoke-static {v2, v0, v5}, Lsb6;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v4, p1, v3, v0, v1}, Lnfb;->c(Lgp8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_5
+    :goto_1
+    return-object p2
+
+    :cond_6
+    iget-object v3, p0, Lcf4;->b:Luf4;
+
+    iget-object v3, v3, Luf4;->c:Ljava/lang/String;
+
+    sget-object v4, Lnm4;->d:Lnfb;
+
+    if-nez v4, :cond_7
 
     goto :goto_2
 
-    :catch_0
-    move-exception p1
+    :cond_7
+    invoke-virtual {v4, p1}, Lnfb;->b(Lgp8;)Z
 
-    const-string v0, "SuggestionsAdapter"
+    move-result v5
 
-    const-string v1, "Search suggestions query threw an exception."
+    if-eqz v5, :cond_8
 
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    iget-object v0, v0, Lnf6;->a:Ljava/lang/String;
 
-    :cond_2
-    :goto_1
-    move-object p1, v3
+    const-string v5, ") was updated by folder from cache"
 
+    invoke-static {v2, v0, v5}, Lsb6;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v4, p1, v3, v0, v1}, Lnfb;->c(Lgp8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_8
     :goto_2
-    new-instance v0, Landroid/widget/Filter$FilterResults;
+    iget-object p1, p0, Lcf4;->a:Lnf6;
 
-    invoke-direct {v0}, Landroid/widget/Filter$FilterResults;-><init>()V
+    invoke-interface {p2, p1}, Lvia;->setValue(Ljava/lang/Object;)V
 
-    if-eqz p1, :cond_3
-
-    invoke-interface {p1}, Landroid/database/Cursor;->getCount()I
-
-    move-result v1
-
-    iput v1, v0, Landroid/widget/Filter$FilterResults;->count:I
-
-    iput-object p1, v0, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
-
-    goto :goto_3
-
-    :cond_3
-    const/4 p1, 0x0
-
-    iput p1, v0, Landroid/widget/Filter$FilterResults;->count:I
-
-    iput-object v3, v0, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
-
-    :goto_3
-    return-object v0
-.end method
-
-.method public final publishResults(Ljava/lang/CharSequence;Landroid/widget/Filter$FilterResults;)V
-    .locals 1
-
-    iget-object p1, p0, Lcf4;->a:Lbf4;
-
-    iget-object v0, p1, Lbf4;->c:Landroid/database/Cursor;
-
-    iget-object p2, p2, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
-
-    if-eqz p2, :cond_0
-
-    if-eq p2, v0, :cond_0
-
-    check-cast p2, Landroid/database/Cursor;
-
-    check-cast p1, Lk3g;
-
-    invoke-virtual {p1, p2}, Lk3g;->b(Landroid/database/Cursor;)V
-
-    :cond_0
-    return-void
+    return-object p2
 .end method

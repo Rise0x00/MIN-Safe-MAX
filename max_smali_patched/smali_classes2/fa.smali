@@ -1,63 +1,280 @@
 .class public final Lfa;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Li21;
+
+
+# static fields
+.field public static final Z:Lr41;
 
 
 # instance fields
-.field public X:Ljava/util/List;
+.field public final X:J
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final Y:Z
 
-.field public final synthetic Z:Lga;
+.field public final a:J
 
-.field public d:J
+.field public final b:I
 
-.field public o:Lga;
+.field public final c:[Landroid/net/Uri;
 
-.field public t0:I
+.field public final d:[I
+
+.field public final o:[J
 
 
 # direct methods
-.method public constructor <init>(Lga;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lfa;->Z:Lga;
+    new-instance v0, Lr41;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/16 v1, 0xc
+
+    invoke-direct {v0, v1}, Lr41;-><init>(I)V
+
+    sput-object v0, Lfa;->Z:Lr41;
+
+    return-void
+.end method
+
+.method public constructor <init>(JI[I[Landroid/net/Uri;[JJZ)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    array-length v0, p4
+
+    array-length v1, p5
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-static {v0}, Lmhj;->b(Z)V
+
+    iput-wide p1, p0, Lfa;->a:J
+
+    iput p3, p0, Lfa;->b:I
+
+    iput-object p4, p0, Lfa;->d:[I
+
+    iput-object p5, p0, Lfa;->c:[Landroid/net/Uri;
+
+    iput-object p6, p0, Lfa;->o:[J
+
+    iput-wide p7, p0, Lfa;->X:J
+
+    iput-boolean p9, p0, Lfa;->Y:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+.method public final a(I)I
+    .locals 3
 
-    iput-object p1, p0, Lfa;->Y:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lfa;->t0:I
+    add-int/2addr p1, v0
 
-    const/high16 v0, -0x80000000
+    :goto_0
+    iget-object v1, p0, Lfa;->d:[I
 
-    or-int/2addr p1, v0
+    array-length v2, v1
 
-    iput p1, p0, Lfa;->t0:I
+    if-ge p1, v2, :cond_1
 
-    const-wide/16 v5, 0x0
+    iget-boolean v2, p0, Lfa;->Y:Z
 
-    const/4 v7, 0x0
+    if-nez v2, :cond_1
 
-    iget-object v0, p0, Lfa;->Z:Lga;
+    aget v1, v1, p1
 
-    const-wide/16 v1, 0x0
+    if-eqz v1, :cond_1
 
-    const-wide/16 v3, 0x0
+    if-ne v1, v0, :cond_0
 
-    move-object v8, p0
+    goto :goto_1
 
-    invoke-virtual/range {v0 .. v8}, Lga;->a(JJJILo84;)Ljava/io/Serializable;
+    :cond_0
+    add-int/lit8 p1, p1, 0x1
 
-    move-result-object p1
+    goto :goto_0
 
-    return-object p1
+    :cond_1
+    :goto_1
+    return p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Lfa;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lfa;
+
+    iget-wide v2, p0, Lfa;->a:J
+
+    iget-wide v4, p1, Lfa;->a:J
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_2
+
+    iget v2, p0, Lfa;->b:I
+
+    iget v3, p1, Lfa;->b:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Lfa;->c:[Landroid/net/Uri;
+
+    iget-object v3, p1, Lfa;->c:[Landroid/net/Uri;
+
+    invoke-static {v2, v3}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lfa;->d:[I
+
+    iget-object v3, p1, Lfa;->d:[I
+
+    invoke-static {v2, v3}, Ljava/util/Arrays;->equals([I[I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lfa;->o:[J
+
+    iget-object v3, p1, Lfa;->o:[J
+
+    invoke-static {v2, v3}, Ljava/util/Arrays;->equals([J[J)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-wide v2, p0, Lfa;->X:J
+
+    iget-wide v4, p1, Lfa;->X:J
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_2
+
+    iget-boolean v2, p0, Lfa;->Y:Z
+
+    iget-boolean p1, p1, Lfa;->Y:Z
+
+    if-ne v2, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 6
+
+    iget v0, p0, Lfa;->b:I
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lfa;->a:J
+
+    const/16 v3, 0x20
+
+    ushr-long v4, v1, v3
+
+    xor-long/2addr v1, v4
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lfa;->c:[Landroid/net/Uri;
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lfa;->d:[I
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lfa;->o:[J
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([J)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lfa;->X:J
+
+    ushr-long v3, v1, v3
+
+    xor-long/2addr v1, v3
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lfa;->Y:Z
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method

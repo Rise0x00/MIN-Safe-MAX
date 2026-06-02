@@ -1,399 +1,150 @@
 .class public final Lx8e;
-.super Lp6g;
+.super Landroid/net/ConnectivityManager$NetworkCallback;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:[B
+.field public a:Z
 
-.field public final synthetic o:La0c;
+.field public b:Z
+
+.field public final synthetic c:La7e;
 
 
 # direct methods
-.method public constructor <init>(La0c;[BLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(La7e;)V
     .locals 0
 
-    iput-object p1, p0, Lx8e;->o:La0c;
+    iput-object p1, p0, Lx8e;->c:La7e;
 
-    iput-object p2, p0, Lx8e;->X:[B
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lzb4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lx8e;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lx8e;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lx8e;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final onAvailable(Landroid/net/Network;)V
     .locals 2
 
-    new-instance p1, Lx8e;
+    iget-object p1, p0, Lx8e;->c:La7e;
 
-    iget-object v0, p0, Lx8e;->o:La0c;
+    iget-object p1, p1, La7e;->e:Ljava/lang/Object;
 
-    iget-object v1, p0, Lx8e;->X:[B
+    check-cast p1, Landroid/os/Handler;
 
-    invoke-direct {p1, v0, v1, p2}, Lx8e;-><init>(La0c;[BLkotlin/coroutines/Continuation;)V
+    new-instance v0, Lw8e;
 
-    return-object p1
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lw8e;-><init>(Lx8e;I)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
+.method public final onBlockedStatusChanged(Landroid/net/Network;Z)V
+    .locals 1
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    if-nez p2, :cond_0
 
-    iget-object p1, p0, Lx8e;->o:La0c;
+    iget-object p1, p0, Lx8e;->c:La7e;
 
-    iget-object v0, p1, La0c;->b:Ljava/lang/Object;
+    iget-object p1, p1, La7e;->e:Ljava/lang/Object;
 
-    check-cast v0, Ljce;
+    check-cast p1, Landroid/os/Handler;
 
-    iget-object p1, p1, La0c;->b:Ljava/lang/Object;
+    new-instance p2, Lw8e;
 
-    check-cast p1, Ljce;
+    const/4 v0, 0x1
 
-    invoke-interface {v0}, Ljce;->d()Lj68;
+    invoke-direct {p2, p0, v0}, Lw8e;-><init>(Lx8e;I)V
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    add-int/lit8 v2, v1, 0x3
-
-    iget-object v3, p0, Lx8e;->X:[B
-
-    array-length v4, v3
-
-    const/4 v5, 0x1
-
-    const/4 v6, 0x4
-
-    const/16 v7, 0x8
-
-    const/4 v8, 0x2
-
-    if-ge v2, v4, :cond_7
-
-    add-int/lit8 v2, v1, 0x1
-
-    aget-byte v4, v3, v1
-
-    const/16 v9, 0xff
-
-    and-int/2addr v4, v9
-
-    if-ne v4, v9, :cond_6
-
-    aget-byte v4, v3, v2
-
-    and-int/2addr v4, v9
-
-    if-ne v4, v9, :cond_1
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :cond_0
-    :goto_1
-    move v1, v2
+    return-void
+.end method
+
+.method public final onCapabilitiesChanged(Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
+    .locals 1
+
+    const/16 p1, 0x10
+
+    invoke-virtual {p2, p1}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
+
+    move-result p1
+
+    iget-boolean p2, p0, Lx8e;->a:Z
+
+    iget-object v0, p0, Lx8e;->c:La7e;
+
+    if-eqz p2, :cond_2
+
+    iget-boolean p2, p0, Lx8e;->b:Z
+
+    if-eq p2, p1, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    if-eqz p1, :cond_1
+
+    iget-object p1, v0, La7e;->e:Ljava/lang/Object;
+
+    check-cast p1, Landroid/os/Handler;
+
+    new-instance p2, Lw8e;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p2, p0, v0}, Lw8e;-><init>(Lx8e;I)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
     :cond_1
-    add-int/lit8 v2, v1, 0x2
-
-    const/16 v9, 0xd8
-
-    if-eq v4, v9, :cond_0
-
-    if-ne v4, v5, :cond_2
-
-    goto :goto_1
+    return-void
 
     :cond_2
-    const/16 v9, 0xd9
+    :goto_0
+    const/4 p2, 0x1
 
-    if-eq v4, v9, :cond_6
+    iput-boolean p2, p0, Lx8e;->a:Z
 
-    const/16 v9, 0xda
+    iput-boolean p1, p0, Lx8e;->b:Z
 
-    if-ne v4, v9, :cond_3
+    iget-object p1, v0, La7e;->e:Ljava/lang/Object;
 
-    goto :goto_3
+    check-cast p1, Landroid/os/Handler;
 
-    :cond_3
-    invoke-static {v3, v2, v8, v0}, Lwti;->d([BIIZ)I
+    new-instance p2, Lw8e;
 
-    move-result v9
+    const/4 v0, 0x0
 
-    if-lt v9, v8, :cond_5
+    invoke-direct {p2, p0, v0}, Lw8e;-><init>(Lx8e;I)V
 
-    add-int/2addr v2, v9
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    array-length v10, v3
+    return-void
+.end method
 
-    if-le v2, v10, :cond_4
+.method public final onLost(Landroid/net/Network;)V
+    .locals 2
 
-    goto :goto_2
+    iget-object p1, p0, Lx8e;->c:La7e;
 
-    :cond_4
-    const/16 v10, 0xe1
+    iget-object p1, p1, La7e;->e:Ljava/lang/Object;
 
-    if-ne v4, v10, :cond_0
+    check-cast p1, Landroid/os/Handler;
 
-    if-lt v9, v7, :cond_0
+    new-instance v0, Lw8e;
 
-    add-int/lit8 v4, v1, 0x4
+    const/4 v1, 0x0
 
-    invoke-static {v3, v4, v6, v0}, Lwti;->d([BIIZ)I
+    invoke-direct {v0, p0, v1}, Lw8e;-><init>(Lx8e;I)V
 
-    move-result v4
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    const v10, 0x45786966
-
-    if-ne v4, v10, :cond_0
-
-    add-int/lit8 v4, v1, 0x8
-
-    invoke-static {v3, v4, v8, v0}, Lwti;->d([BIIZ)I
-
-    move-result v4
-
-    if-nez v4, :cond_0
-
-    add-int/lit8 v1, v1, 0xa
-
-    add-int/lit8 v9, v9, -0x8
-
-    goto :goto_4
-
-    :cond_5
-    :goto_2
-    move v1, v0
-
-    goto/16 :goto_7
-
-    :cond_6
-    :goto_3
-    move v9, v0
-
-    move v1, v2
-
-    goto :goto_4
-
-    :cond_7
-    move v9, v0
-
-    :goto_4
-    if-le v9, v7, :cond_5
-
-    invoke-static {v3, v1, v6, v0}, Lwti;->d([BIIZ)I
-
-    move-result v2
-
-    const v4, 0x49492a00    # 823968.0f
-
-    if-eq v2, v4, :cond_8
-
-    const v10, 0x4d4d002a    # 2.1495875E8f
-
-    if-eq v2, v10, :cond_8
-
-    goto :goto_2
-
-    :cond_8
-    if-ne v2, v4, :cond_9
-
-    goto :goto_5
-
-    :cond_9
-    move v5, v0
-
-    :goto_5
-    add-int/lit8 v2, v1, 0x4
-
-    invoke-static {v3, v2, v6, v5}, Lwti;->d([BIIZ)I
-
-    move-result v2
-
-    add-int/2addr v2, v8
-
-    const/16 v4, 0xa
-
-    if-lt v2, v4, :cond_5
-
-    if-le v2, v9, :cond_a
-
-    goto :goto_2
-
-    :cond_a
-    add-int/2addr v1, v2
-
-    sub-int/2addr v9, v2
-
-    add-int/lit8 v2, v1, -0x2
-
-    invoke-static {v3, v2, v8, v5}, Lwti;->d([BIIZ)I
-
-    move-result v2
-
-    :goto_6
-    add-int/lit8 v4, v2, -0x1
-
-    if-lez v2, :cond_5
-
-    const/16 v2, 0xc
-
-    if-lt v9, v2, :cond_5
-
-    invoke-static {v3, v1, v8, v5}, Lwti;->d([BIIZ)I
-
-    move-result v2
-
-    const/16 v6, 0x112
-
-    if-ne v2, v6, :cond_e
-
-    add-int/2addr v1, v7
-
-    invoke-static {v3, v1, v8, v5}, Lwti;->d([BIIZ)I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    if-eq v1, v2, :cond_d
-
-    const/4 v2, 0x6
-
-    if-eq v1, v2, :cond_c
-
-    if-eq v1, v7, :cond_b
-
-    goto :goto_2
-
-    :cond_b
-    const/16 v1, 0x10e
-
-    goto :goto_7
-
-    :cond_c
-    const/16 v1, 0x5a
-
-    goto :goto_7
-
-    :cond_d
-    const/16 v1, 0xb4
-
-    goto :goto_7
-
-    :cond_e
-    add-int/lit8 v1, v1, 0xc
-
-    add-int/lit8 v9, v9, -0xc
-
-    move v2, v4
-
-    goto :goto_6
-
-    :goto_7
-    new-instance v9, Landroid/graphics/Matrix;
-
-    invoke-direct {v9}, Landroid/graphics/Matrix;-><init>()V
-
-    int-to-float v1, v1
-
-    invoke-virtual {v9, v1}, Landroid/graphics/Matrix;->setRotate(F)V
-
-    array-length v1, v3
-
-    invoke-static {v3, v0, v1}, Landroid/graphics/BitmapFactory;->decodeByteArray([BII)Landroid/graphics/Bitmap;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/graphics/Bitmap;->isMutable()Z
-
-    move-result v1
-
-    if-nez v1, :cond_f
-
-    invoke-virtual {v9}, Landroid/graphics/Matrix;->isIdentity()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_f
-
-    goto :goto_8
-
-    :cond_f
-    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v7
-
-    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v8
-
-    const/4 v10, 0x1
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    invoke-static/range {v4 .. v10}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
-
-    move-result-object v1
-
-    invoke-virtual {v4}, Landroid/graphics/Bitmap;->recycle()V
-
-    move-object v4, v1
-
-    :goto_8
-    new-instance v1, Luq0;
-
-    sget-object v2, Landroid/os/Environment;->DIRECTORY_PICTURES:Ljava/lang/String;
-
-    invoke-direct {v1, v2, v4}, Luq0;-><init>(Ljava/lang/String;Landroid/graphics/Bitmap;)V
-
-    invoke-interface {p1, v0}, Ljce;->f(Z)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {p1, v1, v0}, Ljce;->a(Lkce;Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
-
-    invoke-virtual {v4}, Landroid/graphics/Bitmap;->recycle()V
-
-    return-object p1
+    return-void
 .end method

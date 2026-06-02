@@ -1,167 +1,70 @@
-.class public final Lhze;
+.class public final synthetic Lhze;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lize;
-.implements Lj0f;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final X:Li0f;
+.field public final synthetic a:I
 
-.field public final Y:I
-
-.field public final a:Lqhg;
-
-.field public final b:J
-
-.field public final c:I
-
-.field public final d:Lqhg;
-
-.field public final o:Lg0f;
+.field public final synthetic b:Lize;
 
 
 # direct methods
-.method public constructor <init>(Lqhg;JILphg;Lf0f;I)V
-    .locals 2
+.method public synthetic constructor <init>(Lize;I)V
+    .locals 0
 
-    and-int/lit8 v0, p7, 0x10
+    iput p2, p0, Lhze;->a:I
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lhze;->b:Lize;
 
-    if-eqz v0, :cond_0
-
-    move-object p5, v1
-
-    :cond_0
-    and-int/lit8 v0, p7, 0x20
-
-    if-eqz v0, :cond_1
-
-    move-object p6, v1
-
-    :cond_1
-    and-int/lit8 p7, p7, 0x40
-
-    if-eqz p7, :cond_2
-
-    sget-object p7, Li0f;->b:Li0f;
-
-    goto :goto_0
-
-    :cond_2
-    sget-object p7, Li0f;->d:Li0f;
-
-    :goto_0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lhze;->a:Lqhg;
-
-    iput-wide p2, p0, Lhze;->b:J
-
-    iput p4, p0, Lhze;->c:I
-
-    iput-object p5, p0, Lhze;->d:Lqhg;
-
-    iput-object p6, p0, Lhze;->o:Lg0f;
-
-    iput-object p7, p0, Lhze;->X:Li0f;
-
-    sget p1, Leib;->f:I
-
-    iput p1, p0, Lhze;->Y:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    iget v0, p0, Lhze;->c:I
+    iget p1, p0, Lhze;->a:I
 
-    return v0
-.end method
+    packed-switch p1, :pswitch_data_0
 
-.method public final b()Lqhg;
-    .locals 1
+    iget-object p1, p0, Lhze;->b:Lize;
 
-    iget-object v0, p0, Lhze;->d:Lqhg;
+    iget-object v0, p1, Lize;->O0:Lfze;
 
-    return-object v0
-.end method
+    if-eqz v0, :cond_0
 
-.method public final c()Lyze;
-    .locals 1
+    iget-object p1, p1, Lize;->L0:Lo99;
 
-    const/4 v0, 0x0
+    invoke-interface {p1, v0}, Lo99;->o(Lfze;)V
 
-    return-object v0
-.end method
+    :cond_0
+    return-void
 
-.method public final d()Lqhg;
-    .locals 1
+    :pswitch_0
+    iget-object p1, p0, Lhze;->b:Lize;
 
-    const/4 v0, 0x0
+    iget-object v0, p1, Lize;->O0:Lfze;
 
-    return-object v0
-.end method
+    if-eqz v0, :cond_1
 
-.method public final e()Lg0f;
-    .locals 1
+    iget-object p1, p1, Lize;->L0:Lo99;
 
-    iget-object v0, p0, Lhze;->o:Lg0f;
+    invoke-interface {p1, v0}, Lo99;->h(Lfze;)V
 
-    return-object v0
-.end method
+    :cond_1
+    return-void
 
-.method public final f()Ly58;
-    .locals 1
+    nop
 
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    iget-wide v0, p0, Lhze;->b:J
-
-    return-wide v0
-.end method
-
-.method public final getTitle()Lqhg;
-    .locals 1
-
-    iget-object v0, p0, Lhze;->a:Lqhg;
-
-    return-object v0
-.end method
-
-.method public final getType()Li0f;
-    .locals 1
-
-    iget-object v0, p0, Lhze;->X:Li0f;
-
-    return-object v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    iget v0, p0, Lhze;->Y:I
-
-    return v0
-.end method
-
-.method public final t()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

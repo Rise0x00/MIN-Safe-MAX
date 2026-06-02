@@ -1,51 +1,74 @@
-.class public final Lumg;
-.super Lo84;
+.class public final synthetic Lumg;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic X:Lxmg;
+.field public final synthetic a:I
 
-.field public Y:I
-
-.field public d:Lp0b;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lsh0;
 
 
 # direct methods
-.method public constructor <init>(Lxmg;Lo84;)V
+.method public synthetic constructor <init>(Lsh0;)V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x1
+
+    iput v0, p0, Lumg;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lumg;->b:Lsh0;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lsh0;Landroid/graphics/Bitmap;)V
     .locals 0
 
-    iput-object p1, p0, Lumg;->X:Lxmg;
+    .line 2
+    const/4 p2, 0x0
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lumg;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lumg;->b:Lsh0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final run()V
     .locals 1
 
-    iput-object p1, p0, Lumg;->o:Ljava/lang/Object;
+    iget v0, p0, Lumg;->a:I
 
-    iget p1, p0, Lumg;->Y:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lumg;->b:Lsh0;
 
-    or-int/2addr p1, v0
+    iget-object v0, v0, Lsh0;->d:Lva2;
 
-    iput p1, p0, Lumg;->Y:I
+    return-void
 
-    iget-object p1, p0, Lumg;->X:Lxmg;
+    :pswitch_0
+    iget-object v0, p0, Lumg;->b:Lsh0;
 
-    const/4 v0, 0x0
+    iget-object v0, v0, Lsh0;->d:Lva2;
 
-    invoke-virtual {p1, v0, p0}, Lxmg;->n(Lp0b;Lo84;)Ljava/lang/Object;
+    return-void
 
-    move-result-object p1
+    nop
 
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

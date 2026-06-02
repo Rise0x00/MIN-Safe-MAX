@@ -1,29 +1,48 @@
-.class public interface abstract Lj4e;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lj4e;
+.super Lz84;
+
+
+# instance fields
+.field public final synthetic X:Li4e;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(Li4e;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lj4e;->X:Li4e;
+
+    invoke-direct {p0, p2}, Lz84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a(IF)V
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract b(Z)V
-.end method
+    iput-object p1, p0, Lj4e;->d:Ljava/lang/Object;
 
-.method public abstract c()V
-.end method
+    iget p1, p0, Lj4e;->o:I
 
-.method public abstract f()V
-.end method
+    const/high16 v0, -0x80000000
 
-.method public abstract h(F)V
-.end method
+    or-int/2addr p1, v0
 
-.method public abstract i()V
-.end method
+    iput p1, p0, Lj4e;->o:I
 
-.method public abstract k()V
-.end method
+    iget-object p1, p0, Lj4e;->X:Li4e;
 
-.method public abstract m([F)V
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Li4e;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

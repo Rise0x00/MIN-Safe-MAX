@@ -1,53 +1,129 @@
 .class public final Llne;
-.super Ltsd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic L0:I
+# interfaces
+.implements Ls45;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final F0:Lfy8;
+.field public final a:Ljava/lang/Runnable;
 
-.field public final G0:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+.field public final b:Lone;
 
-.field public final H0:Landroidx/appcompat/widget/AppCompatImageView;
-
-.field public I0:Line;
-
-.field public J0:Landroid/net/Uri;
-
-.field public K0:Landroid/net/Uri;
+.field public c:Ljava/lang/Thread;
 
 
 # direct methods
-.method public constructor <init>(Lfy8;Lone/me/sdk/uikit/common/views/OneMeDraweeView;Landroidx/appcompat/widget/AppCompatImageView;Landroidx/appcompat/widget/AppCompatImageView;Landroid/widget/FrameLayout;)V
+.method public constructor <init>(Ljava/lang/Runnable;Lone;)V
     .locals 0
 
-    invoke-direct {p0, p5}, Ltsd;-><init>(Landroid/view/View;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Llne;->F0:Lfy8;
+    iput-object p1, p0, Llne;->a:Ljava/lang/Runnable;
 
-    iput-object p2, p0, Llne;->G0:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    iput-object p4, p0, Llne;->H0:Landroidx/appcompat/widget/AppCompatImageView;
-
-    new-instance p1, Lkne;
-
-    const/4 p4, 0x0
-
-    invoke-direct {p1, p0, p4}, Lkne;-><init>(Llne;I)V
-
-    invoke-static {p2, p1}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    new-instance p1, Lkne;
-
-    const/4 p2, 0x1
-
-    invoke-direct {p1, p0, p2}, Lkne;-><init>(Llne;I)V
-
-    invoke-static {p3, p1}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    iput-object p2, p0, Llne;->b:Lone;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final dispose()V
+    .locals 2
+
+    iget-object v0, p0, Llne;->c:Ljava/lang/Thread;
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v1
+
+    if-ne v0, v1, :cond_1
+
+    iget-object v0, p0, Llne;->b:Lone;
+
+    instance-of v1, v0, Lrqa;
+
+    if-eqz v1, :cond_1
+
+    check-cast v0, Lrqa;
+
+    iget-boolean v1, v0, Lrqa;->b:Z
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lrqa;->b:Z
+
+    iget-object v0, v0, Lrqa;->a:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->shutdown()V
+
+    :cond_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Llne;->b:Lone;
+
+    invoke-interface {v0}, Ls45;->dispose()V
+
+    return-void
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    iget-object v0, p0, Llne;->b:Lone;
+
+    invoke-interface {v0}, Ls45;->f()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final run()V
+    .locals 2
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v0
+
+    iput-object v0, p0, Llne;->c:Ljava/lang/Thread;
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    iget-object v1, p0, Llne;->a:Ljava/lang/Runnable;
+
+    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p0}, Llne;->dispose()V
+
+    iput-object v0, p0, Llne;->c:Ljava/lang/Thread;
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    invoke-static {v1}, Lq98;->J(Ljava/lang/Throwable;)V
+
+    throw v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :catchall_1
+    move-exception v1
+
+    invoke-virtual {p0}, Llne;->dispose()V
+
+    iput-object v0, p0, Llne;->c:Ljava/lang/Thread;
+
+    throw v1
 .end method

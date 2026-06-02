@@ -1,155 +1,78 @@
-.class public final Lo04;
-.super Lp6g;
+.class public final synthetic Lo04;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lxs6;
 
 
 # instance fields
-.field public final synthetic X:Lp04;
+.field public final synthetic a:I
 
-.field public o:I
+.field public final synthetic b:Landroid/content/Context;
+
+.field public final synthetic c:Lq04;
 
 
 # direct methods
-.method public constructor <init>(Lp04;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Lq04;I)V
     .locals 0
 
-    iput-object p1, p0, Lo04;->X:Lp04;
+    iput p3, p0, Lo04;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lo04;->b:Landroid/content/Context;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lo04;->c:Lq04;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    check-cast p1, Lzb4;
+    iget v0, p0, Lo04;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lo04;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lo04;->b:Landroid/content/Context;
 
-    move-result-object p1
+    iget-object v1, p0, Lo04;->c:Lq04;
 
-    check-cast p1, Lo04;
+    invoke-static {v0, v1}, Lq04;->v(Landroid/content/Context;Lq04;)Landroid/widget/ImageView;
 
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lo04;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lo04;
-
-    iget-object v0, p0, Lo04;->X:Lp04;
-
-    invoke-direct {p1, v0, p2}, Lo04;-><init>(Lp04;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget v0, p0, Lo04;->o:I
-
-    sget-object v1, Lb3h;->a:Lb3h;
-
-    const/4 v2, 0x1
-
-    iget-object v3, p0, Lo04;->X:Lp04;
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, v3, Lp04;->B:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return-object v1
-
-    :cond_2
-    iget-object p1, v3, Lp04;->A:Ln8g;
-
-    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lhy6;
-
-    iput v2, p0, Lo04;->o:I
-
-    iget-object p1, p1, Lhy6;->a:Lo58;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lkfb;
-
-    iget-object p1, p1, Lkfb;->a:Lo58;
-
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lhdg;
-
-    new-instance v0, Lk06;
-
-    invoke-direct {v0}, Lk06;-><init>()V
-
-    invoke-virtual {p1, v0, p0}, Lhdg;->d(Lj2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_3
+    move-result-object v0
 
     return-object v0
 
-    :cond_3
-    :goto_0
-    check-cast p1, Lpvd;
+    :pswitch_0
+    iget-object v0, p0, Lo04;->b:Landroid/content/Context;
 
-    iget-wide v4, p1, Lpvd;->c:J
+    iget-object v1, p0, Lo04;->c:Lq04;
 
-    invoke-static {v3, v4, v5}, Lp04;->p(Lp04;J)V
+    invoke-static {v0, v1}, Lq04;->w(Landroid/content/Context;Lq04;)Landroid/widget/ImageView;
 
-    return-object v1
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lo04;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Lo04;->c:Lq04;
+
+    invoke-static {v0, v1}, Lq04;->x(Landroid/content/Context;Lq04;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

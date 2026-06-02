@@ -1,124 +1,161 @@
 .class public final Lhoh;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lnwe;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+.field public final X:I
 
-.field public synthetic o:J
+.field public final a:[J
+
+.field public final b:[J
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final o:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
+.method public constructor <init>([J[JJJJI)V
     .locals 0
 
-    iput-object p2, p0, Lhoh;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lhoh;->a:[J
 
-    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lhoh;->b:[J
+
+    iput-wide p3, p0, Lhoh;->c:J
+
+    iput-wide p5, p0, Lhoh;->d:J
+
+    iput-wide p7, p0, Lhoh;->o:J
+
+    iput p9, p0, Lhoh;->X:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()J
     .locals 2
-
-    check-cast p1, Lta5;
-
-    iget-wide v0, p1, Lta5;->a:J
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    new-instance p1, Lta5;
-
-    invoke-direct {p1, v0, v1}, Lta5;-><init>(J)V
-
-    invoke-virtual {p0, p1, p2}, Lhoh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lhoh;
-
-    sget-object p2, Lb3h;->a:Lb3h;
-
-    invoke-virtual {p1, p2}, Lhoh;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lhoh;
-
-    iget-object v1, p0, Lhoh;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    invoke-direct {v0, p2, v1}, Lhoh;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
-
-    check-cast p1, Lta5;
-
-    iget-wide p1, p1, Lta5;->a:J
-
-    iput-wide p1, v0, Lhoh;->o:J
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
 
     iget-wide v0, p0, Lhoh;->o:J
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    return-wide v0
+.end method
 
-    sget-object p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0:[Lz28;
+.method public final b(J)J
+    .locals 2
 
-    iget-object p1, p0, Lhoh;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    iget-object v0, p0, Lhoh;->b:[J
 
-    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->G0()Lqoh;
+    const/4 v1, 0x1
 
-    move-result-object v2
+    invoke-static {v0, p1, p2, v1}, Lpnh;->e([JJZ)I
 
-    invoke-interface {v2}, Lqoh;->getDuration()J
+    move-result p1
 
-    move-result-wide v2
+    iget-object p2, p0, Lhoh;->a:[J
 
-    iget-object p1, p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->B0:Lfyd;
+    aget-wide p1, p2, p1
 
-    invoke-virtual {p1}, Lfyd;->getValue()Ljava/lang/Object;
+    return-wide p1
+.end method
 
-    move-result-object p1
+.method public final c()Z
+    .locals 1
 
-    check-cast p1, Lsmh;
+    const/4 v0, 0x1
 
-    invoke-static {v0, v1}, Lta5;->f(J)J
+    return v0
+.end method
 
-    move-result-wide v0
+.method public final e(J)Ldwe;
+    .locals 9
 
-    long-to-float v0, v0
+    iget-object v0, p0, Lhoh;->a:[J
 
-    long-to-float v1, v2
+    const/4 v1, 0x1
 
-    div-float/2addr v0, v1
+    invoke-static {v0, p1, p2, v1}, Lpnh;->e([JJZ)I
 
-    const/4 v1, 0x0
+    move-result v2
 
-    const/high16 v2, 0x3f800000    # 1.0f
+    new-instance v3, Ljwe;
 
-    invoke-static {v0, v1, v2}, Lamj;->c(FFF)F
+    aget-wide v4, v0, v2
 
-    move-result v0
+    iget-object v6, p0, Lhoh;->b:[J
 
-    invoke-virtual {p1, v0}, Lsmh;->setProgress(F)V
+    aget-wide v7, v6, v2
 
-    sget-object p1, Lb3h;->a:Lb3h;
+    invoke-direct {v3, v4, v5, v7, v8}, Ljwe;-><init>(JJ)V
+
+    cmp-long p1, v4, p1
+
+    if-gez p1, :cond_1
+
+    array-length p1, v0
+
+    sub-int/2addr p1, v1
+
+    if-ne v2, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljwe;
+
+    add-int/2addr v2, v1
+
+    aget-wide v4, v0, v2
+
+    aget-wide v0, v6, v2
+
+    invoke-direct {p1, v4, v5, v0, v1}, Ljwe;-><init>(JJ)V
+
+    new-instance p2, Ldwe;
+
+    invoke-direct {p2, v3, p1}, Ldwe;-><init>(Ljwe;Ljwe;)V
+
+    return-object p2
+
+    :cond_1
+    :goto_0
+    new-instance p1, Ldwe;
+
+    invoke-direct {p1, v3, v3}, Ldwe;-><init>(Ljwe;Ljwe;)V
 
     return-object p1
+.end method
+
+.method public final f()J
+    .locals 2
+
+    iget-wide v0, p0, Lhoh;->c:J
+
+    return-wide v0
+.end method
+
+.method public final g()J
+    .locals 2
+
+    iget-wide v0, p0, Lhoh;->d:J
+
+    return-wide v0
+.end method
+
+.method public final h()I
+    .locals 1
+
+    iget v0, p0, Lhoh;->X:I
+
+    return v0
 .end method

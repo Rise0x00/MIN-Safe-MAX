@@ -4,126 +4,60 @@
 
 
 # instance fields
-.field public final a:Lnue;
+.field public final a:Lcsc;
 
-.field public final b:Lu31;
+.field public final b:Lia8;
+
+.field public final c:Lia8;
+
+.field public final d:Lia8;
+
+.field public final e:Lia8;
+
+.field public final f:Lia8;
+
+.field public final g:Lia8;
+
+.field public final h:Lia8;
+
+.field public final i:Lia8;
+
+.field public final j:Lia8;
+
+.field public final k:Lwcb;
+
+.field public final l:Lia8;
 
 
 # direct methods
-.method public constructor <init>(Lnue;Lu31;)V
+.method public constructor <init>(Lcsc;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lia8;Lwcb;Lia8;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvt;->a:Lnue;
+    iput-object p1, p0, Lvt;->a:Lcsc;
 
-    iput-object p2, p0, Lvt;->b:Lu31;
+    iput-object p2, p0, Lvt;->b:Lia8;
+
+    iput-object p3, p0, Lvt;->c:Lia8;
+
+    iput-object p4, p0, Lvt;->d:Lia8;
+
+    iput-object p5, p0, Lvt;->e:Lia8;
+
+    iput-object p7, p0, Lvt;->f:Lia8;
+
+    iput-object p8, p0, Lvt;->g:Lia8;
+
+    iput-object p9, p0, Lvt;->h:Lia8;
+
+    iput-object p10, p0, Lvt;->i:Lia8;
+
+    iput-object p11, p0, Lvt;->j:Lia8;
+
+    iput-object p12, p0, Lvt;->k:Lwcb;
+
+    iput-object p13, p0, Lvt;->l:Lia8;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lvt;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lvt;
-
-    iget-object v1, p0, Lvt;->a:Lnue;
-
-    iget-object v3, p1, Lvt;->a:Lnue;
-
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lvt;->b:Lu31;
-
-    iget-object p1, p1, Lvt;->b:Lu31;
-
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lvt;->a:Lnue;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lvt;->b:Lu31;
-
-    invoke-virtual {v1}, Lu31;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "StartAsrRecord(sessionRoomId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lvt;->a:Lnue;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", callAsrInfo="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lvt;->b:Lu31;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

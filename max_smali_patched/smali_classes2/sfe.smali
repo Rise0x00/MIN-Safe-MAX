@@ -1,400 +1,157 @@
-.class public final Lsfe;
-.super Ljava/lang/Object;
+.class public final enum Lsfe;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Llq6;
 
+# static fields
+.field public static final synthetic A0:[Lsfe;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum X:Lsfe;
 
-.field public final synthetic b:Lr5;
+.field public static final enum Y:Lsfe;
+
+.field public static final enum Z:Lsfe;
+
+.field public static final enum a:Lsfe;
+
+.field public static final enum b:Lsfe;
+
+.field public static final enum c:Lsfe;
+
+.field public static final enum d:Lsfe;
+
+.field public static final enum o:Lsfe;
+
+.field public static final enum z0:Lsfe;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lr5;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 11
 
-    iput p2, p0, Lsfe;->a:I
+    new-instance v0, Lsfe;
 
-    iput-object p1, p0, Lsfe;->b:Lr5;
+    const-string v1, "NEUTRAL"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lsfe;->a:Lsfe;
+
+    new-instance v1, Lsfe;
+
+    const-string v2, "SECONDARY_CONTRAST"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lsfe;->b:Lsfe;
+
+    new-instance v2, Lsfe;
+
+    const-string v3, "POSITIVE"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lsfe;->c:Lsfe;
+
+    new-instance v3, Lsfe;
+
+    const-string v4, "NEGATIVE"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lsfe;->d:Lsfe;
+
+    new-instance v4, Lsfe;
+
+    const-string v5, "SELECTED"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lsfe;->o:Lsfe;
+
+    new-instance v5, Lsfe;
+
+    const-string v6, "CONTRAST"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lsfe;->X:Lsfe;
+
+    new-instance v6, Lsfe;
+
+    const-string v7, "INACTIVE"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, Lsfe;->Y:Lsfe;
+
+    new-instance v7, Lsfe;
+
+    const-string v8, "SELECTED_THEMED"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v7, Lsfe;->Z:Lsfe;
+
+    new-instance v8, Lsfe;
+
+    const-string v9, "NONE"
+
+    const/16 v10, 0x8
+
+    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v8, Lsfe;->z0:Lsfe;
+
+    filled-new-array/range {v0 .. v8}, [Lsfe;
+
+    move-result-object v0
+
+    sput-object v0, Lsfe;->A0:[Lsfe;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lsfe;
+    .locals 1
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+    const-class v0, Lsfe;
 
-    iget v0, p0, Lsfe;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iget-object v0, p0, Lsfe;->b:Lr5;
+    check-cast p0, Lsfe;
 
-    const/16 v1, 0x72
+    return-object p0
+.end method
 
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
+.method public static values()[Lsfe;
+    .locals 1
 
-    move-result-object v0
+    sget-object v0, Lsfe;->A0:[Lsfe;
 
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0x98
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0x72
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
+    check-cast v0, [Lsfe;
 
     return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0xf7
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_3
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0x18d
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_4
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0x72
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_5
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0x9f
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_6
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0x72
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_7
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0x46
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_8
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0xb8
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_9
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0xd
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_a
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0xf4
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_b
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0x9f
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_c
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0x28
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_d
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0x120
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_e
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0xf6
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_f
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0xb9
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_10
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0xcb
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_11
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0x18d
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_12
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0x98
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_13
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0x136
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_14
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0xb8
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_15
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0xd
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_16
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0x18d
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_17
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0x98
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_18
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0x72
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_19
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0xe7
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1a
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0xb5
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1b
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0x98
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1c
-    iget-object v0, p0, Lsfe;->b:Lr5;
-
-    const/16 v1, 0x33
-
-    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

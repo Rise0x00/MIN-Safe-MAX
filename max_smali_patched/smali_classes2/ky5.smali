@@ -1,48 +1,48 @@
 .class public final Lky5;
-.super Lo84;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/view/ViewGroup$OnHierarchyChangeListener;
 
 
 # instance fields
-.field public final synthetic X:Lr3;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final synthetic a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
 
 
 # direct methods
-.method public constructor <init>(Lr3;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lcom/futuremind/recyclerviewfastscroll/FastScroller;)V
     .locals 0
 
-    iput-object p1, p0, Lky5;->X:Lr3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lky5;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onChildViewAdded(Landroid/view/View;Landroid/view/View;)V
+    .locals 0
 
-    iput-object p1, p0, Lky5;->d:Ljava/lang/Object;
+    sget p1, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->H0:I
 
-    iget p1, p0, Lky5;->o:I
+    iget-object p1, p0, Lky5;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {p1}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->b()V
 
-    or-int/2addr p1, v0
+    return-void
+.end method
 
-    iput p1, p0, Lky5;->o:I
+.method public final onChildViewRemoved(Landroid/view/View;Landroid/view/View;)V
+    .locals 0
 
-    iget-object p1, p0, Lky5;->X:Lr3;
+    sget p1, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->H0:I
 
-    const/4 v0, 0x0
+    iget-object p1, p0, Lky5;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
 
-    invoke-virtual {p1, v0, p0}, Lr3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->b()V
 
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

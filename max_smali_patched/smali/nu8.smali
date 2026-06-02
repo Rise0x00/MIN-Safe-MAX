@@ -1,296 +1,100 @@
-.class public Lnu8;
-.super Landroid/graphics/drawable/Drawable$ConstantState;
+.class public abstract Lnu8;
+.super Lhc4;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Lw4f;
+# virtual methods
+.method public abstract getImmediate()Lnu8;
+.end method
 
-.field public b:Lce5;
+.method public limitedParallelism(ILjava/lang/String;)Lhc4;
+    .locals 0
 
-.field public c:Landroid/content/res/ColorStateList;
+    invoke-static {p1}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->checkParallelism(I)V
 
-.field public d:Landroid/content/res/ColorStateList;
+    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->namedOrThis(Lhc4;Ljava/lang/String;)Lhc4;
 
-.field public e:Landroid/content/res/ColorStateList;
+    move-result-object p1
 
-.field public f:Landroid/graphics/PorterDuff$Mode;
+    return-object p1
+.end method
 
-.field public g:Landroid/graphics/Rect;
-
-.field public final h:F
-
-.field public i:F
-
-.field public j:F
-
-.field public k:I
-
-.field public l:F
-
-.field public m:F
-
-.field public n:I
-
-.field public o:I
-
-.field public p:I
-
-.field public final q:Landroid/graphics/Paint$Style;
-
-
-# direct methods
-.method public constructor <init>(Lnu8;)V
+.method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 18
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
+    invoke-virtual {p0}, Lnu8;->toStringInternalImpl()Ljava/lang/String;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    .line 19
-    iput-object v0, p0, Lnu8;->c:Landroid/content/res/ColorStateList;
+    if-nez v0, :cond_0
 
-    .line 20
-    iput-object v0, p0, Lnu8;->d:Landroid/content/res/ColorStateList;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 21
-    iput-object v0, p0, Lnu8;->e:Landroid/content/res/ColorStateList;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 22
-    sget-object v1, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object v1, p0, Lnu8;->f:Landroid/graphics/PorterDuff$Mode;
+    move-result-object v1
 
-    .line 23
-    iput-object v0, p0, Lnu8;->g:Landroid/graphics/Rect;
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    move-result-object v1
 
-    .line 24
-    iput v0, p0, Lnu8;->h:F
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 25
-    iput v0, p0, Lnu8;->i:F
+    const/16 v1, 0x40
 
-    const/16 v0, 0xff
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 26
-    iput v0, p0, Lnu8;->k:I
+    invoke-static {p0}, Lnm4;->I(Ljava/lang/Object;)Ljava/lang/String;
 
-    const/4 v0, 0x0
+    move-result-object v1
 
-    .line 27
-    iput v0, p0, Lnu8;->l:F
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 28
-    iput v0, p0, Lnu8;->m:F
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/4 v0, 0x0
-
-    .line 29
-    iput v0, p0, Lnu8;->n:I
-
-    .line 30
-    iput v0, p0, Lnu8;->o:I
-
-    .line 31
-    iput v0, p0, Lnu8;->p:I
-
-    .line 32
-    sget-object v0, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
-
-    iput-object v0, p0, Lnu8;->q:Landroid/graphics/Paint$Style;
-
-    .line 33
-    iget-object v0, p1, Lnu8;->a:Lw4f;
-
-    iput-object v0, p0, Lnu8;->a:Lw4f;
-
-    .line 34
-    iget-object v0, p1, Lnu8;->b:Lce5;
-
-    iput-object v0, p0, Lnu8;->b:Lce5;
-
-    .line 35
-    iget v0, p1, Lnu8;->j:F
-
-    iput v0, p0, Lnu8;->j:F
-
-    .line 36
-    iget-object v0, p1, Lnu8;->c:Landroid/content/res/ColorStateList;
-
-    iput-object v0, p0, Lnu8;->c:Landroid/content/res/ColorStateList;
-
-    .line 37
-    iget-object v0, p1, Lnu8;->d:Landroid/content/res/ColorStateList;
-
-    iput-object v0, p0, Lnu8;->d:Landroid/content/res/ColorStateList;
-
-    .line 38
-    iget-object v0, p1, Lnu8;->f:Landroid/graphics/PorterDuff$Mode;
-
-    iput-object v0, p0, Lnu8;->f:Landroid/graphics/PorterDuff$Mode;
-
-    .line 39
-    iget-object v0, p1, Lnu8;->e:Landroid/content/res/ColorStateList;
-
-    iput-object v0, p0, Lnu8;->e:Landroid/content/res/ColorStateList;
-
-    .line 40
-    iget v0, p1, Lnu8;->k:I
-
-    iput v0, p0, Lnu8;->k:I
-
-    .line 41
-    iget v0, p1, Lnu8;->h:F
-
-    iput v0, p0, Lnu8;->h:F
-
-    .line 42
-    iget v0, p1, Lnu8;->p:I
-
-    iput v0, p0, Lnu8;->p:I
-
-    .line 43
-    iget v0, p1, Lnu8;->n:I
-
-    iput v0, p0, Lnu8;->n:I
-
-    .line 44
-    iget v0, p1, Lnu8;->i:F
-
-    iput v0, p0, Lnu8;->i:F
-
-    .line 45
-    iget v0, p1, Lnu8;->l:F
-
-    iput v0, p0, Lnu8;->l:F
-
-    .line 46
-    iget v0, p1, Lnu8;->m:F
-
-    iput v0, p0, Lnu8;->m:F
-
-    .line 47
-    iget v0, p1, Lnu8;->o:I
-
-    iput v0, p0, Lnu8;->o:I
-
-    .line 48
-    iget-object v0, p1, Lnu8;->q:Landroid/graphics/Paint$Style;
-
-    iput-object v0, p0, Lnu8;->q:Landroid/graphics/Paint$Style;
-
-    .line 49
-    iget-object v0, p1, Lnu8;->g:Landroid/graphics/Rect;
-
-    if-eqz v0, :cond_0
-
-    .line 50
-    new-instance v0, Landroid/graphics/Rect;
-
-    iget-object p1, p1, Lnu8;->g:Landroid/graphics/Rect;
-
-    invoke-direct {v0, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
-
-    iput-object v0, p0, Lnu8;->g:Landroid/graphics/Rect;
+    move-result-object v0
 
     :cond_0
-    return-void
+    return-object v0
 .end method
 
-.method public constructor <init>(Lw4f;)V
+.method public final toStringInternalImpl()Ljava/lang/String;
     .locals 2
 
-    .line 1
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
+    sget-object v0, Lj45;->a:Ltu4;
 
-    const/4 v0, 0x0
+    sget-object v0, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lnu8;
 
-    .line 2
-    iput-object v0, p0, Lnu8;->c:Landroid/content/res/ColorStateList;
+    if-ne p0, v0, :cond_0
 
-    .line 3
-    iput-object v0, p0, Lnu8;->d:Landroid/content/res/ColorStateList;
-
-    .line 4
-    iput-object v0, p0, Lnu8;->e:Landroid/content/res/ColorStateList;
-
-    .line 5
-    sget-object v1, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
-
-    iput-object v1, p0, Lnu8;->f:Landroid/graphics/PorterDuff$Mode;
-
-    .line 6
-    iput-object v0, p0, Lnu8;->g:Landroid/graphics/Rect;
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    .line 7
-    iput v1, p0, Lnu8;->h:F
-
-    .line 8
-    iput v1, p0, Lnu8;->i:F
-
-    const/16 v1, 0xff
-
-    .line 9
-    iput v1, p0, Lnu8;->k:I
-
-    const/4 v1, 0x0
-
-    .line 10
-    iput v1, p0, Lnu8;->l:F
-
-    .line 11
-    iput v1, p0, Lnu8;->m:F
-
-    const/4 v1, 0x0
-
-    .line 12
-    iput v1, p0, Lnu8;->n:I
-
-    .line 13
-    iput v1, p0, Lnu8;->o:I
-
-    .line 14
-    iput v1, p0, Lnu8;->p:I
-
-    .line 15
-    sget-object v1, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
-
-    iput-object v1, p0, Lnu8;->q:Landroid/graphics/Paint$Style;
-
-    .line 16
-    iput-object p1, p0, Lnu8;->a:Lw4f;
-
-    .line 17
-    iput-object v0, p0, Lnu8;->b:Lce5;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final getChangingConfigurations()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public newDrawable()Landroid/graphics/drawable/Drawable;
-    .locals 2
-
-    new-instance v0, Lou8;
-
-    invoke-direct {v0, p0}, Lou8;-><init>(Lnu8;)V
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Lou8;->o:Z
+    const-string v0, "Dispatchers.Main"
 
     return-object v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :try_start_0
+    invoke-virtual {v0}, Lnu8;->getImmediate()Lnu8;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-object v0, v1
+
+    :goto_0
+    if-ne p0, v0, :cond_1
+
+    const-string v0, "Dispatchers.Main.immediate"
+
+    return-object v0
+
+    :cond_1
+    return-object v1
 .end method

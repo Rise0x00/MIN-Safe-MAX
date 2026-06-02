@@ -1,51 +1,49 @@
-.class public final Lx05;
+.class public abstract Lx05;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Lq7f;
+# static fields
+.field public static final a:Ljava/util/List;
 
-.field public b:Ln7f;
 
-.field public c:Lcrd;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 5
 
-.field public d:Ljava/util/concurrent/ExecutorService;
+    new-instance v0, Lw05;
 
-.field public e:Landroid/content/Context;
+    const/4 v1, 0x0
 
-.field public f:Lorg/webrtc/EglBase;
+    const-string v2, "\u041e\u0431\u0449\u0435\u0435"
 
-.field public g:Lzea;
+    invoke-direct {v0, v1, v2}, Lw05;-><init>(ILjava/lang/String;)V
 
-.field public h:Lcl1;
+    new-instance v1, Lw05;
 
-.field public i:Lqbf;
+    const/4 v2, 0x1
 
-.field public j:Lrk1;
+    const-string v3, "\u0420\u0443\u0431\u0438\u043b\u044c\u043d\u0438\u043a\u0438"
 
-.field public k:Lahd;
+    invoke-direct {v1, v2, v3}, Lw05;-><init>(ILjava/lang/String;)V
 
-.field public l:Ldhd;
+    new-instance v2, Lw05;
 
-.field public m:Ly46;
+    const/4 v3, 0x2
 
-.field public n:Z
+    const-string v4, "\u0418\u043d\u0444\u043e"
 
-.field public o:Lakj;
+    invoke-direct {v2, v3, v4}, Lw05;-><init>(ILjava/lang/String;)V
 
-.field public p:Lzh;
+    filled-new-array {v0, v1, v2}, [Lw05;
 
-.field public q:Lnh1;
+    move-result-object v0
 
-.field public r:Lhw8;
+    invoke-static {v0}, Ljj3;->M0([Ljava/lang/Object;)Ljava/util/List;
 
-.field public s:Lm5e;
+    move-result-object v0
 
-.field public t:Lxkg;
+    sput-object v0, Lx05;->a:Ljava/util/List;
 
-.field public u:Ls11;
-
-.field public v:Ls11;
-
-.field public w:Lr11;
+    return-void
+.end method

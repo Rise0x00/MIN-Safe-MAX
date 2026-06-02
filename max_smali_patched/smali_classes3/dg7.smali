@@ -1,77 +1,61 @@
 .class public final Ldg7;
-.super Ljava/lang/Object;
+.super Lj2k;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/time/Clock;
-
-.field public final b:Ljava/util/concurrent/ScheduledExecutorService;
-
-.field public final c:I
-
-.field public volatile d:J
-
-.field public final e:Lz2d;
-
-.field public volatile f:Ljava/util/function/IntSupplier;
-
-.field public volatile g:Ljava/time/Instant;
-
-.field public volatile h:Z
-
-.field public volatile i:I
-
-.field public j:Ljava/util/concurrent/ScheduledFuture;
+# static fields
+.field public static final a:Ldg7;
 
 
 # direct methods
-.method public constructor <init>(Lz2d;)V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-static {}, Ljava/time/Clock;->systemUTC()Ljava/time/Clock;
+    new-instance v0, Ldg7;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Ldg7;->a:Ljava/time/Clock;
-
-    iput-object p1, p0, Ldg7;->e:Lz2d;
-
-    new-instance p1, Lcg7;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ldg7;->f:Ljava/util/function/IntSupplier;
-
-    const/16 p1, 0x3e8
-
-    iput p1, p0, Ldg7;->c:I
-
-    new-instance p1, Lpg4;
-
-    const-string v1, "idle-timer"
-
-    const/4 v2, 0x0
-
-    invoke-direct {p1, v1, v2}, Lpg4;-><init>(Ljava/lang/String;I)V
-
-    const/4 v1, 0x1
-
-    invoke-static {v1, p1}, Ljava/util/concurrent/Executors;->newScheduledThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ScheduledExecutorService;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ldg7;->b:Ljava/util/concurrent/ScheduledExecutorService;
-
-    invoke-virtual {v0}, Ljava/time/Clock;->instant()Ljava/time/Instant;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ldg7;->g:Ljava/time/Instant;
-
-    iput v1, p0, Ldg7;->i:I
+    sput-object v0, Ldg7;->a:Ldg7;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Ldg7;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x7d6cd3a3
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ResponseReady"
+
+    return-object v0
 .end method

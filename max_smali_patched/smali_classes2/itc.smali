@@ -1,119 +1,79 @@
 .class public final Litc;
-.super Lie0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
+# static fields
+.field public static final a:Lltc;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    const/16 v0, 0x10
-
-    invoke-direct {p0, v0}, Lie0;-><init>(I)V
-
-    iput-object p1, p0, Litc;->b:Ljava/lang/String;
-
-    iput-object p2, p0, Litc;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method static constructor <clinit>()V
     .locals 4
 
-    const/4 v0, 0x1
+    sget-object v0, Lm96;->c:Lm96;
 
-    if-ne p0, p1, :cond_0
+    sget-object v1, Lh9e;->c:Lh9e;
 
-    return v0
+    new-instance v2, Lg9e;
 
-    :cond_0
-    instance-of v1, p1, Litc;
+    const/4 v3, 0x0
 
-    const/4 v2, 0x0
+    invoke-direct {v2, v0, v1, v3}, Lg9e;-><init>(Lm96;Lh9e;Ljc5;)V
 
-    if-nez v1, :cond_1
+    new-instance v0, Lyi7;
 
-    return v2
+    const/4 v1, 0x2
 
-    :cond_1
-    check-cast p1, Litc;
+    invoke-direct {v0, v1}, Lyi7;-><init>(I)V
 
-    iget-object v1, p0, Litc;->b:Ljava/lang/String;
+    sget-object v1, Limh;->o0:Lkf0;
 
-    iget-object v3, p1, Litc;->b:Ljava/lang/String;
+    const/4 v3, 0x2
 
-    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result v1
+    move-result-object v3
 
-    if-nez v1, :cond_2
+    iget-object v0, v0, Lyi7;->b:Lnia;
 
-    return v2
+    invoke-virtual {v0, v1, v3}, Lnia;->p(Lkf0;Ljava/lang/Object;)V
 
-    :cond_2
-    iget-object v1, p0, Litc;->c:Ljava/lang/String;
+    sget-object v1, Lfl7;->D:Lkf0;
 
-    iget-object p1, p1, Litc;->c:Ljava/lang/String;
+    const/4 v3, 0x0
 
-    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result p1
+    move-result-object v3
 
-    if-nez p1, :cond_3
+    invoke-virtual {v0, v1, v3}, Lnia;->p(Lkf0;Ljava/lang/Object;)V
 
-    return v2
+    sget-object v1, Lfl7;->L:Lkf0;
 
-    :cond_3
-    return v0
-.end method
+    invoke-virtual {v0, v1, v2}, Lnia;->p(Lkf0;Ljava/lang/Object;)V
 
-.method public final hashCode()I
-    .locals 2
+    sget-object v1, Limh;->t0:Lkf0;
 
-    iget-object v0, p0, Litc;->b:Ljava/lang/String;
+    sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v0, v1, v2}, Lnia;->p(Lkf0;Ljava/lang/Object;)V
 
-    move-result v0
+    sget-object v1, Lvk7;->C:Lkf0;
 
-    mul-int/lit8 v0, v0, 0x1f
+    sget-object v2, Lie5;->c:Lie5;
 
-    iget-object v1, p0, Litc;->c:Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Lnia;->p(Lkf0;Ljava/lang/Object;)V
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    new-instance v1, Lltc;
 
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", path="
-
-    const-string v1, ")"
-
-    const-string v2, "CropAvatar(uriAsString="
-
-    iget-object v3, p0, Litc;->b:Ljava/lang/String;
-
-    iget-object v4, p0, Litc;->c:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcvb;->b(Lps3;)Lcvb;
 
     move-result-object v0
 
-    return-object v0
+    invoke-direct {v1, v0}, Lltc;-><init>(Lcvb;)V
+
+    sput-object v1, Litc;->a:Lltc;
+
+    return-void
 .end method

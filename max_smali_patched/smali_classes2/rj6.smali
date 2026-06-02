@@ -1,154 +1,136 @@
-.class public abstract Lrj6;
+.class public final synthetic Lrj6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxs6;
 
-# static fields
-.field public static final a:Le0c;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
+    .locals 0
 
-    new-instance v0, Lktb;
+    iput p2, p0, Lrj6;->a:I
 
-    const/4 v1, 0x4
+    iput-object p1, p0, Lrj6;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v1
+    return-void
+.end method
 
-    sget-object v2, Lqj6;->a:Lqj6;
 
-    invoke-direct {v0, v1, v2}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 10
 
-    new-instance v1, Lktb;
+    iget v0, p0, Lrj6;->a:I
 
-    const/4 v2, 0x3
+    const/4 v1, 0x0
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v2, p0, Lrj6;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
-    move-result-object v2
+    packed-switch v0, :pswitch_data_0
 
-    sget-object v3, Lqj6;->b:Lqj6;
+    sget-object v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->C0:[Lb88;
 
-    invoke-direct {v1, v2, v3}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    new-instance v0, Lycb;
 
-    new-instance v2, Lktb;
-
-    const/4 v3, 0x2
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    sget-object v4, Lqj6;->c:Lqj6;
+    invoke-direct {v0, v3}, Lycb;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {v2, v3, v4}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setClipChildren(Z)V
 
-    new-instance v3, Lktb;
+    sget v1, Lxhe;->a1:I
+
+    invoke-virtual {v0, v1}, Lycb;->setIcon(I)V
+
+    sget v1, Lbeb;->w:I
+
+    new-instance v3, Ldtg;
+
+    invoke-direct {v3, v1}, Ldtg;-><init>(I)V
+
+    invoke-virtual {v0, v3}, Lycb;->setTitle(Litg;)V
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    sget v3, Lbeb;->t:I
+
+    invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v3, Ltj6;
 
     const/4 v4, 0x1
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {v3, v2, v4}, Ltj6;-><init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
 
-    move-result-object v4
+    invoke-virtual {v0, v1, v3}, Lycb;->f(Ljava/lang/String;Landroid/view/View$OnClickListener;)V
 
-    sget-object v5, Lqj6;->d:Lqj6;
+    return-object v0
 
-    invoke-direct {v3, v4, v5}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    :pswitch_0
+    iget-object v0, v2, Lone/me/folders/pickerfolders/FoldersPickerScreen;->o:Lg;
 
-    new-instance v4, Lktb;
-
-    const/4 v5, 0x0
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    sget-object v6, Lqj6;->o:Lqj6;
-
-    invoke-direct {v4, v5, v6}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lktb;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lz5;
 
     move-result-object v0
 
-    invoke-static {v0}, Lkpj;->b([Lktb;)Le0c;
+    const/16 v3, 0x357
+
+    invoke-virtual {v0, v3}, Lz5;->c(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    sput-object v0, Lrj6;->a:Le0c;
+    check-cast v0, Lgk6;
 
-    invoke-virtual {v0}, Lk2;->entrySet()Ljava/util/Set;
+    iget-object v3, v2, Lone/me/folders/pickerfolders/FoldersPickerScreen;->b:Lfu;
 
-    move-result-object v0
+    sget-object v4, Lone/me/folders/pickerfolders/FoldersPickerScreen;->C0:[Lb88;
 
-    const/16 v1, 0xa
+    aget-object v1, v4, v1
 
-    invoke-static {v0, v1}, Lri3;->n(Ljava/lang/Iterable;I)I
-
-    move-result v1
-
-    invoke-static {v1}, Lss8;->h(I)I
-
-    move-result v1
-
-    const/16 v2, 0x10
-
-    if-ge v1, v2, :cond_0
-
-    move v1, v2
-
-    :cond_0
-    new-instance v2, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v2, v1}, Ljava/util/LinkedHashMap;-><init>(I)V
-
-    check-cast v0, Ll0c;
-
-    invoke-virtual {v0}, Ll0c;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v3, v2}, Lfu;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Ljava/util/Map$Entry;
+    move-object v3, v1
 
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    check-cast v3, [J
 
-    move-result-object v3
+    new-instance v2, Lfk6;
 
-    check-cast v3, Lqj6;
+    iget-object v4, v0, Lgk6;->a:Luf4;
 
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    iget-object v5, v0, Lgk6;->b:Ldng;
 
-    move-result-object v1
+    iget-object v6, v0, Lgk6;->c:Lthh;
 
-    check-cast v1, Ljava/lang/Number;
+    iget-object v7, v0, Lgk6;->d:Lia8;
 
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+    iget-object v8, v0, Lgk6;->e:Lia8;
 
-    move-result v1
+    iget-object v9, v0, Lgk6;->f:Lia8;
 
-    invoke-static {v1}, Lmbh;->C(I)Ljava/lang/String;
+    invoke-direct/range {v2 .. v9}, Lfk6;-><init>([JLuf4;Ldng;Lthh;Lia8;Lia8;Lia8;)V
 
-    move-result-object v1
+    return-object v2
 
-    invoke-interface {v2, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_1
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

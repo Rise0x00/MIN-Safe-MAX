@@ -1,53 +1,61 @@
-.class public final Lgmg;
-.super Lo84;
+.class public abstract Lgmg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public a:I
 
-.field public final synthetic Y:Lxmg;
+.field public b:Ljava/nio/ByteBuffer;
 
-.field public Z:I
+.field public c:I
 
-.field public d:Ljava/nio/ByteBuffer;
-
-.field public o:Lxmg;
+.field public d:I
 
 
 # direct methods
-.method public constructor <init>(Lxmg;Lo84;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lgmg;->Y:Lxmg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    sget-object v0, Ljke;->a:Ljke;
 
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljke;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ljke;->a:Ljke;
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(I)I
+    .locals 2
 
-    iput-object p1, p0, Lgmg;->X:Ljava/lang/Object;
+    iget v0, p0, Lgmg;->d:I
 
-    iget p1, p0, Lgmg;->Z:I
+    if-ge p1, v0, :cond_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lgmg;->b:Ljava/nio/ByteBuffer;
 
-    or-int/2addr p1, v0
+    iget v1, p0, Lgmg;->c:I
 
-    iput p1, p0, Lgmg;->Z:I
+    add-int/2addr v1, p1
 
-    iget-object p1, p0, Lgmg;->Y:Lxmg;
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->getShort(I)S
 
-    const/4 v0, 0x0
+    move-result p1
 
-    invoke-virtual {p1, v0, p0}, Lxmg;->a(Ljava/nio/ByteBuffer;Lo84;)Ljava/lang/Object;
+    return p1
 
-    move-result-object p1
+    :cond_0
+    const/4 p1, 0x0
 
-    return-object p1
+    return p1
 .end method

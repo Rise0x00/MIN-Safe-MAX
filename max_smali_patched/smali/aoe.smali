@@ -1,58 +1,159 @@
-.class public final synthetic Laoe;
-.super Lqr6;
+.class public abstract Laoe;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # static fields
-.field public static final a:Laoe;
+.field public static final a:Lwrf;
+
+.field public static final b:Lor3;
+
+.field public static final c:Lpz7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 2
 
-    new-instance v0, Laoe;
+    const-string v0, "Scheduler Supplier result can\'t be null"
 
-    const-string v4, "createSegment(JLkotlinx/coroutines/sync/SemaphoreSegment;)Lkotlinx/coroutines/sync/SemaphoreSegment;"
+    :try_start_0
+    sget-object v1, Lzne;->a:Lwrf;
 
-    const/4 v5, 0x1
+    invoke-static {v1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_3
 
-    const/4 v1, 0x2
+    sput-object v1, Laoe;->a:Lwrf;
 
-    const-class v2, Ldoe;
+    :try_start_1
+    sget-object v1, Lwne;->a:Lor3;
 
-    const-string v3, "createSegment"
+    invoke-static {v1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    invoke-direct/range {v0 .. v5}, Lqr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    sput-object v1, Laoe;->b:Lor3;
 
-    sput-object v0, Laoe;->a:Laoe;
+    :try_start_2
+    sget-object v1, Lxne;->a:Lpz7;
+
+    invoke-static {v1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    sput-object v1, Laoe;->c:Lpz7;
+
+    sget v1, Ln4h;->c:I
+
+    :try_start_3
+    sget-object v1, Lyne;->a:Lqqa;
+
+    invoke-static {v1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lbq5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    move-result-object v0
+
+    throw v0
+
+    :catchall_1
+    move-exception v0
+
+    invoke-static {v0}, Lbq5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    move-result-object v0
+
+    throw v0
+
+    :catchall_2
+    move-exception v0
+
+    invoke-static {v0}, Lbq5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    move-result-object v0
+
+    throw v0
+
+    :catchall_3
+    move-exception v0
+
+    invoke-static {v0}, Lbq5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    move-result-object v0
+
+    throw v0
 .end method
 
+.method public static a()Lqne;
+    .locals 2
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    sget-object v0, Laoe;->b:Lor3;
 
-    check-cast p1, Ljava/lang/Number;
+    sget-object v1, Lq98;->B:Ltqf;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    if-nez v1, :cond_0
 
-    move-result-wide v0
+    return-object v0
 
-    check-cast p2, Leoe;
+    :cond_0
+    :try_start_0
+    invoke-virtual {v1, v0}, Ltqf;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget p1, Ldoe;->a:I
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    new-instance p1, Leoe;
+    check-cast v0, Lqne;
 
-    const/4 v2, 0x0
+    return-object v0
 
-    invoke-direct {p1, v0, v1, p2, v2}, Leoe;-><init>(JLeoe;I)V
+    :catchall_0
+    move-exception v0
 
-    return-object p1
+    invoke-static {v0}, Lbq5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    move-result-object v0
+
+    throw v0
+.end method
+
+.method public static b()Lqne;
+    .locals 2
+
+    sget-object v0, Laoe;->c:Lpz7;
+
+    sget-object v1, Lq98;->D:Lcq4;
+
+    if-nez v1, :cond_0
+
+    return-object v0
+
+    :cond_0
+    :try_start_0
+    invoke-virtual {v1, v0}, Lcq4;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    check-cast v0, Lqne;
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lbq5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    move-result-object v0
+
+    throw v0
 .end method

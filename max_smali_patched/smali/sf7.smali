@@ -1,27 +1,14 @@
-.class public final Lsf7;
+.class public interface abstract Lsf7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:I
+# virtual methods
+.method public abstract getContentLength()J
+.end method
 
-.field public b:Z
+.method public abstract getContentType()Ljava/lang/String;
+.end method
 
-.field public c:I
-
-
-# direct methods
-.method public synthetic constructor <init>(IIZ)V
-    .locals 0
-
-    iput p1, p0, Lsf7;->a:I
-
-    iput-boolean p3, p0, Lsf7;->b:Z
-
-    iput p2, p0, Lsf7;->c:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+.method public abstract writeTo(Ljava/io/OutputStream;)V
 .end method

@@ -1,60 +1,78 @@
 .class public final Lg4j;
-.super Ljava/lang/Object;
+.super La27;
 .source "SourceFile"
 
 # interfaces
-.implements Lvwa;
+.implements Lgrg;
 
 
 # static fields
-.field public static final a:Lg4j;
+.field public static final k:Lkg9;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 4
 
-    new-instance v0, Lg4j;
+    new-instance v0, Lz66;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0xb
 
-    sput-object v0, Lg4j;->a:Lg4j;
+    invoke-direct {v0, v1}, Lz66;-><init>(I)V
 
-    new-instance v0, Lbri;
+    new-instance v1, Lf4j;
 
-    const/4 v1, 0x1
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+    new-instance v2, Lkg9;
 
-    const-class v1, Lpri;
+    const-string v3, "ClientTelemetry.API"
 
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+    invoke-direct {v2, v3, v1, v0}, Lkg9;-><init>(Ljava/lang/String;Lvfa;Lz66;)V
 
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+    sput-object v2, Lg4j;->k:Lkg9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final c(Lfrg;)Le4k;
+    .locals 3
 
-    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    new-instance v0, Lpt4;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v1, 0x0
+
+    iput v1, v0, Lpt4;->b:I
+
+    sget-object v2, Ltf3;->e:La16;
+
+    filled-new-array {v2}, [La16;
+
+    move-result-object v2
+
+    iput-object v2, v0, Lpt4;->d:Ljava/lang/Object;
+
+    iput-boolean v1, v0, Lpt4;->a:Z
+
+    new-instance v1, Lr5e;
+
+    invoke-direct {v1, p1}, Lr5e;-><init>(Ljava/lang/Object;)V
+
+    iput-object v1, v0, Lpt4;->c:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Lpt4;->a()Ln3j;
 
     move-result-object p1
 
-    throw p1
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0, p1}, La27;->b(ILum7;)Le4k;
+
+    move-result-object p1
+
+    return-object p1
 .end method

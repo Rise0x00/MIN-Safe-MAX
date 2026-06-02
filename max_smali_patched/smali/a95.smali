@@ -1,29 +1,18 @@
-.class public interface abstract La95;
+.class public final synthetic La95;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lrf3;
+
 
 # virtual methods
-.method public abstract a()Ljava/util/UUID;
-.end method
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-.method public abstract b()Z
-.end method
+    invoke-static {}, Lc95$a;->a()Ljava/lang/String;
 
-.method public abstract c(Le95;)V
-.end method
+    move-result-object v0
 
-.method public abstract d(Le95;)V
-.end method
-
-.method public abstract e(Ljava/lang/String;)Z
-.end method
-
-.method public abstract f()Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;
-.end method
-
-.method public abstract g()Lje4;
-.end method
-
-.method public abstract getState()I
+    return-object v0
 .end method

@@ -1,29 +1,80 @@
-.class public final Ljtg;
+.class public final synthetic Ljtg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxs6;
+
 
 # instance fields
-.field public final a:Landroid/util/SparseArray;
+.field public final synthetic a:I
 
-.field public b:I
+.field public final synthetic b:Lktg;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lktg;I)V
+    .locals 0
+
+    iput p2, p0, Ljtg;->a:I
+
+    iput-object p1, p0, Ljtg;->b:Lktg;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Landroid/util/SparseArray;
-
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
-
-    iput-object v0, p0, Ljtg;->a:Landroid/util/SparseArray;
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Ljtg;->b:I
-
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Ljtg;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ljtg;->b:Lktg;
+
+    iget-boolean v1, v0, Lktg;->g:Z
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v1, 0x7f
+
+    invoke-static {v0, v1}, Lktg;->e(Lktg;I)Lktg;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Ljtg;->b:Lktg;
+
+    iget-boolean v1, v0, Lktg;->a:Z
+
+    if-eqz v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    const/16 v1, 0xfe
+
+    invoke-static {v0, v1}, Lktg;->e(Lktg;I)Lktg;
+
+    move-result-object v0
+
+    :goto_1
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

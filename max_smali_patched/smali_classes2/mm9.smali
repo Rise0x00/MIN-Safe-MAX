@@ -1,57 +1,64 @@
 .class public final Lmm9;
-.super Lo84;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnm9;
 
-# instance fields
-.field public X:Lmw4;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lnm9;
-
-.field public d:Z
-
-.field public o:Ljava/util/List;
-
-.field public t0:I
+# static fields
+.field public static final a:Lmm9;
 
 
 # direct methods
-.method public constructor <init>(Lnm9;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lmm9;->Z:Lnm9;
+    new-instance v0, Lmm9;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lmm9;->a:Lmm9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iput-object p1, p0, Lmm9;->Y:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lmm9;->t0:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of p1, p1, Lmm9;
 
-    iput p1, p0, Lmm9;->t0:I
+    if-nez p1, :cond_1
 
     const/4 p1, 0x0
 
-    const/4 v0, 0x0
+    return p1
 
-    iget-object v1, p0, Lmm9;->Z:Lnm9;
+    :cond_1
+    return v0
+.end method
 
-    invoke-virtual {v1, p1, v0, v0, p0}, Lnm9;->a(ZLjava/util/List;Lmw4;Lo84;)Ljava/lang/Object;
+.method public final hashCode()I
+    .locals 1
 
-    move-result-object p1
+    const v0, -0x62c3c567
 
-    return-object p1
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "LocalRestoreMembers"
+
+    return-object v0
 .end method

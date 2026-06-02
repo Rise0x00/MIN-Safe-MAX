@@ -1,91 +1,161 @@
-.class public abstract synthetic Ll8h;
-.super Ljava/lang/Object;
+.class public final Ll8h;
+.super Lpda;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final j:J
+
+.field public final k:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(IIIJJLjava/lang/String;Z)V
+    .locals 11
 
-    invoke-static {}, Li9h;->values()[Li9h;
+    move-wide v7, p4
 
-    move-result-object v0
+    move-wide/from16 v9, p6
 
-    array-length v0, v0
+    new-instance v0, Lnda;
 
-    new-array v0, v0, [I
+    move-object/from16 v4, p8
 
-    const/4 v1, 0x1
+    invoke-direct {v0, p1, v4, p2, p3}, Lnda;-><init>(ILjava/lang/String;II)V
 
-    const/4 v2, 0x0
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v5
 
-    :catch_0
-    const/4 v2, 0x2
+    const-wide/16 v1, 0x0
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    sub-long v3, v9, v7
 
-    :catch_1
-    const/4 v1, 0x3
+    move-object v0, p0
 
-    const/16 v3, 0x8
+    move/from16 v6, p9
 
-    :try_start_2
-    aput v1, v0, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    invoke-direct/range {v0 .. v6}, Lpda;-><init>(JJLjava/util/List;Z)V
 
-    :catch_2
-    const/4 v1, 0x4
+    iput-wide v7, p0, Ll8h;->j:J
 
-    const/4 v4, 0x6
-
-    :try_start_3
-    aput v1, v0, v4
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    const/4 v5, 0x5
-
-    :try_start_4
-    aput v5, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
-    aput v4, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    const/4 v1, 0x7
-
-    :try_start_6
-    aput v1, v0, v5
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    :try_start_7
-    aput v3, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
-
-    :catch_7
-    sput-object v0, Ll8h;->$EnumSwitchMapping$0:[I
+    iput-wide v9, p0, Ll8h;->k:J
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final b()J
+    .locals 2
+
+    iget-wide v0, p0, Ll8h;->j:J
+
+    return-wide v0
+.end method
+
+.method public final c()J
+    .locals 2
+
+    iget-wide v0, p0, Ll8h;->k:J
+
+    return-wide v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_4
+
+    const-class v2, Ll8h;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-super {p0, p1}, Lpda;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    return v1
+
+    :cond_2
+    check-cast p1, Ll8h;
+
+    iget-wide v2, p0, Ll8h;->j:J
+
+    iget-wide v4, p1, Ll8h;->j:J
+
+    cmp-long v2, v2, v4
+
+    if-eqz v2, :cond_3
+
+    return v1
+
+    :cond_3
+    iget-wide v2, p0, Ll8h;->k:J
+
+    iget-wide v4, p1, Ll8h;->k:J
+
+    cmp-long p1, v2, v4
+
+    if-nez p1, :cond_4
+
+    return v0
+
+    :cond_4
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 6
+
+    invoke-super {p0}, Lpda;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Ll8h;->j:J
+
+    const/16 v3, 0x20
+
+    ushr-long v4, v1, v3
+
+    xor-long/2addr v1, v4
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Ll8h;->k:J
+
+    ushr-long v3, v1, v3
+
+    xor-long/2addr v1, v3
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method

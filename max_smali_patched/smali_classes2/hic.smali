@@ -4,118 +4,260 @@
 
 
 # instance fields
-.field public final a:Lo58;
+.field public final a:Lfic;
 
-.field public final b:Lo58;
+.field public final b:Lwt5;
+
+.field public final c:Lfkg;
+
+.field public d:I
+
+.field public e:Ljava/lang/Object;
+
+.field public final f:Landroid/os/Looper;
+
+.field public g:Z
+
+.field public h:Z
+
+.field public i:Z
 
 
 # direct methods
-.method public constructor <init>(Lo58;Lo58;)V
+.method public constructor <init>(Lwt5;Lfic;Lpxg;ILfkg;Landroid/os/Looper;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhic;->a:Lo58;
+    iput-object p1, p0, Lhic;->b:Lwt5;
 
-    iput-object p2, p0, Lhic;->b:Lo58;
+    iput-object p2, p0, Lhic;->a:Lfic;
+
+    iput-object p6, p0, Lhic;->f:Landroid/os/Looper;
+
+    iput-object p5, p0, Lhic;->c:Lfkg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JZ)V
-    .locals 11
+.method public final declared-synchronized a(J)V
+    .locals 5
 
-    invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    monitor-enter p0
 
-    move-result-object p1
+    :try_start_0
+    iget-boolean v0, p0, Lhic;->g:Z
 
-    new-instance p2, Lktb;
+    invoke-static {v0}, Lmhj;->d(Z)V
 
-    const-string v0, "webappId"
+    iget-object v0, p0, Lhic;->f:Landroid/os/Looper;
 
-    invoke-direct {p2, v0, p1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
 
-    filled-new-array {p2}, [Lktb;
+    move-result-object v0
 
-    move-result-object p1
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    invoke-static {p1}, Lo5j;->a([Lktb;)Lys;
+    move-result-object v1
 
-    move-result-object p1
+    if-eq v0, v1, :cond_0
 
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v0, 0x1
 
-    move-result-object p2
+    goto :goto_0
 
-    new-instance p3, Lktb;
+    :cond_0
+    const/4 v0, 0x0
 
-    const-string v0, "paramValue"
+    :goto_0
+    invoke-static {v0}, Lmhj;->d(Z)V
 
-    invoke-direct {p3, v0, p2}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    iget-object v0, p0, Lhic;->c:Lfkg;
 
-    new-instance p2, Lktb;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v0, "paramAdditionally"
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    invoke-direct {p2, v0, p1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    move-result-wide v0
 
-    filled-new-array {p3, p2}, [Lktb;
+    add-long/2addr v0, p1
 
-    move-result-object p1
+    :goto_1
+    iget-boolean v2, p0, Lhic;->i:Z
 
-    invoke-static {p1}, Lo5j;->a([Lktb;)Lys;
+    if-nez v2, :cond_1
 
-    move-result-object v7
+    const-wide/16 v3, 0x0
 
-    iget-object p1, p0, Lhic;->a:Lo58;
+    cmp-long v3, p1, v3
 
-    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+    if-lez v3, :cond_1
 
-    move-result-object p1
+    iget-object v2, p0, Lhic;->c:Lfkg;
 
-    check-cast p1, Ldd;
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v0, Lgk8;
+    invoke-virtual {p0, p1, p2}, Ljava/lang/Object;->wait(J)V
 
-    iget-object p2, p0, Lhic;->b:Lo58;
+    iget-object p1, p0, Lhic;->c:Lfkg;
 
-    invoke-interface {p2}, Lo58;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p3
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    check-cast p3, Lef3;
+    move-result-wide p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    check-cast p3, Lyfe;
+    sub-long p1, v0, p1
 
-    invoke-virtual {p3}, Lyfe;->s()J
+    goto :goto_1
 
-    move-result-wide v3
+    :catchall_0
+    move-exception p1
 
-    invoke-interface {p2}, Lo58;->getValue()Ljava/lang/Object;
+    goto :goto_2
 
-    move-result-object p2
+    :cond_1
+    if-eqz v2, :cond_2
 
-    check-cast p2, Lef3;
-
-    check-cast p2, Lqi8;
-
-    invoke-virtual {p2}, Lqi8;->N()J
-
-    move-result-wide v5
-
-    const-wide/16 v8, 0x0
-
-    const/16 v10, 0x20
-
-    const-string v1, "SETTINGS"
-
-    const-string v2, "MINIAPP_BIOMETRY"
-
-    invoke-direct/range {v0 .. v10}, Lgk8;-><init>(Ljava/lang/String;Ljava/lang/String;JJLjava/util/Map;JI)V
-
-    invoke-virtual {p1, v0}, Ldd;->h(Lgk8;)V
+    monitor-exit p0
 
     return-void
+
+    :cond_2
+    :try_start_1
+    new-instance p1, Ljava/util/concurrent/TimeoutException;
+
+    const-string p2, "Message delivery timed out."
+
+    invoke-direct {p1, p2}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :goto_2
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized b(Z)V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Lhic;->h:Z
+
+    or-int/2addr p1, v0
+
+    iput-boolean p1, p0, Lhic;->h:Z
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lhic;->i:Z
+
+    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final c()V
+    .locals 3
+
+    iget-boolean v0, p0, Lhic;->g:Z
+
+    const/4 v1, 0x1
+
+    xor-int/2addr v0, v1
+
+    invoke-static {v0}, Lmhj;->d(Z)V
+
+    iput-boolean v1, p0, Lhic;->g:Z
+
+    iget-object v0, p0, Lhic;->b:Lwt5;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-boolean v1, v0, Lwt5;->O0:Z
+
+    if-nez v1, :cond_1
+
+    iget-object v1, v0, Lwt5;->z0:Landroid/os/HandlerThread;
+
+    invoke-virtual {v1}, Ljava/lang/Thread;->isAlive()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, v0, Lwt5;->Z:Lokg;
+
+    const/16 v2, 0xe
+
+    invoke-virtual {v1, v2, p0}, Lokg;->a(ILjava/lang/Object;)Lmkg;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lmkg;->b()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    :try_start_1
+    const-string v1, "ExoPlayerImplInternal"
+
+    const-string v2, "Ignoring messages sent after release."
+
+    invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1}, Lhic;->b(Z)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    :try_start_2
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v1
 .end method

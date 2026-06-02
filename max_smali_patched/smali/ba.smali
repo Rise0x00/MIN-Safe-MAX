@@ -1,137 +1,196 @@
-.class public final Lba;
+.class public final synthetic Lba;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lmb4;
+.implements Lzs6;
 
 
 # instance fields
-.field public final a:Lmb4;
+.field public final synthetic a:I
 
-.field public final b:F
+.field public final synthetic b:Ldqb;
 
 
 # direct methods
-.method public constructor <init>(FLmb4;)V
-    .locals 1
+.method public synthetic constructor <init>(ILdqb;)V
+    .locals 0
+
+    iput p1, p0, Lba;->a:I
+
+    iput-object p2, p0, Lba;->b:Ldqb;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    :goto_0
-    instance-of v0, p2, Lba;
-
-    if-eqz v0, :cond_0
-
-    check-cast p2, Lba;
-
-    iget-object p2, p2, Lba;->a:Lmb4;
-
-    move-object v0, p2
-
-    check-cast v0, Lba;
-
-    iget v0, v0, Lba;->b:F
-
-    add-float/2addr p1, v0
-
-    goto :goto_0
-
-    :cond_0
-    iput-object p2, p0, Lba;->a:Lmb4;
-
-    iput p1, p0, Lba;->b:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/graphics/RectF;)F
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    iget-object v0, p0, Lba;->a:Lmb4;
+    iget v0, p0, Lba;->a:I
 
-    invoke-interface {v0, p1}, Lmb4;->a(Landroid/graphics/RectF;)F
+    packed-switch v0, :pswitch_data_0
 
-    move-result p1
+    check-cast p1, Ldqb;
 
-    iget v0, p0, Lba;->b:F
+    iget-object p1, p0, Lba;->b:Ldqb;
 
-    add-float/2addr p1, v0
+    invoke-interface {p1}, Ldqb;->b()Lnpb;
 
-    const/4 v0, 0x0
+    move-result-object p1
 
-    invoke-static {v0, p1}, Ljava/lang/Math;->max(FF)F
+    iget p1, p1, Lnpb;->d:I
 
-    move-result p1
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    return p1
-.end method
+    move-result-object p1
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    return-object p1
 
-    const/4 v0, 0x1
+    :pswitch_0
+    check-cast p1, Ldqb;
 
-    if-ne p0, p1, :cond_0
+    iget-object p1, p0, Lba;->b:Ldqb;
 
-    return v0
+    invoke-interface {p1}, Ldqb;->getIcon()Lzpb;
+
+    move-result-object p1
+
+    iget p1, p1, Lzpb;->e:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_1
+    check-cast p1, Ldqb;
+
+    iget-object p1, p0, Lba;->b:Ldqb;
+
+    invoke-interface {p1}, Ldqb;->c()Lzx3;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lzx3;->a:Ljava/lang/Object;
+
+    check-cast v0, Lmpb;
+
+    iget-object v1, v0, Lmpb;->c:[I
+
+    invoke-interface {p1}, Ldqb;->c()Lzx3;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lzx3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lmpb;
+
+    iget-object v2, v0, Lmpb;->c:[I
+
+    invoke-interface {p1}, Ldqb;->c()Lzx3;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lzx3;->c:Ljava/lang/Object;
+
+    check-cast v0, Lmpb;
+
+    iget-object v3, v0, Lmpb;->c:[I
+
+    invoke-interface {p1}, Ldqb;->c()Lzx3;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lzx3;->d:Ljava/lang/Object;
+
+    check-cast v0, Lmpb;
+
+    iget-object v4, v0, Lmpb;->c:[I
+
+    invoke-interface {p1}, Ldqb;->c()Lzx3;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lzx3;->e:Ljava/lang/Object;
+
+    check-cast v0, Lmpb;
+
+    iget-object v5, v0, Lmpb;->c:[I
+
+    invoke-interface {p1}, Ldqb;->c()Lzx3;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lzx3;->f:Ljava/lang/Object;
+
+    check-cast v0, Lmpb;
+
+    iget-object v6, v0, Lmpb;->c:[I
+
+    invoke-interface {p1}, Ldqb;->c()Lzx3;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lzx3;->g:Ljava/lang/Object;
+
+    check-cast p1, Lmpb;
+
+    iget-object v7, p1, Lmpb;->c:[I
+
+    filled-new-array/range {v1 .. v7}, [[I
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_2
+    iget-object v0, p0, Lba;->b:Ldqb;
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-static {p1, v0}, Lhp7;->q(Landroid/view/View;Ldqb;)V
+
+    sget-object p1, Lyeh;->a:Lyeh;
+
+    return-object p1
+
+    :pswitch_3
+    check-cast p1, Landroid/view/View;
+
+    instance-of v0, p1, Lgug;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lba;->b:Ldqb;
+
+    invoke-static {p1, v0}, Lhp7;->q(Landroid/view/View;Ldqb;)V
+
+    const/4 p1, 0x0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lba;
+    const/4 p1, 0x1
 
-    const/4 v2, 0x0
+    :goto_0
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    if-nez v1, :cond_1
+    move-result-object p1
 
-    return v2
+    return-object p1
 
-    :cond_1
-    check-cast p1, Lba;
+    nop
 
-    iget-object v1, p0, Lba;->a:Lmb4;
-
-    iget-object v3, p1, Lba;->a:Lmb4;
-
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget v1, p0, Lba;->b:F
-
-    iget p1, p1, Lba;->b:F
-
-    cmpl-float p1, v1, p1
-
-    if-nez p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Lba;->b:F
-
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lba;->a:Lmb4;
-
-    filled-new-array {v1, v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,118 +1,134 @@
 .class public final Lon8;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbr6;
+.implements Lrvc;
 
 
 # instance fields
-.field public final synthetic X:Lun8;
+.field public final synthetic a:I
 
-.field public o:I
+.field public final b:Ljava/util/concurrent/Executor;
+
+.field public final c:Landroid/content/ContentResolver;
 
 
 # direct methods
-.method public constructor <init>(Lun8;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Landroid/content/ContentResolver;I)V
     .locals 0
 
-    iput-object p1, p0, Lon8;->X:Lun8;
+    iput p3, p0, Lon8;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lon8;->b:Ljava/util/concurrent/Executor;
 
-    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lon8;->c:Landroid/content/ContentResolver;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Lxn0;Lsvc;)V
+    .locals 10
 
-    check-cast p1, Lzb4;
+    iget v0, p0, Lon8;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lon8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-object v8, p2
 
-    move-result-object p1
+    check-cast v8, Lhp0;
 
-    check-cast p1, Lon8;
+    iget-object v3, v8, Lhp0;->c:Lvvc;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    iget-object v7, v8, Lhp0;->a:Lzl7;
 
-    invoke-virtual {p1, p2}, Lon8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v0, "local"
 
-    move-result-object p1
+    const-string v2, "video"
 
-    return-object p1
-.end method
+    invoke-virtual {v8, v0, v2}, Lhp0;->h(Ljava/lang/String;Ljava/lang/String;)V
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    new-instance v0, Lrn8;
 
-    new-instance p1, Lon8;
+    move-object v5, v3
 
-    iget-object v0, p0, Lon8;->X:Lun8;
+    move-object v6, p2
 
-    invoke-direct {p1, v0, p2}, Lon8;-><init>(Lun8;Lkotlin/coroutines/Continuation;)V
+    move-object v1, p0
 
-    return-object p1
-.end method
+    move-object v2, p1
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    move-object v4, p2
 
-    iget v0, p0, Lon8;->o:I
+    invoke-direct/range {v0 .. v7}, Lrn8;-><init>(Lon8;Lxn0;Lvvc;Lsvc;Lvvc;Lsvc;Lzl7;)V
 
-    const/4 v1, 0x1
+    new-instance v2, Lnn8;
 
-    if-eqz v0, :cond_1
+    const/4 v3, 0x1
 
-    if-ne v0, v1, :cond_0
+    invoke-direct {v2, v0, v3}, Lnn8;-><init>(Lj1g;I)V
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    invoke-virtual {v8, v2}, Lhp0;->a(Lip0;)V
 
-    goto :goto_0
+    iget-object v2, p0, Lon8;->b:Ljava/util/concurrent/Executor;
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-interface {v2, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    return-void
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :pswitch_0
+    move-object v9, p2
 
-    throw p1
+    check-cast v9, Lhp0;
 
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    iget-object v3, v9, Lhp0;->c:Lvvc;
 
-    new-instance p1, Ldn8;
+    iget-object v7, v9, Lhp0;->a:Lzl7;
 
-    const/4 v0, 0x1
+    const-string v0, "local"
 
-    iget-object v2, p0, Lon8;->X:Lun8;
+    const-string v2, "thumbnail_bitmap"
 
-    invoke-direct {p1, v2, v0}, Ldn8;-><init>(Lun8;I)V
+    invoke-virtual {v9, v0, v2}, Lhp0;->h(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput v1, p0, Lon8;->o:I
+    new-instance v8, Landroid/os/CancellationSignal;
 
-    sget-object v0, Lxg5;->a:Lxg5;
+    invoke-direct {v8}, Landroid/os/CancellationSignal;-><init>()V
 
-    invoke-static {v0, p1, p0}, Lc1j;->b(Lqb4;Llq6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    new-instance v0, Lmn8;
 
-    move-result-object p1
+    move-object v5, v3
 
-    sget-object v0, Lac4;->a:Lac4;
+    move-object v6, p2
 
-    if-ne p1, v0, :cond_2
+    move-object v1, p0
 
-    return-object v0
+    move-object v2, p1
 
-    :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    move-object v4, p2
 
-    return-object p1
+    invoke-direct/range {v0 .. v8}, Lmn8;-><init>(Lon8;Lxn0;Lvvc;Lsvc;Lvvc;Lsvc;Lzl7;Landroid/os/CancellationSignal;)V
+
+    new-instance v2, Lnn8;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v0, v3}, Lnn8;-><init>(Lj1g;I)V
+
+    invoke-virtual {v9, v2}, Lhp0;->a(Lip0;)V
+
+    iget-object v2, p0, Lon8;->b:Ljava/util/concurrent/Executor;
+
+    invoke-interface {v2, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

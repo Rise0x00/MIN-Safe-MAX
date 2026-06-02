@@ -1,64 +1,37 @@
-.class public final Lbf9;
+.class public abstract Lbf9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ldf9;
 
-
-# static fields
-.field public static final a:Lbf9;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lbf9;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lbf9;->a:Lbf9;
+# virtual methods
+.method public d()V
+    .locals 0
 
     return-void
 .end method
 
+.method public e()V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lbf9;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x3b9180b8
-
-    return v0
+.method public abstract f(I)V
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public g()V
+    .locals 0
 
-    const-string v0, "Location"
+    return-void
+.end method
 
-    return-object v0
+.method public h(I)V
+    .locals 0
+
+    invoke-virtual {p0}, Lbf9;->g()V
+
+    return-void
+.end method
+
+.method public abstract i(I)V
 .end method

@@ -1,54 +1,45 @@
-.class public final synthetic Ldph;
+.class public final Ldph;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
-
 
 # instance fields
-.field public final synthetic a:Lru/ok/messages/views/dialogs/VideoQualityPickerDialog;
+.field public final a:[F
 
-.field public final synthetic b:Ljava/util/ArrayList;
+.field public final b:[J
+
+.field public c:F
+
+.field public d:I
+
+.field public e:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/views/dialogs/VideoQualityPickerDialog;Ljava/util/ArrayList;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldph;->a:Lru/ok/messages/views/dialogs/VideoQualityPickerDialog;
+    const/16 v0, 0x14
 
-    iput-object p2, p0, Ldph;->b:Ljava/util/ArrayList;
+    new-array v1, v0, [F
 
-    return-void
-.end method
+    iput-object v1, p0, Ldph;->a:[F
 
+    new-array v0, v0, [J
 
-# virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 1
+    iput-object v0, p0, Ldph;->b:[J
 
-    new-instance p1, Lgph;
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Ldph;->b:Ljava/util/ArrayList;
+    iput v0, p0, Ldph;->c:F
 
-    invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object p2
+    iput v0, p0, Ldph;->d:I
 
-    check-cast p2, Lm2d;
-
-    iget-object p2, p2, Lm2d;->a:Lj2d;
-
-    iget-object p2, p2, Lj2d;->a:Lh2d;
-
-    invoke-direct {p1, p2}, Lgph;-><init>(Lh2d;)V
-
-    iget-object p2, p0, Ldph;->a:Lru/ok/messages/views/dialogs/VideoQualityPickerDialog;
-
-    invoke-virtual {p2, p1}, Lru/ok/messages/views/dialogs/VideoQualityPickerDialog;->s0(Lhph;)V
+    iput v0, p0, Ldph;->e:I
 
     return-void
 .end method

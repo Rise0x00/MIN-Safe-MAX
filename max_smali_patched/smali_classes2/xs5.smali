@@ -1,37 +1,62 @@
-.class public final Lxs5;
-.super Lndf;
+.class public final synthetic Lxs5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lij8;
 
 
 # instance fields
-.field public final X:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final Y:Ljava/lang/String;
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final o:Ljava/lang/String;
+.field public final synthetic b:Ljt5;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method public synthetic constructor <init>(Ljt5;I)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iput p2, p0, Lxs5;->a:I
 
-    invoke-direct {p0, v0, p1}, Lndf;-><init>(ILjava/lang/String;)V
+    iput-object p1, p0, Lxs5;->b:Ljt5;
 
-    iput-object p4, p0, Lxs5;->o:Ljava/lang/String;
-
-    iput p2, p0, Lxs5;->c:I
-
-    iput p3, p0, Lxs5;->d:I
-
-    iput-object p5, p0, Lxs5;->X:Ljava/lang/String;
-
-    iput-object p6, p0, Lxs5;->Y:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Lxs5;->a:I
+
+    check-cast p1, Lghc;
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lxs5;->b:Ljt5;
+
+    iget-object v0, v0, Ljt5;->j1:Lwa9;
+
+    invoke-interface {p1, v0}, Lghc;->j0(Lwa9;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lxs5;->b:Ljt5;
+
+    iget-object v0, v0, Ljt5;->h1:Ldhc;
+
+    invoke-interface {p1, v0}, Lghc;->B0(Ldhc;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

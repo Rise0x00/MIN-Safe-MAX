@@ -1,51 +1,126 @@
-.class public final Lxy7;
-.super Lo84;
+.class public final synthetic Lxy7;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lxs6;
 
 
 # instance fields
-.field public final synthetic X:Lyy7;
+.field public final synthetic a:I
 
-.field public Y:I
-
-.field public d:Ljava/lang/String;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(Lyy7;Lo84;)V
+.method public synthetic constructor <init>(Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;I)V
     .locals 0
 
-    iput-object p1, p0, Lxy7;->X:Lyy7;
+    iput p2, p0, Lxy7;->a:I
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lxy7;->b:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 8
 
-    iput-object p1, p0, Lxy7;->o:Ljava/lang/Object;
+    iget v0, p0, Lxy7;->a:I
 
-    iget p1, p0, Lxy7;->Y:I
+    iget-object v1, p0, Lxy7;->b:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
 
-    const/high16 v0, -0x80000000
+    packed-switch v0, :pswitch_data_0
 
-    or-int/2addr p1, v0
+    new-instance v0, Lr24;
 
-    iput p1, p0, Lxy7;->Y:I
+    iget-object v1, v1, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->K0:Lg;
 
-    iget-object p1, p0, Lxy7;->X:Lyy7;
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lz5;
 
-    const/4 v0, 0x0
+    move-result-object v1
 
-    invoke-virtual {p1, v0, p0}, Lyy7;->a(Ljava/lang/String;Lo84;)Ljava/lang/Object;
+    const/16 v2, 0x39
 
-    move-result-object p1
+    invoke-virtual {v1, v2}, Lz5;->d(I)Lakg;
 
-    return-object p1
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lr24;-><init>(Lia8;)V
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, v1, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->K0:Lg;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lz5;
+
+    move-result-object v0
+
+    const/16 v2, 0x280
+
+    invoke-virtual {v0, v2}, Lz5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcz7;
+
+    invoke-virtual {v1}, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->s1()Lnbd;
+
+    move-result-object v3
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Lbz7;
+
+    iget-object v5, v0, Lcz7;->a:Lia8;
+
+    iget-object v6, v0, Lcz7;->b:Lia8;
+
+    iget-object v7, v0, Lcz7;->c:Lia8;
+
+    const/4 v4, 0x0
+
+    invoke-direct/range {v2 .. v7}, Lbz7;-><init>(Lnbd;ILia8;Lia8;Lia8;)V
+
+    return-object v2
+
+    :pswitch_1
+    sget-object v0, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->X0:[Lb88;
+
+    new-instance v0, Lsmb;
+
+    invoke-direct {v0, v1}, Lsmb;-><init>(Lone/me/sdk/arch/Widget;)V
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    sget v2, Lphe;->m:I
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lsmb;->n(Ljava/lang/CharSequence;)V
+
+    new-instance v1, Lhnb;
+
+    sget v2, Lxhe;->a4:I
+
+    invoke-direct {v1, v2}, Lhnb;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Lsmb;->h(Lmnb;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

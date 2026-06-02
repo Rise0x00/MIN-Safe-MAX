@@ -13,13 +13,13 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Lrha;
+    new-instance v0, Lnka;
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lrha;-><init>(I)V
+    invoke-direct {v0, v1}, Lnka;-><init>(I)V
 
-    new-instance v1, Lvha;
+    new-instance v1, Loka;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
@@ -101,7 +101,7 @@
 .end method
 
 .method public static trackLaunchManually(Landroid/app/Activity;)V
-    .locals 4
+    .locals 3
 
     sget-object v0, Lcom/my/tracker/applifecycle/MyTrackerAppLifecycle;->a:Lcom/my/tracker/core/EngineMiniCore;
 
@@ -118,11 +118,9 @@
 
     move-result-object v1
 
-    new-instance v2, Luha;
+    new-instance v2, Lmka;
 
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p0, v3, v1}, Luha;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, p0, v1}, Lmka;-><init>(Landroid/app/Activity;Lcom/my/tracker/core/utils/TimePoint;)V
 
     invoke-interface {v0, v2}, Lcom/my/tracker/core/EngineMiniCore;->onEngineWorkerWithEngineCore(Lcom/my/tracker/core/utils/Consumer;)V
 

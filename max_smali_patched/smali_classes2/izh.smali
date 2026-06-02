@@ -1,189 +1,72 @@
-.class public final Lizh;
+.class public final synthetic Lizh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lkzh;
+.implements Lzs6;
 
 
 # instance fields
-.field public final a:Llhg;
+.field public final synthetic a:I
 
-.field public final b:Lqhg;
-
-.field public final c:Ljava/util/List;
+.field public final synthetic b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
 
 # direct methods
-.method public constructor <init>(Llhg;Lqhg;Ljava/util/List;)V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;I)V
+    .locals 0
 
-    sget v0, Lv5e;->a:I
+    iput p2, p0, Lizh;->a:I
+
+    iput-object p1, p0, Lizh;->b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lizh;->a:Llhg;
-
-    iput-object p2, p0, Lizh;->b:Lqhg;
-
-    iput-object p3, p0, Lizh;->c:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lizh;->a:I
 
-    goto :goto_1
+    check-cast p1, Landroid/view/MotionEvent;
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lizh;->b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
+    iget-object v0, v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->P0:Landroid/view/ScaleGestureDetector;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Landroid/view/ScaleGestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     :cond_0
-    instance-of v0, p1, Lizh;
+    sget-object p1, Lyeh;->a:Lyeh;
 
-    if-nez v0, :cond_1
+    return-object p1
 
-    goto :goto_0
+    :pswitch_0
+    iget-object v0, p0, Lizh;->b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
+    iget-object v0, v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->P0:Landroid/view/ScaleGestureDetector;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0, p1}, Landroid/view/ScaleGestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     :cond_1
-    check-cast p1, Lizh;
+    sget-object p1, Lyeh;->a:Lyeh;
 
-    sget v0, Lv5e;->a:I
+    return-object p1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    nop
 
-    iget-object v0, p0, Lizh;->a:Llhg;
-
-    iget-object v1, p1, Lizh;->a:Llhg;
-
-    invoke-virtual {v0, v1}, Llhg;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lizh;->b:Lqhg;
-
-    iget-object v1, p1, Lizh;->b:Lqhg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lizh;->c:Ljava/util/List;
-
-    iget-object p1, p1, Lizh;->c:Ljava/util/List;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    sget v0, Lv5e;->E:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lizh;->a:Llhg;
-
-    iget v2, v2, Llhg;->c:I
-
-    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
-
-    move-result v0
-
-    iget-object v2, p0, Lizh;->b:Lqhg;
-
-    invoke-static {v0, v1, v2}, Lhc0;->d(IILqhg;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lizh;->c:Ljava/util/List;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    sget v0, Lv5e;->E:I
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "RequestBiometryAccess(icon="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, ", title="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Lizh;->a:Llhg;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", description="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Lizh;->b:Lqhg;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", buttons="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Lizh;->c:Ljava/util/List;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

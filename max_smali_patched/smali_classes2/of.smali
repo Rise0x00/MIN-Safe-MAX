@@ -3,142 +3,77 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Landroid/media/ImageReader$OnImageAvailableListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lqf;
 
-.field public final synthetic b:F
+.field public final synthetic b:Ljava/util/concurrent/Executor;
 
-.field public final synthetic c:Ljava/lang/Object;
-
-.field public final synthetic d:Ljava/lang/Object;
+.field public final synthetic c:Lsl7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;FI)V
+.method public synthetic constructor <init>(Lqf;Ljava/util/concurrent/Executor;Lsl7;)V
     .locals 0
 
-    iput p4, p0, Lof;->a:I
-
-    iput-object p1, p0, Lof;->c:Ljava/lang/Object;
-
-    iput-object p2, p0, Lof;->d:Ljava/lang/Object;
-
-    iput p3, p0, Lof;->b:F
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lof;->a:Lqf;
+
+    iput-object p2, p0, Lof;->b:Ljava/util/concurrent/Executor;
+
+    iput-object p3, p0, Lof;->c:Lsl7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 4
+.method public final onImageAvailable(Landroid/media/ImageReader;)V
+    .locals 5
 
-    iget v0, p0, Lof;->a:I
+    iget-object p1, p0, Lof;->a:Lqf;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lof;->b:Ljava/util/concurrent/Executor;
 
-    iget-object v0, p0, Lof;->c:Ljava/lang/Object;
+    iget-object v1, p0, Lof;->c:Lsl7;
 
-    check-cast v0, Lr7g;
+    iget-object v2, p1, Lqf;->d:Ljava/lang/Object;
 
-    iget-object v1, p0, Lof;->d:Ljava/lang/Object;
+    monitor-enter v2
 
-    check-cast v1, Lbr6;
+    :try_start_0
+    iget-boolean v3, p1, Lqf;->b:Z
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    if-nez v3, :cond_0
 
-    move-result-object v2
+    new-instance v3, Lpf;
 
-    check-cast v2, Ljava/lang/Integer;
+    const/4 v4, 0x0
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    invoke-direct {v3, p1, v4, v1}, Lpf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    move-result v2
+    invoke-interface {v0, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    invoke-interface {v0}, Lr7g;->j()I
+    goto :goto_0
 
-    move-result v3
+    :catchall_0
+    move-exception p1
 
-    sub-int/2addr v2, v3
+    goto :goto_1
 
-    invoke-interface {v0}, Lr7g;->p()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->offsetTopAndBottom(I)V
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p1
-
-    iget v0, p0, Lof;->b:F
-
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v0
-
-    invoke-interface {v1, p1, v0}, Lbr6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_0
+    :goto_0
+    monitor-exit v2
 
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Lof;->c:Ljava/lang/Object;
+    :goto_1
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    check-cast v0, Lxec;
-
-    iget-object v1, p0, Lof;->d:Ljava/lang/Object;
-
-    check-cast v1, Lbr6;
-
-    iget v2, p0, Lof;->b:F
-
-    invoke-static {v0, v1, v2, p1}, Lxec;->b(Lxec;Lbr6;FLandroid/animation/ValueAnimator;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lof;->c:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    iget-object v1, p0, Lof;->d:Ljava/lang/Object;
-
-    check-cast v1, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
-
-    iget v0, p0, Lof;->b:F
-
-    neg-float v0, v0
-
-    add-float/2addr v0, p1
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationY(F)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

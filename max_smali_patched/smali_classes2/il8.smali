@@ -1,10 +1,15 @@
 .class public final Lil8;
-.super Laq;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lki8;
 
 
 # static fields
 .field public static final a:Lil8;
+
+.field public static final b:I
 
 
 # direct methods
@@ -13,27 +18,31 @@
 
     new-instance v0, Lil8;
 
-    invoke-direct {v0}, Laq;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lil8;->a:Lil8;
+
+    sget v0, Liab;->z:I
+
+    sput v0, Lil8;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lo58;
+.method public final getItemId()J
     .locals 2
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
+    const-wide/16 v0, 0x0
 
-    move-result-object v0
+    return-wide v0
+.end method
 
-    const/16 v1, 0x20a
+.method public final i()I
+    .locals 1
 
-    invoke-virtual {v0, v1}, Lr5;->d(I)Ln8g;
+    sget v0, Lil8;->b:I
 
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method

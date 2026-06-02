@@ -3,83 +3,49 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Ljava/lang/String;
+
+
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
+
+.field public final b:Lw46;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "ConstraintsCmdHandler"
 
-    iput-object p1, p0, Lqz3;->a:Ljava/lang/String;
+    invoke-static {v0}, Lvfa;->N(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lqz3;->c:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public constructor <init>(Landroid/content/Context;ILdkg;)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-ne p0, p1, :cond_0
+    iput p2, p0, Lqz3;->a:I
 
-    const/4 p1, 0x1
+    iget-object p1, p3, Ldkg;->o:Lpvi;
 
-    return p1
+    iget-object p1, p1, Lpvi;->j:Lskg;
 
-    :cond_0
-    instance-of v0, p1, Lqz3;
+    new-instance p2, Lw46;
 
-    if-eqz v0, :cond_1
+    const/4 p3, 0x0
 
-    check-cast p1, Lqz3;
+    invoke-direct {p2, p1, p3}, Lw46;-><init>(Lskg;Lcvi;)V
 
-    iget-object v0, p0, Lqz3;->a:Ljava/lang/String;
+    iput-object p2, p0, Lqz3;->b:Lw46;
 
-    iget-object p1, p1, Lqz3;->a:Ljava/lang/String;
-
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lqz3;->a:Ljava/lang/String;
-
-    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "MenuButton{text=\'"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lqz3;->a:Ljava/lang/String;
-
-    const-string v2, "\'}"
-
-    invoke-static {v0, v1, v2}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

@@ -1,48 +1,60 @@
 .class public final Lv21;
-.super Lo84;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic X:Lr3;
+.field public final X:Z
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final Y:J
 
-.field public o:I
+.field public final a:Lt21;
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ls21;
+
+.field public final d:Ljava/lang/String;
+
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lr3;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lr21;)V
+    .locals 2
 
-    iput-object p1, p0, Lv21;->X:Lr3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    iget-object v0, p1, Lr21;->a:Lt21;
+
+    iput-object v0, p0, Lv21;->a:Lt21;
+
+    iget-object v0, p1, Lr21;->b:Ljava/lang/String;
+
+    iput-object v0, p0, Lv21;->b:Ljava/lang/String;
+
+    iget-object v0, p1, Lr21;->c:Ls21;
+
+    iput-object v0, p0, Lv21;->c:Ls21;
+
+    iget-object v0, p1, Lr21;->d:Ljava/lang/String;
+
+    iput-object v0, p0, Lv21;->d:Ljava/lang/String;
+
+    iget-object v0, p1, Lr21;->e:Ljava/lang/String;
+
+    iput-object v0, p0, Lv21;->o:Ljava/lang/String;
+
+    iget-boolean v0, p1, Lr21;->f:Z
+
+    iput-boolean v0, p0, Lv21;->X:Z
+
+    iget-wide v0, p1, Lr21;->g:J
+
+    iput-wide v0, p0, Lv21;->Y:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lv21;->d:Ljava/lang/Object;
-
-    iget p1, p0, Lv21;->o:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lv21;->o:I
-
-    iget-object p1, p0, Lv21;->X:Lr3;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lr3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

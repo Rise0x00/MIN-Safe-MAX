@@ -1,62 +1,73 @@
-.class public abstract Llx7;
-.super Ljava/lang/Object;
+.class public final Llx7;
+.super Lz84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/Integer;
+# instance fields
+.field public final synthetic X:Ljava/lang/Object;
+
+.field public d:I
+
+.field public final synthetic o:Lnt6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lfc4;Lnt6;Ljava/lang/Object;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p3, p0, Llx7;->o:Lnt6;
 
-    :try_start_0
-    const-string v1, "android.os.Build$VERSION"
+    iput-object p4, p0, Llx7;->X:Ljava/lang/Object;
 
-    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v1
-
-    const-string v2, "SDK_INT"
-
-    invoke-virtual {v1, v2}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    instance-of v2, v1, Ljava/lang/Integer;
-
-    if-eqz v2, :cond_0
-
-    check-cast v1, Ljava/lang/Integer;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    :cond_0
-    move-object v1, v0
-
-    :goto_0
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
-
-    move-result v2
-
-    if-lez v2, :cond_1
-
-    move-object v0, v1
-
-    :cond_1
-    sput-object v0, Llx7;->a:Ljava/lang/Integer;
+    invoke-direct {p0, p2, p1}, Lz84;-><init>(Lfc4;Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Llx7;->d:I
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    iput v1, p0, Llx7;->d:I
+
+    invoke-static {p1}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "This coroutine had already completed"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    iput v2, p0, Llx7;->d:I
+
+    invoke-static {p1}, Lmtd;->g0(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Llx7;->o:Lnt6;
+
+    invoke-static {v1, p1}, Lddh;->f(ILjava/lang/Object;)V
+
+    iget-object v0, p0, Llx7;->X:Ljava/lang/Object;
+
+    invoke-interface {p1, v0, p0}, Lnt6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

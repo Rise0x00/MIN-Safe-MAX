@@ -1,11 +1,67 @@
-.class public interface abstract La7;
-.super Ljava/lang/Object;
+.class public final synthetic La7;
+.super Lj8d;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract d()Z
+# instance fields
+.field public final synthetic a:I
+
+
+# direct methods
+.method public synthetic constructor <init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    iput p2, p0, La7;->a:I
+
+    move-object p2, p4
+
+    move-object p4, p5
+
+    move-object p5, p6
+
+    move p6, p1
+
+    move-object p1, p0
+
+    invoke-direct/range {p1 .. p6}, Ll8d;-><init>(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    return-void
 .end method
 
-.method public abstract e()Z
+
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, La7;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Li12;->receiver:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/android/MainActivity;
+
+    sget v1, Lone/me/android/MainActivity;->o1:I
+
+    invoke-virtual {v0}, Lone/me/android/MainActivity;->S()Ltge;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Li12;->receiver:Ljava/lang/Object;
+
+    check-cast v0, Ld7;
+
+    iget-object v0, v0, Ld7;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

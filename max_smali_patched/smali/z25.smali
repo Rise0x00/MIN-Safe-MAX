@@ -1,128 +1,82 @@
-.class public final Lz25;
-.super Ljava/lang/Object;
+.class public final enum Lz25;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Lfpe;
+.implements Ljava/util/concurrent/Executor;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final enum a:Lz25;
 
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
+.field public static final synthetic b:[Lz25;
 
 
 # direct methods
-.method public constructor <init>(Let;Let;Ll7e;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    const/4 p3, 0x2
+    new-instance v0, Lz25;
 
-    iput p3, p0, Lz25;->a:I
+    const-string v1, "INSTANCE"
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
 
-    .line 3
-    iput-object p1, p0, Lz25;->b:Ljava/lang/Object;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 4
-    iput-object p2, p0, Lz25;->c:Ljava/lang/Object;
+    sput-object v0, Lz25;->a:Lz25;
+
+    filled-new-array {v0}, [Lz25;
+
+    move-result-object v0
+
+    sput-object v0, Lz25;->b:[Lz25;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
-    .locals 0
+.method public static valueOf(Ljava/lang/String;)Lz25;
+    .locals 1
 
-    .line 1
-    iput p2, p0, Lz25;->a:I
+    const-class v0, Lz25;
 
-    iput-object p1, p0, Lz25;->b:Ljava/lang/Object;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iput-object p3, p0, Lz25;->c:Ljava/lang/Object;
+    move-result-object p0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p0, Lz25;
 
-    return-void
+    return-object p0
+.end method
+
+.method public static values()[Lz25;
+    .locals 1
+
+    sget-object v0, Lz25;->b:[Lz25;
+
+    invoke-virtual {v0}, [Lz25;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lz25;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final iterator()Ljava/util/Iterator;
-    .locals 3
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 0
 
-    iget v0, p0, Lz25;->a:I
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    packed-switch v0, :pswitch_data_0
+    return-void
+.end method
 
-    iget-object v0, p0, Lz25;->b:Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    check-cast v0, Ls36;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-static {v0, v1}, Lqpe;->l(Lfpe;Ljava/util/Collection;)V
-
-    iget-object v0, p0, Lz25;->c:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/Comparator;
-
-    invoke-static {v0, v1}, Lui3;->p(Ljava/util/Comparator;Ljava/util/List;)V
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
+    const-string v0, "DirectExecutor"
 
     return-object v0
-
-    :pswitch_0
-    new-instance v0, Lvk9;
-
-    invoke-direct {v0, p0}, Lvk9;-><init>(Lz25;)V
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Lkv6;
-
-    invoke-direct {v0, p0}, Lkv6;-><init>(Lz25;)V
-
-    return-object v0
-
-    :pswitch_2
-    new-instance v0, Ly25;
-
-    iget-object v1, p0, Lz25;->b:Ljava/lang/Object;
-
-    check-cast v1, Let;
-
-    iget-object v1, v1, Let;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/Iterable;
-
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lz25;->c:Ljava/lang/Object;
-
-    check-cast v2, Lm75;
-
-    invoke-direct {v0, v1, v2}, Ly25;-><init>(Ljava/util/Iterator;Lm75;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

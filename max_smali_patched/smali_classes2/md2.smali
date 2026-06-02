@@ -1,91 +1,68 @@
 .class public final Lmd2;
-.super Ljava/lang/Object;
+.super Lq2e;
 .source "SourceFile"
 
 
 # instance fields
-.field public A:Z
+.field public final a:Lfpf;
 
-.field public B:J
+.field public final b:Lbu6;
 
-.field public C:Ljava/util/LinkedHashMap;
 
-.field public D:Ltfh;
+# direct methods
+.method public constructor <init>(Lfpf;Lzs6;)V
+    .locals 0
 
-.field public E:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public F:Z
+    iput-object p1, p0, Lmd2;->a:Lfpf;
 
-.field public G:J
+    check-cast p2, Lbu6;
 
-.field public H:Ljava/util/LinkedHashMap;
+    iput-object p2, p0, Lmd2;->b:Lbu6;
 
-.field public I:J
+    return-void
+.end method
 
-.field public J:Z
 
-.field public K:J
+# virtual methods
+.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
+    .locals 0
 
-.field public L:Ljava/lang/String;
+    invoke-static {p1}, Lis6;->A(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/GridLayoutManager;
 
-.field public M:J
+    move-result-object p1
 
-.field public N:J
+    if-eqz p1, :cond_1
 
-.field public O:I
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->V0()I
 
-.field public P:I
+    move-result p1
 
-.field public Q:I
+    const/4 p2, -0x1
 
-.field public a:J
+    if-ne p1, p2, :cond_0
 
-.field public b:Ljava/lang/String;
+    goto :goto_0
 
-.field public c:J
+    :cond_0
+    iget-object p2, p0, Lmd2;->a:Lfpf;
 
-.field public d:Ljava/util/LinkedHashMap;
+    iget-object p2, p2, Lci8;->d:Lm00;
 
-.field public e:J
+    iget-object p2, p2, Lm00;->f:Ljava/util/List;
 
-.field public f:Ljava/lang/String;
+    invoke-static {p1, p2}, Lij3;->l1(ILjava/util/List;)Ljava/lang/Object;
 
-.field public g:Ljava/lang/String;
+    move-result-object p1
 
-.field public h:Ljava/lang/String;
+    check-cast p1, Lki8;
 
-.field public i:Lxk9;
+    iget-object p2, p0, Lmd2;->b:Lbu6;
 
-.field public j:J
+    invoke-interface {p2, p1}, Lzs6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public k:J
-
-.field public l:I
-
-.field public m:J
-
-.field public n:Ljava/lang/String;
-
-.field public o:Lu4e;
-
-.field public p:I
-
-.field public q:La37;
-
-.field public r:I
-
-.field public s:Ljava/lang/String;
-
-.field public t:Le00;
-
-.field public u:I
-
-.field public v:Ljv2;
-
-.field public w:Lkw2;
-
-.field public x:Lxk9;
-
-.field public y:Z
-
-.field public z:Z
+    :cond_1
+    :goto_0
+    return-void
+.end method

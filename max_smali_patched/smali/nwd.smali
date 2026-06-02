@@ -1,152 +1,222 @@
 .class public final Lnwd;
-.super Lp6g;
+.super Ltpg;
 .source "SourceFile"
-
-# interfaces
-.implements Lbr6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Ll88;
-
-.field public final synthetic Z:Lo78;
-
-.field public o:I
-
-.field public final synthetic t0:Lp6g;
+.field public final synthetic e:Lof7;
 
 
 # direct methods
-.method public constructor <init>(Ll88;Lo78;Lbr6;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lof7;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lnwd;->Y:Ll88;
+    iput-object p1, p0, Lnwd;->e:Lof7;
 
-    iput-object p2, p0, Lnwd;->Z:Lo78;
+    const/4 p1, 0x1
 
-    check-cast p3, Lp6g;
-
-    iput-object p3, p0, Lnwd;->t0:Lp6g;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Ltpg;-><init>(Ljava/lang/String;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()J
+    .locals 13
 
-    check-cast p1, Lzb4;
+    iget-object v0, p0, Lnwd;->e:Lof7;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
 
-    invoke-virtual {p0, p1, p2}, Lnwd;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-wide v1
 
-    move-result-object p1
+    iget-object v3, v0, Lof7;->d:Ljava/util/Collection;
 
-    check-cast p1, Lnwd;
+    check-cast v3, Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    invoke-virtual {v3}, Ljava/util/concurrent/ConcurrentLinkedQueue;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {p1, p2}, Lnwd;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v3
 
-    move-result-object p1
+    const/4 v4, 0x0
 
-    return-object p1
-.end method
+    const/4 v5, 0x0
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
+    const-wide/high16 v6, -0x8000000000000000L
 
-    new-instance v0, Lnwd;
+    move-wide v7, v6
 
-    iget-object v1, p0, Lnwd;->Z:Lo78;
+    move-object v6, v5
 
-    iget-object v2, p0, Lnwd;->t0:Lp6g;
+    move v5, v4
 
-    iget-object v3, p0, Lnwd;->Y:Ll88;
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-direct {v0, v3, v1, v2, p2}, Lnwd;-><init>(Ll88;Lo78;Lbr6;Lkotlin/coroutines/Continuation;)V
+    move-result v9
 
-    iput-object p1, v0, Lnwd;->X:Ljava/lang/Object;
+    if-eqz v9, :cond_2
 
-    return-object v0
-.end method
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    move-result-object v9
 
-    iget v0, p0, Lnwd;->o:I
+    check-cast v9, Lmwd;
 
-    const/4 v1, 0x1
+    monitor-enter v9
 
-    if-eqz v0, :cond_1
+    :try_start_0
+    invoke-virtual {v0, v9, v1, v2}, Lof7;->b(Lmwd;J)I
 
-    if-ne v0, v1, :cond_0
+    move-result v10
 
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    if-lez v10, :cond_0
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_1
+
+    :cond_0
+    add-int/lit8 v4, v4, 0x1
+
+    iget-wide v10, v9, Lmwd;->q:J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    sub-long v10, v1, v10
+
+    cmp-long v12, v10, v7
+
+    if-lez v12, :cond_1
+
+    move-object v6, v9
+
+    move-wide v7, v10
+
+    :cond_1
+    :goto_1
+    monitor-exit v9
 
     goto :goto_0
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :catchall_0
+    move-exception v0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    monitor-exit v9
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lnwd;->X:Ljava/lang/Object;
-
-    move-object v5, p1
-
-    check-cast v5, Lzb4;
-
-    sget-object p1, Lf25;->a:Lct4;
-
-    sget-object p1, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lzp8;
-
-    invoke-virtual {p1}, Lzp8;->getImmediate()Lzp8;
-
-    move-result-object p1
-
-    new-instance v2, Lmwd;
-
-    iget-object v6, p0, Lnwd;->t0:Lp6g;
-
-    const/4 v7, 0x0
-
-    iget-object v3, p0, Lnwd;->Y:Ll88;
-
-    iget-object v4, p0, Lnwd;->Z:Lo78;
-
-    invoke-direct/range {v2 .. v7}, Lmwd;-><init>(Ll88;Lo78;Lzb4;Lbr6;Lkotlin/coroutines/Continuation;)V
-
-    iput v1, p0, Lnwd;->o:I
-
-    invoke-static {p1, v2, p0}, Ls9j;->k(Lqb4;Lbr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    throw v0
 
     :cond_2
-    :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    iget-wide v9, v0, Lof7;->a:J
 
-    return-object p1
+    cmp-long v3, v7, v9
+
+    if-gez v3, :cond_6
+
+    const/4 v3, 0x5
+
+    if-le v4, v3, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    if-lez v4, :cond_4
+
+    sub-long/2addr v9, v7
+
+    return-wide v9
+
+    :cond_4
+    if-lez v5, :cond_5
+
+    return-wide v9
+
+    :cond_5
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+
+    :cond_6
+    :goto_2
+    monitor-enter v6
+
+    :try_start_1
+    iget-object v3, v6, Lmwd;->p:Ljava/util/ArrayList;
+
+    invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    const-wide/16 v4, 0x0
+
+    if-nez v3, :cond_7
+
+    monitor-exit v6
+
+    return-wide v4
+
+    :cond_7
+    :try_start_2
+    iget-wide v9, v6, Lmwd;->q:J
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    add-long/2addr v9, v7
+
+    cmp-long v1, v9, v1
+
+    if-eqz v1, :cond_8
+
+    monitor-exit v6
+
+    return-wide v4
+
+    :cond_8
+    const/4 v1, 0x1
+
+    :try_start_3
+    iput-boolean v1, v6, Lmwd;->j:Z
+
+    iget-object v1, v0, Lof7;->d:Ljava/util/Collection;
+
+    check-cast v1, Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {v1, v6}, Ljava/util/concurrent/ConcurrentLinkedQueue;->remove(Ljava/lang/Object;)Z
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    monitor-exit v6
+
+    iget-object v1, v6, Lmwd;->d:Ljava/net/Socket;
+
+    invoke-static {v1}, Lonh;->d(Ljava/net/Socket;)V
+
+    iget-object v1, v0, Lof7;->d:Ljava/util/Collection;
+
+    check-cast v1, Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_9
+
+    iget-object v0, v0, Lof7;->b:Ljava/lang/Object;
+
+    check-cast v0, Lkqg;
+
+    invoke-virtual {v0}, Lkqg;->a()V
+
+    :cond_9
+    return-wide v4
+
+    :catchall_1
+    move-exception v0
+
+    monitor-exit v6
+
+    throw v0
 .end method

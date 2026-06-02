@@ -1,61 +1,54 @@
-.class public final Ljvg;
-.super Lo84;
+.class public abstract Ljvg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:[Ljava/lang/String;
-
-.field public Y:I
-
-.field public Z:I
-
-.field public d:Lbec;
-
-.field public o:Ljava/lang/String;
-
-.field public synthetic t0:Ljava/lang/Object;
-
-.field public final synthetic u0:Lnvg;
-
-.field public v0:I
+# static fields
+.field public static final a:Ljava/lang/ThreadLocal;
 
 
 # direct methods
-.method public constructor <init>(Lnvg;Lo84;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Ljvg;->u0:Lnvg;
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "ThreadLocalEventLoop"
+
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v0}, Lkotlinx/coroutines/internal/ThreadLocalKt;->commonThreadLocal(Lkotlinx/coroutines/internal/Symbol;)Ljava/lang/ThreadLocal;
+
+    move-result-object v0
+
+    sput-object v0, Ljvg;->a:Ljava/lang/ThreadLocal;
 
     return-void
 .end method
 
+.method public static a()Ljp5;
+    .locals 3
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    sget-object v0, Ljvg;->a:Ljava/lang/ThreadLocal;
 
-    iput-object p1, p0, Ljvg;->t0:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-    iget p1, p0, Ljvg;->v0:I
+    move-result-object v1
 
-    const/high16 v0, -0x80000000
+    check-cast v1, Ljp5;
 
-    or-int/2addr p1, v0
+    if-nez v1, :cond_0
 
-    iput p1, p0, Ljvg;->v0:I
+    new-instance v1, Lex0;
 
-    const/4 p1, 0x0
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    const/4 v0, 0x0
+    move-result-object v2
 
-    iget-object v1, p0, Ljvg;->u0:Lnvg;
+    invoke-direct {v1, v2}, Lex0;-><init>(Ljava/lang/Thread;)V
 
-    invoke-static {v1, p1, v0, p0}, Lnvg;->d(Lnvg;Ltsg;ILo84;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
-    move-result-object p1
-
-    return-object p1
+    :cond_0
+    return-object v1
 .end method

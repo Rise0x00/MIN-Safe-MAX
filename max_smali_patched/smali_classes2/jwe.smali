@@ -1,102 +1,139 @@
 .class public final Ljwe;
-.super Lp6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbr6;
+
+# static fields
+.field public static final c:Ljwe;
 
 
 # instance fields
-.field public o:I
+.field public final a:J
+
+.field public final b:J
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Ljwe;
+
+    const-wide/16 v1, 0x0
+
+    invoke-direct {v0, v1, v2, v1, v2}, Ljwe;-><init>(JJ)V
+
+    sput-object v0, Ljwe;->c:Ljwe;
+
+    return-void
+.end method
+
+.method public constructor <init>(JJ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Ljwe;->a:J
+
+    iput-wide p3, p0, Ljwe;->b:J
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    check-cast p1, Lzb4;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Ljwe;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    const/4 v1, 0x0
 
-    check-cast p1, Ljwe;
+    if-eqz p1, :cond_2
 
-    sget-object p2, Lb3h;->a:Lb3h;
+    const-class v2, Ljwe;
 
-    invoke-virtual {p1, p2}, Ljwe;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p1
+    move-result-object v3
 
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Ljwe;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p1, v0, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Ljwe;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
     :cond_1
-    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    check-cast p1, Ljwe;
 
-    sget p1, Lta5;->d:I
+    iget-wide v2, p0, Ljwe;->a:J
 
-    const/4 p1, 0x2
+    iget-wide v4, p1, Ljwe;->a:J
 
-    sget-object v0, Lza5;->d:Lza5;
+    cmp-long v2, v2, v4
 
-    invoke-static {p1, v0}, Laoj;->g(ILza5;)J
+    if-nez v2, :cond_2
 
-    move-result-wide v2
+    iget-wide v2, p0, Ljwe;->b:J
 
-    iput v1, p0, Ljwe;->o:I
+    iget-wide v4, p1, Ljwe;->b:J
 
-    invoke-static {v2, v3, p0}, Lumj;->d(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    cmp-long p1, v2, v4
 
-    move-result-object p1
+    if-nez p1, :cond_2
 
-    sget-object v0, Lac4;->a:Lac4;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    return v0
 
     :cond_2
     :goto_0
-    sget-object p1, Lb3h;->a:Lb3h;
+    return v1
+.end method
 
-    return-object p1
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Ljwe;->a:J
+
+    long-to-int v0, v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Ljwe;->b:J
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "[timeUs="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Ljwe;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", position="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Ljwe;->b:J
+
+    const-string v3, "]"
+
+    invoke-static {v1, v2, v3, v0}, Lsb6;->i(JLjava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

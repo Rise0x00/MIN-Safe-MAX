@@ -3,73 +3,95 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwbh;
+.implements Lhd;
 
 
 # instance fields
-.field public final a:Lftd;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Z)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lftd;
-
-    const-string v1, "^[a-zA-Z\u0410-\u044f\\u0401\\u0451\\u00eb\\u00cb\\- ]+$"
-
-    invoke-direct {v0, v1}, Lftd;-><init>(Ljava/lang/String;)V
-
-    iput-object v0, p0, Lad;->a:Lftd;
+    iput-boolean p1, p0, Lad;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/String;)Llhg;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lad;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lad;
+
+    iget-boolean v0, p0, Lad;->a:Z
+
+    iget-boolean p1, p1, Lad;->a:Z
+
+    if-eq v0, p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
-    if-lez v0, :cond_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v0, p0, Lad;->a:Lftd;
+    iget-boolean v1, p0, Lad;->a:Z
 
-    invoke-virtual {v0, p2}, Lftd;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    move-result p2
+    move-result v1
 
-    if-nez p2, :cond_0
+    add-int/2addr v1, v0
 
-    const-class p2, Lad;
+    return v1
+.end method
 
-    invoke-static {p2}, Lctd;->a(Ljava/lang/Class;)Lrd3;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    move-result-object p2
+    const-string v0, "DisableAllScreenRecordInCall(isSuccess=true, isEnabled="
 
-    invoke-static {p1, p2}, Lr4j;->a(ILrd3;)Ljava/lang/Integer;
+    const-string v1, ")"
 
-    move-result-object p1
+    iget-boolean v2, p0, Lad;->a:Z
 
-    if-eqz p1, :cond_0
+    invoke-static {v0, v1, v2}, Lrtc;->s(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    move-result-object v0
 
-    move-result p1
-
-    new-instance p2, Llhg;
-
-    invoke-direct {p2, p1}, Llhg;-><init>(I)V
-
-    return-object p2
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return-object p1
+    return-object v0
 .end method
