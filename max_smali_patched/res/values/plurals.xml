@@ -43,6 +43,12 @@
         <item quantity="few">Папка %1$s. Не прочитано %2$d чата</item>
         <item quantity="many">Папка %1$s. Не прочитано %2$d чатов</item>
     </plurals>
+    <plurals name="chat_list_accessibility_new_messages">
+        <item quantity="other">%d новых сообщений</item>
+        <item quantity="one">%1$d новое сообщение</item>
+        <item quantity="few">%d новых сообщения</item>
+        <item quantity="many">%d новых сообщений</item>
+    </plurals>
     <plurals name="chat_list_multiselect_delete_count">
         <item quantity="other">Вы удалили %d чата</item>
         <item quantity="one">Вы удалили %d чат</item>
@@ -56,6 +62,13 @@
         <item quantity="two">Сообщения скопированы</item>
         <item quantity="few">Вы скопировали сообщения</item>
         <item quantity="many">Вы скопировали сообщения</item>
+    </plurals>
+    <plurals name="chat_screen_confirmation_delete_comment_title">
+        <item quantity="other">Удалить комментарии?</item>
+        <item quantity="one">Удалить комментарий?</item>
+        <item quantity="two">Удалить комментарии?</item>
+        <item quantity="few">Удалить комментарии?</item>
+        <item quantity="many">Удалить комментарии?</item>
     </plurals>
     <plurals name="chat_screen_confirmation_delete_title">
         <item quantity="other">Удалить сообщения?</item>
@@ -87,6 +100,14 @@
         <item quantity="few">%d часа</item>
         <item quantity="many">%d часов</item>
     </plurals>
+    <plurals name="discussions_black_list_toolbar_subtitle">
+        <item quantity="other">%d пользователей</item>
+        <item quantity="zero">%d пользователей</item>
+        <item quantity="one">%d пользователь</item>
+        <item quantity="two">%d пользователя</item>
+        <item quantity="few">%d пользователя</item>
+        <item quantity="many">%d пользователей</item>
+    </plurals>
     <plurals name="forward_snackbar_messages_sent">
         <item quantity="other">Вы переслали сообщения</item>
         <item quantity="one">Вы переслали сообщение</item>
@@ -107,23 +128,20 @@
         <item quantity="few">Если я не захожу %d месяца</item>
         <item quantity="many">Если я не захожу %d месяцев</item>
     </plurals>
-    <plurals name="max_attach_count_error">
-        <item quantity="other">Сообщение не может содержать более чем %d вложений</item>
-        <item quantity="zero">Сообщение не может содержать более чем %d вложений</item>
-        <item quantity="one">Сообщение не может содержать более чем %d вложение</item>
-        <item quantity="two">Сообщение не может содержать более чем %d вложения</item>
-        <item quantity="few">Сообщение не может содержать более чем %d вложения</item>
-        <item quantity="many">Сообщение не может содержать более чем %d вложений</item>
-    </plurals>
     <plurals name="messages_list_discussion_entry_comments_count">
         <item quantity="other">%s комментариев</item>
         <item quantity="one">%s комментарий</item>
         <item quantity="few">%s комментария</item>
     </plurals>
+    <plurals name="messages_list_message_poll_anonymous_answers_count">
+        <item quantity="other">%s анонимных голосов</item>
+        <item quantity="one">%s анонимный голос</item>
+        <item quantity="few">%s анонимных голоса</item>
+    </plurals>
     <plurals name="messages_list_message_poll_answers_count">
-        <item quantity="other">%d ответов</item>
-        <item quantity="one">%d ответ</item>
-        <item quantity="few">%d ответа</item>
+        <item quantity="other">%s голосов</item>
+        <item quantity="one">%s голос</item>
+        <item quantity="few">%s голоса</item>
     </plurals>
     <plurals name="mtrl_badge_content_description">
         <item quantity="other">%d new notifications</item>
@@ -159,15 +177,43 @@
         <item quantity="few">%1$d звезды</item>
         <item quantity="many">%1$d звёзд</item>
     </plurals>
+    <plurals name="oneme_main_account_switcher_profiles_limit">
+        <item quantity="other">Можно добавить до %d профилей</item>
+        <item quantity="one">Можно добавить до %d профиля</item>
+        <item quantity="few">Можно добавить до %d профилей</item>
+        <item quantity="many">Можно добавить до %d профилей</item>
+    </plurals>
     <plurals name="oneme_poll_create__answer_limit_hint">
         <item quantity="other">Можно добавить ещё %d ответов</item>
         <item quantity="one">Можно добавить ещё %d ответ</item>
         <item quantity="few">Можно добавить ещё %d ответа</item>
     </plurals>
+    <plurals name="oneme_poll_result__anonymous_answer_vote_count">
+        <item quantity="other">%d голосов</item>
+        <item quantity="one">%d голос</item>
+        <item quantity="few">%d голоса</item>
+    </plurals>
+    <plurals name="oneme_poll_result__anonymous_vote_count">
+        <item quantity="other">%d анонимных голосов</item>
+        <item quantity="one">%d анонимный голос</item>
+        <item quantity="few">%d анонимных голоса</item>
+    </plurals>
     <plurals name="oneme_poll_result__vote_count">
         <item quantity="other">%d ответов</item>
         <item quantity="one">%d ответ</item>
         <item quantity="few">%d ответа</item>
+    </plurals>
+    <plurals name="oneme_settings_account_switcher_profiles_limit">
+        <item quantity="other">Можно добавить до %d профилей</item>
+        <item quantity="one">Можно добавить до %d профиля</item>
+        <item quantity="few">Можно добавить до %d профилей</item>
+        <item quantity="many">Можно добавить до %d профилей</item>
+    </plurals>
+    <plurals name="oneme_settings_mark_as_read_chats">
+        <item quantity="other">Прочитать %d чата</item>
+        <item quantity="one">Прочитать %d чат</item>
+        <item quantity="few">Прочитать %d чата</item>
+        <item quantity="many">Прочитать %d чатов</item>
     </plurals>
     <plurals name="oneme_settings_privacy_twofa_delete_user_days_left_notif">
         <item quantity="other">Удаляем ваш профиль, осталось %1$d дней</item>
@@ -201,6 +247,12 @@
         <item quantity="two">%d стикера</item>
         <item quantity="few">%d стикера</item>
         <item quantity="many">%d стикеров</item>
+    </plurals>
+    <plurals name="oneme_stories_link_limit_reached">
+        <item quantity="other">Можно добавить только %d ссылки</item>
+        <item quantity="one">Можно добавить только одну ссылку</item>
+        <item quantity="few">Можно добавить только %d ссылки</item>
+        <item quantity="many">Можно добавить только %d ссылок</item>
     </plurals>
     <plurals name="picker_chats_channel_limit_add_subscribers_error">
         <item quantity="other">За один раз можно добавить не больше %s подписчиков</item>
@@ -271,6 +323,22 @@
         <item quantity="two">%d реакции</item>
         <item quantity="few">%d реакции</item>
         <item quantity="many">%d реакций</item>
+    </plurals>
+    <plurals name="profile_edit_shortlink_no_digital_id_description">
+        <item quantity="other">С ним вы сможете создать до %1$d публичных каналов</item>
+        <item quantity="zero">С ним вы сможете создать до %1$d публичных каналов</item>
+        <item quantity="one">С ним вы сможете создать до %1$d публичного канала</item>
+        <item quantity="two">С ним вы сможете создать до %1$d публичных каналов</item>
+        <item quantity="few">С ним вы сможете создать до %1$d публичных каналов</item>
+        <item quantity="many">С ним вы сможете создать до %1$d публичных каналов</item>
+    </plurals>
+    <plurals name="profile_edit_shortlink_too_many_public_channel_error">
+        <item quantity="other">Изменить тип не получится — у вас уже %1$d публичных каналов</item>
+        <item quantity="zero">Изменить тип не получится — у вас уже %1$d публичных каналов</item>
+        <item quantity="one">Изменить тип не получится — у вас уже %1$d публичный канал</item>
+        <item quantity="two">Изменить тип не получится — у вас уже %1$d публичных канала</item>
+        <item quantity="few">Изменить тип не получится — у вас уже %1$d публичных канала</item>
+        <item quantity="many">Изменить тип не получится — у вас уже %1$d публичных каналов</item>
     </plurals>
     <plurals name="profile_members_list_delete_from_channel_snackbar">
         <item quantity="other">Вы удалили подписчиков</item>

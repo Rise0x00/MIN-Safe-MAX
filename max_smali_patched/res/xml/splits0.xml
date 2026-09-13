@@ -3,7 +3,11 @@
     <module name="">
         <language>
             <entry key="en" split="" />
+            <entry key="es" split="" />
+            <entry key="fr" split="" />
+            <entry key="pt" split="" />
             <entry key="ru" split="" />
+            <entry key="uz" split="" />
         </language>
     </module>
 </splits>

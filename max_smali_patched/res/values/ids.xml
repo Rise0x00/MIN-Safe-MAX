@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item type="id" name="about_app_simple_cell_view_type" />
-    <item type="id" name="about_app_version" />
+    <item type="id" name="NO_DEBUG" />
+    <item type="id" name="SHOW_ALL" />
+    <item type="id" name="SHOW_PATH" />
+    <item type="id" name="SHOW_PROGRESS" />
+    <item type="id" name="about_app_current_version_id" />
+    <item type="id" name="about_app_current_version_view_type" />
+    <item type="id" name="about_app_new_version_id" />
+    <item type="id" name="about_app_new_version_view_type" />
+    <item type="id" name="about_app_report_id" />
+    <item type="id" name="about_app_report_view_type" />
+    <item type="id" name="about_app_self_service_auto_id" />
+    <item type="id" name="about_app_self_service_auto_view_type" />
+    <item type="id" name="about_app_self_service_download_state_view_type" />
+    <item type="id" name="about_app_self_service_download_update_id" />
+    <item type="id" name="about_app_self_service_last_update_id" />
+    <item type="id" name="about_app_self_service_last_update_view_type" />
+    <item type="id" name="about_app_self_service_loading_update_id" />
+    <item type="id" name="about_app_self_service_net_id" />
+    <item type="id" name="about_app_self_service_net_type_any" />
+    <item type="id" name="about_app_self_service_net_type_not_any" />
+    <item type="id" name="about_app_self_service_net_view_type" />
+    <item type="id" name="about_app_self_service_update_app_id" />
     <item type="id" name="accessibility_action_clickable_span" />
     <item type="id" name="accessibility_custom_action_0" />
     <item type="id" name="accessibility_custom_action_1" />
@@ -35,29 +55,10 @@
     <item type="id" name="accessibility_custom_action_7" />
     <item type="id" name="accessibility_custom_action_8" />
     <item type="id" name="accessibility_custom_action_9" />
-    <item type="id" name="act_local_medias__bottom_toolbox" />
-    <item type="id" name="act_local_medias__fl_root" />
-    <item type="id" name="act_local_medias__preview" />
-    <item type="id" name="act_local_medias__view_pager" />
-    <item type="id" name="act_local_medias__vs_toolbox" />
-    <item type="id" name="act_photo_editor__btn_clear" />
-    <item type="id" name="act_photo_editor__btn_close" />
-    <item type="id" name="act_photo_editor__btn_done" />
-    <item type="id" name="act_photo_editor__btn_line_width" />
-    <item type="id" name="act_photo_editor__btn_sticker" />
-    <item type="id" name="act_photo_editor__btn_undo" />
-    <item type="id" name="act_photo_editor__editor" />
-    <item type="id" name="act_photo_editor__fl_line_width" />
-    <item type="id" name="act_photo_editor__rl_buttons" />
-    <item type="id" name="act_photo_editor__rl_controls" />
-    <item type="id" name="act_photo_editor__root" />
-    <item type="id" name="act_photo_editor__view_brush_width" />
-    <item type="id" name="act_photo_editor__view_color_selector" />
-    <item type="id" name="act_single_fragment__container" />
-    <item type="id" name="act_tam_crop_image__container" />
-    <item type="id" name="act_tam_crop_image__root" />
-    <item type="id" name="act_trim_video__container" />
     <item type="id" name="action0" />
+    <item type="id" name="actionDown" />
+    <item type="id" name="actionDownUp" />
+    <item type="id" name="actionUp" />
     <item type="id" name="action_bar" />
     <item type="id" name="action_bar_activity_content" />
     <item type="id" name="action_bar_container" />
@@ -77,12 +78,13 @@
     <item type="id" name="action_text" />
     <item type="id" name="actions" />
     <item type="id" name="activity_chooser_view_content" />
-    <item type="id" name="addToContact" />
-    <item type="id" name="add_chats_to_folder" />
-    <item type="id" name="add_to_contact_list" />
+    <item type="id" name="adjust_height" />
+    <item type="id" name="adjust_width" />
     <item type="id" name="alertTitle" />
-    <item type="id" name="all_chat_participants" />
-    <item type="id" name="androidx_window_activity_scope" />
+    <item type="id" name="allStates" />
+    <item type="id" name="animateToEnd" />
+    <item type="id" name="animateToStart" />
+    <item type="id" name="anticipate" />
     <item type="id" name="appearance_mode_view" />
     <item type="id" name="appearance_mode_view_icon" />
     <item type="id" name="appearance_mode_view_title" />
@@ -98,7 +100,6 @@
     <item type="id" name="appearance_settings_segmented_buttons_title" />
     <item type="id" name="appearance_settings_themes_recycler" />
     <item type="id" name="arch_activity_wrapper_view_id" />
-    <item type="id" name="arch_child_widget_wrapper_id" />
     <item type="id" name="attach_preview_drawee" />
     <item type="id" name="attach_preview_progress_bar" />
     <item type="id" name="attach_preview_remove_button" />
@@ -123,25 +124,19 @@
     <item type="id" name="audio_record__swipe_remove_button" />
     <item type="id" name="audio_record__wave_container" />
     <item type="id" name="audio_record__wave_view" />
-    <item type="id" name="back" />
+    <item type="id" name="autoComplete" />
+    <item type="id" name="autoCompleteToEnd" />
+    <item type="id" name="autoCompleteToStart" />
+    <item type="id" name="automatic" />
     <item type="id" name="banners_view_pager" />
-    <item type="id" name="block" />
+    <item type="id" name="beginOnFirstDraw" />
     <item type="id" name="bottom_line" />
-    <item type="id" name="browser_actions_header_text" />
-    <item type="id" name="browser_actions_menu_item_icon" />
-    <item type="id" name="browser_actions_menu_item_text" />
-    <item type="id" name="browser_actions_menu_items" />
-    <item type="id" name="browser_actions_menu_view" />
+    <item type="id" name="bottom_story_info_container" />
+    <item type="id" name="bounceBoth" />
+    <item type="id" name="bounceEnd" />
+    <item type="id" name="bounceStart" />
     <item type="id" name="buttonPanel" />
-    <item type="id" name="call_action_audio_call" />
-    <item type="id" name="call_action_forward_link" />
-    <item type="id" name="call_action_go_to_profile" />
-    <item type="id" name="call_action_remove" />
-    <item type="id" name="call_action_remove_link" />
-    <item type="id" name="call_action_select" />
-    <item type="id" name="call_action_share_link" />
-    <item type="id" name="call_action_video_call" />
-    <item type="id" name="call_action_write" />
+    <item type="id" name="callMeasure" />
     <item type="id" name="call_add_member" />
     <item type="id" name="call_admin_settings_camera_in_call" />
     <item type="id" name="call_admin_settings_disable_all_cameras_once" />
@@ -213,6 +208,9 @@
     <item type="id" name="call_events_view" />
     <item type="id" name="call_grid_mode_view" />
     <item type="id" name="call_grid_opponents_view" />
+    <item type="id" name="call_held_banner_container" />
+    <item type="id" name="call_held_banner_return" />
+    <item type="id" name="call_held_banner_title" />
     <item type="id" name="call_history_empty" />
     <item type="id" name="call_history_info_copy_link" />
     <item type="id" name="call_history_info_open_chat_call" />
@@ -268,6 +266,7 @@
     <item type="id" name="call_join_link_cancel" />
     <item type="id" name="call_join_link_stack_avatar" />
     <item type="id" name="call_join_link_title" />
+    <item type="id" name="call_join_link_with_ask_device_action_button" />
     <item type="id" name="call_join_link_with_ask_device_microphone_switch" />
     <item type="id" name="call_join_link_with_ask_device_preview" />
     <item type="id" name="call_join_link_with_ask_device_preview_container" />
@@ -293,8 +292,14 @@
     <item type="id" name="call_opponent" />
     <item type="id" name="call_opponent_info_buttons" />
     <item type="id" name="call_opponents" />
+    <item type="id" name="call_opponents_list_app_bar" />
+    <item type="id" name="call_opponents_list_collapsible_header" />
+    <item type="id" name="call_opponents_list_subtitle" />
+    <item type="id" name="call_opponents_list_title" />
     <item type="id" name="call_opponents_list_total_count" />
     <item type="id" name="call_organization_name" />
+    <item type="id" name="call_participant_last_frame" />
+    <item type="id" name="call_participant_video_renderer" />
     <item type="id" name="call_permission_dialog_check_cancel" />
     <item type="id" name="call_permission_dialog_check_continue" />
     <item type="id" name="call_pin" />
@@ -370,7 +375,6 @@
     <item type="id" name="call_screen_vpn_container_id" />
     <item type="id" name="call_screen_vpn_dismiss_button_id" />
     <item type="id" name="call_screen_vpn_title_id" />
-    <item type="id" name="call_select_delete_action" />
     <item type="id" name="call_settings" />
     <item type="id" name="call_share_picker_confirm_p2p_invite_cancel" />
     <item type="id" name="call_share_picker_confirm_p2p_invite_retry" />
@@ -381,6 +385,7 @@
     <item type="id" name="call_share_screen_title_view" />
     <item type="id" name="call_share_screen_view" />
     <item type="id" name="call_share_screen_warning_view" />
+    <item type="id" name="call_share_sound" />
     <item type="id" name="call_share_sound_switch" />
     <item type="id" name="call_shine_background" />
     <item type="id" name="call_speaker_mode_view" />
@@ -395,6 +400,7 @@
     <item type="id" name="call_user_full_avatar_bg_animation" />
     <item type="id" name="call_user_full_name" />
     <item type="id" name="call_user_full_status" />
+    <item type="id" name="call_user_hold_overlay" />
     <item type="id" name="call_user_info_open_chat" />
     <item type="id" name="call_user_info_pin" />
     <item type="id" name="call_user_info_profile" />
@@ -432,24 +438,16 @@
     <item type="id" name="call_waiting_room_events_multi_view_title" />
     <item type="id" name="call_waiting_room_events_router" />
     <item type="id" name="call_waiting_room_events_view" />
-    <item type="id" name="calls_select_actions_toolbar" />
     <item type="id" name="cancel" />
     <item type="id" name="cancel_action" />
     <item type="id" name="cancel_button" />
-    <item type="id" name="cardViewRoot" />
-    <item type="id" name="center_guideline" />
-    <item type="id" name="change_folder_action" />
-    <item type="id" name="channel_admin" />
-    <item type="id" name="channel_admin_separator" />
-    <item type="id" name="channel_admin_subscribers" />
-    <item type="id" name="channel_info_description" />
-    <item type="id" name="channel_info_link" />
-    <item type="id" name="channel_owner" />
-    <item type="id" name="channel_subscriber" />
+    <item type="id" name="centerCrop" />
+    <item type="id" name="centerInside" />
     <item type="id" name="chat__audio_record" />
     <item type="id" name="chat__background" />
     <item type="id" name="chat__bottom_container" />
     <item type="id" name="chat__bottom_container_chat_status_button" />
+    <item type="id" name="chat__bottom_container_comments_disabled_text" />
     <item type="id" name="chat__bottom_container_search" />
     <item type="id" name="chat__bottom_container_search_down_button" />
     <item type="id" name="chat__bottom_container_search_separator" />
@@ -464,39 +462,25 @@
     <item type="id" name="chat__suggestion_container" />
     <item type="id" name="chat__toolbar" />
     <item type="id" name="chat__video_msg_container" />
-    <item type="id" name="chat_action_add_favorite" />
-    <item type="id" name="chat_action_add_to_folder" />
-    <item type="id" name="chat_action_clear" />
-    <item type="id" name="chat_action_leave" />
-    <item type="id" name="chat_action_mark_as_read" />
-    <item type="id" name="chat_action_mark_as_unread" />
-    <item type="id" name="chat_action_mute" />
-    <item type="id" name="chat_action_remove" />
-    <item type="id" name="chat_action_remove_favorite" />
-    <item type="id" name="chat_action_remove_from_folder" />
-    <item type="id" name="chat_action_select" />
-    <item type="id" name="chat_action_unmute" />
-    <item type="id" name="chat_admin" />
-    <item type="id" name="chat_admin_admins" />
-    <item type="id" name="chat_admin_blocked" />
-    <item type="id" name="chat_admin_participants" />
-    <item type="id" name="chat_extra_actions_view" />
     <item type="id" name="chat_item_view_type" />
     <item type="id" name="chat_item_view_type_pinned" />
-    <item type="id" name="chat_media_audio" />
-    <item type="id" name="chat_media_extra_actions_view" />
-    <item type="id" name="chat_media_file" />
-    <item type="id" name="chat_media_music" />
-    <item type="id" name="chat_media_photo_video" />
-    <item type="id" name="chat_media_share" />
-    <item type="id" name="chat_msg_search_result_view__next" />
-    <item type="id" name="chat_msg_search_result_view__pb_loading" />
-    <item type="id" name="chat_msg_search_result_view__prev" />
-    <item type="id" name="chat_msg_search_result_view__result" />
-    <item type="id" name="chat_msg_search_result_view__space" />
-    <item type="id" name="chat_msg_search_result_view_next_prev_separator" />
-    <item type="id" name="chat_owner" />
+    <item type="id" name="chat_preview__action_add_favorite" />
+    <item type="id" name="chat_preview__action_add_to_folder" />
+    <item type="id" name="chat_preview__action_mark_as_read" />
+    <item type="id" name="chat_preview__action_mark_as_unread" />
+    <item type="id" name="chat_preview__action_mute" />
+    <item type="id" name="chat_preview__action_remove_favorite" />
+    <item type="id" name="chat_preview__action_remove_from_folder" />
+    <item type="id" name="chat_preview__action_unmute" />
+    <item type="id" name="chat_preview__confirm_mute_1_day" />
+    <item type="id" name="chat_preview__confirm_mute_1_hour" />
+    <item type="id" name="chat_preview__confirm_mute_4_hour" />
+    <item type="id" name="chat_preview__confirm_mute_infinite" />
     <item type="id" name="chat_screen__action_cancel" />
+    <item type="id" name="chat_screen__confirm_send_message_negative" />
+    <item type="id" name="chat_screen__confirm_send_message_positive" />
+    <item type="id" name="chat_screen__confirm_send_sticker_negative" />
+    <item type="id" name="chat_screen__confirm_send_sticker_positive" />
     <item type="id" name="chat_screen__error_restricted_send_message_action" />
     <item type="id" name="chat_screen__error_restricted_send_message_cancel" />
     <item type="id" name="chat_screen__leave_chat_confirm" />
@@ -513,19 +497,8 @@
     <item type="id" name="chat_screen_message_send_error_delete_action" />
     <item type="id" name="chat_screen_message_send_error_resend_action_multi" />
     <item type="id" name="chat_screen_message_send_error_resend_action_solo" />
-    <item type="id" name="chat_select_delete_action" />
-    <item type="id" name="chat_select_mark_as_new_action" />
-    <item type="id" name="chat_select_more_action" />
-    <item type="id" name="chat_select_notif_action" />
     <item type="id" name="chat_suggest_item_view_type" />
     <item type="id" name="chat_suggest_stub_item_view_type" />
-    <item type="id" name="chat_top_panel_add_or_block" />
-    <item type="id" name="chat_top_panel_call" />
-    <item type="id" name="chat_top_panel_live_location" />
-    <item type="id" name="chat_top_panel_panel_music" />
-    <item type="id" name="chat_top_panel_pinned_message" />
-    <item type="id" name="chat_top_panel_scheduled_messages" />
-    <item type="id" name="chats_extra_actions_view" />
     <item type="id" name="chats_list_appbar" />
     <item type="id" name="chats_list_folder_delete" />
     <item type="id" name="chats_list_folder_delete_confirm" />
@@ -553,145 +526,62 @@
     <item type="id" name="chats_search_recent_header_view_type" />
     <item type="id" name="chats_search_recent_view_type" />
     <item type="id" name="chats_search_show_more_view_type" />
-    <item type="id" name="chats_top_view_create_chat_menu" />
-    <item type="id" name="chats_top_view_extra_actions_menu" />
-    <item type="id" name="check_button" />
-    <item type="id" name="check_button_parent" />
-    <item type="id" name="check_button_view_stub" />
     <item type="id" name="checkbox" />
     <item type="id" name="chronometer" />
     <item type="id" name="circle_center" />
-    <item type="id" name="cl_extra_text_size_view__header" />
-    <item type="id" name="cl_extra_text_size_view__slider" />
-    <item type="id" name="cl_extra_text_size_view__tv_big" />
-    <item type="id" name="cl_extra_text_size_view__tv_small" />
-    <item type="id" name="cl_media_bar_preview_layout__bottom_panel" />
-    <item type="id" name="cl_media_bar_preview_layout__edit_message" />
-    <item type="id" name="cl_media_bar_preview_layout__ib_cancel" />
-    <item type="id" name="cl_media_bar_preview_layout__ib_collage" />
-    <item type="id" name="cl_media_bar_preview_layout__ib_file" />
-    <item type="id" name="cl_media_bar_preview_layout__ib_send" />
-    <item type="id" name="cl_media_bar_preview_layout__rv_selected" />
-    <item type="id" name="cl_media_bar_preview_layout__separator_middle" />
-    <item type="id" name="cl_media_bar_preview_layout__top_panel" />
-    <item type="id" name="clickable_link_movement_method_highlight_url" />
-    <item type="id" name="close_button" />
-    <item type="id" name="common_chats_title" />
     <item type="id" name="confirm_button" />
-    <item type="id" name="contact_action_audio_call" />
-    <item type="id" name="contact_action_block" />
-    <item type="id" name="contact_action_delete" />
-    <item type="id" name="contact_action_go_to_profile" />
-    <item type="id" name="contact_action_select" />
-    <item type="id" name="contact_action_share_contact" />
-    <item type="id" name="contact_action_video_call" />
-    <item type="id" name="contact_action_write" />
-    <item type="id" name="contact_divider" />
-    <item type="id" name="contact_permission" />
-    <item type="id" name="contact_phone" />
-    <item type="id" name="contact_promo__entry" />
-    <item type="id" name="contact_promo__show_all_button" />
-    <item type="id" name="contact_search" />
-    <item type="id" name="contact_tam" />
-    <item type="id" name="contact_tam_unread_participant" />
-    <item type="id" name="contacts_select_block_action" />
-    <item type="id" name="contacts_select_delete_action" />
     <item type="id" name="container" />
     <item type="id" name="content" />
     <item type="id" name="contentPanel" />
     <item type="id" name="context_menu_card_id" />
-    <item type="id" name="context_menu_popup_scroll_container" />
+    <item type="id" name="context_menu_container_id" />
+    <item type="id" name="continuousVelocity" />
     <item type="id" name="coordinator" />
-    <item type="id" name="copy" />
-    <item type="id" name="countryCodeHolder" />
-    <item type="id" name="create_multichat" />
+    <item type="id" name="cos" />
+    <item type="id" name="currentState" />
     <item type="id" name="customPanel" />
+    <item type="id" name="dark" />
     <item type="id" name="date_picker_actions" />
-    <item type="id" name="date_picker_divider" />
-    <item type="id" name="date_time_picker" />
     <item type="id" name="days_recycler_view" />
+    <item type="id" name="decelerateAndComplete" />
     <item type="id" name="decor_content_parent" />
+    <item type="id" name="defaultStrategy" />
     <item type="id" name="default_activity_button" />
-    <item type="id" name="default_item" />
-    <item type="id" name="delete_chat_more_action" />
-    <item type="id" name="delete_folder_more_action" />
     <item type="id" name="design_bottom_sheet" />
     <item type="id" name="design_menu_item_action_area" />
     <item type="id" name="design_menu_item_action_area_stub" />
     <item type="id" name="design_menu_item_text" />
     <item type="id" name="design_navigation_view" />
-    <item type="id" name="dialog_action_block" />
     <item type="id" name="dialog_button" />
-    <item type="id" name="dialog_checkbox__checkbox" />
-    <item type="id" name="dialog_context_menu__actions" />
-    <item type="id" name="dialog_context_menu__root" />
-    <item type="id" name="dialog_input__et_input" />
-    <item type="id" name="dialog_input__layout_input" />
-    <item type="id" name="dialog_input__title" />
-    <item type="id" name="dialog_progress__progress" />
-    <item type="id" name="dialog_progress__text" />
-    <item type="id" name="disable_folder_action" />
-    <item type="id" name="double_tap_video_view_wrapper__arrows_view_left" />
-    <item type="id" name="double_tap_video_view_wrapper__arrows_view_right" />
-    <item type="id" name="draft_gif_viewer_container" />
+    <item type="id" name="disableIntraAutoTransition" />
+    <item type="id" name="disablePostScroll" />
+    <item type="id" name="disableScroll" />
+    <item type="id" name="disabled" />
+    <item type="id" name="dragAnticlockwise" />
+    <item type="id" name="dragClockwise" />
+    <item type="id" name="dragDown" />
+    <item type="id" name="dragEnd" />
+    <item type="id" name="dragLeft" />
+    <item type="id" name="dragRight" />
+    <item type="id" name="dragStart" />
+    <item type="id" name="dragUp" />
     <item type="id" name="dynamic_font_sizes" />
-    <item type="id" name="editText_search" />
-    <item type="id" name="edit_menu_item" />
+    <item type="id" name="east" />
+    <item type="id" name="edit_and_reply_actions_row_id" />
+    <item type="id" name="edit_and_reply_bottom_container_id" />
+    <item type="id" name="edit_and_reply_crop_action_id" />
+    <item type="id" name="edit_and_reply_draw_action_id" />
+    <item type="id" name="edit_and_reply_loading_id" />
+    <item type="id" name="edit_and_reply_media_keyboard_container_id" />
+    <item type="id" name="edit_and_reply_message_input_id" />
+    <item type="id" name="edit_and_reply_photo_view_id" />
+    <item type="id" name="edit_and_reply_toolbar_id" />
     <item type="id" name="edit_query" />
     <item type="id" name="edit_text_id" />
+    <item type="id" name="enabled" />
     <item type="id" name="end_padder" />
-    <item type="id" name="exo_ad_overlay" />
-    <item type="id" name="exo_artwork" />
-    <item type="id" name="exo_audio_track" />
-    <item type="id" name="exo_basic_controls" />
-    <item type="id" name="exo_bottom_bar" />
-    <item type="id" name="exo_buffering" />
-    <item type="id" name="exo_center_controls" />
-    <item type="id" name="exo_check" />
-    <item type="id" name="exo_content_frame" />
-    <item type="id" name="exo_controller" />
-    <item type="id" name="exo_controller_placeholder" />
-    <item type="id" name="exo_controls_background" />
-    <item type="id" name="exo_duration" />
-    <item type="id" name="exo_error_message" />
-    <item type="id" name="exo_extra_controls" />
-    <item type="id" name="exo_extra_controls_scroll_view" />
-    <item type="id" name="exo_ffwd" />
-    <item type="id" name="exo_ffwd_with_amount" />
-    <item type="id" name="exo_fullscreen" />
-    <item type="id" name="exo_icon" />
-    <item type="id" name="exo_main_text" />
-    <item type="id" name="exo_minimal_controls" />
-    <item type="id" name="exo_minimal_fullscreen" />
-    <item type="id" name="exo_next" />
-    <item type="id" name="exo_overflow_hide" />
-    <item type="id" name="exo_overflow_show" />
-    <item type="id" name="exo_overlay" />
-    <item type="id" name="exo_pause" />
-    <item type="id" name="exo_play" />
-    <item type="id" name="exo_play_pause" />
-    <item type="id" name="exo_playback_speed" />
-    <item type="id" name="exo_position" />
-    <item type="id" name="exo_prev" />
-    <item type="id" name="exo_progress" />
-    <item type="id" name="exo_progress_placeholder" />
-    <item type="id" name="exo_repeat_toggle" />
-    <item type="id" name="exo_rew" />
-    <item type="id" name="exo_rew_with_amount" />
-    <item type="id" name="exo_settings" />
-    <item type="id" name="exo_settings_listview" />
-    <item type="id" name="exo_shuffle" />
-    <item type="id" name="exo_shutter" />
-    <item type="id" name="exo_sub_text" />
-    <item type="id" name="exo_subtitle" />
-    <item type="id" name="exo_subtitles" />
-    <item type="id" name="exo_text" />
-    <item type="id" name="exo_time" />
-    <item type="id" name="exo_track_selection_view" />
-    <item type="id" name="exo_vr" />
     <item type="id" name="expand_activities_button" />
     <item type="id" name="expanded_menu" />
-    <item type="id" name="extendedMenu" />
     <item type="id" name="fake_chat_contact_item_view_type" />
     <item type="id" name="fake_chat_phone_item_view_type" />
     <item type="id" name="fake_in_app_review_bottom_sheet_rate_view" />
@@ -705,99 +595,53 @@
     <item type="id" name="fake_in_app_review_bottom_sheet_thank_view_close_btn" />
     <item type="id" name="fake_in_app_review_bottom_sheet_thank_view_icon" />
     <item type="id" name="fake_in_app_review_bottom_sheet_thank_view_title" />
-    <item type="id" name="fastscroll" />
-    <item type="id" name="fat_divider" />
-    <item type="id" name="filter_chats_in_folder" />
     <item type="id" name="find_by_phone_action" />
     <item type="id" name="fingerprint_description" />
     <item type="id" name="fingerprint_error" />
     <item type="id" name="fingerprint_icon" />
     <item type="id" name="fingerprint_subtitle" />
-    <item type="id" name="fl_empty_search" />
-    <item type="id" name="fl_empty_search__tv" />
-    <item type="id" name="fl_empty_search__tv_action" />
+    <item type="id" name="fitBottomStart" />
+    <item type="id" name="fitXY" />
+    <item type="id" name="floating" />
+    <item type="id" name="focusCrop" />
+    <item type="id" name="follow_system" />
     <item type="id" name="fragment_container_view_tag" />
-    <item type="id" name="frg_background_select__iv_overlay" />
-    <item type="id" name="frg_background_select__root" />
-    <item type="id" name="frg_chat__edt_message" />
-    <item type="id" name="frg_chat__fl_buttons" />
-    <item type="id" name="frg_chat__input_container" />
-    <item type="id" name="frg_chat__iv_attach" />
-    <item type="id" name="frg_chat__iv_bot_commands" />
-    <item type="id" name="frg_chat__iv_broadcast_notif" />
-    <item type="id" name="frg_chat__iv_constructor_buttons" />
-    <item type="id" name="frg_chat__iv_empty_avatar" />
-    <item type="id" name="frg_chat__iv_icon" />
-    <item type="id" name="frg_chat__iv_scheduled_send" />
-    <item type="id" name="frg_chat__iv_send" />
-    <item type="id" name="frg_chat__iv_show_menu_formatter" />
-    <item type="id" name="frg_chat__iv_smiles" />
-    <item type="id" name="frg_chat__iv_timer" />
-    <item type="id" name="frg_chat__ll_empty_rv" />
-    <item type="id" name="frg_chat__pb_loading" />
-    <item type="id" name="frg_chat__rv_messages" />
-    <item type="id" name="frg_chat__tv_empty_subtitle" />
-    <item type="id" name="frg_chat__tv_empty_title" />
-    <item type="id" name="frg_chat__tv_timer" />
-    <item type="id" name="frg_chat__vs_search_result" />
-    <item type="id" name="frg_contact_multi_picker__btn_copy_link" />
-    <item type="id" name="frg_contact_multi_picker__create_chat_button" />
-    <item type="id" name="frg_contact_multi_picker__ib_share_link" />
-    <item type="id" name="frg_dlg_call_debug_button_tv_minus" />
-    <item type="id" name="frg_dlg_call_debug_button_tv_plus" />
-    <item type="id" name="frg_dlg_call_debug_tv" />
-    <item type="id" name="frg_local_gif__drawee" />
-    <item type="id" name="frg_local_media__progress_background" />
-    <item type="id" name="frg_local_media__progress_bar" />
-    <item type="id" name="frg_local_photo__iv_photo" />
-    <item type="id" name="frg_local_video__iv_video" />
-    <item type="id" name="frg_local_video__player" />
-    <item type="id" name="frg_nearby_contacts__rv" />
-    <item type="id" name="frg_settings__rv_content" />
-    <item type="id" name="frg_tam_crop_image__btn_clear" />
-    <item type="id" name="frg_tam_crop_image__btn_close" />
-    <item type="id" name="frg_tam_crop_image__btn_done" />
-    <item type="id" name="frg_tam_crop_image__flip" />
-    <item type="id" name="frg_tam_crop_image__iv_crop" />
-    <item type="id" name="frg_tam_crop_image__rotate" />
+    <item type="id" name="frost" />
     <item type="id" name="fullscreen_header" />
+    <item type="id" name="gallery_numeric_check_button" />
+    <item type="id" name="gallery_recycler_view_id" />
+    <item type="id" name="gallery_simple_drawee_view" />
+    <item type="id" name="gallery_video_info_text_view" />
     <item type="id" name="ghost_view" />
     <item type="id" name="ghost_view_holder" />
-    <item type="id" name="global_search_channel" />
-    <item type="id" name="global_search_contact" />
-    <item type="id" name="grabber_view" />
     <item type="id" name="group_divider" />
+    <item type="id" name="hardware" />
     <item type="id" name="header_title" />
-    <item type="id" name="hide" />
     <item type="id" name="hide_ime_id" />
-    <item type="id" name="hide_menu_item" />
     <item type="id" name="home" />
+    <item type="id" name="honorRequest" />
+    <item type="id" name="horizontal" />
     <item type="id" name="hours_recycler_view" />
+    <item type="id" name="hybrid" />
     <item type="id" name="icon" />
-    <item type="id" name="icon_frame" />
     <item type="id" name="icon_group" />
+    <item type="id" name="icon_only" />
+    <item type="id" name="ignoreRequest" />
     <item type="id" name="image" />
-    <item type="id" name="imageView_arrow" />
-    <item type="id" name="image_flag" />
-    <item type="id" name="img_clear_query" />
-    <item type="id" name="img_dismiss" />
     <item type="id" name="info" />
+    <item type="id" name="informer_splash_icon" />
     <item type="id" name="inputExtractAccessories" />
     <item type="id" name="inputExtractAction" />
-    <item type="id" name="invite_to_tt" />
     <item type="id" name="is_pooling_container_tag" />
-    <item type="id" name="item_folder_filter__name" />
-    <item type="id" name="item_no_sticker_sets__b_view" />
-    <item type="id" name="item_no_sticker_sets__tv_title" />
     <item type="id" name="item_touch_helper_previous_elevation" />
     <item type="id" name="join_widget_confirm_button" />
     <item type="id" name="join_widget_root" />
-    <item type="id" name="layout_member_menu_radio__delete_1_day" />
-    <item type="id" name="layout_member_menu_radio__delete_all" />
+    <item type="id" name="jumpToEnd" />
+    <item type="id" name="jumpToStart" />
+    <item type="id" name="layout" />
+    <item type="id" name="light" />
     <item type="id" name="line1" />
     <item type="id" name="line3" />
-    <item type="id" name="linear_flag_border" />
-    <item type="id" name="linear_flag_holder" />
     <item type="id" name="link_context_menu_action_copy_call" />
     <item type="id" name="link_context_menu_action_copy_link" />
     <item type="id" name="link_context_menu_action_copy_mail" />
@@ -810,38 +654,17 @@
     <item type="id" name="link_context_menu_action_open_user_chat" />
     <item type="id" name="link_interceptor_widget_view" />
     <item type="id" name="list_item" />
-    <item type="id" name="ll_header_nearby_separator" />
-    <item type="id" name="ll_server_search_progress__progress" />
-    <item type="id" name="ll_server_search_progress__title" />
-    <item type="id" name="ll_stickers_progress__progress" />
-    <item type="id" name="local_media_toolbox__btn_apply" />
-    <item type="id" name="local_media_toolbox__btn_select" />
-    <item type="id" name="local_media_toolbox__content" />
-    <item type="id" name="local_media_toolbox__fl_select" />
-    <item type="id" name="local_media_toolbox__mute_btn" />
-    <item type="id" name="local_media_toolbox__photo_crop_btn" />
-    <item type="id" name="local_media_toolbox__photo_edit_btn" />
-    <item type="id" name="local_media_toolbox__quality_container" />
-    <item type="id" name="local_media_toolbox__quality_progress" />
-    <item type="id" name="local_media_toolbox__quality_text" />
-    <item type="id" name="local_media_toolbox__separator_bottom" />
-    <item type="id" name="local_media_toolbox__trim_btn" />
     <item type="id" name="long_bottom_sheet_button" />
     <item type="id" name="long_bottom_sheet_input" />
+    <item type="id" name="lottie_layer_name" />
     <item type="id" name="m3_side_sheet" />
-    <item type="id" name="markdown_badge_count_view" />
     <item type="id" name="markdown_bold" />
     <item type="id" name="markdown_group" />
     <item type="id" name="markdown_heading" />
     <item type="id" name="markdown_italic" />
     <item type="id" name="markdown_link" />
-    <item type="id" name="markdown_menu_container" />
-    <item type="id" name="markdown_message_bubble_view" />
     <item type="id" name="markdown_mono" />
     <item type="id" name="markdown_original" />
-    <item type="id" name="markdown_preview_send_as_scheduled_button" />
-    <item type="id" name="markdown_preview_send_button" />
-    <item type="id" name="markdown_preview_send_button_guideline" />
     <item type="id" name="markdown_quote" />
     <item type="id" name="markdown_regular" />
     <item type="id" name="markdown_strikethrough" />
@@ -867,9 +690,14 @@
     <item type="id" name="material_timepicker_ok_button" />
     <item type="id" name="material_timepicker_view" />
     <item type="id" name="material_value_index" />
+    <item type="id" name="matrix" />
     <item type="id" name="media_actions" />
     <item type="id" name="media_bar__album_chooser" />
     <item type="id" name="media_bar__bottom_container" />
+    <item type="id" name="media_bar__bottom_layout" />
+    <item type="id" name="media_bar__camera_container" />
+    <item type="id" name="media_bar__close_drag_element" />
+    <item type="id" name="media_bar__close_drag_view" />
     <item type="id" name="media_bar__draggable_container" />
     <item type="id" name="media_bar__emoji_keyboard_container" />
     <item type="id" name="media_bar__media_type_buttons_recycler" />
@@ -880,36 +708,7 @@
     <item type="id" name="media_bar__primary_container" />
     <item type="id" name="media_bar__select_album_container" />
     <item type="id" name="media_bar__selected_media_container" />
-    <item type="id" name="media_bar_view__bottom_shadow" />
-    <item type="id" name="media_bar_view__iv_constructor" />
-    <item type="id" name="media_bar_view__iv_contact" />
-    <item type="id" name="media_bar_view__iv_drawing" />
-    <item type="id" name="media_bar_view__iv_file" />
-    <item type="id" name="media_bar_view__iv_gallery" />
-    <item type="id" name="media_bar_view__iv_left" />
-    <item type="id" name="media_bar_view__iv_location" />
-    <item type="id" name="media_bar_view__iv_photo" />
-    <item type="id" name="media_bar_view__iv_right" />
-    <item type="id" name="media_bar_view__iv_video" />
-    <item type="id" name="media_bar_view__ll_constructor" />
-    <item type="id" name="media_bar_view__ll_contact" />
-    <item type="id" name="media_bar_view__ll_drawing" />
-    <item type="id" name="media_bar_view__ll_file" />
-    <item type="id" name="media_bar_view__ll_gallery" />
-    <item type="id" name="media_bar_view__ll_layout_create" />
-    <item type="id" name="media_bar_view__ll_location" />
-    <item type="id" name="media_bar_view__ll_photo" />
-    <item type="id" name="media_bar_view__ll_video" />
-    <item type="id" name="media_bar_view__tv_constructor" />
-    <item type="id" name="media_bar_view__tv_contact" />
-    <item type="id" name="media_bar_view__tv_drawing" />
-    <item type="id" name="media_bar_view__tv_file" />
-    <item type="id" name="media_bar_view__tv_gallery" />
-    <item type="id" name="media_bar_view__tv_left" />
-    <item type="id" name="media_bar_view__tv_location" />
-    <item type="id" name="media_bar_view__tv_photo" />
-    <item type="id" name="media_bar_view__tv_right" />
-    <item type="id" name="media_bar_view__tv_video" />
+    <item type="id" name="media_bar__suggestion_container" />
     <item type="id" name="media_controller_compat_view_tag" />
     <item type="id" name="media_editor_actions_id" />
     <item type="id" name="media_editor_aspect_ratio_action" />
@@ -927,6 +726,8 @@
     <item type="id" name="media_editor_crop_id" />
     <item type="id" name="media_editor_crop_wheel_id" />
     <item type="id" name="media_editor_done_id" />
+    <item type="id" name="media_editor_exit_cancel_id" />
+    <item type="id" name="media_editor_exit_confirm_id" />
     <item type="id" name="media_editor_flip_horizontally_id" />
     <item type="id" name="media_editor_input_message_id" />
     <item type="id" name="media_editor_non_selected_button" />
@@ -934,6 +735,8 @@
     <item type="id" name="media_editor_photo_crop_action_id" />
     <item type="id" name="media_editor_photo_draw_action_id" />
     <item type="id" name="media_editor_progress_id" />
+    <item type="id" name="media_editor_reset_cancel_id" />
+    <item type="id" name="media_editor_reset_confirm_id" />
     <item type="id" name="media_editor_reset_id" />
     <item type="id" name="media_editor_rotate_id" />
     <item type="id" name="media_editor_selected_counter" />
@@ -941,6 +744,9 @@
     <item type="id" name="media_editor_selected_preview" />
     <item type="id" name="media_editor_selected_preview_container" />
     <item type="id" name="media_editor_submit_single_edit" />
+    <item type="id" name="media_editor_suggestion_container_id" />
+    <item type="id" name="media_editor_toolbar" />
+    <item type="id" name="media_editor_toolbar_background_id" />
     <item type="id" name="media_editor_toolbar_id" />
     <item type="id" name="media_editor_trim_end" />
     <item type="id" name="media_editor_trim_start" />
@@ -950,144 +756,36 @@
     <item type="id" name="media_editor_video_sound_action_id" />
     <item type="id" name="media_editor_video_trim_container_id" />
     <item type="id" name="media_editor_viewpager_id" />
-    <item type="id" name="media_permissions_view_button" />
-    <item type="id" name="media_permissions_view_title" />
     <item type="id" name="media_picker_album_container_id" />
     <item type="id" name="media_picker_camera_container_id" />
     <item type="id" name="media_picker_container_id" />
     <item type="id" name="media_picker_content_id" />
     <item type="id" name="media_picker_divider_id" />
     <item type="id" name="media_picker_partial_media_access_container_id" />
+    <item type="id" name="media_picker_text_story_view_id" />
     <item type="id" name="media_picker_toolbar_id" />
-    <item type="id" name="member_menu_content__cb_delete_messages" />
-    <item type="id" name="member_menu_content__vs_delete_type" />
     <item type="id" name="members_list_action_view_type" />
     <item type="id" name="members_list_bottom_action_view_type" />
     <item type="id" name="members_list_empty_search_view_type" />
     <item type="id" name="members_list_item_view_type" />
     <item type="id" name="members_list_rv" />
     <item type="id" name="members_list_shimmer_view_type" />
-    <item type="id" name="menu" />
-    <item type="id" name="menu_attach_video__audio_tracks" />
-    <item type="id" name="menu_attach_video__download" />
-    <item type="id" name="menu_attach_video__download_cancel" />
-    <item type="id" name="menu_attach_video__go_to_message" />
-    <item type="id" name="menu_attach_video__send_video" />
-    <item type="id" name="menu_attachments__forward" />
-    <item type="id" name="menu_attachments__go_to_message" />
-    <item type="id" name="menu_attachments__open_all_media" />
-    <item type="id" name="menu_attachments__open_in" />
-    <item type="id" name="menu_attachments__rotate_screen" />
-    <item type="id" name="menu_attachments__save_to_gallery" />
-    <item type="id" name="menu_attachments__send_photo" />
-    <item type="id" name="menu_attachments__share" />
-    <item type="id" name="menu_attachments__to_pip_mode" />
-    <item type="id" name="menu_channel_edit__change_name" />
-    <item type="id" name="menu_channel_edit__change_photo" />
-    <item type="id" name="menu_channel_edit__clear" />
-    <item type="id" name="menu_channel_edit__leave" />
-    <item type="id" name="menu_channel_edit__move_owner" />
-    <item type="id" name="menu_channel_edit__remove" />
-    <item type="id" name="menu_channel_edit__report" />
-    <item type="id" name="menu_channel_edit__settings" />
-    <item type="id" name="menu_channel_settings__confirm" />
-    <item type="id" name="menu_channel_settings__progress" />
-    <item type="id" name="menu_chat_avatar__iv_avatar" />
-    <item type="id" name="menu_chat_member_delete" />
-    <item type="id" name="menu_chat_member_delete_and_block" />
-    <item type="id" name="menu_chat_member_make_admin" />
-    <item type="id" name="menu_chat_member_make_non_admin" />
-    <item type="id" name="menu_chat_member_setup_admin_permissions" />
-    <item type="id" name="menu_chat_member_unblock" />
-    <item type="id" name="menu_constructor__iv_avatar" />
-    <item type="id" name="menu_folder__delete" />
-    <item type="id" name="menu_folder__edit" />
-    <item type="id" name="menu_frg_chat__avatar" />
-    <item type="id" name="menu_item" />
-    <item type="id" name="menu_list" />
-    <item type="id" name="menu_local_media__timer" />
-    <item type="id" name="menu_local_photo__clear_edit" />
-    <item type="id" name="menu_local_video__quality" />
-    <item type="id" name="menu_location__share" />
-    <item type="id" name="menu_location_layer__hybrid" />
-    <item type="id" name="menu_location_layer__map" />
-    <item type="id" name="menu_location_layer__satellite" />
-    <item type="id" name="menu_profile__edit" />
-    <item type="id" name="menu_search__search" />
-    <item type="id" name="menu_sticker_set__clear" />
-    <item type="id" name="menu_sticker_set__copy_link" />
-    <item type="id" name="menu_sticker_set__delete" />
-    <item type="id" name="menu_sticker_set__edit" />
-    <item type="id" name="menu_sticker_set__forward" />
-    <item type="id" name="menu_sticker_set__remove" />
-    <item type="id" name="menu_sticker_set__share" />
-    <item type="id" name="menu_tam_crop_image__confirm" />
-    <item type="id" name="menu_tam_crop_image__progress" />
-    <item type="id" name="menu_tamtam_profile__block" />
-    <item type="id" name="menu_tamtam_profile__clear_dialog" />
-    <item type="id" name="menu_tamtam_profile__delete" />
-    <item type="id" name="menu_tamtam_profile__remove_dialog" />
-    <item type="id" name="menu_tamtam_profile__rename" />
-    <item type="id" name="menu_tamtam_profile__unblock" />
-    <item type="id" name="menu_view_constructor__avatar" />
     <item type="id" name="message" />
-    <item type="id" name="message_action_add_contact" />
-    <item type="id" name="message_action_block_user" />
-    <item type="id" name="message_action_call_audio" />
-    <item type="id" name="message_action_call_video" />
-    <item type="id" name="message_action_cancel_save" />
-    <item type="id" name="message_action_chat_contact" />
-    <item type="id" name="message_action_copy" />
-    <item type="id" name="message_action_copy_link" />
-    <item type="id" name="message_action_copy_url" />
-    <item type="id" name="message_action_delete_message" />
-    <item type="id" name="message_action_delete_user" />
-    <item type="id" name="message_action_edit" />
-    <item type="id" name="message_action_forward" />
-    <item type="id" name="message_action_mark_as_unread" />
-    <item type="id" name="message_action_more" />
-    <item type="id" name="message_action_open_file" />
-    <item type="id" name="message_action_open_link" />
-    <item type="id" name="message_action_pin" />
-    <item type="id" name="message_action_reply" />
-    <item type="id" name="message_action_save_contact" />
-    <item type="id" name="message_action_save_to_gallery" />
-    <item type="id" name="message_action_scheduled_send_now" />
-    <item type="id" name="message_action_scheduled_set_new_fire_time" />
-    <item type="id" name="message_action_share_file" />
-    <item type="id" name="message_action_share_message_link" />
-    <item type="id" name="message_action_stop_live_location" />
-    <item type="id" name="message_action_unpin" />
-    <item type="id" name="message_control" />
-    <item type="id" name="message_control_with_action" />
-    <item type="id" name="message_date" />
-    <item type="id" name="message_date_layout" />
-    <item type="id" name="message_date_separator" />
-    <item type="id" name="message_edit" />
-    <item type="id" name="message_in" />
-    <item type="id" name="message_options_dialog_option" />
-    <item type="id" name="message_options_dialog_participants_footer" />
-    <item type="id" name="message_out" />
-    <item type="id" name="message_read_status" />
-    <item type="id" name="message_sender" />
-    <item type="id" name="message_text" />
     <item type="id" name="messages_contact_attach_chat_action" />
     <item type="id" name="messages_contact_attach_profile_action" />
     <item type="id" name="messages_list_chat_description_view_type" />
+    <item type="id" name="messages_list_chat_icon" />
+    <item type="id" name="messages_list_comments" />
     <item type="id" name="messages_list_comments_end_icon" />
     <item type="id" name="messages_list_comments_icon" />
     <item type="id" name="messages_list_comments_label" />
     <item type="id" name="messages_list_comments_top_divider" />
+    <item type="id" name="messages_list_compact_comments" />
+    <item type="id" name="messages_list_compact_comments_icon" />
     <item type="id" name="messages_list_confirm_cancel" />
-    <item type="id" name="messages_list_confirm_complaint_extremism" />
-    <item type="id" name="messages_list_confirm_complaint_fake" />
-    <item type="id" name="messages_list_confirm_complaint_other" />
-    <item type="id" name="messages_list_confirm_complaint_porno" />
-    <item type="id" name="messages_list_confirm_complaint_spam" />
-    <item type="id" name="messages_list_confirm_complaint_threat" />
     <item type="id" name="messages_list_confirm_delete" />
-    <item type="id" name="messages_list_confirm_delete_for_all" />
     <item type="id" name="messages_list_confirm_delete_scheduled" />
+    <item type="id" name="messages_list_confirm_generic_delete" />
     <item type="id" name="messages_list_confirm_pin_with_notify" />
     <item type="id" name="messages_list_confirm_pin_without_notify" />
     <item type="id" name="messages_list_context_action_copy" />
@@ -1116,19 +814,47 @@
     <item type="id" name="messages_list_context_members_member_cell" />
     <item type="id" name="messages_list_context_members_member_reaction" />
     <item type="id" name="messages_list_context_reactions_container" />
+    <item type="id" name="messages_list_context_read_by_back_header" />
+    <item type="id" name="messages_list_context_read_by_card" />
+    <item type="id" name="messages_list_context_read_by_detail_content" />
+    <item type="id" name="messages_list_context_read_by_divider" />
+    <item type="id" name="messages_list_context_read_by_header" />
+    <item type="id" name="messages_list_context_read_by_menu_content" />
+    <item type="id" name="messages_list_context_read_by_recycler" />
+    <item type="id" name="messages_list_empty_state_container" />
+    <item type="id" name="messages_list_fake_boss_country" />
+    <item type="id" name="messages_list_fake_boss_icon" />
+    <item type="id" name="messages_list_fake_boss_mutual_chats" />
+    <item type="id" name="messages_list_fake_boss_phone" />
+    <item type="id" name="messages_list_fake_boss_registration_date" />
+    <item type="id" name="messages_list_fake_boss_show_mutual_chats_button" />
     <item type="id" name="messages_list_fake_boss_view_type" />
     <item type="id" name="messages_list_item_alias" />
     <item type="id" name="messages_list_item_date" />
     <item type="id" name="messages_list_item_keyboard_buttons" />
+    <item type="id" name="messages_list_item_play" />
     <item type="id" name="messages_list_item_single_image" />
     <item type="id" name="messages_list_item_text" />
     <item type="id" name="messages_list_item_title" />
     <item type="id" name="messages_list_item_video_duration" />
     <item type="id" name="messages_list_organization_placeholder_view_type" />
+    <item type="id" name="messages_list_pmb" />
+    <item type="id" name="messages_list_pmb_bubble_container" />
+    <item type="id" name="messages_list_pmb_static_container" />
+    <item type="id" name="messages_list_poll_answers_button" />
+    <item type="id" name="messages_list_poll_counter" />
+    <item type="id" name="messages_list_poll_winner" />
+    <item type="id" name="messages_list_profile_icon" />
     <item type="id" name="messages_list_reactions_badge" />
+    <item type="id" name="messages_list_reactions_effect_view" />
     <item type="id" name="messages_list_recycler_view" />
     <item type="id" name="messages_list_scroll_btn" />
+    <item type="id" name="messages_list_scroll_mention" />
+    <item type="id" name="messages_list_scroll_new_message" />
+    <item type="id" name="messages_list_scroll_reaction" />
     <item type="id" name="messages_list_share_contact_for_bot_action" />
+    <item type="id" name="messages_list_transcription_button" />
+    <item type="id" name="messages_list_transcription_text" />
     <item type="id" name="messages_list_vh_message_subtitle" />
     <item type="id" name="messages_list_vh_message_title" />
     <item type="id" name="messages_list_warning_link_subtitle" />
@@ -1143,59 +869,6 @@
     <item type="id" name="month_navigation_previous" />
     <item type="id" name="month_title" />
     <item type="id" name="motion_base" />
-    <item type="id" name="mr_art" />
-    <item type="id" name="mr_cast_checkbox" />
-    <item type="id" name="mr_cast_close_button" />
-    <item type="id" name="mr_cast_divider" />
-    <item type="id" name="mr_cast_group_icon" />
-    <item type="id" name="mr_cast_group_name" />
-    <item type="id" name="mr_cast_group_progress_bar" />
-    <item type="id" name="mr_cast_header_name" />
-    <item type="id" name="mr_cast_list" />
-    <item type="id" name="mr_cast_meta_art" />
-    <item type="id" name="mr_cast_meta_background" />
-    <item type="id" name="mr_cast_meta_black_scrim" />
-    <item type="id" name="mr_cast_meta_subtitle" />
-    <item type="id" name="mr_cast_meta_title" />
-    <item type="id" name="mr_cast_mute_button" />
-    <item type="id" name="mr_cast_route_icon" />
-    <item type="id" name="mr_cast_route_name" />
-    <item type="id" name="mr_cast_route_progress_bar" />
-    <item type="id" name="mr_cast_stop_button" />
-    <item type="id" name="mr_cast_volume_layout" />
-    <item type="id" name="mr_cast_volume_slider" />
-    <item type="id" name="mr_chooser_list" />
-    <item type="id" name="mr_chooser_route_desc" />
-    <item type="id" name="mr_chooser_route_icon" />
-    <item type="id" name="mr_chooser_route_name" />
-    <item type="id" name="mr_chooser_route_progress_bar" />
-    <item type="id" name="mr_chooser_title" />
-    <item type="id" name="mr_close" />
-    <item type="id" name="mr_control_divider" />
-    <item type="id" name="mr_control_playback_ctrl" />
-    <item type="id" name="mr_control_subtitle" />
-    <item type="id" name="mr_control_title" />
-    <item type="id" name="mr_control_title_container" />
-    <item type="id" name="mr_custom_control" />
-    <item type="id" name="mr_default_control" />
-    <item type="id" name="mr_dialog_area" />
-    <item type="id" name="mr_expandable_area" />
-    <item type="id" name="mr_group_expand_collapse" />
-    <item type="id" name="mr_group_volume_route_name" />
-    <item type="id" name="mr_media_main_control" />
-    <item type="id" name="mr_name" />
-    <item type="id" name="mr_picker_close_button" />
-    <item type="id" name="mr_picker_header_name" />
-    <item type="id" name="mr_picker_list" />
-    <item type="id" name="mr_picker_route_icon" />
-    <item type="id" name="mr_picker_route_name" />
-    <item type="id" name="mr_picker_route_progress_bar" />
-    <item type="id" name="mr_playback_control" />
-    <item type="id" name="mr_title_bar" />
-    <item type="id" name="mr_volume_control" />
-    <item type="id" name="mr_volume_group_list" />
-    <item type="id" name="mr_volume_item_icon" />
-    <item type="id" name="mr_volume_slider" />
     <item type="id" name="mtrl_anchor_parent" />
     <item type="id" name="mtrl_calendar_day_selector_frame" />
     <item type="id" name="mtrl_calendar_days_of_week" />
@@ -1219,7 +892,6 @@
     <item type="id" name="mtrl_picker_text_input_range_start" />
     <item type="id" name="mtrl_picker_title_text" />
     <item type="id" name="mtrl_view_tag_bottom_padding" />
-    <item type="id" name="music_player_intent" />
     <item type="id" name="navigation_bar_item_active_indicator_view" />
     <item type="id" name="navigation_bar_item_icon_container" />
     <item type="id" name="navigation_bar_item_icon_view" />
@@ -1227,6 +899,11 @@
     <item type="id" name="navigation_bar_item_large_label_view" />
     <item type="id" name="navigation_bar_item_small_label_view" />
     <item type="id" name="navigation_header_container" />
+    <item type="id" name="neverCompleteToEnd" />
+    <item type="id" name="neverCompleteToStart" />
+    <item type="id" name="noState" />
+    <item type="id" name="nonExistent" />
+    <item type="id" name="north" />
     <item type="id" name="not_contact_view" />
     <item type="id" name="not_contact_view_country_text" />
     <item type="id" name="not_contact_view_country_title" />
@@ -1239,19 +916,25 @@
     <item type="id" name="notification_main_column" />
     <item type="id" name="notification_main_column_container" />
     <item type="id" name="off" />
-    <item type="id" name="ok_profile" />
     <item type="id" name="on" />
+    <item type="id" name="onInterceptTouchReturnSwipe" />
     <item type="id" name="one_chat_react_panel_layout" />
     <item type="id" name="one_chat_reactions_expand_view_type" />
     <item type="id" name="one_chat_reactions_selection_animoji_view_type" />
     <item type="id" name="one_me_codeinput_edit_text_view" />
     <item type="id" name="oneme_action_complaint" />
+    <item type="id" name="oneme_add_link_bottom_sheet_button_add" />
+    <item type="id" name="oneme_add_link_bottom_sheet_input" />
     <item type="id" name="oneme_big_folder_widget_view_type" />
     <item type="id" name="oneme_bottom_bar_item_counter" />
     <item type="id" name="oneme_bottom_bar_item_dot" />
     <item type="id" name="oneme_bottom_bar_item_icon" />
     <item type="id" name="oneme_bottom_bar_item_label" />
     <item type="id" name="oneme_bottom_bar_overflow_button" />
+    <item type="id" name="oneme_bottom_sheet_info_cancel_button" />
+    <item type="id" name="oneme_bottom_sheet_info_primary_button" />
+    <item type="id" name="oneme_bottom_sheet_info_rationale" />
+    <item type="id" name="oneme_bottom_sheet_info_title" />
     <item type="id" name="oneme_bottom_sheet_popup" />
     <item type="id" name="oneme_bottom_sheet_popup_card" />
     <item type="id" name="oneme_bottom_sheet_popup_top_anchor" />
@@ -1275,6 +958,7 @@
     <item type="id" name="oneme_cell_simple_message" />
     <item type="id" name="oneme_cell_simple_name" />
     <item type="id" name="oneme_cell_simple_radiobutton" />
+    <item type="id" name="oneme_cell_simple_reaction" />
     <item type="id" name="oneme_cell_simple_second_trailing_icon" />
     <item type="id" name="oneme_cell_simple_video" />
     <item type="id" name="oneme_chat_action_add_favorite" />
@@ -1301,24 +985,32 @@
     <item type="id" name="oneme_chat_action_unmute" />
     <item type="id" name="oneme_chat_list_loading_id" />
     <item type="id" name="oneme_chat_list_loading_view_type" />
+    <item type="id" name="oneme_chat_list_picker_empty_view" />
     <item type="id" name="oneme_chatmedia_viewer_bulk_saving_all" />
     <item type="id" name="oneme_chatmedia_viewer_bulk_saving_only_this" />
     <item type="id" name="oneme_chatmedia_viewer_content_level_item_view_type" />
     <item type="id" name="oneme_chatmedia_viewer_content_level_stub_view" />
+    <item type="id" name="oneme_chatmedia_viewer_fullscreen_view" />
     <item type="id" name="oneme_chatmedia_viewer_info_panel_author_view" />
+    <item type="id" name="oneme_chatmedia_viewer_info_panel_current_time_view" />
     <item type="id" name="oneme_chatmedia_viewer_info_panel_date_view" />
+    <item type="id" name="oneme_chatmedia_viewer_info_panel_duration_view" />
     <item type="id" name="oneme_chatmedia_viewer_info_panel_forward_message_view" />
+    <item type="id" name="oneme_chatmedia_viewer_info_panel_mute_view" />
     <item type="id" name="oneme_chatmedia_viewer_info_panel_view" />
     <item type="id" name="oneme_chatmedia_viewer_info_panel_view_caption_text_container" />
     <item type="id" name="oneme_chatmedia_viewer_pager" />
     <item type="id" name="oneme_chatmedia_viewer_photo_gif_view" />
     <item type="id" name="oneme_chatmedia_viewer_photo_item_view_type" />
     <item type="id" name="oneme_chatmedia_viewer_photo_view" />
+    <item type="id" name="oneme_chatmedia_viewer_state_view" />
     <item type="id" name="oneme_chatmedia_viewer_toolbar" />
+    <item type="id" name="oneme_chatmedia_viewer_toolbar_action_edit" />
     <item type="id" name="oneme_chatmedia_viewer_toolbar_action_forward_attach" />
     <item type="id" name="oneme_chatmedia_viewer_toolbar_action_goto_message" />
     <item type="id" name="oneme_chatmedia_viewer_toolbar_action_save_gallery" />
     <item type="id" name="oneme_chatmedia_viewer_toolbar_action_share" />
+    <item type="id" name="oneme_chatmedia_viewer_toolbar_bubble" />
     <item type="id" name="oneme_chatmedia_viewer_video_item_view_type" />
     <item type="id" name="oneme_chatmedia_viewer_video_preview_view" />
     <item type="id" name="oneme_chatmedia_viewer_video_view" />
@@ -1332,9 +1024,12 @@
     <item type="id" name="oneme_complaint_action_cancel" />
     <item type="id" name="oneme_confirm_block" />
     <item type="id" name="oneme_confirm_cancel" />
+    <item type="id" name="oneme_confirm_clear_for_all" />
+    <item type="id" name="oneme_confirm_clear_for_self" />
     <item type="id" name="oneme_confirm_delete" />
     <item type="id" name="oneme_confirm_delete_for_all" />
-    <item type="id" name="oneme_confirm_leave" />
+    <item type="id" name="oneme_confirm_leave_channel" />
+    <item type="id" name="oneme_confirm_leave_chat" />
     <item type="id" name="oneme_confirm_mute_1_day" />
     <item type="id" name="oneme_confirm_mute_1_hour" />
     <item type="id" name="oneme_confirm_mute_4_hour" />
@@ -1364,6 +1059,8 @@
     <item type="id" name="oneme_contact_cell_shimmer_title" />
     <item type="id" name="oneme_contact_not_found_bottom_sheet_negative_button" />
     <item type="id" name="oneme_contact_not_found_bottom_sheet_positive_button" />
+    <item type="id" name="oneme_contact_picker_confirm_send_message_negative" />
+    <item type="id" name="oneme_contact_picker_confirm_send_message_positive" />
     <item type="id" name="oneme_contactlist_action_audio_call" />
     <item type="id" name="oneme_contactlist_action_block" />
     <item type="id" name="oneme_contactlist_action_delete" />
@@ -1388,6 +1085,7 @@
     <item type="id" name="oneme_contactlist_phonebook_contact_view_type" />
     <item type="id" name="oneme_contactlist_rv" />
     <item type="id" name="oneme_contactlist_toolbar" />
+    <item type="id" name="oneme_contacts_chip_group" />
     <item type="id" name="oneme_contacts_picker_toolbar" />
     <item type="id" name="oneme_country_container" />
     <item type="id" name="oneme_country_recycler_view" />
@@ -1407,6 +1105,38 @@
     <item type="id" name="oneme_empty_view_title" />
     <item type="id" name="oneme_file_download_warning_confirm" />
     <item type="id" name="oneme_file_download_warning_deny" />
+    <item type="id" name="oneme_folder_empty_view_id" />
+    <item type="id" name="oneme_folder_empty_view_scrollable_container_id" />
+    <item type="id" name="oneme_folder_folder_id_01" />
+    <item type="id" name="oneme_folder_folder_id_02" />
+    <item type="id" name="oneme_folder_folder_id_03" />
+    <item type="id" name="oneme_folder_folder_id_04" />
+    <item type="id" name="oneme_folder_folder_id_05" />
+    <item type="id" name="oneme_folder_folder_id_06" />
+    <item type="id" name="oneme_folder_folder_id_07" />
+    <item type="id" name="oneme_folder_folder_id_08" />
+    <item type="id" name="oneme_folder_folder_id_09" />
+    <item type="id" name="oneme_folder_folder_id_10" />
+    <item type="id" name="oneme_folder_folder_id_11" />
+    <item type="id" name="oneme_folder_folder_id_12" />
+    <item type="id" name="oneme_folder_folder_id_13" />
+    <item type="id" name="oneme_folder_folder_id_14" />
+    <item type="id" name="oneme_folder_folder_id_15" />
+    <item type="id" name="oneme_folder_folder_id_16" />
+    <item type="id" name="oneme_folder_folder_id_17" />
+    <item type="id" name="oneme_folder_folder_id_18" />
+    <item type="id" name="oneme_folder_folder_id_19" />
+    <item type="id" name="oneme_folder_folder_id_20" />
+    <item type="id" name="oneme_folder_folder_id_21" />
+    <item type="id" name="oneme_folder_folder_id_22" />
+    <item type="id" name="oneme_folder_folder_id_23" />
+    <item type="id" name="oneme_folder_folder_id_24" />
+    <item type="id" name="oneme_folder_folder_id_25" />
+    <item type="id" name="oneme_folder_folder_id_26" />
+    <item type="id" name="oneme_folder_folder_id_27" />
+    <item type="id" name="oneme_folder_folder_id_28" />
+    <item type="id" name="oneme_folder_folder_id_29" />
+    <item type="id" name="oneme_folder_folder_id_30" />
     <item type="id" name="oneme_folder_tag" />
     <item type="id" name="oneme_folder_widget_description" />
     <item type="id" name="oneme_folder_widget_icon" />
@@ -1468,6 +1198,8 @@
     <item type="id" name="oneme_left_icon_button" />
     <item type="id" name="oneme_locale_bottom_sheet_title" />
     <item type="id" name="oneme_locale_recycler_view" />
+    <item type="id" name="oneme_location_confirm_send_message_negative" />
+    <item type="id" name="oneme_location_confirm_send_message_positive" />
     <item type="id" name="oneme_location_map_bottom_gradient_view" />
     <item type="id" name="oneme_location_map_bottom_insets_guideline" />
     <item type="id" name="oneme_location_map_button_current_location" />
@@ -1480,12 +1212,18 @@
     <item type="id" name="oneme_location_map_toolbar_close" />
     <item type="id" name="oneme_location_map_view" />
     <item type="id" name="oneme_login_conductor" />
+    <item type="id" name="oneme_login_confirm_callout_button" />
+    <item type="id" name="oneme_login_confirm_callout_description" />
+    <item type="id" name="oneme_login_confirm_callout_timer" />
+    <item type="id" name="oneme_login_confirm_callout_title" />
+    <item type="id" name="oneme_login_confirm_callout_toolbar" />
     <item type="id" name="oneme_login_confirm_description" />
     <item type="id" name="oneme_login_confirm_resend_code" />
     <item type="id" name="oneme_login_confirm_restore_access" />
     <item type="id" name="oneme_login_confirm_sms_input" />
     <item type="id" name="oneme_login_confirm_timer" />
     <item type="id" name="oneme_login_confirm_title" />
+    <item type="id" name="oneme_login_confirm_toolbar" />
     <item type="id" name="oneme_login_country_codes" />
     <item type="id" name="oneme_login_input_constraint_layout" />
     <item type="id" name="oneme_login_input_continue_button" />
@@ -1530,17 +1268,24 @@
     <item type="id" name="oneme_login_neuro_avatars_title" />
     <item type="id" name="oneme_login_neuro_avatars_toolbar" />
     <item type="id" name="oneme_login_phone_edit_text" />
+    <item type="id" name="oneme_login_restrict_content" />
+    <item type="id" name="oneme_login_restrict_content_background" />
+    <item type="id" name="oneme_login_restrict_content_icon" />
+    <item type="id" name="oneme_login_restrict_content_subtitle" />
+    <item type="id" name="oneme_login_restrict_content_title" />
+    <item type="id" name="oneme_login_restrict_primary_action" />
+    <item type="id" name="oneme_login_restrict_root" />
+    <item type="id" name="oneme_login_restrict_secondary_action" />
     <item type="id" name="oneme_login_sms_code_exceeded_ok_btn" />
     <item type="id" name="oneme_login_welcome_continue_btn" />
     <item type="id" name="oneme_login_welcome_description" />
-    <item type="id" name="oneme_login_welcome_placeholder" />
     <item type="id" name="oneme_login_welcome_switch_language_btn" />
-    <item type="id" name="oneme_login_welcome_terms" />
     <item type="id" name="oneme_login_welcome_title" />
     <item type="id" name="oneme_login_welcome_toolbar" />
     <item type="id" name="oneme_longpress_playback_control_counter" />
     <item type="id" name="oneme_longpress_playback_control_hint" />
     <item type="id" name="oneme_longpress_playback_control_view" />
+    <item type="id" name="oneme_main_account_chooser_list" />
     <item type="id" name="oneme_main_bottom_action_bar" />
     <item type="id" name="oneme_main_bottom_bar" />
     <item type="id" name="oneme_main_calls_bottom_item" />
@@ -1584,6 +1329,7 @@
     <item type="id" name="oneme_message_input_right_outer_icon" />
     <item type="id" name="oneme_message_input_right_scheduled_msg_icon" />
     <item type="id" name="oneme_message_input_right_video_msg_icon" />
+    <item type="id" name="oneme_message_input_start_mini_app_action_view" />
     <item type="id" name="oneme_message_input_view_id" />
     <item type="id" name="oneme_messages_settings_container" />
     <item type="id" name="oneme_messages_settings_content_recycler" />
@@ -1628,6 +1374,8 @@
     <item type="id" name="oneme_notifications_settings_chat_toolbar" />
     <item type="id" name="oneme_notifications_settings_chat_type_all_button" />
     <item type="id" name="oneme_notifications_settings_chat_type_pin_reply_button" />
+    <item type="id" name="oneme_notifications_settings_comments_button" />
+    <item type="id" name="oneme_notifications_settings_comments_header" />
     <item type="id" name="oneme_notifications_settings_dialog_enable_notifications_button" />
     <item type="id" name="oneme_notifications_settings_dialog_linearlayout" />
     <item type="id" name="oneme_notifications_settings_dialog_recycler_view" />
@@ -1660,6 +1408,7 @@
     <item type="id" name="oneme_permissions_title" />
     <item type="id" name="oneme_picker_bottom_button" />
     <item type="id" name="oneme_picker_chat_item_view_type" />
+    <item type="id" name="oneme_picker_chips" />
     <item type="id" name="oneme_picker_confirm_button" />
     <item type="id" name="oneme_picker_confirm_cancel" />
     <item type="id" name="oneme_picker_confirm_close" />
@@ -1672,6 +1421,8 @@
     <item type="id" name="oneme_picker_toolbar" />
     <item type="id" name="oneme_picker_toolbar_action_cancel_selection" />
     <item type="id" name="oneme_picker_toolbar_action_select" />
+    <item type="id" name="oneme_picker_toolbar_confirm_send_message_negative" />
+    <item type="id" name="oneme_picker_toolbar_confirm_send_message_positive" />
     <item type="id" name="oneme_playback_settings_sheet_current_speed_view" />
     <item type="id" name="oneme_playback_settings_sheet_drag_handle" />
     <item type="id" name="oneme_playback_settings_sheet_preselected_speeds_view" />
@@ -1684,10 +1435,23 @@
     <item type="id" name="oneme_poll_create__add_answer_item_viewtype" />
     <item type="id" name="oneme_poll_create__answer_item_viewtype" />
     <item type="id" name="oneme_poll_create__confirm_leave_button" />
+    <item type="id" name="oneme_poll_create__confirm_send_message_negative" />
+    <item type="id" name="oneme_poll_create__confirm_send_message_positive" />
+    <item type="id" name="oneme_poll_create__content_container_view" />
+    <item type="id" name="oneme_poll_create__cover_item" />
+    <item type="id" name="oneme_poll_create__cover_item_viewtype" />
+    <item type="id" name="oneme_poll_create__cover_source_gallery_button" />
+    <item type="id" name="oneme_poll_create__cover_source_take_photo_button" />
     <item type="id" name="oneme_poll_create__create_button_view" />
+    <item type="id" name="oneme_poll_create__description_item" />
+    <item type="id" name="oneme_poll_create__description_item_viewtype" />
+    <item type="id" name="oneme_poll_create__media_keyboard_container" />
     <item type="id" name="oneme_poll_create__recycler_view" />
     <item type="id" name="oneme_poll_create__setting_item_viewtype" />
+    <item type="id" name="oneme_poll_create__setting_multiselect_answers_item" />
     <item type="id" name="oneme_poll_create__setting_revote_item" />
+    <item type="id" name="oneme_poll_create__setting_show_participants_item" />
+    <item type="id" name="oneme_poll_create__setting_subscribers_only_item" />
     <item type="id" name="oneme_poll_create__stay_button" />
     <item type="id" name="oneme_poll_create__title_item" />
     <item type="id" name="oneme_poll_create__title_item_viewtype" />
@@ -1714,6 +1478,7 @@
     <item type="id" name="oneme_section_end_container" />
     <item type="id" name="oneme_section_end_custom_icon" />
     <item type="id" name="oneme_section_end_text" />
+    <item type="id" name="oneme_section_hint_viewtype" />
     <item type="id" name="oneme_section_name_viewtype" />
     <item type="id" name="oneme_section_start_container" />
     <item type="id" name="oneme_section_start_icon" />
@@ -1724,7 +1489,26 @@
     <item type="id" name="oneme_section_upper_text" />
     <item type="id" name="oneme_setting_locale_hint" />
     <item type="id" name="oneme_setting_locale_title" />
+    <item type="id" name="oneme_settings_account_actions_read_all" />
     <item type="id" name="oneme_settings_avatar_select_screen" />
+    <item type="id" name="oneme_settings_battery_auto_play_video_always" />
+    <item type="id" name="oneme_settings_battery_auto_play_video_disable" />
+    <item type="id" name="oneme_settings_battery_auto_play_video_wifi" />
+    <item type="id" name="oneme_settings_battery_item_animoji_enabled" />
+    <item type="id" name="oneme_settings_battery_item_gif_available" />
+    <item type="id" name="oneme_settings_battery_item_playlist_enabled" />
+    <item type="id" name="oneme_settings_battery_item_video" />
+    <item type="id" name="oneme_settings_battery_item_video_quality" />
+    <item type="id" name="oneme_settings_battery_quality_1080" />
+    <item type="id" name="oneme_settings_battery_quality_480" />
+    <item type="id" name="oneme_settings_battery_quality_720" />
+    <item type="id" name="oneme_settings_battery_screen_autoplay_footer" />
+    <item type="id" name="oneme_settings_battery_screen_autoplaying_section_header" />
+    <item type="id" name="oneme_settings_battery_screen_list" />
+    <item type="id" name="oneme_settings_battery_screen_settings_footer_vh" />
+    <item type="id" name="oneme_settings_battery_screen_settings_header_vh" />
+    <item type="id" name="oneme_settings_battery_screen_settings_item_vh" />
+    <item type="id" name="oneme_settings_battery_screen_toolbar" />
     <item type="id" name="oneme_settings_change_avatar_cancel" />
     <item type="id" name="oneme_settings_change_avatar_remove_current" />
     <item type="id" name="oneme_settings_change_avatar_upload_from_camera" />
@@ -1747,17 +1531,39 @@
     <item type="id" name="oneme_settings_media_auto_play_video_always" />
     <item type="id" name="oneme_settings_media_auto_play_video_disable" />
     <item type="id" name="oneme_settings_media_auto_play_video_wifi" />
+    <item type="id" name="oneme_settings_media_autosave_screen_list" />
+    <item type="id" name="oneme_settings_media_autosave_screen_section_footer" />
+    <item type="id" name="oneme_settings_media_autosave_screen_section_header" />
+    <item type="id" name="oneme_settings_media_autosave_screen_toolbar" />
     <item type="id" name="oneme_settings_media_gif_always" />
     <item type="id" name="oneme_settings_media_gif_dont_load" />
     <item type="id" name="oneme_settings_media_gif_wifi" />
     <item type="id" name="oneme_settings_media_item_animoji_enabled" />
     <item type="id" name="oneme_settings_media_item_audio_messages" />
+    <item type="id" name="oneme_settings_media_item_auto_save" />
+    <item type="id" name="oneme_settings_media_item_autosave_bot" />
+    <item type="id" name="oneme_settings_media_item_autosave_channel" />
+    <item type="id" name="oneme_settings_media_item_autosave_gallery_banner" />
+    <item type="id" name="oneme_settings_media_item_autosave_group" />
+    <item type="id" name="oneme_settings_media_item_autosave_personal" />
+    <item type="id" name="oneme_settings_media_item_autosave_photo" />
+    <item type="id" name="oneme_settings_media_item_autosave_storage_banner" />
+    <item type="id" name="oneme_settings_media_item_autosave_video" />
     <item type="id" name="oneme_settings_media_item_gif" />
     <item type="id" name="oneme_settings_media_item_gif_available" />
     <item type="id" name="oneme_settings_media_item_load_in_roaming" />
+    <item type="id" name="oneme_settings_media_item_one_month" />
+    <item type="id" name="oneme_settings_media_item_one_week" />
     <item type="id" name="oneme_settings_media_item_photo" />
     <item type="id" name="oneme_settings_media_item_playlist_enabled" />
+    <item type="id" name="oneme_settings_media_item_six_month" />
+    <item type="id" name="oneme_settings_media_item_unlimited" />
     <item type="id" name="oneme_settings_media_item_video" />
+    <item type="id" name="oneme_settings_media_item_video_autoload_always" />
+    <item type="id" name="oneme_settings_media_item_video_autoload_never" />
+    <item type="id" name="oneme_settings_media_item_video_autoload_slider" />
+    <item type="id" name="oneme_settings_media_item_video_autoload_wifi" />
+    <item type="id" name="oneme_settings_media_item_video_autoplay" />
     <item type="id" name="oneme_settings_media_item_video_caching" />
     <item type="id" name="oneme_settings_media_item_video_messages" />
     <item type="id" name="oneme_settings_media_item_video_quality" />
@@ -1767,12 +1573,21 @@
     <item type="id" name="oneme_settings_media_quality_1080" />
     <item type="id" name="oneme_settings_media_quality_480" />
     <item type="id" name="oneme_settings_media_quality_720" />
+    <item type="id" name="oneme_settings_media_screen_autoloading_footer" />
     <item type="id" name="oneme_settings_media_screen_autoloading_section_header" />
     <item type="id" name="oneme_settings_media_screen_autoplaying_section_header" />
+    <item type="id" name="oneme_settings_media_screen_autosave_section_footer" />
+    <item type="id" name="oneme_settings_media_screen_autosave_section_header" />
     <item type="id" name="oneme_settings_media_screen_datapressing_section_header" />
     <item type="id" name="oneme_settings_media_screen_list" />
+    <item type="id" name="oneme_settings_media_screen_max_size_section_description" />
+    <item type="id" name="oneme_settings_media_screen_max_size_section_header" />
+    <item type="id" name="oneme_settings_media_screen_memory_usage_section" />
+    <item type="id" name="oneme_settings_media_screen_preserve_media_section" />
+    <item type="id" name="oneme_settings_media_screen_settings_description_vh" />
     <item type="id" name="oneme_settings_media_screen_settings_header_vh" />
     <item type="id" name="oneme_settings_media_screen_settings_item_vh" />
+    <item type="id" name="oneme_settings_media_screen_settings_slider_item_vh" />
     <item type="id" name="oneme_settings_media_screen_toolbar" />
     <item type="id" name="oneme_settings_media_video_messages_always" />
     <item type="id" name="oneme_settings_media_video_messages_dont_load" />
@@ -1815,8 +1630,6 @@
     <item type="id" name="oneme_settings_privacy_screen_dialog_content_level_access_safe" />
     <item type="id" name="oneme_settings_privacy_screen_dialog_online_button_contacts" />
     <item type="id" name="oneme_settings_privacy_screen_dialog_online_button_nobody" />
-    <item type="id" name="oneme_settings_privacy_screen_dialog_online_never_accept_btn" />
-    <item type="id" name="oneme_settings_privacy_screen_dialog_online_never_cancel_btn" />
     <item type="id" name="oneme_settings_privacy_screen_dialog_phone_number_privacy_all" />
     <item type="id" name="oneme_settings_privacy_screen_dialog_phone_number_privacy_contacts" />
     <item type="id" name="oneme_settings_privacy_screen_dialog_phone_number_privacy_no_one" />
@@ -1851,10 +1664,10 @@
     <item type="id" name="oneme_settings_ringtone_section_default" />
     <item type="id" name="oneme_settings_ringtone_section_header_vh" />
     <item type="id" name="oneme_settings_ringtone_section_item_vh" />
-    <item type="id" name="oneme_settings_ringtone_section_system" />
     <item type="id" name="oneme_settings_ringtone_section_system_default" />
     <item type="id" name="oneme_settings_ringtone_settings_list" />
     <item type="id" name="oneme_settings_ringtone_title" />
+    <item type="id" name="oneme_settings_sectionhint_textview" />
     <item type="id" name="oneme_settings_sectionname_iconview" />
     <item type="id" name="oneme_settings_sectionname_textview" />
     <item type="id" name="oneme_settings_storage_item_action_all_cancel" />
@@ -1885,17 +1698,12 @@
     <item type="id" name="oneme_settings_storage_item_images_clear_title" />
     <item type="id" name="oneme_settings_storage_item_music" />
     <item type="id" name="oneme_settings_storage_item_music_clear_title" />
-    <item type="id" name="oneme_settings_storage_item_one_month" />
-    <item type="id" name="oneme_settings_storage_item_one_week" />
-    <item type="id" name="oneme_settings_storage_item_six_month" />
     <item type="id" name="oneme_settings_storage_item_stickers" />
     <item type="id" name="oneme_settings_storage_item_stickers_clear_title" />
-    <item type="id" name="oneme_settings_storage_item_unlimited" />
     <item type="id" name="oneme_settings_storage_item_video" />
     <item type="id" name="oneme_settings_storage_item_video_clear_title" />
     <item type="id" name="oneme_settings_storage_screen_data_section_header" />
     <item type="id" name="oneme_settings_storage_screen_list" />
-    <item type="id" name="oneme_settings_storage_screen_preserve_media_section" />
     <item type="id" name="oneme_settings_storage_screen_settings_button_vh" />
     <item type="id" name="oneme_settings_storage_screen_settings_header_vh" />
     <item type="id" name="oneme_settings_storage_screen_settings_item_vh" />
@@ -1965,6 +1773,8 @@
     <item type="id" name="oneme_startconversations_create_channel" />
     <item type="id" name="oneme_startconversations_create_chat" />
     <item type="id" name="oneme_startconversations_create_group_call" />
+    <item type="id" name="oneme_stickers_confirm_send_message_negative" />
+    <item type="id" name="oneme_stickers_confirm_send_message_positive" />
     <item type="id" name="oneme_stickers_preview_action_copy_link" />
     <item type="id" name="oneme_stickers_preview_action_edit_set" />
     <item type="id" name="oneme_stickers_preview_action_favorite" />
@@ -1978,6 +1788,7 @@
     <item type="id" name="oneme_stickers_preview_stickers_set_container" />
     <item type="id" name="oneme_stickers_preview_stickers_set_content" />
     <item type="id" name="oneme_stickers_preview_stickers_set_header" />
+    <item type="id" name="oneme_stickers_preview_stickers_set_loading_view" />
     <item type="id" name="oneme_stickers_preview_toolbar" />
     <item type="id" name="oneme_stickers_preview_webm_cell" />
     <item type="id" name="oneme_stickers_search_stickers_list" />
@@ -2024,6 +1835,14 @@
     <item type="id" name="oneme_stickers_view_type_stickers_set" />
     <item type="id" name="oneme_stickers_view_type_stickers_set_recent_add_button" />
     <item type="id" name="oneme_stickers_view_type_stickers_set_showcase" />
+    <item type="id" name="oneme_stories_action_complain" />
+    <item type="id" name="oneme_stories_action_go_to_profile" />
+    <item type="id" name="oneme_stories_action_hide_author" />
+    <item type="id" name="oneme_stories_action_write_message" />
+    <item type="id" name="oneme_stories_add_link_bottom_sheet_title_input" />
+    <item type="id" name="oneme_stories_add_link_bottom_sheet_url_input" />
+    <item type="id" name="oneme_stories_background_color_tool_id" />
+    <item type="id" name="oneme_stories_color_palette_id" />
     <item type="id" name="oneme_stories_item_view_type" />
     <item type="id" name="oneme_stories_preset_blacklist_hide_from_item" />
     <item type="id" name="oneme_stories_preset_blacklist_item" />
@@ -2037,6 +1856,40 @@
     <item type="id" name="oneme_stories_publish_bottom_sheet_settings" />
     <item type="id" name="oneme_stories_publish_bottom_sheet_toolbar" />
     <item type="id" name="oneme_stories_publish_bottom_sheet_ttl_button" />
+    <item type="id" name="oneme_stories_text_align_tool_id" />
+    <item type="id" name="oneme_stories_text_color_tool_id" />
+    <item type="id" name="oneme_stories_text_edit_id" />
+    <item type="id" name="oneme_stories_text_editor_container_id" />
+    <item type="id" name="oneme_stories_text_editor_toolbar_id" />
+    <item type="id" name="oneme_stories_text_tools_id" />
+    <item type="id" name="oneme_stories_text_weight_tool_id" />
+    <item type="id" name="oneme_stories_viewer_bottom_container" />
+    <item type="id" name="oneme_stories_viewer_content_container" />
+    <item type="id" name="oneme_stories_viewer_header_container" />
+    <item type="id" name="oneme_stories_viewer_header_shadow" />
+    <item type="id" name="oneme_stories_viewer_interaction_layout" />
+    <item type="id" name="oneme_stories_viewer_item_view_type" />
+    <item type="id" name="oneme_stories_viewer_keyboard_container" />
+    <item type="id" name="oneme_stories_viewer_layers" />
+    <item type="id" name="oneme_stories_viewer_overlay_view" />
+    <item type="id" name="oneme_stories_viewer_photo_blur_view" />
+    <item type="id" name="oneme_stories_viewer_photo_container" />
+    <item type="id" name="oneme_stories_viewer_photo_view" />
+    <item type="id" name="oneme_stories_viewer_progress_view" />
+    <item type="id" name="oneme_stories_viewer_progressbar" />
+    <item type="id" name="oneme_stories_viewer_toolbar" />
+    <item type="id" name="oneme_stories_viewer_unsupported_container" />
+    <item type="id" name="oneme_stories_viewer_video_blur_view" />
+    <item type="id" name="oneme_stories_viewer_video_preview_view" />
+    <item type="id" name="oneme_stories_viewer_video_view" />
+    <item type="id" name="oneme_stories_viewer_video_zoom_view" />
+    <item type="id" name="oneme_stories_viewer_view_pager" />
+    <item type="id" name="oneme_stories_viewer_writebar_container" />
+    <item type="id" name="oneme_stories_viewer_writebar_widget_container" />
+    <item type="id" name="oneme_stories_visibility_item_view_type" />
+    <item type="id" name="oneme_stories_visibility_recycler" />
+    <item type="id" name="oneme_stories_visibility_save_button" />
+    <item type="id" name="oneme_stories_visibility_toolbar" />
     <item type="id" name="oneme_tab_item__start_imageview_id" />
     <item type="id" name="oneme_tab_item_end_action_imageview_id" />
     <item type="id" name="oneme_tab_item_end_imageview_id" />
@@ -2055,6 +1908,7 @@
     <item type="id" name="oneme_toolbar_more_action_notifications_enabled" />
     <item type="id" name="oneme_toolbar_more_action_search" />
     <item type="id" name="oneme_toolbar_more_action_send_logs" />
+    <item type="id" name="oneme_toolbar_more_action_send_money" />
     <item type="id" name="oneme_toolbar_more_action_share_channel" />
     <item type="id" name="oneme_toolbar_more_action_share_contact" />
     <item type="id" name="oneme_toolbar_overflow_menu_button" />
@@ -2086,8 +1940,8 @@
     <item type="id" name="open_search_view_toolbar" />
     <item type="id" name="open_search_view_toolbar_container" />
     <item type="id" name="parentPanel" />
+    <item type="id" name="parentRelative" />
     <item type="id" name="parent_matrix" />
-    <item type="id" name="paste" />
     <item type="id" name="photo_editor_arrow_tool_id" />
     <item type="id" name="photo_editor_bottom_background_id" />
     <item type="id" name="photo_editor_brush_width_id" />
@@ -2098,8 +1952,6 @@
     <item type="id" name="photo_editor_color_selector_id" />
     <item type="id" name="photo_editor_color_tool_id" />
     <item type="id" name="photo_editor_done_id" />
-    <item type="id" name="photo_editor_exit_cancel_id" />
-    <item type="id" name="photo_editor_exit_confirm_id" />
     <item type="id" name="photo_editor_line_tool_id" />
     <item type="id" name="photo_editor_line_width_id" />
     <item type="id" name="photo_editor_overlay_id" />
@@ -2113,6 +1965,7 @@
     <item type="id" name="photo_editor_width_selector_id" />
     <item type="id" name="pinbars_block_user_confirmation_sheet_cancel" />
     <item type="id" name="pinbars_block_user_confirmation_sheet_confirm" />
+    <item type="id" name="pinbars_close_button" />
     <item type="id" name="pinbars_group_call_bar" />
     <item type="id" name="pinbars_group_call_bar_button" />
     <item type="id" name="pinbars_group_call_bar_divider" />
@@ -2132,19 +1985,31 @@
     <item type="id" name="pinbars_report_and_leave_dialog_cancel" />
     <item type="id" name="pinbars_report_and_leave_dialog_confirm" />
     <item type="id" name="pinbars_root" />
+    <item type="id" name="poll_cover_actions_row_id" />
+    <item type="id" name="poll_cover_bottom_container_id" />
+    <item type="id" name="poll_cover_crop_action_id" />
+    <item type="id" name="poll_cover_draw_action_id" />
+    <item type="id" name="poll_cover_loading_id" />
+    <item type="id" name="poll_cover_media_keyboard_container_id" />
+    <item type="id" name="poll_cover_message_input_id" />
+    <item type="id" name="poll_cover_photo_view_id" />
+    <item type="id" name="poll_cover_toolbar_id" />
+    <item type="id" name="poll_cover_trim_end_id" />
+    <item type="id" name="poll_cover_trim_start_id" />
+    <item type="id" name="poll_cover_trim_timeline_id" />
+    <item type="id" name="poll_cover_video_container_id" />
+    <item type="id" name="poll_cover_video_mute_action_id" />
+    <item type="id" name="poll_cover_video_play_overlay_id" />
+    <item type="id" name="poll_cover_video_poster_id" />
+    <item type="id" name="poll_cover_video_quality_action_id" />
+    <item type="id" name="poll_cover_video_trim_container_id" />
+    <item type="id" name="poll_cover_video_view_id" />
     <item type="id" name="pooling_container_listener_holder_tag" />
-    <item type="id" name="popup_suggest_name_picker__divider1" />
-    <item type="id" name="popup_suggest_name_picker__divider2" />
-    <item type="id" name="popup_suggest_name_picker__name" />
-    <item type="id" name="popup_suggest_name_picker__picker_layout" />
-    <item type="id" name="popup_suggest_name_picker__root" />
-    <item type="id" name="popup_suggest_name_picker__shortlink" />
-    <item type="id" name="popup_suggest_name_picker__title" />
-    <item type="id" name="preferenceDivider" />
-    <item type="id" name="preferences_detail" />
-    <item type="id" name="preferences_header" />
-    <item type="id" name="preferences_sliding_pane_layout" />
+    <item type="id" name="position" />
+    <item type="id" name="postLayout" />
     <item type="id" name="pressed" />
+    <item type="id" name="preview_avatar_overlay" />
+    <item type="id" name="preview_blur_overlay" />
     <item type="id" name="profile_action_primary" />
     <item type="id" name="profile_action_report_and_leave" />
     <item type="id" name="profile_action_secondary" />
@@ -2160,8 +2025,13 @@
     <item type="id" name="profile_add_members_show_history_negative_action" />
     <item type="id" name="profile_add_members_show_history_positive_action" />
     <item type="id" name="profile_add_members_toolbar" />
+    <item type="id" name="profile_admins_view" />
+    <item type="id" name="profile_attaches_view" />
     <item type="id" name="profile_audio_button" />
+    <item type="id" name="profile_avatar_action_show_photo" />
+    <item type="id" name="profile_avatar_action_show_stories" />
     <item type="id" name="profile_avatar_select_screen" />
+    <item type="id" name="profile_avatars_viewpager_recycler_view" />
     <item type="id" name="profile_block_user_confirmation_sheet_confirm" />
     <item type="id" name="profile_change_avatar_upload_from_camera" />
     <item type="id" name="profile_change_avatar_upload_from_gallery" />
@@ -2190,10 +2060,21 @@
     <item type="id" name="profile_debug_profile_new_media_list_btn" />
     <item type="id" name="profile_delete_channel_confirmation_sheet_confirm" />
     <item type="id" name="profile_delete_chat_confirmation_sheet_confirm" />
+    <item type="id" name="profile_delete_chat_confirmation_sheet_confirm_for_all" />
+    <item type="id" name="profile_delete_chat_confirmation_sheet_confirm_for_self" />
     <item type="id" name="profile_delete_chat_with_bot_confirm_with_suspend" />
     <item type="id" name="profile_delete_chat_with_bot_confirm_without_suspend" />
     <item type="id" name="profile_delete_contact_confirmation_sheet_confirm" />
+    <item type="id" name="profile_description_view" />
+    <item type="id" name="profile_discussions_black_list_confirm_unblock_button" />
+    <item type="id" name="profile_discussions_black_list_empty" />
+    <item type="id" name="profile_discussions_black_list_keep_blocked_button" />
+    <item type="id" name="profile_discussions_black_list_list" />
+    <item type="id" name="profile_discussions_black_list_loading" />
+    <item type="id" name="profile_discussions_black_list_toolbar" />
+    <item type="id" name="profile_discussions_black_list_unblock_menu_action" />
     <item type="id" name="profile_dot_divider_view" />
+    <item type="id" name="profile_edit_action_go_to_business_bot" />
     <item type="id" name="profile_edit_admin_channel_type" />
     <item type="id" name="profile_edit_admin_chat_type" />
     <item type="id" name="profile_edit_admin_clear_channel_history" />
@@ -2219,6 +2100,7 @@
     <item type="id" name="profile_edit_admin_leave_chat_confirm" />
     <item type="id" name="profile_edit_admin_move_rights" />
     <item type="id" name="profile_edit_admin_participants_permission" />
+    <item type="id" name="profile_edit_admin_participants_permission_disable_copy" />
     <item type="id" name="profile_edit_admin_permissions_change_chat_info" />
     <item type="id" name="profile_edit_admin_permissions_change_owner_cancel_action" />
     <item type="id" name="profile_edit_admin_permissions_change_owner_change_action" />
@@ -2246,7 +2128,10 @@
     <item type="id" name="profile_edit_collapsible_container_layout" />
     <item type="id" name="profile_edit_comments_disable_cancel" />
     <item type="id" name="profile_edit_comments_disable_confirm" />
+    <item type="id" name="profile_edit_comments_enable_cancel" />
+    <item type="id" name="profile_edit_comments_enable_confirm" />
     <item type="id" name="profile_edit_comments_toggle" />
+    <item type="id" name="profile_edit_confirm_before_send" />
     <item type="id" name="profile_edit_confirm_exit_button" />
     <item type="id" name="profile_edit_confirm_save_button" />
     <item type="id" name="profile_edit_contact_delete_action" />
@@ -2266,6 +2151,7 @@
     <item type="id" name="profile_edit_member_permissions_call_to_chat" />
     <item type="id" name="profile_edit_member_permissions_change_photo" />
     <item type="id" name="profile_edit_member_permissions_pin_message" />
+    <item type="id" name="profile_edit_member_permissions_recycler_view" />
     <item type="id" name="profile_edit_member_permissions_see_private_link" />
     <item type="id" name="profile_edit_oneme_toolbar" />
     <item type="id" name="profile_edit_reactions" />
@@ -2302,8 +2188,17 @@
     <item type="id" name="profile_edit_shortlink_action_refresh_link" />
     <item type="id" name="profile_edit_shortlink_action_share" />
     <item type="id" name="profile_edit_shortlink_action_share_external" />
+    <item type="id" name="profile_edit_shortlink_app_bar_layout" />
+    <item type="id" name="profile_edit_shortlink_collapsing_content" />
     <item type="id" name="profile_edit_shortlink_confirm_button" />
     <item type="id" name="profile_edit_shortlink_confirm_update" />
+    <item type="id" name="profile_edit_shortlink_confirmation_change_action_cancel" />
+    <item type="id" name="profile_edit_shortlink_confirmation_change_action_continue" />
+    <item type="id" name="profile_edit_shortlink_header_description" />
+    <item type="id" name="profile_edit_shortlink_header_icon" />
+    <item type="id" name="profile_edit_shortlink_header_title" />
+    <item type="id" name="profile_edit_shortlink_no_digital_id_action_cancel" />
+    <item type="id" name="profile_edit_shortlink_no_digital_id_action_create" />
     <item type="id" name="profile_invite_by_link_action" />
     <item type="id" name="profile_invite_chatlinkview_avatar_view" />
     <item type="id" name="profile_invite_chatlinkview_confirm_update" />
@@ -2331,7 +2226,6 @@
     <item type="id" name="profile_link_action_copy" />
     <item type="id" name="profile_link_button" />
     <item type="id" name="profile_link_view" />
-    <item type="id" name="profile_live_location" />
     <item type="id" name="profile_media_action_copy_link" />
     <item type="id" name="profile_media_action_delete_all" />
     <item type="id" name="profile_media_action_delete_self" />
@@ -2384,6 +2278,7 @@
     <item type="id" name="profile_more_action_delete_channel" />
     <item type="id" name="profile_more_action_delete_chat" />
     <item type="id" name="profile_more_action_delete_chat_and_suspend_bot" />
+    <item type="id" name="profile_more_action_hide_stories" />
     <item type="id" name="profile_more_action_leave_channel" />
     <item type="id" name="profile_more_action_leave_chat" />
     <item type="id" name="profile_more_action_report" />
@@ -2395,7 +2290,6 @@
     <item type="id" name="profile_notifications_confirmation_sheet_forever" />
     <item type="id" name="profile_notifs_disabled_button" />
     <item type="id" name="profile_notifs_enabled_button" />
-    <item type="id" name="profile_official_indicator_separator" />
     <item type="id" name="profile_open_all_chat_members_action" />
     <item type="id" name="profile_phone_number_action_copy" />
     <item type="id" name="profile_phone_number_action_tt_video_call" />
@@ -2428,249 +2322,32 @@
     <item type="id" name="qrscanner_overlay_view" />
     <item type="id" name="qrscanner_toolbar" />
     <item type="id" name="qrscanner_torch_button_image" />
-    <item type="id" name="quick_camera_item" />
+    <item type="id" name="quick_camera_view__close_button" />
     <item type="id" name="quick_camera_view__cv_camera" />
+    <item type="id" name="quick_camera_view__flash_button" />
+    <item type="id" name="quick_camera_view__switch_camera_button" />
+    <item type="id" name="quick_camera_view__switch_record_mode_button" />
     <item type="id" name="radio" />
-    <item type="id" name="reactions_bubble" />
-    <item type="id" name="rect" />
-    <item type="id" name="recycler_countryDialog" />
-    <item type="id" name="recycler_view" />
     <item type="id" name="report_drawn" />
-    <item type="id" name="request_location" />
+    <item type="id" name="restart" />
     <item type="id" name="retained_adapter_state" />
+    <item type="id" name="reverse" />
+    <item type="id" name="reverseSawtooth" />
     <item type="id" name="right_icon" />
     <item type="id" name="right_side" />
     <item type="id" name="ripple_bg" />
     <item type="id" name="rkn_bottom_sheet_subtitle" />
     <item type="id" name="rkn_bottom_sheet_title" />
-    <item type="id" name="rlClickConsumer" />
-    <item type="id" name="rl_query_holder" />
-    <item type="id" name="rl_title" />
     <item type="id" name="root" />
     <item type="id" name="root_dialogs_container" />
     <item type="id" name="root_screen" />
     <item type="id" name="root_top_indicator" />
     <item type="id" name="root_view_group" />
-    <item type="id" name="row_attach_bar_media__btn_send" />
-    <item type="id" name="row_attach_bar_media__fl_send" />
-    <item type="id" name="row_attach_bar_media__iv_image" />
-    <item type="id" name="row_attach_bar_media__tv_video_info" />
-    <item type="id" name="row_background_select__iv_bg" />
-    <item type="id" name="row_call_history__iv_avatar" />
-    <item type="id" name="row_call_history__iv_call" />
-    <item type="id" name="row_call_history__root" />
-    <item type="id" name="row_call_history__tv_subtitle" />
-    <item type="id" name="row_call_history__tv_title" />
-    <item type="id" name="row_call_member__av_view" />
-    <item type="id" name="row_call_member__iv_right" />
-    <item type="id" name="row_channel_people__iv_icon" />
-    <item type="id" name="row_channel_people__tv_title" />
-    <item type="id" name="row_channel_people__tv_value" />
-    <item type="id" name="row_channels_search_promo__tv_more" />
-    <item type="id" name="row_chat__initials" />
-    <item type="id" name="row_chat__iv_avatar" />
-    <item type="id" name="row_chat__iv_favorite" />
-    <item type="id" name="row_chat__iv_last_sender_avatar" />
-    <item type="id" name="row_chat__iv_message_status" />
-    <item type="id" name="row_chat__iv_muted" />
-    <item type="id" name="row_chat__last_reaction" />
-    <item type="id" name="row_chat__last_sender_initials" />
-    <item type="id" name="row_chat__root" />
-    <item type="id" name="row_chat__tv_last_message" />
-    <item type="id" name="row_chat__tv_new_messages" />
-    <item type="id" name="row_chat__tv_time" />
-    <item type="id" name="row_chat__tv_title" />
-    <item type="id" name="row_chat_extra_actions__icon" />
-    <item type="id" name="row_chat_extra_actions__title" />
-    <item type="id" name="row_chat_folder__emoji_icon" />
-    <item type="id" name="row_chat_folder__message_count" />
-    <item type="id" name="row_chat_folder__name" />
-    <item type="id" name="row_chat_folder__reply_or_mention_icon" />
-    <item type="id" name="row_chat_folder_end_space" />
-    <item type="id" name="row_chat_folder_end_space_for_emoji" />
-    <item type="id" name="row_chat_picker__iv_selected" />
-    <item type="id" name="row_chat_picker__tv_subtitle" />
-    <item type="id" name="row_chat_picker__tv_title" />
-    <item type="id" name="row_chat_picker__vw_avatar" />
-    <item type="id" name="row_chats_folders_flow" />
-    <item type="id" name="row_checkbox_setting__cb_check" />
-    <item type="id" name="row_checkbox_setting__iv_icon" />
-    <item type="id" name="row_checkbox_setting__tv_value" />
-    <item type="id" name="row_common_chat_avatar" />
-    <item type="id" name="row_common_chat_subtitle" />
-    <item type="id" name="row_common_chat_title" />
-    <item type="id" name="row_constructor__av_avatar" />
-    <item type="id" name="row_constructor__divider" />
-    <item type="id" name="row_constructor__tv_description" />
-    <item type="id" name="row_constructor__tv_name" />
-    <item type="id" name="row_constructor_message__inline_keyboard" />
-    <item type="id" name="row_constructor_message__message" />
-    <item type="id" name="row_constructor_message__root" />
-    <item type="id" name="row_contact_avatar_left__btn_invite_friend" />
-    <item type="id" name="row_contact_avatar_left_admin__remove" />
-    <item type="id" name="row_contact_base__av_view" />
-    <item type="id" name="row_contact_base__iv_phonebook" />
-    <item type="id" name="row_contact_base__tv_last_seen" />
-    <item type="id" name="row_contact_base__tv_name" />
-    <item type="id" name="row_contact_call__btn_call_audio" />
-    <item type="id" name="row_contact_call__btn_call_video" />
-    <item type="id" name="row_contact_divider__divider" />
-    <item type="id" name="row_contact_divider__tv_title" />
-    <item type="id" name="row_contact_ok_subscribe__tv_description" />
-    <item type="id" name="row_contact_phonebook____av_view" />
-    <item type="id" name="row_contact_phonebook__btn_invite" />
-    <item type="id" name="row_contact_phonebook__tv_name" />
-    <item type="id" name="row_contact_phonebook__tv_weight" />
-    <item type="id" name="row_contact_picker__iv_state" />
-    <item type="id" name="row_contact_promo__iv_avatar" />
-    <item type="id" name="row_contact_promo__tv_name" />
-    <item type="id" name="row_folder__avatar" />
-    <item type="id" name="row_folder__name" />
-    <item type="id" name="row_folder__select" />
-    <item type="id" name="row_folder_chat__avatar" />
-    <item type="id" name="row_folder_chat__filters_avatar" />
-    <item type="id" name="row_folder_chat__more_actions" />
-    <item type="id" name="row_folder_chat__subtitle" />
-    <item type="id" name="row_folder_chat__title" />
-    <item type="id" name="row_folder_picker__avatar" />
-    <item type="id" name="row_folder_picker__name" />
-    <item type="id" name="row_folder_picker__selected" />
-    <item type="id" name="row_folder_popup__default_icon" />
-    <item type="id" name="row_folder_popup__emoji_icon" />
-    <item type="id" name="row_folder_popup__icon_barrier" />
-    <item type="id" name="row_folder_popup__name" />
-    <item type="id" name="row_folder_popup__unread_count" />
     <item type="id" name="row_index_key" />
-    <item type="id" name="row_language__ivCheckbox" />
-    <item type="id" name="row_language__root" />
-    <item type="id" name="row_language__tv_subtitle" />
-    <item type="id" name="row_language__tv_title" />
-    <item type="id" name="row_live_widget__tv_content" />
-    <item type="id" name="row_local_media_photo_album__iv_thumbnail" />
-    <item type="id" name="row_local_media_photo_album__tv_count" />
-    <item type="id" name="row_local_media_photo_album__tv_title" />
-    <item type="id" name="row_media_bar_actions__icon" />
-    <item type="id" name="row_media_bar_actions__title" />
-    <item type="id" name="row_media_bar_selected__drawee" />
-    <item type="id" name="row_media_bar_selected__progress_background" />
-    <item type="id" name="row_media_bar_selected__progress_bar" />
-    <item type="id" name="row_message__forward_stub" />
-    <item type="id" name="row_message__ik_keyboard" />
-    <item type="id" name="row_message__read_status" />
-    <item type="id" name="row_message__view_error" />
-    <item type="id" name="row_message__view_message" />
-    <item type="id" name="row_message__view_stub" />
-    <item type="id" name="row_message__vs_keyboard" />
-    <item type="id" name="row_message_control__iv" />
-    <item type="id" name="row_message_control__iv_container" />
-    <item type="id" name="row_message_control__tv_action_text" />
-    <item type="id" name="row_message_control__tv_text" />
-    <item type="id" name="row_message_date__tv_text" />
-    <item type="id" name="row_message_in_avatar" />
-    <item type="id" name="row_message_in_content_barrier" />
-    <item type="id" name="row_message_in_forward" />
-    <item type="id" name="row_message_new_divider__title" />
-    <item type="id" name="row_message_out__iv_sending" />
-    <item type="id" name="row_message_sending" />
-    <item type="id" name="row_message_vs_reactions" />
-    <item type="id" name="row_new_folder__iv_new_folder_icon" />
-    <item type="id" name="row_new_folder__tv_new_folder" />
-    <item type="id" name="row_options_action__iv_icon" />
-    <item type="id" name="row_options_action__tv_title" />
-    <item type="id" name="row_participant__av_view" />
-    <item type="id" name="row_participant_reaction_right" />
-    <item type="id" name="row_phone__av_view" />
-    <item type="id" name="row_phone__tv_name" />
-    <item type="id" name="row_phone_picker__iv_state" />
-    <item type="id" name="row_profile__iv_icon" />
-    <item type="id" name="row_profile__tv_title" />
-    <item type="id" name="row_profile_contact_name__iv_icon" />
-    <item type="id" name="row_profile_contact_name__tv_name" />
-    <item type="id" name="row_profile_contact_name__tv_type" />
-    <item type="id" name="row_profile_contact_name_and_type" />
-    <item type="id" name="row_profile_descr__tv" />
-    <item type="id" name="row_profile_info__btn_copy" />
-    <item type="id" name="row_profile_info__iv_icon" />
-    <item type="id" name="row_profile_info__ll_holder" />
-    <item type="id" name="row_profile_info__tv_link" />
-    <item type="id" name="row_profile_info__tv_link_description" />
-    <item type="id" name="row_profile_setting__iv_icon" />
-    <item type="id" name="row_profile_setting__sw_mute" />
-    <item type="id" name="row_profile_setting__tv_title" />
-    <item type="id" name="row_profile_setting__tv_value" />
-    <item type="id" name="row_promo__btn_action" />
-    <item type="id" name="row_promo__btn_close" />
-    <item type="id" name="row_promo__iv_icon" />
-    <item type="id" name="row_promo__ll_content" />
-    <item type="id" name="row_promo__separator_bottom" />
-    <item type="id" name="row_promo__separator_top" />
-    <item type="id" name="row_promo__tv_description" />
-    <item type="id" name="row_promo__tv_title" />
-    <item type="id" name="row_search_contact__iv_avatar" />
-    <item type="id" name="row_search_contact__separator" />
-    <item type="id" name="row_search_contact__tv_name" />
-    <item type="id" name="row_search_contact__tv_summary" />
-    <item type="id" name="row_selected__iv_avatar" />
-    <item type="id" name="row_selected__iv_remove" />
-    <item type="id" name="row_setting__fl_value" />
-    <item type="id" name="row_setting__guideline_end" />
-    <item type="id" name="row_setting__guideline_start" />
-    <item type="id" name="row_setting__guideline_top" />
-    <item type="id" name="row_setting__iv_icon" />
-    <item type="id" name="row_setting__separator" />
-    <item type="id" name="row_setting__small_separator" />
-    <item type="id" name="row_setting__tv_description" />
-    <item type="id" name="row_setting__tv_subtitle" />
-    <item type="id" name="row_setting__tv_title" />
-    <item type="id" name="row_setting__tv_warning" />
-    <item type="id" name="row_setting__vw_separator" />
-    <item type="id" name="row_setting_brightness__iv_brigthness_high" />
-    <item type="id" name="row_setting_brightness__iv_brigthness_low" />
-    <item type="id" name="row_setting_brightness__seek_bar" />
-    <item type="id" name="row_setting_led__cb_check" />
-    <item type="id" name="row_setting_led__ll_led_container" />
-    <item type="id" name="row_setting_led__ll_root" />
-    <item type="id" name="row_setting_led__ls_seekbar" />
-    <item type="id" name="row_setting_led__separator_small" />
-    <item type="id" name="row_setting_led__title" />
-    <item type="id" name="row_setting_online__circle" />
-    <item type="id" name="row_setting_online__tv" />
-    <item type="id" name="row_settings_folder__iv_action" />
-    <item type="id" name="row_settings_folder__iv_icon" />
-    <item type="id" name="row_settings_folder__name" />
-    <item type="id" name="row_settings_folder__subtitle" />
-    <item type="id" name="row_settings_folder__text_container" />
-    <item type="id" name="row_settings_folder__tv_icon_emoji" />
-    <item type="id" name="row_share_preview__iv_image" />
-    <item type="id" name="row_share_preview__tv_description" />
-    <item type="id" name="row_share_preview__tv_host" />
-    <item type="id" name="row_share_preview__tv_title" />
-    <item type="id" name="row_sticker__iv_reorder" />
-    <item type="id" name="row_sticker_section__tv_header" />
-    <item type="id" name="row_sticker_set__gl_end" />
-    <item type="id" name="row_sticker_set__gl_start" />
-    <item type="id" name="row_sticker_set__gl_top" />
-    <item type="id" name="row_sticker_set__iv_avatar" />
-    <item type="id" name="row_sticker_set__tv_count" />
-    <item type="id" name="row_sticker_set__tv_name" />
-    <item type="id" name="row_sticker_set__v_separator" />
-    <item type="id" name="row_sticker_set_showcase__b_set_add" />
-    <item type="id" name="row_sticker_set_showcase__cl_set_header" />
-    <item type="id" name="row_sticker_set_showcase__rv_stickers" />
-    <item type="id" name="row_sticker_set_showcase__tv_description" />
-    <item type="id" name="row_sticker_set_showcase__tv_title" />
-    <item type="id" name="row_sticker_set_showcase__v_delimiter" />
-    <item type="id" name="row_suggest__divider" />
-    <item type="id" name="row_suggest__iv_avatar" />
-    <item type="id" name="row_suggest__subtitle" />
-    <item type="id" name="row_suggest__suggest_icon" />
-    <item type="id" name="row_suggest__title" />
-    <item type="id" name="row_suggests__divider1" />
-    <item type="id" name="row_suggests__search_contacts" />
-    <item type="id" name="row_suggests__search_icon" />
-    <item type="id" name="row_text_one_line__tv_text" />
+    <item type="id" name="satellite" />
     <item type="id" name="save_non_transition_alpha" />
     <item type="id" name="save_overlay_view" />
+    <item type="id" name="sawtooth" />
     <item type="id" name="scheduled_date_time_picker" />
     <item type="id" name="scheduled_send_button" />
     <item type="id" name="scrollIndicatorDown" />
@@ -2680,38 +2357,24 @@
     <item type="id" name="search_badge" />
     <item type="id" name="search_bar" />
     <item type="id" name="search_button" />
-    <item type="id" name="search_channel" />
-    <item type="id" name="search_chat" />
     <item type="id" name="search_close_btn" />
-    <item type="id" name="search_contact" />
     <item type="id" name="search_edit_frame" />
     <item type="id" name="search_go_btn" />
     <item type="id" name="search_mag_icon" />
-    <item type="id" name="search_message" />
     <item type="id" name="search_plate" />
     <item type="id" name="search_src_text" />
     <item type="id" name="search_voice_btn" />
-    <item type="id" name="secret_mode__iv_icon" />
-    <item type="id" name="secret_mode__ll_content" />
-    <item type="id" name="secret_mode__tv_text" />
-    <item type="id" name="secret_mode__tv_title" />
-    <item type="id" name="seekbar" />
-    <item type="id" name="seekbar_value" />
     <item type="id" name="select_album_content_container" />
-    <item type="id" name="select_all" />
     <item type="id" name="select_dialog_listview" />
-    <item type="id" name="selected_background" />
     <item type="id" name="selected_media__content_container" />
+    <item type="id" name="selected_media__delete_choice" />
     <item type="id" name="selected_media__main_container" />
     <item type="id" name="selected_media__media_keyboard_container" />
     <item type="id" name="selected_media__message_input" />
     <item type="id" name="selected_media__recycler" />
     <item type="id" name="selected_media__recycler_container" />
     <item type="id" name="selection_type" />
-    <item type="id" name="send_button" />
     <item type="id" name="send_context_menu_action_scheduled_send" />
-    <item type="id" name="send_report_view_type" />
-    <item type="id" name="send_with_notification_checkbox" />
     <item type="id" name="server_host_container" />
     <item type="id" name="server_host_custom_btn" />
     <item type="id" name="server_host_input" />
@@ -2719,100 +2382,6 @@
     <item type="id" name="server_host_recycler" />
     <item type="id" name="server_port_custom_btn" />
     <item type="id" name="server_port_input" />
-    <item type="id" name="set_correct_time" />
-    <item type="id" name="setting_add_to_folder" />
-    <item type="id" name="setting_admin_add" />
-    <item type="id" name="setting_admin_add_remove_member" />
-    <item type="id" name="setting_admin_change_info" />
-    <item type="id" name="setting_admin_contact" />
-    <item type="id" name="setting_admin_make_calls" />
-    <item type="id" name="setting_admin_move_owner" />
-    <item type="id" name="setting_admin_pin_messages" />
-    <item type="id" name="setting_admin_post_edit_remove_messages" />
-    <item type="id" name="setting_admin_read_all_messages" />
-    <item type="id" name="setting_admin_remove" />
-    <item type="id" name="setting_admin_role" />
-    <item type="id" name="setting_admin_super_admin" />
-    <item type="id" name="setting_appearance" />
-    <item type="id" name="setting_appearance_enable_animations" />
-    <item type="id" name="setting_caching_clear_cache" />
-    <item type="id" name="setting_caching_limit" />
-    <item type="id" name="setting_caching_time" />
-    <item type="id" name="setting_calls_checkbox" />
-    <item type="id" name="setting_chat_notification_mute" />
-    <item type="id" name="setting_chat_notification_sound" />
-    <item type="id" name="setting_chat_notification_vibrate" />
-    <item type="id" name="setting_chat_notifications" />
-    <item type="id" name="setting_color_scheme" />
-    <item type="id" name="setting_contact_invite" />
-    <item type="id" name="setting_debug_info" />
-    <item type="id" name="setting_dev" />
-    <item type="id" name="setting_dev_logs" />
-    <item type="id" name="setting_feedback" />
-    <item type="id" name="setting_folders" />
-    <item type="id" name="setting_language" />
-    <item type="id" name="setting_media" />
-    <item type="id" name="setting_media_audio" />
-    <item type="id" name="setting_media_auto_play_gif" />
-    <item type="id" name="setting_media_auto_play_video" />
-    <item type="id" name="setting_media_gallery_auto_save" />
-    <item type="id" name="setting_media_gif" />
-    <item type="id" name="setting_media_photo" />
-    <item type="id" name="setting_media_roaming" />
-    <item type="id" name="setting_media_stickers" />
-    <item type="id" name="setting_media_video" />
-    <item type="id" name="setting_media_video_auto_compress" />
-    <item type="id" name="setting_message_audio_transcription" />
-    <item type="id" name="setting_message_in_app_browser" />
-    <item type="id" name="setting_message_reactions_double_tap" />
-    <item type="id" name="setting_message_replace_emoji" />
-    <item type="id" name="setting_message_send_by_enter" />
-    <item type="id" name="setting_message_stickers" />
-    <item type="id" name="setting_messages" />
-    <item type="id" name="setting_night_mode" />
-    <item type="id" name="setting_night_mode_brightness" />
-    <item type="id" name="setting_night_mode_end" />
-    <item type="id" name="setting_night_mode_start" />
-    <item type="id" name="setting_night_mode_theme" />
-    <item type="id" name="setting_notification_dialogs" />
-    <item type="id" name="setting_notification_group_chats_calls" />
-    <item type="id" name="setting_notification_group_notifications" />
-    <item type="id" name="setting_notification_important_priority" />
-    <item type="id" name="setting_notification_important_summary" />
-    <item type="id" name="setting_notification_inapp_sound" />
-    <item type="id" name="setting_notification_inapp_vibrate" />
-    <item type="id" name="setting_notification_off_warning" />
-    <item type="id" name="setting_notification_reset" />
-    <item type="id" name="setting_notification_ringtone" />
-    <item type="id" name="setting_notification_show_all_msg" />
-    <item type="id" name="setting_notification_show_chats_msg" />
-    <item type="id" name="setting_notification_show_drafts" />
-    <item type="id" name="setting_notification_show_new_users" />
-    <item type="id" name="setting_notification_show_text" />
-    <item type="id" name="setting_notification_system_all" />
-    <item type="id" name="setting_notification_vibrate" />
-    <item type="id" name="setting_notifications" />
-    <item type="id" name="setting_notifications_chats" />
-    <item type="id" name="setting_notifications_dialogs" />
-    <item type="id" name="setting_pin_lock_auto_lock" />
-    <item type="id" name="setting_pin_lock_change_code" />
-    <item type="id" name="setting_pin_lock_code" />
-    <item type="id" name="setting_pin_lock_fingerprint" />
-    <item type="id" name="setting_pin_lock_screenshot_enabled" />
-    <item type="id" name="setting_privacy" />
-    <item type="id" name="setting_privacy_black_list" />
-    <item type="id" name="setting_privacy_chats_invite" />
-    <item type="id" name="setting_privacy_close_sessions" />
-    <item type="id" name="setting_privacy_incoming_call" />
-    <item type="id" name="setting_privacy_online" />
-    <item type="id" name="setting_privacy_pin_lock" />
-    <item type="id" name="setting_sticker_context_menu_copy_link" />
-    <item type="id" name="setting_sticker_context_menu_forward" />
-    <item type="id" name="setting_sticker_context_menu_remove_set" />
-    <item type="id" name="setting_sticker_context_menu_share" />
-    <item type="id" name="setting_sticker_favorite" />
-    <item type="id" name="setting_sticker_recent" />
-    <item type="id" name="setting_version" />
     <item type="id" name="settings_devices_allow_camera_permission_btn" />
     <item type="id" name="settings_devices_auth_hint_accept_button" />
     <item type="id" name="settings_devices_auth_hint_deny_button" />
@@ -2825,29 +2394,65 @@
     <item type="id" name="settings_devices_recycler_view" />
     <item type="id" name="settings_devices_scan_qr_btn" />
     <item type="id" name="settings_devices_toolbar" />
-    <item type="id" name="settings_media" />
-    <item type="id" name="settings_notifications" />
-    <item type="id" name="settings_stickers" />
-    <item type="id" name="settings_suggest_stickers" />
-    <item type="id" name="share_channel" />
-    <item type="id" name="share_contact" />
-    <item type="id" name="short_divider" />
+    <item type="id" name="sharedValueSet" />
+    <item type="id" name="sharedValueUnset" />
     <item type="id" name="shortcut" />
-    <item type="id" name="simple_drawee_view" />
+    <item type="id" name="sin" />
+    <item type="id" name="single_media_viewer_container" />
     <item type="id" name="snackbar_action" />
     <item type="id" name="snackbar_text" />
+    <item type="id" name="software" />
+    <item type="id" name="south" />
     <item type="id" name="spacer" />
     <item type="id" name="special_effects_controller_view_tag" />
-    <item type="id" name="spinner" />
-    <item type="id" name="splashscreen_icon_view" />
+    <item type="id" name="spline" />
     <item type="id" name="split_action_bar" />
-    <item type="id" name="start_bot" />
+    <item type="id" name="spring" />
+    <item type="id" name="square" />
+    <item type="id" name="staticLayout" />
+    <item type="id" name="staticPostLayout" />
     <item type="id" name="status_bar_latest_event_content" />
+    <item type="id" name="stop" />
+    <item type="id" name="story_delete_layer_icon_id" />
+    <item type="id" name="story_editor_actions_id" />
+    <item type="id" name="story_editor_add_text_placeholder_id" />
+    <item type="id" name="story_editor_background_swipe_id" />
+    <item type="id" name="story_editor_background_viewpager_id" />
+    <item type="id" name="story_editor_blur_view_id" />
+    <item type="id" name="story_editor_color_selector_id" />
+    <item type="id" name="story_editor_content_container_id" />
+    <item type="id" name="story_editor_crop_action_id" />
+    <item type="id" name="story_editor_delete_link_action_id" />
+    <item type="id" name="story_editor_draw_layer_action_id" />
+    <item type="id" name="story_editor_edit_link_action_id" />
+    <item type="id" name="story_editor_link_action_id" />
+    <item type="id" name="story_editor_next_id" />
+    <item type="id" name="story_editor_single_media_viewer_container" />
+    <item type="id" name="story_editor_text_editor_container_id" />
+    <item type="id" name="story_editor_text_layer_action_id" />
+    <item type="id" name="story_editor_toolbar_id" />
+    <item type="id" name="story_editor_video_sound_action_id" />
+    <item type="id" name="story_editor_video_trim_container_id" />
+    <item type="id" name="story_editor_viewer_container" />
+    <item type="id" name="story_layer_canvas_id" />
+    <item type="id" name="story_layer_drag_overlay_id" />
+    <item type="id" name="story_no_views_placeholder" />
+    <item type="id" name="story_publish_progress" />
+    <item type="id" name="story_publish_retry_btn" />
+    <item type="id" name="story_reactions_counter" />
+    <item type="id" name="story_timer" />
+    <item type="id" name="story_video_download_progress_bar_id" />
+    <item type="id" name="story_video_download_progress_id" />
+    <item type="id" name="story_views_bottom_sheet_progress" />
+    <item type="id" name="story_views_bottom_sheet_tab_layout" />
+    <item type="id" name="story_views_bottom_sheet_title" />
+    <item type="id" name="story_views_bottom_sheet_view_pager" />
+    <item type="id" name="story_views_counter" />
+    <item type="id" name="story_views_page_recycler" />
     <item type="id" name="submenuarrow" />
     <item type="id" name="submit_area" />
-    <item type="id" name="suspend_bot" />
+    <item type="id" name="supportScrollUp" />
     <item type="id" name="swipe_fade" />
-    <item type="id" name="switchWidget" />
     <item type="id" name="tag_accessibility_actions" />
     <item type="id" name="tag_accessibility_clickable_spans" />
     <item type="id" name="tag_accessibility_heading" />
@@ -2865,20 +2470,15 @@
     <item type="id" name="tag_unhandled_key_event_manager" />
     <item type="id" name="tag_unhandled_key_listeners" />
     <item type="id" name="tag_window_insets_animation_callback" />
+    <item type="id" name="terrain" />
     <item type="id" name="text" />
     <item type="id" name="text2" />
     <item type="id" name="textSpacerNoButtons" />
     <item type="id" name="textSpacerNoTitle" />
-    <item type="id" name="textView_code" />
-    <item type="id" name="textView_countryName" />
-    <item type="id" name="textView_noresult" />
-    <item type="id" name="textView_selectedCountry" />
-    <item type="id" name="textView_title" />
     <item type="id" name="text_change_is_programmatic_tag" />
     <item type="id" name="text_input_end_icon" />
     <item type="id" name="text_input_error_icon" />
     <item type="id" name="text_input_start_icon" />
-    <item type="id" name="text_one_line" />
     <item type="id" name="text_view_animation_pending_text_tag" />
     <item type="id" name="textinput_counter" />
     <item type="id" name="textinput_error" />
@@ -2887,7 +2487,6 @@
     <item type="id" name="textinput_prefix_text" />
     <item type="id" name="textinput_suffix_text" />
     <item type="id" name="themes_recycler" />
-    <item type="id" name="thin_divider" />
     <item type="id" name="threads_state_recycler" />
     <item type="id" name="threads_state_state_view" />
     <item type="id" name="threads_state_toolbar" />
@@ -2895,27 +2494,14 @@
     <item type="id" name="title" />
     <item type="id" name="titleDividerNoCustom" />
     <item type="id" name="title_template" />
-    <item type="id" name="toolbar" />
-    <item type="id" name="toolbar__spinner_vertical" />
-    <item type="id" name="toolbar__vs_extra_actions" />
-    <item type="id" name="toolbar__vs_spinner_vertical" />
-    <item type="id" name="toolbar__wrapper_title" />
-    <item type="id" name="toolbar_avatar" />
-    <item type="id" name="toolbar_constructor__iv_avatar" />
-    <item type="id" name="toolbar_constructor__iv_close" />
-    <item type="id" name="toolbar_constructor__tv_subtitle" />
-    <item type="id" name="toolbar_constructor__tv_title" />
-    <item type="id" name="toolbar_ll_main" />
-    <item type="id" name="toolbar_popup__iv_avatar" />
-    <item type="id" name="toolbar_popup__ll_counter_container" />
-    <item type="id" name="toolbar_popup__tv_counter" />
-    <item type="id" name="toolbar_progress__progress" />
-    <item type="id" name="toolbar_subtitle" />
+    <item type="id" name="toggle" />
     <item type="id" name="toolbar_title" />
     <item type="id" name="topPanel" />
     <item type="id" name="top_barrier" />
     <item type="id" name="top_line" />
     <item type="id" name="touch_outside" />
+    <item type="id" name="transitionToEnd" />
+    <item type="id" name="transitionToStart" />
     <item type="id" name="transition_clip" />
     <item type="id" name="transition_current_scene" />
     <item type="id" name="transition_image_transform" />
@@ -2924,19 +2510,7 @@
     <item type="id" name="transition_position" />
     <item type="id" name="transition_scene_layoutid_cache" />
     <item type="id" name="transition_transform" />
-    <item type="id" name="trim_video__apply" />
-    <item type="id" name="trim_video__apply_progress" />
-    <item type="id" name="trim_video__bottom_group" />
-    <item type="id" name="trim_video__btn_pause" />
-    <item type="id" name="trim_video__btn_play" />
-    <item type="id" name="trim_video__close" />
-    <item type="id" name="trim_video__endTime" />
-    <item type="id" name="trim_video__range_seek_bar_view" />
-    <item type="id" name="trim_video__reset" />
-    <item type="id" name="trim_video__startTime" />
-    <item type="id" name="trim_video__toolbar" />
-    <item type="id" name="trim_video__view_video" />
-    <item type="id" name="unblock_contact" />
+    <item type="id" name="triangle" />
     <item type="id" name="unknown_call_bottom_sheet_add_contact_button" />
     <item type="id" name="unknown_call_bottom_sheet_block_button" />
     <item type="id" name="unknown_call_bottom_sheet_button_group" />
@@ -2946,14 +2520,12 @@
     <item type="id" name="unknown_call_bottom_sheet_title" />
     <item type="id" name="unknown_contact" />
     <item type="id" name="up" />
+    <item type="id" name="vertical" />
     <item type="id" name="video_container" />
     <item type="id" name="video_container_id" />
     <item type="id" name="video_error" />
     <item type="id" name="video_frame_id" />
-    <item type="id" name="video_frame_preview" />
     <item type="id" name="video_go_to_message" />
-    <item type="id" name="video_info" />
-    <item type="id" name="video_player_seek_bar" />
     <item type="id" name="video_progressbar" />
     <item type="id" name="video_progressbar_buffering" />
     <item type="id" name="video_share" />
@@ -2963,162 +2535,16 @@
     <item type="id" name="video_viewer_video_zoom_view" />
     <item type="id" name="video_webview_container" />
     <item type="id" name="video_webview_id" />
-    <item type="id" name="view_audio_attach__btn_play" />
-    <item type="id" name="view_audio_attach__duration" />
-    <item type="id" name="view_audio_attach__seek" />
-    <item type="id" name="view_audio_attach__transcription" />
-    <item type="id" name="view_audio_attach__transcription_status" />
-    <item type="id" name="view_audio_attach__transcription_text" />
-    <item type="id" name="view_audio_attach__wave" />
-    <item type="id" name="view_audio_listen__btn_close" />
-    <item type="id" name="view_audio_listen__btn_play" />
-    <item type="id" name="view_audio_listen__btn_send" />
-    <item type="id" name="view_audio_listen__container" />
-    <item type="id" name="view_audio_listen__progress" />
-    <item type="id" name="view_audio_listen__tv_duration" />
-    <item type="id" name="view_audio_listen__wave" />
-    <item type="id" name="view_audio_record__audio_circle" />
-    <item type="id" name="view_audio_record__duration_panel" />
-    <item type="id" name="view_audio_record__im_arrow" />
-    <item type="id" name="view_audio_record__red_dot" />
-    <item type="id" name="view_audio_record__root_panel" />
-    <item type="id" name="view_audio_record__slide_panel" />
-    <item type="id" name="view_audio_record__static_circle" />
-    <item type="id" name="view_audio_record__tv_click_cancel" />
-    <item type="id" name="view_audio_record__tv_duration" />
-    <item type="id" name="view_audio_record__tv_swipe_cancel" />
-    <item type="id" name="view_auto_play_video_player__ib_sound" />
-    <item type="id" name="view_auto_play_video_player__iv_thumbnail" />
-    <item type="id" name="view_auto_play_video_player__progress" />
-    <item type="id" name="view_auto_play_video_player__sb_seek" />
-    <item type="id" name="view_auto_play_video_player__v_video" />
-    <item type="id" name="view_channel_forward__forward" />
-    <item type="id" name="view_channel_message_status__divider" />
-    <item type="id" name="view_channel_message_status__iv_views" />
-    <item type="id" name="view_channel_message_status__tv_views" />
-    <item type="id" name="view_constructor_video_player__iv_thumbnail" />
-    <item type="id" name="view_constructor_video_player__progress" />
-    <item type="id" name="view_constructor_video_player__sb_seek" />
-    <item type="id" name="view_constructor_video_player__v_video" />
-    <item type="id" name="view_contacts_promo__tv_title" />
     <item type="id" name="view_custom_attach_lifecycle_owner" />
-    <item type="id" name="view_file_attach__attachments" />
-    <item type="id" name="view_file_attach__big_preview_barrier" />
-    <item type="id" name="view_file_attach__btn_load" />
-    <item type="id" name="view_file_attach__iv_bg" />
-    <item type="id" name="view_file_attach__sticker" />
-    <item type="id" name="view_file_attach__tv_duration" />
-    <item type="id" name="view_file_attach__tv_subtitle" />
-    <item type="id" name="view_file_attach__tv_title" />
-    <item type="id" name="view_floating_video_trash__tv_tip" />
-    <item type="id" name="view_floating_video_trash__v_background" />
-    <item type="id" name="view_full_screen_video_player__btn_pause" />
-    <item type="id" name="view_full_screen_video_player__btn_play" />
-    <item type="id" name="view_full_screen_video_player__controls" />
-    <item type="id" name="view_full_screen_video_player__double_tap_wrapper" />
-    <item type="id" name="view_full_screen_video_player__iv_thumbnail" />
-    <item type="id" name="view_full_screen_video_player__live_placeholder" />
-    <item type="id" name="view_full_screen_video_player__pinch_to_zoom_v_video_wrapper" />
-    <item type="id" name="view_full_screen_video_player__progress" />
-    <item type="id" name="view_full_screen_video_player__v_video" />
-    <item type="id" name="view_list_extra_actions" />
-    <item type="id" name="view_message__view_attaches" />
-    <item type="id" name="view_message__view_reactions" />
-    <item type="id" name="view_message_forward__iv_channel" />
-    <item type="id" name="view_message_forward__tv_sender" />
-    <item type="id" name="view_message_link__iv_share" />
-    <item type="id" name="view_message_link__tv_link" />
-    <item type="id" name="view_mini_player__btn_close" />
-    <item type="id" name="view_mini_player__btn_play" />
-    <item type="id" name="view_mini_player__content" />
-    <item type="id" name="view_mini_player__progress" />
-    <item type="id" name="view_mini_player__speed_button" />
-    <item type="id" name="view_mini_player__tv_subtitle" />
-    <item type="id" name="view_mini_player__tv_title" />
-    <item type="id" name="view_not_started_live_video__subtitle" />
-    <item type="id" name="view_not_started_live_video__title" />
     <item type="id" name="view_offset_helper" />
-    <item type="id" name="view_pin_keyboard_btn_back" />
-    <item type="id" name="view_pin_keyboard_btn_delete" />
-    <item type="id" name="view_pin_keyboard_btn_fingerprint" />
-    <item type="id" name="view_pinned_message__ib_close" />
-    <item type="id" name="view_pinned_message__iv_attach" />
-    <item type="id" name="view_pinned_message__iv_pin" />
-    <item type="id" name="view_pinned_message__tv_content" />
-    <item type="id" name="view_pip_controls__dim" />
-    <item type="id" name="view_pip_controls__dvAvatar" />
-    <item type="id" name="view_pip_controls__ivOpponentMic" />
-    <item type="id" name="view_pip_controls__tvName" />
-    <item type="id" name="view_profile_description__et_description" />
-    <item type="id" name="view_profile_description__tv_max_length" />
-    <item type="id" name="view_profile_description__tv_title" />
-    <item type="id" name="view_raw_video_player__v_video" />
-    <item type="id" name="view_share_attach__iv_small_image" />
-    <item type="id" name="view_share_attach__tv_description" />
-    <item type="id" name="view_share_attach__tv_host" />
-    <item type="id" name="view_share_attach__tv_title" />
-    <item type="id" name="view_share_attach_header__vertical_barrier" />
-    <item type="id" name="view_share_preview__btn_close" />
-    <item type="id" name="view_share_preview__indicator" />
-    <item type="id" name="view_share_preview__vp_pager" />
-    <item type="id" name="view_small_video_player__ib_close" />
-    <item type="id" name="view_small_video_player__ib_full_screen" />
-    <item type="id" name="view_small_video_player__ib_pause" />
-    <item type="id" name="view_small_video_player__ib_pip" />
-    <item type="id" name="view_small_video_player__ib_play" />
-    <item type="id" name="view_small_video_player__iv_thumbnail" />
-    <item type="id" name="view_small_video_player__progress" />
-    <item type="id" name="view_small_video_player__sb_seek" />
-    <item type="id" name="view_small_video_player__v_video" />
-    <item type="id" name="view_stickers__iv_bottom_shadow" />
-    <item type="id" name="view_stickers__iv_puller" />
-    <item type="id" name="view_stickers__pager" />
-    <item type="id" name="view_stickers__tabs" />
-    <item type="id" name="view_stickers__tabs_shadow" />
-    <item type="id" name="view_suggests__fl_root" />
-    <item type="id" name="view_suggests_rv_suggests" />
-    <item type="id" name="view_suggests_tv_description" />
-    <item type="id" name="view_top_call_controls__add_participants" />
-    <item type="id" name="view_top_call_controls__btn_hide" />
-    <item type="id" name="view_top_call_controls__btn_speaker" />
-    <item type="id" name="view_top_call_controls__btn_switch_camera" />
-    <item type="id" name="view_top_call_controls__share_link" />
-    <item type="id" name="view_top_call_controls__share_screen" />
     <item type="id" name="view_transition" />
     <item type="id" name="view_tree_disjoint_parent" />
     <item type="id" name="view_tree_lifecycle_owner" />
     <item type="id" name="view_tree_on_back_pressed_dispatcher_owner" />
     <item type="id" name="view_tree_saved_state_registry_owner" />
     <item type="id" name="view_tree_view_model_store_owner" />
-    <item type="id" name="view_type_contacts_channels" />
-    <item type="id" name="view_type_contacts_invite_subscriber" />
-    <item type="id" name="view_type_contacts_onlines" />
-    <item type="id" name="view_type_contacts_onlines_with_dot" />
-    <item type="id" name="view_type_contacts_phone" />
-    <item type="id" name="view_type_contacts_search" />
-    <item type="id" name="view_type_contacts_search_by_link" />
-    <item type="id" name="view_type_contacts_tam" />
-    <item type="id" name="view_type_create_channel" />
-    <item type="id" name="view_type_list_progress" />
-    <item type="id" name="view_type_sticker_gif" />
-    <item type="id" name="view_type_sticker_gif_header" />
-    <item type="id" name="view_type_sticker_section_banners" />
-    <item type="id" name="view_type_sticker_section_footer" />
-    <item type="id" name="view_type_sticker_section_header" />
-    <item type="id" name="view_video_player__btn_pause" />
-    <item type="id" name="view_video_player__btn_play" />
-    <item type="id" name="view_video_player__controls" />
-    <item type="id" name="view_video_player__iv_thumbnail" />
-    <item type="id" name="view_video_player__progress" />
-    <item type="id" name="view_video_player__surface" />
-    <item type="id" name="view_video_player_controls__btn_settings" />
-    <item type="id" name="view_video_player_controls__cl_content" />
-    <item type="id" name="view_video_player_controls__sb_seek_preview" />
-    <item type="id" name="view_video_player_controls__tv_duration" />
-    <item type="id" name="view_video_player_controls__tv_time" />
-    <item type="id" name="view_video_player_controls__v_background" />
+    <item type="id" name="visible" />
     <item type="id" name="visible_removing_fragment_view_tag" />
-    <item type="id" name="volume_item_container" />
     <item type="id" name="web_app_root_choose_media_bottomsheet_camera" />
     <item type="id" name="web_app_root_choose_media_bottomsheet_file_manager" />
     <item type="id" name="web_app_root_choose_media_bottomsheet_gallery" />
@@ -3135,10 +2561,10 @@
     <item type="id" name="webapp_root_toolbar" />
     <item type="id" name="webapp_root_webview" />
     <item type="id" name="webview" />
+    <item type="id" name="west" />
+    <item type="id" name="wide" />
     <item type="id" name="with_icon" />
-    <item type="id" name="write_message" />
-    <item type="id" name="writebar__add_link_bottom_sheet_button_add" />
-    <item type="id" name="writebar__add_link_bottom_sheet_input" />
+    <item type="id" name="withinBounds" />
     <item type="id" name="writebar__container" />
     <item type="id" name="writebar__miui_menu" />
     <item type="id" name="writebar__record_controls" />
@@ -3153,5 +2579,12 @@
     <item type="id" name="writebar__suggestion_popup_layout" />
     <item type="id" name="writebar__suggestion_popup_layout_content" />
     <item type="id" name="writebar__suggestion_popup_layout_list" />
+    <item type="id" name="writebar__suggestion_popup_separator" />
     <item type="id" name="writebar__suggestion_title" />
+    <item type="id" name="writebar_close" />
+    <item type="id" name="writebar_confirm_send_message_negative" />
+    <item type="id" name="writebar_confirm_send_message_positive" />
+    <item type="id" name="writebar_hide_author" />
+    <item type="id" name="x_left" />
+    <item type="id" name="x_right" />
 </resources>

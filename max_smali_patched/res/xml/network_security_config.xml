@@ -7,5 +7,7 @@
         <domain includeSubdomains="false">he-mc.tele2.ru</domain>
         <domain includeSubdomains="false">he-mc.t2.ru</domain>
         <domain includeSubdomains="false">balance.beeline.ru</domain>
+        <domain includeSubdomains="false">nuc-cdp.voskhod.ru</domain>
+        <domain includeSubdomains="false">nuc-cdp.digital.gov.ru</domain>
     </domain-config>
 </network-security-config>
