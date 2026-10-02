@@ -1,2 +1,0 @@
-io.jsonwebtoken.impl.compression.DeflateCompressionCodec
-io.jsonwebtoken.impl.compression.GzipCompressionCodec
