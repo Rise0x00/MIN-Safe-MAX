@@ -2,7 +2,7 @@
 TITLE BUILDING...
 echo Build via apktool started...
 DEL MIN.apk /F /Q > nul 2>&1
-start "APKTool Build" /wait cmd /c "apktool b min_smali -o MIN.apk"
+start "APKTool Build" /wait cmd /c "apktool b max_smali_patched -o MIN.apk"
 IF EXIST "MIN.apk" (
     echo Build successful!
     GOTO SIGN
